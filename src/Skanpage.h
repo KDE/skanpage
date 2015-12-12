@@ -1,0 +1,118 @@
+/* ============================================================
+ *
+ * Copyright (C) 2015 by Kåre Särs <kare.sars@iki .fi>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ *  by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License.
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ *
+ * ============================================================ */
+
+#ifndef Skanpage_h
+#define Skanpage_h
+
+#include <QDialog>
+#include <QMap>  // FIXME add this to KSaneWidget!!
+#include <QString>
+#include <QPageSize>
+
+#include <KSaneWidget>
+
+class KAboutData;
+class DocumentModel;
+
+using namespace KSaneIface;
+
+class Skanpage : public QDialog
+{
+    Q_PROPERTY(int scanSizeIndex READ scanSizeIndex WRITE setScanSizeIndex NOTIFY scanSizeChanged)
+    Q_PROPERTY(QStringList scanSizes READ scanSizes NOTIFY scanSizesChanged)
+    Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
+
+    Q_OBJECT
+
+public:
+    explicit Skanpage(const QString &device, QWidget *parent);
+    ~Skanpage();
+    void setAboutData(KAboutData *aboutData);
+
+    int scanSizeIndex() const;
+    void setScanSizeIndex(int index);
+    const QStringList scanSizes() const;
+
+    int progress() const;
+
+    Q_INVOKABLE const QSize windowSize() const;
+    Q_INVOKABLE void saveWindowSize(const QSize &size);
+
+    Q_INVOKABLE float scanDPI() const;
+    Q_INVOKABLE bool setScanDPI(float dpi);
+
+    Q_INVOKABLE void cancelScan();
+
+
+Q_SIGNALS:
+    void scanSizeChanged();
+    void scanSizesChanged();
+    void progressChanged();
+
+public Q_SLOTS:
+    void showAboutDialog();
+    void showHelp();
+    void loadScannerOptions();
+    void saveScannerOptions();
+    void setDocument(DocumentModel *handler);
+
+    void documentDeleted();
+
+    void startScan();
+    void showScannerUI();
+
+private Q_SLOTS:
+    void imageReady(QByteArray &, int, int, int, int);
+
+    void defaultScannerOptions();
+
+    void availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList);
+
+    void alertUser(int type, const QString &strStatus);
+    void buttonPressed(const QString &optionName, const QString &optionLabel, bool pressed);
+
+    void progressUpdated(int progress);
+    void scanDone(int status, const QString &strStatus);
+
+private:
+    int pageSizeToIndex(int id);
+
+    KAboutData              *m_aboutData;
+    KSaneWidget             *m_ksanew;
+    DocumentModel           *m_docHandler;
+
+    QString                  m_deviceName;
+    QMap<QString, QString>   m_defaultScanOpts;
+    QImage                   m_img;
+    QByteArray               m_data;
+    int                      m_width;
+    int                      m_height;
+    int                      m_bytesPerLine;
+    int                      m_format;
+    QVector<QPageSize::PageSizeId> m_scanSizesEnum;
+    QStringList              m_scanSizesText;
+    int                      m_scanSizeIndex;
+    int                      m_progress;
+};
+
+#endif
+
