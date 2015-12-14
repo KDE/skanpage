@@ -76,6 +76,7 @@ ApplicationWindow {
         iconName: "scanner"
         text: qsTr("Scan")
         shortcut: "SPACE"
+        enabled: skanPage.progress === 100
         onTriggered: skanPage.startScan();
     }
 
@@ -110,6 +111,7 @@ ApplicationWindow {
                 id: resCombo
                 model: resolutions
                 textRole: "name"
+                enabled: skanPage.progress === 100
                 property bool complete: false
                 Component.onCompleted: {
                     var dpi = skanPage.scanDPI();
@@ -133,6 +135,7 @@ ApplicationWindow {
             ComboBox {
                 id: sizeCombo
                 model: skanPage.scanSizes
+                enabled: skanPage.progress === 100
                 onCurrentIndexChanged: {
                     skanPage.scanSizeIndex = currentIndex;
                 }
