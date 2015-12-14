@@ -92,6 +92,7 @@ Item {
 
                 onCurrentItemChanged: {
                     bigImage.source = listView.currentItem.imageSrc
+                    bigImage.zoomScale = imageViewer.viewport.width / bigImage.sourceSize.width
                 }
 
                 delegate: Item {
@@ -208,6 +209,9 @@ Item {
                         Image {
                             anchors.centerIn: parent
                             id: bigImage
+                            property double zoomScale:1
+                            width: sourceSize.width * zoomScale
+                            height: sourceSize.height * zoomScale
                         }
                     }
                 }
@@ -280,7 +284,7 @@ Item {
         iconName: "zoom-in"
         text: qsTr("Zoom In")
         shortcut: StandardKey.ZoomIn
-        onTriggered: console.log("zoom in")
+        onTriggered: bigImage.zoomScale *= 1.5
     }
 
     Action {
@@ -288,7 +292,7 @@ Item {
         iconName: "zoom-out"
         text: qsTr("Zoom Out")
         shortcut: StandardKey.ZoomOut
-        onTriggered: console.log("zoom out")
+        onTriggered: bigImage.zoomScale *= 0.75
     }
 
     Action {
@@ -296,7 +300,7 @@ Item {
         iconName: "zoom-fit-best"
         text: qsTr("Zoom Fit")
         shortcut: StandardKey.ZoomOut
-        onTriggered: console.log("zoom out")
+        onTriggered:  bigImage.zoomScale = imageViewer.viewport.width / bigImage.sourceSize.width
     }
 
     Action {

@@ -115,7 +115,6 @@ ApplicationWindow {
                 property bool complete: false
                 Component.onCompleted: {
                     var dpi = skanPage.scanDPI();
-                    console.log(dpi);
                     for (var i=0; i<resolutions.count; i++) {
                         if (resolutions.get(i).resolution >= dpi) {
                             currentIndex = i;
