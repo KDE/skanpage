@@ -47,22 +47,6 @@ bool DocumentModel::changed() const
     return m_changed;
 }
 
-void DocumentModel::addImage(QTemporaryFile *tmpFile)
-{
-    if (tmpFile == nullptr) {
-        qDebug() << tmpFile;
-        return;
-    }
-
-    beginInsertRows(QModelIndex(), m_tmpFiles.count(), m_tmpFiles.count());
-    m_tmpFiles.append(tmpFile);
-    endInsertRows();
-    if (!m_changed) {
-        m_changed = true;
-        emit changedChanged();
-    }
-}
-
 void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title)
 {
     QPdfWriter writer(name);
@@ -92,6 +76,22 @@ void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, c
     }
 }
 
+void DocumentModel::addImage(QTemporaryFile *tmpFile)
+{
+    if (tmpFile == nullptr) {
+        qDebug() << tmpFile;
+        return;
+    }
+
+    beginInsertRows(QModelIndex(), m_tmpFiles.count(), m_tmpFiles.count());
+    m_tmpFiles.append(tmpFile);
+    endInsertRows();
+    if (!m_changed) {
+        m_changed = true;
+        emit changedChanged();
+    }
+}
+
 void DocumentModel::moveImage(int from, int to)
 {
     int add = 0;
@@ -106,6 +106,11 @@ void DocumentModel::moveImage(int from, int to)
     }
     m_tmpFiles.move(from, to);
     endMoveRows();
+
+    if (!m_changed) {
+        m_changed = true;
+        emit changedChanged();
+    }
 }
 
 void DocumentModel::removeImage(int row)
@@ -117,6 +122,11 @@ void DocumentModel::removeImage(int row)
     beginRemoveRows(QModelIndex() , row, row);
     m_tmpFiles.removeAt(row);
     endRemoveRows();
+
+    if (!m_changed) {
+        m_changed = true;
+        emit changedChanged();
+    }
 }
 
 QHash<int, QByteArray> DocumentModel::roleNames() const
