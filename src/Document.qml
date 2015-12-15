@@ -92,7 +92,7 @@ Item {
 
                 onCurrentItemChanged: {
                     bigImage.source = listView.currentItem.imageSrc
-                    bigImage.zoomScale = imageViewer.viewport.width / bigImage.sourceSize.width
+                    bigImage.zoomScale = Math.min(imageViewer.viewport.width / bigImage.sourceSize.width, 1)
                 }
 
                 delegate: Item {
@@ -117,10 +117,6 @@ Item {
                             if (mouse.button === Qt.RightButton) {
                                 myContextMenu.popup();
                             }
-                        }
-                        onDoubleClicked: {
-                            delTmr.delIndex = index;
-                            delTmr.restart();
                         }
                     }
 
@@ -221,6 +217,7 @@ Item {
                     ToolButton { action: zoomInAction }
                     ToolButton { action: zoomOutAction }
                     ToolButton { action: zoomFitAction }
+                    ToolButton { action: zoomOrigAction }
                     Item { id: toolbarSpacer; Layout.fillWidth: true }
                 }
                 RowLayout {
@@ -236,14 +233,6 @@ Item {
         }
     }
 
-    Keys.onPressed: {
-        if (event.key == Qt.Key_Delete) {
-            console.log("Delete");
-            event.accepted = true;
-            delTmr.delIndex = listView.currentIndex;
-            delTmr.restart();
-        }
-    }
     Keys.onUpPressed: {
         if (event.modifiers & Qt.ControlModifier) {
             moveUp()
@@ -285,6 +274,7 @@ Item {
         text: qsTr("Zoom In")
         shortcut: StandardKey.ZoomIn
         onTriggered: bigImage.zoomScale *= 1.5
+        enabled: bigImage.zoomScale < 8;
     }
 
     Action {
@@ -293,35 +283,50 @@ Item {
         text: qsTr("Zoom Out")
         shortcut: StandardKey.ZoomOut
         onTriggered: bigImage.zoomScale *= 0.75
+        enabled: bigImage.width > imageViewer.viewport.width/2
     }
 
     Action {
         id: zoomFitAction
         iconName: "zoom-fit-best"
-        text: qsTr("Zoom Fit")
-        shortcut: StandardKey.ZoomOut
+        text: qsTr("Zoom Fit Width")
+        shortcut: "A"
         onTriggered:  bigImage.zoomScale = imageViewer.viewport.width / bigImage.sourceSize.width
+    }
+
+    Action {
+        id: zoomOrigAction
+        iconName: "zoom-original"
+        text: qsTr("Zoom 100%")
+        shortcut: "F"
+        onTriggered:  bigImage.zoomScale = 1
     }
 
     Action {
         id: cancelAction
         iconName: "window-close"
         text: qsTr("Cancel")
-        shortcut: StandardKey.ESC
+        shortcut: "Esc"
         onTriggered: skanPage.cancelScan()
+    }
+
+    Action {
+        id: deletePageAction
+        iconName: "document-close"
+        text: qsTr("Delete page")
+        shortcut: StandardKey.Delete
+        onTriggered: {
+            // FIXME ask for confirmation + do not ask again
+            delTmr.delIndex = listView.currentIndex;
+            delTmr.restart();
+        }
     }
 
     Menu{
         id: myContextMenu
         title: "Edit"
 
-        MenuItem {
-            text: "Delete"
-            onTriggered: {
-                delTmr.delIndex = listView.currentIndex;
-                delTmr.restart();
-            }
-        }
+        MenuItem { action: deletePageAction }
 
         MenuItem {
             text: "Move Up"
