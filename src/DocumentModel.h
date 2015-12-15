@@ -32,6 +32,7 @@ class DocumentModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
+    Q_PROPERTY(bool changed READ changed NOTIFY changedChanged)
     Q_ENUMS(DocumentModelRoles)
 
 public:
@@ -43,11 +44,13 @@ public:
     ~DocumentModel();
 
     const QString name() const;
-    const QStringList images() const;
+    bool changed() const;
 
     Q_INVOKABLE void moveImage(int from, int to);
     Q_INVOKABLE void addImage(QTemporaryFile *tmpFile);
     Q_INVOKABLE void removeImage(int row);
+
+    Q_INVOKABLE void save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title);
 
 public:
     QHash<int, QByteArray> roleNames() const;
@@ -55,14 +58,15 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
 Q_SIGNALS:
-    void imagesChanged();
     void nameChanged();
+    void changedChanged();
 
 public Q_SLOTS:
 
 private:
     QList<QTemporaryFile *> m_tmpFiles;
     QString                 m_name;
+    bool                    m_changed;
 
 };
 

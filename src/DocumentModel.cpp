@@ -20,11 +20,16 @@
  *
  * ============================================================ */
 #include "DocumentModel.h"
+
 #include <QDebug>
+#include <QPdfWriter>
+#include <QPainter>
+
 #include <KLocalizedString>
 
 DocumentModel::DocumentModel(QObject *parent) : QAbstractListModel(parent)
 , m_name(i18n("Unnamed"))
+, m_changed(false)
 {
 }
 
@@ -37,13 +42,9 @@ const QString DocumentModel::name() const
     return m_name;
 }
 
-const QStringList DocumentModel::images() const
+bool DocumentModel::changed() const
 {
-    QStringList list;
-    foreach (QTemporaryFile *tmpFile, m_tmpFiles) {
-        list << tmpFile->fileName();
-    }
-    return list;
+    return m_changed;
 }
 
 void DocumentModel::addImage(QTemporaryFile *tmpFile)
@@ -56,7 +57,39 @@ void DocumentModel::addImage(QTemporaryFile *tmpFile)
     beginInsertRows(QModelIndex(), m_tmpFiles.count(), m_tmpFiles.count());
     m_tmpFiles.append(tmpFile);
     endInsertRows();
-    emit imagesChanged();
+    if (!m_changed) {
+        m_changed = true;
+        emit changedChanged();
+    }
+}
+
+void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title)
+{
+    QPdfWriter writer(name);
+
+    writer.setPageSize(QPageSize(pageSize, QPageSize::Millimeter));
+    writer.setResolution(dpi);
+    writer.setPageMargins(QMarginsF(0,0,0,0));
+    writer.setCreator(QStringLiteral("Skanpage"));
+    writer.setTitle(title);
+
+
+    QPainter painter(&writer);
+    for (int i=0; i<m_tmpFiles.count(); ++i) {
+        QRect target(0, 0, writer.width(), writer.height());
+        QPixmap pixmap(m_tmpFiles[i]->fileName());
+        pixmap = pixmap.scaled(target.size(), Qt::KeepAspectRatio, Qt::FastTransformation);
+        painter.drawPixmap(pixmap.rect(), pixmap, pixmap.rect());
+        if (i<m_tmpFiles.count()-1) {
+            writer.newPage();
+        }
+    }
+    painter.end();
+
+    if (m_changed) {
+        m_changed = false;
+        emit changedChanged();
+    }
 }
 
 void DocumentModel::moveImage(int from, int to)
@@ -68,12 +101,11 @@ void DocumentModel::moveImage(int from, int to)
     if (to < 0 || to >= m_tmpFiles.count()) return;
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), to+add);
     if (!ok) {
-        qDebug() << from << to << add << m_tmpFiles.count();
+        qDebug() << "Failed to move" << from << to << add << m_tmpFiles.count();
         return;
     }
     m_tmpFiles.move(from, to);
     endMoveRows();
-    emit imagesChanged();
 }
 
 void DocumentModel::removeImage(int row)
@@ -85,7 +117,6 @@ void DocumentModel::removeImage(int row)
     beginRemoveRows(QModelIndex() , row, row);
     m_tmpFiles.removeAt(row);
     endRemoveRows();
-    emit imagesChanged();
 }
 
 QHash<int, QByteArray> DocumentModel::roleNames() const

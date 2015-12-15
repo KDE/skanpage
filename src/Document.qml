@@ -32,7 +32,7 @@ Item {
     focus: true
     clip: true
 
-    property string name: qsTr("Unnamed");
+    property string name: pages.changed ?  "* " +pages.name : pages.name;
 
 
     function grabScanner() {
@@ -45,7 +45,10 @@ Item {
 
     function save() {
         console.log("save");
+        pages.save("this_is_my_temp_file.pdf", Qt.size(210,297), 150, "MyTitle")
     }
+
+    readonly property bool changed: pages.changed
 
     DocumentModel {
         id: pages
