@@ -52,6 +52,8 @@ public:
 
     Q_INVOKABLE void save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title);
 
+    Q_INVOKABLE bool fileExists(const QString &name) const;
+
 public:
     QHash<int, QByteArray> roleNames() const;
     int rowCount(const QModelIndex &parent = QModelIndex()) const;

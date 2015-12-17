@@ -103,9 +103,7 @@ ApplicationWindow {
                     MenuItem { action: quitAction }
                 }
             }
-            ToolButton { action: newDocAction }
             ToolButton { action: saveDocAction }
-            ToolButton { action: closeDocAction }
             ToolButton { action: scanUIAction }
             ComboBox {
                 id: resCombo
@@ -165,6 +163,8 @@ ApplicationWindow {
         id: tabView
         anchors.fill: parent
         focus: true
+        frameVisible: false
+        tabsVisible: count > 1
 
         onCurrentIndexChanged: {
             if (tabView.getTab(tabView.currentIndex).item) {

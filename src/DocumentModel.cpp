@@ -24,6 +24,8 @@
 #include <QDebug>
 #include <QPdfWriter>
 #include <QPainter>
+#include <QUrl>
+#include <QFileInfo>
 
 #include <KLocalizedString>
 
@@ -47,9 +49,14 @@ bool DocumentModel::changed() const
     return m_changed;
 }
 
+bool DocumentModel::fileExists(const QString &name) const
+{
+    return QFileInfo(QUrl(name).toLocalFile()).exists();
+}
+
 void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title)
 {
-    QPdfWriter writer(name);
+    QPdfWriter writer(QUrl(name).toLocalFile());
 
     writer.setPageSize(QPageSize(pageSize, QPageSize::Millimeter));
     writer.setResolution(dpi);

@@ -44,11 +44,41 @@ Item {
     }
 
     function save() {
-        console.log("save");
-        pages.save("this_is_my_temp_file.pdf", Qt.size(210,297), 150, "MyTitle")
+        fileDialog.visible = true;
     }
 
     readonly property bool changed: pages.changed
+
+    FileDialog {
+        id: fileDialog
+        title: qsTr("Save as ...")
+        selectExisting: false
+        nameFilters: [ qsTr("PDF documents (*.pdf)") ]
+        onAccepted: {
+            if (pages.fileExists(fileDialog.fileUrl)) {
+                overwrite.file = fileDialog.fileUrl
+                overwrite.visible = true;
+            }
+            else {
+                pages.save(fileDialog.fileUrl, Qt.size(210,297), 150, "MyTitle")
+            }
+        }
+    }
+
+    MessageDialog {
+        id: overwrite
+        property string file
+        title: qsTr("Overwrite File")
+        text: qsTr("The following file already exists:\n%1\n\nDo you want to overwrite it?").arg(file)
+        icon: StandardIcon.Warning
+        standardButtons: StandardButton.Yes | StandardButton.No
+        onYes: {
+            pages.save(fileDialog.fileUrl, Qt.size(210,297), 150, "MyTitle")
+        }
+        onNo: {
+            fileDialog.visible = true;
+        }
+    }
 
     DocumentModel {
         id: pages
@@ -80,7 +110,7 @@ Item {
             frameVisible: true
             highlightOnFocus: true
 
-            width: 180
+            width: 30*Screen.pixelDensity
 
             ListView {
                 id: listView
