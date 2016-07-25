@@ -35,7 +35,7 @@ find_package(KF5 ${KF5_VERSION} REQUIRED
 set(CMAKE_AUTOMOC ON)
 
 
-set(skanpage_SRCS main.cpp DocumentModel.cpp Skanpage.cpp)
+set(skanpage_SRCS main.cpp SaveFileDialog.cpp DocumentModel.cpp Skanpage.cpp)
 
 qt5_add_resources(skanpage_SRCS qml.qrc)
 
@@ -55,6 +55,7 @@ target_link_libraries(skanpage
     KF5::KIOWidgets
 )
 
+# This target does some QML sanity checks as a by-product ;)
 add_custom_target(lupdate ALL
     lupdate ${CMAKE_SOURCE_DIR} -ts ${CMAKE_CURRENT_BINARY_DIR}/project.ts
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}

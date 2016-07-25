@@ -119,6 +119,15 @@ Skanpage::Skanpage(const QString &device, QWidget *parent)
     m_scanSizesEnum << QPageSize::A6;
     m_scanSizesEnum << QPageSize::Custom;
 
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::A4);
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::B5);
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::Letter);
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::Legal);
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::Executive);
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::A5);
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::A6);
+    m_scanSizesF << QPageSize::definitionSize(QPageSize::Custom);
+
     QPrinter pd;
     int tmp = pd.pageSize();
 
@@ -207,6 +216,11 @@ int Skanpage::pageSizeToIndex(int id)
 const QStringList Skanpage::scanSizes() const
 {
     return m_scanSizesText;
+}
+
+const QVariantList Skanpage::scanSizesF() const
+{
+    return m_scanSizesF;
 }
 
 

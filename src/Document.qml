@@ -32,7 +32,9 @@ Item {
     focus: true
     clip: true
 
-    property string name: pages.changed ?  "* " +pages.name : pages.name;
+    readonly property string fname: pages.name === "" ? qsTr("Unnamed") : pages.name
+
+    readonly property string name: pages.changed ?  "* " + fname : fname;
 
 
     function grabScanner() {
@@ -44,41 +46,16 @@ Item {
     }
 
     function save() {
-        fileDialog.visible = true;
+        saveDialog.open(pages.name)
     }
 
     readonly property bool changed: pages.changed
 
-    FileDialog {
-        id: fileDialog
-        title: qsTr("Save as ...")
-        selectExisting: false
-        nameFilters: [ qsTr("PDF documents (*.pdf)") ]
-        onAccepted: {
-            if (pages.fileExists(fileDialog.fileUrl)) {
-                overwrite.file = fileDialog.fileUrl
-                overwrite.visible = true;
-            }
-            else {
-                pages.save(fileDialog.fileUrl, Qt.size(210,297), 150, "MyTitle")
-            }
-        }
+    SaveDialog {
+        id: saveDialog
+        doc: pages
     }
 
-    MessageDialog {
-        id: overwrite
-        property string file
-        title: qsTr("Overwrite File")
-        text: qsTr("The following file already exists:\n%1\n\nDo you want to overwrite it?").arg(file)
-        icon: StandardIcon.Warning
-        standardButtons: StandardButton.Yes | StandardButton.No
-        onYes: {
-            pages.save(fileDialog.fileUrl, Qt.size(210,297), 150, "MyTitle")
-        }
-        onNo: {
-            fileDialog.visible = true;
-        }
-    }
 
     DocumentModel {
         id: pages
@@ -213,9 +190,6 @@ Item {
                         z: -1
                         color: palette.highlight
                         visible: index === listView.currentIndex
-                    }
-                    Keys.onPressed: {
-                        console.log("pressed");
                     }
                 }
             }

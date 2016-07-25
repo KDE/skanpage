@@ -29,13 +29,15 @@
 
 #include "DocumentModel.h"
 #include "Skanpage.h"
+#include "SaveFileDialog.h"
 #include "version.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    qmlRegisterType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel");
+    qmlRegisterType<DocumentModel> ("org.kde.skanpage", 1, 0, "DocumentModel");
+    qmlRegisterType<SaveFileDialog>("org.kde.skanpage", 1, 0, "SaveFileDialog");
 
 
     QQmlApplicationEngine engine;

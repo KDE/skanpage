@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Document.qml</file>
+        <file>SaveDialog.qml</file>
     </qresource>
 </RCC>

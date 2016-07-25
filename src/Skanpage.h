@@ -27,6 +27,7 @@
 #include <QMap>  // FIXME add this to KSaneWidget!!
 #include <QString>
 #include <QPageSize>
+#include <QSizeF>
 
 #include <KSaneWidget>
 
@@ -39,6 +40,7 @@ class Skanpage : public QDialog
 {
     Q_PROPERTY(int scanSizeIndex READ scanSizeIndex WRITE setScanSizeIndex NOTIFY scanSizeChanged)
     Q_PROPERTY(QStringList scanSizes READ scanSizes NOTIFY scanSizesChanged)
+    Q_PROPERTY(QVariantList scanSizesF READ scanSizesF NOTIFY scanSizesChanged)
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
 
     Q_OBJECT
@@ -51,6 +53,8 @@ public:
     int scanSizeIndex() const;
     void setScanSizeIndex(int index);
     const QStringList scanSizes() const;
+
+    const QVariantList scanSizesF() const;
 
     int progress() const;
 
@@ -109,6 +113,7 @@ private:
     int                      m_bytesPerLine;
     int                      m_format;
     QVector<QPageSize::PageSizeId> m_scanSizesEnum;
+    QVariantList             m_scanSizesF;
     QStringList              m_scanSizesText;
     int                      m_scanSizeIndex;
     int                      m_progress;

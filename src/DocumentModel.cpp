@@ -26,11 +26,12 @@
 #include <QPainter>
 #include <QUrl>
 #include <QFileInfo>
+#include <QDir>
 
 #include <KLocalizedString>
 
 DocumentModel::DocumentModel(QObject *parent) : QAbstractListModel(parent)
-, m_name(i18n("Unnamed"))
+, m_name(QString())
 , m_changed(false)
 {
 }
@@ -51,12 +52,23 @@ bool DocumentModel::changed() const
 
 bool DocumentModel::fileExists(const QString &name) const
 {
-    return QFileInfo(QUrl(name).toLocalFile()).exists();
+    return QFileInfo::exists(name);
+}
+
+const QString DocumentModel::toDisplayString(const QString &url) const
+{
+    return QUrl(url).toDisplayString(QUrl::PreferLocalFile);
+}
+
+const QString DocumentModel::upUrl(const QString &url) const
+{
+    return QFileInfo(url).dir().absolutePath();
 }
 
 void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title)
 {
-    QPdfWriter writer(QUrl(name).toLocalFile());
+    //qDebug() << name << pageSize << dpi << title;
+    QPdfWriter writer(name);
 
     writer.setPageSize(QPageSize(pageSize, QPageSize::Millimeter));
     writer.setResolution(dpi);
@@ -80,6 +92,11 @@ void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, c
     if (m_changed) {
         m_changed = false;
         emit changedChanged();
+    }
+
+    if (m_name != name) {
+        m_name = name;
+        emit nameChanged();
     }
 }
 

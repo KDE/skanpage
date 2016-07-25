@@ -46,13 +46,16 @@ public:
     const QString name() const;
     bool changed() const;
 
+    void addImage(QTemporaryFile *tmpFile);
+
     Q_INVOKABLE void moveImage(int from, int to);
-    Q_INVOKABLE void addImage(QTemporaryFile *tmpFile);
     Q_INVOKABLE void removeImage(int row);
 
     Q_INVOKABLE void save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title);
 
     Q_INVOKABLE bool fileExists(const QString &name) const;
+    Q_INVOKABLE const QString toDisplayString(const QString &url) const;
+    Q_INVOKABLE const QString upUrl(const QString &url) const;
 
 public:
     QHash<int, QByteArray> roleNames() const;

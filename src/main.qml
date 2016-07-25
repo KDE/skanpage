@@ -123,7 +123,7 @@ ApplicationWindow {
                 }
                 onCurrentIndexChanged: {
                     if (complete) {
-                        console.log("setting DPI", resCombo.status)
+                        //console.log("setting DPI", resolutions.get(currentIndex).resolution)
                         skanPage.setScanDPI(resolutions.get(currentIndex).resolution);
                     }
                 }
@@ -174,7 +174,6 @@ ApplicationWindow {
         }
         onCountChanged: {
             if (count > 0) {
-                console.log()
                 if (tabView.getTab(tabView.currentIndex).item) {
                     tabView.getTab(tabView.currentIndex).item.grabScanner();
                     tabView.getTab(tabView.currentIndex).item.forceActiveFocus();
@@ -182,7 +181,7 @@ ApplicationWindow {
             }
         }
         Keys.onPressed: {
-            console.log("tabView", event)
+            //console.log("tabView", event)
             tabView.getTab(tabView.currentIndex).item.forceActiveFocus();
         }
     }
