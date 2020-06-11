@@ -40,7 +40,7 @@ public:
         FileNameRole = Qt::UserRole+1
     };
 
-    explicit DocumentModel(QObject *parent = 0);
+    explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();
 
     const QString name() const;
@@ -58,9 +58,9 @@ public:
     Q_INVOKABLE const QString upUrl(const QString &url) const;
 
 public:
-    QHash<int, QByteArray> roleNames() const;
-    int rowCount(const QModelIndex &parent = QModelIndex()) const;
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    QHash<int, QByteArray> roleNames() const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
 Q_SIGNALS:
     void nameChanged();

@@ -73,14 +73,14 @@ Skanpage::Skanpage(const QString &device, QWidget *parent)
 
     // open the scan device
     if (m_ksanew->openDevice(device) == false) {
-        QString dev = m_ksanew->selectDevice(0);
+        QString dev = m_ksanew->selectDevice(nullptr);
         if (dev.isEmpty()) {
             // either no scanner was found or then cancel was pressed.
             exit(0);
         }
         if (m_ksanew->openDevice(dev) == false) {
             // could not open a scanner
-            KMessageBox::sorry(0, i18n("Opening the selected scanner failed."));
+            KMessageBox::sorry(nullptr, i18n("Opening the selected scanner failed."));
             exit(1);
         }
         else {
@@ -253,9 +253,9 @@ void Skanpage::saveWindowSize(const QSize &size)
 static void perrorMessageBox(const QString &text)
 {
     if (errno != 0) {
-        KMessageBox::sorry(0, i18n("%1: %2", text, QString::fromLocal8Bit(strerror(errno))));
+        KMessageBox::sorry(nullptr, i18n("%1: %2", text, QString::fromLocal8Bit(strerror(errno))));
     } else {
-        KMessageBox::sorry(0, text);
+        KMessageBox::sorry(nullptr, text);
     }
 }
 
@@ -273,7 +273,7 @@ void Skanpage::setDocument(DocumentModel *handler)
 
 void Skanpage::documentDeleted()
 {
-    m_docHandler = 0;
+    m_docHandler = nullptr;
 }
 
 void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
@@ -367,10 +367,10 @@ void Skanpage::alertUser(int type, const QString &strStatus)
 {
     switch (type) {
     case KSaneWidget::ErrorGeneral:
-        KMessageBox::sorry(0, strStatus, QLatin1String("Skanpage Test"));
+        KMessageBox::sorry(nullptr, strStatus, QLatin1String("Skanpage Test"));
         break;
     default:
-        KMessageBox::information(0, strStatus, QLatin1String("Skanpage Test"));
+        KMessageBox::information(nullptr, strStatus, QLatin1String("Skanpage Test"));
     }
 }
 

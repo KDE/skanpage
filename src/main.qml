@@ -186,16 +186,6 @@ ApplicationWindow {
         }
     }
 
-    MessageDialog {
-        id: messageDialog
-        title: qsTr("May I have your attention, please?")
-
-        function show(caption) {
-            messageDialog.text = caption;
-            messageDialog.open();
-        }
-    }
-
     function addTab() {
         tabView.addTab("foo", docComponent);
         tabView.currentIndex = tabView.count-1;

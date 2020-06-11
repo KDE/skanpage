@@ -33,7 +33,7 @@ class SaveFileDialog : public QObject
     Q_PROPERTY(QStringList nameFilters READ nameFilters WRITE setFilters NOTIFY nameFiltersChanged)
 
 public:
-    explicit SaveFileDialog(QObject *parent = 0);
+    explicit SaveFileDialog(QObject *parent = nullptr);
     ~SaveFileDialog();
 
     const QString title() const;

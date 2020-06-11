@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
     const QString deviceName = parser.value(deviceOption);
     //qDebug() << QString::fromLatin1("deviceOption value=%1").arg(deviceName);
 
-    Skanpage skanpage(deviceName, 0);
+    Skanpage skanpage(deviceName, nullptr);
     skanpage.setAboutData(&aboutData);
 
 
