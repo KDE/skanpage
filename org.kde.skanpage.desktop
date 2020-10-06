@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Qt;KDE;Graphics;Scanning;
+Comment=Scan and save images
+Exec=slanpage %U
+GenericName=Image Scanning Application
+Icon=skanpage
+Name=Skanpage
+StartupNotify=false
+Terminal=false
+Type=Application

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-FileCopyrightText: 2020 Alexander Stippich <a.stippich@gmx.net>
+
+SPDX-License-Identifier: CC0-1.0
+-->
+<component type="desktop">
+  <id>org.kde.skanpage.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>Skanpage</name>
+  <summary>Simple, multi-page scanning application</summary>
+  <description>
+    <p> A simple scanning application designed for multi-page scanning and saving of images.</p>
+  </description>
+  <provides>
+    <binary>skanpage</binary>
+  </provides>
+  <project_group>KDE</project_group>
+  <releases>
+    <release version="0.0.1" date="2020-10-6"/>
+  </releases>
+</component>
