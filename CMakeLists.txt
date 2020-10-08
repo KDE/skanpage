@@ -15,10 +15,13 @@ find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 include(FeatureSummary)
-include(ECMSetupVersion) # yiels ecm_setup_version
-include(KDEInstallDirs) # yields ${XDG_APPS_INSTALL_DIR}
+include(ECMSetupVersion) 
+include(ECMGenerateHeaders)
+include(ECMQtDeclareLoggingCategory)
+include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings)
-    
+include(KDECMakeSettings)
+
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
     COMPONENTS # alias to find_package(KFGuiAddons ${KF5_VERSION} REQUIRED)
         CoreAddons  # KAboutData
@@ -35,8 +38,8 @@ find_package(KF5 "5.55" REQUIRED
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX SKANPAGE
-    VERSION_HEADER skanpage-version.h)
-
+    VERSION_HEADER skanpage_version.h)
+install(FILES skanpage.categories DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(src)

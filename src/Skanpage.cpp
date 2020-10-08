@@ -43,8 +43,9 @@
 #include <KHelpClient>
 
 #include <errno.h>
-
+#include "skanpage_debug.h"
 #include "DocumentModel.h"
+
 
 Skanpage::Skanpage(const QString &device, QWidget *parent)
 : QObject(parent)
@@ -169,7 +170,7 @@ void Skanpage::setScanSizeIndex(int index)
         }
         QPageSize ps(m_scanSizesEnum[index]);
         QRectF rectf = ps.rect(QPageSize::Millimeter);
-        qDebug() << rectf.topLeft() << rectf.bottomRight();
+        qCDebug(SKANPAGE_LOG) << rectf.topLeft() << rectf.bottomRight();
         if (m_ksanew->scanAreaWidth() < rectf.width()) {
             index = m_scanSizesEnum.size()-1;
             rectf.setWidth(m_ksanew->scanAreaWidth());
@@ -188,7 +189,7 @@ void Skanpage::setScanSizeIndex(int index)
         m_ksanew->getOptVal(QStringLiteral("tl-y"), tly);
         m_ksanew->getOptVal(QStringLiteral("br-x"), brx);
         m_ksanew->getOptVal(QStringLiteral("br-y"), bry);
-        qDebug() << tlx << tly << brx << bry;
+        qCDebug(SKANPAGE_LOG)  << tlx << tly << brx << bry;
         m_scanSizeIndex = index;
         emit scanSizeChanged();
     }
@@ -350,7 +351,7 @@ void Skanpage::loadScannerOptions()
 void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList)
 {
     for (int i = 0; i < deviceList.size(); ++i) {
-        qDebug() << deviceList.at(i).name;
+        qCDebug(SKANPAGE_LOG)  << deviceList.at(i).name;
     }
 }
 
@@ -367,7 +368,7 @@ void Skanpage::alertUser(int type, const QString &strStatus)
 
 void Skanpage::buttonPressed(const QString &optionName, const QString &optionLabel, bool pressed)
 {
-    qDebug() << "Button" << optionName << optionLabel << ((pressed) ? "pressed" : "released");
+    qCDebug(SKANPAGE_LOG)  << "Button" << optionName << optionLabel << ((pressed) ? "pressed" : "released");
 }
 
 void Skanpage::progressUpdated(int progress)

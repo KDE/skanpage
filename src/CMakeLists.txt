@@ -1,9 +1,19 @@
 
 include_directories(${skanpage_BINARY_DIR})
 
-set(skanpage_SRCS main.cpp SaveFileDialog.cpp DocumentModel.cpp Skanpage.cpp)
+set(skanpage_SRCS
+    main.cpp 
+    SaveFileDialog.cpp
+    DocumentModel.cpp
+    Skanpage.cpp)
 
 qt5_add_resources(skanpage_SRCS qml.qrc)
+
+ecm_qt_declare_logging_category(skanpage_SRCS
+    HEADER skanpage_debug.h
+    IDENTIFIER SKANPAGE_LOG
+    CATEGORY_NAME org.kde.skanpage
+)
 
 add_executable(skanpage ${skanpage_SRCS})
 

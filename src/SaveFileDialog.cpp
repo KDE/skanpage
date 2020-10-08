@@ -21,8 +21,9 @@
  * ============================================================ */
 #include "SaveFileDialog.h"
 #include <QFileDialog>
-#include <QDebug>
+
 #include <QStandardPaths>
+#include "skanpage_debug.h"
 
 SaveFileDialog::SaveFileDialog(QObject *parent)
 :QObject(parent)

@@ -30,7 +30,7 @@
 #include "DocumentModel.h"
 #include "Skanpage.h"
 #include "SaveFileDialog.h"
-#include "skanpage-version.h"
+#include "skanpage_version.h"
 
 int main(int argc, char *argv[])
 {

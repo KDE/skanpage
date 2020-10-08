@@ -25,7 +25,6 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import org.kde.skanpage 1.0
 
-
 Window {
     id: saveOptions
 
@@ -39,7 +38,7 @@ Window {
     height: sizeCombo.height * 4 + 5 * saveOptions.pixelDensity
     width: 70*saveOptions.pixelDensity
 
-    minimumWidth: 70*saveOptions.pixelDensity
+    minimumWidth: windowBox.width
     minimumHeight: sizeCombo.height * 5 + 11 * saveOptions.pixelDensity
 
     Rectangle {
@@ -50,6 +49,7 @@ Window {
     SystemPalette { id: palette }
 
     GroupBox {
+        id: windowBox
 
         anchors {
             top: parent.top
@@ -189,6 +189,7 @@ Window {
         id: overwrite
         property string file: ""
         title: qsTr("Overwrite File?")
+        modal: true 
 
         standardButtons: Dialog.Yes | Dialog.No
         onAccepted: {

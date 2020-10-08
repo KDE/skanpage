@@ -29,6 +29,7 @@
 #include <QDir>
 
 #include <KLocalizedString>
+#include "skanpage_debug.h"
 
 DocumentModel::DocumentModel(QObject *parent) : QAbstractListModel(parent)
 , m_name(QString())
@@ -67,7 +68,7 @@ const QString DocumentModel::upUrl(const QString &url) const
 
 void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title)
 {
-    //qDebug() << name << pageSize << dpi << title;
+    //qCDebug(SKANPAGE_LOG)  << name << pageSize << dpi << title;
     QPdfWriter writer(name);
 
     writer.setPageSize(QPageSize(pageSize, QPageSize::Millimeter));
@@ -103,7 +104,7 @@ void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, c
 void DocumentModel::addImage(QTemporaryFile *tmpFile)
 {
     if (tmpFile == nullptr) {
-        qDebug() << tmpFile;
+        qCDebug(SKANPAGE_LOG)  << tmpFile;
         return;
     }
 
@@ -125,7 +126,7 @@ void DocumentModel::moveImage(int from, int to)
     if (to < 0 || to >= m_tmpFiles.count()) return;
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), to+add);
     if (!ok) {
-        qDebug() << "Failed to move" << from << to << add << m_tmpFiles.count();
+        qCDebug(SKANPAGE_LOG)  << "Failed to move" << from << to << add << m_tmpFiles.count();
         return;
     }
     m_tmpFiles.move(from, to);
