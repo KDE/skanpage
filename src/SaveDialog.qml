@@ -22,7 +22,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.1
-import QtQuick.Dialogs 1.2
 import QtQuick.Window 2.2
 import org.kde.skanpage 1.0
 
@@ -171,7 +170,7 @@ Window {
         property string lastSelected: ""
         onAccepted: {
             fileNameItem.text = doc.toDisplayString(fileDialog.fileUrl)
-            lastSelected = fileNameItem.textMyTitle
+            lastSelected = fileNameItem.text
         }
     }
 
@@ -186,20 +185,23 @@ Window {
         }
     }
 
-    MessageDialog {
+    Dialog {
         id: overwrite
-        property string file
+        property string file: ""
         title: qsTr("Overwrite File?")
-        text: qsTr("\n\nThe file \"%1\" already exists. Do you want to overwrite it?").arg(file)
-        icon: StandardIcon.Warning
-        standardButtons: StandardButton.Yes | StandardButton.No
-        onYes: {
+
+        standardButtons: Dialog.Yes | Dialog.No
+        onAccepted: {
             saveFile();
             saveOptions.visible = false;
             overwrite.visible = false;
         }
-        onNo: {
+        onRejected: {
             overwrite.visible = false;
+        }
+        
+        Label {
+            text: qsTr("\n\nThe file \"%1\" already exists. Do you want to overwrite it?").arg(overwrite.file)
         }
     }
 
