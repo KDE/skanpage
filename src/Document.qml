@@ -19,11 +19,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  * ============================================================ */
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
-import QtQuick.Dialogs 1.2
+import QtQuick 2.7
+import QtQuick.Controls 2.12 
+import QtQuick.Controls 1.3 as QQC1
 import QtQuick.Window 2.2
+import QtQuick.Layouts 1.1
 import org.kde.skanpage 1.0
 
 Item {
@@ -75,10 +75,10 @@ Item {
         }
     }
 
-    SplitView {
+    QQC1.SplitView {
         anchors.fill: parent
         orientation: Qt.Horizontal
-        ScrollView {
+        QQC1.ScrollView {
             id: scrollView
             Layout.fillWidth: false
             Layout.fillHeight: true
@@ -202,7 +202,7 @@ Item {
             ColumnLayout {
                 anchors.fill: parent
 
-                ScrollView {
+                QQC1.ScrollView {
                     id: imageViewer
                     Layout.fillWidth: true
                     Layout.fillHeight: true
@@ -277,7 +277,7 @@ Item {
 
     Action {
         id: zoomInAction
-        iconName: "zoom-in"
+        icon.name: "zoom-in"
         text: qsTr("Zoom In")
         shortcut: StandardKey.ZoomIn
         onTriggered: bigImage.zoomScale *= 1.5
@@ -286,7 +286,7 @@ Item {
 
     Action {
         id: zoomOutAction
-        iconName: "zoom-out"
+        icon.name: "zoom-out"
         text: qsTr("Zoom Out")
         shortcut: StandardKey.ZoomOut
         onTriggered: bigImage.zoomScale *= 0.75
@@ -295,7 +295,7 @@ Item {
 
     Action {
         id: zoomFitAction
-        iconName: "zoom-fit-best"
+        icon.name: "zoom-fit-best"
         text: qsTr("Zoom Fit Width")
         shortcut: "A"
         onTriggered:  bigImage.zoomScale = imageViewer.viewport.width / bigImage.sourceSize.width
@@ -303,7 +303,7 @@ Item {
 
     Action {
         id: zoomOrigAction
-        iconName: "zoom-original"
+        icon.name: "zoom-original"
         text: qsTr("Zoom 100%")
         shortcut: "F"
         onTriggered:  bigImage.zoomScale = 1
@@ -311,7 +311,7 @@ Item {
 
     Action {
         id: cancelAction
-        iconName: "window-close"
+        icon.name: "window-close"
         text: qsTr("Cancel")
         shortcut: "Esc"
         onTriggered: skanPage.cancelScan()
@@ -319,7 +319,7 @@ Item {
 
     Action {
         id: deletePageAction
-        iconName: "document-close"
+        icon.name: "document-close"
         text: qsTr("Delete page")
         shortcut: StandardKey.Delete
         onTriggered: {
