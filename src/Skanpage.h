@@ -23,7 +23,7 @@
 #ifndef Skanpage_h
 #define Skanpage_h
 
-#include <QDialog>
+#include <QObject>
 #include <QMap>  // FIXME add this to KSaneWidget!!
 #include <QString>
 #include <QPageSize>
@@ -36,7 +36,7 @@ class DocumentModel;
 
 using namespace KSaneIface;
 
-class Skanpage : public QDialog
+class Skanpage : public QObject
 {
     Q_PROPERTY(int scanSizeIndex READ scanSizeIndex WRITE setScanSizeIndex NOTIFY scanSizeChanged)
     Q_PROPERTY(QStringList scanSizes READ scanSizes NOTIFY scanSizesChanged)

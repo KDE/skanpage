@@ -47,7 +47,7 @@
 #include "DocumentModel.h"
 
 Skanpage::Skanpage(const QString &device, QWidget *parent)
-: QDialog(parent)
+: QObject(parent)
 , m_aboutData(nullptr)
 , m_ksanew(new KSaneIface::KSaneWidget(nullptr))
 , m_docHandler(nullptr)
@@ -59,15 +59,6 @@ Skanpage::Skanpage(const QString &device, QWidget *parent)
     connect(m_ksanew, &KSaneWidget::buttonPressed, this, &Skanpage::buttonPressed);
     connect(m_ksanew, &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
     connect(m_ksanew, &KSaneWidget::scanDone, this, &Skanpage::scanDone);
-
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(this);
-    buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    mainLayout->addWidget(m_ksanew);
-    mainLayout->addWidget(buttonBox);
-
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::close);
-
 
     m_ksanew->initGetDeviceList();
 
@@ -152,7 +143,7 @@ void Skanpage::startScan()
 
 void Skanpage::showScannerUI()
 {
-    show();
+    m_ksanew->show();
 }
 
 float Skanpage::scanDPI() const
