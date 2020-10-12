@@ -28,8 +28,8 @@ import QtQuick.Layouts 1.1
 ApplicationWindow {
     id: mainWindow
     
-    title: qsTr("%1: Skanpage").arg(docName)
-    property string docName: mainDocument.title ? mainDocument.title  : ""
+    title: i18nc("document title: app title", "%1: Skanpage", docName)
+    property string docName: mainDocument.name ? mainDocument.name  : ""
     width: 800
     height: 550
     visible: true
@@ -39,8 +39,8 @@ ApplicationWindow {
 
     Action {
         id: newDocAction
-        icon.name: "document-new"
-        text: qsTr("New Document")
+        icon.name: "document-replace"
+        text: i18n("Clear")
         shortcut: StandardKey.New
         onTriggered: skanPage.documentModel.clearData()
     }
@@ -48,7 +48,7 @@ ApplicationWindow {
     Action {
         id: saveDocAction
         icon.name: "document-save"
-        text: qsTr("Save")
+        text: i18n("Save")
         shortcut: StandardKey.Save
         onTriggered: mainDocument.save()
     }
@@ -56,7 +56,7 @@ ApplicationWindow {
     Action {
         id: quitAction
         icon.name: "window-close"
-        text: qsTr("Quit")
+        text: i18n("Quit")
         shortcut: StandardKey.Quit
         onTriggered: Qt.quit()
     }
@@ -64,7 +64,7 @@ ApplicationWindow {
     Action {
         id: scanAction
         icon.name: "scanner"
-        text: qsTr("Scan")
+        text: i18n("Scan")
         shortcut: "SPACE"
         enabled: skanPage.progress === 100
         onTriggered: skanPage.startScan()
@@ -73,7 +73,7 @@ ApplicationWindow {
     Action {
         id: scanUIAction
         icon.name: "configure"
-        text: qsTr("Scanner options")
+        text: i18n("Scanner options")
         shortcut: "CTRL+SPACE"
         onTriggered: skanPage.showScannerUI();
     }
@@ -81,7 +81,7 @@ ApplicationWindow {
     Action {
         id: openMenuAction
         icon.name: "application-menu"
-        text: qsTr("Application menu")
+        text: i18n("Application menu")
         onTriggered: {
             if (applicationMenu.visible) {
                 applicationMenu.close()
@@ -201,10 +201,12 @@ ApplicationWindow {
     
     ListModel {
         id: resolutions
-        ListElement { name: qsTr("Draft"); resolution: 75 }
-        ListElement { name: qsTr("Normal"); resolution: 150 }
-        ListElement { name: qsTr("High Quality"); resolution: 300 }
-        ListElement { name: qsTr("Best Quality"); resolution: 600 }
+        Component.onCompleted: {
+            resolutions.append({ name: i18n("Draft (75 DPI)"), resolution: 75 });
+            resolutions.append({ name: i18n("Normal (150 DPI)"), resolution: 150 });
+            resolutions.append({ name: i18n("High Quality (300 DPI)"), resolution: 300 });
+            resolutions.append({ name: i18n("Best Quality (600 DPI)"), resolution: 600 });
+        }
     }
 
 }

@@ -32,7 +32,7 @@ Item {
     focus: true
     clip: true
 
-    readonly property string fname: pages.name === "" ? qsTr("Unnamed") : pages.name
+    readonly property string fname: pages.name === "" ? i18n("Unnamed") : pages.name
 
     readonly property string name: pages.changed ?  "* " + fname : fname;
 
@@ -268,7 +268,7 @@ Item {
     Action {
         id: zoomInAction
         icon.name: "zoom-in"
-        text: qsTr("Zoom In")
+        text: i18n("Zoom In")
         shortcut: StandardKey.ZoomIn
         onTriggered: bigImage.zoomScale *= 1.5
         enabled: bigImage.zoomScale < 8;
@@ -277,7 +277,7 @@ Item {
     Action {
         id: zoomOutAction
         icon.name: "zoom-out"
-        text: qsTr("Zoom Out")
+        text: i18n("Zoom Out")
         shortcut: StandardKey.ZoomOut
         onTriggered: bigImage.zoomScale *= 0.75
         enabled: bigImage.width > imageViewer.viewport.width/2
@@ -286,7 +286,7 @@ Item {
     Action {
         id: zoomFitAction
         icon.name: "zoom-fit-best"
-        text: qsTr("Zoom Fit Width")
+        text: i18n("Zoom Fit Width")
         shortcut: "A"
         onTriggered:  bigImage.zoomScale = imageViewer.viewport.width / bigImage.sourceSize.width
     }
@@ -294,7 +294,7 @@ Item {
     Action {
         id: zoomOrigAction
         icon.name: "zoom-original"
-        text: qsTr("Zoom 100%")
+        text: i18n("Zoom 100%")
         shortcut: "F"
         onTriggered:  bigImage.zoomScale = 1
     }
@@ -302,7 +302,7 @@ Item {
     Action {
         id: cancelAction
         icon.name: "window-close"
-        text: qsTr("Cancel")
+        text: i18n("Cancel")
         shortcut: "Esc"
         onTriggered: skanPage.cancelScan()
     }
@@ -310,7 +310,7 @@ Item {
     Action {
         id: deletePageAction
         icon.name: "document-close"
-        text: qsTr("Delete page")
+        text: i18n("Delete page")
         shortcut: StandardKey.Delete
         onTriggered: {
             // FIXME ask for confirmation + do not ask again
@@ -321,16 +321,16 @@ Item {
 
     Menu{
         id: myContextMenu
-        title: "Edit"
+        title: i18n("Edit")
 
         MenuItem { action: deletePageAction }
 
         MenuItem {
-            text: "Move Up"
+            text: i18n("Move Up")
             onTriggered: moveUp()
         }
         MenuItem {
-            text: "Move Down"
+            text: i18n("Move Down")
             onTriggered: moveDown()
         }
     }

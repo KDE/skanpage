@@ -31,7 +31,7 @@ Window {
     property variant doc
 
     property alias fileName: fileNameItem.text
-    title: qsTr("Document Properties")
+    title: i18n("Document Properties")
     modality: Qt.WindowModal
 
     property double pixelDensity: Screen.pixelDensity
@@ -65,7 +65,7 @@ Window {
             Layout.fillWidth: true
             columns: 3
 
-            Text { text: qsTr("Title:"); Layout.alignment: Qt.AlignRight }
+            Text { text: i18n("Title:"); Layout.alignment: Qt.AlignRight }
             TextField {
                 id: fileTitleItem
                 Layout.fillWidth: true
@@ -78,7 +78,7 @@ Window {
             }
             Item { width: 1; height: 1 }
 
-            Text { text: qsTr("Page Size:"); Layout.alignment: Qt.AlignRight }
+            Text { text: i18n("Page Size:"); Layout.alignment: Qt.AlignRight }
             ComboBox {
                 id: sizeCombo
                 Layout.columnSpan: 2
@@ -86,7 +86,7 @@ Window {
                 Layout.alignment: Qt.AlignLeft
             }
 
-            Text { text: qsTr("Print Quality:"); Layout.alignment: Qt.AlignRight }
+            Text { text: i18n("Print Quality:"); Layout.alignment: Qt.AlignRight }
             ComboBox {
                 id: resCombo
                 Layout.columnSpan: 2
@@ -96,7 +96,7 @@ Window {
                 Layout.alignment: Qt.AlignLeft
             }
 
-            Text { text: qsTr("File:"); Layout.alignment: Qt.AlignRight }
+            Text { text: i18n("File:"); Layout.alignment: Qt.AlignRight }
 
             TextField {
                 id: fileNameItem
@@ -139,7 +139,7 @@ Window {
         Button {
             id: saveButton
             icon.name: "document-save"
-            text: qsTr("Save")
+            text: i18n("Save")
             onClicked: trySave();
         }
         Button { action: cancelAction }
@@ -148,7 +148,7 @@ Window {
     Action {
         id: cancelAction
         icon.name: "dialog-close"
-        text: qsTr("Cancel")
+        text: i18n("Cancel")
         shortcut: "Esc"
         onTriggered: saveOptions.visible = false
     }
@@ -156,17 +156,17 @@ Window {
     ListModel {
         id: resolutions
         Component.onCompleted: {
-            resolutions.append({ name: qsTr("Draft (75 DPI)"), resolution: 75 });
-            resolutions.append({ name: qsTr("Normal (150 DPI)"), resolution: 150 });
-            resolutions.append({ name: qsTr("High Quality (300 DPI)"), resolution: 300 });
-            resolutions.append({ name: qsTr("Best Quality (600 DPI)"), resolution: 600 });
+            resolutions.append({ name: i18n("Draft (75 DPI)"), resolution: 75 });
+            resolutions.append({ name: i18n("Normal (150 DPI)"), resolution: 150 });
+            resolutions.append({ name: i18n("High Quality (300 DPI)"), resolution: 300 });
+            resolutions.append({ name: i18n("Best Quality (600 DPI)"), resolution: 600 });
         }
     }
 
     SaveFileDialog {
         id: fileDialog
-        title: qsTr("Save as ...")
-        nameFilters: [ qsTr("PDF documents (*.pdf)") ]
+        title: i18n("Save as ...")
+        nameFilters: [ i18n("PDF documents (*.pdf)") ]
         property string lastSelected: ""
         onAccepted: {
             fileNameItem.text = doc.toDisplayString(fileDialog.fileUrl)
@@ -188,7 +188,7 @@ Window {
     Dialog {
         id: overwrite
         property string file: ""
-        title: qsTr("Overwrite File?")
+        title: i18n("Overwrite File?")
         modal: true 
 
         standardButtons: Dialog.Yes | Dialog.No
@@ -202,13 +202,13 @@ Window {
         }
         
         Label {
-            text: qsTr("\n\nThe file \"%1\" already exists. Do you want to overwrite it?").arg(overwrite.file)
+            text: i18n("\n\nThe file \"%1\" already exists. Do you want to overwrite it?").arg(overwrite.file)
         }
     }
 
     function open(fileName) {
         fileDialog.lastSelected = "";
-        saveDialog.fileName = fileName === "" ? fileDialog.documentsDir() + "/" + qsTr("Unnamed") + ".pdf" : fileName;
+        saveDialog.fileName = fileName === "" ? fileDialog.documentsDir() + "/" + i18n("Unnamed") + ".pdf" : fileName;
         saveDialog.visible = true;
         fileTitleItem.text =  Qt.binding(function() {return fileDialog.toBaseName(fileNameItem.text)});
     }

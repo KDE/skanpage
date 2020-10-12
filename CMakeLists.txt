@@ -44,3 +44,4 @@ set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(src)
 
+ki18n_install(po)

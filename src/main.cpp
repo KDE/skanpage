@@ -26,6 +26,7 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
+#include <KI18n/KLocalizedContext>
 
 #include "DocumentModel.h"
 #include "Skanpage.h"
@@ -76,7 +77,8 @@ int main(int argc, char *argv[])
     skanpageApp.setAboutData(&aboutData);  
     
     QQmlApplicationEngine engine;
-
+    
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.rootContext()->setContextProperty(QStringLiteral("skanPage"), &skanpageApp);
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
