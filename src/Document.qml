@@ -36,10 +36,7 @@ Item {
 
     readonly property string name: pages.changed ?  "* " + fname : fname;
 
-
-    function grabScanner() {
-        skanPage.setDocument(pages);
-    }
+    property var pages: skanPage.documentModel
 
     function addImage() {
         skanPage.startScan()
@@ -49,16 +46,9 @@ Item {
         saveDialog.open(pages.name)
     }
 
-    readonly property bool changed: pages.changed
-
     SaveDialog {
         id: saveDialog
         doc: pages
-    }
-
-
-    DocumentModel {
-        id: pages
     }
 
     SystemPalette { id: palette; colorGroup: SystemPalette.Inactive }
@@ -101,7 +91,7 @@ Item {
                 model: pages
 
                 onCurrentItemChanged: {
-                    bigImage.source = listView.currentItem.imageSrc
+                    bigImage.source = listView.currentItem ? listView.currentItem.imageSrc : ""
                     bigImage.zoomScale = Math.min(imageViewer.viewport.width / bigImage.sourceSize.width, 1)
                 }
 

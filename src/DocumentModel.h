@@ -47,6 +47,8 @@ public:
     bool changed() const;
 
     void addImage(QTemporaryFile *tmpFile);
+    
+    Q_INVOKABLE void clearData();
 
     Q_INVOKABLE void moveImage(int from, int to);
     Q_INVOKABLE void removeImage(int row);

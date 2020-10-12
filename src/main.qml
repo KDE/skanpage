@@ -29,7 +29,7 @@ ApplicationWindow {
     id: mainWindow
     
     title: qsTr("%1: Skanpage").arg(docName)
-    property string docName: tabView.count > 0 ? tabView.getTab(tabView.currentIndex).title : ""
+    property string docName: mainDocument.title ? mainDocument.title  : ""
     width: 800
     height: 550
     visible: true
@@ -42,7 +42,7 @@ ApplicationWindow {
         icon.name: "document-new"
         text: qsTr("New Document")
         shortcut: StandardKey.New
-        onTriggered: addTab();
+        onTriggered: skanPage.documentModel.clearData()
     }
 
     Action {
@@ -50,19 +50,7 @@ ApplicationWindow {
         icon.name: "document-save"
         text: qsTr("Save")
         shortcut: StandardKey.Save
-        onTriggered: {
-            if (tabView.getTab(tabView.currentIndex).item) {
-                tabView.getTab(tabView.currentIndex).item.save();
-            }
-        }
-    }
-
-    Action {
-        id: closeDocAction
-        icon.name: "document-close"
-        text: qsTr("Close")
-        shortcut: StandardKey.Close
-        onTriggered: tabView.removeTab(tabView.currentIndex); // FIXME ask if modified
+        onTriggered: mainDocument.save()
     }
 
     Action {
@@ -70,7 +58,7 @@ ApplicationWindow {
         icon.name: "window-close"
         text: qsTr("Quit")
         shortcut: StandardKey.Quit
-        onTriggered: Qt.quit();
+        onTriggered: Qt.quit()
     }
 
     Action {
@@ -79,7 +67,7 @@ ApplicationWindow {
         text: qsTr("Scan")
         shortcut: "SPACE"
         enabled: skanPage.progress === 100
-        onTriggered: skanPage.startScan();
+        onTriggered: skanPage.startScan()
     }
 
     Action {
@@ -116,10 +104,6 @@ ApplicationWindow {
         
         MenuItem {
             action: saveDocAction
-        }
-        
-        MenuItem {
-            action: closeDocAction 
         }
         
         MenuItem {
@@ -205,34 +189,14 @@ ApplicationWindow {
                 }
             }
         }
-
-        QQC1.TabView {
-            id: tabView
+        
+        Document {
+            id: mainDocument
             Layout.fillWidth: true
             Layout.fillHeight: true
             focus: true
-            frameVisible: false
-            tabsVisible: count > 1
-
-            onCurrentIndexChanged: {
-                if (tabView.getTab(tabView.currentIndex).item) {
-                    tabView.getTab(tabView.currentIndex).item.grabScanner();
-                    //tabView.getTab(tabView.currentIndex).item.forceActiveFocus();
-                }
-            }
-            onCountChanged: {
-                if (count > 0) {
-                    if (tabView.getTab(tabView.currentIndex).item) {
-                        tabView.getTab(tabView.currentIndex).item.grabScanner();
-                        tabView.getTab(tabView.currentIndex).item.forceActiveFocus();
-                    }
-                }
-            }
-            Keys.onPressed: {
-                //console.log("tabView", event)
-                tabView.getTab(tabView.currentIndex).item.forceActiveFocus();
-            }
         }
+
     }
     
     ListModel {
@@ -241,26 +205,6 @@ ApplicationWindow {
         ListElement { name: qsTr("Normal"); resolution: 150 }
         ListElement { name: qsTr("High Quality"); resolution: 300 }
         ListElement { name: qsTr("Best Quality"); resolution: 600 }
-    }
-    
-    function addTab() {
-        tabView.addTab("foo", docComponent);
-        tabView.currentIndex = tabView.count-1;
-        var tab = tabView.getTab(tabView.count-1);
-        tab.title = Qt.binding(function() {return tab.item.name});
-        tab.item.grabScanner();
-        tab.item.forceActiveFocus();
-    }
-
-    Component.onCompleted: {
-        addTab();
-    }
-
-    Component {
-        id: docComponent
-        Document {
-            anchors.fill: parent
-        }
     }
 
 }

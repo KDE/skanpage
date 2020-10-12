@@ -184,4 +184,16 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
+void DocumentModel::clearData() 
+{
+    beginResetModel();
+    m_tmpFiles.clear();
+    endResetModel();
+    
+    if (!m_changed) {
+        m_changed = true;
+        emit changedChanged();
+    }
+}
+
 

@@ -47,11 +47,11 @@
 #include "DocumentModel.h"
 
 
-Skanpage::Skanpage(const QString &device, QWidget *parent)
+Skanpage::Skanpage(const QString &device, QObject *parent)
 : QObject(parent)
 , m_aboutData(nullptr)
 , m_ksanew(new KSaneIface::KSaneWidget(nullptr))
-, m_docHandler(nullptr)
+, m_docHandler(std::make_unique<DocumentModel>(nullptr))
 , m_progress(100)
 {
     connect(m_ksanew, &KSaneWidget::imageReady, this, &Skanpage::imageReady);
@@ -251,23 +251,6 @@ static void perrorMessageBox(const QString &text)
     }
 }
 
-
-void Skanpage::setDocument(DocumentModel *handler)
-{
-    if (m_docHandler) {
-        disconnect(m_docHandler, &QObject::destroyed, this, &Skanpage::documentDeleted);
-    }
-    m_docHandler = handler;
-    if (m_docHandler) {
-        connect(m_docHandler, &QObject::destroyed, this, &Skanpage::documentDeleted);
-    }
-}
-
-void Skanpage::documentDeleted()
-{
-    m_docHandler = nullptr;
-}
-
 void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
 {
     // save the image data
@@ -292,7 +275,7 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
 
     m_img = m_ksanew->toQImage(m_data, m_width, m_height, m_bytesPerLine, (KSaneIface::KSaneWidget::ImageFormat)m_format);
 
-    QTemporaryFile *tmp = new QTemporaryFile(m_docHandler);
+    QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
     tmp->open();
     if (m_img.save(tmp, "JPEG")) {
         m_docHandler->addImage(tmp);
@@ -351,7 +334,7 @@ void Skanpage::loadScannerOptions()
 void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList)
 {
     for (int i = 0; i < deviceList.size(); ++i) {
-        qCDebug(SKANPAGE_LOG)  << deviceList.at(i).name;
+        qCDebug(SKANPAGE_LOG) << deviceList.at(i).name;
     }
 }
 
@@ -380,6 +363,11 @@ void Skanpage::progressUpdated(int progress)
 int Skanpage::progress() const
 {
     return m_progress;
+}
+
+DocumentModel *Skanpage::documentModel() const
+{
+    return m_docHandler.get();
 }
 
 void Skanpage::cancelScan()

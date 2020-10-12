@@ -40,8 +40,6 @@ int main(int argc, char *argv[])
     qmlRegisterType<SaveFileDialog>("org.kde.skanpage", 1, 0, "SaveFileDialog");
 
 
-    QQmlApplicationEngine engine;
-
     KLocalizedString::setApplicationDomain("skanlite");
 
     KAboutData aboutData(QLatin1String("Skanpage"), // componentName, k4: appName
@@ -72,12 +70,14 @@ int main(int argc, char *argv[])
 
     const QString deviceName = parser.value(deviceOption);
     //qDebug() << QString::fromLatin1("deviceOption value=%1").arg(deviceName);
+    
+   
+    Skanpage skanpageApp = Skanpage(deviceName);
+    skanpageApp.setAboutData(&aboutData);  
+    
+    QQmlApplicationEngine engine;
 
-    Skanpage skanpage(deviceName, nullptr);
-    skanpage.setAboutData(&aboutData);
-
-
-    engine.rootContext()->setContextProperty(QStringLiteral("skanPage"), &skanpage);
+    engine.rootContext()->setContextProperty(QStringLiteral("skanPage"), &skanpageApp);
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();

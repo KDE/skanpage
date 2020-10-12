@@ -31,6 +31,9 @@
 
 #include <KSaneWidget>
 
+#include <memory>
+
+
 class KAboutData;
 class DocumentModel;
 
@@ -43,10 +46,12 @@ class Skanpage : public QObject
     Q_PROPERTY(QVariantList scanSizesF READ scanSizesF NOTIFY scanSizesChanged)
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
 
+    Q_PROPERTY(DocumentModel *documentModel READ documentModel NOTIFY documentModelchanged)
+    
     Q_OBJECT
 
 public:
-    explicit Skanpage(const QString &device, QWidget *parent);
+    explicit Skanpage(const QString &device, QObject *parent = nullptr);
     ~Skanpage();
     void setAboutData(KAboutData *aboutData);
 
@@ -57,6 +62,8 @@ public:
     const QVariantList scanSizesF() const;
 
     int progress() const;
+    
+    DocumentModel *documentModel() const;
 
     Q_INVOKABLE const QSize windowSize() const;
     Q_INVOKABLE void saveWindowSize(const QSize &size);
@@ -71,15 +78,13 @@ Q_SIGNALS:
     void scanSizeChanged();
     void scanSizesChanged();
     void progressChanged();
+    void documentModelchanged();
 
 public Q_SLOTS:
     void showAboutDialog();
     void showHelp();
     void loadScannerOptions();
     void saveScannerOptions();
-    void setDocument(DocumentModel *handler);
-
-    void documentDeleted();
 
     void startScan();
     void showScannerUI();
@@ -102,7 +107,8 @@ private:
 
     KAboutData              *m_aboutData;
     KSaneWidget             *m_ksanew;
-    DocumentModel           *m_docHandler;
+    
+    std::unique_ptr<DocumentModel> m_docHandler;
 
     QString                  m_deviceName;
     QMap<QString, QString>   m_defaultScanOpts;
