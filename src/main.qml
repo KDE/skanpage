@@ -94,18 +94,17 @@ ApplicationWindow {
     Menu {
         id: applicationMenu
         
-        MenuItem { 
-            action: newDocAction 
-        }
-        
         MenuItem {
             action: scanAction
         }
         
         MenuItem {
             action: saveDocAction
+        }              
+        MenuItem { 
+            action: newDocAction 
         }
-        
+               
         MenuItem {
             action: scanUIAction 
         }
@@ -118,6 +117,8 @@ ApplicationWindow {
     ColumnLayout {
         anchors.fill: parent
         
+        spacing: 0
+        
         ToolBar {
             id: mainToolBar
             Layout.fillWidth: true
@@ -125,9 +126,17 @@ ApplicationWindow {
             RowLayout {
                 id: toolbarRow
                 anchors.fill: parent
-
+                
+                ToolButton { 
+                    action: scanAction
+                }
+                
                 ToolButton {
                     action: saveDocAction 
+                }
+                
+                ToolButton {
+                    action: newDocAction 
                 }
                 
                 ToolButton { 
@@ -174,11 +183,7 @@ ApplicationWindow {
                         }
                     }
                 }
-                
-                ToolButton { 
-                    action: scanAction
-                }
-                
+
                 Item {
                     id: toolbarSpacer
                     Layout.fillWidth: true

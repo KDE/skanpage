@@ -20,7 +20,7 @@
  *
  * ============================================================ */
 import QtQuick 2.7
-import QtQuick.Controls 2.12 
+import QtQuick.Controls 2.14 
 import QtQuick.Controls 1.3 as QQC1
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
@@ -65,9 +65,10 @@ Item {
         }
     }
 
-    QQC1.SplitView {
+    SplitView {
         anchors.fill: parent
         orientation: Qt.Horizontal
+        
         QQC1.ScrollView {
             id: scrollView
             Layout.fillWidth: false
