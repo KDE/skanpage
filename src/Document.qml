@@ -69,21 +69,18 @@ Item {
         anchors.fill: parent
         orientation: Qt.Horizontal
         
-        QQC1.ScrollView {
+        ScrollView {
             id: scrollView
-            Layout.fillWidth: false
-            Layout.fillHeight: true
-            horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-            verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
-            frameVisible: true
-            highlightOnFocus: true
 
-            width: 30*Screen.pixelDensity
+            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+            ScrollBar.vertical.policy: ScrollBar.AlwaysOn
+            
+            SplitView.fillHeight: true
+            SplitView.preferredWidth: parent.width / 4         
 
             ListView {
                 id: listView
-                clip: true
-                width: scrollView.viewport.width
+                anchors.fill: parent
 
                 displaced: Transition {
                     NumberAnimation { properties: "x,y"; easing.type: Easing.OutQuad }
@@ -93,7 +90,7 @@ Item {
 
                 onCurrentItemChanged: {
                     bigImage.source = listView.currentItem ? listView.currentItem.imageSrc : ""
-                    bigImage.zoomScale = Math.min(imageViewer.viewport.width / bigImage.sourceSize.width, 1)
+                    bigImage.zoomScale = Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)
                 }
 
                 delegate: Item {
@@ -186,46 +183,70 @@ Item {
             }
         }
 
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+        ColumnLayout {
+            SplitView.fillWidth: true
+            SplitView.fillHeight: true
 
-            ColumnLayout {
-                anchors.fill: parent
+            ScrollView {
+                id: imageViewer
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                
+                contentWidth: Math.max(bigImage.width, imageViewer.availableWidth)
+                contentHeight: Math.max(bigImage.height, imageViewer.availableHeight)
+                
+                Item {
+                    anchors.fill: parent
+                    
+                    Image {
+                        id: bigImage
+                        
+                        anchors.centerIn: parent
 
-                QQC1.ScrollView {
-                    id: imageViewer
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    Item {
-                        width: Math.max(imageViewer.viewport.width, bigImage.width)
-                        height: Math.max(imageViewer.viewport.height, bigImage.height)
-                        Image {
-                            anchors.centerIn: parent
-                            id: bigImage
-                            property double zoomScale:1
-                            width: sourceSize.width * zoomScale
-                            height: sourceSize.height * zoomScale
-                        }
-                    }
+                        property double zoomScale:1
+                        width: sourceSize.width * zoomScale
+                        height: sourceSize.height * zoomScale
+                    }   
                 }
-                RowLayout {
-                    Layout.fillWidth: true
-                    visible: skanPage.progress === 100;
-                    ToolButton { action: zoomInAction }
-                    ToolButton { action: zoomOutAction }
-                    ToolButton { action: zoomFitAction }
-                    ToolButton { action: zoomOrigAction }
-                    Item { id: toolbarSpacer; Layout.fillWidth: true }
+            }
+            
+            RowLayout {
+                Layout.fillWidth: true
+                visible: skanPage.progress === 100
+                
+                ToolButton {
+                    action: zoomInAction 
                 }
-                RowLayout {
+                
+                ToolButton { 
+                    action: zoomOutAction 
+                }
+                
+                ToolButton { 
+                    action: zoomFitAction
+                }
+                
+                ToolButton { 
+                    action: zoomOrigAction
+                }
+                
+                Item { 
+                    id: toolbarSpacer
                     Layout.fillWidth: true
-                    visible: skanPage.progress < 100;
-                    ProgressBar {
-                        Layout.fillWidth: true
-                        value: skanPage.progress / 100;
-                    }
-                    ToolButton { action: cancelAction }
+                }
+            }
+            
+            RowLayout {
+                Layout.fillWidth: true
+                visible: skanPage.progress < 100
+                
+                ProgressBar {
+                    Layout.fillWidth: true
+                    value: skanPage.progress / 100
+                }
+                
+                ToolButton { 
+                    action: cancelAction
                 }
             }
         }
@@ -258,6 +279,7 @@ Item {
             listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
         }
     }
+    
     function moveDown() {
         if (listView.currentIndex < listView.count-1) {
             pages.moveImage(listView.currentIndex, listView.currentIndex+1, 1);
@@ -272,7 +294,7 @@ Item {
         text: i18n("Zoom In")
         shortcut: StandardKey.ZoomIn
         onTriggered: bigImage.zoomScale *= 1.5
-        enabled: bigImage.zoomScale < 8;
+        enabled: bigImage.zoomScale < 8
     }
 
     Action {
@@ -281,7 +303,7 @@ Item {
         text: i18n("Zoom Out")
         shortcut: StandardKey.ZoomOut
         onTriggered: bigImage.zoomScale *= 0.75
-        enabled: bigImage.width > imageViewer.viewport.width/2
+        enabled: bigImage.width > imageViewer.availableWidth / 2
     }
 
     Action {
@@ -289,7 +311,7 @@ Item {
         icon.name: "zoom-fit-best"
         text: i18n("Zoom Fit Width")
         shortcut: "A"
-        onTriggered:  bigImage.zoomScale = imageViewer.viewport.width / bigImage.sourceSize.width
+        onTriggered: bigImage.zoomScale = imageViewer.availableWidth / bigImage.sourceSize.width
     }
 
     Action {
@@ -320,16 +342,19 @@ Item {
         }
     }
 
-    Menu{
+    Menu {
         id: myContextMenu
         title: i18n("Edit")
 
-        MenuItem { action: deletePageAction }
+        MenuItem { 
+            action: deletePageAction
+        }
 
         MenuItem {
             text: i18n("Move Up")
             onTriggered: moveUp()
         }
+        
         MenuItem {
             text: i18n("Move Down")
             onTriggered: moveDown()
