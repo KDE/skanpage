@@ -35,6 +35,9 @@
 
 int main(int argc, char *argv[])
 {
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    
     QApplication app(argc, argv);
 
     qmlRegisterType<DocumentModel> ("org.kde.skanpage", 1, 0, "DocumentModel");
@@ -60,6 +63,9 @@ int main(int argc, char *argv[])
     app.setWindowIcon(QIcon::fromTheme(QLatin1String("scanner")));
 
     QCoreApplication::setApplicationVersion(aboutData.version());
+
+
+    
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
     parser.addHelpOption();

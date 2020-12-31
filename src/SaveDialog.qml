@@ -34,13 +34,9 @@ Window {
     title: i18n("Document Properties")
     modality: Qt.WindowModal
 
-    property double pixelDensity: Screen.pixelDensity
-    height: sizeCombo.height * 4 + 5 * saveOptions.pixelDensity
-    width: 70*saveOptions.pixelDensity
-
-    minimumWidth: windowBox.width
-    minimumHeight: sizeCombo.height * 5 + 11 * saveOptions.pixelDensity
-
+    minimumHeight: 200
+    minimumWidth: 450
+    
     Rectangle {
         anchors.fill: parent
         color: palette.window
@@ -48,72 +44,82 @@ Window {
 
     SystemPalette { id: palette }
 
-    GroupBox {
-        id: windowBox
+    GridLayout {
+        id: mainLayout
+        anchors.fill: parent
+        anchors.margins: 4
+        columns: 3
 
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: buttonRow.top
-            margins: saveOptions.pixelDensity * 1
+        Text {
+            text: i18n("Title:"); Layout.alignment: Qt.AlignRight
+        }
+        
+        TextField {
+            id: fileTitleItem
+            Layout.fillWidth: true
+            Layout.columnSpan: 1
+            onEditingFinished: {
+                // After explicitly editing the title disable the binding
+                var tmp = text;
+                text = tmp
+            }
+        }
+        
+        Item {
+            width: 1
+            height: 1
         }
 
-        GridLayout {
-            anchors.fill: parent
-            anchors.margins: saveOptions.pixelDensity * 2
+        Text {
+            text: i18n("Page Size:")
+            Layout.alignment: Qt.AlignRight
+        }
+        
+        ComboBox {
+            id: sizeCombo
+            Layout.columnSpan: 2
+            model: skanPage.scanSizes
+            Layout.alignment: Qt.AlignLeft
+        }
+
+        Text {
+            text: i18n("Print Quality:")
+            Layout.alignment: Qt.AlignRight
+        }
+        
+        ComboBox {
+            id: resCombo
+            Layout.columnSpan: 2
+            model: resolutions
+            currentIndex: 1
+            textRole: "name"
+            Layout.alignment: Qt.AlignLeft
+        }
+
+        Text { 
+            text: i18n("File:")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        TextField {
+            id: fileNameItem
             Layout.fillWidth: true
-            columns: 3
+            Keys.onReturnPressed: trySave();
+        }
 
-            Text { text: i18n("Title:"); Layout.alignment: Qt.AlignRight }
-            TextField {
-                id: fileTitleItem
-                Layout.fillWidth: true
-                Layout.columnSpan: 1
-                onEditingFinished: {
-                    // After explicitly editing the title disable the binding
-                    var tmp = text;
-                    text = tmp
-                }
+        ToolButton {
+            text: "..."
+            width: height
+            onClicked: {
+                fileDialog.fileUrl = fileNameItem.text
+                fileDialog.open()
             }
-            Item { width: 1; height: 1 }
-
-            Text { text: i18n("Page Size:"); Layout.alignment: Qt.AlignRight }
-            ComboBox {
-                id: sizeCombo
-                Layout.columnSpan: 2
-                model: skanPage.scanSizes
-                Layout.alignment: Qt.AlignLeft
-            }
-
-            Text { text: i18n("Print Quality:"); Layout.alignment: Qt.AlignRight }
-            ComboBox {
-                id: resCombo
-                Layout.columnSpan: 2
-                model: resolutions
-                currentIndex: 1
-                textRole: "name"
-                Layout.alignment: Qt.AlignLeft
-            }
-
-            Text { text: i18n("File:"); Layout.alignment: Qt.AlignRight }
-
-            TextField {
-                id: fileNameItem
-                Layout.fillWidth: true
-                Keys.onReturnPressed: trySave();
-            }
-
-            ToolButton {
-                text: "..."
-                width: height
-                onClicked: {
-                    fileDialog.fileUrl = fileNameItem.text
-                    fileDialog.open()
-                }
-            }
-            Item { Layout.fillHeight: true; Layout.fillWidth: true; Layout.columnSpan: 3 }
-
+        }
+        
+        Item { 
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.columnSpan: 3
         }
     }
 
@@ -131,18 +137,23 @@ Window {
 
     RowLayout {
         id: buttonRow
+        
         anchors {
             bottom: parent.bottom
             right: parent.right
-            margins: saveOptions.pixelDensity * 1
+            margins: 4
         }
+        
         Button {
             id: saveButton
             icon.name: "document-save"
             text: i18n("Save")
             onClicked: trySave();
         }
-        Button { action: cancelAction }
+        
+        Button {
+            action: cancelAction
+        }
     }
     
     Action {
@@ -155,6 +166,7 @@ Window {
 
     ListModel {
         id: resolutions
+        
         Component.onCompleted: {
             resolutions.append({ name: i18n("Draft (75 DPI)"), resolution: 75 });
             resolutions.append({ name: i18n("Normal (150 DPI)"), resolution: 150 });

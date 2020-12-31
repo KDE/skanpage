@@ -21,7 +21,6 @@
  * ============================================================ */
 import QtQuick 2.7
 import QtQuick.Controls 2.12
-import QtQuick.Controls 1.3 as QQC1
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 
@@ -30,13 +29,13 @@ ApplicationWindow {
     
     title: i18nc("document title: app title", "%1: Skanpage", docName)
     property string docName: mainDocument.name ? mainDocument.name  : ""
-    width: 800
+    width: 950
     height: 550
     visible: true
 
-    minimumWidth: toolbarRow.childrenRect.width - toolbarSpacer.width
+    minimumWidth: mainToolBar.implicitWidth
     minimumHeight: 400
-
+    
     Action {
         id: newDocAction
         icon.name: "document-replace"
@@ -122,10 +121,12 @@ ApplicationWindow {
         ToolBar {
             id: mainToolBar
             Layout.fillWidth: true
+            Layout.margins: 0
             
             RowLayout {
                 id: toolbarRow
                 anchors.fill: parent
+                spacing: 0
                 
                 ToolButton { 
                     action: scanAction
