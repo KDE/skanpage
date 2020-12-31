@@ -23,19 +23,44 @@ import QtQuick 2.7
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
+import Qt.labs.settings 1.0
 
 ApplicationWindow {
     id: mainWindow
     
+    visible: true
+        
     title: i18nc("document title: app title", "%1: Skanpage", docName)
     property string docName: mainDocument.name ? mainDocument.name  : ""
-    width: 950
-    height: 550
-    visible: true
+    
+    width: persistentSettings.width
+    height: persistentSettings.height
+    x: persistentSettings.x
+    y: persistentSettings.y
 
     minimumWidth: mainToolBar.implicitWidth
     minimumHeight: 400
     
+    Settings {
+        id: persistentSettings
+        
+        property int x: 0
+        property int y: 0
+        property int width: 950
+        property int height: 550
+    }
+    
+    Connections {
+        target: Qt.application
+        
+        function onAboutToQuit() {
+            persistentSettings.x = mainWindow.x;
+            persistentSettings.y = mainWindow.y;
+            persistentSettings.width = mainWindow.width;
+            persistentSettings.height = mainWindow.height;
+        }
+    }
+
     Action {
         id: newDocAction
         icon.name: "document-replace"
