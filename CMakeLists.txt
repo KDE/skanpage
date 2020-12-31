@@ -39,7 +39,9 @@ find_package(KF5 "5.55" REQUIRED
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX SKANPAGE
     VERSION_HEADER skanpage_version.h)
+    
 install(FILES skanpage.categories DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+
 set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(src)
