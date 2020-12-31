@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<SaveFileDialog>("org.kde.skanpage", 1, 0, "SaveFileDialog");
 
 
-    KLocalizedString::setApplicationDomain("skanlite");
+    KLocalizedString::setApplicationDomain("skanpage");
 
     KAboutData aboutData(QLatin1String("Skanpage"), // componentName, k4: appName
                          i18n("Skanpage"), // displayName, k4: programName
@@ -62,10 +62,8 @@ int main(int argc, char *argv[])
 
     app.setWindowIcon(QIcon::fromTheme(QLatin1String("scanner")));
 
-    QCoreApplication::setApplicationVersion(aboutData.version());
-
-
-    
+    KAboutData::setApplicationData(aboutData);
+   
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
     parser.addHelpOption();
