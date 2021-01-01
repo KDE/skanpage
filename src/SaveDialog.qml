@@ -32,15 +32,15 @@ Window {
 
     property alias fileName: fileNameItem.text
     title: i18n("Document Properties")
+    
     modality: Qt.WindowModal
+    flags: Qt.Dialog | Qt.CustomizeWindowHint | Qt.WindowTitleHint
+           | Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint
+
+    color: myPalette.window
 
     minimumHeight: 200
     minimumWidth: 450
-    
-    Rectangle {
-        anchors.fill: parent
-        color: palette.window
-    }
 
     SystemPalette { id: palette }
 
