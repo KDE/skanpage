@@ -277,7 +277,7 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
 
     QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
     tmp->open();
-    if (m_img.save(tmp, "JPEG")) {
+    if (m_img.save(tmp, "PNG")) {
         m_docHandler->addImage(tmp);
     }
     else {
