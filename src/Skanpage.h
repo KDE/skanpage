@@ -97,7 +97,6 @@ private Q_SLOTS:
     void availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList);
 
     void alertUser(int type, const QString &strStatus);
-    void buttonPressed(const QString &optionName, const QString &optionLabel, bool pressed);
 
     void progressUpdated(int progress);
     void scanDone(int status, const QString &strStatus);
@@ -106,8 +105,7 @@ private:
     int pageSizeToIndex(int id);
 
     KAboutData              *m_aboutData;
-    KSaneWidget             *m_ksanew;
-    
+    std::unique_ptr<KSaneWidget> m_ksanew;
     std::unique_ptr<DocumentModel> m_docHandler;
 
     QString                  m_deviceName;

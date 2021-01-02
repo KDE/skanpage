@@ -22,13 +22,8 @@
 
 #include "Skanpage.h"
 
-#include <QApplication>
 #include <QStringList>
-#include <QFileDialog>
 #include <QTemporaryFile>
-#include <QDialogButtonBox>
-#include <QVBoxLayout>
-#include <QMessageBox>
 #include <QDebug>
 #include <QPageSize>
 #include <QPrinter>
@@ -50,16 +45,15 @@
 Skanpage::Skanpage(const QString &device, QObject *parent)
 : QObject(parent)
 , m_aboutData(nullptr)
-, m_ksanew(new KSaneIface::KSaneWidget(nullptr))
+, m_ksanew(std::make_unique<KSaneIface::KSaneWidget>(nullptr))
 , m_docHandler(std::make_unique<DocumentModel>(nullptr))
 , m_progress(100)
 {
-    connect(m_ksanew, &KSaneWidget::imageReady, this, &Skanpage::imageReady);
-    connect(m_ksanew, &KSaneWidget::availableDevices, this, &Skanpage::availableDevices);
-    connect(m_ksanew, &KSaneWidget::userMessage, this, &Skanpage::alertUser);
-    connect(m_ksanew, &KSaneWidget::buttonPressed, this, &Skanpage::buttonPressed);
-    connect(m_ksanew, &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
-    connect(m_ksanew, &KSaneWidget::scanDone, this, &Skanpage::scanDone);
+    connect(m_ksanew.get(), &KSaneWidget::imageReady, this, &Skanpage::imageReady);
+    connect(m_ksanew.get(), &KSaneWidget::availableDevices, this, &Skanpage::availableDevices);
+    connect(m_ksanew.get(), &KSaneWidget::userMessage, this, &Skanpage::alertUser);
+    connect(m_ksanew.get(), &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
+    connect(m_ksanew.get(), &KSaneWidget::scanDone, this, &Skanpage::scanDone);
 
     m_ksanew->initGetDeviceList();
 
@@ -132,15 +126,12 @@ Skanpage::Skanpage(const QString &device, QObject *parent)
 Skanpage::~Skanpage()
 {
     saveScannerOptions();
-    delete m_ksanew;
 }
-
 
 void Skanpage::startScan()
 {
     m_ksanew->scanFinal();
 }
-
 
 void Skanpage::showScannerUI()
 {
@@ -215,7 +206,6 @@ const QVariantList Skanpage::scanSizesF() const
     return m_scanSizesF;
 }
 
-
 const QSize Skanpage::windowSize() const
 {
     KConfigGroup window(KSharedConfig::openConfig(), "Window");
@@ -238,7 +228,6 @@ void Skanpage::saveWindowSize(const QSize &size)
     window.writeEntry("Geometry", size);
     window.sync();
 }
-
 
 // Pops up message box similar to what perror() would print
 //************************************************************
@@ -347,11 +336,6 @@ void Skanpage::alertUser(int type, const QString &strStatus)
     default:
         KMessageBox::information(nullptr, strStatus, QLatin1String("Skanpage Test"));
     }
-}
-
-void Skanpage::buttonPressed(const QString &optionName, const QString &optionLabel, bool pressed)
-{
-    qCDebug(SKANPAGE_LOG)  << "Button" << optionName << optionLabel << ((pressed) ? "pressed" : "released");
 }
 
 void Skanpage::progressUpdated(int progress)
