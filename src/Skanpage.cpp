@@ -30,7 +30,6 @@
 
 #include <KAboutApplicationDialog>
 #include <KLocalizedString>
-#include <KMessageBox>
 #include <KIO/StatJob>
 #include <kio/global.h>
 #include <KSharedConfig>
@@ -66,7 +65,9 @@ Skanpage::Skanpage(const QString &device, QObject *parent)
         }
         if (m_ksanew->openDevice(dev) == false) {
             // could not open a scanner
-            KMessageBox::sorry(nullptr, i18n("Opening the selected scanner failed."));
+                
+            signalErrorMessage(i18n("Opening the selected scanner failed."));
+            //FIXME reload and reselect
             exit(1);
         }
         else {
@@ -196,6 +197,11 @@ int Skanpage::pageSizeToIndex(int id)
     return m_scanSizesEnum.last(); // custom
 }
 
+QString Skanpage::errorMessage() const
+{
+    return m_errorMessage;
+}
+
 const QStringList Skanpage::scanSizes() const
 {
     return m_scanSizesText;
@@ -229,17 +235,6 @@ void Skanpage::saveWindowSize(const QSize &size)
     window.sync();
 }
 
-// Pops up message box similar to what perror() would print
-//************************************************************
-static void perrorMessageBox(const QString &text)
-{
-    if (errno != 0) {
-        KMessageBox::sorry(nullptr, i18n("%1: %2", text, QString::fromLocal8Bit(strerror(errno))));
-    } else {
-        KMessageBox::sorry(nullptr, text);
-    }
-}
-
 void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
 {
     // save the image data
@@ -253,12 +248,12 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
     if ((m_format == KSaneIface::KSaneWidget::FormatRGB_16_C) ||
         (m_format == KSaneIface::KSaneWidget::FormatGrayScale16))
     {
-        perrorMessageBox(i18n("We do not support 16 per color scans at the moment!"));
+        signalErrorMessage(i18n("We do not support 16 per color scans at the moment!"));
         return;
     }
 
     if (!m_docHandler) {
-        perrorMessageBox(i18n("No document open for the new page!"));
+        signalErrorMessage(i18n("No document open for the new page!"));
         return;
     }
 
@@ -270,7 +265,7 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
         m_docHandler->addImage(tmp);
     }
     else {
-        perrorMessageBox(i18n("Failed to save image"));
+        signalErrorMessage(i18n("Failed to save image"));
     }
     tmp->close();
 }
@@ -329,13 +324,14 @@ void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList
 
 void Skanpage::alertUser(int type, const QString &strStatus)
 {
-    switch (type) {
-    case KSaneWidget::ErrorGeneral:
-        KMessageBox::sorry(nullptr, strStatus, QLatin1String("Skanpage Test"));
-        break;
-    default:
-        KMessageBox::information(nullptr, strStatus, QLatin1String("Skanpage Test"));
-    }
+    Q_UNUSED(type)
+    signalErrorMessage(strStatus);
+}
+
+void Skanpage::signalErrorMessage(const QString &text)
+{
+    m_errorMessage = text;
+    errorMessageChanged();
 }
 
 void Skanpage::progressUpdated(int progress)

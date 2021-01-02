@@ -25,6 +25,8 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 
+import org.kde.kirigami 2.5 as Kirigami
+
 ApplicationWindow {
     id: mainWindow
     
@@ -146,7 +148,6 @@ ApplicationWindow {
         ToolBar {
             id: mainToolBar
             Layout.fillWidth: true
-            Layout.margins: 0
             
             RowLayout {
                 id: toolbarRow
@@ -219,6 +220,13 @@ ApplicationWindow {
                     action: openMenuAction
                 }
             }
+        }
+        
+        Kirigami.InlineMessage
+        {
+            Layout.fillWidth: true 
+            
+            type: Kirigami.MessageType.Error
         }
         
         Document {

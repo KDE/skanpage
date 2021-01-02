@@ -36,13 +36,13 @@ Window {
     modality: Qt.WindowModal
     flags: Qt.Dialog | Qt.CustomizeWindowHint | Qt.WindowTitleHint
            | Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint
-
-    color: myPalette.window
+           
+    SystemPalette { id: palette }
+    
+    color: palette.window
 
     minimumHeight: 200
     minimumWidth: 450
-
-    SystemPalette { id: palette }
 
     GridLayout {
         id: mainLayout

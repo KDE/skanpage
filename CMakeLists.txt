@@ -28,6 +28,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         I18n        # I18n
         XmlGui      # KAboutApplicationDialog
         KIO         # contains the KIOWidgets which we use in target_link_libraries
+        Kirigami2
         #DocTools   # yields kdoctools_create_handbook
 )
 

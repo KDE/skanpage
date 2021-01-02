@@ -45,8 +45,8 @@ class Skanpage : public QObject
     Q_PROPERTY(QStringList scanSizes READ scanSizes NOTIFY scanSizesChanged)
     Q_PROPERTY(QVariantList scanSizesF READ scanSizesF NOTIFY scanSizesChanged)
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
-
-    Q_PROPERTY(DocumentModel *documentModel READ documentModel NOTIFY documentModelchanged)
+    Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
+    Q_PROPERTY(DocumentModel *documentModel READ documentModel NOTIFY documentModelChanged)
     
     Q_OBJECT
 
@@ -57,8 +57,10 @@ public:
 
     int scanSizeIndex() const;
     void setScanSizeIndex(int index);
+    
+    QString errorMessage() const;
     const QStringList scanSizes() const;
-
+   
     const QVariantList scanSizesF() const;
 
     int progress() const;
@@ -78,7 +80,8 @@ Q_SIGNALS:
     void scanSizeChanged();
     void scanSizesChanged();
     void progressChanged();
-    void documentModelchanged();
+    void documentModelChanged();
+    void errorMessageChanged();
 
 public Q_SLOTS:
     void showAboutDialog();
@@ -103,6 +106,7 @@ private Q_SLOTS:
 
 private:
     int pageSizeToIndex(int id);
+    void signalErrorMessage(const QString &text);
 
     KAboutData              *m_aboutData;
     std::unique_ptr<KSaneWidget> m_ksanew;
@@ -121,6 +125,7 @@ private:
     QStringList              m_scanSizesText;
     int                      m_scanSizeIndex;
     int                      m_progress;
+    QString                  m_errorMessage;
 };
 
 #endif
