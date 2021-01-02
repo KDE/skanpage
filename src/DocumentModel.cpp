@@ -81,9 +81,9 @@ void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, c
     QPainter painter(&writer);
     for (int i=0; i<m_tmpFiles.count(); ++i) {
         QRect target(0, 0, writer.width(), writer.height());
-        QPixmap pixmap(m_tmpFiles[i]->fileName());
-        pixmap = pixmap.scaled(target.size(), Qt::KeepAspectRatio, Qt::FastTransformation);
-        painter.drawPixmap(pixmap.rect(), pixmap, pixmap.rect());
+        QImage image(m_tmpFiles[i]->fileName());
+        image = image.scaled(target.size(), Qt::KeepAspectRatio, Qt::FastTransformation);
+        painter.drawImage(image.rect(), image, image.rect());
         if (i<m_tmpFiles.count()-1) {
             writer.newPage();
         }
