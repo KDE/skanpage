@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Qt;KDE;Graphics;Scanning;
 Comment=Scan and save images
-Exec=slanpage %U
+Exec=skanpage %U
 GenericName=Image Scanning Application
 Icon=skanpage
 Name=Skanpage
