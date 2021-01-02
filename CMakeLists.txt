@@ -41,6 +41,8 @@ ecm_setup_version(${PROJECT_VERSION}
     VERSION_HEADER skanpage_version.h)
     
 install(FILES skanpage.categories DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+install(PROGRAMS org.kde.skanpage.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(FILES org.kde.skanpage.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR} )
 
 set(CMAKE_AUTOMOC ON)
 
