@@ -30,7 +30,6 @@ target_link_libraries(skanpage
     KF5::Sane
     KF5::I18n
     KF5::XmlGui
-    KF5::KIOWidgets
     KF5::Kirigami2
 )
 

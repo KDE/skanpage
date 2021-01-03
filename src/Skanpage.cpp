@@ -30,8 +30,6 @@
 
 #include <KAboutApplicationDialog>
 #include <KLocalizedString>
-#include <KIO/StatJob>
-#include <kio/global.h>
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <KHelpClient>
