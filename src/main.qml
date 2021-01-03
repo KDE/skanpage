@@ -118,6 +118,13 @@ ApplicationWindow {
             }
         }
     }
+    
+    Action {
+        id: showAboutAction
+        icon.name: "scanner"
+        text: i18n("About Skanpage")
+        onTriggered: skanPage.showAboutDialog();
+    }
 
     Menu {
         id: applicationMenu
@@ -128,13 +135,18 @@ ApplicationWindow {
         
         MenuItem {
             action: saveDocAction
-        }              
+        }
+        
         MenuItem { 
             action: newDocAction 
         }
                
         MenuItem {
             action: scanUIAction 
+        } 
+        
+        MenuItem {
+            action: showAboutAction 
         }
         
         MenuItem {
@@ -245,7 +257,7 @@ ApplicationWindow {
         folder: shortcuts.documents
         selectExisting: false
         selectMultiple: false
-        nameFilters: [ "PDF files (*.pdf)", "JPEG files (*.jpg)","PNG files (*.png)", "All files (*)" ]
+        nameFilters: [ "PDF files (*.pdf)", "JPEG files (*.jpg)", "PNG files (*.png)", "All files (*)" ]
         onAccepted: {
             skanPage.documentModel.save(fileUrl)
         }

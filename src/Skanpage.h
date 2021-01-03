@@ -53,7 +53,6 @@ class Skanpage : public QObject
 public:
     explicit Skanpage(const QString &device, QObject *parent = nullptr);
     ~Skanpage();
-    void setAboutData(KAboutData *aboutData);
 
     int scanSizeIndex() const;
     void setScanSizeIndex(int index);
@@ -107,7 +106,6 @@ private:
     int pageSizeToIndex(int id);
     void signalErrorMessage(const QString &text);
 
-    KAboutData              *m_aboutData;
     std::unique_ptr<KSaneWidget> m_ksanew;
     std::unique_ptr<DocumentModel> m_docHandler;
 

@@ -28,6 +28,7 @@
 #include <QPageSize>
 #include <QPrinter>
 
+#include <KAboutData>
 #include <KAboutApplicationDialog>
 #include <KLocalizedString>
 #include <KSharedConfig>
@@ -41,7 +42,6 @@
 
 Skanpage::Skanpage(const QString &device, QObject *parent)
 : QObject(parent)
-, m_aboutData(nullptr)
 , m_ksanew(std::make_unique<KSaneIface::KSaneWidget>(nullptr))
 , m_docHandler(std::make_unique<DocumentModel>(nullptr))
 , m_scanSizeIndex(-1)
@@ -218,11 +218,6 @@ void Skanpage::showHelp()
     KHelpClient::invokeHelp(QLatin1String("index"), QLatin1String("skanlite"));
 }
 
-void Skanpage::setAboutData(KAboutData *aboutData)
-{
-    m_aboutData = aboutData;
-}
-
 void Skanpage::saveWindowSize(const QSize &size)
 {
     KConfigGroup window(KSharedConfig::openConfig(), "Window");
@@ -263,7 +258,7 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
 
 void Skanpage::showAboutDialog(void)
 {
-    KAboutApplicationDialog(*m_aboutData).exec();
+    KAboutApplicationDialog(KAboutData::applicationData()).exec();
 }
 
 void Skanpage::saveScannerOptions()
