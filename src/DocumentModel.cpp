@@ -26,7 +26,6 @@
 #include <QPainter>
 #include <QUrl>
 #include <QFileInfo>
-#include <QDir>
 
 #include <KLocalizedString>
 #include "skanpage_debug.h"
@@ -49,21 +48,6 @@ const QString DocumentModel::name() const
 bool DocumentModel::changed() const
 {
     return m_changed;
-}
-
-bool DocumentModel::fileExists(const QString &name) const
-{
-    return QFileInfo::exists(name);
-}
-
-const QString DocumentModel::toDisplayString(const QString &url) const
-{
-    return QUrl(url).toDisplayString(QUrl::PreferLocalFile);
-}
-
-const QString DocumentModel::upUrl(const QString &url) const
-{
-    return QFileInfo(url).dir().absolutePath();
 }
 
 void DocumentModel::save(const QUrl &fileUrl)

@@ -58,10 +58,6 @@ public:
 
     Q_INVOKABLE void save(const QUrl &fileUrl);
 
-    Q_INVOKABLE bool fileExists(const QString &name) const;
-    Q_INVOKABLE const QString toDisplayString(const QString &url) const;
-    Q_INVOKABLE const QString upUrl(const QString &url) const;
-
 public:
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
