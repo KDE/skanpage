@@ -245,7 +245,7 @@ ApplicationWindow {
         folder: shortcuts.documents
         selectExisting: false
         selectMultiple: false
-        nameFilters: [ "Image and PDF files (*.jpg *.png *.pdf)", "All files (*)" ]
+        nameFilters: [ "PDF files (*.pdf)", "JPEG files (*.jpg)","PNG files (*.png)", "All files (*)" ]
         onAccepted: {
             skanPage.documentModel.save(fileUrl)
         }
