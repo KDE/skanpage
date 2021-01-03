@@ -23,6 +23,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
+import QtQuick.Dialogs 1.3
 import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.5 as Kirigami
@@ -76,7 +77,8 @@ ApplicationWindow {
         icon.name: "document-save"
         text: i18n("Save")
         shortcut: StandardKey.Save
-        onTriggered: mainDocument.save()
+        //onTriggered: saveDialog.open(skanPage.documentModel.name)
+        onTriggered: saveFileDialog.open()
     }
 
     Action {
@@ -177,7 +179,7 @@ ApplicationWindow {
                     enabled: skanPage.progress === 100
                     property bool complete: false
                     Component.onCompleted: {
-                        var dpi = skanPage.scanDPI();
+                        var dpi = skanPage.scanDPI;
                         for (var i=0; i<resolutions.count; i++) {
                             if (resolutions.get(i).resolution >= dpi) {
                                 currentIndex = i;
@@ -189,7 +191,7 @@ ApplicationWindow {
                     onCurrentIndexChanged: {
                         if (complete) {
                             //console.log("setting DPI", resolutions.get(currentIndex).resolution)
-                            skanPage.setScanDPI(resolutions.get(currentIndex).resolution);
+                            skanPage.scanDPI = resolutions.get(currentIndex).resolution
                         }
                     }
                 }
@@ -236,6 +238,17 @@ ApplicationWindow {
             focus: true
         }
 
+    }
+    
+    FileDialog {
+        id: saveFileDialog
+        folder: shortcuts.documents
+        selectExisting: false
+        selectMultiple: false
+        nameFilters: [ "Image and PDF files (*.jpg *.png *.pdf)", "All files (*)" ]
+        onAccepted: {
+            skanPage.documentModel.save(fileUrl)
+        }
     }
     
     ListModel {

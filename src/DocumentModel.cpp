@@ -32,7 +32,7 @@
 #include "skanpage_debug.h"
 
 DocumentModel::DocumentModel(QObject *parent) : QAbstractListModel(parent)
-, m_name(QString())
+, m_name(i18n("Unnamed"))
 , m_changed(false)
 {
 }
@@ -66,50 +66,94 @@ const QString DocumentModel::upUrl(const QString &url) const
     return QFileInfo(url).dir().absolutePath();
 }
 
-void DocumentModel::save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title)
+void DocumentModel::save(const QUrl &fileUrl)
 {
-    //qCDebug(SKANPAGE_LOG)  << name << pageSize << dpi << title;
-    QPdfWriter writer(name);
-
-    writer.setPageSize(QPageSize(pageSize, QPageSize::Millimeter));
-    writer.setResolution(dpi);
-    writer.setPageMargins(QMarginsF(0,0,0,0));
-    writer.setCreator(QStringLiteral("Skanpage"));
-    writer.setTitle(title);
-
-
-    QPainter painter(&writer);
-    for (int i=0; i<m_tmpFiles.count(); ++i) {
-        QRect target(0, 0, writer.width(), writer.height());
-        QImage image(m_tmpFiles[i]->fileName());
-        image = image.scaled(target.size(), Qt::KeepAspectRatio, Qt::FastTransformation);
-        painter.drawImage(image.rect(), image, image.rect());
-        if (i<m_tmpFiles.count()-1) {
-            writer.newPage();
-        }
+    if (fileUrl.isEmpty() || m_tmpFiles.isEmpty()) {
+        return;
     }
-    painter.end();
+    qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
 
+    const auto localFile = fileUrl.toLocalFile();
+    const auto fileInfo = QFileInfo(localFile);
+    const auto fileSuffix = fileInfo.suffix();
+    
+    qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
+    
+    if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
+        savePDF(localFile);
+    } else {
+        saveImage(fileInfo);
+    }
+    
     if (m_changed) {
         m_changed = false;
         emit changedChanged();
     }
 
-    if (m_name != name) {
-        m_name = name;
+    if (m_name != fileInfo.fileName()) {
+        m_name = fileInfo.fileName();
         emit nameChanged();
     }
 }
 
-void DocumentModel::addImage(QTemporaryFile *tmpFile)
+void DocumentModel::savePDF(const QString &name)
+{
+    QPdfWriter writer(name);
+
+    writer.setResolution(m_dpiTmpFiles.at(0));
+    writer.setPageSize(QPageSize(m_pageSizeTmpFiles.at(0)));
+    writer.setPageMargins(QMarginsF(0,0,0,0));
+
+    QPainter painter(&writer);
+    for (int i = 0; i < m_tmpFiles.count(); ++i) {
+        QRect target(0, 0, writer.width(), writer.height());
+        QImage image(m_tmpFiles[i]->fileName());
+        image = image.scaled(target.size(), Qt::KeepAspectRatio, Qt::FastTransformation);
+        painter.drawImage(image.rect(), image, image.rect());
+        if (i < m_tmpFiles.count() - 1) {
+            writer.setPageMargins(QMarginsF(0,0,0,0));
+            writer.setResolution(m_dpiTmpFiles.at(i+1));
+            writer.setPageSize(QPageSize(m_pageSizeTmpFiles.at(i+1)));
+            writer.newPage();
+        }
+    }
+    painter.end();
+}
+
+void DocumentModel::saveImage(const QFileInfo &fileInfo)
+{
+    const int count = m_tmpFiles.count();
+    QImage image;
+    QString fileName;
+    
+    if (count == 1) {
+        image.load(m_tmpFiles[0]->fileName());
+        fileName = fileInfo.absoluteFilePath();
+        image.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+    } else {
+        for (int i = 0; i < count; ++i) {
+            image.load(m_tmpFiles[i]->fileName());
+            fileName = QStringLiteral("%1/%2%3.%4")
+                        .arg(fileInfo.absolutePath())
+                        .arg(fileInfo.baseName())
+                        .arg(i, 4, 10, QLatin1Char('0'))
+                        .arg(fileInfo.suffix());
+            image.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+        }
+    }
+}
+
+void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId pageSize, int dpi)
 {
     if (tmpFile == nullptr) {
-        qCDebug(SKANPAGE_LOG)  << tmpFile;
+        qCDebug(SKANPAGE_LOG) << tmpFile;
         return;
     }
 
     beginInsertRows(QModelIndex(), m_tmpFiles.count(), m_tmpFiles.count());
     m_tmpFiles.append(tmpFile);
+    m_pageSizeTmpFiles.append(pageSize);
+    m_dpiTmpFiles.append(dpi);
     endInsertRows();
     if (!m_changed) {
         m_changed = true;
@@ -130,6 +174,8 @@ void DocumentModel::moveImage(int from, int to)
         return;
     }
     m_tmpFiles.move(from, to);
+    m_pageSizeTmpFiles.move(from, to);
+    m_dpiTmpFiles.move(from, to);
     endMoveRows();
 
     if (!m_changed) {
@@ -146,6 +192,8 @@ void DocumentModel::removeImage(int row)
 
     beginRemoveRows(QModelIndex() , row, row);
     m_tmpFiles.removeAt(row);
+    m_pageSizeTmpFiles.removeAt(row);
+    m_dpiTmpFiles.removeAt(row);
     endRemoveRows();
 
     if (!m_changed) {

@@ -42,8 +42,8 @@ using namespace KSaneIface;
 class Skanpage : public QObject
 {
     Q_PROPERTY(int scanSizeIndex READ scanSizeIndex WRITE setScanSizeIndex NOTIFY scanSizeChanged)
+    Q_PROPERTY(float scanDPI READ scanDPI WRITE setScanDPI NOTIFY scanDPIChanged)
     Q_PROPERTY(QStringList scanSizes READ scanSizes NOTIFY scanSizesChanged)
-    Q_PROPERTY(QVariantList scanSizesF READ scanSizesF NOTIFY scanSizesChanged)
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
     Q_PROPERTY(DocumentModel *documentModel READ documentModel NOTIFY documentModelChanged)
@@ -58,10 +58,11 @@ public:
     int scanSizeIndex() const;
     void setScanSizeIndex(int index);
     
+    float scanDPI() const;
+    void setScanDPI(float dpi);
+    
     QString errorMessage() const;
     const QStringList scanSizes() const;
-   
-    const QVariantList scanSizesF() const;
 
     int progress() const;
     
@@ -70,14 +71,12 @@ public:
     Q_INVOKABLE const QSize windowSize() const;
     Q_INVOKABLE void saveWindowSize(const QSize &size);
 
-    Q_INVOKABLE float scanDPI() const;
-    Q_INVOKABLE bool setScanDPI(float dpi);
-
     Q_INVOKABLE void cancelScan();
 
 
 Q_SIGNALS:
     void scanSizeChanged();
+    void scanDPIChanged();
     void scanSizesChanged();
     void progressChanged();
     void documentModelChanged();
@@ -121,7 +120,7 @@ private:
     int                      m_bytesPerLine;
     int                      m_format;
     QVector<QPageSize::PageSizeId> m_scanSizesEnum;
-    QVariantList             m_scanSizesF;
+    QVector<QSizeF>            m_scanSizesF;
     QStringList              m_scanSizesText;
     int                      m_scanSizeIndex;
     int                      m_progress;

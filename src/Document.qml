@@ -23,34 +23,20 @@ import QtQuick 2.7
 import QtQuick.Controls 2.14 
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
-import org.kde.skanpage 1.0
 
 Item {
     id: doc
 
     focus: true
     clip: true
-
-    readonly property string fname: pages.name === "" ? i18n("Unnamed") : pages.name
-
-    readonly property string name: pages.changed ?  "* " + fname : fname;
-
+    
     property var pages: skanPage.documentModel
+    readonly property string name: pages.changed ?  "* " + pages.name : pages.name;
 
-    function addImage() {
-        skanPage.startScan()
+    SystemPalette {
+        id: palette
+        colorGroup: SystemPalette.Inactive 
     }
-
-    function save() {
-        saveDialog.open(pages.name)
-    }
-
-    SaveDialog {
-        id: saveDialog
-        doc: pages
-    }
-
-    SystemPalette { id: palette; colorGroup: SystemPalette.Inactive }
 
     Timer {
         id: delTmr

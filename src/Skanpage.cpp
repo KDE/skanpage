@@ -46,6 +46,7 @@ Skanpage::Skanpage(const QString &device, QObject *parent)
 , m_aboutData(nullptr)
 , m_ksanew(std::make_unique<KSaneIface::KSaneWidget>(nullptr))
 , m_docHandler(std::make_unique<DocumentModel>(nullptr))
+, m_scanSizeIndex(-1)
 , m_progress(100)
 {
     connect(m_ksanew.get(), &KSaneWidget::imageReady, this, &Skanpage::imageReady);
@@ -144,9 +145,10 @@ float Skanpage::scanDPI() const
     return m_ksanew->currentDPI();
 }
 
-bool Skanpage::setScanDPI(float dpi)
+void Skanpage::setScanDPI(float dpi)
 {
-    return m_ksanew->setOptVal(QStringLiteral("resolution"), QString::number(dpi));
+    m_ksanew->setOptVal(QStringLiteral("resolution"), QString::number(dpi));
+    signalErrorMessage(i18n("Setting DPI to %1 failed!").arg(QString::number(dpi)));
 }
 
 int Skanpage::scanSizeIndex() const
@@ -181,7 +183,7 @@ void Skanpage::setScanSizeIndex(int index)
         m_ksanew->getOptVal(QStringLiteral("tl-y"), tly);
         m_ksanew->getOptVal(QStringLiteral("br-x"), brx);
         m_ksanew->getOptVal(QStringLiteral("br-y"), bry);
-        qCDebug(SKANPAGE_LOG)  << tlx << tly << brx << bry;
+        qCDebug(SKANPAGE_LOG) << tlx << tly << brx << bry;
         m_scanSizeIndex = index;
         emit scanSizeChanged();
     }
@@ -205,11 +207,6 @@ QString Skanpage::errorMessage() const
 const QStringList Skanpage::scanSizes() const
 {
     return m_scanSizesText;
-}
-
-const QVariantList Skanpage::scanSizesF() const
-{
-    return m_scanSizesF;
 }
 
 const QSize Skanpage::windowSize() const
@@ -252,17 +249,13 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
         return;
     }
 
-    if (!m_docHandler) {
-        signalErrorMessage(i18n("No document open for the new page!"));
-        return;
-    }
-
     m_img = m_ksanew->toQImage(m_data, m_width, m_height, m_bytesPerLine, (KSaneIface::KSaneWidget::ImageFormat)m_format);
 
     QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
     tmp->open();
     if (m_img.save(tmp, "PNG")) {
-        m_docHandler->addImage(tmp);
+    
+        m_docHandler->addImage(tmp, m_scanSizesEnum[m_scanSizeIndex], scanDPI());
     }
     else {
         signalErrorMessage(i18n("Failed to save image"));
@@ -355,9 +348,9 @@ void Skanpage::cancelScan()
     m_ksanew->scanCancel();
 }
 
-void Skanpage::scanDone(int /*status*/, const QString &/*strStatus*/)
+void Skanpage::scanDone(int status, const QString &strStatus)
 {
-    // FIXME status and strStatus
+    qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:")<< strStatus;
     m_progress = 100;
     emit progressChanged();
 }

@@ -27,6 +27,9 @@
 #include <QAbstractListModel>
 #include <QList>
 #include <QTemporaryFile>
+#include <QPageSize>
+#include <QUrl>
+#include <QFileInfo>
 
 class DocumentModel : public QAbstractListModel
 {
@@ -46,14 +49,14 @@ public:
     const QString name() const;
     bool changed() const;
 
-    void addImage(QTemporaryFile *tmpFile);
+    void addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId pageSize, int dpi);
     
     Q_INVOKABLE void clearData();
 
     Q_INVOKABLE void moveImage(int from, int to);
     Q_INVOKABLE void removeImage(int row);
 
-    Q_INVOKABLE void save(const QString &name, const QSizeF &pageSize, int dpi, const QString &title);
+    Q_INVOKABLE void save(const QUrl &fileUrl);
 
     Q_INVOKABLE bool fileExists(const QString &name) const;
     Q_INVOKABLE const QString toDisplayString(const QString &url) const;
@@ -71,9 +74,14 @@ Q_SIGNALS:
 public Q_SLOTS:
 
 private:
-    QList<QTemporaryFile *> m_tmpFiles;
-    QString                 m_name;
-    bool                    m_changed;
+    void savePDF(const QString &name);
+    void saveImage(const QFileInfo &fileInfo);
+    
+    QList<QTemporaryFile *>     m_tmpFiles;
+    QList<int>                  m_dpiTmpFiles;
+    QList<QPageSize::PageSizeId> m_pageSizeTmpFiles;
+    QString                     m_name;
+    bool                        m_changed;
 
 };
 

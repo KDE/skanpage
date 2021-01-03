@@ -3,9 +3,9 @@ include_directories(${skanpage_BINARY_DIR})
 
 set(skanpage_SRCS
     main.cpp 
-    SaveFileDialog.cpp
+    Skanpage.cpp
     DocumentModel.cpp
-    Skanpage.cpp)
+    )
 
 qt5_add_resources(skanpage_SRCS qml.qrc)
 
