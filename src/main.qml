@@ -69,6 +69,7 @@ ApplicationWindow {
         icon.name: "document-replace"
         text: i18n("Clear")
         shortcut: StandardKey.New
+        enabled: !skanPage.documentModel.isEmpty
         onTriggered: skanPage.documentModel.clearData()
     }
 
@@ -77,7 +78,7 @@ ApplicationWindow {
         icon.name: "document-save"
         text: i18n("Save")
         shortcut: StandardKey.Save
-        //onTriggered: saveDialog.open(skanPage.documentModel.name)
+        enabled: !skanPage.documentModel.isEmpty
         onTriggered: saveFileDialog.open()
     }
 
@@ -94,7 +95,7 @@ ApplicationWindow {
         icon.name: "scanner"
         text: i18n("Scan")
         shortcut: "SPACE"
-        enabled: skanPage.progress === 100
+        enabled: skanPage.progress === 100 && skanPage.openedDevice
         onTriggered: skanPage.startScan()
     }
 
@@ -103,6 +104,7 @@ ApplicationWindow {
         icon.name: "configure"
         text: i18n("Scanner options")
         shortcut: "CTRL+SPACE"
+        enabled: skanPage.openedDevice
         onTriggered: skanPage.showScannerUI();
     }
     
@@ -188,7 +190,7 @@ ApplicationWindow {
                     id: resCombo
                     model: resolutions
                     textRole: "name"
-                    enabled: skanPage.progress === 100
+                    enabled: skanPage.progress === 100 && skanPage.openedDevice
                     property bool complete: false
                     Component.onCompleted: {
                         var dpi = skanPage.scanDPI;
@@ -211,7 +213,7 @@ ApplicationWindow {
                 ComboBox {
                     id: sizeCombo
                     model: skanPage.scanSizes
-                    enabled: skanPage.progress === 100
+                    enabled: skanPage.progress === 100 && skanPage.openedDevice
                     onCurrentIndexChanged: {
                         skanPage.scanSizeIndex = currentIndex;
                     }
@@ -245,11 +247,22 @@ ApplicationWindow {
         
         Document {
             id: mainDocument
+            
+            visible: skanPage.openedDevice
             Layout.fillWidth: true
             Layout.fillHeight: true
             focus: true
         }
-
+        
+        DevicesView {
+            id: devicesView
+            
+            visible: !skanPage.openedDevice
+            
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            focus: true
+        }
     }
     
     FileDialog {

@@ -29,6 +29,7 @@
 #include <KI18n/KLocalizedContext>
 
 #include "DocumentModel.h"
+#include "DevicesModel.h"
 #include "Skanpage.h"
 #include "skanpage_version.h"
 
@@ -40,7 +41,8 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     qmlRegisterType<DocumentModel> ("org.kde.skanpage", 1, 0, "DocumentModel");
-
+    qmlRegisterType<DevicesModel> ("org.kde.skanpage", 1, 0, "DevicesModel");
+    
     KLocalizedString::setApplicationDomain("skanpage");
 
     KAboutData aboutData(QLatin1String("Skanpage"), // componentName, k4: appName
@@ -71,8 +73,7 @@ int main(int argc, char *argv[])
     aboutData.processCommandLine(&parser);
 
     const QString deviceName = parser.value(deviceOption);
-    //qDebug() << QString::fromLatin1("deviceOption value=%1").arg(deviceName);
-   
+
     Skanpage skanpageApp = Skanpage(deviceName);
     
     QQmlApplicationEngine engine;

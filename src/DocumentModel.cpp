@@ -31,7 +31,7 @@
 #include "skanpage_debug.h"
 
 DocumentModel::DocumentModel(QObject *parent) : QAbstractListModel(parent)
-, m_name(i18n("Unnamed"))
+, m_name(i18n("New document"))
 , m_changed(false)
 {
 }
@@ -48,6 +48,11 @@ const QString DocumentModel::name() const
 bool DocumentModel::changed() const
 {
     return m_changed;
+}
+
+bool DocumentModel::isEmpty() const
+{
+    return rowCount() == 0;
 }
 
 void DocumentModel::save(const QUrl &fileUrl)
@@ -139,6 +144,9 @@ void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId page
     m_pageSizeTmpFiles.append(pageSize);
     m_dpiTmpFiles.append(dpi);
     endInsertRows();
+    if (rowCount() == 1) {
+        isEmptyChanged();
+    }
     if (!m_changed) {
         m_changed = true;
         emit changedChanged();
@@ -179,7 +187,9 @@ void DocumentModel::removeImage(int row)
     m_pageSizeTmpFiles.removeAt(row);
     m_dpiTmpFiles.removeAt(row);
     endRemoveRows();
-
+    if (rowCount() == 0) {
+        isEmptyChanged();
+    }
     if (!m_changed) {
         m_changed = true;
         emit changedChanged();

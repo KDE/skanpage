@@ -23,6 +23,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.14 
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
+import org.kde.kirigami 2.12 as Kirigami
 
 Item {
     id: doc
@@ -30,8 +31,7 @@ Item {
     focus: true
     clip: true
     
-    property var pages: skanPage.documentModel
-    readonly property string name: pages.changed ?  "* " + pages.name : pages.name;
+    readonly property string name: skanPage.documentModel.changed ?  "* " + skanPage.documentModel.name : skanPage.documentModel.name;
 
     SystemPalette {
         id: palette
@@ -43,16 +43,35 @@ Item {
         interval: 1
         property int delIndex
         onTriggered: {
-            pages.removeImage(delIndex);
+            skanPage.documentModel.removeImage(delIndex);
             if (listView.count === 0) {
                 bigImage.source = "";
             }
+        }
+    }
+    
+    Item {
+        id: emptyDocumentMessage
+
+        visible: skanPage.documentModel.isEmpty
+
+        anchors.fill: parent
+
+        Kirigami.PlaceholderMessage {
+            anchors.centerIn: parent
+            width: parent.width - (Kirigami.Units.largeSpacing * 4)
+
+            icon.name: "document"
+            
+            text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
         }
     }
 
     SplitView {
         anchors.fill: parent
         orientation: Qt.Horizontal
+        
+        visible: !skanPage.documentModel.isEmpty
         
         ScrollView {
             id: scrollView
@@ -71,7 +90,7 @@ Item {
                     NumberAnimation { properties: "x,y"; easing.type: Easing.OutQuad }
                 }
 
-                model: pages
+                model: skanPage.documentModel
 
                 onCurrentItemChanged: {
                     bigImage.source = listView.currentItem ? listView.currentItem.imageSrc : ""
@@ -88,12 +107,12 @@ Item {
                     height: icon.height+2*Screen.pixelDensity
 
                     MouseArea {
-                        id:mouseArea
+                        id: mouseArea
+                        
                         anchors.fill: parent
                         drag.target: icon
 
                         acceptedButtons: Qt.LeftButton | Qt.RightButton
-
 
                         onClicked: {
                             listView.currentIndex = index;
@@ -106,7 +125,7 @@ Item {
                     DropArea {
                         anchors.fill: parent
                         onEntered: {
-                            pages.moveImage(drag.source.index, delegateRoot.index, 1);
+                            skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
                         }
                     }
 
@@ -259,7 +278,7 @@ Item {
 
     function moveUp() {
         if (listView.currentIndex > 0) {
-            pages.moveImage(listView.currentIndex, listView.currentIndex-1, 1);
+            skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex-1, 1);
             listView.currentIndex--;
             listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
         }
@@ -267,7 +286,7 @@ Item {
     
     function moveDown() {
         if (listView.currentIndex < listView.count-1) {
-            pages.moveImage(listView.currentIndex, listView.currentIndex+1, 1);
+            skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex+1, 1);
             listView.currentIndex++;
             listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
         }

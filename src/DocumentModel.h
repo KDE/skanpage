@@ -36,6 +36,7 @@ class DocumentModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
     Q_PROPERTY(bool changed READ changed NOTIFY changedChanged)
+    Q_PROPERTY(bool isEmpty READ isEmpty NOTIFY isEmptyChanged)
     Q_ENUMS(DocumentModelRoles)
 
 public:
@@ -48,6 +49,7 @@ public:
 
     const QString name() const;
     bool changed() const;
+    bool isEmpty() const;
 
     void addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId pageSize, int dpi);
     
@@ -66,6 +68,7 @@ public:
 Q_SIGNALS:
     void nameChanged();
     void changedChanged();
+    void isEmptyChanged();
 
 public Q_SLOTS:
 
@@ -78,7 +81,6 @@ private:
     QList<QPageSize::PageSizeId> m_pageSizeTmpFiles;
     QString                     m_name;
     bool                        m_changed;
-
 };
 
 #endif

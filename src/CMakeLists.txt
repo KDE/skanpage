@@ -5,6 +5,7 @@ set(skanpage_SRCS
     main.cpp 
     Skanpage.cpp
     DocumentModel.cpp
+    DevicesModel
     )
 
 qt5_add_resources(skanpage_SRCS qml.qrc)

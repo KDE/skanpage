@@ -27,6 +27,7 @@
 #include <QDebug>
 #include <QPageSize>
 #include <QPrinter>
+#include <QSettings>
 
 #include <KAboutData>
 #include <KAboutApplicationDialog>
@@ -38,14 +39,18 @@
 #include <errno.h>
 #include "skanpage_debug.h"
 #include "DocumentModel.h"
+#include "DevicesModel.h"
 
-
-Skanpage::Skanpage(const QString &device, QObject *parent)
+Skanpage::Skanpage(const QString &deviceName, QObject *parent)
 : QObject(parent)
 , m_ksanew(std::make_unique<KSaneIface::KSaneWidget>(nullptr))
 , m_docHandler(std::make_unique<DocumentModel>(nullptr))
+, m_availableDevices(std::make_unique<DevicesModel>(nullptr))
+, m_deviceName(deviceName)
 , m_scanSizeIndex(-1)
 , m_progress(100)
+, m_openedDevice(false)
+, m_searchingForDevices(false)
 {
     connect(m_ksanew.get(), &KSaneWidget::imageReady, this, &Skanpage::imageReady);
     connect(m_ksanew.get(), &KSaneWidget::availableDevices, this, &Skanpage::availableDevices);
@@ -53,40 +58,8 @@ Skanpage::Skanpage(const QString &device, QObject *parent)
     connect(m_ksanew.get(), &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
     connect(m_ksanew.get(), &KSaneWidget::scanDone, this, &Skanpage::scanDone);
 
-    m_ksanew->initGetDeviceList();
-
-    // open the scan device
-    if (m_ksanew->openDevice(device) == false) {
-        QString dev = m_ksanew->selectDevice(nullptr);
-        if (dev.isEmpty()) {
-            // either no scanner was found or then cancel was pressed.
-            exit(0);
-        }
-        if (m_ksanew->openDevice(dev) == false) {
-            // could not open a scanner
-                
-            signalErrorMessage(i18n("Opening the selected scanner failed."));
-            //FIXME reload and reselect
-            exit(1);
-        }
-        else {
-            m_deviceName = QString::fromLatin1("%1:%2").arg(m_ksanew->make()).arg(m_ksanew->model());
-        }
-    }
-    else {
-        m_deviceName = device;
-    }
-
-    // save the default sane options for later use
-    m_ksanew->getOptVals(m_defaultScanOpts); // FIXME -> m_def... = m_ksanew->optVals();
-    m_ksanew->setScanButtonHidden(true);
-
-    // try to set default resolution to 150
-    m_ksanew->setOptVal(QStringLiteral("resolution"), QStringLiteral("150"));
-
-
-    m_ksanew->enableAutoSelect(false);
-
+    reloadDevicesList();
+  
     m_scanSizesText << i18n("A4");
     m_scanSizesText << i18n("B5");
     m_scanSizesText << i18n("Letter");
@@ -113,14 +86,6 @@ Skanpage::Skanpage(const QString &device, QObject *parent)
     m_scanSizesF << QPageSize::definitionSize(QPageSize::A5);
     m_scanSizesF << QPageSize::definitionSize(QPageSize::A6);
     m_scanSizesF << QPageSize::definitionSize(QPageSize::Custom);
-
-    QPrinter pd;
-    int tmp = pd.pageSize();
-
-    setScanSizeIndex(pageSizeToIndex(tmp));
-
-    // load saved options
-    loadScannerOptions();
 }
 
 Skanpage::~Skanpage()
@@ -205,6 +170,16 @@ QString Skanpage::errorMessage() const
 const QStringList Skanpage::scanSizes() const
 {
     return m_scanSizesText;
+}
+
+bool Skanpage::openedDevice() const
+{
+    return m_openedDevice;
+}
+
+bool Skanpage::searchingForDevices() const
+{
+    return m_searchingForDevices;
 }
 
 const QSize Skanpage::windowSize() const
@@ -303,8 +278,68 @@ void Skanpage::loadScannerOptions()
 
 void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList)
 {
-    for (int i = 0; i < deviceList.size(); ++i) {
-        qCDebug(SKANPAGE_LOG) << deviceList.at(i).name;
+    m_availableDevices->updateDevicesList(deviceList);
+    QSettings settings(KAboutData::applicationData().organizationDomain(), KAboutData::applicationData().componentName());
+    const auto savedDeviceName = settings.value(QStringLiteral("deviceName")).toString();
+    
+    //try command line option first, then remembered device
+    if (!openDevice(m_deviceName)) {
+        openDevice(savedDeviceName);
+    } 
+    m_searchingForDevices = false;
+    searchingForDevicesChanged();
+}
+
+bool Skanpage::openDevice(const QString &deviceName)
+{
+    qCDebug(SKANPAGE_LOG) << QStringLiteral("Trying to open device: %1").arg(deviceName);
+    bool success = false;
+    if (!deviceName.isEmpty()) {
+        success = m_ksanew->openDevice(deviceName);
+        if (success) {
+            finishOpeningDevice(deviceName);
+        }
+    }
+    return success;
+}
+
+void Skanpage::finishOpeningDevice(const QString &deviceName)
+{
+    qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName); 
+    QSettings settings(KAboutData::applicationData().organizationDomain(), KAboutData::applicationData().componentName());
+    settings.setValue(QStringLiteral("deviceName"), deviceName);
+    
+    // save the default sane options for later use
+    m_ksanew->getOptVals(m_defaultScanOpts); // FIXME -> m_def... = m_ksanew->optVals();
+    m_ksanew->setScanButtonHidden(true);
+
+    // try to set default resolution to 150
+    m_ksanew->setOptVal(QStringLiteral("resolution"), QStringLiteral("150"));
+
+    m_ksanew->enableAutoSelect(false);
+ 
+    QPrinter pd;
+    int tmp = pd.pageSize();
+
+    setScanSizeIndex(pageSizeToIndex(tmp));
+
+    // load saved options
+    loadScannerOptions();
+    
+    m_openedDevice = true;
+    openedDeviceChanged();
+}
+
+void Skanpage::reloadDevicesList() {
+    
+    qCDebug(SKANPAGE_LOG()) << QStringLiteral("(Re-)loading devices list");
+    if (m_ksanew->closeDevice()) {
+        m_openedDevice = false;
+        openedDeviceChanged();
+        m_deviceName.clear();
+        m_searchingForDevices = true;
+        searchingForDevicesChanged();
+        m_ksanew->initGetDeviceList();
     }
 }
 
@@ -336,6 +371,11 @@ DocumentModel *Skanpage::documentModel() const
     return m_docHandler.get();
 }
 
+DevicesModel *Skanpage::devicesModel() const
+{
+    return m_availableDevices.get();
+}
+
 void Skanpage::cancelScan()
 {
     m_ksanew->scanCancel();
@@ -343,7 +383,7 @@ void Skanpage::cancelScan()
 
 void Skanpage::scanDone(int status, const QString &strStatus)
 {
-    qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:")<< strStatus;
+    qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
     m_progress = 100;
     emit progressChanged();
 }
