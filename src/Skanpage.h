@@ -45,6 +45,7 @@ class Skanpage : public QObject
     Q_PROPERTY(int scanSizeIndex READ scanSizeIndex WRITE setScanSizeIndex NOTIFY scanSizeChanged)
     Q_PROPERTY(float scanDPI READ scanDPI WRITE setScanDPI NOTIFY scanDPIChanged)
     Q_PROPERTY(QStringList scanSizes READ scanSizes NOTIFY scanSizesChanged)
+    Q_PROPERTY(bool colorMode READ colorMode WRITE setColorMode NOTIFY colorModeChanged) 
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
     Q_PROPERTY(DocumentModel *documentModel READ documentModel NOTIFY documentModelChanged)
@@ -53,7 +54,7 @@ class Skanpage : public QObject
     Q_PROPERTY(bool searchingForDevices READ searchingForDevices NOTIFY searchingForDevicesChanged) 
     
     Q_OBJECT
-    
+
 public:
     explicit Skanpage(const QString &deviceName, QObject *parent = nullptr);
     ~Skanpage();
@@ -63,6 +64,9 @@ public:
     
     float scanDPI() const;
     void setScanDPI(float dpi);
+    
+    bool colorMode() const;
+    void setColorMode(bool colorMode);  
     
     QString errorMessage() const;
     const QStringList scanSizes() const;
@@ -82,6 +86,7 @@ Q_SIGNALS:
     void scanSizeChanged();
     void scanDPIChanged();
     void scanSizesChanged();
+    void colorModeChanged();
     void progressChanged();
     void documentModelChanged();
     void devicesModelChanged();

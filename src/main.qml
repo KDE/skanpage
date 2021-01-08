@@ -182,36 +182,37 @@ ApplicationWindow {
                     action: newDocAction 
                 }
                 
-                ToolButton { 
-                    action: scanUIAction
-                }
-                
                 ComboBox {
                     id: resCombo
-                    model: resolutions
+                    //model: resolutions
                     textRole: "name"
+                    valueRole: "resolution"
+                    model: [ 
+                        { name: i18n("Draft (75 DPI)"), resolution: 75 },
+                        { name: i18n("Normal (150 DPI)"), resolution: 150 },
+                        { name: i18n("High Quality (300 DPI)"), resolution: 300 },
+                        { name: i18n("Best Quality (600 DPI)"), resolution: 600 }
+                    ]
                     enabled: skanPage.progress === 100 && skanPage.openedDevice
-                    property bool complete: false
-                    Component.onCompleted: {
-                        var dpi = skanPage.scanDPI;
-                        for (var i=0; i<resolutions.count; i++) {
-                            if (resolutions.get(i).resolution >= dpi) {
-                                currentIndex = i;
-                                break;
+                    currentIndex: 0
+                    
+                    Connections {
+                        target: skanPage
+                        onScanDPIChanged: {
+                            var dpi = skanPage.scanDPI;
+                            for (var i = 0; i < resCombo.model.count; i++) {
+                                if (resCombo.model.get(i).resolution >= dpi) {
+                                    resCombo.currentIndex = i;
+                                    break;
+                                }
                             }
-                        }
-                        complete = true;
-                    }
-                    onCurrentIndexChanged: {
-                        if (complete) {
-                            //console.log("setting DPI", resolutions.get(currentIndex).resolution)
-                            skanPage.scanDPI = resolutions.get(currentIndex).resolution
                         }
                     }
                 }
 
                 ComboBox {
                     id: sizeCombo
+                    implicitWidth: resCombo.implicitWidth / 2
                     model: skanPage.scanSizes
                     enabled: skanPage.progress === 100 && skanPage.openedDevice
                     onCurrentIndexChanged: {
@@ -225,6 +226,35 @@ ApplicationWindow {
                             }
                         }
                     }
+
+                }
+                
+                ComboBox {
+                    id: modeCombo
+                    implicitWidth: resCombo.implicitWidth / 2
+
+                    textRole: "name"
+                    valueRole: "selection"
+                    model: [ 
+                        { name: i18n("Color"), selection: true },
+                        { name: i18n("Gray"), selection: false }
+                        ]
+                    enabled: skanPage.progress === 100 && skanPage.openedDevice
+                    currentIndex: 0
+                    Connections {
+                        target: skanPage
+                        onColorModeChanged: {
+                            if (skanPage.colorMode) {
+                                modeCombo.currentIndex = 0;
+                            } else {
+                                modeCombo.currentIndex = 1;
+                            }
+                        }
+                    }
+                }
+                                
+                ToolButton { 
+                    action: scanUIAction
                 }
 
                 Item {
@@ -275,25 +305,4 @@ ApplicationWindow {
             skanPage.documentModel.save(fileUrl)
         }
     }
-    
-    ListModel {
-        id: resolutions
-        Component.onCompleted: {
-            resolutions.append({ name: i18n("Draft (75 DPI)"), resolution: 75 });
-            resolutions.append({ name: i18n("Normal (150 DPI)"), resolution: 150 });
-            resolutions.append({ name: i18n("High Quality (300 DPI)"), resolution: 300 });
-            resolutions.append({ name: i18n("Best Quality (600 DPI)"), resolution: 600 });
-        }
-    }
-    
-    ListModel {
-        id: pageSizes
-        Component.onCompleted: {
-            resolutions.append({ name: i18n("Draft (75 DPI)"), size: skanPage.pageSizes.A4 });
-            resolutions.append({ name: i18n("Normal (150 DPI)"), resolution: 150 });
-            resolutions.append({ name: i18n("High Quality (300 DPI)"), resolution: 300 });
-            resolutions.append({ name: i18n("Best Quality (600 DPI)"), resolution: 600 });
-        }
-    }
-
 }

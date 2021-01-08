@@ -101,7 +101,28 @@ float Skanpage::scanDPI() const
 void Skanpage::setScanDPI(float dpi)
 {
     m_ksanew->setOptVal(QStringLiteral("resolution"), QString::number(dpi));
-    signalErrorMessage(i18n("Setting DPI to %1 failed!").arg(QString::number(dpi)));
+}
+
+bool Skanpage::colorMode() const
+{
+    if (m_openedDevice) {
+        QString readValue;
+        m_ksanew->getOptVal(QStringLiteral("mode"), readValue);
+        qDebug() << QString::compare(readValue, QStringLiteral("color"));
+        return QString::compare(readValue, QStringLiteral("color"));
+    } else {
+        return true;
+    }
+}
+
+void Skanpage::setColorMode(bool colorMode)
+{
+    qDebug() << colorMode;
+    if (colorMode) {
+        m_ksanew->setOptVal(QStringLiteral("mode"), QStringLiteral("Color"));
+    } else {
+        m_ksanew->setOptVal(QStringLiteral("mode"), QStringLiteral("Gray"));
+    }
 }
 
 int Skanpage::scanSizeIndex() const
@@ -245,7 +266,13 @@ void Skanpage::loadScannerOptions()
     }
 
     KConfigGroup scannerOptions(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_deviceName));
+    
+    qCDebug(SKANPAGE_LOG) << QStringLiteral("Loading scanner options") << scannerOptions.entryMap();
+    
     m_ksanew->setOptVals(scannerOptions.entryMap());
+    scanDPIChanged();
+    scanSizesChanged();
+    colorModeChanged();
 }
 
 void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList)
@@ -289,11 +316,8 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
     m_ksanew->setOptVal(QStringLiteral("resolution"), QStringLiteral("150"));
 
     m_ksanew->enableAutoSelect(false);
- 
-    QPrinter pd;
-    int tmp = pd.pageSize();
 
-    setScanSizeIndex(pageSizeToIndex(tmp));
+    setScanSizeIndex(pageSizeToIndex(QPageSize::A4));
 
     // load saved options
     loadScannerOptions();
