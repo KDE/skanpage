@@ -285,5 +285,15 @@ ApplicationWindow {
             resolutions.append({ name: i18n("Best Quality (600 DPI)"), resolution: 600 });
         }
     }
+    
+    ListModel {
+        id: pageSizes
+        Component.onCompleted: {
+            resolutions.append({ name: i18n("Draft (75 DPI)"), size: skanPage.pageSizes.A4 });
+            resolutions.append({ name: i18n("Normal (150 DPI)"), resolution: 150 });
+            resolutions.append({ name: i18n("High Quality (300 DPI)"), resolution: 300 });
+            resolutions.append({ name: i18n("Best Quality (600 DPI)"), resolution: 600 });
+        }
+    }
 
 }

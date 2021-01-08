@@ -34,7 +34,6 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <KHelpClient>
 
 #include <errno.h>
 #include "skanpage_debug.h"
@@ -77,15 +76,6 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     m_scanSizesEnum << QPageSize::A5;
     m_scanSizesEnum << QPageSize::A6;
     m_scanSizesEnum << QPageSize::Custom;
-
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::A4);
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::B5);
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::Letter);
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::Legal);
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::Executive);
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::A5);
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::A6);
-    m_scanSizesF << QPageSize::definitionSize(QPageSize::Custom);
 }
 
 Skanpage::~Skanpage()
@@ -180,24 +170,6 @@ bool Skanpage::openedDevice() const
 bool Skanpage::searchingForDevices() const
 {
     return m_searchingForDevices;
-}
-
-const QSize Skanpage::windowSize() const
-{
-    KConfigGroup window(KSharedConfig::openConfig(), "Window");
-    return window.readEntry("Geometry", QSize(740, 400));
-}
-
-void Skanpage::showHelp()
-{
-    KHelpClient::invokeHelp(QLatin1String("index"), QLatin1String("skanlite"));
-}
-
-void Skanpage::saveWindowSize(const QSize &size)
-{
-    KConfigGroup window(KSharedConfig::openConfig(), "Window");
-    window.writeEntry("Geometry", size);
-    window.sync();
 }
 
 void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
