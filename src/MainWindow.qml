@@ -201,12 +201,11 @@ ApplicationWindow {
                     Connections {
                         target: skanPage
                         onScanDPIChanged: {
-                            var dpi = skanPage.scanDPI;
-                            for (var i = 0; i < resCombo.model.count; i++) {
-                                if (resCombo.model.get(i).resolution >= dpi) {
-                                    resCombo.currentIndex = i;
-                                    break;
-                                }
+                            var dpiIndex = resCombo.indexOfValue(skanPage.scanDPI);
+                            if (dpiIndex >= 0) {
+                                resCombo.currentIndex = dpiIndex;
+                            } else {
+                                resCombo.currentIndex = 0;
                             }
                         }
                     }

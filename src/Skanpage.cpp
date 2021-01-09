@@ -110,7 +110,7 @@ bool Skanpage::colorMode() const
     if (m_openedDevice) {
         QString readValue;
         m_ksanew->getOptVal(QStringLiteral("mode"), readValue);
-        return QString::compare(readValue, QStringLiteral("color"));
+        return QString::compare(readValue, QStringLiteral("Color")) == 0;
     } else {
         return true;
     }
@@ -167,7 +167,7 @@ void Skanpage::setScanSizeIndex(int index)
 
 int Skanpage::pageSizeToIndex(int id)
 {
-    for (int i=0; i<m_scanSizesEnum.size(); ++i) {
+    for (int i=0; i < m_scanSizesEnum.size(); ++i) {
         if (id == m_scanSizesEnum[i]) {
             return i;
         }
@@ -272,9 +272,6 @@ void Skanpage::loadScannerOptions()
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Loading scanner options") << scannerOptions.entryMap();
     
     m_ksanew->setOptVals(scannerOptions.entryMap());
-    scanDPIChanged();
-    scanSizesChanged();
-    colorModeChanged();
 }
 
 void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList)
@@ -326,6 +323,9 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
     
     m_openedDevice = true;
     openedDeviceChanged();
+    scanDPIChanged();
+    scanSizesChanged();
+    colorModeChanged();
 }
 
 void Skanpage::reloadDevicesList() {
