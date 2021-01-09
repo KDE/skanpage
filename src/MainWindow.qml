@@ -184,7 +184,6 @@ ApplicationWindow {
                 
                 ComboBox {
                     id: resCombo
-                    //model: resolutions
                     textRole: "name"
                     valueRole: "resolution"
                     model: [ 
@@ -193,6 +192,9 @@ ApplicationWindow {
                         { name: i18n("High Quality (300 DPI)"), resolution: 300 },
                         { name: i18n("Best Quality (600 DPI)"), resolution: 600 }
                     ]
+                    onCurrentValueChanged: {
+                        skanPage.scanDPI = resCombo.currentValue
+                    }
                     enabled: skanPage.progress === 100 && skanPage.openedDevice
                     currentIndex: 0
                     
@@ -241,6 +243,11 @@ ApplicationWindow {
                         ]
                     enabled: skanPage.progress === 100 && skanPage.openedDevice
                     currentIndex: 0
+                    
+                    onCurrentValueChanged:  {
+                        skanPage.colorMode = modeCombo.currentValue;
+                    }
+                    
                     Connections {
                         target: skanPage
                         onColorModeChanged: {

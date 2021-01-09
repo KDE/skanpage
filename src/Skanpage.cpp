@@ -100,7 +100,9 @@ float Skanpage::scanDPI() const
 
 void Skanpage::setScanDPI(float dpi)
 {
-    m_ksanew->setOptVal(QStringLiteral("resolution"), QString::number(dpi));
+    if (m_openedDevice) {
+        m_ksanew->setOptVal(QStringLiteral("resolution"), QString::number(dpi));
+    }
 }
 
 bool Skanpage::colorMode() const
@@ -108,7 +110,6 @@ bool Skanpage::colorMode() const
     if (m_openedDevice) {
         QString readValue;
         m_ksanew->getOptVal(QStringLiteral("mode"), readValue);
-        qDebug() << QString::compare(readValue, QStringLiteral("color"));
         return QString::compare(readValue, QStringLiteral("color"));
     } else {
         return true;
@@ -117,11 +118,12 @@ bool Skanpage::colorMode() const
 
 void Skanpage::setColorMode(bool colorMode)
 {
-    qDebug() << colorMode;
-    if (colorMode) {
-        m_ksanew->setOptVal(QStringLiteral("mode"), QStringLiteral("Color"));
-    } else {
-        m_ksanew->setOptVal(QStringLiteral("mode"), QStringLiteral("Gray"));
+    if (m_openedDevice) {
+        if (colorMode) {
+            m_ksanew->setOptVal(QStringLiteral("mode"), QStringLiteral("Color"));
+        } else {
+            m_ksanew->setOptVal(QStringLiteral("mode"), QStringLiteral("Gray"));
+        }
     }
 }
 
