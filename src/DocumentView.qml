@@ -103,7 +103,7 @@ Item {
                     color: palette.highlight
                     focus: index === listView.currentIndex
 
-                    property string imageSrc: "file://"+model.name
+                    property string imageSrc: model.imageUrl
                     property int index: model.index
                     width: listView.width;
                     height: icon.height
@@ -168,7 +168,7 @@ Item {
                                 horizontalCenter: parent.horizontalCenter;
                                 top: parent.top
                             }
-                            source:  "file://"+model.name
+                            source: model.imageUrl
                         }
                         Text {
                             id: number

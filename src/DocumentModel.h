@@ -41,7 +41,7 @@ class DocumentModel : public QAbstractListModel
 
 public:
     enum DocumentModelRoles {
-        FileNameRole = Qt::UserRole+1
+        ImageUrlRole = Qt::UserRole+1
     };
 
     explicit DocumentModel(QObject *parent = nullptr);

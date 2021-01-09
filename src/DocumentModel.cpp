@@ -199,7 +199,7 @@ void DocumentModel::removeImage(int row)
 QHash<int, QByteArray> DocumentModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
-    roles[FileNameRole] = "name";
+    roles[ImageUrlRole] = "imageUrl";
     return roles;
 }
 
@@ -220,8 +220,8 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
     }
 
     switch (role) {
-        case FileNameRole:
-            return m_tmpFiles[index.row()]->fileName();
+        case ImageUrlRole:
+            return QUrl::fromLocalFile(m_tmpFiles[index.row()]->fileName());
     }
     return QVariant();
 }
