@@ -275,7 +275,7 @@ ApplicationWindow {
             type: Kirigami.MessageType.Error
         }
         
-        Document {
+        DocumentView {
             id: mainDocument
             
             visible: skanPage.openedDevice

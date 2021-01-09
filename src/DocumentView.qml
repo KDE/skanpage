@@ -97,14 +97,16 @@ Item {
                     bigImage.zoomScale = Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)
                 }
 
-                delegate: Item {
+                delegate: Rectangle {
                     id: delegateRoot
+                    
+                    color: palette.highlight
                     focus: index === listView.currentIndex
 
                     property string imageSrc: "file://"+model.name
                     property int index: model.index
                     width: listView.width;
-                    height: icon.height+2*Screen.pixelDensity
+                    height: icon.height
 
                     MouseArea {
                         id: mouseArea
@@ -132,7 +134,7 @@ Item {
                     Item {
                         id: icon
                         width: iconImage.width
-                        height: iconImage.height + number.height + Screen.pixelDensity*0.5
+                        height: iconImage.height + number.height
                         anchors {
                             horizontalCenter: parent.horizontalCenter;
                             verticalCenter: parent.verticalCenter
@@ -161,7 +163,7 @@ Item {
 
                         Image {
                             id: iconImage
-                            sourceSize.width: listView.width-2*Screen.pixelDensity
+                            sourceSize.width: listView.width
                             anchors {
                                 horizontalCenter: parent.horizontalCenter;
                                 top: parent.top
@@ -176,12 +178,6 @@ Item {
                             }
                             text: model.index+1
                         }
-                    }
-                    Rectangle {
-                        anchors.fill: parent
-                        z: -1
-                        color: palette.highlight
-                        visible: index === listView.currentIndex
                     }
                 }
             }

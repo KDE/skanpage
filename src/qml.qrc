@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>MainWindow.qml</file>
-        <file>Document.qml</file>
+        <file>DocumentView.qml</file>
         <file>DevicesView.qml</file>
     </qresource>
 </RCC>
