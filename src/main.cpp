@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
     
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.rootContext()->setContextProperty(QStringLiteral("skanPage"), &skanpageApp);
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:/MainWindow.qml")));
 
     return app.exec();
 }

@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
+        <file>MainWindow.qml</file>
         <file>Document.qml</file>
         <file>DevicesView.qml</file>
     </qresource>
