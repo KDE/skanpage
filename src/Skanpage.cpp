@@ -134,32 +134,36 @@ int Skanpage::scanSizeIndex() const
 
 void Skanpage::setScanSizeIndex(int index)
 {
-    if (m_scanSizeIndex != index) {
+    if (m_scanSizeIndex != index && m_openedDevice) {
         if (index < 0 || index >= m_scanSizesEnum.size()) {
             index = 0;
         }
         QPageSize ps(m_scanSizesEnum[index]);
         QRectF rectf = ps.rect(QPageSize::Millimeter);
-        qCDebug(SKANPAGE_LOG) << rectf.topLeft() << rectf.bottomRight();
+        qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected scan size:") << rectf.topLeft() << rectf.bottomRight();
+        qCDebug(SKANPAGE_LOG) << QStringLiteral("Maximum reported sizes are:") << m_ksanew->scanAreaWidth() << m_ksanew->scanAreaHeight();
         if (m_ksanew->scanAreaWidth() < rectf.width()) {
-            index = m_scanSizesEnum.size()-1;
             rectf.setWidth(m_ksanew->scanAreaWidth());
-
+            //set index to custom only when rounded values do not match
+            if (qRound(m_ksanew->scanAreaWidth()) < rectf.width()) {
+                 index = m_scanSizesEnum.size()-1;
+            }
         }
         if (m_ksanew->scanAreaHeight() < rectf.height()) {
-            index = m_scanSizesEnum.size()-1;
-            rectf.setWidth(m_ksanew->scanAreaHeight());
+            rectf.setHeight(m_ksanew->scanAreaHeight());
+            if (qRound(m_ksanew->scanAreaHeight()) < rectf.height()) {
+                 index = m_scanSizesEnum.size()-1;
+            }
         }
-        m_ksanew->setSelection(rectf.topLeft(), rectf.bottomRight());
-        QString tlx;
-        QString tly;
-        QString brx;
-        QString bry;
-        m_ksanew->getOptVal(QStringLiteral("tl-x"), tlx);
-        m_ksanew->getOptVal(QStringLiteral("tl-y"), tly);
-        m_ksanew->getOptVal(QStringLiteral("br-x"), brx);
-        m_ksanew->getOptVal(QStringLiteral("br-y"), bry);
-        qCDebug(SKANPAGE_LOG) << tlx << tly << brx << bry;
+        QString tlx = QString::number(rectf.topLeft().x(),'f',1);
+        QString tly = QString::number(rectf.topLeft().y(),'f',1);
+        QString brx = QString::number(rectf.bottomRight().x(),'f',1);
+        QString bry = QString::number(rectf.bottomRight().y(),'f',1);
+        m_ksanew->setOptVal(QStringLiteral("tl-x"), tlx);
+        m_ksanew->setOptVal(QStringLiteral("tl-y"), tly);
+        m_ksanew->setOptVal(QStringLiteral("br-x"), brx);
+        m_ksanew->setOptVal(QStringLiteral("br-y"), bry);
+        
         m_scanSizeIndex = index;
         emit scanSizeChanged();
     }
@@ -290,9 +294,9 @@ void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList
 
 bool Skanpage::openDevice(const QString &deviceName)
 {
-    qCDebug(SKANPAGE_LOG) << QStringLiteral("Trying to open device: %1").arg(deviceName);
     bool success = false;
     if (!deviceName.isEmpty()) {
+        qCDebug(SKANPAGE_LOG) << QStringLiteral("Trying to open device: %1").arg(deviceName);
         success = m_ksanew->openDevice(deviceName);
         if (success) {
             finishOpeningDevice(deviceName);
@@ -316,12 +320,13 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
 
     m_ksanew->enableAutoSelect(false);
 
-    setScanSizeIndex(pageSizeToIndex(QPageSize::A4));
 
     // load saved options
     loadScannerOptions();
     
     m_openedDevice = true;
+    
+    setScanSizeIndex(pageSizeToIndex(QPageSize::A4));
     openedDeviceChanged();
     scanDPIChanged();
     scanSizesChanged();

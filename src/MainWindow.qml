@@ -69,7 +69,7 @@ ApplicationWindow {
         icon.name: "document-replace"
         text: i18n("Clear")
         shortcut: StandardKey.New
-        enabled: !skanPage.documentModel.count === 0
+        enabled: skanPage.documentModel.count !== 0
         onTriggered: skanPage.documentModel.clearData()
     }
 
@@ -78,7 +78,7 @@ ApplicationWindow {
         icon.name: "document-save"
         text: i18n("Save")
         shortcut: StandardKey.Save
-        enabled: !skanPage.documentModel.count === 0
+        enabled: skanPage.documentModel.count !== 0
         onTriggered: saveFileDialog.open()
     }
 
