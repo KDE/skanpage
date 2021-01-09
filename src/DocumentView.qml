@@ -31,7 +31,7 @@ Item {
     focus: true
     clip: true
     
-    readonly property string name: skanPage.documentModel.changed ?  "* " + skanPage.documentModel.name : skanPage.documentModel.name;
+    readonly property string name: skanPage.documentModel.changed ? i18nc("* ", "Marker for indicating an unsaved document") + skanPage.documentModel.name : skanPage.documentModel.name;
 
     SystemPalette {
         id: palette
@@ -53,7 +53,7 @@ Item {
     Item {
         id: emptyDocumentMessage
 
-        visible: skanPage.documentModel.isEmpty
+        visible: skanPage.documentModel.count === 0
 
         anchors.fill: parent
 
@@ -71,11 +71,13 @@ Item {
         anchors.fill: parent
         orientation: Qt.Horizontal
         
-        visible: !skanPage.documentModel.isEmpty
+        visible: skanPage.documentModel.count !== 0
         
         ScrollView {
             id: scrollView
 
+            visible: skanPage.documentModel.count > 1
+            
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             ScrollBar.vertical.policy: ScrollBar.AlwaysOn
             
@@ -87,24 +89,30 @@ Item {
                 anchors.fill: parent
 
                 displaced: Transition {
-                    NumberAnimation { properties: "x,y"; easing.type: Easing.OutQuad }
+                    NumberAnimation {
+                        properties: "x,y"
+                        easing.type: Easing.OutQuad 
+                    }
                 }
 
                 model: skanPage.documentModel
 
                 onCurrentItemChanged: {
-                    bigImage.source = listView.currentItem ? listView.currentItem.imageSrc : ""
+                    bigImage.source = listView.currentItem ? listView.currentItem.imageUrl : ""
                     bigImage.zoomScale = Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)
                 }
 
                 delegate: Rectangle {
                     id: delegateRoot
-                    
-                    color: palette.highlight
+                    readonly property int borderWidth: 2
+                    border.width: borderWidth
+                    border.color: palette.mid
+
                     focus: index === listView.currentIndex
 
-                    property string imageSrc: model.imageUrl
+                    property url imageUrl: model.imageUrl
                     property int index: model.index
+                    
                     width: listView.width;
                     height: icon.height
 
@@ -113,14 +121,12 @@ Item {
                         
                         anchors.fill: parent
                         drag.target: icon
-
-                        acceptedButtons: Qt.LeftButton | Qt.RightButton
+                        
+                        hoverEnabled: true
+                        acceptedButtons: Qt.LeftButton
 
                         onClicked: {
                             listView.currentIndex = index;
-                            if (mouse.button === Qt.RightButton) {
-                                myContextMenu.popup();
-                            }
                         }
                     }
 
@@ -134,7 +140,7 @@ Item {
                     Item {
                         id: icon
                         width: iconImage.width
-                        height: iconImage.height + number.height
+                        height: iconImage.height + pageNumber.height
                         anchors {
                             horizontalCenter: parent.horizontalCenter;
                             verticalCenter: parent.verticalCenter
@@ -163,20 +169,62 @@ Item {
 
                         Image {
                             id: iconImage
-                            sourceSize.width: listView.width
+                            sourceSize.width: listView.width - borderWidth * 2
                             anchors {
                                 horizontalCenter: parent.horizontalCenter;
                                 top: parent.top
                             }
                             source: model.imageUrl
                         }
-                        Text {
-                            id: number
+                        
+                        Kirigami.Heading {
+                            id: pageNumber
+                            level: 2
                             anchors {
                                 bottom: parent.bottom
                                 horizontalCenter: parent.horizontalCenter
                             }
-                            text: model.index+1
+                            text: model.index + 1
+                        }
+                        
+                        Loader {
+                            active: mouseArea.containsMouse
+                            
+                            anchors {
+                                bottom: pageNumber.top
+                                left: icon.left
+                            }
+                            
+                            sourceComponent: Row {
+                                spacing: Kirigami.Units.smallSpacing
+                                
+                                Button {
+                                    icon.name: "go-up"
+                                    onClicked: {
+                                        skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex -1, 1);
+                                        listView.currentIndex--;
+                                        listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
+                                    }
+                                    enabled: index > 0 
+                                }
+                                
+                                Button {
+                                    icon.name: "go-down"
+                                    onClicked: {
+                                        skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex + 1, 1);
+                                        listView.currentIndex++;
+                                        listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
+                                    }
+                                    enabled: index < listView.count - 1
+                                }
+                                
+                                Button {      
+                                    icon.name: "delete"
+                                    onClicked: {
+                                        skanPage.documentModel.removeImage(index);
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -253,39 +301,11 @@ Item {
     }
 
     Keys.onUpPressed: {
-        if (event.modifiers & Qt.ControlModifier) {
-            moveUp()
-        }
-        else {
-            listView.decrementCurrentIndex()
-        }
-        event.accepted = true;
+        listView.decrementCurrentIndex()
     }
 
     Keys.onDownPressed: {
-        if (event.modifiers & Qt.ControlModifier) {
-            moveDown()
-        }
-        else {
-            listView.incrementCurrentIndex()
-        }
-        event.accepted = true;
-    }
-
-    function moveUp() {
-        if (listView.currentIndex > 0) {
-            skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex-1, 1);
-            listView.currentIndex--;
-            listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
-        }
-    }
-    
-    function moveDown() {
-        if (listView.currentIndex < listView.count-1) {
-            skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex+1, 1);
-            listView.currentIndex++;
-            listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
-        }
+        listView.incrementCurrentIndex()
     }
 
     Action {
@@ -328,36 +348,5 @@ Item {
         text: i18n("Cancel")
         shortcut: "Esc"
         onTriggered: skanPage.cancelScan()
-    }
-
-    Action {
-        id: deletePageAction
-        icon.name: "document-close"
-        text: i18n("Delete page")
-        shortcut: StandardKey.Delete
-        onTriggered: {
-            // FIXME ask for confirmation + do not ask again
-            delTmr.delIndex = listView.currentIndex;
-            delTmr.restart();
-        }
-    }
-
-    Menu {
-        id: myContextMenu
-        title: i18n("Edit")
-
-        MenuItem { 
-            action: deletePageAction
-        }
-
-        MenuItem {
-            text: i18n("Move Up")
-            onTriggered: moveUp()
-        }
-        
-        MenuItem {
-            text: i18n("Move Down")
-            onTriggered: moveDown()
-        }
     }
 }

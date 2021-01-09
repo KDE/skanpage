@@ -50,11 +50,6 @@ bool DocumentModel::changed() const
     return m_changed;
 }
 
-bool DocumentModel::isEmpty() const
-{
-    return rowCount() == 0;
-}
-
 void DocumentModel::save(const QUrl &fileUrl)
 {
     if (fileUrl.isEmpty() || m_tmpFiles.isEmpty()) {
@@ -144,9 +139,7 @@ void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId page
     m_pageSizeTmpFiles.append(pageSize);
     m_dpiTmpFiles.append(dpi);
     endInsertRows();
-    if (rowCount() == 1) {
-        isEmptyChanged();
-    }
+    countChanged();
     if (!m_changed) {
         m_changed = true;
         emit changedChanged();
@@ -156,10 +149,18 @@ void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId page
 void DocumentModel::moveImage(int from, int to)
 {
     int add = 0;
-    if (from == to) return;
-    if (to > from) {add = 1;}
-    if (from < 0 || from >= m_tmpFiles.count()) return;
-    if (to < 0 || to >= m_tmpFiles.count()) return;
+    if (from == to) {
+        return;
+    }
+    if (to > from) {
+        add = 1;
+    }
+    if (from < 0 || from >= m_tmpFiles.count()) {
+        return;
+    }
+    if (to < 0 || to >= m_tmpFiles.count()) {
+        return;
+    }
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), to+add);
     if (!ok) {
         qCDebug(SKANPAGE_LOG)  << "Failed to move" << from << to << add << m_tmpFiles.count();
@@ -187,9 +188,7 @@ void DocumentModel::removeImage(int row)
     m_pageSizeTmpFiles.removeAt(row);
     m_dpiTmpFiles.removeAt(row);
     endRemoveRows();
-    if (rowCount() == 0) {
-        isEmptyChanged();
-    }
+    countChanged();
     if (!m_changed) {
         m_changed = true;
         emit changedChanged();
