@@ -22,8 +22,6 @@
 
 #include "DevicesModel.h"
 
-#include "libskanpage_debug.h"
-
 // Sane includes
 extern "C"
 {

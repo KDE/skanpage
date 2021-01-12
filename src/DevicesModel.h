@@ -31,13 +31,11 @@
 
 #include <KSaneWidget>
 
-#include "libSkanPage_export.h"
-
 class DevicesModelPrivate;
 
 using namespace KSaneIface;
 
-class LIBSKANPAGE_EXPORT DevicesModel : public QAbstractListModel
+class DevicesModel : public QAbstractListModel
 {
     Q_OBJECT
 
