@@ -200,7 +200,7 @@ ApplicationWindow {
                     
                     Connections {
                         target: skanPage
-                        onScanDPIChanged: {
+                        function onScanDPIChanged() {
                             var dpiIndex = resCombo.indexOfValue(skanPage.scanDPI);
                             if (dpiIndex >= 0) {
                                 resCombo.currentIndex = dpiIndex;
@@ -221,7 +221,7 @@ ApplicationWindow {
                     }
                     Connections {
                         target: skanPage
-                        onScanSizeIndexChanged: {
+                        function onScanSizeIndexChanged() {
                             if (sizeCombo.currentIndex != skanPage.scanSizeIndex) {
                                 sizeCombo.currentIndex = skanPage.scanSizeIndex;
                             }
@@ -249,7 +249,7 @@ ApplicationWindow {
                     
                     Connections {
                         target: skanPage
-                        onColorModeChanged: {
+                        function onColorModeChanged() {
                             if (skanPage.colorMode) {
                                 modeCombo.currentIndex = 0;
                             } else {
