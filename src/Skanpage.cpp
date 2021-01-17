@@ -165,7 +165,7 @@ void Skanpage::setScanSizeIndex(int index)
         m_ksanew->setOptVal(QStringLiteral("br-y"), bry);
 
         m_scanSizeIndex = index;
-        emit scanSizeChanged();
+        Q_EMIT scanSizeChanged();
     }
 }
 
@@ -356,7 +356,7 @@ void Skanpage::signalErrorMessage(const QString &text)
 void Skanpage::progressUpdated(int progress)
 {
     m_progress = progress;
-    emit progressChanged();
+    Q_EMIT progressChanged();
 }
 
 int Skanpage::progress() const
@@ -383,5 +383,5 @@ void Skanpage::scanDone(int status, const QString &strStatus)
 {
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
     m_progress = 100;
-    emit progressChanged();
+    Q_EMIT progressChanged();
 }

@@ -72,12 +72,12 @@ void DocumentModel::save(const QUrl &fileUrl)
 
     if (m_changed) {
         m_changed = false;
-        emit changedChanged();
+        Q_EMIT changedChanged();
     }
 
     if (m_name != fileInfo.fileName()) {
         m_name = fileInfo.fileName();
-        emit nameChanged();
+        Q_EMIT nameChanged();
     }
 }
 
@@ -140,7 +140,7 @@ void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId page
     countChanged();
     if (!m_changed) {
         m_changed = true;
-        emit changedChanged();
+        Q_EMIT changedChanged();
     }
 }
 
@@ -171,7 +171,7 @@ void DocumentModel::moveImage(int from, int to)
 
     if (!m_changed) {
         m_changed = true;
-        emit changedChanged();
+        Q_EMIT changedChanged();
     }
 }
 
@@ -189,7 +189,7 @@ void DocumentModel::removeImage(int row)
     countChanged();
     if (!m_changed) {
         m_changed = true;
-        emit changedChanged();
+        Q_EMIT changedChanged();
     }
 }
 
@@ -230,6 +230,6 @@ void DocumentModel::clearData()
 
     if (!m_changed) {
         m_changed = true;
-        emit changedChanged();
+        Q_EMIT changedChanged();
     }
 }
