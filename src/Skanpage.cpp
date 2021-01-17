@@ -285,7 +285,7 @@ void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList
         openDevice(savedDeviceName);
     }
     m_searchingForDevices = false;
-    searchingForDevicesChanged();
+    Q_EMIT searchingForDevicesChanged();
 }
 
 bool Skanpage::openDevice(const QString &deviceName)
@@ -322,10 +322,10 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
     m_openedDevice = true;
 
     setScanSizeIndex(pageSizeToIndex(QPageSize::A4));
-    openedDeviceChanged();
-    scanDPIChanged();
-    scanSizesChanged();
-    colorModeChanged();
+    Q_EMIT openedDeviceChanged();
+    Q_EMIT scanDPIChanged();
+    Q_EMIT scanSizesChanged();
+    Q_EMIT colorModeChanged();
 }
 
 void Skanpage::reloadDevicesList()
@@ -333,10 +333,10 @@ void Skanpage::reloadDevicesList()
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("(Re-)loading devices list");
     if (m_ksanew->closeDevice()) {
         m_openedDevice = false;
-        openedDeviceChanged();
+        Q_EMIT openedDeviceChanged();
         m_deviceName.clear();
         m_searchingForDevices = true;
-        searchingForDevicesChanged();
+        Q_EMIT searchingForDevicesChanged();
         m_ksanew->initGetDeviceList();
     }
 }
@@ -350,7 +350,7 @@ void Skanpage::alertUser(int type, const QString &strStatus)
 void Skanpage::signalErrorMessage(const QString &text)
 {
     m_errorMessage = text;
-    errorMessageChanged();
+    Q_EMIT errorMessageChanged();
 }
 
 void Skanpage::progressUpdated(int progress)

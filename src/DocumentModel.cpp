@@ -137,7 +137,7 @@ void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId page
     m_pageSizeTmpFiles.append(pageSize);
     m_dpiTmpFiles.append(dpi);
     endInsertRows();
-    countChanged();
+    Q_EMIT countChanged();
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
@@ -186,7 +186,7 @@ void DocumentModel::removeImage(int row)
     m_pageSizeTmpFiles.removeAt(row);
     m_dpiTmpFiles.removeAt(row);
     endRemoveRows();
-    countChanged();
+    Q_EMIT countChanged();
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
