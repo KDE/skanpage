@@ -1,55 +1,55 @@
 /* ============================================================
-*
-* Copyright (C) 2015 by Kåre Särs <kare.sars@iki .fi>
-*
-* This program is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public License as
-* published by the Free Software Foundation; either version 2 of
-* the License or (at your option) version 3 or any later version
-* accepted by the membership of KDE e.V. (or its successor approved
-*  by the membership of KDE e.V.), which shall act as a proxy
-* defined in Section 14 of version 3 of the license.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License.
-* along with this program.  If not, see <http://www.gnu.org/licenses/>
-*
-* ============================================================ */
+ *
+ * Copyright (C) 2015 by Kåre Särs <kare.sars@iki .fi>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ *  by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License.
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ *
+ * ============================================================ */
 
 #include "Skanpage.h"
 
-#include <QStringList>
-#include <QTemporaryFile>
 #include <QDebug>
 #include <QPageSize>
 #include <QPrinter>
 #include <QSettings>
+#include <QStringList>
+#include <QTemporaryFile>
 
-#include <KAboutData>
 #include <KAboutApplicationDialog>
+#include <KAboutData>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KConfigGroup>
 
-#include <errno.h>
-#include "skanpage_debug.h"
-#include "DocumentModel.h"
 #include "DevicesModel.h"
+#include "DocumentModel.h"
+#include "skanpage_debug.h"
+#include <errno.h>
 
 Skanpage::Skanpage(const QString &deviceName, QObject *parent)
-: QObject(parent)
-, m_ksanew(std::make_unique<KSaneIface::KSaneWidget>(nullptr))
-, m_docHandler(std::make_unique<DocumentModel>(nullptr))
-, m_availableDevices(std::make_unique<DevicesModel>(nullptr))
-, m_deviceName(deviceName)
-, m_scanSizeIndex(-1)
-, m_progress(100)
-, m_openedDevice(false)
-, m_searchingForDevices(false)
+    : QObject(parent)
+    , m_ksanew(std::make_unique<KSaneIface::KSaneWidget>(nullptr))
+    , m_docHandler(std::make_unique<DocumentModel>(nullptr))
+    , m_availableDevices(std::make_unique<DevicesModel>(nullptr))
+    , m_deviceName(deviceName)
+    , m_scanSizeIndex(-1)
+    , m_progress(100)
+    , m_openedDevice(false)
+    , m_searchingForDevices(false)
 {
     connect(m_ksanew.get(), &KSaneWidget::imageReady, this, &Skanpage::imageReady);
     connect(m_ksanew.get(), &KSaneWidget::availableDevices, this, &Skanpage::availableDevices);
@@ -58,7 +58,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksanew.get(), &KSaneWidget::scanDone, this, &Skanpage::scanDone);
 
     reloadDevicesList();
-  
+
     m_scanSizesText << i18n("A4");
     m_scanSizesText << i18n("B5");
     m_scanSizesText << i18n("Letter");
@@ -144,26 +144,26 @@ void Skanpage::setScanSizeIndex(int index)
         qCDebug(SKANPAGE_LOG) << QStringLiteral("Maximum reported sizes are:") << m_ksanew->scanAreaWidth() << m_ksanew->scanAreaHeight();
         if (m_ksanew->scanAreaWidth() < rectf.width()) {
             rectf.setWidth(m_ksanew->scanAreaWidth());
-            //set index to custom only when rounded values do not match
+            // set index to custom only when rounded values do not match
             if (qRound(m_ksanew->scanAreaWidth()) < rectf.width()) {
-                 index = m_scanSizesEnum.size()-1;
+                index = m_scanSizesEnum.size() - 1;
             }
         }
         if (m_ksanew->scanAreaHeight() < rectf.height()) {
             rectf.setHeight(m_ksanew->scanAreaHeight());
             if (qRound(m_ksanew->scanAreaHeight()) < rectf.height()) {
-                 index = m_scanSizesEnum.size()-1;
+                index = m_scanSizesEnum.size() - 1;
             }
         }
-        QString tlx = QString::number(rectf.topLeft().x(),'f',1);
-        QString tly = QString::number(rectf.topLeft().y(),'f',1);
-        QString brx = QString::number(rectf.bottomRight().x(),'f',1);
-        QString bry = QString::number(rectf.bottomRight().y(),'f',1);
+        QString tlx = QString::number(rectf.topLeft().x(), 'f', 1);
+        QString tly = QString::number(rectf.topLeft().y(), 'f', 1);
+        QString brx = QString::number(rectf.bottomRight().x(), 'f', 1);
+        QString bry = QString::number(rectf.bottomRight().y(), 'f', 1);
         m_ksanew->setOptVal(QStringLiteral("tl-x"), tlx);
         m_ksanew->setOptVal(QStringLiteral("tl-y"), tly);
         m_ksanew->setOptVal(QStringLiteral("br-x"), brx);
         m_ksanew->setOptVal(QStringLiteral("br-y"), bry);
-        
+
         m_scanSizeIndex = index;
         emit scanSizeChanged();
     }
@@ -171,7 +171,7 @@ void Skanpage::setScanSizeIndex(int index)
 
 int Skanpage::pageSizeToIndex(int id)
 {
-    for (int i=0; i < m_scanSizesEnum.size(); ++i) {
+    for (int i = 0; i < m_scanSizesEnum.size(); ++i) {
         if (id == m_scanSizesEnum[i]) {
             return i;
         }
@@ -209,9 +209,7 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
     m_format = f;
 
     // Save
-    if ((m_format == KSaneIface::KSaneWidget::FormatRGB_16_C) ||
-        (m_format == KSaneIface::KSaneWidget::FormatGrayScale16))
-    {
+    if ((m_format == KSaneIface::KSaneWidget::FormatRGB_16_C) || (m_format == KSaneIface::KSaneWidget::FormatGrayScale16)) {
         signalErrorMessage(i18n("We do not support 16 per color scans at the moment!"));
         return;
     }
@@ -221,10 +219,8 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
     QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
     tmp->open();
     if (m_img.save(tmp, "PNG")) {
-    
         m_docHandler->addImage(tmp, m_scanSizesEnum[m_scanSizeIndex], scanDPI());
-    }
-    else {
+    } else {
         signalErrorMessage(i18n("Failed to save image"));
     }
     tmp->close();
@@ -244,7 +240,7 @@ void Skanpage::saveScannerOptions()
     }
 
     KConfigGroup options(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_deviceName));
-    QMap <QString, QString> opts;
+    QMap<QString, QString> opts;
     m_ksanew->getOptVals(opts);
     QMap<QString, QString>::const_iterator it = opts.constBegin();
     while (it != opts.constEnd()) {
@@ -272,9 +268,9 @@ void Skanpage::loadScannerOptions()
     }
 
     KConfigGroup scannerOptions(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_deviceName));
-    
+
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Loading scanner options") << scannerOptions.entryMap();
-    
+
     m_ksanew->setOptVals(scannerOptions.entryMap());
 }
 
@@ -283,11 +279,11 @@ void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList
     m_availableDevices->updateDevicesList(deviceList);
     QSettings settings(KAboutData::applicationData().organizationDomain(), KAboutData::applicationData().componentName());
     const auto savedDeviceName = settings.value(QStringLiteral("deviceName")).toString();
-    
-    //try command line option first, then remembered device
+
+    // try command line option first, then remembered device
     if (!openDevice(m_deviceName)) {
         openDevice(savedDeviceName);
-    } 
+    }
     m_searchingForDevices = false;
     searchingForDevicesChanged();
 }
@@ -307,10 +303,10 @@ bool Skanpage::openDevice(const QString &deviceName)
 
 void Skanpage::finishOpeningDevice(const QString &deviceName)
 {
-    qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName); 
+    qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName);
     QSettings settings(KAboutData::applicationData().organizationDomain(), KAboutData::applicationData().componentName());
     settings.setValue(QStringLiteral("deviceName"), deviceName);
-    
+
     // save the default sane options for later use
     m_ksanew->getOptVals(m_defaultScanOpts); // FIXME -> m_def... = m_ksanew->optVals();
     m_ksanew->setScanButtonHidden(true);
@@ -320,12 +316,11 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
 
     m_ksanew->enableAutoSelect(false);
 
-
     // load saved options
     loadScannerOptions();
-    
+
     m_openedDevice = true;
-    
+
     setScanSizeIndex(pageSizeToIndex(QPageSize::A4));
     openedDeviceChanged();
     scanDPIChanged();
@@ -333,8 +328,8 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
     colorModeChanged();
 }
 
-void Skanpage::reloadDevicesList() {
-    
+void Skanpage::reloadDevicesList()
+{
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("(Re-)loading devices list");
     if (m_ksanew->closeDevice()) {
         m_openedDevice = false;
