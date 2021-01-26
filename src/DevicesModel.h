@@ -22,10 +22,10 @@
 #ifndef DEVICESMODEL_H
 #define DEVICESMODEL_H
 
-#include <QObject>
-#include <QList>
 #include <QAbstractListModel>
 #include <QDebug>
+#include <QList>
+#include <QObject>
 
 #include <memory>
 
@@ -40,36 +40,28 @@ class DevicesModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    
-    enum DevicesModelRoles {
-        NameRole = Qt::UserRole+1,
-        VendorRole,
-        ModelRole,
-        TypeRole
-    };
-    
+    enum DevicesModelRoles { NameRole = Qt::UserRole + 1, VendorRole, ModelRole, TypeRole };
+
     explicit DevicesModel(QObject *parent = nullptr);
- 
+
     ~DevicesModel();
 
 public:
-    
     QHash<int, QByteArray> roleNames() const override;
-    
+
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    
+
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    
+
     Q_INVOKABLE QString getSelectedDeviceName() const;
 
     void updateDevicesList(QList<KSaneWidget::DeviceInfo> deviceList);
-    
+
 public Q_SLOTS:
-    
+
     void selectDevice(int i);
 
 private:
-    
     std::unique_ptr<DevicesModelPrivate> d;
 };
 

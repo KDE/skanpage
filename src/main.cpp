@@ -20,16 +20,16 @@
  *
  * ============================================================ */
 #include <QApplication>
+#include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QtQml>
-#include <QIcon>
 
 #include <KAboutData>
-#include <KLocalizedString>
 #include <KI18n/KLocalizedContext>
+#include <KLocalizedString>
 
-#include "DocumentModel.h"
 #include "DevicesModel.h"
+#include "DocumentModel.h"
 #include "Skanpage.h"
 #include "skanpage_version.h"
 
@@ -37,12 +37,12 @@ int main(int argc, char *argv[])
 {
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    
+
     QApplication app(argc, argv);
 
-    qmlRegisterType<DocumentModel> ("org.kde.skanpage", 1, 0, "DocumentModel");
-    qmlRegisterType<DevicesModel> ("org.kde.skanpage", 1, 0, "DevicesModel");
-    
+    qmlRegisterType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel");
+    qmlRegisterType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel");
+
     KLocalizedString::setApplicationDomain("skanpage");
 
     KAboutData aboutData(QLatin1String("Skanpage"), // componentName, k4: appName
@@ -55,19 +55,18 @@ int main(int argc, char *argv[])
                          QString() // homePageAddress
     );
 
-    aboutData.addAuthor(i18n("Kåre Särs"),
-                        i18n("developer"),
-                        QLatin1String("kare.sars@iki.fi"));
+    aboutData.addAuthor(i18n("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
 
     app.setWindowIcon(QIcon::fromTheme(QLatin1String("scanner")));
 
     KAboutData::setApplicationData(aboutData);
-   
+
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
     parser.addHelpOption();
     parser.addVersionOption();
-    QCommandLineOption deviceOption(QStringList() << QLatin1String("d") << QLatin1String("device"), i18n("Sane scanner device name. Use 'test' for test device."), i18n("device"));
+    QCommandLineOption deviceOption(
+        QStringList() << QLatin1String("d") << QLatin1String("device"), i18n("Sane scanner device name. Use 'test' for test device."), i18n("device"));
     parser.addOption(deviceOption);
     parser.process(app); // the --author and --license is shown anyway but they work only with the following line
     aboutData.processCommandLine(&parser);
@@ -75,9 +74,9 @@ int main(int argc, char *argv[])
     const QString deviceName = parser.value(deviceOption);
 
     Skanpage skanpageApp = Skanpage(deviceName);
-    
+
     QQmlApplicationEngine engine;
-    
+
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.rootContext()->setContextProperty(QStringLiteral("skanPage"), &skanpageApp);
     engine.load(QUrl(QStringLiteral("qrc:/MainWindow.qml")));

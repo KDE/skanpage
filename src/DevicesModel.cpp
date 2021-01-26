@@ -1,7 +1,7 @@
 /* ============================================================
  *
  * Copyright (C) 2020 by Alexander Stippich <a.stippich@gmx.net>
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of
@@ -23,22 +23,22 @@
 #include "DevicesModel.h"
 
 // Sane includes
-extern "C"
-{
-#include <sane/saneopts.h>
+extern "C" {
 #include <sane/sane.h>
+#include <sane/saneopts.h>
 }
 
 class DevicesModelPrivate
 {
 public:
-    
     QList<KSaneWidget::DeviceInfo> mDeviceslist;
-    
+
     int mSelectedDevice = 0;
 };
 
-DevicesModel::DevicesModel(QObject *parent) : QAbstractListModel(parent), d(std::unique_ptr<DevicesModelPrivate>(new DevicesModelPrivate()))
+DevicesModel::DevicesModel(QObject *parent)
+    : QAbstractListModel(parent)
+    , d(std::unique_ptr<DevicesModelPrivate>(new DevicesModelPrivate()))
 {
 }
 
@@ -70,22 +70,22 @@ QVariant DevicesModel::data(const QModelIndex &index, int role) const
     if (index.row() >= d->mDeviceslist.size() || index.row() < 0) {
         return QVariant();
     }
-    
+
     switch (role) {
-        case NameRole:
-            return d->mDeviceslist[index.row()].name;
-            break;
-        case VendorRole:
-            return d->mDeviceslist[index.row()].vendor;
-            break;
-        case ModelRole:
-            return d->mDeviceslist[index.row()].model;
-            break;
-        case TypeRole:
-            return d->mDeviceslist[index.row()].type;
-            break;
-        default:
-            break;
+    case NameRole:
+        return d->mDeviceslist[index.row()].name;
+        break;
+    case VendorRole:
+        return d->mDeviceslist[index.row()].vendor;
+        break;
+    case ModelRole:
+        return d->mDeviceslist[index.row()].model;
+        break;
+    case TypeRole:
+        return d->mDeviceslist[index.row()].type;
+        break;
+    default:
+        break;
     }
     return QVariant();
 }
@@ -105,12 +105,13 @@ QString DevicesModel::getSelectedDeviceName() const
     return QString();
 }
 
-void DevicesModel::selectDevice(int i) 
+void DevicesModel::selectDevice(int i)
 {
     d->mSelectedDevice = i;
 }
 
-QDebug operator<< (QDebug d, const KSaneWidget::DeviceInfo &deviceInfo) {
+QDebug operator<<(QDebug d, const KSaneWidget::DeviceInfo &deviceInfo)
+{
     d << "Device name: " << deviceInfo.name << "\n";
     d << "Device vendor: " << deviceInfo.vendor << "\n";
     d << "Device model: " << deviceInfo.model << "\n";

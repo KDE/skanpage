@@ -22,14 +22,14 @@
 #ifndef DocumentModel_H
 #define DocumentModel_H
 
-#include <QObject>
-#include <QStringList>
 #include <QAbstractListModel>
-#include <QList>
-#include <QTemporaryFile>
-#include <QPageSize>
-#include <QUrl>
 #include <QFileInfo>
+#include <QList>
+#include <QObject>
+#include <QPageSize>
+#include <QStringList>
+#include <QTemporaryFile>
+#include <QUrl>
 
 class DocumentModel : public QAbstractListModel
 {
@@ -40,9 +40,7 @@ class DocumentModel : public QAbstractListModel
     Q_ENUMS(DocumentModelRoles)
 
 public:
-    enum DocumentModelRoles {
-        ImageUrlRole = Qt::UserRole+1
-    };
+    enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1 };
 
     explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();
@@ -51,7 +49,7 @@ public:
     bool changed() const;
 
     void addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId pageSize, int dpi);
-    
+
     Q_INVOKABLE void clearData();
 
     Q_INVOKABLE void moveImage(int from, int to);
@@ -74,12 +72,12 @@ public Q_SLOTS:
 private:
     void savePDF(const QString &name);
     void saveImage(const QFileInfo &fileInfo);
-    
-    QList<QTemporaryFile *>     m_tmpFiles;
-    QList<int>                  m_dpiTmpFiles;
+
+    QList<QTemporaryFile *> m_tmpFiles;
+    QList<int> m_dpiTmpFiles;
     QList<QPageSize::PageSizeId> m_pageSizeTmpFiles;
-    QString                     m_name;
-    bool                        m_changed;
+    QString m_name;
+    bool m_changed;
 };
 
 #endif
