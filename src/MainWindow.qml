@@ -127,7 +127,15 @@ ApplicationWindow {
         text: i18n("About Skanpage")
         onTriggered: skanPage.showAboutDialog();
     }
-
+    
+    Action {
+        id: reselectDevicesAction
+        icon.name: "view-refresh"
+        text: i18n("Reselect scanning device")
+        onTriggered: skanPage.reloadDevicesList();
+        enabled: skanPage.progress === 100
+    }
+    
     Menu {
         id: applicationMenu
         
@@ -146,6 +154,10 @@ ApplicationWindow {
         MenuItem {
             action: scanUIAction 
         } 
+         
+        MenuItem {
+            action: reselectDevicesAction 
+        }
         
         MenuItem {
             action: showAboutAction 

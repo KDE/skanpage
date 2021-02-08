@@ -78,6 +78,8 @@ Item {
                     anchors.fill: parent
                     model: skanPage.devicesModel
                     
+                    visible: skanPage.devicesModel.rowCount() !== 0
+                    
                     ButtonGroup {
                         id: radioGroup
                     }
@@ -97,6 +99,14 @@ Item {
                 }
             }
             
+            Kirigami.PlaceholderMessage {
+                    visible: skanPage.devicesModel.rowCount() === 0
+                    Layout.fillWidth: true
+                    
+                    icon.name: "error"
+                    text: xi18nc("@info", "No devices found.")
+            }  
+            
             Item {
                 Layout.fillWidth: true
             }
@@ -108,13 +118,14 @@ Item {
             Button {
                 id: selectDeviceButton
                 
+                visible: skanPage.devicesModel.rowCount() !== 0
+                
                 icon.name: "select"
                 text: i18n("Open selected device")
                 
                 onClicked: skanPage.openDevice(skanPage.devicesModel.getSelectedDeviceName())
             }
         
-        /*reloading devices with custom GUI currently not possible with libksane
             Button {
                 id: reloadDevicesListButton
                 
@@ -122,7 +133,7 @@ Item {
                 text: i18n("Reload devices list")
                 
                 onClicked: skanPage.reloadDevicesList()
-            }*/
+            }
         }
         
         Item {
