@@ -64,4 +64,6 @@ private:
     std::unique_ptr<DevicesModelPrivate> d;
 };
 
+QDebug operator<<(QDebug d, const KSaneWidget::DeviceInfo &deviceInfo);
+
 #endif // DEVICESMODEL_H

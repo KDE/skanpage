@@ -22,12 +22,6 @@
 
 #include "DevicesModel.h"
 
-// Sane includes
-extern "C" {
-#include <sane/sane.h>
-#include <sane/saneopts.h>
-}
-
 class DevicesModelPrivate
 {
 public:
