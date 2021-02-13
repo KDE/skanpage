@@ -53,7 +53,7 @@ bool DocumentModel::changed() const
 
 void DocumentModel::save(const QUrl &fileUrl)
 {
-    if (fileUrl.isEmpty() || m_tmpFiles.isEmpty()) {
+    if (fileUrl.isEmpty() || m_pages.isEmpty()) {
         return;
     }
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
@@ -85,20 +85,20 @@ void DocumentModel::savePDF(const QString &name)
 {
     QPdfWriter writer(name);
 
-    writer.setResolution(m_dpiTmpFiles.at(0));
-    writer.setPageSize(QPageSize(m_pageSizeTmpFiles.at(0)));
+    writer.setResolution(m_pages.at(0).dpi);
+    writer.setPageSize(QPageSize(m_pages.at(0).pageSize));
     writer.setPageMargins(QMarginsF(0, 0, 0, 0));
 
     QPainter painter(&writer);
-    for (int i = 0; i < m_tmpFiles.count(); ++i) {
-        QRect target(0, 0, writer.width(), writer.height());
-        QImage image(m_tmpFiles[i]->fileName());
-        image = image.scaled(target.size(), Qt::KeepAspectRatio, Qt::FastTransformation);
+    for (int i = 0; i < m_pages.count(); ++i) {
+        QSize targetSize( writer.width(), writer.height());
+        QImage image(m_pages.at(i).tmpFile->fileName());
+        image = image.scaled(targetSize, Qt::KeepAspectRatio, Qt::FastTransformation);
         painter.drawImage(image.rect(), image, image.rect());
-        if (i < m_tmpFiles.count() - 1) {
+        if (i < m_pages.count() - 1) {
             writer.setPageMargins(QMarginsF(0, 0, 0, 0));
-            writer.setResolution(m_dpiTmpFiles.at(i + 1));
-            writer.setPageSize(QPageSize(m_pageSizeTmpFiles.at(i + 1)));
+            writer.setResolution(m_pages.at(i + 1).dpi);
+            writer.setPageSize(QPageSize(m_pages.at(i + 1).pageSize));
             writer.newPage();
         }
     }
@@ -107,17 +107,17 @@ void DocumentModel::savePDF(const QString &name)
 
 void DocumentModel::saveImage(const QFileInfo &fileInfo)
 {
-    const int count = m_tmpFiles.count();
+    const int count = m_pages.count();
     QImage image;
     QString fileName;
 
     if (count == 1) {
-        image.load(m_tmpFiles[0]->fileName());
+        image.load(m_pages.at(0).tmpFile->fileName());
         fileName = fileInfo.absoluteFilePath();
         image.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
     } else {
         for (int i = 0; i < count; ++i) {
-            image.load(m_tmpFiles[i]->fileName());
+            image.load(m_pages.at(i).tmpFile->fileName());
             fileName =
                 QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath()).arg(fileInfo.baseName()).arg(i, 4, 10, QLatin1Char('0')).arg(fileInfo.suffix());
             image.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
@@ -125,17 +125,15 @@ void DocumentModel::saveImage(const QFileInfo &fileInfo)
     }
 }
 
-void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId pageSize, int dpi)
+void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize pageSize, int dpi)
 {
     if (tmpFile == nullptr) {
         qCDebug(SKANPAGE_LOG) << tmpFile;
         return;
     }
 
-    beginInsertRows(QModelIndex(), m_tmpFiles.count(), m_tmpFiles.count());
-    m_tmpFiles.append(tmpFile);
-    m_pageSizeTmpFiles.append(pageSize);
-    m_dpiTmpFiles.append(dpi);
+    beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
+    m_pages.append({tmpFile, pageSize, dpi});
     endInsertRows();
     Q_EMIT countChanged();
     if (!m_changed) {
@@ -153,20 +151,18 @@ void DocumentModel::moveImage(int from, int to)
     if (to > from) {
         add = 1;
     }
-    if (from < 0 || from >= m_tmpFiles.count()) {
+    if (from < 0 || from >= m_pages.count()) {
         return;
     }
-    if (to < 0 || to >= m_tmpFiles.count()) {
+    if (to < 0 || to >= m_pages.count()) {
         return;
     }
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), to + add);
     if (!ok) {
-        qCDebug(SKANPAGE_LOG) << "Failed to move" << from << to << add << m_tmpFiles.count();
+        qCDebug(SKANPAGE_LOG) << "Failed to move" << from << to << add << m_pages.count();
         return;
     }
-    m_tmpFiles.move(from, to);
-    m_pageSizeTmpFiles.move(from, to);
-    m_dpiTmpFiles.move(from, to);
+    m_pages.move(from, to);
     endMoveRows();
 
     if (!m_changed) {
@@ -177,14 +173,12 @@ void DocumentModel::moveImage(int from, int to)
 
 void DocumentModel::removeImage(int row)
 {
-    if (row < 0 || row >= m_tmpFiles.count()) {
+    if (row < 0 || row >= m_pages.count()) {
         return;
     }
 
     beginRemoveRows(QModelIndex(), row, row);
-    m_tmpFiles.removeAt(row);
-    m_pageSizeTmpFiles.removeAt(row);
-    m_dpiTmpFiles.removeAt(row);
+    m_pages.removeAt(row);
     endRemoveRows();
     Q_EMIT countChanged();
     if (!m_changed) {
@@ -202,7 +196,7 @@ QHash<int, QByteArray> DocumentModel::roleNames() const
 
 int DocumentModel::rowCount(const QModelIndex &) const
 {
-    return m_tmpFiles.count();
+    return m_pages.count();
 }
 
 QVariant DocumentModel::data(const QModelIndex &index, int role) const
@@ -211,13 +205,13 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    if (index.row() >= m_tmpFiles.size() || index.row() < 0) {
+    if (index.row() >= m_pages.size() || index.row() < 0) {
         return QVariant();
     }
 
     switch (role) {
     case ImageUrlRole:
-        return QUrl::fromLocalFile(m_tmpFiles[index.row()]->fileName());
+        return QUrl::fromLocalFile(m_pages[index.row()].tmpFile->fileName());
     }
     return QVariant();
 }
@@ -225,7 +219,7 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
 void DocumentModel::clearData()
 {
     beginResetModel();
-    m_tmpFiles.clear();
+    m_pages.clear();
     endResetModel();
 
     if (!m_changed) {

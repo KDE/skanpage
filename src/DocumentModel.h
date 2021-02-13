@@ -31,6 +31,12 @@
 #include <QTemporaryFile>
 #include <QUrl>
 
+struct PageProperties {
+    QTemporaryFile *tmpFile;
+    QPageSize pageSize;
+    int dpi;
+};
+
 class DocumentModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -48,7 +54,7 @@ public:
     const QString name() const;
     bool changed() const;
 
-    void addImage(QTemporaryFile *tmpFile, QPageSize::PageSizeId pageSize, int dpi);
+    void addImage(QTemporaryFile *tmpFile, QPageSize pageSize, int dpi);
 
     Q_INVOKABLE void clearData();
 
@@ -73,9 +79,7 @@ private:
     void savePDF(const QString &name);
     void saveImage(const QFileInfo &fileInfo);
 
-    QList<QTemporaryFile *> m_tmpFiles;
-    QList<int> m_dpiTmpFiles;
-    QList<QPageSize::PageSizeId> m_pageSizeTmpFiles;
+    QList<PageProperties> m_pages;
     QString m_name;
     bool m_changed;
 };

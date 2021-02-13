@@ -214,12 +214,18 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
         return;
     }
 
+    qDebug() << m_width << m_height;
     m_img = m_ksanew->toQImage(m_data, m_width, m_height, m_bytesPerLine, (KSaneIface::KSaneWidget::ImageFormat)m_format);
 
     QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
     tmp->open();
     if (m_img.save(tmp, "PNG")) {
-        m_docHandler->addImage(tmp, m_scanSizesEnum[m_scanSizeIndex], scanDPI());
+        if (m_scanSizesEnum[m_scanSizeIndex] == QPageSize::Custom) {
+            const float conversionFactorMM = scanDPI() / 25.4;
+            m_docHandler->addImage(tmp, QPageSize(QSizeF(m_width / conversionFactorMM, m_height/ conversionFactorMM), QPageSize::Millimeter), scanDPI());
+        } else {
+            m_docHandler->addImage(tmp, QPageSize(m_scanSizesEnum[m_scanSizeIndex]), scanDPI());
+        }
     } else {
         signalErrorMessage(i18n("Failed to save image"));
     }
