@@ -78,7 +78,7 @@ Item {
                     anchors.fill: parent
                     model: skanPage.devicesModel
                     
-                    visible: skanPage.devicesModel.rowCount() !== 0
+                    visible: skanPage.devicesModel.rowCount !== 0
                     
                     ButtonGroup {
                         id: radioGroup
@@ -100,11 +100,11 @@ Item {
             }
             
             Kirigami.PlaceholderMessage {
-                    visible: skanPage.devicesModel.rowCount() === 0
-                    Layout.fillWidth: true
+                visible: skanPage.devicesModel.rowCount === 0
+                Layout.fillWidth: true
                     
-                    icon.name: "error"
-                    text: xi18nc("@info", "No devices found.")
+                icon.name: "error"
+                text: xi18nc("@info", "No devices found.")
             }  
             
             Item {
@@ -118,7 +118,7 @@ Item {
             Button {
                 id: selectDeviceButton
                 
-                visible: skanPage.devicesModel.rowCount() !== 0
+                visible: skanPage.devicesModel.rowCount !== 0
                 
                 icon.name: "select"
                 text: i18n("Open selected device")

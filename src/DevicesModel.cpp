@@ -89,6 +89,7 @@ void DevicesModel::updateDevicesList(QList<KSaneWidget::DeviceInfo> deviceList)
     beginResetModel();
     d->mDeviceslist = deviceList;
     endResetModel();
+    Q_EMIT rowCountChanged();
 }
 
 QString DevicesModel::getSelectedDeviceName() const

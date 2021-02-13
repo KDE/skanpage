@@ -38,6 +38,8 @@ using namespace KSaneIface;
 class DevicesModel : public QAbstractListModel
 {
     Q_OBJECT
+    
+    Q_PROPERTY(int rowCount READ rowCount NOTIFY rowCountChanged)
 
 public:
     enum DevicesModelRoles { NameRole = Qt::UserRole + 1, VendorRole, ModelRole, TypeRole };
@@ -48,7 +50,7 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
@@ -60,6 +62,10 @@ public Q_SLOTS:
 
     void selectDevice(int i);
 
+Q_SIGNALS:
+    
+    void rowCountChanged();
+    
 private:
     std::unique_ptr<DevicesModelPrivate> d;
 };

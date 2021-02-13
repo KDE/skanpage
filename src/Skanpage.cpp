@@ -282,7 +282,10 @@ void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList
 
     // try command line option first, then remembered device
     if (!openDevice(m_deviceName)) {
-        openDevice(savedDeviceName);
+        m_deviceName.clear();
+        if (!openDevice(savedDeviceName)) {
+            settings.remove(QStringLiteral("deviceName"));
+        }
     }
     m_searchingForDevices = false;
     Q_EMIT searchingForDevicesChanged();
