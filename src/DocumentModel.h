@@ -1,6 +1,7 @@
 /* ============================================================
  *
  * Copyright (C) 2015 by Kåre Särs <kare.sars@iki .fi>
+ * Copyright (C) 2021 by Alexander Stippich <a.stippich@gmx.net>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -32,9 +33,10 @@
 #include <QUrl>
 
 struct PageProperties {
-    QTemporaryFile *tmpFile;
+    QTemporaryFile *temporaryFile;
     QPageSize pageSize;
     int dpi;
+    int rotationAngle = 0;
 };
 
 class DocumentModel : public QAbstractListModel
@@ -46,7 +48,7 @@ class DocumentModel : public QAbstractListModel
     Q_ENUMS(DocumentModelRoles)
 
 public:
-    enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1 };
+    enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1 , RotationAngleRole};
 
     explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();
@@ -59,7 +61,10 @@ public:
     Q_INVOKABLE void clearData();
 
     Q_INVOKABLE void moveImage(int from, int to);
+    
     Q_INVOKABLE void removeImage(int row);
+    
+    Q_INVOKABLE void rotateImage(int row, bool positiveDirection);
 
     Q_INVOKABLE void save(const QUrl &fileUrl);
 

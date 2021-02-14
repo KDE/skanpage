@@ -1,6 +1,7 @@
 /* ============================================================
  *
  * Copyright (C) 2015 by Kåre Särs <kare.sars@iki .fi>
+ * Copyright (C) 2021 by Alexander Stippich <a.stippich@gmx.net>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as

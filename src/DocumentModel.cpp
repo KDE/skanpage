@@ -1,6 +1,7 @@
 /* ============================================================
  *
  * Copyright (C) 2015 by Kåre Särs <kare.sars@iki .fi>
+ * Copyright (C) 2021 by Alexander Stippich <a.stippich@gmx.net>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -84,43 +85,61 @@ void DocumentModel::save(const QUrl &fileUrl)
 void DocumentModel::savePDF(const QString &name)
 {
     QPdfWriter writer(name);
-
-    writer.setResolution(m_pages.at(0).dpi);
-    writer.setPageSize(QPageSize(m_pages.at(0).pageSize));
-    writer.setPageMargins(QMarginsF(0, 0, 0, 0));
-
-    QPainter painter(&writer);
+    QPainter painter;
+    int rotationAngle;
+    
     for (int i = 0; i < m_pages.count(); ++i) {
-        QSize targetSize( writer.width(), writer.height());
-        QImage image(m_pages.at(i).tmpFile->fileName());
-        image = image.scaled(targetSize, Qt::KeepAspectRatio, Qt::FastTransformation);
-        painter.drawImage(image.rect(), image, image.rect());
-        if (i < m_pages.count() - 1) {
-            writer.setPageMargins(QMarginsF(0, 0, 0, 0));
-            writer.setResolution(m_pages.at(i + 1).dpi);
-            writer.setPageSize(QPageSize(m_pages.at(i + 1).pageSize));
-            writer.newPage();
+        writer.setResolution(m_pages.at(i).dpi);
+        writer.setPageSize(m_pages.at(i).pageSize);
+        writer.setPageMargins(QMarginsF(0, 0, 0, 0));
+        rotationAngle = m_pages.at(i).rotationAngle;
+
+        if (rotationAngle == 90 ||  rotationAngle == 270) {
+            writer.setPageOrientation(QPageLayout::Landscape);
+        } else {
+            writer.setPageOrientation(QPageLayout::Portrait);   
         }
+        writer.newPage();
+        
+        if (i == 0) {
+            painter.begin(&writer);
+        }
+        
+        QImage pageImage(m_pages.at(i).temporaryFile->fileName());
+        if (rotationAngle != 0) {
+            pageImage = pageImage.transformed(QMatrix().rotate(rotationAngle));
+        }
+        
+        QSize targetSize(writer.width(), writer.height());
+        pageImage = pageImage.scaled(targetSize, Qt::KeepAspectRatio, Qt::FastTransformation);
+        painter.drawImage(pageImage.rect(), pageImage, pageImage.rect());
     }
-    painter.end();
 }
 
 void DocumentModel::saveImage(const QFileInfo &fileInfo)
 {
     const int count = m_pages.count();
-    QImage image;
+    QImage pageImage;
     QString fileName;
 
     if (count == 1) {
-        image.load(m_pages.at(0).tmpFile->fileName());
+        pageImage.load(m_pages.at(0).temporaryFile->fileName());
         fileName = fileInfo.absoluteFilePath();
-        image.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+        const int rotationAngle = m_pages.at(0).rotationAngle;
+        if (rotationAngle != 0) {
+            pageImage = pageImage.transformed(QMatrix().rotate(rotationAngle));
+        }
+        pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
     } else {
         for (int i = 0; i < count; ++i) {
-            image.load(m_pages.at(i).tmpFile->fileName());
+            pageImage.load(m_pages.at(i).temporaryFile->fileName());
+            const int rotationAngle = m_pages.at(i).rotationAngle;
+            if (rotationAngle != 0) {
+                pageImage = pageImage.transformed(QMatrix().rotate(rotationAngle));
+            }
             fileName =
                 QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath()).arg(fileInfo.baseName()).arg(i, 4, 10, QLatin1Char('0')).arg(fileInfo.suffix());
-            image.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+            pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
         }
     }
 }
@@ -171,6 +190,27 @@ void DocumentModel::moveImage(int from, int to)
     }
 }
 
+void DocumentModel::rotateImage(int row, bool positiveDirection)
+{
+    if (row < 0 || row >= rowCount()) {
+        return;
+    }
+    int rotationAngle = m_pages.at(row).rotationAngle;
+    if (positiveDirection) {
+        rotationAngle += 90;
+    } else {
+        rotationAngle -= 90;
+    }
+    if (rotationAngle < 0) {
+        rotationAngle = rotationAngle + 360;
+    } else if (rotationAngle >= 360) {
+        rotationAngle = rotationAngle - 360;
+    }
+    m_pages[row].rotationAngle = rotationAngle;
+
+    Q_EMIT dataChanged(index(row,0), index(row,0), {RotationAngleRole});
+}
+
 void DocumentModel::removeImage(int row)
 {
     if (row < 0 || row >= m_pages.count()) {
@@ -191,6 +231,7 @@ QHash<int, QByteArray> DocumentModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[ImageUrlRole] = "imageUrl";
+    roles[RotationAngleRole] = "rotationAngle";
     return roles;
 }
 
@@ -211,7 +252,9 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case ImageUrlRole:
-        return QUrl::fromLocalFile(m_pages[index.row()].tmpFile->fileName());
+        return QUrl::fromLocalFile(m_pages.at(index.row()).temporaryFile->fileName());
+    case RotationAngleRole:
+        return m_pages.at(index.row()).rotationAngle;
     }
     return QVariant();
 }
