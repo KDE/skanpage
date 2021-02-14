@@ -214,7 +214,6 @@ void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
         return;
     }
 
-    qDebug() << m_width << m_height;
     m_img = m_ksanew->toQImage(m_data, m_width, m_height, m_bytesPerLine, (KSaneIface::KSaneWidget::ImageFormat)m_format);
 
     QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
