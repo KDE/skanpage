@@ -25,7 +25,6 @@
 #include <QDebug>
 #include <QPageSize>
 #include <QPrinter>
-#include <QSettings>
 #include <QStringList>
 #include <QTemporaryFile>
 
@@ -76,6 +75,16 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     m_scanSizesEnum << QPageSize::A5;
     m_scanSizesEnum << QPageSize::A6;
     m_scanSizesEnum << QPageSize::Custom;
+
+    // try to open device from command line option first, then remembered device
+    if (deviceName.isEmpty() || !openDevice(m_deviceName)) {
+        m_deviceName.clear();
+        
+        KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
+        const QString savedDeviceName = options.readEntry(QStringLiteral("deviceName"));
+        
+        openDevice(savedDeviceName);
+    }
 }
 
 Skanpage::~Skanpage()
@@ -282,16 +291,7 @@ void Skanpage::loadScannerOptions()
 void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList)
 {
     m_availableDevices->updateDevicesList(deviceList);
-    QSettings settings(KAboutData::applicationData().organizationDomain(), KAboutData::applicationData().componentName());
-    const auto savedDeviceName = settings.value(QStringLiteral("deviceName")).toString();
 
-    // try command line option first, then remembered device
-    if (!openDevice(m_deviceName)) {
-        m_deviceName.clear();
-        if (!openDevice(savedDeviceName)) {
-            settings.remove(QStringLiteral("deviceName"));
-        }
-    }
     m_searchingForDevices = false;
     Q_EMIT searchingForDevicesChanged();
 }
@@ -312,8 +312,11 @@ bool Skanpage::openDevice(const QString &deviceName)
 void Skanpage::finishOpeningDevice(const QString &deviceName)
 {
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName);
-    QSettings settings(KAboutData::applicationData().organizationDomain(), KAboutData::applicationData().componentName());
-    settings.setValue(QStringLiteral("deviceName"), deviceName);
+    
+    m_deviceName = deviceName;
+    
+    KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
+    options.writeEntry(QStringLiteral("deviceName"), deviceName);
 
     // save the default sane options for later use
     m_ksanew->getOptVals(m_defaultScanOpts); // FIXME -> m_def... = m_ksanew->optVals();
