@@ -80,6 +80,8 @@ Item {
                     
                     visible: skanPage.devicesModel.rowCount !== 0
                     
+                    spacing: Kirigami.Units.smallSpacing
+                    
                     ButtonGroup {
                         id: radioGroup
                     }
@@ -89,7 +91,7 @@ Item {
 
                         checked: index === 0
                         ButtonGroup.group: radioGroup
-                        text: vendor + " " + model;
+                        text: i18nc("Device vendor with device model, followed by the device name identifier", "%1 %2\n(%3)", vendor, model, name)
                         
                         onClicked: {
                             selectButton.checked = true

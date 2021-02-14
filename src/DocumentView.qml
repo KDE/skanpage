@@ -221,7 +221,7 @@ Item {
                                 
                                 Layout.alignment: Qt.AlignCenter
                                 level: 2
-                                text: model.index + 1
+                                text: i18nc("Page index", "%1", model.index + 1)
                             }
                         }
                     }
