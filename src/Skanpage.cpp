@@ -209,29 +209,21 @@ bool Skanpage::searchingForDevices() const
     return m_searchingForDevices;
 }
 
-void Skanpage::imageReady(QByteArray &data, int w, int h, int bpl, int f)
+void Skanpage::imageReady(QByteArray &data, int width, int height, int bytesPerLine, int format)
 {
-    // save the image data
-    m_data = data;
-    m_width = w;
-    m_height = h;
-    m_bytesPerLine = bpl;
-    m_format = f;
-
-    // Save
-    if ((m_format == KSaneIface::KSaneWidget::FormatRGB_16_C) || (m_format == KSaneIface::KSaneWidget::FormatGrayScale16)) {
+    if ((format == KSaneIface::KSaneWidget::FormatRGB_16_C) || (format == KSaneIface::KSaneWidget::FormatGrayScale16)) {
         signalErrorMessage(i18n("We do not support 16 per color scans at the moment!"));
         return;
     }
 
-    m_img = m_ksanew->toQImage(m_data, m_width, m_height, m_bytesPerLine, (KSaneIface::KSaneWidget::ImageFormat)m_format);
+    const QImage image = m_ksanew->toQImage(data, width, height, bytesPerLine, static_cast<KSaneIface::KSaneWidget::ImageFormat>(format));
 
     QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
     tmp->open();
-    if (m_img.save(tmp, "PNG")) {
+    if (image.save(tmp, "PNG")) {
         if (m_scanSizesEnum[m_scanSizeIndex] == QPageSize::Custom) {
             const float conversionFactorMM = scanDPI() / 25.4;
-            m_docHandler->addImage(tmp, QPageSize(QSizeF(m_width / conversionFactorMM, m_height/ conversionFactorMM), QPageSize::Millimeter), scanDPI());
+            m_docHandler->addImage(tmp, QPageSize(QSizeF(width / conversionFactorMM, height/ conversionFactorMM), QPageSize::Millimeter), scanDPI());
         } else {
             m_docHandler->addImage(tmp, QPageSize(m_scanSizesEnum[m_scanSizeIndex]), scanDPI());
         }

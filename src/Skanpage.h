@@ -103,7 +103,7 @@ public Q_SLOTS:
     void showScannerUI();
 
 private Q_SLOTS:
-    void imageReady(QByteArray &, int, int, int, int);
+    void imageReady(QByteArray &data, int width, int height, int bytesPerLine, int format);
 
     void defaultScannerOptions();
 
@@ -125,12 +125,6 @@ private:
 
     QString m_deviceName;
     QMap<QString, QString> m_defaultScanOpts;
-    QImage m_img;
-    QByteArray m_data;
-    int m_width;
-    int m_height;
-    int m_bytesPerLine;
-    int m_format;
     QVector<QPageSize::PageSizeId> m_scanSizesEnum;
     QStringList m_scanSizesText;
     int m_scanSizeIndex;
