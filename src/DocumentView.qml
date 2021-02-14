@@ -104,16 +104,17 @@ Item {
 
                 delegate: Rectangle {
                     id: delegateRoot
+                    
+                    readonly property url imageUrl: model.imageUrl
+                    readonly property int index: model.index
                     readonly property int borderWidth: 2
+                    
                     border.width: borderWidth
                     border.color: palette.mid
 
                     focus: index === listView.currentIndex
-
-                    property url imageUrl: model.imageUrl
-                    property int index: model.index
                     
-                    width: listView.width;
+                    width: listView.width - scrollView.ScrollBar.vertical.width 
                     height: icon.height
 
                     MouseArea {
@@ -128,102 +129,99 @@ Item {
                         onClicked: {
                             listView.currentIndex = index;
                         }
-                    }
-
-                    DropArea {
-                        anchors.fill: parent
-                        onEntered: {
-                            skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
-                        }
-                    }
-
-                    Item {
-                        id: icon
-                        width: iconImage.width
-                        height: iconImage.height + pageNumber.height
-                        anchors {
-                            horizontalCenter: parent.horizontalCenter;
-                            verticalCenter: parent.verticalCenter
-                        }
-
-                        Drag.active: mouseArea.drag.active
-                        Drag.source: delegateRoot
-                        Drag.hotSpot.x: width / 2
-                        Drag.hotSpot.y: height / 2
-
-                        states: [
-                        State {
-                            when: mouseArea.drag.active
-                            ParentChange {
-                                target: icon
-                                parent: doc
-                            }
-
-                            AnchorChanges {
-                                target: icon;
-                                anchors.horizontalCenter: undefined;
-                                anchors.verticalCenter: undefined
+                            
+                        DropArea {
+                            anchors.fill: parent
+                            onEntered: {
+                                skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
                             }
                         }
-                        ]
 
-                        Image {
-                            id: iconImage
-                            sourceSize.width: listView.width - borderWidth * 2
+                        ColumnLayout {
+                            id: icon
+                            
+                            spacing: Kirigami.Units.smallSpacing
+                            
                             anchors {
-                                horizontalCenter: parent.horizontalCenter;
-                                top: parent.top
-                            }
-                            source: model.imageUrl
-                        }
-                        
-                        Kirigami.Heading {
-                            id: pageNumber
-                            level: 2
-                            anchors {
-                                bottom: parent.bottom
                                 horizontalCenter: parent.horizontalCenter
+                                verticalCenter: parent.verticalCenter
                             }
-                            text: model.index + 1
-                        }
-                        
-                        Loader {
-                            active: mouseArea.containsMouse
-                            
-                            anchors {
-                                bottom: pageNumber.top
-                                left: icon.left
+
+                            Drag.active: mouseArea.drag.active
+                            Drag.source: delegateRoot
+                            Drag.hotSpot.x: width / 2
+                            Drag.hotSpot.y: height / 2
+
+                            states: [
+                            State {
+                                when: mouseArea.drag.active
+                                
+                                ParentChange {
+                                    target: icon
+                                    parent: doc
+                                }
+
+                                AnchorChanges {
+                                    target: icon;
+                                    anchors.horizontalCenter: undefined
+                                    anchors.verticalCenter: undefined
+                                }
+                            }
+                            ]
+
+                            Image {
+                                id: iconImage
+                                sourceSize.width: delegateRoot.width - borderWidth * 2
+                                source: model.imageUrl
+                                
+                                Loader {
+                                    active: mouseArea.containsMouse
+                                    
+                                    anchors {
+                                        bottom: iconImage.bottom
+                                        left: iconImage.left
+                                        margins: Kirigami.Units.largeSpacing
+                                    }
+                                        
+                                    sourceComponent: Row {
+                                        spacing: Kirigami.Units.smallSpacing
+
+                                        Button {
+                                            icon.name: "go-up"
+                                            onClicked: {
+                                                skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex -1, 1);
+                                                listView.currentIndex--;
+                                                listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
+                                            }
+                                            enabled: index > 0 
+                                        }
+                                        
+                                        Button {
+                                            icon.name: "go-down"
+                                            onClicked: {
+                                                skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex + 1, 1);
+                                                listView.currentIndex++;
+                                                listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
+                                            }
+                                            enabled: index < listView.count - 1
+                                        }
+                                        
+                                        Button {      
+                                            icon.name: "delete"
+                                            onClicked: {
+                                                skanPage.documentModel.removeImage(index);
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             
-                            sourceComponent: Row {
-                                spacing: Kirigami.Units.smallSpacing
+                            Kirigami.Heading {
+                                id: pageNumber
                                 
-                                Button {
-                                    icon.name: "go-up"
-                                    onClicked: {
-                                        skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex -1, 1);
-                                        listView.currentIndex--;
-                                        listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
-                                    }
-                                    enabled: index > 0 
-                                }
-                                
-                                Button {
-                                    icon.name: "go-down"
-                                    onClicked: {
-                                        skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex + 1, 1);
-                                        listView.currentIndex++;
-                                        listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
-                                    }
-                                    enabled: index < listView.count - 1
-                                }
-                                
-                                Button {      
-                                    icon.name: "delete"
-                                    onClicked: {
-                                        skanPage.documentModel.removeImage(index);
-                                    }
-                                }
+                                Layout.alignment: Qt.AlignCenter
+                                level: 2
+                                text: model.index + 1
                             }
                         }
                     }
