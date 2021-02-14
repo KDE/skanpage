@@ -265,8 +265,8 @@ void DocumentModel::clearData()
     m_pages.clear();
     endResetModel();
 
-    if (!m_changed) {
-        m_changed = true;
+    if (m_changed) {
+        m_changed = false;
         Q_EMIT changedChanged();
     }
 }
