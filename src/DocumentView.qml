@@ -77,7 +77,7 @@ Item {
         ScrollView {
             id: scrollView
 
-            //visible: skanPage.documentModel.count > 1
+            visible: skanPage.documentModel.count > 1
             
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             ScrollBar.vertical.policy: ScrollBar.AlwaysOn
