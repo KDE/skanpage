@@ -76,7 +76,7 @@ ApplicationWindow {
 
     Action {
         id: saveDocAction
-        icon.name: "scanner"
+        icon.name: "document-save"
         text: i18n("Save")
         shortcut: StandardKey.Save
         enabled: skanPage.documentModel.count !== 0
@@ -93,7 +93,7 @@ ApplicationWindow {
 
     Action {
         id: scanAction
-        icon.name: "document-scan"
+        icon.name: "scanner"
         text: i18n("Scan")
         shortcut: "SPACE"
         enabled: skanPage.progress === 100 && skanPage.openedDevice
