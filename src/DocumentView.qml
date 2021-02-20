@@ -32,7 +32,7 @@ Item {
     focus: true
     clip: true
     
-    readonly property string name: skanPage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* ") + skanPage.documentModel.name : skanPage.documentModel.name;
+    readonly property string name: skanPage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* %1", skanPage.documentModel.name) : skanPage.documentModel.name;
 
     SystemPalette {
         id: palette

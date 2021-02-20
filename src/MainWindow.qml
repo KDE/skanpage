@@ -34,8 +34,7 @@ ApplicationWindow {
     
     visible: true
         
-    title: i18nc("document title: app title", "%1: Skanpage", docName)
-    property string docName: mainDocument.name ? mainDocument.name  : ""
+    title: i18nc("document title: app title", "%1 ― Skanpage", mainDocument.name)
     
     width: persistentSettings.width
     height: persistentSettings.height
