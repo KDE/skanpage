@@ -38,6 +38,16 @@ find_package(KF5 "5.55" REQUIRED
         Sane        # KF5Sane
 )
 
+add_definitions(
+    -DQT_NO_CAST_TO_ASCII
+    -DQT_NO_CAST_FROM_ASCII
+    -DQT_NO_URL_CAST_FROM_STRING
+    -DQT_NO_CAST_FROM_BYTEARRAY
+    -DQT_NO_KEYWORDS
+    -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT
+    -DQT_STRICT_ITERATORS
+)
+
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX SKANPAGE
     VERSION_HEADER skanpage_version.h)
