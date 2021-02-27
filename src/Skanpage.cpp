@@ -45,7 +45,6 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     , m_ksanew(std::make_unique<KSaneIface::KSaneWidget>(nullptr))
     , m_docHandler(std::make_unique<DocumentModel>(nullptr))
     , m_availableDevices(std::make_unique<DevicesModel>(nullptr))
-    , m_deviceName(deviceName)
     , m_scanSizeIndex(-1)
     , m_progress(100)
     , m_openedDevice(false)
@@ -56,7 +55,8 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksanew.get(), &KSaneWidget::userMessage, this, &Skanpage::alertUser);
     connect(m_ksanew.get(), &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
     connect(m_ksanew.get(), &KSaneWidget::scanDone, this, &Skanpage::scanDone);
-
+    connect(m_ksanew.get(), &KSaneWidget::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
+    
     reloadDevicesList();
 
     m_scanSizesText << i18n("A4");
@@ -78,8 +78,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     m_scanSizesEnum << QPageSize::Custom;
 
     // try to open device from command line option first, then remembered device
-    if (deviceName.isEmpty() || !openDevice(m_deviceName)) {
-        m_deviceName.clear();
+    if (deviceName.isEmpty() || !openDevice(deviceName)) {
         
         KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
         const QString savedDeviceName = options.readEntry(QStringLiteral("deviceName"));
@@ -91,6 +90,21 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
 Skanpage::~Skanpage()
 {
     saveScannerOptions();
+}
+
+QString Skanpage::deviceVendor() const
+{
+    return m_ksanew->deviceVendor();
+}
+
+QString Skanpage::deviceModel() const
+{
+    return m_ksanew->deviceModel();
+}
+
+QString Skanpage::deviceName() const
+{
+    return m_ksanew->deviceName();
 }
 
 void Skanpage::startScan()
@@ -246,7 +260,7 @@ void Skanpage::saveScannerOptions()
         return;
     }
 
-    KConfigGroup options(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_deviceName));
+    KConfigGroup options(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_ksanew->deviceName()));
     QMap<QString, QString> opts;
     m_ksanew->getOptVals(opts);
     QMap<QString, QString>::const_iterator it = opts.constBegin();
@@ -274,7 +288,7 @@ void Skanpage::loadScannerOptions()
         return;
     }
 
-    KConfigGroup scannerOptions(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_deviceName));
+    KConfigGroup scannerOptions(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_ksanew->deviceName()));
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Loading scanner options") << scannerOptions.entryMap();
 
@@ -306,8 +320,6 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
 {
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName);
     
-    m_deviceName = deviceName;
-    
     KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
     options.writeEntry(QStringLiteral("deviceName"), deviceName);
 
@@ -338,7 +350,6 @@ void Skanpage::reloadDevicesList()
     if (m_ksanew->closeDevice()) {
         m_openedDevice = false;
         Q_EMIT openedDeviceChanged();
-        m_deviceName.clear();
         m_searchingForDevices = true;
         Q_EMIT searchingForDevicesChanged();
         m_ksanew->initGetDeviceList();

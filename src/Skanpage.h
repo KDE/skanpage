@@ -53,11 +53,19 @@ class Skanpage : public QObject
     Q_PROPERTY(bool openedDevice READ openedDevice NOTIFY openedDeviceChanged)
     Q_PROPERTY(bool searchingForDevices READ searchingForDevices NOTIFY searchingForDevicesChanged)
 
+    Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
+    Q_PROPERTY(QString deviceModel READ deviceModel NOTIFY deviceInfoUpdated)
+    Q_PROPERTY(QString deviceName READ deviceName NOTIFY deviceInfoUpdated)
+    
     Q_OBJECT
 
 public:
     explicit Skanpage(const QString &deviceName, QObject *parent = nullptr);
     ~Skanpage();
+    
+    QString deviceVendor() const;
+    QString deviceModel() const;
+    QString deviceName() const;
 
     int scanSizeIndex() const;
     void setScanSizeIndex(int index);
@@ -93,6 +101,7 @@ Q_SIGNALS:
     void errorMessageChanged();
     void openedDeviceChanged();
     void searchingForDevicesChanged();
+    void deviceInfoUpdated();
 
 public Q_SLOTS:
     void showAboutDialog();
@@ -123,7 +132,6 @@ private:
     std::unique_ptr<DocumentModel> m_docHandler;
     std::unique_ptr<DevicesModel> m_availableDevices;
 
-    QString m_deviceName;
     QMap<QString, QString> m_defaultScanOpts;
     QVector<QPageSize::PageSizeId> m_scanSizesEnum;
     QStringList m_scanSizesText;

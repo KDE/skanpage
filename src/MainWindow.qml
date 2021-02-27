@@ -281,6 +281,18 @@ ApplicationWindow {
                     Layout.fillWidth: true
                 }
                 
+                Kirigami.Heading {
+                    id: deviceInfo
+
+                    level: 5
+
+                    visible: skanPage.deviceVendor && skanPage.deviceModel
+                    
+                    horizontalAlignment: Text.AlignLeft
+                    
+                    text: skanPage.deviceVendor && skanPage.deviceModel ? i18nc("Device vendor and device model name", "Device: %1 %2", skanPage.deviceVendor, skanPage.deviceModel) : ""
+                }
+                
                 ToolButton { 
                     action: openMenuAction
                 }
