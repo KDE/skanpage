@@ -221,7 +221,8 @@ void DocumentModel::moveImage(int from, int to)
     } else if (m_activePageIndex == to) {
         m_activePageIndex = from;
     }
-
+    Q_EMIT activePageChanged();
+    
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
