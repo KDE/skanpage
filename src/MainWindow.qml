@@ -169,6 +169,7 @@ ApplicationWindow {
     }
     
     ColumnLayout {
+        id: mainLayout
         anchors.fill: parent
         
         spacing: 0
@@ -285,14 +286,7 @@ ApplicationWindow {
                 }
             }
         }
-        
-        Kirigami.InlineMessage
-        {
-            Layout.fillWidth: true 
-            
-            type: Kirigami.MessageType.Error
-        }
-        
+  
         DocumentView {
             id: mainDocument
             

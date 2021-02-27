@@ -266,6 +266,8 @@ void DocumentModel::clearData()
     endResetModel();
     Q_EMIT countChanged();
 
+    Q_EMIT countChanged();
+    
     if (m_changed) {
         m_changed = false;
         Q_EMIT changedChanged();

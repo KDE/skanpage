@@ -345,9 +345,9 @@ void Skanpage::reloadDevicesList()
     }
 }
 
-void Skanpage::alertUser(int type, const QString &strStatus)
+void Skanpage::alertUser(int status, const QString &strStatus)
 {
-    Q_UNUSED(type)
+    Q_UNUSED(status);
     signalErrorMessage(strStatus);
 }
 
@@ -385,6 +385,7 @@ void Skanpage::cancelScan()
 
 void Skanpage::scanDone(int status, const QString &strStatus)
 {
+    //only print debug, errors are already reported by KSaneWidget::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
     m_progress = 100;
     Q_EMIT progressChanged();

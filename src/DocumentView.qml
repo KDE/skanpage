@@ -50,29 +50,10 @@ Item {
             }
         }
     }
-    
-    Item {
-        id: emptyDocumentMessage
-
-        visible: skanPage.documentModel.count === 0
-
-        anchors.fill: parent
-
-        Kirigami.PlaceholderMessage {
-            anchors.centerIn: parent
-            width: parent.width - (Kirigami.Units.largeSpacing * 4)
-
-            icon.name: "document"
-            
-            text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
-        }
-    }
 
     SplitView {
         anchors.fill: parent
         orientation: Qt.Horizontal
-        
-        visible: skanPage.documentModel.count !== 0
         
         ScrollView {
             id: scrollView
@@ -262,93 +243,156 @@ Item {
                 }
             }
         }
-
-        ColumnLayout {
+        
+        Item {
+            id: currentDocument
             SplitView.fillWidth: true
             SplitView.fillHeight: true
+            
+            Kirigami.InlineMessage {
+                id: errorMessage
+                width: labelWidth.width + Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
+                height: Math.max(labelWidth.height, Kirigami.Units.iconSizes.medium) + Kirigami.Units.largeSpacing
+                type: Kirigami.MessageType.Error
+                z: 2
+                
+                text: skanPage.errorMessage
+                
+                anchors {
+                    top: currentDocument.top
+                    topMargin: Kirigami.Units.smallSpacing
+                    horizontalCenter: currentDocument.horizontalCenter
+                }
+                
+                Timer {
+                    id: hideNotificationTimer
+                    interval: 5000
+                    onTriggered: errorAndInformationMessage.visible = false
+                }
+                    
+                Connections {
+                    target: skanPage
+                    function onErrorMessageChanged() {
+                        errorMessage.text = skanPage.errorMessage
+                        labelWidth.text = skanPage.errorMessage
+                        errorMessage.visible = true
+                        hideNotificationTimer.start()   
+                    }
+                }  
+                
+                TextMetrics {
+                    id: labelWidth
+                }
 
-            ScrollView {
-                id: imageViewer
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                
-                contentWidth: Math.max(bigImage.width, imageViewer.availableWidth)
-                contentHeight: Math.max(bigImage.height, imageViewer.availableHeight)
-                
+            }
+            
+            ColumnLayout {
+                id: documentLayout
+                 
+                 anchors.fill: parent
                 Item {
-                    anchors.fill: parent
-                    
-                    implicitWidth: bigImage.landscape ? bigImage.height : bigImage.width
-                    implicitHeight: bigImage.landscape ? bigImage.width : bigImage.height
-                    
-                    Image {
-                        id: bigImage
-                        
-                        readonly property bool landscape: (rotation == 270 || rotation == 90)
-                        
-                        anchors {
-                            horizontalCenter: parent.horizontalCenter
-                            verticalCenter: parent.verticalCenter
-                        } 
+                    id: emptyDocumentMessage
 
-                        property double zoomScale: 1
-                        width: sourceSize.width * zoomScale
-                        height: sourceSize.height * zoomScale
+                    visible: skanPage.documentModel.count === 0
+
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    Kirigami.PlaceholderMessage {
+                        anchors.centerIn: parent
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+
+                        icon.name: "document"
                         
-                        transformOrigin: Item.Center
-                    }   
-                }
-            }
-            
-            RowLayout {
-                Layout.fillWidth: true
-                visible: skanPage.progress === 100
-                
-                ToolButton {
-                    action: zoomInAction 
+                        text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
+                    }
                 }
                 
-                ToolButton { 
-                    action: zoomOutAction 
-                }
-                
-                ToolButton { 
-                    action: zoomFitAction
-                }
-                
-                ToolButton { 
-                    action: zoomOrigAction
-                }
-                
-                Item { 
-                    id: toolbarSpacer
+                ScrollView {
+                    id: imageViewer
                     Layout.fillWidth: true
-                }
-        
-                ToolButton { 
-                    action: rotateLeftAction 
+                    Layout.fillHeight: true
+                    
+                    visible: skanPage.documentModel.count !== 0
+                    
+                    contentWidth: Math.max(bigImage.width, imageViewer.availableWidth)
+                    contentHeight: Math.max(bigImage.height, imageViewer.availableHeight)
+                    
+                    Item {
+                        anchors.fill: parent
+                        
+                        implicitWidth: bigImage.landscape ? bigImage.height : bigImage.width
+                        implicitHeight: bigImage.landscape ? bigImage.width : bigImage.height
+                        
+                        Image {
+                            id: bigImage
+                            
+                            readonly property bool landscape: (rotation == 270 || rotation == 90)
+                            
+                            anchors {
+                                horizontalCenter: parent.horizontalCenter
+                                verticalCenter: parent.verticalCenter
+                            } 
+
+                            property double zoomScale: 1
+                            width: sourceSize.width * zoomScale
+                            height: sourceSize.height * zoomScale
+                            
+                            transformOrigin: Item.Center
+                        }   
+                    }
                 }
                 
-                ToolButton { 
-                    action: rotateRightAction
-                }
-                
-                ToolButton { 
-                    action: deleteAction
-                }
-            }
-            
-            RowLayout {
-                Layout.fillWidth: true
-                visible: skanPage.progress < 100
-                
-                ProgressBar {
+                RowLayout {
                     Layout.fillWidth: true
-                    value: skanPage.progress / 100
+                    visible: skanPage.progress === 100 && skanPage.documentModel.count !== 0
+                    
+                    ToolButton {
+                        action: zoomInAction 
+                    }
+                    
+                    ToolButton { 
+                        action: zoomOutAction 
+                    }
+                    
+                    ToolButton { 
+                        action: zoomFitAction
+                    }
+                    
+                    ToolButton { 
+                        action: zoomOrigAction
+                    }
+                    
+                    Item { 
+                        id: toolbarSpacer
+                        Layout.fillWidth: true
+                    }
+            
+                    ToolButton { 
+                        action: rotateLeftAction 
+                    }
+                    
+                    ToolButton { 
+                        action: rotateRightAction
+                    }
+                    
+                    ToolButton { 
+                        action: deleteAction
+                    }
                 }
                 
-                ToolButton { 
-                    action: cancelAction
+                RowLayout {
+                    Layout.fillWidth: true
+                    visible: skanPage.progress < 100
+                    
+                    ProgressBar {
+                        Layout.fillWidth: true
+                        value: skanPage.progress / 100
+                    }
+                    
+                    ToolButton { 
+                        action: cancelAction
+                    }
                 }
             }
         }
