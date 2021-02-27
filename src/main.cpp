@@ -55,8 +55,9 @@ int main(int argc, char *argv[])
                          QString() // homePageAddress
     );
 
-    aboutData.addAuthor(i18n("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
-
+    aboutData.addAuthor(QStringLiteral("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
+    aboutData.addAuthor(QStringLiteral("Alexander Stippich"), i18n("developer"), QLatin1String("a.stippich@gmx.net"));
+    
     app.setWindowIcon(QIcon::fromTheme(QLatin1String("scanner")));
 
     KAboutData::setApplicationData(aboutData);
