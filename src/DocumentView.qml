@@ -36,19 +36,6 @@ Item {
 
     SystemPalette {
         id: palette
-        colorGroup: SystemPalette.Inactive 
-    }
-
-    Timer {
-        id: delTmr
-        interval: 1
-        property int delIndex
-        onTriggered: {
-            skanPage.documentModel.removeImage(delIndex);
-            if (listView.count === 0) {
-                bigImage.source = "";
-            }
-        }
     }
 
     SplitView {
