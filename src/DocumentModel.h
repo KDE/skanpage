@@ -44,6 +44,9 @@ class DocumentModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
     Q_PROPERTY(bool changed READ changed NOTIFY changedChanged)
+    Q_PROPERTY(int activePageIndex READ activePageIndex WRITE setActivePageIndex NOTIFY activePageChanged)
+    Q_PROPERTY(QUrl activePageSource READ activePageSource NOTIFY activePageChanged)
+    Q_PROPERTY(int activePageRotation READ activePageRotation NOTIFY activePageChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_ENUMS(DocumentModelRoles)
 
@@ -54,7 +57,12 @@ public:
     ~DocumentModel();
 
     const QString name() const;
+    int activePageIndex() const;
+    int activePageRotation() const;
+    QUrl activePageSource() const;
     bool changed() const;
+    
+    void setActivePageIndex(int);
 
     void addImage(QTemporaryFile *tmpFile, QPageSize pageSize, int dpi);
 
@@ -68,7 +76,6 @@ public:
 
     Q_INVOKABLE void save(const QUrl &fileUrl);
 
-public:
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -76,6 +83,7 @@ public:
 Q_SIGNALS:
     void nameChanged();
     void changedChanged();
+    void activePageChanged();
     void countChanged();
 
 public Q_SLOTS:
@@ -87,6 +95,7 @@ private:
     QList<PageProperties> m_pages;
     QString m_name;
     bool m_changed;
+    int m_activePageIndex = -1;
 };
 
 #endif

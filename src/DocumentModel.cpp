@@ -52,6 +52,36 @@ bool DocumentModel::changed() const
     return m_changed;
 }
 
+int DocumentModel::activePageIndex() const
+{
+    return m_activePageIndex;
+}
+
+int DocumentModel::activePageRotation() const
+{
+    if (m_activePageIndex >= 0 && m_activePageIndex < rowCount()) { 
+        return m_pages.at(m_activePageIndex).rotationAngle;
+    }
+    return 0;
+}
+
+QUrl DocumentModel::activePageSource() const
+{
+    if (m_activePageIndex >= 0 && m_activePageIndex < rowCount()) {
+
+        return QUrl::fromLocalFile(m_pages.at(m_activePageIndex).temporaryFile->fileName());
+    }
+    return QUrl();
+}
+
+void DocumentModel::setActivePageIndex(int newIndex)
+{
+    if (newIndex != m_activePageIndex) {
+        m_activePageIndex = newIndex;
+        Q_EMIT activePageChanged();
+    }
+}
+
 void DocumentModel::save(const QUrl &fileUrl)
 {
     if (fileUrl.isEmpty() || m_pages.isEmpty()) {
@@ -154,6 +184,7 @@ void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize pageSize, int dp
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
     m_pages.append({tmpFile, pageSize, dpi});
     endInsertRows();
+    
     Q_EMIT countChanged();
     if (!m_changed) {
         m_changed = true;
@@ -176,6 +207,7 @@ void DocumentModel::moveImage(int from, int to)
     if (to < 0 || to >= m_pages.count()) {
         return;
     }
+
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), to + add);
     if (!ok) {
         qCDebug(SKANPAGE_LOG) << "Failed to move" << from << to << add << m_pages.count();
@@ -183,6 +215,12 @@ void DocumentModel::moveImage(int from, int to)
     }
     m_pages.move(from, to);
     endMoveRows();
+
+    if (m_activePageIndex == from) {
+        m_activePageIndex = to;
+    } else if (m_activePageIndex == to) {
+        m_activePageIndex = from;
+    }
 
     if (!m_changed) {
         m_changed = true;
@@ -207,7 +245,9 @@ void DocumentModel::rotateImage(int row, bool positiveDirection)
         rotationAngle = rotationAngle - 360;
     }
     m_pages[row].rotationAngle = rotationAngle;
-
+    if (row == m_activePageIndex) {
+        Q_EMIT activePageChanged();
+    }
     Q_EMIT dataChanged(index(row,0), index(row,0), {RotationAngleRole});
 }
 
@@ -216,11 +256,20 @@ void DocumentModel::removeImage(int row)
     if (row < 0 || row >= m_pages.count()) {
         return;
     }
-
+    
     beginRemoveRows(QModelIndex(), row, row);
     m_pages.removeAt(row);
     endRemoveRows();
+        
+    if (row < m_activePageIndex) {
+        m_activePageIndex -= 1;
+    } else if (m_activePageIndex >= m_pages.count()) {
+        m_activePageIndex = m_pages.count() - 1;
+    }
+    Q_EMIT activePageChanged();
+    
     Q_EMIT countChanged();
+
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
@@ -263,6 +312,7 @@ void DocumentModel::clearData()
 {
     beginResetModel();
     m_pages.clear();
+    m_activePageIndex = -1;
     endResetModel();
     Q_EMIT countChanged();
 

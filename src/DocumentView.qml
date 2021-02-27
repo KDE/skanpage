@@ -68,11 +68,7 @@ Item {
 
                 model: skanPage.documentModel
 
-                onCurrentItemChanged: {
-                    bigImage.source = listView.currentItem ? listView.currentItem.imageUrl : ""
-                    bigImage.zoomScale = Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)
-                    bigImage.rotation = listView.currentItem ? Qt.binding(function() {return listView.currentItem.rotationAngle}) : 0
-                }
+                onCurrentItemChanged: skanPage.documentModel.activePageIndex = currentIndex
 
                 delegate: Rectangle {
                     id: delegateRoot
@@ -101,16 +97,11 @@ Item {
                         hoverEnabled: true
                         acceptedButtons: Qt.LeftButton
 
-                        onClicked: {
-                            listView.currentIndex = index;
-                        }
+                        onClicked: listView.currentIndex = index;
                             
                         DropArea {
                             anchors.fill: parent
-                            onEntered: {
-                                skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
-
-                            }
+                            onEntered: skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1)
                         }
                         
                         ColumnLayout {
@@ -315,16 +306,19 @@ Item {
                             id: bigImage
                             
                             readonly property bool landscape: (rotation == 270 || rotation == 90)
+                            property double zoomScale: Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)   
                             
                             anchors {
                                 horizontalCenter: parent.horizontalCenter
                                 verticalCenter: parent.verticalCenter
                             } 
 
-                            property double zoomScale: 1
                             width: sourceSize.width * zoomScale
                             height: sourceSize.height * zoomScale
                             
+                            source: skanPage.documentModel.activePageSource
+                            
+                            rotation: skanPage.documentModel.activePageRotation
                             transformOrigin: Item.Center
                         }   
                     }
