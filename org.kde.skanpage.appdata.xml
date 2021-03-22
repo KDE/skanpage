@@ -9,9 +9,28 @@ SPDX-License-Identifier: CC0-1.0
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Skanpage</name>
+  <name xml:lang="ca">Skanpage</name>
+  <name xml:lang="es">Skanpage</name>
+  <name xml:lang="nl">Skanpage</name>
+  <name xml:lang="nn">Skanpage</name>
+  <name xml:lang="pt">Skanpage</name>
+  <name xml:lang="uk">Skanpage</name>
+  <name xml:lang="x-test">xxSkanpagexx</name>
   <summary>Simple, multi-page scanning application</summary>
+  <summary xml:lang="ca">Aplicació senzilla d'escaneig multipàgina</summary>
+  <summary xml:lang="es">Sencilla aplicación para escanear múltiples páginas</summary>
+  <summary xml:lang="nl">Eenvoudig scanprogramma voor meerdere pagina's</summary>
+  <summary xml:lang="pt">Aplicação de digitalização multi-páginas simples</summary>
+  <summary xml:lang="uk">Проста програма для сканування сторінок</summary>
+  <summary xml:lang="x-test">xxSimple, multi-page scanning applicationxx</summary>
   <description>
     <p> A simple scanning application designed for multi-page scanning and saving of images.</p>
+    <p xml:lang="ca">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al desat d'imatges.</p>
+    <p xml:lang="es">Una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como imágenes.</p>
+    <p xml:lang="nl">Een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van afbeeldingen.</p>
+    <p xml:lang="pt">Uma aplicação de digitalização simples que está desenhada para a digitalização e gravação de várias imagens.</p>
+    <p xml:lang="uk">Проста програма для сканування, яку розроблено для сканування багато сторінкових документів і збереження зображень сторінок.</p>
+    <p xml:lang="x-test">xxA simple scanning application designed for multi-page scanning and saving of images.xx</p>
   </description>
   <provides>
     <binary>skanpage</binary>
