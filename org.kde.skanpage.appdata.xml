@@ -21,6 +21,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="sv">Skanpage</name>
   <name xml:lang="uk">Skanpage</name>
   <name xml:lang="x-test">xxSkanpagexx</name>
+  <name xml:lang="zh-CN">Skanpage</name>
   <summary>Simple, multi-page scanning application</summary>
   <summary xml:lang="ca">Aplicació senzilla d'escaneig multipàgina</summary>
   <summary xml:lang="ca-valencia">Aplicació senzilla d'escaneig multipàgina</summary>
@@ -32,6 +33,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="sv">Enkelt bildinläsningsprogram för flera sidor</summary>
   <summary xml:lang="uk">Проста програма для сканування сторінок</summary>
   <summary xml:lang="x-test">xxSimple, multi-page scanning applicationxx</summary>
+  <summary xml:lang="zh-CN">简易多页扫描应用程序</summary>
   <description>
     <p> A simple scanning application designed for multi-page scanning and saving of images.</p>
     <p xml:lang="ca">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al desat d'imatges.</p>
@@ -44,6 +46,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="sv">Ett enkelt program för bildinläsning konstruerat för inläsning av flera sidor och för att spara bilder.</p>
     <p xml:lang="uk">Проста програма для сканування, яку розроблено для сканування багато сторінкових документів і збереження зображень сторінок.</p>
     <p xml:lang="x-test">xxA simple scanning application designed for multi-page scanning and saving of images.xx</p>
+    <p xml:lang="zh-CN">一款简易扫描应用程序，可以进行多页扫描和保存图像。</p>
   </description>
   <provides>
     <binary>skanpage</binary>
