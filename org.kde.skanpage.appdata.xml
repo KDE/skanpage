@@ -17,6 +17,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="nl">Skanpage</name>
   <name xml:lang="nn">Skanpage</name>
   <name xml:lang="pt">Skanpage</name>
+  <name xml:lang="sk">Skanpage</name>
   <name xml:lang="sl">Skanpage</name>
   <name xml:lang="sv">Skanpage</name>
   <name xml:lang="uk">Skanpage</name>
@@ -29,6 +30,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="fr">Une application simple et multi-page de numérisation</summary>
   <summary xml:lang="nl">Eenvoudig scanprogramma voor meerdere pagina's</summary>
   <summary xml:lang="pt">Aplicação de digitalização multi-páginas simples</summary>
+  <summary xml:lang="sk">Jednoduchá viacstranová skenovania aplikácia</summary>
   <summary xml:lang="sl">Enostavna aplikacija za optično branje več strani</summary>
   <summary xml:lang="sv">Enkelt bildinläsningsprogram för flera sidor</summary>
   <summary xml:lang="uk">Проста програма для сканування сторінок</summary>
