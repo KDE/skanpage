@@ -77,7 +77,7 @@ ApplicationWindow {
 
     Action {
         id: scanAction
-        icon.name: "scanner"
+        icon.name: "document-scan"
         text: i18n("Scan")
         shortcut: "SPACE"
         enabled: skanPage.progress === 100 && skanPage.openedDevice

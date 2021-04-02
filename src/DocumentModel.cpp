@@ -12,6 +12,7 @@
 #include <QPainter>
 #include <QPdfWriter>
 #include <QUrl>
+#include <QTransform>
 
 #include "skanpage_debug.h"
 #include <KLocalizedString>
@@ -122,7 +123,7 @@ void DocumentModel::savePDF(const QString &name)
         
         QImage pageImage(m_pages.at(i).temporaryFile->fileName());
         if (rotationAngle != 0) {
-            pageImage = pageImage.transformed(QMatrix().rotate(rotationAngle));
+            pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
         }
         
         QSize targetSize(writer.width(), writer.height());
@@ -142,7 +143,7 @@ void DocumentModel::saveImage(const QFileInfo &fileInfo)
         fileName = fileInfo.absoluteFilePath();
         const int rotationAngle = m_pages.at(0).rotationAngle;
         if (rotationAngle != 0) {
-            pageImage = pageImage.transformed(QMatrix().rotate(rotationAngle));
+            pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
         }
         pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
     } else {
@@ -150,7 +151,7 @@ void DocumentModel::saveImage(const QFileInfo &fileInfo)
             pageImage.load(m_pages.at(i).temporaryFile->fileName());
             const int rotationAngle = m_pages.at(i).rotationAngle;
             if (rotationAngle != 0) {
-                pageImage = pageImage.transformed(QMatrix().rotate(rotationAngle));
+                pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
             }
             fileName =
                 QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath()).arg(fileInfo.baseName()).arg(i, 4, 10, QLatin1Char('0')).arg(fileInfo.suffix());

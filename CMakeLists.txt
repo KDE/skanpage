@@ -4,8 +4,8 @@ project(skanpage
         VERSION "0.0.1"
         LANGUAGES CXX)
 
-set(REQUIRED_QT_VERSION "5.14.2")
-set(REQUIRED_KF5_VERSION "5.74.0")
+set(REQUIRED_QT_VERSION "5.15.2")
+set(REQUIRED_KF5_VERSION "5.80")
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
@@ -61,6 +61,3 @@ set(CMAKE_AUTOMOC ON)
 add_subdirectory(src)
 
 ki18n_install(po)
-
-file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES src/*.cpp src/*.h)
-kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
