@@ -85,12 +85,12 @@ ApplicationWindow {
     }
 
     Action {
-        id: scanUIAction
+        id: optionsAction
         icon.name: "configure"
         text: skanPage.deviceVendor && skanPage.deviceModel ? i18nc("Device vendor and device model name", "Options for %1 %2", skanPage.deviceVendor, skanPage.deviceModel) : i18n("Scanner options")
         shortcut: "CTRL+SPACE"
-        enabled: skanPage.openedDevice
-        onTriggered: skanPage.showScannerUI();
+        enabled: skanPage.optionsModel.rowCount > 0
+        onTriggered: optionsWindow.show();
     }
     
     Action {
@@ -163,85 +163,28 @@ ApplicationWindow {
                     action: newDocAction 
                 }
                 
-                ComboBox {
-                    id: resCombo
-                    textRole: "name"
-                    valueRole: "resolution"
-                    model: [ 
-                        { name: i18n("Draft (75 DPI)"), resolution: 75 },
-                        { name: i18n("Normal (150 DPI)"), resolution: 150 },
-                        { name: i18n("High Quality (300 DPI)"), resolution: 300 },
-                        { name: i18n("Best Quality (600 DPI)"), resolution: 600 }
-                    ]
-                    onCurrentValueChanged: {
-                        skanPage.scanDPI = resCombo.currentValue
-                    }
-                    enabled: skanPage.progress === 100 && skanPage.openedDevice
-                    currentIndex: 0
-                    
-                    Connections {
-                        target: skanPage
-                        function onScanDPIChanged() {
-                            var dpiIndex = resCombo.indexOfValue(skanPage.scanDPI);
-                            if (dpiIndex >= 0) {
-                                resCombo.currentIndex = dpiIndex;
-                            } else {
-                                resCombo.currentIndex = 0;
-                            }
-                        }
-                    }
-                }
-
-                ComboBox {
-                    id: sizeCombo
-                    implicitWidth: resCombo.implicitWidth / 2
-                    model: skanPage.scanSizes
-                    enabled: skanPage.progress === 100 && skanPage.openedDevice
-                    onCurrentIndexChanged: {
-                        skanPage.scanSizeIndex = currentIndex;
-                    }
-                    Connections {
-                        target: skanPage
-                        function onScanSizeIndexChanged() {
-                            if (sizeCombo.currentIndex != skanPage.scanSizeIndex) {
-                                sizeCombo.currentIndex = skanPage.scanSizeIndex;
-                            }
-                        }
-                    }
-
+                OptionDelegate {
+                    modelItem: skanPage.resolutionOption
+                    onValueChanged: skanPage.resolutionOption.value = value
                 }
                 
-                ComboBox {
-                    id: modeCombo
-                    implicitWidth: resCombo.implicitWidth / 2
-
-                    textRole: "name"
-                    valueRole: "selection"
-                    model: [ 
-                        { name: i18n("Color"), selection: true },
-                        { name: i18n("Gray"), selection: false }
-                        ]
-                    enabled: skanPage.progress === 100 && skanPage.openedDevice
-                    currentIndex: 0
-                    
-                    onCurrentValueChanged:  {
-                        skanPage.colorMode = modeCombo.currentValue;
-                    }
-                    
-                    Connections {
-                        target: skanPage
-                        function onColorModeChanged() {
-                            if (skanPage.colorMode) {
-                                modeCombo.currentIndex = 0;
-                            } else {
-                                modeCombo.currentIndex = 1;
-                            }
-                        }
-                    }
+                OptionDelegate {
+                    modelItem: skanPage.pageSizeOption
+                    onValueChanged: skanPage.pageSizeOption.value = value
+                }  
+                
+                OptionDelegate {
+                    modelItem: skanPage.sourceOption
+                    onValueChanged: skanPage.sourceOption.value = value
                 }
-                                
+                
+                OptionDelegate {
+                    modelItem: skanPage.scanModeOption
+                    onValueChanged: skanPage.scanModeOption.value = value
+                }
+             
                 ToolButton { 
-                    action: scanUIAction
+                    action: optionsAction
                 }
 
                 Item {
@@ -273,6 +216,10 @@ ApplicationWindow {
             Layout.fillHeight: true
             focus: true
         }
+    }
+    
+    OptionsWindow {
+        id: optionsWindow
     }
     
     FileDialog {

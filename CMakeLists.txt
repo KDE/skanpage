@@ -33,7 +33,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         #DocTools   # yields kdoctools_create_handbook
 )
 
-find_package(KF5 "21.03.80" REQUIRED
+find_package(KF5 "21.07.70" REQUIRED
     COMPONENTS # alias to find_package(KFGuiAddons ${KF5_VERSION} REQUIRED)
         Sane        # KF5Sane
 )

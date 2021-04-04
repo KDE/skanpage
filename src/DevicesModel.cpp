@@ -51,16 +51,16 @@ QVariant DevicesModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case NameRole:
-        return d->mDeviceslist[index.row()].name;
+        return d->mDeviceslist.at(index.row()).name;
         break;
     case VendorRole:
-        return d->mDeviceslist[index.row()].vendor;
+        return d->mDeviceslist.at(index.row()).vendor;
         break;
     case ModelRole:
-        return d->mDeviceslist[index.row()].model;
+        return d->mDeviceslist.at(index.row()).model;
         break;
     case TypeRole:
-        return d->mDeviceslist[index.row()].type;
+        return d->mDeviceslist.at(index.row()).type;
         break;
     default:
         break;

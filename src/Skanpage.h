@@ -1,8 +1,8 @@
 /**
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
- * 
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
+ *  
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
 #ifndef Skanpage_h
@@ -21,19 +21,20 @@
 class KAboutData;
 class DocumentModel;
 class DevicesModel;
+class OptionsModel;
+class SingleOption;
 
 using namespace KSaneIface;
 
 class Skanpage : public QObject
 {
-    Q_PROPERTY(int scanSizeIndex READ scanSizeIndex WRITE setScanSizeIndex NOTIFY scanSizeChanged)
-    Q_PROPERTY(float scanDPI READ scanDPI WRITE setScanDPI NOTIFY scanDPIChanged)
-    Q_PROPERTY(QStringList scanSizes READ scanSizes NOTIFY scanSizesChanged)
-    Q_PROPERTY(bool colorMode READ colorMode WRITE setColorMode NOTIFY colorModeChanged)
+    Q_OBJECT
+    
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
-    Q_PROPERTY(DocumentModel *documentModel READ documentModel NOTIFY documentModelChanged)
-    Q_PROPERTY(DevicesModel *devicesModel READ devicesModel NOTIFY devicesModelChanged)
+    Q_PROPERTY(DocumentModel *documentModel READ documentModel CONSTANT)
+    Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
+    Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
     Q_PROPERTY(bool openedDevice READ openedDevice NOTIFY openedDeviceChanged)
     Q_PROPERTY(bool searchingForDevices READ searchingForDevices NOTIFY searchingForDevicesChanged)
 
@@ -41,7 +42,10 @@ class Skanpage : public QObject
     Q_PROPERTY(QString deviceModel READ deviceModel NOTIFY deviceInfoUpdated)
     Q_PROPERTY(QString deviceName READ deviceName NOTIFY deviceInfoUpdated)
     
-    Q_OBJECT
+    Q_PROPERTY(SingleOption *resolutionOption READ resolutionOption NOTIFY optionsChanged)
+    Q_PROPERTY(SingleOption *pageSizeOption READ pageSizeOption NOTIFY optionsChanged)
+    Q_PROPERTY(SingleOption *sourceOption READ sourceOption NOTIFY optionsChanged)
+    Q_PROPERTY(SingleOption *scanModeOption READ scanModeOption NOTIFY optionsChanged)    
 
 public:
     explicit Skanpage(const QString &deviceName, QObject *parent = nullptr);
@@ -51,17 +55,7 @@ public:
     QString deviceModel() const;
     QString deviceName() const;
 
-    int scanSizeIndex() const;
-    void setScanSizeIndex(int index);
-
-    float scanDPI() const;
-    void setScanDPI(float dpi);
-
-    bool colorMode() const;
-    void setColorMode(bool colorMode);
-
     QString errorMessage() const;
-    const QStringList scanSizes() const;
 
     int progress() const;
     bool openedDevice() const;
@@ -69,19 +63,19 @@ public:
 
     DocumentModel *documentModel() const;
     DevicesModel *devicesModel() const;
+    OptionsModel *optionsModel() const;
+    SingleOption *resolutionOption() const;
+    SingleOption *pageSizeOption() const;
+    SingleOption *sourceOption() const;
+    SingleOption *scanModeOption() const;
 
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
     Q_INVOKABLE bool openDevice(const QString &deviceName);
 
 Q_SIGNALS:
-    void scanSizeChanged();
-    void scanDPIChanged();
-    void scanSizesChanged();
-    void colorModeChanged();
     void progressChanged();
-    void documentModelChanged();
-    void devicesModelChanged();
+    void optionsChanged();
     void errorMessageChanged();
     void openedDeviceChanged();
     void searchingForDevicesChanged();
@@ -93,12 +87,9 @@ public Q_SLOTS:
     void saveScannerOptions();
 
     void startScan();
-    void showScannerUI();
 
 private Q_SLOTS:
     void imageReady(QByteArray &data, int width, int height, int bytesPerLine, int format);
-
-    void defaultScannerOptions();
 
     void availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList);
 
@@ -109,21 +100,21 @@ private Q_SLOTS:
 
 private:
     void finishOpeningDevice(const QString &deviceName);
-    int pageSizeToIndex(int id);
     void signalErrorMessage(const QString &text);
 
     std::unique_ptr<KSaneWidget> m_ksanew;
     std::unique_ptr<DocumentModel> m_docHandler;
     std::unique_ptr<DevicesModel> m_availableDevices;
+    std::unique_ptr<OptionsModel> m_optionsModel;
+    std::unique_ptr<SingleOption> m_resolutionOption;
+    std::unique_ptr<SingleOption> m_pageSizeOption;
+    std::unique_ptr<SingleOption> m_sourceOption;
+    std::unique_ptr<SingleOption> m_scanModeOption;
 
-    QMap<QString, QString> m_defaultScanOpts;
-    QVector<QPageSize::PageSizeId> m_scanSizesEnum;
-    QStringList m_scanSizesText;
-    int m_scanSizeIndex;
-    int m_progress;
+    int m_progress = 100;
     QString m_errorMessage;
-    bool m_openedDevice;
-    bool m_searchingForDevices;
+    bool m_openedDevice = false;
+    bool m_searchingForDevices = false;
 };
 
 #endif

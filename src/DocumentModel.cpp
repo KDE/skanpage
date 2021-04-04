@@ -54,7 +54,6 @@ int DocumentModel::activePageRotation() const
 QUrl DocumentModel::activePageSource() const
 {
     if (m_activePageIndex >= 0 && m_activePageIndex < rowCount()) {
-
         return QUrl::fromLocalFile(m_pages.at(m_activePageIndex).temporaryFile->fileName());
     }
     return QUrl();

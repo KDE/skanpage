@@ -12,9 +12,12 @@
 #include <KAboutData>
 #include <KI18n/KLocalizedContext>
 #include <KLocalizedString>
+#include <KSaneOption>
 
 #include "DevicesModel.h"
 #include "DocumentModel.h"
+#include "OptionsModel.h"
+#include "SingleOption.h"
 #include "Skanpage.h"
 #include "skanpage_version.h"
 
@@ -27,6 +30,9 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel");
     qmlRegisterType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel");
+    qmlRegisterType<OptionsModel>("org.kde.skanpage", 1, 0, "OptionsModel");
+    qmlRegisterType<SingleOption>("org.kde.skanpage", 1, 0, "SingleOption");
+    qmlRegisterType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption");
 
     KLocalizedString::setApplicationDomain("skanpage");
 
