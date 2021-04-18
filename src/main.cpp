@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     KAboutData aboutData(QLatin1String("Skanpage"), // componentName, k4: appName
                          i18n("Skanpage"), // displayName, k4: programName
                          QLatin1String(SKANPAGE_VERSION_STRING), // version
-                         i18n("Page-scanning application for KDE based on libksane."), // shortDescription
+                         i18n("Page-scanning application by KDE based on libksane."), // shortDescription
                          KAboutLicense::GPL, // licenseType
                          i18n("(C) 2015 Kåre Särs"), // copyrightStatement
                          QString(), // other Text
