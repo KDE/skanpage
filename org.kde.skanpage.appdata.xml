@@ -12,6 +12,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="ca">Skanpage</name>
   <name xml:lang="ca-valencia">Skanpage</name>
   <name xml:lang="cs">Skanpage</name>
+  <name xml:lang="de">Skanpage</name>
   <name xml:lang="en-GB">Skanpage</name>
   <name xml:lang="es">Skanpage</name>
   <name xml:lang="fr">Skanpage</name>
@@ -29,6 +30,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary>Simple, multi-page scanning application</summary>
   <summary xml:lang="ca">Aplicació senzilla d'escaneig multipàgina</summary>
   <summary xml:lang="ca-valencia">Aplicació senzilla d'escaneig multipàgina</summary>
+  <summary xml:lang="de">Anwendung zum Scannen von mehreren Seiten</summary>
   <summary xml:lang="en-GB">Simple, multi-page scanning application</summary>
   <summary xml:lang="es">Sencilla aplicación para escanear múltiples páginas</summary>
   <summary xml:lang="fr">Une application simple et multi-page de numérisation</summary>
@@ -46,6 +48,7 @@ SPDX-License-Identifier: CC0-1.0
     <p> A simple scanning application designed for multi-page scanning and saving of images.</p>
     <p xml:lang="ca">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al desat d'imatges.</p>
     <p xml:lang="ca-valencia">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al guardat d'imatges.</p>
+    <p xml:lang="de">Eine einfache Anwendung zum Scannen von mehreren Seiten und Speichern von Bilder.</p>
     <p xml:lang="en-GB">A simple scanning application designed for multi-page scanning and saving of images.</p>
     <p xml:lang="es">Una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como imágenes.</p>
     <p xml:lang="fr">Une application simple de numérisation conçue pour la numérisation multi-page et l'enregistrement des images.</p>
