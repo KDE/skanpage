@@ -163,19 +163,22 @@ void DocumentModel::saveImage(const QFileInfo &fileInfo)
 void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize pageSize, int dpi)
 {
     if (tmpFile == nullptr) {
-        qCDebug(SKANPAGE_LOG) << tmpFile;
+        qCDebug(SKANPAGE_LOG) << "Adding new image file" << tmpFile << " with pageSize" << pageSize << "and resolution " << dpi << "dpi";
         return;
     }
 
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
     m_pages.append({tmpFile, pageSize, dpi});
     endInsertRows();
-    
+   
     Q_EMIT countChanged();
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
-    }
+    } 
+    
+    m_activePageIndex = m_pages.count() - 1;
+    Q_EMIT activePageChanged();
 }
 
 void DocumentModel::moveImage(int from, int to)

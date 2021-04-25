@@ -6,26 +6,28 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.14 
+import QtQuick.Controls 2.15 
 import QtQuick.Layouts 1.1
 import org.kde.kirigami 2.12 as Kirigami
 
 ScrollView {
     id: scrollView
-
-    visible: skanPage.documentModel.count > 1
-    
+               
     ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-    ScrollBar.vertical.policy: ScrollBar.AlwaysOn
-    
-    SplitView.fillHeight: true
-    SplitView.preferredWidth: parent.width / 4      
-
+    ScrollBar.vertical.policy: ScrollBar.AlwaysOn 
+       
     ListView {
         id: listView
         anchors.fill: parent
 
         spacing: Kirigami.Units.smallSpacing
+        
+        Connections {
+            target: skanPage.documentModel
+            function onActivePageChanged() {
+                listView.positionViewAtIndex(skanPage.documentModel.activePageIndex, ListView.Contain)
+            }
+        }
         
         displaced: Transition {
             NumberAnimation {
@@ -68,10 +70,7 @@ ScrollView {
 
                 DropArea {
                     anchors.fill: parent
-                    onEntered: {
-                        skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
-
-                    }
+                    onEntered: skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
                 }
                 
                 ColumnLayout {

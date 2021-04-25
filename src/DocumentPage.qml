@@ -10,8 +10,8 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
 import org.kde.kirigami 2.12 as Kirigami
 
-ColumnLayout {
-    id: documentLayout
+Item {
+    id: documentPage
     
     Action {
         id: zoomInAction
@@ -76,112 +76,112 @@ ColumnLayout {
         onTriggered: skanPage.documentModel.removeImage(skanPage.documentModel.activeIndex)
     }
     
-        
-    Item {
+    Kirigami.PlaceholderMessage {
         id: emptyDocumentMessage
-
+        
+        anchors.centerIn: parent
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        
         visible: skanPage.documentModel.count === 0
-
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-
-        Kirigami.PlaceholderMessage {
-            anchors.centerIn: parent
-            width: parent.width - (Kirigami.Units.largeSpacing * 4)
-
-            icon.name: "document"
-            
-            text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
-        }
+        
+        icon.name: "document"
+        
+        text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
     }
     
-    ScrollView {
-        id: imageViewer
-        Layout.fillWidth: true
-        Layout.fillHeight: true
+    ColumnLayout {
+        id: documentLayout
         
-        visible: skanPage.documentModel.count !== 0
+        anchors.fill: parent
         
-        contentWidth: Math.max(bigImage.width, imageViewer.availableWidth)
-        contentHeight: Math.max(bigImage.height, imageViewer.availableHeight)
+        visible: skanPage.documentModel.count > 0
         
-        Item {
-            anchors.fill: parent
-            
-            implicitWidth: bigImage.landscape ? bigImage.height : bigImage.width
-            implicitHeight: bigImage.landscape ? bigImage.width : bigImage.height
-            
-            Image {
-                id: bigImage
-                
-                readonly property bool landscape: (rotation == 270 || rotation == 90)
-                property double zoomScale: Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)   
-                
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    verticalCenter: parent.verticalCenter
-                } 
-
-                width: sourceSize.width * zoomScale
-                height: sourceSize.height * zoomScale
-                
-                source: skanPage.documentModel.activePageSource
-                
-                rotation: skanPage.documentModel.activePageRotation
-                transformOrigin: Item.Center
-            }     
-        }
-    }
-    
-    RowLayout {
-        Layout.fillWidth: true
-        visible: skanPage.progress === 100 && skanPage.documentModel.count !== 0
-        
-        ToolButton {
-            action: zoomInAction 
-        }
-        
-        ToolButton { 
-            action: zoomOutAction 
-        }
-        
-        ToolButton { 
-            action: zoomFitAction
-        }
-        
-        ToolButton { 
-            action: zoomOrigAction
-        }
-        
-        Item { 
-            id: toolbarSpacer
+        ScrollView {
+            id: imageViewer
             Layout.fillWidth: true
-        }
+            Layout.fillHeight: true
+            
+            contentWidth: Math.max(bigImage.width, imageViewer.availableWidth)
+            contentHeight: Math.max(bigImage.height, imageViewer.availableHeight)
+            
+            Item {
+                anchors.centerIn: parent
+                
+                implicitWidth: bigImage.landscape ? bigImage.height : bigImage.width
+                implicitHeight: bigImage.landscape ? bigImage.width : bigImage.height
+                
+                Image {
+                    id: bigImage
+                    
+                    readonly property bool landscape: (rotation == 270 || rotation == 90)
+                    property double zoomScale: Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)   
+                    
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                    } 
 
-        ToolButton { 
-            action: rotateLeftAction 
+                    width: sourceSize.width * zoomScale
+                    height: sourceSize.height * zoomScale
+                    
+                    source: skanPage.documentModel.activePageSource
+                    
+                    rotation: skanPage.documentModel.activePageRotation
+                    transformOrigin: Item.Center
+                }     
+            }
         }
         
-        ToolButton { 
-            action: rotateRightAction
-        }
-        
-        ToolButton { 
-            action: deleteAction
-        }
-    }
-    
-    RowLayout {
-        Layout.fillWidth: true
-        visible: skanPage.progress < 100
-        
-        ProgressBar {
+        RowLayout {
             Layout.fillWidth: true
-            value: skanPage.progress / 100
+            visible: skanPage.progress === 100 && skanPage.documentModel.count !== 0
+            
+            ToolButton {
+                action: zoomInAction 
+            }
+            
+            ToolButton { 
+                action: zoomOutAction 
+            }
+            
+            ToolButton { 
+                action: zoomFitAction
+            }
+            
+            ToolButton { 
+                action: zoomOrigAction
+            }
+            
+            Item { 
+                id: toolbarSpacer
+                Layout.fillWidth: true
+            }
+
+            ToolButton { 
+                action: rotateLeftAction 
+            }
+            
+            ToolButton { 
+                action: rotateRightAction
+            }
+            
+            ToolButton { 
+                action: deleteAction
+            }
         }
         
-        ToolButton { 
-            action: cancelAction
+        RowLayout {
+            Layout.fillWidth: true
+            visible: skanPage.progress < 100
+            
+            ProgressBar {
+                Layout.fillWidth: true
+                value: skanPage.progress / 100
+            }
+            
+            ToolButton { 
+                action: cancelAction
+            }
         }
     }
 }

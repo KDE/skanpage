@@ -26,19 +26,19 @@ Item {
         anchors.fill: parent
         orientation: Qt.Horizontal
         
+        handle: Kirigami.Separator {
+        }
+        
         DocumentList {
             id: scrollView
 
             visible: skanPage.documentModel.count > 1
             
-            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-            ScrollBar.vertical.policy: ScrollBar.AlwaysOn
-            
             SplitView.fillHeight: true
-
             SplitView.preferredWidth: parent.width / 4
+            SplitView.minimumWidth: parent.width / 5
         }
-        
+                
         Item {
             id: container
     
