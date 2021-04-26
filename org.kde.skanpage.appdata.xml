@@ -19,6 +19,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="it">Skanpage</name>
   <name xml:lang="nl">Skanpage</name>
   <name xml:lang="nn">Skanpage</name>
+  <name xml:lang="pl">Skanpage</name>
   <name xml:lang="pt">Skanpage</name>
   <name xml:lang="pt-BR">Skanpage</name>
   <name xml:lang="sk">Skanpage</name>
@@ -36,6 +37,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="fr">Une application simple et multi-page de numérisation</summary>
   <summary xml:lang="it">Semplice applicazione per scansioni multipagina</summary>
   <summary xml:lang="nl">Eenvoudig scanprogramma voor meerdere pagina's</summary>
+  <summary xml:lang="pl">Prosty program do wielostronnicowego skanowania</summary>
   <summary xml:lang="pt">Aplicação de digitalização multi-páginas simples</summary>
   <summary xml:lang="pt-BR">Aplicativo simples de digitalização de múltiplas páginas</summary>
   <summary xml:lang="sk">Jednoduchá viacstranová skenovania aplikácia</summary>
@@ -54,6 +56,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fr">Une application simple de numérisation conçue pour la numérisation multi-page et l'enregistrement des images.</p>
     <p xml:lang="it">Una semplice applicazione per scansionare progettata per scansioni e salvataggi di immagini multi pagina.</p>
     <p xml:lang="nl">Een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van afbeeldingen.</p>
+    <p xml:lang="pl">Prosty program opracowany do wielostronnicowego skanowania i zapisywania obrazów.</p>
     <p xml:lang="pt">Uma aplicação de digitalização simples que está desenhada para a digitalização e gravação de várias imagens.</p>
     <p xml:lang="pt-BR">Um aplicativo simples de digitalização desenhado para digitalizar múltiplas páginas e salvar imagens.</p>
     <p xml:lang="sl">Preprosta aplikacija za optično branje več strani in shranjevanje slik.</p>
