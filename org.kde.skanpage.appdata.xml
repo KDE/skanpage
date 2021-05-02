@@ -16,6 +16,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="en-GB">Skanpage</name>
   <name xml:lang="es">Skanpage</name>
   <name xml:lang="fr">Skanpage</name>
+  <name xml:lang="id">Skanpage</name>
   <name xml:lang="it">Skanpage</name>
   <name xml:lang="nl">Skanpage</name>
   <name xml:lang="nn">Skanpage</name>
@@ -35,6 +36,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="en-GB">Simple, multi-page scanning application</summary>
   <summary xml:lang="es">Sencilla aplicación para escanear múltiples páginas</summary>
   <summary xml:lang="fr">Une application simple et multi-page de numérisation</summary>
+  <summary xml:lang="id">Aplikasi pemindaian multi halaman yang sederhana</summary>
   <summary xml:lang="it">Semplice applicazione per scansioni multipagina</summary>
   <summary xml:lang="nl">Eenvoudig scanprogramma voor meerdere pagina's</summary>
   <summary xml:lang="pl">Prosty program do wielostronnicowego skanowania</summary>
@@ -54,6 +56,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="en-GB">A simple scanning application designed for multi-page scanning and saving of images.</p>
     <p xml:lang="es">Una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como imágenes.</p>
     <p xml:lang="fr">Une application simple de numérisation conçue pour la numérisation multi-page et l'enregistrement des images.</p>
+    <p xml:lang="id">Sebuah aplikasi pemindaian yang dirancang untuk memindai multi halaman dan menyimpan citra gambar.</p>
     <p xml:lang="it">Una semplice applicazione per scansionare progettata per scansioni e salvataggi di immagini multi pagina.</p>
     <p xml:lang="nl">Een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van afbeeldingen.</p>
     <p xml:lang="pl">Prosty program opracowany do wielostronnicowego skanowania i zapisywania obrazów.</p>
