@@ -96,7 +96,6 @@ ApplicationWindow {
     Action {
         id: openMenuAction
         icon.name: "application-menu"
-        text: i18n("Application menu")
         onTriggered: {
             if (applicationMenu.visible) {
                 applicationMenu.close()
