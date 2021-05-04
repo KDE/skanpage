@@ -123,23 +123,7 @@ ApplicationWindow {
     
     Menu {
         id: applicationMenu
-        
-        MenuItem {
-            action: scanAction
-        }
-        
-        MenuItem {
-            action: saveDocAction
-        }
-        
-        MenuItem { 
-            action: newDocAction 
-        }
-               
-        MenuItem {
-            action: scanUIAction 
-        } 
-         
+
         MenuItem {
             action: reselectDevicesAction 
         }
