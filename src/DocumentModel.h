@@ -8,6 +8,8 @@
 #ifndef DocumentModel_H
 #define DocumentModel_H
 
+#include <memory>
+
 #include <QAbstractListModel>
 #include <QFileInfo>
 #include <QList>
@@ -49,7 +51,7 @@ public:
     
     void setActivePageIndex(int);
 
-    void addImage(QTemporaryFile *tmpFile, QPageSize pageSize, int dpi);
+    void addImage(const QImage &image, const QPageSize &pageSize, const int dpi);
 
     Q_INVOKABLE void clearData();
 
@@ -70,6 +72,7 @@ Q_SIGNALS:
     void changedChanged();
     void activePageChanged();
     void countChanged();
+    void errorMessage(const QString &text);
 
 public Q_SLOTS:
 
@@ -79,7 +82,7 @@ private:
 
     QList<PageProperties> m_pages;
     QString m_name;
-    bool m_changed;
+    bool m_changed = false;
     int m_activePageIndex = -1;
 };
 

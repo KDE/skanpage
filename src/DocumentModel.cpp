@@ -13,6 +13,7 @@
 #include <QPdfWriter>
 #include <QUrl>
 #include <QTransform>
+#include <QTemporaryFile>
 
 #include "skanpage_debug.h"
 #include <KLocalizedString>
@@ -20,12 +21,14 @@
 DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_name(i18n("New document"))
-    , m_changed(false)
 {
 }
 
 DocumentModel::~DocumentModel()
 {
+    for (auto page : qAsConst(m_pages)) {
+        delete page.temporaryFile;
+    }
 }
 
 const QString DocumentModel::name() const
@@ -159,15 +162,18 @@ void DocumentModel::saveImage(const QFileInfo &fileInfo)
     }
 }
 
-void DocumentModel::addImage(QTemporaryFile *tmpFile, QPageSize pageSize, int dpi)
+void DocumentModel::addImage(const QImage &image, const QPageSize &pageSize, const int dpi)
 {
-    if (tmpFile == nullptr) {
-        qCDebug(SKANPAGE_LOG) << "Adding new image file" << tmpFile << " with pageSize" << pageSize << "and resolution " << dpi << "dpi";
-        return;
+    QTemporaryFile *tempImageFile = new QTemporaryFile();
+    tempImageFile->open();
+    if (image.save(tempImageFile, "PNG")) {
+        qCDebug(SKANPAGE_LOG) << "Adding new image file" << tempImageFile << " with pageSize" << pageSize << "and resolution " << dpi << "dpi";
+    } else {
+         Q_EMIT errorMessage(i18n("Failed to save image"));
     }
-
+    tempImageFile->close();
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
-    m_pages.append({tmpFile, pageSize, dpi});
+    m_pages.append({tempImageFile, pageSize, dpi});
     endInsertRows();
    
     Q_EMIT countChanged();
@@ -247,6 +253,7 @@ void DocumentModel::removeImage(int row)
     }
     
     beginRemoveRows(QModelIndex(), row, row);
+    delete m_pages.at(row).temporaryFile;
     m_pages.removeAt(row);
     endRemoveRows();
         

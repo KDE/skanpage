@@ -11,7 +11,6 @@
 #include <QPageSize>
 #include <QPrinter>
 #include <QStringList>
-#include <QTemporaryFile>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
@@ -43,6 +42,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksanew.get(), &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
     connect(m_ksanew.get(), &KSaneWidget::scanDone, this, &Skanpage::scanDone);
     connect(m_ksanew.get(), &KSaneWidget::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
+    connect(m_docHandler.get(), &DocumentModel::errorMessage, this, &Skanpage::signalErrorMessage);
     
     reloadDevicesList();
 
@@ -104,16 +104,8 @@ void Skanpage::imageReady(QByteArray &data, int width, int height, int bytesPerL
     }
 
     const QImage image = m_ksanew->toQImage(data, width, height, bytesPerLine, static_cast<KSaneIface::KSaneWidget::ImageFormat>(format));
-
-    QTemporaryFile *tmp = new QTemporaryFile(m_docHandler.get());
-    tmp->open();
-    if (image.save(tmp, "PNG")) {
-        const float conversionFactorMM = m_resolutionOption->value().toFloat() / 25.4;
-        m_docHandler->addImage(tmp, QPageSize(QSizeF(width / conversionFactorMM, height/ conversionFactorMM), QPageSize::Millimeter), m_resolutionOption->value().toFloat() );
-    } else {
-        signalErrorMessage(i18n("Failed to save image"));
-    }
-    tmp->close();
+    const float conversionFactorMM = m_resolutionOption->value().toFloat() / 25.4;
+    m_docHandler->addImage(image, QPageSize(QSizeF(width / conversionFactorMM, height/ conversionFactorMM), QPageSize::Millimeter), m_resolutionOption->value().toFloat() );
 }
 
 void Skanpage::showAboutDialog(void)
