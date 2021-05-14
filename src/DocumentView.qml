@@ -27,16 +27,14 @@ Item {
         orientation: Qt.Horizontal
         
         handle: Kirigami.Separator {
+            implicitWidth: 4 * Math.floor(Kirigami.Units.devicePixelRatio)
         }
         
         DocumentList {
             id: scrollView
 
-            visible: skanPage.documentModel.count > 1
-            
             SplitView.fillHeight: true
             SplitView.preferredWidth: parent.width / 4
-            SplitView.minimumWidth: parent.width / 5
         }
                 
         Item {
