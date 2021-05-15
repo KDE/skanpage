@@ -8,13 +8,10 @@
 #ifndef Skanpage_h
 #define Skanpage_h
 
-#include <QMap> // FIXME add this to KSaneWidget!!
 #include <QObject>
-#include <QPageSize>
-#include <QSizeF>
 #include <QString>
 
-#include <KSaneWidget>
+#include <KSaneCore>
 
 #include <memory>
 
@@ -101,18 +98,20 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void imageReady(const QImage &image);
-    void availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList);
-    void showKSaneMessage(int type, const QString &strStatus);
+    void availableDevices(const QList<KSaneCore::DeviceInfo> &deviceList);
+    void showKSaneMessage(KSaneCore::KSaneScanStatus type, const QString &strStatus);
     void showUserMessage(MessageLevel level, const QString &strStatus);
+
     void progressUpdated(int progress);
-    void scanDone(int status, const QString &strStatus);
+    void scanDone(KSaneCore::KSaneScanStatus statuts, const QString &strStatus);
 
 private:
     void finishOpeningDevice(const QString &deviceName);
     void loadScannerOptions();
     void saveScannerOptions();
-    
-    std::unique_ptr<KSaneWidget> m_ksanew;
+    void signalErrorMessage(const QString &text);
+
+    std::unique_ptr<KSaneCore> m_ksaneInterface;
     std::unique_ptr<DocumentModel> m_docHandler;
     std::unique_ptr<DevicesModel> m_availableDevices;
     std::unique_ptr<OptionsModel> m_optionsModel;

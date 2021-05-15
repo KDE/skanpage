@@ -14,7 +14,7 @@
 
 #include <memory>
 
-#include <KSaneWidget>
+#include <KSaneCore>
 
 class DevicesModelPrivate;
 
@@ -41,7 +41,7 @@ public:
 
     Q_INVOKABLE QString getSelectedDeviceName() const;
 
-    void updateDevicesList(QList<KSaneWidget::DeviceInfo> deviceList);
+    void updateDevicesList(QList<KSaneCore::DeviceInfo> deviceList);
 
 public Q_SLOTS:
 
@@ -55,6 +55,6 @@ private:
     std::unique_ptr<DevicesModelPrivate> d;
 };
 
-QDebug operator<<(QDebug d, const KSaneWidget::DeviceInfo &deviceInfo);
+QDebug operator<<(QDebug d, const KSaneCore::DeviceInfo &deviceInfo);
 
 #endif // DEVICESMODEL_H

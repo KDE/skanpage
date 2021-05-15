@@ -9,7 +9,7 @@
 class DevicesModelPrivate
 {
 public:
-    QList<KSaneWidget::DeviceInfo> mDeviceslist;
+    QList<KSaneCore::DeviceInfo> mDeviceslist;
 
     int mSelectedDevice = 0;
 };
@@ -68,7 +68,7 @@ QVariant DevicesModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-void DevicesModel::updateDevicesList(QList<KSaneWidget::DeviceInfo> deviceList)
+void DevicesModel::updateDevicesList(QList<KSaneCore::DeviceInfo> deviceList)
 {
     beginResetModel();
     d->mDeviceslist = deviceList;
@@ -89,7 +89,7 @@ void DevicesModel::selectDevice(int i)
     d->mSelectedDevice = i;
 }
 
-QDebug operator<<(QDebug d, const KSaneWidget::DeviceInfo &deviceInfo)
+QDebug operator<<(QDebug d, const KSaneCore::DeviceInfo &deviceInfo)
 {
     d << "Device name: " << deviceInfo.name << "\n";
     d << "Device vendor: " << deviceInfo.vendor << "\n";
