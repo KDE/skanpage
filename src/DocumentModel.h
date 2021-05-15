@@ -51,7 +51,7 @@ public:
     
     void setActivePageIndex(int);
 
-    void addImage(const QImage &image, const QPageSize &pageSize, const int dpi);
+    void addImage(const QImage &image, const int dpi);
 
     Q_INVOKABLE void clearData();
 

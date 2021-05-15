@@ -162,8 +162,10 @@ void DocumentModel::saveImage(const QFileInfo &fileInfo)
     }
 }
 
-void DocumentModel::addImage(const QImage &image, const QPageSize &pageSize, const int dpi)
+void DocumentModel::addImage(const QImage &image, const int dpi)
 {
+    const double conversionFactorMM = static_cast<double>(dpi) / 25.4;
+    QPageSize pageSize = QPageSize(QSizeF(image.width() / conversionFactorMM, image.height()/ conversionFactorMM), QPageSize::Millimeter);
     QTemporaryFile *tempImageFile = new QTemporaryFile();
     tempImageFile->open();
     if (image.save(tempImageFile, "PNG")) {

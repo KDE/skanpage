@@ -23,7 +23,6 @@
 #include "OptionsModel.h"
 #include "SingleOption.h"
 #include "skanpage_debug.h"
-#include <errno.h>
 
 Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     : QObject(parent)
@@ -36,7 +35,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     , m_sourceOption(std::make_unique<SingleOption>())
     , m_scanModeOption(std::make_unique<SingleOption>())
 {
-    connect(m_ksanew.get(), &KSaneWidget::imageReady, this, &Skanpage::imageReady);
+    connect(m_ksanew.get(), &KSaneWidget::scannedImageReady, this, &Skanpage::imageReady);
     connect(m_ksanew.get(), &KSaneWidget::availableDevices, this, &Skanpage::availableDevices);
     connect(m_ksanew.get(), &KSaneWidget::userMessage, this, &Skanpage::alertUser);
     connect(m_ksanew.get(), &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
@@ -96,16 +95,9 @@ bool Skanpage::searchingForDevices() const
     return m_searchingForDevices;
 }
 
-void Skanpage::imageReady(QByteArray &data, int width, int height, int bytesPerLine, int format)
-{
-    if ((format == KSaneIface::KSaneWidget::FormatRGB_16_C) || (format == KSaneIface::KSaneWidget::FormatGrayScale16)) {
-        signalErrorMessage(i18n("We do not support 16 per color scans at the moment!"));
-        return;
-    }
-
-    const QImage image = m_ksanew->toQImage(data, width, height, bytesPerLine, static_cast<KSaneIface::KSaneWidget::ImageFormat>(format));
-    const float conversionFactorMM = m_resolutionOption->value().toFloat() / 25.4;
-    m_docHandler->addImage(image, QPageSize(QSizeF(width / conversionFactorMM, height/ conversionFactorMM), QPageSize::Millimeter), m_resolutionOption->value().toFloat() );
+void Skanpage::imageReady(const QImage &image)
+{   
+    m_docHandler->addImage(image, m_resolutionOption->value().toInt());
 }
 
 void Skanpage::showAboutDialog(void)

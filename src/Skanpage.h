@@ -89,7 +89,7 @@ public Q_SLOTS:
     void startScan();
 
 private Q_SLOTS:
-    void imageReady(QByteArray &data, int width, int height, int bytesPerLine, int format);
+    void imageReady(const QImage &image);
 
     void availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList);
 
