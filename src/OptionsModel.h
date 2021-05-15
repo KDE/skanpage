@@ -53,6 +53,8 @@ public:
     
     void setOptionsList(const QList<KSaneIface::KSaneOption *> optionsList); 
     
+    void clearOptions();
+    
 Q_SIGNALS:
     
     void rowCountChanged();

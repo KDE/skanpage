@@ -120,3 +120,11 @@ void OptionsModel::setOptionsList(const QList<KSaneIface::KSaneOption *> options
     endResetModel();
     Q_EMIT rowCountChanged();
 }
+
+void OptionsModel::clearOptions()
+{
+    beginResetModel();
+    d->mOptionsList.clear();
+    endResetModel();
+    Q_EMIT rowCountChanged(); 
+}

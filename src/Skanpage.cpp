@@ -207,6 +207,7 @@ void Skanpage::reloadDevicesList()
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("(Re-)loading devices list");
     
     if (m_ksanew->closeDevice()) {
+        m_optionsModel->clearOptions();
         m_resolutionOption->clearOption();
         m_pageSizeOption->clearOption();
         m_sourceOption->clearOption();
