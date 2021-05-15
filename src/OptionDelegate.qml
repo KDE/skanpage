@@ -102,7 +102,7 @@ RowLayout {
     
     Loader {
         id: comboLoader
-        active: modelItem.type === KSaneOption.TypeValueList && modelItem.visible
+        active: modelItem.type === KSaneOption.TypeValueList && modelItem.visible && modelItem.valueList.length > 1
         visible: active
 
         property var entries: modelItem.valueList
