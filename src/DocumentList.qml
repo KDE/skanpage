@@ -152,8 +152,8 @@ ScrollView {
                         Button {
                             icon.name: "go-up"
                             onClicked: {
-                                skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex -1, 1);
-                                listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
+                                skanPage.documentModel.moveImage(index, index -1, 1);
+                                listView.positionViewAtIndex(index, ListView.Center);
                             }
                             enabled: index > 0 
                         }
@@ -161,8 +161,8 @@ ScrollView {
                         Button {
                             icon.name: "go-down"
                             onClicked: {
-                                skanPage.documentModel.moveImage(listView.currentIndex, listView.currentIndex + 1, 1);
-                                listView.positionViewAtIndex(listView.currentIndex, ListView.Center);
+                                skanPage.documentModel.moveImage(index, index + 1, 1);
+                                listView.positionViewAtIndex(index, ListView.Center);
                             }
                             enabled: index < listView.count - 1
                         }  
