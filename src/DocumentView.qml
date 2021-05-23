@@ -12,6 +12,8 @@ import org.kde.kirigami 2.12 as Kirigami
 
 Item {
     id: doc
+    
+    property alias splitView: splitView
 
     focus: true
     clip: true
@@ -23,6 +25,7 @@ Item {
     }
 
     SplitView {
+        id: splitView
         anchors.fill: parent
         orientation: Qt.Horizontal
         

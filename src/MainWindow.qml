@@ -36,16 +36,18 @@ ApplicationWindow {
         property int y: 0
         property int width: 950
         property int height: 550
+        property var splitViewState
     }
     
     Connections {
         target: Qt.application
         
         function onAboutToQuit() {
-            persistentSettings.x = mainWindow.x;
-            persistentSettings.y = mainWindow.y;
-            persistentSettings.width = mainWindow.width;
-            persistentSettings.height = mainWindow.height;
+            persistentSettings.x = mainWindow.x
+            persistentSettings.y = mainWindow.y
+            persistentSettings.width = mainWindow.width
+            persistentSettings.height = mainWindow.height
+            persistentSettings.splitViewState = mainDocument.splitView.saveState()
         }
     }
 
@@ -205,6 +207,10 @@ ApplicationWindow {
             Layout.fillWidth: true
             Layout.fillHeight: true
             focus: true
+            
+            Component.onCompleted: {
+                mainDocument.splitView.restoreState(persistentSettings.splitViewState)
+            }
         }
         
         DevicesView {
