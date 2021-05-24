@@ -35,7 +35,6 @@ class DocumentModel : public QAbstractListModel
     Q_PROPERTY(QUrl activePageSource READ activePageSource NOTIFY activePageChanged)
     Q_PROPERTY(int activePageRotation READ activePageRotation NOTIFY activePageChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
-    Q_ENUMS(DocumentModelRoles)
 
 public:
     enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1 , RotationAngleRole};

@@ -26,7 +26,7 @@ DocumentModel::DocumentModel(QObject *parent)
 
 DocumentModel::~DocumentModel()
 {
-    for (auto page : qAsConst(m_pages)) {
+    for (auto &page : qAsConst(m_pages)) {
         delete page.temporaryFile;
     }
 }
@@ -156,7 +156,7 @@ void DocumentModel::saveImage(const QFileInfo &fileInfo)
                 pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
             }
             fileName =
-                QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath()).arg(fileInfo.baseName()).arg(i, 4, 10, QLatin1Char('0')).arg(fileInfo.suffix());
+                QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath(), fileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), fileInfo.suffix());
             pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
         }
     }
