@@ -139,16 +139,18 @@ void Skanpage::loadScannerOptions()
 
 void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList)
 {
-    m_availableDevices->updateDevicesList(deviceList);    
+    if (m_state != ReadyForScan) {
+        m_availableDevices->updateDevicesList(deviceList);    
 
-    m_state = DeviceSelection;
-    Q_EMIT applicationStateChanged();
-      
-    // if there is only one scanning device available, open it
-    if (m_availableDevices->rowCount() == 1) {
-        m_availableDevices->selectDevice(0);
-        qCDebug(SKANPAGE_LOG) << QStringLiteral("Automatically selecting only available device: ") << m_availableDevices->getSelectedDeviceName();
-        openDevice(m_availableDevices->getSelectedDeviceName());
+        m_state = DeviceSelection;
+        Q_EMIT applicationStateChanged();
+        
+        // if there is only one scanning device available, open it
+        if (m_availableDevices->rowCount() == 1) {
+            m_availableDevices->selectDevice(0);
+            qCDebug(SKANPAGE_LOG) << QStringLiteral("Automatically selecting only available device: ") << m_availableDevices->getSelectedDeviceName();
+            openDevice(m_availableDevices->getSelectedDeviceName());
+        }
     }
 }
 
