@@ -171,7 +171,7 @@ void DocumentModel::addImage(const QImage &image, const int dpi)
     if (image.save(tempImageFile, "PNG")) {
         qCDebug(SKANPAGE_LOG) << "Adding new image file" << tempImageFile << " with pageSize" << pageSize << "and resolution " << dpi << "dpi";
     } else {
-         Q_EMIT errorMessage(i18n("Failed to save image"));
+         Q_EMIT showUserMessage(Skanpage::ErrorMessage, i18n("Failed to save image"));
     }
     tempImageFile->close();
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());

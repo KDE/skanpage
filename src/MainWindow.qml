@@ -51,6 +51,22 @@ ApplicationWindow {
             persistentSettings.splitViewState = mainDocument.splitView.saveState()
         }
     }
+    
+    Connections {
+        target: skanpage
+        
+        function onNewUserMessage(level, message) {
+            errorMessage.text = message
+            if (level == Skanpage.ErrorMessage) {
+                errorMessage.type = Kirigami.MessageType.Error
+            } else {
+                errorMessage.type = Kirigami.MessageType.Information 
+            }
+            labelWidth.text = message
+            errorMessage.visible = true
+            hideNotificationTimer.start()  
+        }
+    }
 
     Action {
         id: newDocAction
@@ -136,6 +152,29 @@ ApplicationWindow {
         
         MenuItem {
             action: quitAction 
+        }
+    }
+
+    Kirigami.InlineMessage {
+        id: errorMessage
+        width: labelWidth.width + Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
+        height: Math.max(labelWidth.height, Kirigami.Units.iconSizes.medium) + Kirigami.Units.largeSpacing
+        z: 2
+        
+        anchors {
+            top: parent.top
+            topMargin: mainToolBar.height + Kirigami.Units.largeSpacing
+            horizontalCenter: parent.horizontalCenter
+        }
+        
+        Timer {
+            id: hideNotificationTimer
+            interval: 5000
+            onTriggered: errorMessage.visible = false
+        }
+ 
+        TextMetrics {
+            id: labelWidth
         }
     }
     

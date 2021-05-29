@@ -37,12 +37,12 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
 {
     connect(m_ksanew.get(), &KSaneWidget::scannedImageReady, this, &Skanpage::imageReady);
     connect(m_ksanew.get(), &KSaneWidget::availableDevices, this, &Skanpage::availableDevices);
-    connect(m_ksanew.get(), &KSaneWidget::userMessage, this, &Skanpage::alertUser);
+    connect(m_ksanew.get(), &KSaneWidget::userMessage, this, &Skanpage::showKSaneMessage);
     connect(m_ksanew.get(), &KSaneWidget::scanProgress, this, &Skanpage::progressUpdated);
     connect(m_ksanew.get(), &KSaneWidget::scanDone, this, &Skanpage::scanDone);
     connect(m_ksanew.get(), &KSaneWidget::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
-    connect(m_docHandler.get(), &DocumentModel::errorMessage, this, &Skanpage::signalErrorMessage);
-    
+    connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
+
     reloadDevicesList();
 
     // try to open device from command line option first, then remembered device
@@ -78,11 +78,6 @@ QString Skanpage::deviceName() const
 void Skanpage::startScan()
 {
     m_ksanew->scanFinal();
-}
-
-QString Skanpage::errorMessage() const
-{
-    return m_errorMessage;
 }
 
 Skanpage::ApplicationState Skanpage::applicationState() const
@@ -207,16 +202,26 @@ void Skanpage::reloadDevicesList()
     }
 }
 
-void Skanpage::alertUser(int status, const QString &strStatus)
+void Skanpage::showKSaneMessage(int status, const QString &strStatus)
 {
-    Q_UNUSED(status);
-    signalErrorMessage(strStatus);
+    switch (status) {
+        case KSaneWidget::ErrorGeneral:
+            showUserMessage(Skanpage::ErrorMessage, strStatus);
+            break;
+        case KSaneWidget::ErrorCannotSegment:
+            showUserMessage(Skanpage::ErrorMessage, strStatus);
+            break;
+        case KSaneWidget::Information:
+            showUserMessage(Skanpage::InformationMessage, strStatus);
+            break;
+        default:
+            break;
+    }
 }
 
-void Skanpage::signalErrorMessage(const QString &text)
+void Skanpage::showUserMessage(Skanpage::MessageLevel level, const QString &text)
 {
-    m_errorMessage = text;
-    Q_EMIT errorMessageChanged();
+    Q_EMIT newUserMessage(QVariant(level), QVariant(text));
 }
 
 void Skanpage::progressUpdated(int progress)

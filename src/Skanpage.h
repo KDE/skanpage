@@ -31,7 +31,6 @@ class Skanpage : public QObject
     Q_OBJECT
     
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
-    Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
     Q_PROPERTY(DocumentModel *documentModel READ documentModel CONSTANT)
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
     Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
@@ -56,6 +55,13 @@ public:
     };
     
     Q_ENUM(ApplicationState);
+ 
+    enum MessageLevel {
+        ErrorMessage,
+        InformationMessage,
+    };
+    
+    Q_ENUM(MessageLevel);
     
     explicit Skanpage(const QString &deviceName, QObject *parent = nullptr);
     ~Skanpage();
@@ -77,38 +83,32 @@ public:
     SingleOption *sourceOption() const;
     SingleOption *scanModeOption() const;
 
+    Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
     Q_INVOKABLE bool openDevice(const QString &deviceName);
-
+    Q_INVOKABLE void showAboutDialog();
+    
 Q_SIGNALS:
     void progressChanged();
     void optionsChanged();
-    void errorMessageChanged();
     void applicationStateChanged();
     void deviceInfoUpdated();
-
-public Q_SLOTS:
-    void showAboutDialog();
-    void loadScannerOptions();
-    void saveScannerOptions();
-
-    void startScan();
+    void newUserMessage(QVariant level, const QVariant &message);
 
 private Q_SLOTS:
     void imageReady(const QImage &image);
-
     void availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList);
-
-    void alertUser(int type, const QString &strStatus);
-
+    void showKSaneMessage(int type, const QString &strStatus);
+    void showUserMessage(MessageLevel level, const QString &strStatus);
     void progressUpdated(int progress);
     void scanDone(int status, const QString &strStatus);
 
 private:
     void finishOpeningDevice(const QString &deviceName);
-    void signalErrorMessage(const QString &text);
-
+    void loadScannerOptions();
+    void saveScannerOptions();
+    
     std::unique_ptr<KSaneWidget> m_ksanew;
     std::unique_ptr<DocumentModel> m_docHandler;
     std::unique_ptr<DevicesModel> m_availableDevices;
@@ -119,7 +119,6 @@ private:
     std::unique_ptr<SingleOption> m_scanModeOption;
 
     int m_progress = 100;
-    QString m_errorMessage;
     ApplicationState m_state = NoDeviceOpened;
 };
 

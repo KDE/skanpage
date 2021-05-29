@@ -40,54 +40,12 @@ Item {
             SplitView.fillHeight: true
             SplitView.preferredWidth: parent.width / 4
         }
-                
-        Item {
-            id: container
-    
+        
+        DocumentPage {
+            id: activeDocument
+            
             SplitView.fillWidth: true
             SplitView.fillHeight: true
-    
-            Kirigami.InlineMessage {
-                id: errorMessage
-                width: labelWidth.width + Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
-                height: Math.max(labelWidth.height, Kirigami.Units.iconSizes.medium) + Kirigami.Units.largeSpacing
-                type: Kirigami.MessageType.Error
-                z: 2
-                
-                text: skanpage.errorMessage
-                
-                anchors {
-                    top: container.top
-                    topMargin: Kirigami.Units.smallSpacing
-                    horizontalCenter: container.horizontalCenter
-                }
-                
-                Timer {
-                    id: hideNotificationTimer
-                    interval: 5000
-                    onTriggered: errorMessage.visible = false
-                }
-                    
-                Connections {
-                    target: skanpage
-                    function onErrorMessageChanged() {
-                        errorMessage.text = skanpage.errorMessage
-                        labelWidth.text = skanpage.errorMessage
-                        errorMessage.visible = true
-                        hideNotificationTimer.start()   
-                    }
-                }  
-                
-                TextMetrics {
-                    id: labelWidth
-                }
-            }
-            
-            DocumentPage {
-                id: activeDocument
-        
-                anchors.fill: parent
-            }
         }
     }
 }

@@ -19,6 +19,8 @@
 #include <QTemporaryFile>
 #include <QUrl>
 
+#include "Skanpage.h"
+
 struct PageProperties {
     QTemporaryFile *temporaryFile;
     QPageSize pageSize;
@@ -71,7 +73,7 @@ Q_SIGNALS:
     void changedChanged();
     void activePageChanged();
     void countChanged();
-    void errorMessage(const QString &text);
+    void showUserMessage(Skanpage::MessageLevel level, const QString &text);
 
 public Q_SLOTS:
 
