@@ -99,7 +99,7 @@ ApplicationWindow {
         icon.name: "document-scan"
         text: i18n("Scan")
         shortcut: "SPACE"
-        enabled: skanpage.progress === 100 && skanpage.openedDevice
+        enabled: skanpage.progress === 100 && skanpage.applicationState == Skanpage.ReadyForScan
         onTriggered: skanpage.startScan()
     }
 
@@ -108,7 +108,7 @@ ApplicationWindow {
         icon.name: "configure"
         text: skanpage.deviceVendor && skanpage.deviceModel ? i18nc("Device vendor and device model name", "Options for %1 %2", skanpage.deviceVendor, skanpage.deviceModel) : i18n("Scanner options")
         shortcut: "CTRL+SPACE"
-        enabled: skanpage.optionsModel.rowCount > 0
+        enabled: skanpage.progress === 100 && skanpage.applicationState == Skanpage.ReadyForScan
         onTriggered: optionsWindow.show();
     }
     
@@ -227,6 +227,7 @@ ApplicationWindow {
              
                 ToolButton { 
                     action: optionsAction
+                    visible: skanpage.optionsModel.rowCount > 0
                 }
 
                 Item {
