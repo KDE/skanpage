@@ -13,6 +13,7 @@ import QtQuick.Dialogs 1.3
 import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.5 as Kirigami
+import org.kde.skanpage 1.0
 
 ApplicationWindow {
     id: mainWindow
@@ -203,7 +204,8 @@ ApplicationWindow {
         DocumentView {
             id: mainDocument
             
-            visible: skanpage.openedDevice
+            visible: skanpage.applicationState == Skanpage.ReadyForScan
+
             Layout.fillWidth: true
             Layout.fillHeight: true
             focus: true
@@ -216,7 +218,7 @@ ApplicationWindow {
         DevicesView {
             id: devicesView
             
-            visible: !skanpage.openedDevice
+            visible: skanpage.applicationState != Skanpage.ReadyForScan
             
             Layout.fillWidth: true
             Layout.fillHeight: true

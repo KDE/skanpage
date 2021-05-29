@@ -85,14 +85,9 @@ QString Skanpage::errorMessage() const
     return m_errorMessage;
 }
 
-bool Skanpage::openedDevice() const
+Skanpage::ApplicationState Skanpage::applicationState() const
 {
-    return m_openedDevice;
-}
-
-bool Skanpage::searchingForDevices() const
-{
-    return m_searchingForDevices;
+    return m_state;
 }
 
 void Skanpage::imageReady(const QImage &image)
@@ -146,8 +141,8 @@ void Skanpage::availableDevices(const QList<KSaneWidget::DeviceInfo> &deviceList
 {
     m_availableDevices->updateDevicesList(deviceList);    
 
-    m_searchingForDevices = false;
-    Q_EMIT searchingForDevicesChanged();
+    m_state = DeviceSelection;
+    Q_EMIT applicationStateChanged();
       
     // if there is only one scanning device available, open it
     if (m_availableDevices->rowCount() == 1) {
@@ -189,9 +184,8 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
     // load saved options
     loadScannerOptions();
 
-    m_openedDevice = true;
-
-    Q_EMIT openedDeviceChanged();
+    m_state = ReadyForScan;
+    Q_EMIT applicationStateChanged();
 }
 
 void Skanpage::reloadDevicesList()
@@ -205,10 +199,8 @@ void Skanpage::reloadDevicesList()
         m_sourceOption->clearOption();
         m_scanModeOption->clearOption();
         Q_EMIT optionsChanged();
-        m_openedDevice = false;
-        Q_EMIT openedDeviceChanged();
-        m_searchingForDevices = true;
-        Q_EMIT searchingForDevicesChanged();
+        m_state = SearchingForDevices;
+        Q_EMIT applicationStateChanged();
         m_ksanew->initGetDeviceList();
     }
 }

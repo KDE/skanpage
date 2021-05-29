@@ -8,6 +8,7 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.15 
 import QtQuick.Layouts 1.1
+
 import org.kde.kirigami 2.12 as Kirigami
 
 ScrollView {

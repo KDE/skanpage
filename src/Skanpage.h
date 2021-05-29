@@ -35,8 +35,7 @@ class Skanpage : public QObject
     Q_PROPERTY(DocumentModel *documentModel READ documentModel CONSTANT)
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
     Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
-    Q_PROPERTY(bool openedDevice READ openedDevice NOTIFY openedDeviceChanged)
-    Q_PROPERTY(bool searchingForDevices READ searchingForDevices NOTIFY searchingForDevicesChanged)
+    Q_PROPERTY(ApplicationState applicationState READ applicationState NOTIFY applicationStateChanged)
 
     Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
     Q_PROPERTY(QString deviceModel READ deviceModel NOTIFY deviceInfoUpdated)
@@ -45,9 +44,19 @@ class Skanpage : public QObject
     Q_PROPERTY(SingleOption *resolutionOption READ resolutionOption NOTIFY optionsChanged)
     Q_PROPERTY(SingleOption *pageSizeOption READ pageSizeOption NOTIFY optionsChanged)
     Q_PROPERTY(SingleOption *sourceOption READ sourceOption NOTIFY optionsChanged)
-    Q_PROPERTY(SingleOption *scanModeOption READ scanModeOption NOTIFY optionsChanged)    
-
+    Q_PROPERTY(SingleOption *scanModeOption READ scanModeOption NOTIFY optionsChanged)   
+    
 public:
+
+    enum ApplicationState {
+        ReadyForScan,
+        DeviceSelection,
+        SearchingForDevices,
+        NoDeviceOpened
+    };
+    
+    Q_ENUM(ApplicationState);
+    
     explicit Skanpage(const QString &deviceName, QObject *parent = nullptr);
     ~Skanpage();
     
@@ -58,8 +67,7 @@ public:
     QString errorMessage() const;
 
     int progress() const;
-    bool openedDevice() const;
-    bool searchingForDevices() const;
+    ApplicationState applicationState() const;
 
     DocumentModel *documentModel() const;
     DevicesModel *devicesModel() const;
@@ -77,8 +85,7 @@ Q_SIGNALS:
     void progressChanged();
     void optionsChanged();
     void errorMessageChanged();
-    void openedDeviceChanged();
-    void searchingForDevicesChanged();
+    void applicationStateChanged();
     void deviceInfoUpdated();
 
 public Q_SLOTS:
@@ -113,8 +120,7 @@ private:
 
     int m_progress = 100;
     QString m_errorMessage;
-    bool m_openedDevice = false;
-    bool m_searchingForDevices = false;
+    ApplicationState m_state = NoDeviceOpened;
 };
 
 #endif

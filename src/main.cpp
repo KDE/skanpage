@@ -28,12 +28,13 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
-    qmlRegisterType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel");
-    qmlRegisterType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel");
-    qmlRegisterType<OptionsModel>("org.kde.skanpage", 1, 0, "OptionsModel");
-    qmlRegisterType<SingleOption>("org.kde.skanpage", 1, 0, "SingleOption");
-    qmlRegisterType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption");
-
+    qmlRegisterUncreatableType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel", QStringLiteral("Document model class uncreateable"));
+    qmlRegisterUncreatableType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel", QStringLiteral("Device model class uncreateable"));
+    qmlRegisterUncreatableType<OptionsModel>("org.kde.skanpage", 1, 0, "OptionsModel", QStringLiteral("Options model class uncreateable"));
+    qmlRegisterUncreatableType<SingleOption>("org.kde.skanpage", 1, 0, "SingleOption", QStringLiteral("Single option class uncreateable"));
+    qmlRegisterUncreatableType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
+    qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
+    
     KLocalizedString::setApplicationDomain("skanpage");
 
     KAboutData aboutData(QLatin1String("Skanpage"), // componentName, k4: appName
