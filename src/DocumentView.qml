@@ -18,7 +18,7 @@ Item {
     focus: true
     clip: true
     
-    readonly property string name: skanPage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* %1", skanPage.documentModel.name) : skanPage.documentModel.name;
+    readonly property string name: skanpage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* %1", skanpage.documentModel.name) : skanpage.documentModel.name;
 
     SystemPalette {
         id: palette
@@ -53,7 +53,7 @@ Item {
                 type: Kirigami.MessageType.Error
                 z: 2
                 
-                text: skanPage.errorMessage
+                text: skanpage.errorMessage
                 
                 anchors {
                     top: container.top
@@ -68,10 +68,10 @@ Item {
                 }
                     
                 Connections {
-                    target: skanPage
+                    target: skanpage
                     function onErrorMessageChanged() {
-                        errorMessage.text = skanPage.errorMessage
-                        labelWidth.text = skanPage.errorMessage
+                        errorMessage.text = skanpage.errorMessage
+                        labelWidth.text = skanpage.errorMessage
                         errorMessage.visible = true
                         hideNotificationTimer.start()   
                     }

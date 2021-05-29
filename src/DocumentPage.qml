@@ -52,28 +52,28 @@ Item {
         icon.name: "window-close"
         text: i18n("Cancel")
         shortcut: "Esc"
-        onTriggered: skanPage.cancelScan()
+        onTriggered: skanpage.cancelScan()
     }
     
     Action {
         id: rotateLeftAction
         icon.name: "object-rotate-left"
         text: i18n("Rotate Left")
-        onTriggered: skanPage.documentModel.rotateImage(skanPage.documentModel.activeIndex, true)
+        onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, true)
     }
 
     Action {
         id: rotateRightAction
         icon.name: "object-rotate-right"
         text: i18n("Rotate Right")
-        onTriggered:  skanPage.documentModel.rotateImage(skanPage.documentModel.activeIndex, false)
+        onTriggered:  skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, false)
     }
 
     Action {
         id: deleteAction
         icon.name: "delete"
         text: i18n("Delete Page")
-        onTriggered: skanPage.documentModel.removeImage(skanPage.documentModel.activeIndex)
+        onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activeIndex)
     }
     
     Kirigami.PlaceholderMessage {
@@ -82,7 +82,7 @@ Item {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         
-        visible: skanPage.documentModel.count === 0
+        visible: skanpage.documentModel.count === 0
         
         icon.name: "document"
         
@@ -94,7 +94,7 @@ Item {
         
         anchors.fill: parent
         
-        visible: skanPage.documentModel.count > 0
+        visible: skanpage.documentModel.count > 0
         
         ScrollView {
             id: imageViewer
@@ -124,9 +124,9 @@ Item {
                     width: sourceSize.width * zoomScale
                     height: sourceSize.height * zoomScale
                     
-                    source: skanPage.documentModel.activePageSource
+                    source: skanpage.documentModel.activePageSource
                     
-                    rotation: skanPage.documentModel.activePageRotation
+                    rotation: skanpage.documentModel.activePageRotation
                     transformOrigin: Item.Center
                 }     
             }
@@ -134,7 +134,7 @@ Item {
         
         RowLayout {
             Layout.fillWidth: true
-            visible: skanPage.progress === 100 && skanPage.documentModel.count !== 0
+            visible: skanpage.progress === 100 && skanpage.documentModel.count !== 0
             
             ToolButton {
                 action: zoomInAction 
@@ -172,11 +172,11 @@ Item {
         
         RowLayout {
             Layout.fillWidth: true
-            visible: skanPage.progress < 100
+            visible: skanpage.progress < 100
             
             ProgressBar {
                 Layout.fillWidth: true
-                value: skanPage.progress / 100
+                value: skanpage.progress / 100
             }
             
             ToolButton { 

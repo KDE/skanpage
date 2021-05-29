@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.rootContext()->setContextProperty(QStringLiteral("skanPage"), &skanpageApp);
+    engine.rootContext()->setContextProperty(QStringLiteral("skanpage"), &skanpageApp);
     engine.load(QUrl(QStringLiteral("qrc:/MainWindow.qml")));
 
     return app.exec();

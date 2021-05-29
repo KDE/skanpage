@@ -34,7 +34,7 @@ Window {
             id: form
 
             Repeater {
-                model: skanPage.optionsModel
+                model: skanpage.optionsModel
 
                 delegate: RowLayout {
                     id: delegate

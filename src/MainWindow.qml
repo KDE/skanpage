@@ -56,8 +56,8 @@ ApplicationWindow {
         icon.name: "document-replace"
         text: i18n("Clear")
         shortcut: StandardKey.New
-        enabled: skanPage.documentModel.count !== 0
-        onTriggered: skanPage.documentModel.clearData()
+        enabled: skanpage.documentModel.count !== 0
+        onTriggered: skanpage.documentModel.clearData()
     }
 
     Action {
@@ -65,7 +65,7 @@ ApplicationWindow {
         icon.name: "document-save"
         text: i18n("Save")
         shortcut: StandardKey.Save
-        enabled: skanPage.documentModel.count !== 0
+        enabled: skanpage.documentModel.count !== 0
         onTriggered: saveFileDialog.open()
     }
 
@@ -82,16 +82,16 @@ ApplicationWindow {
         icon.name: "document-scan"
         text: i18n("Scan")
         shortcut: "SPACE"
-        enabled: skanPage.progress === 100 && skanPage.openedDevice
-        onTriggered: skanPage.startScan()
+        enabled: skanpage.progress === 100 && skanpage.openedDevice
+        onTriggered: skanpage.startScan()
     }
 
     Action {
         id: optionsAction
         icon.name: "configure"
-        text: skanPage.deviceVendor && skanPage.deviceModel ? i18nc("Device vendor and device model name", "Options for %1 %2", skanPage.deviceVendor, skanPage.deviceModel) : i18n("Scanner options")
+        text: skanpage.deviceVendor && skanpage.deviceModel ? i18nc("Device vendor and device model name", "Options for %1 %2", skanpage.deviceVendor, skanpage.deviceModel) : i18n("Scanner options")
         shortcut: "CTRL+SPACE"
-        enabled: skanPage.optionsModel.rowCount > 0
+        enabled: skanpage.optionsModel.rowCount > 0
         onTriggered: optionsWindow.show();
     }
     
@@ -111,15 +111,15 @@ ApplicationWindow {
         id: showAboutAction
         icon.name: "scanner"
         text: i18n("About Skanpage")
-        onTriggered: skanPage.showAboutDialog();
+        onTriggered: skanpage.showAboutDialog();
     }
     
     Action {
         id: reselectDevicesAction
         icon.name: "view-refresh"
         text: i18n("Reselect scanning device")
-        onTriggered: skanPage.reloadDevicesList();
-        enabled: skanPage.progress === 100
+        onTriggered: skanpage.reloadDevicesList();
+        enabled: skanpage.progress === 100
     }
     
     Menu {
@@ -166,23 +166,23 @@ ApplicationWindow {
                 }
                 
                 OptionDelegate {
-                    modelItem: skanPage.resolutionOption
-                    onValueChanged: skanPage.resolutionOption.value = value
+                    modelItem: skanpage.resolutionOption
+                    onValueChanged: skanpage.resolutionOption.value = value
                 }
                 
                 OptionDelegate {
-                    modelItem: skanPage.pageSizeOption
-                    onValueChanged: skanPage.pageSizeOption.value = value
+                    modelItem: skanpage.pageSizeOption
+                    onValueChanged: skanpage.pageSizeOption.value = value
                 }  
                 
                 OptionDelegate {
-                    modelItem: skanPage.sourceOption
-                    onValueChanged: skanPage.sourceOption.value = value
+                    modelItem: skanpage.sourceOption
+                    onValueChanged: skanpage.sourceOption.value = value
                 }
                 
                 OptionDelegate {
-                    modelItem: skanPage.scanModeOption
-                    onValueChanged: skanPage.scanModeOption.value = value
+                    modelItem: skanpage.scanModeOption
+                    onValueChanged: skanpage.scanModeOption.value = value
                 }
              
                 ToolButton { 
@@ -203,7 +203,7 @@ ApplicationWindow {
         DocumentView {
             id: mainDocument
             
-            visible: skanPage.openedDevice
+            visible: skanpage.openedDevice
             Layout.fillWidth: true
             Layout.fillHeight: true
             focus: true
@@ -216,7 +216,7 @@ ApplicationWindow {
         DevicesView {
             id: devicesView
             
-            visible: !skanPage.openedDevice
+            visible: !skanpage.openedDevice
             
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -235,7 +235,7 @@ ApplicationWindow {
         selectMultiple: false
         nameFilters: [ i18n("PDF files (*.pdf)"), i18n("JPEG files (*.jpg)"), i18n("PNG files (*.png)"), i18n("All files (*)") ]
         onAccepted: {
-            skanPage.documentModel.save(fileUrl)
+            skanpage.documentModel.save(fileUrl)
         }
     }
 }

@@ -23,9 +23,9 @@ ScrollView {
         spacing: Kirigami.Units.smallSpacing
         
         Connections {
-            target: skanPage.documentModel
+            target: skanpage.documentModel
             function onActivePageChanged() {
-                listView.positionViewAtIndex(skanPage.documentModel.activePageIndex, ListView.Contain)
+                listView.positionViewAtIndex(skanpage.documentModel.activePageIndex, ListView.Contain)
             }
         }
         
@@ -36,9 +36,9 @@ ScrollView {
             }
         }
 
-        model: skanPage.documentModel
+        model: skanpage.documentModel
         
-        onCurrentItemChanged: skanPage.documentModel.activePageIndex = currentIndex
+        onCurrentItemChanged: skanpage.documentModel.activePageIndex = currentIndex
 
         delegate: Rectangle {
             id: delegateRoot
@@ -70,7 +70,7 @@ ScrollView {
 
                 DropArea {
                     anchors.fill: parent
-                    onEntered: skanPage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
+                    onEntered: skanpage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1);
                 }
                 
                 ColumnLayout {
@@ -152,7 +152,7 @@ ScrollView {
                         Button {
                             icon.name: "go-up"
                             onClicked: {
-                                skanPage.documentModel.moveImage(index, index -1, 1);
+                                skanpage.documentModel.moveImage(index, index -1, 1);
                                 listView.positionViewAtIndex(index, ListView.Center);
                             }
                             enabled: index > 0 
@@ -161,7 +161,7 @@ ScrollView {
                         Button {
                             icon.name: "go-down"
                             onClicked: {
-                                skanPage.documentModel.moveImage(index, index + 1, 1);
+                                skanpage.documentModel.moveImage(index, index + 1, 1);
                                 listView.positionViewAtIndex(index, ListView.Center);
                             }
                             enabled: index < listView.count - 1
@@ -169,17 +169,17 @@ ScrollView {
                         
                         Button {
                             icon.name: "object-rotate-left"
-                            onClicked: skanPage.documentModel.rotateImage(index, true)
+                            onClicked: skanpage.documentModel.rotateImage(index, true)
                         }
 
                         Button {
                             icon.name: "object-rotate-right"
-                            onClicked: skanPage.documentModel.rotateImage(index, false)
+                            onClicked: skanpage.documentModel.rotateImage(index, false)
                         }
                         
                         Button {      
                             icon.name: "delete"
-                            onClicked: skanPage.documentModel.removeImage(index)
+                            onClicked: skanpage.documentModel.removeImage(index)
                         }
                     }
 

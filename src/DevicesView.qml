@@ -16,14 +16,14 @@ Item {
     Item {
         id: scanningMessage
 
-        visible: skanPage.searchingForDevices
+        visible: skanpage.searchingForDevices
         anchors.fill: parent
         
         ColumnLayout {
             anchors.centerIn: parent   
             
             BusyIndicator {
-                running: skanPage.searchingForDevices
+                running: skanpage.searchingForDevices
                 
                 Layout.preferredWidth: Kirigami.Units.iconSizes.huge
                 Layout.preferredHeight: Kirigami.Units.iconSizes.huge
@@ -40,7 +40,7 @@ Item {
 
     ColumnLayout {
         anchors.fill: parent
-        visible: !skanPage.searchingForDevices 
+        visible: !skanpage.searchingForDevices 
         
         Item {
             Layout.fillWidth: true
@@ -61,9 +61,9 @@ Item {
                 ListView {
                     id: listView
                     anchors.fill: parent
-                    model: skanPage.devicesModel
+                    model: skanpage.devicesModel
                     
-                    visible: skanPage.devicesModel.rowCount !== 0
+                    visible: skanpage.devicesModel.rowCount !== 0
                     
                     spacing: Kirigami.Units.smallSpacing
                     
@@ -80,14 +80,14 @@ Item {
                         
                         onClicked: {
                             selectButton.checked = true
-                            skanPage.devicesModel.selectDevice(index)
+                            skanpage.devicesModel.selectDevice(index)
                         }
                     }
                 }
             }
             
             Kirigami.PlaceholderMessage {
-                visible: skanPage.devicesModel.rowCount === 0
+                visible: skanpage.devicesModel.rowCount === 0
                 Layout.fillWidth: true
                     
                 icon.name: "error"
@@ -105,12 +105,12 @@ Item {
             Button {
                 id: selectDeviceButton
                 
-                visible: skanPage.devicesModel.rowCount !== 0
+                visible: skanpage.devicesModel.rowCount !== 0
                 
                 icon.name: "select"
                 text: i18n("Open selected device")
                 
-                onClicked: skanPage.openDevice(skanPage.devicesModel.getSelectedDeviceName())
+                onClicked: skanpage.openDevice(skanpage.devicesModel.getSelectedDeviceName())
             }
         
             Button {
@@ -119,7 +119,7 @@ Item {
                 icon.name: "view-refresh"
                 text: i18n("Reload devices list")
                 
-                onClicked: skanPage.reloadDevicesList()
+                onClicked: skanpage.reloadDevicesList()
             }
         }
         
