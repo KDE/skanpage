@@ -11,22 +11,25 @@
 #include <memory>
 
 #include <QAbstractListModel>
-#include <QFileInfo>
 #include <QList>
-#include <QObject>
+#include <QString>
 #include <QPageSize>
-#include <QStringList>
+
 #include <QTemporaryFile>
 #include <QUrl>
 
 #include "Skanpage.h"
 
+class DocumentSaver;
+
 struct PageProperties {
-    QTemporaryFile *temporaryFile;
+    std::shared_ptr<QTemporaryFile> temporaryFile;
     QPageSize pageSize;
     int dpi;
     int rotationAngle = 0;
 };
+
+Q_DECLARE_METATYPE(PageProperties)
 
 class DocumentModel : public QAbstractListModel
 {
@@ -75,16 +78,15 @@ Q_SIGNALS:
     void countChanged();
     void showUserMessage(Skanpage::MessageLevel level, const QString &text);
 
-public Q_SLOTS:
-
+private Q_SLOTS:
+    void updateFileInformation(const QString &fileName, const QList<PageProperties> &document);
+    
 private:
-    void savePDF(const QString &name);
-    void saveImage(const QFileInfo &fileInfo);
-
     QList<PageProperties> m_pages;
     QString m_name;
     bool m_changed = false;
     int m_activePageIndex = -1;
+    std::unique_ptr<DocumentSaver> m_documentSaver;
 };
 
 #endif

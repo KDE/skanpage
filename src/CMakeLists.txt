@@ -5,6 +5,7 @@ set(skanpage_SRCS
     main.cpp 
     Skanpage.cpp
     DocumentModel.cpp
+    DocumentSaver.cpp
     DevicesModel.cpp
     OptionsModel.cpp
     SingleOption.cpp
@@ -28,6 +29,7 @@ target_link_libraries(skanpage
     Qt5::PrintSupport
     Qt5::Qml
     Qt5::QuickControls2
+    Qt5::Concurrent
   PRIVATE
     KF5::CoreAddons
     KF5::Sane

@@ -7,28 +7,32 @@
 
 #include "DocumentModel.h"
 
-#include <QDebug>
-#include <QFileInfo>
-#include <QPainter>
-#include <QPdfWriter>
 #include <QUrl>
-#include <QTransform>
 #include <QTemporaryFile>
 
-#include "skanpage_debug.h"
 #include <KLocalizedString>
+
+#include "skanpage_debug.h"
+#include "DocumentSaver.h"
+
+bool operator==(const PageProperties& lhs, const PageProperties& rhs)
+{
+    return lhs.dpi == rhs.dpi && lhs.pageSize == rhs.pageSize &&
+    lhs.rotationAngle == rhs.rotationAngle && lhs.temporaryFile == rhs.temporaryFile;
+}
+
 
 DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_name(i18n("New document"))
+    , m_documentSaver(std::make_unique<DocumentSaver>())
 {
+    connect(m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
+    connect(m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
 }
 
 DocumentModel::~DocumentModel()
 {
-    for (auto &page : qAsConst(m_pages)) {
-        delete page.temporaryFile;
-    }
 }
 
 const QString DocumentModel::name() const
@@ -72,94 +76,7 @@ void DocumentModel::setActivePageIndex(int newIndex)
 
 void DocumentModel::save(const QUrl &fileUrl)
 {
-    if (fileUrl.isEmpty() || m_pages.isEmpty()) {
-        return;
-    }
-    qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
-
-    const auto localFile = fileUrl.toLocalFile();
-    const auto fileInfo = QFileInfo(localFile);
-    const auto fileSuffix = fileInfo.suffix();
-
-    qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
-
-    if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
-        savePDF(localFile);
-    } else {
-        saveImage(fileInfo);
-    }
-
-    if (m_changed) {
-        m_changed = false;
-        Q_EMIT changedChanged();
-    }
-
-    if (m_name != fileInfo.fileName()) {
-        m_name = fileInfo.fileName();
-        Q_EMIT nameChanged();
-    }
-}
-
-void DocumentModel::savePDF(const QString &name)
-{
-    QPdfWriter writer(name);
-    QPainter painter;
-    int rotationAngle;
-    
-    for (int i = 0; i < m_pages.count(); ++i) {
-        writer.setResolution(m_pages.at(i).dpi);
-        writer.setPageSize(m_pages.at(i).pageSize);
-        writer.setPageMargins(QMarginsF(0, 0, 0, 0));
-        rotationAngle = m_pages.at(i).rotationAngle;
-
-        if (rotationAngle == 90 ||  rotationAngle == 270) {
-            writer.setPageOrientation(QPageLayout::Landscape);
-        } else {
-            writer.setPageOrientation(QPageLayout::Portrait);   
-        }
-        writer.newPage();
-        
-        if (i == 0) {
-            painter.begin(&writer);
-        }
-        
-        QImage pageImage(m_pages.at(i).temporaryFile->fileName());
-        if (rotationAngle != 0) {
-            pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
-        }
-        
-        QSize targetSize(writer.width(), writer.height());
-        pageImage = pageImage.scaled(targetSize, Qt::KeepAspectRatio, Qt::FastTransformation);
-        painter.drawImage(pageImage.rect(), pageImage, pageImage.rect());
-    }
-}
-
-void DocumentModel::saveImage(const QFileInfo &fileInfo)
-{
-    const int count = m_pages.count();
-    QImage pageImage;
-    QString fileName;
-
-    if (count == 1) {
-        pageImage.load(m_pages.at(0).temporaryFile->fileName());
-        fileName = fileInfo.absoluteFilePath();
-        const int rotationAngle = m_pages.at(0).rotationAngle;
-        if (rotationAngle != 0) {
-            pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
-        }
-        pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
-    } else {
-        for (int i = 0; i < count; ++i) {
-            pageImage.load(m_pages.at(i).temporaryFile->fileName());
-            const int rotationAngle = m_pages.at(i).rotationAngle;
-            if (rotationAngle != 0) {
-                pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
-            }
-            fileName =
-                QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath(), fileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), fileInfo.suffix());
-            pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
-        }
-    }
+    m_documentSaver->saveDocument(fileUrl, m_pages);
 }
 
 void DocumentModel::addImage(const QImage &image, const int dpi)
@@ -175,7 +92,7 @@ void DocumentModel::addImage(const QImage &image, const int dpi)
     }
     tempImageFile->close();
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
-    m_pages.append({tempImageFile, pageSize, dpi});
+    m_pages.append({std::shared_ptr<QTemporaryFile>(tempImageFile), pageSize, dpi});
     endInsertRows();
    
     Q_EMIT countChanged();
@@ -255,7 +172,6 @@ void DocumentModel::removeImage(int row)
     }
     
     beginRemoveRows(QModelIndex(), row, row);
-    delete m_pages.at(row).temporaryFile;
     m_pages.removeAt(row);
     endRemoveRows();
         
@@ -321,3 +237,17 @@ void DocumentModel::clearData()
         Q_EMIT changedChanged();
     }
 }
+
+void DocumentModel::updateFileInformation(const QString &fileName, const QList<PageProperties> &document)
+{
+    if (document == m_pages && m_changed) {
+        m_changed = false;
+        Q_EMIT changedChanged();
+    }
+
+    if (m_name != fileName) {
+        m_name = fileName;
+        Q_EMIT nameChanged();
+    }
+}
+
