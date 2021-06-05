@@ -10,6 +10,7 @@ set(skanpage_SRCS
     DevicesModel.cpp
     OptionsModel.cpp
     SingleOption.cpp
+    InProgressPainter.cpp
     )
 
 qt_add_resources(skanpage_SRCS qml.qrc)

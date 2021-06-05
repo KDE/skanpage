@@ -4,6 +4,7 @@
         <file>DocumentView.qml</file>
         <file>DocumentList.qml</file>
         <file>DocumentPage.qml</file>
+        <file>InProgressPage.qml</file>
         <file>DevicesView.qml</file>
         <file>OptionsWindow.qml</file>
         <file>OptionDelegate.qml</file>

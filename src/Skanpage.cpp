@@ -226,6 +226,11 @@ int Skanpage::progress() const
     return m_progress;
 }
 
+KSaneCore *Skanpage::ksaneInterface() const
+{
+    return m_ksaneInterface.get();
+}
+
 DocumentModel *Skanpage::documentModel() const
 {
     return m_docHandler.get();

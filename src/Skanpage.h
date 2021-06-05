@@ -15,11 +15,13 @@
 
 #include <memory>
 
+class QQuickImageProvider;
 class KAboutData;
 class DocumentModel;
 class DevicesModel;
 class OptionsModel;
 class SingleOption;
+class InProgressPainter;
 
 using namespace KSaneIface;
 
@@ -68,8 +70,6 @@ public:
     QString deviceModel() const;
     QString deviceName() const;
 
-    QString errorMessage() const;
-
     int progress() const;
     ApplicationState applicationState() const;
     bool scanInProgress() const;
@@ -77,6 +77,7 @@ public:
     DocumentModel *documentModel() const;
     DevicesModel *devicesModel() const;
     OptionsModel *optionsModel() const;
+    KSaneCore *ksaneInterface() const;
     SingleOption *resolutionOption() const;
     SingleOption *pageSizeOption() const;
     SingleOption *sourceOption() const;

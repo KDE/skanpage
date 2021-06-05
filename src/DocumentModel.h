@@ -79,6 +79,7 @@ Q_SIGNALS:
     void changedChanged();
     void activePageChanged();
     void countChanged();
+    void newImageAdded();
     void showUserMessage(Skanpage::MessageLevel level, const QString &text);
 
 private Q_SLOTS:

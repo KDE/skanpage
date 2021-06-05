@@ -111,6 +111,7 @@ void DocumentModel::addImage(const QImage &image, const int dpi)
     
     m_activePageIndex = m_pages.count() - 1;
     Q_EMIT activePageChanged();
+    Q_EMIT newImageAdded();
 }
 
 void DocumentModel::moveImage(int from, int to)

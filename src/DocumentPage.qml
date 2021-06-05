@@ -35,9 +35,17 @@ Item {
     Action {
         id: zoomFitAction
         icon.name: "zoom-fit-best"
-        text: i18n("Zoom Fit Width")
+        text: i18n("Zoom Fit")
         shortcut: "A"
-        onTriggered: bigImage.zoomScale = imageViewer.availableWidth / bigImage.sourceSize.width
+        onTriggered: {
+            var zoomScaleWidth = imageViewer.availableWidth / bigImage.sourceSize.width
+            var zoomScaleHeight = imageViewer.availableHeight / bigImage.sourceSize.height
+            if (zoomScaleWidth < zoomScaleHeight) {
+                bigImage.zoomScale = zoomScaleWidth
+            } else {
+                bigImage.zoomScale = zoomScaleHeight
+            }
+        }
     }
 
     Action {
@@ -46,14 +54,6 @@ Item {
         text: i18n("Zoom 100%")
         shortcut: "F"
         onTriggered: bigImage.zoomScale = 1
-    }
-
-    Action {
-        id: cancelAction
-        icon.name: "window-close"
-        text: i18n("Cancel")
-        shortcut: "Esc"
-        onTriggered: skanpage.cancelScan()
     }
     
     Action {
@@ -67,7 +67,7 @@ Item {
         id: rotateRightAction
         icon.name: "object-rotate-right"
         text: i18n("Rotate Right")
-        onTriggered:  skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, false)
+        onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, false)
     }
 
     Action {
@@ -75,6 +75,13 @@ Item {
         icon.name: "delete"
         text: i18n("Delete Page")
         onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activeIndex)
+    }
+    
+    Connections {
+        target: skanpage.documentModel
+        function onNewImageAdded() {
+            zoomFitAction.trigger()
+        }
     }
     
     Kirigami.PlaceholderMessage {
@@ -138,7 +145,6 @@ Item {
         RowLayout {
             Layout.fillWidth: true
             Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-            visible: !skanpage.scanInProgress && skanpage.documentModel.count !== 0
             
             ToolButton {
                 action: zoomInAction 
@@ -171,21 +177,6 @@ Item {
             
             ToolButton { 
                 action: deleteAction
-            }
-        }
-        
-        RowLayout {
-     
-            Layout.fillWidth: true
-            visible: skanpage.scanInProgress
-            
-            ProgressBar {
-                Layout.fillWidth: true
-                value: skanpage.progress / 100
-            }
-            
-            ToolButton { 
-                action: cancelAction
             }
         }
     }
