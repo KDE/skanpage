@@ -126,7 +126,7 @@ ApplicationWindow {
     
     Action {
         id: showAboutAction
-        icon.name: "scanner"
+        icon.name: "skanpage"
         text: i18n("About Skanpage")
         onTriggered: skanpage.showAboutDialog();
     }

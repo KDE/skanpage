@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(QStringLiteral("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
     aboutData.addAuthor(QStringLiteral("Alexander Stippich"), i18n("developer"), QLatin1String("a.stippich@gmx.net"));
     
-    app.setWindowIcon(QIcon::fromTheme(QLatin1String("scanner")));
+    app.setWindowIcon(QIcon::fromTheme(QLatin1String("skanpage")));
 
     KAboutData::setApplicationData(aboutData);
 

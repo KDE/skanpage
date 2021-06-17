@@ -1,11 +1,11 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 
 project(skanpage
         VERSION "0.0.1"
         LANGUAGES CXX)
 
 set(REQUIRED_QT_VERSION "5.15.2")
-set(REQUIRED_KF5_VERSION "5.80")
+set(REQUIRED_KF5_VERSION "5.83")
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
