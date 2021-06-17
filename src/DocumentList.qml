@@ -52,8 +52,10 @@ ScrollView {
             width: listView.width - scrollView.ScrollBar.vertical.width 
             height: (landscape ? contentWidth / iconImage.aspectRatio : contentWidth * iconImage.aspectRatio) + bottomRow.height + Kirigami.Units.smallSpacing * 2 + border.width * 2
             
+            color: Kirigami.Theme.backgroundColor
+
             border.width: 3
-            border.color: palette.mid
+            border.color: (index === skanpage.documentModel.activePageIndex) ? Kirigami.Theme.focusColor : palette.mid
             radius: 3
 
             focus: index === listView.currentIndex

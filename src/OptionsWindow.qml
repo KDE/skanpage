@@ -16,6 +16,7 @@ Window {
     id: optionsWindow
 
     title: i18n("Scanner Options")
+    color: Kirigami.Theme.backgroundColor
     
     flags: Qt.Dialog | Qt.CustomizeWindowHint | Qt.WindowTitleHint
            | Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint
@@ -26,7 +27,7 @@ Window {
     ScrollView {
         id: optionsView
 
-        anchors.fill: parent
+        anchors.horizontalCenter: parent.horizontalCenter
         leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
         rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
@@ -38,10 +39,10 @@ Window {
 
                 delegate: RowLayout {
                     id: delegate
-                    Kirigami.FormData.label: (model.type == KSaneOption.TypeBool || model.type == KSaneOption.TypeAction) ? "" : "<b>" + model.title + ":</b>"
-                    
+                    Kirigami.FormData.label: (model.type == KSaneOption.TypeBool || model.type == KSaneOption.TypeAction) ? "" : model.title + ":"
+
                     visible: model.visible && model.type != KSaneOption.TypeGamma && model.type != KSaneOption.TypeDetectFail
-                        
+
                     OptionDelegate {
                         modelItem: model
                         onValueChanged: model.value = value

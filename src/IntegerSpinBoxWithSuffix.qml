@@ -61,9 +61,10 @@ Item {
                 id: textInput
                 
                 width: Math.max(minTextSize.width, maxTextSize.width)
-                
+                color: Kirigami.Theme.textColor
+
                 selectByMouse: true
-                
+
                 text: control.textFromValue(control.value, control.locale)
                 horizontalAlignment: Qt.AlignRight
                 verticalAlignment: Qt.AlignVCenter
@@ -71,7 +72,7 @@ Item {
                 readOnly: !control.editable
                 validator: control.validator
                 inputMethodHints: Qt.ImhFormattedNumbersOnly
-                
+ 
                 onTextEdited: {
                     var newValue = control.valueFromText(textInput.text.replace(/\D/g, ""), control.locale)
                     if (!isFinite(newValue)) {

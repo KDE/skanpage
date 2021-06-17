@@ -92,7 +92,8 @@ Item {
             TextInput {
                 id: textInput
                 selectByMouse: true
-                
+
+                color: Kirigami.Theme.textColor
                 width: Math.max(minTextSize.width, maxTextSize.width)
                 horizontalAlignment: Qt.AlignRight
                 verticalAlignment: Qt.AlignVCenter
