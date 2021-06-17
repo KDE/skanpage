@@ -22,6 +22,8 @@ include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings)
 include(KDEClangFormat)
 include(KDECMakeSettings)
+include(ECMAddAppIcon)
+include(ECMInstallIcons)
 
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
     COMPONENTS # alias to find_package(KFGuiAddons ${KF5_VERSION} REQUIRED)
@@ -58,5 +60,6 @@ install(FILES org.kde.skanpage.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR
 set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(src)
+add_subdirectory(icons)
 
 ki18n_install(po)
