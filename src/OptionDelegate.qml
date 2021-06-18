@@ -18,7 +18,8 @@ RowLayout {
 
     signal valueChanged(var value)
 
-    visible: modelItem.visible && modelItem.type != KSaneOption.TypeGamma && modelItem.type != KSaneOption.TypeDetectFail
+    visible: modelItem.visible && modelItem.type != KSaneOption.TypeGamma && modelItem.type != KSaneOption.TypeDetectFail &&
+        (modelItem.type === KSaneOption.TypeValueList ? modelItem.valueList.length > 1 : true)
     
     Loader {
         active: modelItem.type === KSaneOption.TypeInteger && modelItem.visible

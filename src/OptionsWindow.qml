@@ -23,23 +23,28 @@ Window {
 
     minimumHeight: 400
     minimumWidth: 600
-    
+
     ScrollView {
         id: optionsView
 
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.fill: parent
+
         leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
         rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
         Kirigami.FormLayout {
             id: form
 
+            width: optionsView.width
+            height: children.height
+
             Repeater {
                 model: skanpage.optionsModel
 
                 delegate: RowLayout {
                     id: delegate
-                    Kirigami.FormData.label: (model.type == KSaneOption.TypeBool || model.type == KSaneOption.TypeAction) ? "" : model.title + ":"
+
+                    Kirigami.FormData.label: (model.type == KSaneOption.TypeBool || model.type == KSaneOption.TypeAction) ? "" : i18nc("Separator between a title and a value", "%1:", model.title)
 
                     visible: model.visible && model.type != KSaneOption.TypeGamma && model.type != KSaneOption.TypeDetectFail
 
@@ -47,7 +52,7 @@ Window {
                         modelItem: model
                         onValueChanged: model.value = value
                     }
-                } 
+                }
             }
         }
     }
