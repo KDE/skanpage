@@ -51,6 +51,7 @@ int main(int argc, char *argv[])
 
     aboutData.addAuthor(QStringLiteral("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
     aboutData.addAuthor(QStringLiteral("Alexander Stippich"), i18n("developer"), QLatin1String("a.stippich@gmx.net"));
+    aboutData.setBugAddress("https://bugs.kde.org/enter_bug.cgi?product=skanpage");
     
     app.setWindowIcon(QIcon::fromTheme(QLatin1String("skanpage")));
 
