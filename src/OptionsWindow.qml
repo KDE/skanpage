@@ -32,6 +32,8 @@ Window {
         leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
         rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
+        enabled: !skanpage.scanInProgress
+
         Kirigami.FormLayout {
             id: form
 

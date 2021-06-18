@@ -208,21 +208,25 @@ ApplicationWindow {
                 OptionDelegate {
                     modelItem: skanpage.resolutionOption
                     onValueChanged: skanpage.resolutionOption.value = value
+                    enabled: !skanpage.scanInProgress
                 }
                 
                 OptionDelegate {
                     modelItem: skanpage.pageSizeOption
                     onValueChanged: skanpage.pageSizeOption.value = value
+                    enabled: !skanpage.scanInProgress
                 }  
                 
                 OptionDelegate {
                     modelItem: skanpage.sourceOption
                     onValueChanged: skanpage.sourceOption.value = value
+                    enabled: !skanpage.scanInProgress
                 }
                 
                 OptionDelegate {
                     modelItem: skanpage.scanModeOption
                     onValueChanged: skanpage.scanModeOption.value = value
+                    enabled: !skanpage.scanInProgress
                 }
              
                 ToolButton { 

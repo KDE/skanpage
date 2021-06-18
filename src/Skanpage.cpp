@@ -77,12 +77,19 @@ QString Skanpage::deviceName() const
 
 void Skanpage::startScan()
 {
+    m_scanInProgress = true;
+    Q_EMIT scanInProgressChanged(true);
     m_ksanew->scanFinal();
 }
 
 Skanpage::ApplicationState Skanpage::applicationState() const
 {
     return m_state;
+}
+
+bool Skanpage::scanInProgress() const
+{
+    return m_scanInProgress;
 }
 
 void Skanpage::imageReady(const QImage &image)
@@ -281,4 +288,6 @@ void Skanpage::scanDone(int status, const QString &strStatus)
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
     m_progress = 100;
     Q_EMIT progressChanged();
+    m_scanInProgress = false;
+    Q_EMIT scanInProgressChanged(false);
 }
