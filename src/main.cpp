@@ -39,14 +39,12 @@ int main(int argc, char *argv[])
     
     KLocalizedString::setApplicationDomain("skanpage");
 
-    KAboutData aboutData(QLatin1String("Skanpage"), // componentName, k4: appName
-                         i18n("Skanpage"), // displayName, k4: programName
-                         QLatin1String(SKANPAGE_VERSION_STRING), // version
-                         i18n("Page-scanning application by KDE based on libksane."), // shortDescription
-                         KAboutLicense::GPL, // licenseType
-                         i18n("(C) 2015 Kåre Särs"), // copyrightStatement
-                         QString(), // other Text
-                         QString() // homePageAddress
+    KAboutData aboutData(QLatin1String("skanpage"),
+                         i18n("Skanpage"),
+                         QLatin1String(SKANPAGE_VERSION_STRING),
+                         i18n("Page-scanning application by KDE based on libksane."),
+                         KAboutLicense::GPL,
+                         i18n("(C) 2015 Kåre Särs")
     );
 
     aboutData.addAuthor(QStringLiteral("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
