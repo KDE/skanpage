@@ -45,7 +45,7 @@ Item {
         icon.name: "zoom-original"
         text: i18n("Zoom 100%")
         shortcut: "F"
-        onTriggered:  bigImage.zoomScale = 1
+        onTriggered: bigImage.zoomScale = 1
     }
 
     Action {
@@ -135,7 +135,7 @@ Item {
         
         RowLayout {
             Layout.fillWidth: true
-            visible: skanpage.progress === 100 && skanpage.documentModel.count !== 0
+            visible: !skanpage.scanInProgress && skanpage.documentModel.count !== 0
             
             ToolButton {
                 action: zoomInAction 
@@ -173,7 +173,7 @@ Item {
         
         RowLayout {
             Layout.fillWidth: true
-            visible: skanpage.progress < 100
+            visible: skanpage.scanInProgress
             
             ProgressBar {
                 Layout.fillWidth: true
