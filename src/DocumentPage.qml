@@ -95,6 +95,8 @@ Item {
         
         anchors.fill: parent
         
+        spacing: 0
+        
         visible: skanpage.documentModel.count > 0
         
         ScrollView {
@@ -135,6 +137,7 @@ Item {
         
         RowLayout {
             Layout.fillWidth: true
+            Layout.preferredHeight: Kirigami.Units.gridUnit * 2
             visible: !skanpage.scanInProgress && skanpage.documentModel.count !== 0
             
             ToolButton {
@@ -172,6 +175,7 @@ Item {
         }
         
         RowLayout {
+     
             Layout.fillWidth: true
             visible: skanpage.scanInProgress
             
