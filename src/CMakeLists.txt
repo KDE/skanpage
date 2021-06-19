@@ -31,11 +31,12 @@ target_link_libraries(skanpage
     Qt5::QuickControls2
     Qt5::Concurrent
   PRIVATE
-    KF5::CoreAddons
     KF5::Sane
+    KF5::CoreAddons
     KF5::I18n
-    KF5::XmlGui
     KF5::Kirigami2
+    KF5::Crash
+    KF5::XmlGui
 )
 
 

@@ -5,12 +5,14 @@
  */
 
 #include <QApplication>
-#include <QIcon>
 #include <QQmlApplicationEngine>
-#include <QtQml>
+#include <QQmlContext>
+#include <QCommandLineParser>
+#include <QIcon>
 
 #include <KAboutData>
-#include <KI18n/KLocalizedContext>
+#include <KCrash>
+#include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KSaneOption>
 
@@ -54,6 +56,7 @@ int main(int argc, char *argv[])
     app.setWindowIcon(QIcon::fromTheme(QLatin1String("skanpage")));
 
     KAboutData::setApplicationData(aboutData);
+    KCrash::initialize();
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);

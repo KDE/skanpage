@@ -26,12 +26,13 @@ include(ECMAddAppIcon)
 include(ECMInstallIcons)
 
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
-    COMPONENTS # alias to find_package(KFGuiAddons ${KF5_VERSION} REQUIRED)
-        CoreAddons  # KAboutData
-        I18n        # I18n
-        XmlGui      # KAboutApplicationDialog
+    COMPONENTS
+        CoreAddons
+        I18n
         Kirigami2
-        #DocTools   # yields kdoctools_create_handbook
+        Crash
+        XmlGui
+        #DocTools
 )
 
 find_package(KF5 "21.07.70" REQUIRED
