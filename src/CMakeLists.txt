@@ -11,7 +11,7 @@ set(skanpage_SRCS
     SingleOption.cpp
     )
 
-qt5_add_resources(skanpage_SRCS qml.qrc)
+qt_add_resources(skanpage_SRCS qml.qrc)
 
 ecm_qt_declare_logging_category(skanpage_SRCS
     HEADER skanpage_debug.h
@@ -23,13 +23,13 @@ add_executable(skanpage ${skanpage_SRCS})
 
 target_link_libraries(skanpage
   PRIVATE
-    Qt5::Core
-    Qt5::Widgets
-    Qt5::Quick
-    Qt5::PrintSupport
-    Qt5::Qml
-    Qt5::QuickControls2
-    Qt5::Concurrent
+    Qt::Core
+    Qt::Widgets
+    Qt::Quick
+    Qt::PrintSupport
+    Qt::Qml
+    Qt::QuickControls2
+    Qt::Concurrent
   PRIVATE
     KF5::Sane
     KF5::CoreAddons
