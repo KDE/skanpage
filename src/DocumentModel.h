@@ -21,6 +21,7 @@
 #include "Skanpage.h"
 
 class DocumentSaver;
+class DocumentPrinter;
 
 struct PageProperties {
     std::shared_ptr<QTemporaryFile> temporaryFile;
@@ -67,6 +68,8 @@ public:
 
     Q_INVOKABLE void save(const QUrl &fileUrl);
 
+    Q_INVOKABLE void print();
+    
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -87,6 +90,7 @@ private:
     bool m_changed = false;
     int m_activePageIndex = -1;
     std::unique_ptr<DocumentSaver> m_documentSaver;
+    std::unique_ptr<DocumentPrinter> m_documentPrinter;
 };
 
 #endif

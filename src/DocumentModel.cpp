@@ -14,6 +14,7 @@
 
 #include "skanpage_debug.h"
 #include "DocumentSaver.h"
+#include "DocumentPrinter.h"
 
 bool operator==(const PageProperties& lhs, const PageProperties& rhs)
 {
@@ -26,9 +27,11 @@ DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_name(i18n("New document"))
     , m_documentSaver(std::make_unique<DocumentSaver>())
+    , m_documentPrinter(std::make_unique<DocumentPrinter>())
 {
     connect(m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
     connect(m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
+    connect(m_documentPrinter.get(), &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
 }
 
 DocumentModel::~DocumentModel()
@@ -77,6 +80,11 @@ void DocumentModel::setActivePageIndex(int newIndex)
 void DocumentModel::save(const QUrl &fileUrl)
 {
     m_documentSaver->saveDocument(fileUrl, m_pages);
+}
+
+void DocumentModel::print()
+{
+    m_documentPrinter->printDocument(m_pages);
 }
 
 void DocumentModel::addImage(const QImage &image, const int dpi)

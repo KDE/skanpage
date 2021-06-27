@@ -111,6 +111,15 @@ ApplicationWindow {
         enabled: !skanpage.scanInProgress && skanpage.applicationState == Skanpage.ReadyForScan
         onTriggered: optionsWindow.show()
     }
+
+    Action {
+        id: printAction
+        icon.name: "document-print"
+        text: i18n("Print")
+        shortcut: StandardKey.Print
+        enabled: skanpage.documentModel.count !== 0
+        onTriggered: skanpage.documentModel.print()
+    }
     
     Action {
         id: openMenuAction
@@ -237,6 +246,10 @@ ApplicationWindow {
                 Item {
                     id: toolbarSpacer
                     Layout.fillWidth: true
+                }
+                             
+                ToolButton { 
+                    action: printAction
                 }
 
                 ToolButton { 

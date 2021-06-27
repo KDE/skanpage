@@ -6,6 +6,7 @@ set(skanpage_SRCS
     Skanpage.cpp
     DocumentModel.cpp
     DocumentSaver.cpp
+    DocumentPrinter.cpp
     DevicesModel.cpp
     OptionsModel.cpp
     SingleOption.cpp

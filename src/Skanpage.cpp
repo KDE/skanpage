@@ -7,9 +7,7 @@
 
 #include "Skanpage.h"
 
-#include <QDebug>
 #include <QPageSize>
-#include <QPrinter>
 #include <QStringList>
 
 #include <KAboutApplicationDialog>
