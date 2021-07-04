@@ -1,3 +1,11 @@
-build
+# SPDX-FileCopyrightText: 2020 Alexander Stippich <a.stippich@gmx.net>
+# SPDX-License-Identifier: CC0-1.0
+
+build/
+.kdev4/
 CMakeLists.txt.user
+skanpage.kdev4
+.vscode/
 .clang-format
+.cache/
+.reuse/

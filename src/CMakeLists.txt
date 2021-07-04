@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
+# SPDX-FileCopyrightText: 2020 Alexander Stippich <a.stippich@gmx.net>
+#
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 include_directories(${skanpage_BINARY_DIR})
 
@@ -40,6 +44,5 @@ target_link_libraries(skanpage
     KF5::Crash
     KF5::XmlGui
 )
-
 
 install(TARGETS skanpage ${INSTALL_TARGETS_DEFAULT_ARGS})
