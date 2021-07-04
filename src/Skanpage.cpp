@@ -190,10 +190,10 @@ void Skanpage::reloadDevicesList()
         m_sourceOption->clearOption();
         m_scanModeOption->clearOption();
         Q_EMIT optionsChanged();
-        m_state = SearchingForDevices;
-        Q_EMIT applicationStateChanged();
-        m_ksaneInterface->reloadDevicesList();
     }
+    m_state = SearchingForDevices;
+    Q_EMIT applicationStateChanged();
+    m_ksaneInterface->reloadDevicesList();
 }
 
 void Skanpage::showKSaneMessage(KSaneCore::KSaneScanStatus status, const QString &strStatus)
