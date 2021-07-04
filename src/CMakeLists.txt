@@ -23,6 +23,14 @@ ecm_qt_declare_logging_category(skanpage_SRCS
     HEADER skanpage_debug.h
     IDENTIFIER SKANPAGE_LOG
     CATEGORY_NAME org.kde.skanpage
+    DESCRIPTION "Skanpage"
+    EXPORT SKANPAGE
+)
+
+ecm_qt_install_logging_categories(
+    EXPORT SKANPAGE
+    FILE skanpage.categories
+    DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
 add_executable(skanpage ${skanpage_SRCS})
