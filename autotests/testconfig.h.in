@@ -1,0 +1,13 @@
+/**
+ * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
+ *  
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ */
+
+
+#ifndef TESTCONFIG_H
+#define TESTCONFIG_H
+
+#define TESTS_IMAGES_PATH "@CMAKE_CURRENT_SOURCE_DIR@/images"
+
+#endif

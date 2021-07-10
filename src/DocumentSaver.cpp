@@ -82,7 +82,7 @@ void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::Docume
             painter.begin(&writer);
         }
         
-        QImage pageImage(document.at(i).temporaryFile->fileName());
+        QImage pageImage(document.at(i).temporaryFile->fileName());    
         if (rotationAngle != 0) {
             pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
         }

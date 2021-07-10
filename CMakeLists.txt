@@ -66,5 +66,6 @@ set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(src)
 add_subdirectory(icons)
+#add_subdirectory(autotests)
 
 ki18n_install(po)
