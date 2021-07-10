@@ -8,6 +8,7 @@ include_directories(${skanpage_BINARY_DIR})
 set(skanpage_SRCS
     main.cpp 
     Skanpage.cpp
+    SkanpageUtils.cpp
     DocumentModel.cpp
     DocumentSaver.cpp
     DocumentPrinter.cpp

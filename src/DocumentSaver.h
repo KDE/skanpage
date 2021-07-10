@@ -12,11 +12,9 @@
 #include <QObject>
 #include <QString>
 #include <QFileInfo>
-#include <QList>
 #include <QFuture>
 
-#include "Skanpage.h"
-#include "DocumentModel.h"
+#include "SkanpageUtils.h"
 
 class DocumentSaver : public QObject
 {
@@ -27,16 +25,16 @@ public:
     explicit DocumentSaver(QObject *parent = nullptr);
     ~DocumentSaver();
     
-    void saveDocument(const QUrl &fileUrl, const QList<PageProperties> &document);
+    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document);
     
 Q_SIGNALS:
-    void showUserMessage(Skanpage::MessageLevel level, const QString &text);
-    void fileSaved(const QString &fileName, const QList<PageProperties> &document); 
+    void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
+    void fileSaved(const QString &fileName, const SkanpageUtils::DocumentPages &document); 
 
 private:
-    void save(const QUrl &fileUrl, const QList<PageProperties> &document);
-    void savePDF(const QString &filePath, const QList<PageProperties> &document);
-    void saveImage(const QFileInfo &fileInfo, const QList<PageProperties> &document);
+    void save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document);
+    void savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document);
+    void saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document);
 
     QFuture<void> m_future;
 };

@@ -9,19 +9,13 @@
 
 #include <QUrl>
 #include <QTemporaryFile>
+#include <QImage>
 
 #include <KLocalizedString>
 
 #include "skanpage_debug.h"
 #include "DocumentSaver.h"
 #include "DocumentPrinter.h"
-
-bool operator==(const PageProperties& lhs, const PageProperties& rhs)
-{
-    return lhs.dpi == rhs.dpi && lhs.pageSize == rhs.pageSize &&
-    lhs.rotationAngle == rhs.rotationAngle && lhs.temporaryFile == rhs.temporaryFile;
-}
-
 
 DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -96,7 +90,7 @@ void DocumentModel::addImage(const QImage &image, const int dpi)
     if (image.save(tempImageFile, "PNG")) {
         qCDebug(SKANPAGE_LOG) << "Adding new image file" << tempImageFile << " with pageSize" << pageSize << "and resolution " << dpi << "dpi";
     } else {
-         Q_EMIT showUserMessage(Skanpage::ErrorMessage, i18n("Failed to save image"));
+         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save image"));
     }
     tempImageFile->close();
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
@@ -247,7 +241,7 @@ void DocumentModel::clearData()
     }
 }
 
-void DocumentModel::updateFileInformation(const QString &fileName, const QList<PageProperties> &document)
+void DocumentModel::updateFileInformation(const QString &fileName, const SkanpageUtils::DocumentPages &document)
 {
     if (document == m_pages && m_changed) {
         m_changed = false;

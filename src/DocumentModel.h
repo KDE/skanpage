@@ -11,26 +11,13 @@
 #include <memory>
 
 #include <QAbstractListModel>
-#include <QList>
 #include <QString>
-#include <QPageSize>
-
-#include <QTemporaryFile>
 #include <QUrl>
 
-#include "Skanpage.h"
+#include "SkanpageUtils.h"
 
 class DocumentSaver;
 class DocumentPrinter;
-
-struct PageProperties {
-    std::shared_ptr<QTemporaryFile> temporaryFile;
-    QPageSize pageSize;
-    int dpi;
-    int rotationAngle = 0;
-};
-
-Q_DECLARE_METATYPE(PageProperties)
 
 class DocumentModel : public QAbstractListModel
 {
@@ -80,13 +67,13 @@ Q_SIGNALS:
     void activePageChanged();
     void countChanged();
     void newImageAdded();
-    void showUserMessage(Skanpage::MessageLevel level, const QString &text);
+    void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
 
 private Q_SLOTS:
-    void updateFileInformation(const QString &fileName, const QList<PageProperties> &document);
+    void updateFileInformation(const QString &fileName, const SkanpageUtils::DocumentPages &document);
     
 private:
-    QList<PageProperties> m_pages;
+    SkanpageUtils::DocumentPages m_pages;
     QString m_name;
     bool m_changed = false;
     int m_activePageIndex = -1;

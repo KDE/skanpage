@@ -196,21 +196,21 @@ void Skanpage::reloadDevicesList()
     m_ksaneInterface->reloadDevicesList();
 }
 
-void Skanpage::showKSaneMessage(KSaneCore::KSaneScanStatus status, const QString &strStatus)
+void Skanpage::showKSaneMessage(KSaneIface::KSaneCore::KSaneScanStatus status, const QString &strStatus)
 {
     switch (status) {
-        case KSaneCore::ErrorGeneral:
-            showUserMessage(Skanpage::ErrorMessage, strStatus);
+        case KSaneIface::KSaneCore::ErrorGeneral:
+            showUserMessage(SkanpageUtils::ErrorMessage, strStatus);
             break;
-        case KSaneCore::Information:
-            showUserMessage(Skanpage::InformationMessage, strStatus);
+        case KSaneIface::KSaneCore::Information:
+            showUserMessage(SkanpageUtils::InformationMessage, strStatus);
             break;
         default:
             break;
     }
 }
 
-void Skanpage::showUserMessage(Skanpage::MessageLevel level, const QString &text)
+void Skanpage::showUserMessage(SkanpageUtils::MessageLevel level, const QString &text)
 {
     Q_EMIT newUserMessage(QVariant(level), QVariant(text));
 }
@@ -226,7 +226,7 @@ int Skanpage::progress() const
     return m_progress;
 }
 
-KSaneCore *Skanpage::ksaneInterface() const
+KSaneIface::KSaneCore *Skanpage::ksaneInterface() const
 {
     return m_ksaneInterface.get();
 }

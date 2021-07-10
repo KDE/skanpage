@@ -15,6 +15,8 @@
 
 #include <memory>
 
+#include "SkanpageUtils.h"
+
 class QQuickImageProvider;
 class KAboutData;
 class DocumentModel;
@@ -22,8 +24,6 @@ class DevicesModel;
 class OptionsModel;
 class SingleOption;
 class InProgressPainter;
-
-using namespace KSaneIface;
 
 class Skanpage : public QObject
 {
@@ -55,13 +55,6 @@ public:
     };
     
     Q_ENUM(ApplicationState);
- 
-    enum MessageLevel {
-        ErrorMessage,
-        InformationMessage,
-    };
-    
-    Q_ENUM(MessageLevel);
     
     explicit Skanpage(const QString &deviceName, QObject *parent = nullptr);
     ~Skanpage();
@@ -77,7 +70,7 @@ public:
     DocumentModel *documentModel() const;
     DevicesModel *devicesModel() const;
     OptionsModel *optionsModel() const;
-    KSaneCore *ksaneInterface() const;
+    KSaneIface::KSaneCore *ksaneInterface() const;
     SingleOption *resolutionOption() const;
     SingleOption *pageSizeOption() const;
     SingleOption *sourceOption() const;
@@ -99,12 +92,12 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void imageReady(const QImage &image);
-    void availableDevices(const QList<KSaneCore::DeviceInfo> &deviceList);
-    void showKSaneMessage(KSaneCore::KSaneScanStatus type, const QString &strStatus);
-    void showUserMessage(MessageLevel level, const QString &strStatus);
+    void availableDevices(const QList<KSaneIface::KSaneCore::DeviceInfo> &deviceList);
+    void showKSaneMessage(KSaneIface::KSaneCore::KSaneScanStatus type, const QString &strStatus);
+    void showUserMessage(SkanpageUtils::MessageLevel level, const QString &strStatus);
 
     void progressUpdated(int progress);
-    void scanDone(KSaneCore::KSaneScanStatus statuts, const QString &strStatus);
+    void scanDone(KSaneIface::KSaneCore::KSaneScanStatus statuts, const QString &strStatus);
 
 private:
     void finishOpeningDevice(const QString &deviceName);
@@ -112,7 +105,7 @@ private:
     void saveScannerOptions();
     void signalErrorMessage(const QString &text);
 
-    std::unique_ptr<KSaneCore> m_ksaneInterface;
+    std::unique_ptr<KSaneIface::KSaneCore> m_ksaneInterface;
     std::unique_ptr<DocumentModel> m_docHandler;
     std::unique_ptr<DevicesModel> m_availableDevices;
     std::unique_ptr<OptionsModel> m_optionsModel;

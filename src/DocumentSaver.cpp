@@ -27,14 +27,14 @@ DocumentSaver::~DocumentSaver()
 {
 }
 
-void DocumentSaver::saveDocument(const QUrl &fileUrl, const QList<PageProperties> &document)
+void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document)
 {
     if (fileUrl.isEmpty() || document.isEmpty()) {
-        Q_EMIT showUserMessage(Skanpage::ErrorMessage, i18n("Nothing to save."));
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Nothing to save."));
         return;
     }
     if (m_future.isRunning()) {
-        Q_EMIT showUserMessage(Skanpage::ErrorMessage, i18n("Saving still in progress."));
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Saving still in progress."));
         return;
     }
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
@@ -42,7 +42,7 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const QList<PageProperties
     m_future = QtConcurrent::run(this, &DocumentSaver::save, fileUrl, document);
 }
 
-void DocumentSaver::save(const QUrl &fileUrl, const QList<PageProperties> &document) 
+void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document) 
 {
     const QFileInfo &fileInfo = QFileInfo(fileUrl.toLocalFile());
     const QString &fileSuffix = fileInfo.suffix();
@@ -51,15 +51,15 @@ void DocumentSaver::save(const QUrl &fileUrl, const QList<PageProperties> &docum
 
     if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
         savePDF(fileUrl.toLocalFile(), document);
-        Q_EMIT showUserMessage(Skanpage::InformationMessage, i18n("Document saved as PDF.")); 
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF.")); 
     } else {
         saveImage(fileInfo, document);
-        Q_EMIT showUserMessage(Skanpage::InformationMessage, i18n("Document saved as image.")); 
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image.")); 
     }
     Q_EMIT fileSaved(fileInfo.fileName(), document);
 }
 
-void DocumentSaver::savePDF(const QString &filePath, const QList<PageProperties> &document)
+void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document)
 {
     QPdfWriter writer(filePath);
     QPainter painter;
@@ -94,7 +94,7 @@ void DocumentSaver::savePDF(const QString &filePath, const QList<PageProperties>
 
 }
 
-void DocumentSaver::saveImage(const QFileInfo &fileInfo, const QList<PageProperties> &document)
+void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document)
 {
     const int count = document.count();
     QImage pageImage;

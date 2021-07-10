@@ -11,11 +11,9 @@
 
 #include <QObject>
 #include <QString>
-#include <QList>
 #include <QFuture>
 
-#include "Skanpage.h"
-#include "DocumentModel.h"
+#include "SkanpageUtils.h"
 
 class QPrinter;
 
@@ -28,13 +26,13 @@ public:
     explicit DocumentPrinter(QObject *parent = nullptr);
     ~DocumentPrinter();
     
-    void printDocument(const QList<PageProperties> &document);
+    void printDocument(const SkanpageUtils::DocumentPages &document);
     
 Q_SIGNALS:
-    void showUserMessage(Skanpage::MessageLevel level, const QString &text);
+    void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
 
 private:
-    void print(const QList<PageProperties> &document);
+    void print(const SkanpageUtils::DocumentPages &document);
 
     std::unique_ptr<QPrinter> m_printer;
     QFuture<void> m_future;

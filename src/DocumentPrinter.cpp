@@ -30,14 +30,14 @@ DocumentPrinter::~DocumentPrinter()
 {
 }
 
-void DocumentPrinter::printDocument(const QList<PageProperties> &document)
+void DocumentPrinter::printDocument(const SkanpageUtils::DocumentPages &document)
 {
     if (document.isEmpty()) {
-        Q_EMIT showUserMessage(Skanpage::ErrorMessage, i18n("Nothing to print."));
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Nothing to print."));
         return;
     }
     if (m_future.isRunning()) {
-        Q_EMIT showUserMessage(Skanpage::ErrorMessage, i18n("Previous printing operation still in progress."));
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Previous printing operation still in progress."));
         return;
     }
     
@@ -48,7 +48,7 @@ void DocumentPrinter::printDocument(const QList<PageProperties> &document)
     }
 }
 
-void DocumentPrinter::print(const QList<PageProperties> &document) 
+void DocumentPrinter::print(const SkanpageUtils::DocumentPages &document) 
 {
     int rotationAngle;
     QPainter painter(m_printer.get());
@@ -70,5 +70,5 @@ void DocumentPrinter::print(const QList<PageProperties> &document)
         painter.drawImage(0, 0, pageImage);
     }
     
-    Q_EMIT showUserMessage(Skanpage::InformationMessage, i18n("Document sent to printer.")); 
+    Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document sent to printer.")); 
 }

@@ -26,7 +26,7 @@ public Q_SLOTS:
     void updateImage();
     
 private:
-    KSaneCore *m_scanInterface = nullptr;
+    KSaneIface::KSaneCore *m_scanInterface = nullptr;
 
 };
 #endif
