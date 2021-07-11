@@ -24,7 +24,7 @@ include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMQtDeclareLoggingCategory)
 include(KDEInstallDirs)
-include(KDEFrameworkCompilerSettings)
+include(KDECompilerSettings)
 include(KDEClangFormat)
 include(KDECMakeSettings)
 include(ECMAddAppIcon)
@@ -41,8 +41,8 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
 )
 
 find_package(KF5 "21.07.70" REQUIRED
-    COMPONENTS # alias to find_package(KFGuiAddons ${KF5_VERSION} REQUIRED)
-        Sane        # KF5Sane
+    COMPONENTS
+        Sane
 )
 
 add_definitions(
@@ -61,8 +61,6 @@ ecm_setup_version(${PROJECT_VERSION}
 
 install(PROGRAMS org.kde.skanpage.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(FILES org.kde.skanpage.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR} )
-
-set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(src)
 add_subdirectory(icons)
