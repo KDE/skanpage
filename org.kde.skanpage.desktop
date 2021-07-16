@@ -4,6 +4,7 @@
 [Desktop Entry]
 Categories=Qt;KDE;Graphics;Scanning;
 Comment=Scan and save images
+Comment[ar]=امسح الصّور ضوئيًّا واحفظها
 Comment[ca]=Escaneja i desa imatges
 Comment[ca@valencia]=Escaneja i guarda imatges
 Comment[cs]=Senovat a uložit obrázky
@@ -28,6 +29,7 @@ Comment[x-test]=xxScan and save imagesxx
 Comment[zh_CN]=扫描和保存图像
 Exec=skanpage
 GenericName=Image Scanning Application
+GenericName[ar]=تطبيق لمسح الصّور ضوئيًّا
 GenericName[ca]=Aplicació per a la digitalització d'imatges
 GenericName[ca@valencia]=Aplicació per a la digitalització d'imatges
 GenericName[cs]=Aplikace pro skenování obrázků
@@ -52,6 +54,7 @@ GenericName[x-test]=xxImage Scanning Applicationxx
 GenericName[zh_CN]=图像扫描应用程序
 Icon=skanpage
 Name=Skanpage
+Name[ar]=ماسح الصفحات
 Name[ca]=Skanpage
 Name[ca@valencia]=Skanpage
 Name[cs]=Skanpage
