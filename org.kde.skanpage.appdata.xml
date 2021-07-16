@@ -9,6 +9,7 @@ SPDX-License-Identifier: CC0-1.0
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Skanpage</name>
+  <name xml:lang="ar">ماسح الصفحات</name>
   <name xml:lang="ca">Skanpage</name>
   <name xml:lang="ca-valencia">Skanpage</name>
   <name xml:lang="cs">Skanpage</name>
@@ -32,6 +33,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="x-test">xxSkanpagexx</name>
   <name xml:lang="zh-CN">Skanpage</name>
   <summary>Simple, multi-page scanning application</summary>
+  <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
   <summary xml:lang="ca">Aplicació senzilla d'escaneig multipàgina</summary>
   <summary xml:lang="ca-valencia">Aplicació senzilla d'escaneig multipàgina</summary>
   <summary xml:lang="de">Anwendung zum Scannen von mehreren Seiten</summary>
@@ -54,6 +56,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="zh-CN">简易多页扫描应用程序</summary>
   <description>
     <p> A simple scanning application designed for multi-page scanning and saving of images.</p>
+    <p xml:lang="ar">تطبيق مسح ضوئي بسيط مصمم لإجراء مسح ضوئي متعدد الصفحات وحفظ الصور.</p>
     <p xml:lang="ca">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al desat d'imatges.</p>
     <p xml:lang="ca-valencia">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al guardat d'imatges.</p>
     <p xml:lang="de">Eine einfache Anwendung zum Scannen von mehreren Seiten und Speichern von Bilder.</p>
