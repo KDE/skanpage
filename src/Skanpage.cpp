@@ -153,7 +153,12 @@ bool Skanpage::openDevice(const QString &deviceName)
         status = m_ksaneInterface->openDevice(deviceName);
         if (status == KSaneCore::OpeningSucceeded) {
             finishOpeningDevice(deviceName);
+        } else if (status == KSaneCore::OpeningDenied) {
+            showUserMessage(SkanpageUtils::ErrorMessage, QStringLiteral("Access to selected device has been denied"));
+        } else {
+            showUserMessage(SkanpageUtils::ErrorMessage, QStringLiteral("Failed to open selected device."));
         }
+
     }
     return status == KSaneCore::OpeningSucceeded;
 }
