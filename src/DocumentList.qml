@@ -214,7 +214,7 @@ ColumnLayout {
             Layout.fillWidth: true
         }
 
-        Text {
+        Label {
             text: i18np("1 page", "%1 pages", skanpage.documentModel.count)
         }
         
