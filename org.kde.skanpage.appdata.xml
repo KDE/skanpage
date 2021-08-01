@@ -57,7 +57,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="x-test">xxSimple, multi-page scanning applicationxx</summary>
   <summary xml:lang="zh-CN">简易多页扫描应用程序</summary>
   <description>
-    <p> A simple scanning application designed for multi-page scanning and saving of images.</p>
+    <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
     <p xml:lang="ar">تطبيق مسح ضوئي بسيط مصمم لإجراء مسح ضوئي متعدد الصفحات وحفظ الصور.</p>
     <p xml:lang="ca">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al desat d'imatges.</p>
     <p xml:lang="ca-valencia">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al guardat d'imatges.</p>
@@ -79,6 +79,13 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="uk">Проста програма для сканування, яку розроблено для сканування багато сторінкових документів і збереження зображень сторінок.</p>
     <p xml:lang="x-test">xxA simple scanning application designed for multi-page scanning and saving of images.xx</p>
     <p xml:lang="zh-CN">一款简易扫描应用程序，可以进行多页扫描和保存图像。</p>
+    <p>Features:</p>
+    <ul>
+      <li>Scanning from flatbed and ADF scanners</li>
+      <li>Configurable options for scanning device</li>
+      <li>Reordering, rotation and deletion of scanned pages</li>
+      <li>Saving to multi-page PDF documents and image files</li>
+    </ul>
   </description>
   <screenshots>
     <screenshot type="default">
