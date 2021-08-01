@@ -17,13 +17,10 @@
 
 #include "SkanpageUtils.h"
 
-class QQuickImageProvider;
-class KAboutData;
 class DocumentModel;
 class DevicesModel;
 class OptionsModel;
 class SingleOption;
-class InProgressPainter;
 
 class Skanpage : public QObject
 {
