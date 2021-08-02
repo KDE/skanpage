@@ -13,7 +13,6 @@
 
 #include <memory>
 
-#include <KSaneWidget>
 #include <KSaneOption>
 
 class OptionsModelPrivate;
