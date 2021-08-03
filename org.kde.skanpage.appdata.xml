@@ -58,27 +58,6 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="zh-CN">简易多页扫描应用程序</summary>
   <description>
     <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
-    <p xml:lang="ar">تطبيق مسح ضوئي بسيط مصمم لإجراء مسح ضوئي متعدد الصفحات وحفظ الصور.</p>
-    <p xml:lang="ca">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al desat d'imatges.</p>
-    <p xml:lang="ca-valencia">Aplicació senzilla d'escaneig dissenyada per a l'escaneig multipàgina i per al guardat d'imatges.</p>
-    <p xml:lang="de">Eine einfache Anwendung zum Scannen von mehreren Seiten und Speichern von Bilder.</p>
-    <p xml:lang="el">Μια απλή εφαρμογή σάρωσης σχεδιασμένη για σάρωση πολλών σελίδων και αποθήκευση των εικόνων.</p>
-    <p xml:lang="en-GB">A simple scanning application designed for multi-page scanning and saving of images.</p>
-    <p xml:lang="es">Una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como imágenes.</p>
-    <p xml:lang="fi">Yksinkertainen kuvanlukusovellus, joka on suunniteltu monisivuiseen kuvanlukuun ja tallentamiseen.</p>
-    <p xml:lang="fr">Une application simple de numérisation conçue pour la numérisation multi-page et l'enregistrement des images.</p>
-    <p xml:lang="id">Sebuah aplikasi pemindaian yang dirancang untuk memindai multi halaman dan menyimpan citra gambar.</p>
-    <p xml:lang="it">Una semplice applicazione per scansionare progettata per scansioni e salvataggi di immagini multi pagina.</p>
-    <p xml:lang="ko">여러 쪽 스캔과 그림 저장이 가능한 간단한 스캔 프로그램입니다.</p>
-    <p xml:lang="nl">Een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van afbeeldingen.</p>
-    <p xml:lang="pl">Prosty program opracowany do wielostronnicowego skanowania i zapisywania obrazów.</p>
-    <p xml:lang="pt">Uma aplicação de digitalização simples que está desenhada para a digitalização e gravação de várias imagens.</p>
-    <p xml:lang="pt-BR">Um aplicativo simples de digitalização desenhado para digitalizar múltiplas páginas e salvar imagens.</p>
-    <p xml:lang="sl">Preprosta aplikacija za optično branje več strani in shranjevanje slik.</p>
-    <p xml:lang="sv">Ett enkelt program för bildinläsning konstruerat för inläsning av flera sidor och för att spara bilder.</p>
-    <p xml:lang="uk">Проста програма для сканування, яку розроблено для сканування багато сторінкових документів і збереження зображень сторінок.</p>
-    <p xml:lang="x-test">xxA simple scanning application designed for multi-page scanning and saving of images.xx</p>
-    <p xml:lang="zh-CN">一款简易扫描应用程序，可以进行多页扫描和保存图像。</p>
     <p>Features:</p>
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
