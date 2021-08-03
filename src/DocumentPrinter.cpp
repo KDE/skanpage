@@ -6,14 +6,11 @@
 
 #include "DocumentPrinter.h"
 
-#include <QFileInfo>
 #include <QPainter>
 #include <QPrinter>
 #include <QPrintDialog>
 
-#include <QUrl>
 #include <QTransform>
-#include <QTemporaryFile>
 #include <QtConcurrent>
 
 #include <KLocalizedString>

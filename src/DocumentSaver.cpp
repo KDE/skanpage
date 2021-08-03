@@ -11,7 +11,6 @@
 #include <QPdfWriter>
 #include <QUrl>
 #include <QTransform>
-#include <QTemporaryFile>
 #include <QtConcurrent>
 
 #include <KLocalizedString>

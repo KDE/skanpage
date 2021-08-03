@@ -7,13 +7,10 @@
 
 #include "Skanpage.h"
 
-#include <QPageSize>
-#include <QStringList>
 
 #include <KAboutApplicationDialog>
 #include <KAboutData>
 #include <KConfigGroup>
-#include <KLocalizedString>
 #include <KSharedConfig>
 
 #include "DevicesModel.h"

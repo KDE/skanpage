@@ -6,7 +6,6 @@
 
 //KDE includes
 #include <KSaneOption>
-#include <KLocalizedString>
 
 //own includes
 #include "SingleOption.h"
