@@ -36,6 +36,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         I18n
         Kirigami2
         Crash
+        Config
         XmlGui
         #DocTools
 )

@@ -51,6 +51,7 @@ target_link_libraries(skanpage
     KF5::I18n
     KF5::Kirigami2
     KF5::Crash
+    KF5::ConfigCore
     KF5::XmlGui
 )
 
