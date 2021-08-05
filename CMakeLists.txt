@@ -41,7 +41,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         #DocTools
 )
 
-find_package(KF5 "21.07.80" REQUIRED
+find_package(KF5 "21.08.0" REQUIRED
     COMPONENTS
         Sane
 )
