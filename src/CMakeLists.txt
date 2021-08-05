@@ -52,7 +52,6 @@ target_link_libraries(skanpage
     KF5::Kirigami2
     KF5::Crash
     KF5::ConfigCore
-    KF5::XmlGui
 )
 
 install(TARGETS skanpage ${INSTALL_TARGETS_DEFAULT_ARGS})

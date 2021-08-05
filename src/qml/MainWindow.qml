@@ -12,7 +12,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.3
 import Qt.labs.settings 1.0
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.skanpage 1.0
 
 ApplicationWindow {
@@ -153,7 +153,7 @@ ApplicationWindow {
         id: showAboutAction
         icon.name: "skanpage"
         text: i18n("About Skanpage")
-        onTriggered: skanpage.showAboutDialog()
+        onTriggered: aboutWindow.show()
     }
 
     Action {
@@ -318,6 +318,24 @@ ApplicationWindow {
 
         height: persistentSettings.optionHeight
         width: persistentSettings.optionWidth
+    }
+    
+    Window {
+        id: aboutWindow
+
+        title: i18n("About Skanpage")
+        color: Kirigami.Theme.backgroundColor
+
+        flags: Qt.Dialog | Qt.CustomizeWindowHint | Qt.WindowTitleHint
+            | Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint
+
+        minimumWidth: 600
+        minimumHeight: 500
+
+        Kirigami.AboutItem {
+            aboutData: _aboutData
+            anchors.fill: parent
+        }
     }
 
     FileDialog {

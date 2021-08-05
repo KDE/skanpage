@@ -10,7 +10,7 @@ project(skanpage
         LANGUAGES CXX)
 
 set(REQUIRED_QT_VERSION "5.15.2")
-set(REQUIRED_KF5_VERSION "5.83")
+set(REQUIRED_KF5_VERSION "5.87")
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
@@ -37,8 +37,6 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         Kirigami2
         Crash
         Config
-        XmlGui
-        #DocTools
 )
 
 find_package(KF5 "21.08.2" REQUIRED

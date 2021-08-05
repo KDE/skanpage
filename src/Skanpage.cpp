@@ -7,8 +7,6 @@
 
 #include "Skanpage.h"
 
-
-#include <KAboutApplicationDialog>
 #include <KAboutData>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -89,11 +87,6 @@ void Skanpage::imageReady(const QImage &image)
 {
     m_docHandler->addImage(image);
     m_scannedImages++;
-}
-
-void Skanpage::showAboutDialog(void)
-{
-    KAboutApplicationDialog(KAboutData::applicationData()).exec();
 }
 
 void Skanpage::saveScannerOptions()

@@ -76,7 +76,6 @@ public:
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
     Q_INVOKABLE bool openDevice(const QString &deviceName);
-    Q_INVOKABLE void showAboutDialog();
 
 Q_SIGNALS:
     void progressChanged(int progress);
