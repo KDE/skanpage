@@ -59,6 +59,7 @@ SPDX-License-Identifier: CC0-1.0
   <description>
     <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al desat de documents i imatges.</p>
+    <p xml:lang="ca-valencia">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al guardat de documents i imatges.</p>
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation sur plusieurs pages et l'enregistrement de documents et d'images.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van documenten en afbeeldingen.</p>
     <p xml:lang="sl">Preprosta aplikacija za optično branje več strani in shranjevanje dokumentov in slik.</p>
@@ -67,6 +68,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="x-test">xxSkanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.xx</p>
     <p>Features:</p>
     <p xml:lang="ca">Característiques:</p>
+    <p xml:lang="ca-valencia">Característiques:</p>
     <p xml:lang="cs">Vlastnosti:</p>
     <p xml:lang="fr">Fonctionnalités :</p>
     <p xml:lang="nl">Mogelijkheden:</p>
@@ -77,6 +79,7 @@ SPDX-License-Identifier: CC0-1.0
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
+      <li xml:lang="ca-valencia">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="fr">Numérisation à partir de périphériques de numérisation à plat ou « ADF ».</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
       <li xml:lang="sl">Optično branje z namiznih in bralnikov s podajalniki listov</li>
@@ -85,6 +88,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="x-test">xxScanning from flatbed and ADF scannersxx</li>
       <li>Configurable options for scanning device</li>
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
+      <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="cs">Nastavitelné volby skenovacího zařízení</li>
       <li xml:lang="fr">Options configurables pour un périphérique de numérisation</li>
       <li xml:lang="nl">Te configureren opties voor scanapparaat</li>
@@ -94,6 +98,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="x-test">xxConfigurable options for scanning devicexx</li>
       <li>Reordering, rotation and deletion of scanned pages</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
+      <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
       <li xml:lang="sl">Zamenjava vrstnega reda, vrtenje in brisanje prebranih strani</li>
@@ -102,6 +107,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="x-test">xxReordering, rotation and deletion of scanned pagesxx</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ca">Desat en documents PDF multipàgina i fitxers d'imatge</li>
+      <li xml:lang="ca-valencia">Guardat en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="cs">Ukládání do vícestránkových souborů PDF a souborů obrázků</li>
       <li xml:lang="fr">Enregistrement de documents « PDF » sur plusieurs pages et de fichiers d'image.</li>
       <li xml:lang="nl">Opslaan in multi-pagina PDF-documenten en afbeeldingsbestanden</li>
