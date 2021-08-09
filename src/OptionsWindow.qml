@@ -24,36 +24,79 @@ Window {
     minimumHeight: 400
     minimumWidth: 600
 
-    ScrollView {
-        id: optionsView
+    onClosing: skanpage.optionsModel.resetOptionsValues()
 
+    ColumnLayout {
         anchors.fill: parent
 
-        leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-        rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        ScrollView {
+            id: optionsView
 
-        enabled: !skanpage.scanInProgress
+            Layout.fillHeight: true
+            Layout.fillWidth: true
 
-        Kirigami.FormLayout {
-            id: form
+            leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
-            width: optionsView.width
-            height: children.height
+            enabled: !skanpage.scanInProgress
 
-            Repeater {
-                model: skanpage.optionsModel
+            Kirigami.FormLayout {
+                id: form
 
-                delegate: RowLayout {
-                    id: delegate
+                width: optionsView.width
+                height: children.height
 
-                    Kirigami.FormData.label: (model.type == KSaneOption.TypeBool || model.type == KSaneOption.TypeAction) ? "" : i18nc("Separator between a title and a value", "%1:", model.title)
+                Repeater {
+                    model: skanpage.optionsModel
 
-                    visible: model.visible && model.type != KSaneOption.TypeGamma && model.type != KSaneOption.TypeDetectFail
+                    delegate: RowLayout {
+                        id: delegate
 
-                    OptionDelegate {
-                        modelItem: model
-                        onValueChanged: model.value = value
+                        Kirigami.FormData.label: (model.type == KSaneOption.TypeBool || model.type == KSaneOption.TypeAction) ? "" : i18nc("Separator between a title and a value", "%1:", model.title)
+
+                        visible: model.visible && model.type != KSaneOption.TypeGamma && model.type != KSaneOption.TypeDetectFail
+
+                        OptionDelegate {
+                            modelItem: model
+                            onValueChanged: model.value = value
+                        }
                     }
+                }
+            }
+        }
+
+        RowLayout {
+
+            DialogButtonBox {
+
+                Button {
+                    text: i18n("Reset")
+                    icon.name: 'edit-undo'
+                    enabled: skanpage.optionsModel.isModified
+                    DialogButtonBox.buttonRole: DialogButtonBox.ResetRole
+                    onClicked: skanpage.optionsModel.resetOptionsValues()
+                }
+
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+
+            DialogButtonBox {
+                Button {
+                    text: i18n("Apply")
+                    icon.name: 'dialog-ok-apply'
+                    enabled: skanpage.optionsModel.isModified
+                    DialogButtonBox.buttonRole: DialogButtonBox.ApplyRole
+                    onClicked: skanpage.optionsModel.saveOptionsValues()
+                }
+
+                Button {
+                    text: i18n("Close")
+                    icon.name: 'dialog-cancel'
+                    DialogButtonBox.buttonRole: DialogButtonBox.DestructiveRole
+                    onClicked: optionsWindow.close()
                 }
             }
         }

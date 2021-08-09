@@ -23,6 +23,8 @@ class OptionsModel : public QAbstractListModel
 
     Q_PROPERTY(int rowCount READ rowCount NOTIFY rowCountChanged)
 
+    Q_PROPERTY(bool isModified READ isModified NOTIFY isModifiedChanged)
+
 public:
     enum OptionsModelRoles {
         NameRole = Qt::UserRole + 1,
@@ -51,12 +53,20 @@ public:
     bool setData(const QModelIndex &index, const QVariant &value, int role = ValueRole) override;
     
     void setOptionsList(const QList<KSaneIface::KSaneOption *> optionsList); 
+
+    bool isModified() const;
+
+    Q_INVOKABLE void resetOptionsValues();
+
+    Q_INVOKABLE void saveOptionsValues();
     
     void clearOptions();
     
 Q_SIGNALS:
-    
+
     void rowCountChanged();
+
+    void isModifiedChanged();
     
 private:
     
