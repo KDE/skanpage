@@ -1,7 +1,7 @@
 #
 # SPDX-FileCopyrightText: 2020 by Alexander Stippich <a.stippich@gmx.net>
 #
-# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+# SPDX-License-Identifier: BSD-2-Clause
 #
 
 ecm_install_icons(ICONS
