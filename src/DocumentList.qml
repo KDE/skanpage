@@ -215,7 +215,7 @@ ColumnLayout {
         }
 
         Label {
-            text: i18np("1 page", "%1 pages", skanpage.documentModel.count)
+            text: i18np("%1 page", "%1 pages", skanpage.documentModel.count)
         }
         
         Item {
