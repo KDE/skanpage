@@ -1,3 +1,10 @@
+<!--
+ SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
+
+ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+-->
+
+
 # Skanpage
 
 Skanpage is a multi-page scanning application built using the libksane library and a QML interface.
