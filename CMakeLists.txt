@@ -68,3 +68,5 @@ add_subdirectory(icons)
 #add_subdirectory(autotests)
 
 ki18n_install(po)
+
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
