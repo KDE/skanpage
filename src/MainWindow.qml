@@ -37,6 +37,8 @@ ApplicationWindow {
         property int y: 0
         property int width: 950
         property int height: 550
+        property int optionWidth: 400
+        property int optionHeight: 400
         property var splitViewState
     }
     
@@ -49,6 +51,8 @@ ApplicationWindow {
             persistentSettings.width = mainWindow.width
             persistentSettings.height = mainWindow.height
             persistentSettings.splitViewState = mainDocument.splitView.saveState()
+            persistentSettings.optionHeight = optionsWindow.height
+            persistentSettings.optionWidth = optionsWindow.width
         }
     }
     
@@ -285,6 +289,9 @@ ApplicationWindow {
     
     OptionsWindow {
         id: optionsWindow
+
+        height: persistentSettings.optionHeight
+        width: persistentSettings.optionWidth
     }
     
     FileDialog {
