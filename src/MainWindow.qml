@@ -37,7 +37,7 @@ ApplicationWindow {
         property int y: 0
         property int width: 950
         property int height: 550
-        property int optionWidth: 400
+        property int optionWidth: 600
         property int optionHeight: 400
         property var splitViewState
     }
