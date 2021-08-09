@@ -28,7 +28,7 @@ private Q_SLOTS:
 
 void DocumentSaverTest::initTestCase()
 {
-    QImage image(QStringLiteral(TESTS_IMAGES_PATH) + QStringLiteral("/test150.jpg"));
+    QImage image(QFINDTESTDATA("images/test150.jpg"));
     QPageSize pageSize = QPageSize(QPageSize::A4);
     int rotation = 0;
     for (int i = 0; i < 5; i++) {

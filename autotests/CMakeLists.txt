@@ -24,5 +24,3 @@ ecm_add_test(documentSaverTest.cpp ../src/DocumentSaver.cpp ../src/SkanpageUtils
         KF5::I18n
 )
 
-configure_file(testconfig.h.in
-               ${CMAKE_CURRENT_BINARY_DIR}/testconfig.h @ONLY)
