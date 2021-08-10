@@ -60,7 +60,9 @@ SPDX-License-Identifier: CC0-1.0
     <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al desat de documents i imatges.</p>
     <p xml:lang="ca-valencia">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al guardat de documents i imatges.</p>
+    <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como documentos e imágenes.</p>
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation sur plusieurs pages et l'enregistrement de documents et d'images.</p>
+    <p xml:lang="ko">Skanpage는 여러 쪽 스캔과 문서 및 그림 저장이 가능한 간단한 스캔 프로그램입니다.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van documenten en afbeeldingen.</p>
     <p xml:lang="sl">Preprosta aplikacija za optično branje več strani in shranjevanje dokumentov in slik.</p>
     <p xml:lang="sv">Skanpage är ett enkelt program för bildinläsning konstruerat för inläsning av flera sidor och för att spara dokument och bilder.</p>
@@ -70,7 +72,9 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
     <p xml:lang="cs">Vlastnosti:</p>
+    <p xml:lang="es">Funcionalidades:</p>
     <p xml:lang="fr">Fonctionnalités :</p>
+    <p xml:lang="ko">기능:</p>
     <p xml:lang="nl">Mogelijkheden:</p>
     <p xml:lang="sl">Možnosti:</p>
     <p xml:lang="sv">Funktioner:</p>
@@ -80,7 +84,9 @@ SPDX-License-Identifier: CC0-1.0
       <li>Scanning from flatbed and ADF scanners</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="ca-valencia">Escaneig amb escàners de superfície plana i ADF</li>
+      <li xml:lang="es">Escanear mediante escáneres de cama plana y con alimentador automático de documentos</li>
       <li xml:lang="fr">Numérisation à partir de périphériques de numérisation à plat ou « ADF ».</li>
+      <li xml:lang="ko">평판 및 ADF 스캐너에서 스캔</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
       <li xml:lang="sl">Optično branje z namiznih in bralnikov s podajalniki listov</li>
       <li xml:lang="sv">Inläsning från flatbädds- och ADF-bildläsare</li>
@@ -90,7 +96,9 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="cs">Nastavitelné volby skenovacího zařízení</li>
+      <li xml:lang="es">Opciones configurables para el dispositivo de escaneo</li>
       <li xml:lang="fr">Options configurables pour un périphérique de numérisation</li>
+      <li xml:lang="ko">스캔 장치 설정</li>
       <li xml:lang="nl">Te configureren opties voor scanapparaat</li>
       <li xml:lang="sl">Nastavljanje možnosti za bralno napravo</li>
       <li xml:lang="sv">Anpassningsbara alternativ för bildläsarenhet</li>
@@ -99,7 +107,9 @@ SPDX-License-Identifier: CC0-1.0
       <li>Reordering, rotation and deletion of scanned pages</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
+      <li xml:lang="es">Reordenar, rotar y borrar páginas escaneadas</li>
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
+      <li xml:lang="ko">스캔한 페이지 순서 조정, 회전, 삭제</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
       <li xml:lang="sl">Zamenjava vrstnega reda, vrtenje in brisanje prebranih strani</li>
       <li xml:lang="sv">Omordning, rotation och borttagning av inlästa sidor</li>
@@ -109,7 +119,9 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ca">Desat en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="ca-valencia">Guardat en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="cs">Ukládání do vícestránkových souborů PDF a souborů obrázků</li>
+      <li xml:lang="es">Guardar en documentos PDF multipágina y en archivos de imagen</li>
       <li xml:lang="fr">Enregistrement de documents « PDF » sur plusieurs pages et de fichiers d'image.</li>
+      <li xml:lang="ko">여러 쪽 PDF 문서 및 그림 파일로 저장</li>
       <li xml:lang="nl">Opslaan in multi-pagina PDF-documenten en afbeeldingsbestanden</li>
       <li xml:lang="sl">Shranjevanje v večstranske dokumente PDF in slikovne datoteke</li>
       <li xml:lang="sv">Spara PDF-dokument med flera sidor och bildfiler</li>
