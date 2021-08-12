@@ -64,10 +64,12 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation sur plusieurs pages et l'enregistrement de documents et d'images.</p>
     <p xml:lang="ko">Skanpage는 여러 쪽 스캔과 문서 및 그림 저장이 가능한 간단한 스캔 프로그램입니다.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van documenten en afbeeldingen.</p>
+    <p xml:lang="sk">Skanpage je jednoduchá skenovacia aplikácia určená na viacstránkové skenovanie a ukladanie dokumentov a obrázkov.</p>
     <p xml:lang="sl">Preprosta aplikacija za optično branje več strani in shranjevanje dokumentov in slik.</p>
     <p xml:lang="sv">Skanpage är ett enkelt program för bildinläsning konstruerat för inläsning av flera sidor och för att spara dokument och bilder.</p>
     <p xml:lang="uk">Skanpage — проста програма для сканування, яку розроблено для сканування багато сторінкових документів і збереження документів та зображень.</p>
     <p xml:lang="x-test">xxSkanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.xx</p>
+    <p xml:lang="zh-CN">Skanpage 是一款简易扫描应用程序，可以进行多页扫描并保存文档和图像。</p>
     <p>Features:</p>
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
@@ -76,10 +78,12 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fr">Fonctionnalités :</p>
     <p xml:lang="ko">기능:</p>
     <p xml:lang="nl">Mogelijkheden:</p>
+    <p xml:lang="sk">Funkcie:</p>
     <p xml:lang="sl">Možnosti:</p>
     <p xml:lang="sv">Funktioner:</p>
     <p xml:lang="uk">Можливості:</p>
     <p xml:lang="x-test">xxFeatures:xx</p>
+    <p xml:lang="zh-CN">程序功能：</p>
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
@@ -88,10 +92,12 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Numérisation à partir de périphériques de numérisation à plat ou « ADF ».</li>
       <li xml:lang="ko">평판 및 ADF 스캐너에서 스캔</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
+      <li xml:lang="sk">Skenovanie z plochých skenerov a ADF skenerov</li>
       <li xml:lang="sl">Optično branje z namiznih in bralnikov s podajalniki listov</li>
       <li xml:lang="sv">Inläsning från flatbädds- och ADF-bildläsare</li>
       <li xml:lang="uk">Сканування з планшетних сканерів та сканерів із автоматичною подачею документів</li>
       <li xml:lang="x-test">xxScanning from flatbed and ADF scannersxx</li>
+      <li xml:lang="zh-CN">支持平板式扫描仪和自动送纸器扫描仪</li>
       <li>Configurable options for scanning device</li>
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
@@ -100,10 +106,12 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Options configurables pour un périphérique de numérisation</li>
       <li xml:lang="ko">스캔 장치 설정</li>
       <li xml:lang="nl">Te configureren opties voor scanapparaat</li>
+      <li xml:lang="sk">Nastaviteľné možnosti pre skenovacie zariadenie</li>
       <li xml:lang="sl">Nastavljanje možnosti za bralno napravo</li>
       <li xml:lang="sv">Anpassningsbara alternativ för bildläsarenhet</li>
       <li xml:lang="uk">Можливість налаштовування параметрів сканування</li>
       <li xml:lang="x-test">xxConfigurable options for scanning devicexx</li>
+      <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
       <li>Reordering, rotation and deletion of scanned pages</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
@@ -111,10 +119,12 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
       <li xml:lang="ko">스캔한 페이지 순서 조정, 회전, 삭제</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
+      <li xml:lang="sk">Zmena poradia, otočenie a vymazanie naskenovaných strán</li>
       <li xml:lang="sl">Zamenjava vrstnega reda, vrtenje in brisanje prebranih strani</li>
       <li xml:lang="sv">Omordning, rotation och borttagning av inlästa sidor</li>
       <li xml:lang="uk">Переупорядковування, обертання та вилучення сканованих сторінок</li>
       <li xml:lang="x-test">xxReordering, rotation and deletion of scanned pagesxx</li>
+      <li xml:lang="zh-CN">对已扫描的页面进行重新排序、旋转和删除</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ca">Desat en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="ca-valencia">Guardat en documents PDF multipàgina i fitxers d'imatge</li>
@@ -123,10 +133,12 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Enregistrement de documents « PDF » sur plusieurs pages et de fichiers d'image.</li>
       <li xml:lang="ko">여러 쪽 PDF 문서 및 그림 파일로 저장</li>
       <li xml:lang="nl">Opslaan in multi-pagina PDF-documenten en afbeeldingsbestanden</li>
+      <li xml:lang="sk">Ukladanie do viacstranových dokumentov PDF a obrazových súborov</li>
       <li xml:lang="sl">Shranjevanje v večstranske dokumente PDF in slikovne datoteke</li>
       <li xml:lang="sv">Spara PDF-dokument med flera sidor och bildfiler</li>
       <li xml:lang="uk">Збереження багатосторінкових документів PDF та файлів зображень</li>
       <li xml:lang="x-test">xxSaving to multi-page PDF documents and image filesxx</li>
+      <li xml:lang="zh-CN">保存为多页 PDF 文档和图像文件</li>
     </ul>
   </description>
   <screenshots>
