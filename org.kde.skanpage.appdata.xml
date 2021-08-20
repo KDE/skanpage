@@ -58,6 +58,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="zh-CN">简易多页扫描应用程序</summary>
   <description>
     <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
+    <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لإجراء مسح ضوئي متعدد الصفحات وحفظ الصور والمستندات.</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al desat de documents i imatges.</p>
     <p xml:lang="ca-valencia">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al guardat de documents i imatges.</p>
     <p xml:lang="en-GB">Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
@@ -73,6 +74,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="x-test">xxSkanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.xx</p>
     <p xml:lang="zh-CN">Skanpage 是一款简易扫描应用程序，可以进行多页扫描并保存文档和图像。</p>
     <p>Features:</p>
+    <p xml:lang="ar">الميزات:</p>
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
     <p xml:lang="cs">Vlastnosti:</p>
@@ -91,6 +93,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="zh-CN">程序功能：</p>
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
+      <li xml:lang="ar">المسح الضوئي من الماسحات الضوئية المسطحة ووحدة تغذية المستندات التلقائية</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="ca-valencia">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="en-GB">Scanning from flatbed and ADF scanners</li>
@@ -106,6 +109,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="x-test">xxScanning from flatbed and ADF scannersxx</li>
       <li xml:lang="zh-CN">支持平板式扫描仪和自动送纸器扫描仪</li>
       <li>Configurable options for scanning device</li>
+      <li xml:lang="ar">خيارات قابلة للضبط لمسح الجهاز</li>
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="cs">Nastavitelné volby skenovacího zařízení</li>
@@ -122,6 +126,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="x-test">xxConfigurable options for scanning devicexx</li>
       <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
       <li>Reordering, rotation and deletion of scanned pages</li>
+      <li xml:lang="ar">إعادة ترتيب وتدوير وحذف الصفحات الممسوحة ضوئيًا</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="en-GB">Reordering, rotation and deletion of scanned pages</li>
@@ -137,6 +142,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="x-test">xxReordering, rotation and deletion of scanned pagesxx</li>
       <li xml:lang="zh-CN">对已扫描的页面进行重新排序、旋转和删除</li>
       <li>Saving to multi-page PDF documents and image files</li>
+      <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
       <li xml:lang="ca">Desat en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="ca-valencia">Guardat en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="cs">Ukládání do vícestránkových souborů PDF a souborů obrázků</li>
