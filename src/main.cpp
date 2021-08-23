@@ -1,6 +1,6 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<InProgressPainter>("org.kde.skanpage", 1, 0, "InProgressPainter");
     qRegisterMetaType<SkanpageUtils::MessageLevel>();
     qRegisterMetaType<SkanpageUtils::DocumentPages>();
-    
+
     KLocalizedString::setApplicationDomain("skanpage");
 
     KAboutData aboutData(QLatin1String("skanpage"),
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(QStringLiteral("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
     aboutData.addAuthor(QStringLiteral("Alexander Stippich"), i18n("developer"), QLatin1String("a.stippich@gmx.net"));
     aboutData.setBugAddress("https://bugs.kde.org/enter_bug.cgi?product=skanpage");
-    
+
     app.setWindowIcon(QIcon::fromTheme(QLatin1String("skanpage")));
 
     KAboutData::setApplicationData(aboutData);

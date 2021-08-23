@@ -1,6 +1,6 @@
 /**
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -35,7 +35,7 @@ void InProgressPainter::paint(QPainter *painter)
         const int imageWidth = m_scanInterface->scanImage()->width();
         const int itemHeight = height();
         const int itemWidth = width();
-        
+
         double scaleHeight = static_cast<double>(itemHeight)/imageHeight;
         double scaleWidth = static_cast<double>(itemWidth)/imageWidth;
         double scale = qMin(scaleHeight, qMin(scaleWidth, 1.0));

@@ -1,7 +1,7 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -49,7 +49,7 @@ int DocumentModel::activePageIndex() const
 
 int DocumentModel::activePageRotation() const
 {
-    if (m_activePageIndex >= 0 && m_activePageIndex < rowCount()) { 
+    if (m_activePageIndex >= 0 && m_activePageIndex < rowCount()) {
         return m_pages.at(m_activePageIndex).rotationAngle;
     }
     return 0;
@@ -96,13 +96,13 @@ void DocumentModel::addImage(const QImage &image, const int dpi)
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
     m_pages.append({std::shared_ptr<QTemporaryFile>(tempImageFile), pageSize, dpi});
     endInsertRows();
-   
+
     Q_EMIT countChanged();
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
-    } 
-    
+    }
+
     m_activePageIndex = m_pages.count() - 1;
     Q_EMIT activePageChanged();
     Q_EMIT newImageAdded();
@@ -138,7 +138,7 @@ void DocumentModel::moveImage(int from, int to)
         m_activePageIndex = from;
     }
     Q_EMIT activePageChanged();
-    
+
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
@@ -173,18 +173,18 @@ void DocumentModel::removeImage(int row)
     if (row < 0 || row >= m_pages.count()) {
         return;
     }
-    
+
     beginRemoveRows(QModelIndex(), row, row);
     m_pages.removeAt(row);
     endRemoveRows();
-        
+
     if (row < m_activePageIndex) {
         m_activePageIndex -= 1;
     } else if (m_activePageIndex >= m_pages.count()) {
         m_activePageIndex = m_pages.count() - 1;
     }
     Q_EMIT activePageChanged();
-    
+
     Q_EMIT countChanged();
 
     if (!m_changed) {
@@ -234,7 +234,7 @@ void DocumentModel::clearData()
     Q_EMIT countChanged();
 
     Q_EMIT countChanged();
-    
+
     if (m_changed) {
         m_changed = false;
         Q_EMIT changedChanged();

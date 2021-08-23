@@ -23,7 +23,7 @@ using namespace KSaneIface;
 class DevicesModel : public QAbstractListModel
 {
     Q_OBJECT
-    
+
     Q_PROPERTY(int rowCount READ rowCount NOTIFY rowCountChanged)
 
 public:
@@ -48,9 +48,9 @@ public Q_SLOTS:
     void selectDevice(int i);
 
 Q_SIGNALS:
-    
+
     void rowCountChanged();
-    
+
 private:
     std::unique_ptr<DevicesModelPrivate> d;
 };

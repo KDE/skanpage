@@ -1,6 +1,6 @@
 /**
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -37,7 +37,7 @@ void DocumentPrinter::printDocument(const SkanpageUtils::DocumentPages &document
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Previous printing operation still in progress."));
         return;
     }
-    
+
     QPrintDialog printDialog(m_printer.get());
 
     if (printDialog.exec() == QDialog::Accepted) {
@@ -45,7 +45,7 @@ void DocumentPrinter::printDocument(const SkanpageUtils::DocumentPages &document
     }
 }
 
-void DocumentPrinter::print(const SkanpageUtils::DocumentPages &document) 
+void DocumentPrinter::print(const SkanpageUtils::DocumentPages &document)
 {
     int rotationAngle;
     QPainter painter(m_printer.get());
@@ -59,13 +59,13 @@ void DocumentPrinter::print(const SkanpageUtils::DocumentPages &document)
         if (rotationAngle != 0) {
             pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
         }
-        
+
         QSize size = pageImage.size();
         size.scale(rect.size(), Qt::KeepAspectRatio);
         painter.setViewport(rect.x(), rect.y(),size.width(), size.height());
         painter.setWindow(pageImage.rect());
         painter.drawImage(0, 0, pageImage);
     }
-    
-    Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document sent to printer.")); 
+
+    Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document sent to printer."));
 }

@@ -1,6 +1,6 @@
 /**
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -41,7 +41,7 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
     m_future = QtConcurrent::run(this, &DocumentSaver::save, fileUrl, document);
 }
 
-void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document) 
+void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document)
 {
     const QFileInfo &fileInfo = QFileInfo(fileUrl.toLocalFile());
     const QString &fileSuffix = fileInfo.suffix();
@@ -50,10 +50,10 @@ void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages
 
     if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
         savePDF(fileUrl.toLocalFile(), document);
-        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF.")); 
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
     } else {
         saveImage(fileInfo, document);
-        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image.")); 
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
     }
     Q_EMIT fileSaved(fileInfo.fileName(), document);
 }
@@ -63,17 +63,17 @@ void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::Docume
     QPdfWriter writer(filePath);
     QPainter painter;
     int rotationAngle;
-    
+
     for (int i = 0; i < document.count(); ++i) {
         writer.setResolution(document.at(i).dpi);
         writer.setPageSize(document.at(i).pageSize);
         writer.setPageMargins(QMarginsF(0, 0, 0, 0));
         rotationAngle = document.at(i).rotationAngle;
-        
+
         QTransform transformation;
         if (rotationAngle != 0) {
             transformation.translate(writer.height()/2, writer.width()/2);
-            transformation.rotate(rotationAngle); 
+            transformation.rotate(rotationAngle);
             transformation.translate(-writer.height()/2, -writer.width()/2);
         }
         if (rotationAngle == 90 || rotationAngle == 270) {
@@ -83,11 +83,11 @@ void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::Docume
         } else {
             writer.setPageOrientation(QPageLayout::Portrait);
         }
-        writer.newPage();        
+        writer.newPage();
         if (i == 0) {
             painter.begin(&writer);
         }
-        
+
         painter.setTransform(transformation);
         QImage pageImage(document.at(i).temporaryFile->fileName());
         painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());

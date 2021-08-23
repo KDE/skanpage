@@ -1,7 +1,7 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -37,15 +37,15 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksaneInterface.get(), &KSaneCore::scanFinished, this, &Skanpage::scanDone);
     connect(m_ksaneInterface.get(), &KSaneCore::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
     connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
-    
+
     reloadDevicesList();
 
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
-        
+
         KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
         const QString savedDeviceName = options.readEntry(QStringLiteral("deviceName"));
-        
+
         openDevice(savedDeviceName);
     }
 }
@@ -88,7 +88,7 @@ bool Skanpage::scanInProgress() const
 }
 
 void Skanpage::imageReady(const QImage &image)
-{   
+{
     m_docHandler->addImage(image, m_resolutionOption->value().toInt());
 }
 
@@ -98,11 +98,11 @@ void Skanpage::showAboutDialog(void)
 }
 
 void Skanpage::saveScannerOptions()
-{  
+{
     KConfigGroup options(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_ksaneInterface->deviceName()));
 
     QMap<QString, QString> optionMap = m_ksaneInterface->getOptionsMap();
-    
+
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving scanner options") << optionMap;
     QMap<QString, QString>::const_iterator it = optionMap.constBegin();
     while (it != optionMap.constEnd()) {
@@ -128,11 +128,11 @@ void Skanpage::loadScannerOptions()
 void Skanpage::availableDevices(const QList<KSaneCore::DeviceInfo> &deviceList)
 {
     if (m_state != ReadyForScan) {
-        m_availableDevices->updateDevicesList(deviceList);    
+        m_availableDevices->updateDevicesList(deviceList);
 
         m_state = DeviceSelection;
         Q_EMIT applicationStateChanged();
-        
+
         // if there is only one scanning device available, open it
         if (m_availableDevices->rowCount() == 1) {
             m_availableDevices->selectDevice(0);
@@ -163,7 +163,7 @@ bool Skanpage::openDevice(const QString &deviceName)
 void Skanpage::finishOpeningDevice(const QString &deviceName)
 {
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName);
-    
+
     KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
     options.writeEntry(QStringLiteral("deviceName"), deviceName);
 
@@ -184,7 +184,7 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
 void Skanpage::reloadDevicesList()
 {
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("(Re-)loading devices list");
-    
+
     if (m_ksaneInterface->closeDevice()) {
         m_optionsModel->clearOptions();
         m_resolutionOption->clearOption();
@@ -267,7 +267,7 @@ SingleOption *Skanpage::scanModeOption() const
 {
     return m_scanModeOption.get();
 }
-    
+
 void Skanpage::cancelScan()
 {
     m_ksaneInterface->stopScan();

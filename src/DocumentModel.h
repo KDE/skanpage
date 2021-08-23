@@ -1,7 +1,7 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -40,7 +40,7 @@ public:
     int activePageRotation() const;
     QUrl activePageSource() const;
     bool changed() const;
-    
+
     void setActivePageIndex(int);
 
     void addImage(const QImage &image, const int dpi);
@@ -48,15 +48,15 @@ public:
     Q_INVOKABLE void clearData();
 
     Q_INVOKABLE void moveImage(int from, int to);
-    
+
     Q_INVOKABLE void removeImage(int row);
-    
+
     Q_INVOKABLE void rotateImage(int row, bool positiveDirection);
 
     Q_INVOKABLE void save(const QUrl &fileUrl);
 
     Q_INVOKABLE void print();
-    
+
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -71,7 +71,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void updateFileInformation(const QString &fileName, const SkanpageUtils::DocumentPages &document);
-    
+
 private:
     SkanpageUtils::DocumentPages m_pages;
     QString m_name;

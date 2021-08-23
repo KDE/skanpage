@@ -6,7 +6,7 @@
 include_directories(${skanpage_BINARY_DIR})
 
 set(skanpage_SRCS
-    main.cpp 
+    main.cpp
     Skanpage.cpp
     SkanpageUtils.cpp
     DocumentModel.cpp

@@ -88,7 +88,7 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
     case StepValueRole:
         return d->mOptionsList.at(index.row())->stepValue();
         break;
-    case ValueListRole: 
+    case ValueListRole:
         return d->mOptionsList.at(index.row())->valueList();
         break;
     case UnitRole:
@@ -159,7 +159,7 @@ void OptionsModel::saveOptionsValues()
         return;
     }
     for (int i = 0; i < d->mOptionsList.size(); i++) {
-        if (d->mOptionsList.at(i)->state() == KSaneIface::KSaneOption::KSaneOptionState::StateActive && 
+        if (d->mOptionsList.at(i)->state() == KSaneIface::KSaneOption::KSaneOptionState::StateActive &&
             d->mOptionsList.at(i)->type() != KSaneIface::KSaneOption::TypeAction &&
             d->mOptionsList.at(i)->value() != d->mCurrentValueList.at(i)) {
 

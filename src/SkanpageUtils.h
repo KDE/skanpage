@@ -1,6 +1,6 @@
 /**
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -16,14 +16,14 @@
 namespace SkanpageUtils {
 
     Q_NAMESPACE
-    
+
     enum MessageLevel {
         ErrorMessage,
         InformationMessage,
     };
 
     Q_ENUM_NS(MessageLevel)
-        
+
     struct PageProperties {
         std::shared_ptr<QTemporaryFile> temporaryFile;
         QPageSize pageSize;

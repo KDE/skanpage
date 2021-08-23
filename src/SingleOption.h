@@ -32,7 +32,7 @@ class SingleOption : public QObject
 public:
      explicit SingleOption(QObject *parent = nullptr);
     ~SingleOption();
-    
+
     QVariant name() const;
     QVariant title() const;
     QVariant description() const;
@@ -43,9 +43,9 @@ public:
     QVariant unit() const;
     QVariant type() const;
     QVariant visible() const;
-    
+
     QVariant value() const;
-    
+
     void clearOption();
     void setOption(KSaneIface::KSaneOption *option);
 
@@ -55,7 +55,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void optionReloaded();
     void valueChanged();
-    
+
 private:
     KSaneIface::KSaneOption *mOption = nullptr;
 };
