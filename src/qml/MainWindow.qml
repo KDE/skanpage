@@ -1,7 +1,7 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -17,11 +17,11 @@ import org.kde.skanpage 1.0
 
 ApplicationWindow {
     id: mainWindow
-    
+
     visible: true
-        
+
     title: i18nc("document title: app title", "%1 ― Skanpage", mainDocument.name)
-    
+
     width: persistentSettings.width
     height: persistentSettings.height
     x: persistentSettings.x
@@ -29,10 +29,10 @@ ApplicationWindow {
 
     minimumWidth: mainToolBar.implicitWidth
     minimumHeight: 400
-    
+
     Settings {
         id: persistentSettings
-        
+
         property int x: 0
         property int y: 0
         property int width: 950
@@ -41,10 +41,10 @@ ApplicationWindow {
         property int optionHeight: 400
         property var splitViewState
     }
-    
+
     Connections {
         target: Qt.application
-        
+
         function onAboutToQuit() {
             persistentSettings.x = mainWindow.x
             persistentSettings.y = mainWindow.y
@@ -55,20 +55,20 @@ ApplicationWindow {
             persistentSettings.optionWidth = optionsWindow.width
         }
     }
-    
+
     Connections {
         target: skanpage
-        
+
         function onNewUserMessage(level, message) {
             errorMessage.text = message
             if (level == Skanpage.ErrorMessage) {
                 errorMessage.type = Kirigami.MessageType.Error
             } else {
-                errorMessage.type = Kirigami.MessageType.Information 
+                errorMessage.type = Kirigami.MessageType.Information
             }
             labelWidth.text = message
             errorMessage.visible = true
-            hideNotificationTimer.start()  
+            hideNotificationTimer.start()
         }
     }
 
@@ -124,7 +124,7 @@ ApplicationWindow {
         enabled: skanpage.documentModel.count !== 0
         onTriggered: skanpage.documentModel.print()
     }
-    
+
     Action {
         id: openMenuAction
         icon.name: "application-menu"
@@ -136,14 +136,14 @@ ApplicationWindow {
             }
         }
     }
-    
+
     Action {
         id: showAboutAction
         icon.name: "skanpage"
         text: i18n("About Skanpage")
         onTriggered: skanpage.showAboutDialog()
     }
-    
+
     Action {
         id: reselectDevicesAction
         icon.name: "view-refresh"
@@ -151,20 +151,20 @@ ApplicationWindow {
         onTriggered: skanpage.reloadDevicesList()
         enabled: !skanpage.scanInProgress
     }
-    
+
     Menu {
         id: applicationMenu
 
         MenuItem {
-            action: reselectDevicesAction 
+            action: reselectDevicesAction
         }
-        
+
         MenuItem {
-            action: showAboutAction 
+            action: showAboutAction
         }
-        
+
         MenuItem {
-            action: quitAction 
+            action: quitAction
         }
     }
 
@@ -173,76 +173,76 @@ ApplicationWindow {
         width: labelWidth.width + Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
         height: Math.max(labelWidth.height, Kirigami.Units.iconSizes.medium) + Kirigami.Units.largeSpacing
         z: 2
-        
+
         anchors {
             top: parent.top
             topMargin: mainToolBar.height + Kirigami.Units.largeSpacing
             horizontalCenter: parent.horizontalCenter
         }
-        
+
         Timer {
             id: hideNotificationTimer
             interval: 5000
             onTriggered: errorMessage.visible = false
         }
- 
+
         TextMetrics {
             id: labelWidth
         }
     }
-    
+
     ColumnLayout {
         id: mainLayout
         anchors.fill: parent
-        
+
         spacing: 0
-        
+
         ToolBar {
             id: mainToolBar
             Layout.fillWidth: true
-            
+
             RowLayout {
                 id: toolbarRow
                 anchors.fill: parent
                 spacing: 0
-                
-                ToolButton { 
+
+                ToolButton {
                     action: scanAction
                 }
-                
+
                 ToolButton {
-                    action: saveDocAction 
+                    action: saveDocAction
                 }
-                
+
                 ToolButton {
-                    action: newDocAction 
+                    action: newDocAction
                 }
-                
+
                 OptionDelegate {
                     modelItem: skanpage.resolutionOption
                     onValueChanged: skanpage.resolutionOption.value = value
                     enabled: !skanpage.scanInProgress
                 }
-                
+
                 OptionDelegate {
                     modelItem: skanpage.pageSizeOption
                     onValueChanged: skanpage.pageSizeOption.value = value
                     enabled: !skanpage.scanInProgress
-                }  
-                
+                }
+
                 OptionDelegate {
                     modelItem: skanpage.sourceOption
                     onValueChanged: skanpage.sourceOption.value = value
                     enabled: !skanpage.scanInProgress
                 }
-                
+
                 OptionDelegate {
                     modelItem: skanpage.scanModeOption
                     onValueChanged: skanpage.scanModeOption.value = value
                     enabled: !skanpage.scanInProgress
                 }
-             
-                ToolButton { 
+
+                ToolButton {
                     action: optionsAction
                     visible: skanpage.optionsModel.rowCount > 0
                 }
@@ -251,49 +251,49 @@ ApplicationWindow {
                     id: toolbarSpacer
                     Layout.fillWidth: true
                 }
-                             
-                ToolButton { 
+
+                ToolButton {
                     action: printAction
                 }
 
-                ToolButton { 
+                ToolButton {
                     action: openMenuAction
                 }
             }
         }
-  
+
         DocumentView {
             id: mainDocument
-            
+
             visible: skanpage.applicationState == Skanpage.ReadyForScan
 
             Layout.fillWidth: true
             Layout.fillHeight: true
             focus: true
-            
+
             Component.onCompleted: {
                 mainDocument.splitView.restoreState(persistentSettings.splitViewState)
             }
         }
-        
+
         DevicesView {
             id: devicesView
-            
+
             visible: skanpage.applicationState != Skanpage.ReadyForScan
-            
+
             Layout.fillWidth: true
             Layout.fillHeight: true
             focus: true
         }
     }
-    
+
     OptionsWindow {
         id: optionsWindow
 
         height: persistentSettings.optionHeight
         width: persistentSettings.optionWidth
     }
-    
+
     FileDialog {
         id: saveFileDialog
         folder: shortcuts.documents

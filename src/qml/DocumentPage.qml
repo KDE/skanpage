@@ -1,19 +1,19 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.14 
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.12 as Kirigami
 
 Item {
     id: documentPage
-    
+
     Action {
         id: zoomInAction
         icon.name: "zoom-in"
@@ -55,7 +55,7 @@ Item {
         shortcut: "F"
         onTriggered: bigImage.zoomScale = 1
     }
-    
+
     Action {
         id: rotateLeftAction
         icon.name: "object-rotate-left"
@@ -76,110 +76,110 @@ Item {
         text: i18n("Delete Page")
         onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activeIndex)
     }
-    
+
     Connections {
         target: skanpage.documentModel
         function onNewImageAdded() {
             zoomFitAction.trigger()
         }
     }
-    
+
     Kirigami.PlaceholderMessage {
         id: emptyDocumentMessage
-        
+
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        
+
         visible: skanpage.documentModel.count === 0
-        
+
         icon.name: "document"
-        
+
         text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
     }
-    
+
     ColumnLayout {
         id: documentLayout
-        
+
         anchors.fill: parent
-        
+
         spacing: 0
-        
+
         visible: skanpage.documentModel.count > 0
-        
+
         ScrollView {
             id: imageViewer
             Layout.fillWidth: true
             Layout.fillHeight: true
-            
+
             contentWidth: Math.max(bigImage.width, imageViewer.availableWidth)
             contentHeight: Math.max(bigImage.height, imageViewer.availableHeight)
-            
+
             Item {
                 anchors.centerIn: parent
-                
+
                 implicitWidth: bigImage.landscape ? bigImage.height : bigImage.width
                 implicitHeight: bigImage.landscape ? bigImage.width : bigImage.height
-                
+
                 Image {
                     id: bigImage
-                    
+
                     readonly property bool landscape: (rotation == 270 || rotation == 90)
-                    property double zoomScale: Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)   
-                    
+                    property double zoomScale: Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)
+
                     anchors {
                         horizontalCenter: parent.horizontalCenter
                         verticalCenter: parent.verticalCenter
-                    } 
+                    }
 
                     width: sourceSize.width * zoomScale
                     height: sourceSize.height * zoomScale
-                    
+
                     source: skanpage.documentModel.activePageSource
-                    
+
                     rotation: skanpage.documentModel.activePageRotation
                     transformOrigin: Item.Center
-                }     
+                }
             }
         }
-        
+
         RowLayout {
             Layout.fillWidth: true
             Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-            
+
             ToolButton {
-                action: zoomInAction 
+                action: zoomInAction
             }
-            
-            ToolButton { 
-                action: zoomOutAction 
+
+            ToolButton {
+                action: zoomOutAction
             }
-            
-            ToolButton { 
+
+            ToolButton {
                 action: zoomFitAction
             }
-            
-            ToolButton { 
+
+            ToolButton {
                 action: zoomOrigAction
             }
-            
-            Item { 
+
+            Item {
                 id: toolbarSpacer
                 Layout.fillWidth: true
             }
 
-            ToolButton { 
-                action: rotateLeftAction 
+            ToolButton {
+                action: rotateLeftAction
             }
-            
-            ToolButton { 
+
+            ToolButton {
                 action: rotateRightAction
             }
-            
-            ToolButton { 
+
+            ToolButton {
                 action: deleteAction
             }
         }
     }
 }
 
-  
+

@@ -1,12 +1,12 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.15 
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.12 as Kirigami
@@ -17,26 +17,26 @@ ColumnLayout {
 
     ScrollView {
         id: scrollView
-        
+
         Layout.fillWidth: true
         Layout.fillHeight: true
 
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
         ScrollBar.vertical.policy: ScrollBar.AlwaysOn
-        
+
         ListView {
             id: listView
             anchors.fill: parent
 
             spacing: Kirigami.Units.smallSpacing
-            
+
             Connections {
                 target: skanpage.documentModel
                 function onActivePageChanged() {
                     listView.positionViewAtIndex(skanpage.documentModel.activePageIndex, ListView.Contain)
                 }
             }
-            
+
             displaced: Transition {
                 NumberAnimation {
                     properties: "x,y"
@@ -45,12 +45,12 @@ ColumnLayout {
             }
 
             model: skanpage.documentModel
-            
+
             onCurrentItemChanged: skanpage.documentModel.activePageIndex = currentIndex
 
             delegate: Rectangle {
                 id: delegateRoot
-                
+
                 readonly property url imageUrl: model.imageUrl
                 readonly property int contentWidth: width - border.width * 2
                 readonly property int rotationAngle: model.rotationAngle
@@ -58,7 +58,7 @@ ColumnLayout {
 
                 width: listView.width - scrollView.ScrollBar.vertical.width
                 height: (landscape ? contentWidth / iconImage.aspectRatio : contentWidth * iconImage.aspectRatio) + bottomRow.height + Kirigami.Units.smallSpacing * 2 + border.width * 2
-                
+
                 color: Kirigami.Theme.backgroundColor
 
                 border.width: 3
@@ -66,13 +66,13 @@ ColumnLayout {
                 radius: 3
 
                 focus: index === listView.currentIndex
-                
+
                 MouseArea {
                     id: mouseArea
-                    
+
                     anchors.fill: parent
                     drag.target: contentColumn
-                    
+
                     hoverEnabled: true
                     acceptedButtons: Qt.LeftButton
 
@@ -82,13 +82,13 @@ ColumnLayout {
                         anchors.fill: parent
                         onEntered: skanpage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1)
                     }
-                    
+
                     ColumnLayout {
                         id: contentColumn
-                        
+
                         spacing: 0
                         width: contentWidth
-                        
+
                         anchors {
                             horizontalCenter: parent.horizontalCenter
                             verticalCenter: parent.verticalCenter
@@ -115,7 +115,7 @@ ColumnLayout {
                                 }
                             }
                         ]
-                        
+
                         Item {
                             implicitWidth: delegateRoot.landscape ? iconImage.height : iconImage.width
                             implicitHeight: delegateRoot.landscape ? iconImage.width : iconImage.height
@@ -128,17 +128,17 @@ ColumnLayout {
                                 anchors {
                                     horizontalCenter: parent.horizontalCenter
                                     verticalCenter: parent.verticalCenter
-                                }               
+                                }
                                 source: model.imageUrl
-                                
+
                                 width: delegateRoot.landscape ? contentWidth / aspectRatio: contentWidth
                                 height: delegateRoot.landscape ? contentWidth : contentWidth * aspectRatio
-                                
+
                                 transformOrigin: Item.Center
                                 rotation: model.rotationAngle
                             }
                         }
-                        
+
                         RowLayout {
                             id: bottomRow
                             Layout.margins: Kirigami.Units.smallSpacing
@@ -165,7 +165,7 @@ ColumnLayout {
                                     skanpage.documentModel.moveImage(index, index -1, 1);
                                     listView.positionViewAtIndex(index, ListView.Center);
                                 }
-                                enabled: index > 0 
+                                enabled: index > 0
                             }
 
                             Button {
@@ -175,7 +175,7 @@ ColumnLayout {
                                     listView.positionViewAtIndex(index, ListView.Center);
                                 }
                                 enabled: index < listView.count - 1
-                            }  
+                            }
 
                             Button {
                                 icon.name: "object-rotate-left"
@@ -187,7 +187,7 @@ ColumnLayout {
                                 onClicked: skanpage.documentModel.rotateImage(index, false)
                             }
 
-                            Button {      
+                            Button {
                                 icon.name: "delete"
                                 onClicked: skanpage.documentModel.removeImage(index)
                             }
@@ -205,8 +205,8 @@ ColumnLayout {
             listView.incrementCurrentIndex()
         }
     }
-    
-    RowLayout { 
+
+    RowLayout {
         Layout.fillWidth: true
         Layout.preferredHeight: Kirigami.Units.gridUnit * 2
 
@@ -217,7 +217,7 @@ ColumnLayout {
         Label {
             text: i18np("%1 page", "%1 pages", skanpage.documentModel.count)
         }
-        
+
         Item {
             Layout.fillWidth: true
         }

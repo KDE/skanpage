@@ -1,6 +1,6 @@
 /**
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -20,21 +20,21 @@ RowLayout {
 
     visible: modelItem.visible && modelItem.type != KSaneOption.TypeGamma && modelItem.type != KSaneOption.TypeDetectFail &&
         (modelItem.type === KSaneOption.TypeValueList ? modelItem.valueList.length > 1 : true)
-    
+
     Loader {
         active: modelItem.type === KSaneOption.TypeInteger && modelItem.visible
         visible: active
-                
+
         sourceComponent: IntegerSpinBoxWithSuffix {
             id: integerSpinBox
-            
+
             stepSize: modelItem.step
             from: modelItem.minimum
-            to: modelItem.maximum                            
+            to: modelItem.maximum
             suffix: getUnitString(modelItem.unit)
             value: modelItem.value
             editable: true
-            
+
             onValueModified: {
                 if (value != modelItem.value) {
                     optionDelegate.valueChanged(value)
@@ -42,14 +42,14 @@ RowLayout {
             }
         }
     }
-    
+
     Loader {
         active: modelItem.type === KSaneOption.TypeDouble && modelItem.visible
         visible: active
-                
+
         sourceComponent: DoubleSpinBoxWithSuffix {
             id: doubleSpinBox
-            
+
             stepSize: modelItem.step
             from: modelItem.minimum
             to: modelItem.maximum
@@ -57,19 +57,19 @@ RowLayout {
             suffix: getUnitString(modelItem.unit)
             value: modelItem.value
             editable: true
-            
+
             onValueModified: {
                 if (value != modelItem.value) {
                     optionDelegate.valueChanged(value)
                 }
             }
         }
-    }          
-    
+    }
+
     Loader {
         active: modelItem.type === KSaneOption.TypeString && modelItem.visible
         visible: active
-                
+
         sourceComponent: TextField {
             text: modelItem.value
             onTextChanged:  {
@@ -79,28 +79,28 @@ RowLayout {
             }
         }
     }
-    
+
     Loader {
         active: modelItem.type === KSaneOption.TypeBool && modelItem.visible
         visible: active
-                
+
         sourceComponent: CheckBox {
             text: modelItem.title
             checked: modelItem.value
             onClicked: optionDelegate.valueChanged(!modelItem.value)
         }
-    } 
-    
+    }
+
     Loader {
         active: modelItem.type === KSaneOption.TypeAction && modelItem.visible
         visible: active
-                
+
         sourceComponent: Button {
             text: modelItem.title
             onClicked: optionDelegate.valueChanged(1)
         }
     }
-    
+
     Loader {
         id: comboLoader
         active: modelItem.type === KSaneOption.TypeValueList && modelItem.visible && modelItem.valueList.length > 1
@@ -109,31 +109,31 @@ RowLayout {
         property var entries: modelItem.valueList
         property var modelValue: modelItem.value
         property string unitSuffix: getUnitString(modelItem.unit)
-    
+
         sourceComponent: ComboBox {
             id: combo
-            
+
             model: entries
             displayText: unitSuffix === "" || currentText === "" ? currentText : i18nc("Adding unit suffix","%1 %2", currentText, unitSuffix)
             currentIndex: indexOfValue(modelItem.value)
-            
+
             onCurrentValueChanged:  {
                 if (combo.currentValue != modelItem.value) {
                     optionDelegate.valueChanged(combo.currentValue)
                 }
             }
-                                
+
             Connections {
                 target: comboLoader
                 function onModelValueChanged() {
                     currentIndex = indexOfValue(modelItem.value)
                 }
-            }  
-            
+            }
+
             Component.onCompleted: currentIndex = indexOfValue(modelItem.value)
         }
     }
-    
+
     function getUnitString(unitType) {
         switch (unitType) {
             case KSaneOption.UnitBit:
