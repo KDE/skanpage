@@ -5,15 +5,15 @@
  SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 -->
     <qresource prefix="/">
-        <file>MainWindow.qml</file>
-        <file>DocumentView.qml</file>
-        <file>DocumentList.qml</file>
-        <file>DocumentPage.qml</file>
-        <file>InProgressPage.qml</file>
-        <file>DevicesView.qml</file>
-        <file>OptionsWindow.qml</file>
-        <file>OptionDelegate.qml</file>
-        <file>IntegerSpinBoxWithSuffix.qml</file>
-        <file>DoubleSpinBoxWithSuffix.qml</file>
+        <file>qml/MainWindow.qml</file>
+        <file>qml/DocumentView.qml</file>
+        <file>qml/DocumentList.qml</file>
+        <file>qml/DocumentPage.qml</file>
+        <file>qml/InProgressPage.qml</file>
+        <file>qml/DevicesView.qml</file>
+        <file>qml/OptionsWindow.qml</file>
+        <file>qml/OptionDelegate.qml</file>
+        <file>qml/IntegerSpinBoxWithSuffix.qml</file>
+        <file>qml/DoubleSpinBoxWithSuffix.qml</file>
     </qresource>
 </RCC>
