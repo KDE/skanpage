@@ -31,7 +31,7 @@ Item {
         orientation: Qt.Horizontal
 
         handle: Kirigami.Separator {
-            implicitWidth: 4 * Math.floor(Kirigami.Units.devicePixelRatio)
+            implicitWidth: Kirigami.Units.smallSpacing
         }
 
         DocumentList {
