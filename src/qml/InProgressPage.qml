@@ -15,14 +15,6 @@ import org.kde.skanpage 1.0
 Item {
     id: inProgressPage
 
-    Action {
-        id: cancelAction
-        icon.name: "window-close"
-        text: i18n("Cancel")
-        shortcut: "Esc"
-        onTriggered: skanpage.cancelScan()
-    }
-
     ColumnLayout {
         id: documentLayout
 

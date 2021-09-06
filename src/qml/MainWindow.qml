@@ -111,6 +111,15 @@ ApplicationWindow {
     }
 
     Action {
+        id: cancelAction
+        icon.name: "window-close"
+        text: i18n("Cancel")
+        shortcut: "Esc"
+        enabled: skanpage.scanInProgress
+        onTriggered: skanpage.cancelScan()
+    }
+
+    Action {
         id: optionsAction
         icon.name: "configure"
         text: i18n("Scanner options")
@@ -306,5 +315,9 @@ ApplicationWindow {
         onAccepted: {
             skanpage.documentModel.save(fileUrl)
         }
+    }
+    
+    GlobalMenu {
+        
     }
 }
