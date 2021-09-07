@@ -20,7 +20,10 @@ ApplicationWindow {
 
     visible: true
 
-    title: i18nc("document title: app title", "%1 ― Skanpage", mainDocument.name)
+    title: skanpage.deviceVendor && skanpage.deviceModel ?
+        i18nc("document title - scanner device - app title", "%1 ― %2 %3 ― Skanpage",
+        mainDocument.name, skanpage.deviceVendor, skanpage.deviceModel)
+        : i18nc("document title: app title", "%1 ― Skanpage", mainDocument.name)
 
     width: persistentSettings.width
     height: persistentSettings.height
@@ -110,7 +113,7 @@ ApplicationWindow {
     Action {
         id: optionsAction
         icon.name: "configure"
-        text: skanpage.deviceVendor && skanpage.deviceModel ? i18nc("Device vendor and device model name", "Options for %1 %2", skanpage.deviceVendor, skanpage.deviceModel) : i18n("Scanner options")
+        text: i18n("Scanner options")
         shortcut: "CTRL+SPACE"
         enabled: !skanpage.scanInProgress && skanpage.applicationState == Skanpage.ReadyForScan
         onTriggered: optionsWindow.show()
