@@ -65,7 +65,7 @@ ColumnLayout {
                 border.color: (index === skanpage.documentModel.activePageIndex) ? Kirigami.Theme.focusColor : palette.mid
                 radius: 3
 
-                focus: index === listView.currentIndex
+                focus: index === skanpage.documentModel.activePageIndex
 
                 MouseArea {
                     id: mouseArea
@@ -76,7 +76,7 @@ ColumnLayout {
                     hoverEnabled: true
                     acceptedButtons: Qt.LeftButton
 
-                    onClicked: listView.currentIndex = index;
+                    onClicked: skanpage.documentModel.activePageIndex = index
 
                     DropArea {
                         anchors.fill: parent
@@ -195,14 +195,6 @@ ColumnLayout {
                     }
                 }
             }
-        }
-
-        Keys.onUpPressed: {
-            listView.decrementCurrentIndex()
-        }
-
-        Keys.onDownPressed: {
-            listView.incrementCurrentIndex()
         }
     }
 
