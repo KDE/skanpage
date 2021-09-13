@@ -47,7 +47,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="it">Semplice applicazione per scansioni multipagina</summary>
   <summary xml:lang="ko">간단한 여러 쪽 스캔 프로그램</summary>
   <summary xml:lang="nl">Eenvoudig scanprogramma voor meerdere pagina's</summary>
-  <summary xml:lang="pl">Prosty program do wielostronnicowego skanowania</summary>
+  <summary xml:lang="pl">Prosty program do wielostronicowego skanowania</summary>
   <summary xml:lang="pt">Aplicação de digitalização multi-páginas simples</summary>
   <summary xml:lang="pt-BR">Aplicativo simples de digitalização de múltiplas páginas</summary>
   <summary xml:lang="sk">Jednoduchá viacstranová skenovania aplikácia</summary>
@@ -69,6 +69,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="it">Skanpage è una semplice applicazione per scansionare progettata per scansioni multi-pagina e per il salvataggio di documenti e di immagini.</p>
     <p xml:lang="ko">Skanpage는 여러 쪽 스캔과 문서 및 그림 저장이 가능한 간단한 스캔 프로그램입니다.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van documenten en afbeeldingen.</p>
+    <p xml:lang="pl">Skanpage jest prostym programem opracowany do wielostronicowego skanowania i zapisywania dokumentów i obrazów.</p>
     <p xml:lang="pt">Uma aplicação de digitalização simples que está desenhada para a digitalização e gravação de várias páginas e na gravação dos documentos e imagens.</p>
     <p xml:lang="sk">Skanpage je jednoduchá skenovacia aplikácia určená na viacstránkové skenovanie a ukladanie dokumentov a obrázkov.</p>
     <p xml:lang="sl">Preprosta aplikacija za optično branje več strani in shranjevanje dokumentov in slik.</p>
@@ -89,6 +90,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="it">Funzionalità:</p>
     <p xml:lang="ko">기능:</p>
     <p xml:lang="nl">Mogelijkheden:</p>
+    <p xml:lang="pl">Możliwości:</p>
     <p xml:lang="pt">Funcionalidades:</p>
     <p xml:lang="sk">Funkcie:</p>
     <p xml:lang="sl">Možnosti:</p>
@@ -109,6 +111,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="it">Scansione dagli scanner piani e ADF</li>
       <li xml:lang="ko">평판 및 ADF 스캐너에서 스캔</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
+      <li xml:lang="pl">Skanowanie na skanerach płaskich oraz ADF</li>
       <li xml:lang="pt">Digitalização de 'scanners' planos e ADF</li>
       <li xml:lang="sk">Skenovanie z plochých skenerov a ADF skenerov</li>
       <li xml:lang="sl">Optično branje z namiznih in bralnikov s podajalniki listov</li>
@@ -129,6 +132,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="it">Opzioni configurabili per gli scanner</li>
       <li xml:lang="ko">스캔 장치 설정</li>
       <li xml:lang="nl">Te configureren opties voor scanapparaat</li>
+      <li xml:lang="pl">Możliwość zmiany ustawień urządzenia skanującego</li>
       <li xml:lang="pt">Opções configuráveis do dispositivo de digitalização</li>
       <li xml:lang="sk">Nastaviteľné možnosti pre skenovacie zariadenie</li>
       <li xml:lang="sl">Nastavljanje možnosti za bralno napravo</li>
@@ -148,6 +152,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="it">Riordinamento, rotazione ed eliminazione delle pagine scansionate</li>
       <li xml:lang="ko">스캔한 페이지 순서 조정, 회전, 삭제</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
+      <li xml:lang="pl">Zmiana kolejności, obrót i usuwanie zeskanowanych stron</li>
       <li xml:lang="pt">Reordenação, rotação e remoção das páginas digitalizadas</li>
       <li xml:lang="sk">Zmena poradia, otočenie a vymazanie naskenovaných strán</li>
       <li xml:lang="sl">Zamenjava vrstnega reda, vrtenje in brisanje prebranih strani</li>
@@ -168,6 +173,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="it">Salvataggio in documenti PDF multi-pagine e in file d'immagine</li>
       <li xml:lang="ko">여러 쪽 PDF 문서 및 그림 파일로 저장</li>
       <li xml:lang="nl">Opslaan in multi-pagina PDF-documenten en afbeeldingsbestanden</li>
+      <li xml:lang="pl">Zapisywanie wielostronicowych dokumentów PDF i plików obrazów</li>
       <li xml:lang="pt">Gravação multi-páginas em documentos PDF e ficheiros de imagem</li>
       <li xml:lang="sk">Ukladanie do viacstranových dokumentov PDF a obrazových súborov</li>
       <li xml:lang="sl">Shranjevanje v večstranske dokumente PDF in slikovne datoteke</li>
