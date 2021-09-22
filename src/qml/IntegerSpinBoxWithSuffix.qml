@@ -52,19 +52,18 @@ Item {
             text: Number(control.to).toLocaleString(control.locale, 'f', 0)
         }
 
-        contentItem: Row {
+        contentItem: Item {
 
-            spacing: Kirigami.Units.smallSpacing
-            leftPadding: Kirigami.Units.largeSpacing
+            implicitWidth: Math.max(minTextSize.width, maxTextSize.width) + suffixText.width + Kirigami.Units.smallSpacing + 2 * control.padding
 
             TextInput {
                 id: textInput
 
-                width: Math.max(minTextSize.width, maxTextSize.width)
+                anchors.right: suffixText.left
+                anchors.rightMargin: Kirigami.Units.smallSpacing
+
                 color: Kirigami.Theme.textColor
-
                 selectByMouse: true
-
                 text: control.textFromValue(control.value, control.locale)
                 horizontalAlignment: Qt.AlignRight
                 verticalAlignment: Qt.AlignVCenter
@@ -93,10 +92,13 @@ Item {
             Text {
                 id: suffixText
 
+                anchors.right: parent.right
+                anchors.rightMargin: control.padding + Kirigami.Units.smallSpacing
+
                 font: textInput.font
                 color: textInput.color
                 verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
+                horizontalAlignment: Text.AlignLeft
 
                 visible: text != ''
             }

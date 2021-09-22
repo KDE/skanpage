@@ -32,6 +32,7 @@ Item {
         function onValueChanged() {
             if (control.value != (container.value * control.multiplier)) {
                 control.value = container.value * control.multiplier
+                textInput.text = control.textFromValue(control.value, control.locale)
             }
         }
     }
@@ -73,7 +74,7 @@ Item {
             setup = false
             minTextSize.text = Number(container.from).toLocaleString(control.locale, 'f', decimals)
             maxTextSize.text = Number(container.to).toLocaleString(control.locale, 'f', decimals)
-            textInput.text = Qt.binding(function() { return control.textFromValue(control.value, control.locale) })
+            textInput.text = control.textFromValue(control.value, control.locale)
         }
 
         TextMetrics {
@@ -84,17 +85,18 @@ Item {
             id: maxTextSize
         }
 
-        contentItem: Row {
+        contentItem: Item {
 
-            spacing: Kirigami.Units.smallSpacing
-            leftPadding: Kirigami.Units.largeSpacing
+            implicitWidth: Math.max(minTextSize.width, maxTextSize.width) + suffixText.width + Kirigami.Units.smallSpacing + 2 * control.padding
 
             TextInput {
                 id: textInput
-                selectByMouse: true
+
+                anchors.right: suffixText.left
+                anchors.rightMargin: Kirigami.Units.smallSpacing
 
                 color: Kirigami.Theme.textColor
-                width: Math.max(minTextSize.width, maxTextSize.width)
+                selectByMouse: true
                 horizontalAlignment: Qt.AlignRight
                 verticalAlignment: Qt.AlignVCenter
 
@@ -107,23 +109,35 @@ Item {
                     }
                     if (newValue > control.to) {
                         newValue = control.to
+                        control.value = newValue
+                        textInput.text = control.textFromValue(control.value, control.locale)
+                        return
                     }
                     if (newValue < control.from) {
                         newValue = control.from
+                        control.value = newValue
+                        textInput.text = control.textFromValue(control.value, control.locale)
+                        return
                     }
                     if (control.value != newValue) {
                         control.value = newValue
+                        textInput.text = control.textFromValue(control.value, control.locale)
                     }
                 }
             }
 
             Text {
                 id: suffixText
-                z: -1
+
+                anchors.right: parent.right
+                anchors.rightMargin: control.padding + Kirigami.Units.smallSpacing
+
                 font: textInput.font
                 color: textInput.color
                 verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
+                horizontalAlignment: Text.AlignLeft
+
+                visible: text != ''
             }
         }
     }
