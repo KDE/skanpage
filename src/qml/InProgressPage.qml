@@ -31,18 +31,10 @@ Item {
             }
         }
 
-        RowLayout {
+        ProgressBar {
             Layout.fillWidth: true
             Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-
-            ProgressBar {
-                Layout.fillWidth: true
-                value: skanpage.progress / 100
-            }
-
-            ToolButton {
-                action: cancelAction
-            }
+            value: skanpage.progress / 100
         }
     }
 }

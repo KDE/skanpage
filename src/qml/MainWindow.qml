@@ -218,8 +218,22 @@ ApplicationWindow {
                 anchors.fill: parent
                 spacing: 0
 
-                ToolButton {
-                    action: scanAction
+                Item {
+
+                    implicitWidth: Math.max(children[0].width, children[1].width)
+                    implicitHeight: Math.max(children[0].height, children[1].height)
+
+                    ToolButton {
+                        anchors.right: parent.right
+                        action: scanAction
+                        visible: !skanpage.scanInProgress
+                    }
+
+                    ToolButton {
+                        anchors.right: parent.right
+                        action: cancelAction
+                        visible: skanpage.scanInProgress
+                    }
                 }
 
                 ToolButton {
