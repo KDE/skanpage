@@ -72,9 +72,10 @@ QString Skanpage::deviceName() const
 
 void Skanpage::startScan()
 {
+    m_ksaneInterface->startScan();
+    progressUpdated(0);
     m_scanInProgress = true;
     Q_EMIT scanInProgressChanged(true);
-    m_ksaneInterface->startScan();
 }
 
 Skanpage::ApplicationState Skanpage::applicationState() const
@@ -275,10 +276,8 @@ void Skanpage::cancelScan()
 
 void Skanpage::scanDone(KSaneCore::KSaneScanStatus status, const QString &strStatus)
 {
-    //only print debug, errors are already reported by KSaneWidget::userMessage
+    //only print debug, errors are already reported by KSaneCore::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
-    m_progress = 100;
-    Q_EMIT progressChanged();
     m_scanInProgress = false;
     Q_EMIT scanInProgressChanged(false);
 }

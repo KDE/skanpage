@@ -46,14 +46,17 @@ Item {
 
             SplitView.fillWidth: true
             SplitView.fillHeight: true
-                        visible: skanpage.progress >= 100
+
+            visible: !inProgressImage.visible
         }
 
         InProgressPage {
             id: inProgressImage
-                        visible: skanpage.progress < 100
+
             SplitView.fillWidth: true
             SplitView.fillHeight: true
+
+            visible: skanpage.progress > 0 && skanpage.scanInProgress
         }
     }
 }
