@@ -87,7 +87,7 @@ Item {
         contentItem: Row {
 
             spacing: Kirigami.Units.smallSpacing
-            leftPadding: Kirigami.Units.smallSpacing
+            leftPadding: Kirigami.Units.largeSpacing
 
             TextInput {
                 id: textInput
