@@ -79,7 +79,7 @@ public:
     Q_INVOKABLE void showAboutDialog();
 
 Q_SIGNALS:
-    void progressChanged();
+    void progressChanged(int progress);
     void optionsChanged();
     void applicationStateChanged();
     void deviceInfoUpdated();

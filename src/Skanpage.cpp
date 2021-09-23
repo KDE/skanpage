@@ -219,7 +219,7 @@ void Skanpage::showUserMessage(SkanpageUtils::MessageLevel level, const QString 
 void Skanpage::progressUpdated(int progress)
 {
     m_progress = progress;
-    Q_EMIT progressChanged();
+    Q_EMIT progressChanged(m_progress);
 }
 
 int Skanpage::progress() const

@@ -22,11 +22,12 @@ public:
     void paint(QPainter *painter) override;
     Q_INVOKABLE void initialize(Skanpage *skanpageApp);
 
-public Q_SLOTS:
-    void updateImage();
+private Q_SLOTS:
+    void updateImage(int progress);
 
 private:
     KSaneIface::KSaneCore *m_scanInterface = nullptr;
-
+    int m_progress = 0;
 };
+
 #endif

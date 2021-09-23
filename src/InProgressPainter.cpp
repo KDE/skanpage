@@ -29,8 +29,9 @@ void InProgressPainter::initialize(Skanpage *skanpageApp)
 
 void InProgressPainter::paint(QPainter *painter)
 {
-    if (m_scanInterface != nullptr) {
+    if (m_scanInterface != nullptr && m_progress > 0) {
         m_scanInterface->lockScanImage();
+
         const int imageHeight = m_scanInterface->scanImage()->height();
         const int imageWidth = m_scanInterface->scanImage()->width();
         const int itemHeight = height();
@@ -40,16 +41,15 @@ void InProgressPainter::paint(QPainter *painter)
         double scaleWidth = static_cast<double>(itemWidth)/imageWidth;
         double scale = qMin(scaleHeight, qMin(scaleWidth, 1.0));
         painter->drawImage(QRectF((itemWidth - scale * imageWidth)/2, (itemHeight - scale * imageHeight)/2, scale * imageWidth, scale * imageHeight), *m_scanInterface->scanImage());
+
         m_scanInterface->unlockScanImage();
+    } else {
+        painter->fillRect(QRect(0, 0, width(), height()), QColorConstants::Transparent);
     }
 }
 
-void InProgressPainter::updateImage()
+void InProgressPainter::updateImage(int progress)
 {
-    if (m_scanInterface != nullptr) {
-        m_scanInterface->lockScanImage();
-        update();
-        m_scanInterface->unlockScanImage();
-    }
+    m_progress = progress;
+    update();
 }
-
