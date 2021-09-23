@@ -112,7 +112,7 @@ ApplicationWindow {
 
     Action {
         id: cancelAction
-        icon.name: "window-close"
+        icon.name: "dialog-cancel"
         text: i18n("Cancel")
         shortcut: "Esc"
         enabled: skanpage.scanInProgress
