@@ -31,7 +31,6 @@ class Skanpage : public QObject
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
     Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
     Q_PROPERTY(ApplicationState applicationState READ applicationState NOTIFY applicationStateChanged)
-    Q_PROPERTY(bool scanInProgress READ scanInProgress NOTIFY scanInProgressChanged)
 
     Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
     Q_PROPERTY(QString deviceModel READ deviceModel NOTIFY deviceInfoUpdated)
@@ -45,6 +44,7 @@ class Skanpage : public QObject
 public:
 
     enum ApplicationState {
+        ScanInProgress,
         ReadyForScan,
         DeviceSelection,
         SearchingForDevices,
@@ -62,7 +62,6 @@ public:
 
     int progress() const;
     ApplicationState applicationState() const;
-    bool scanInProgress() const;
 
     DocumentModel *documentModel() const;
     DevicesModel *devicesModel() const;
@@ -85,7 +84,6 @@ Q_SIGNALS:
     void applicationStateChanged();
     void deviceInfoUpdated();
     void newUserMessage(QVariant level, const QVariant &message);
-    void scanInProgressChanged(bool scanInProgress);
 
 private Q_SLOTS:
     void imageReady(const QImage &image);

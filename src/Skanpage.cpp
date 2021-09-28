@@ -75,17 +75,13 @@ void Skanpage::startScan()
     m_ksaneInterface->startScan();
     progressUpdated(0);
     m_scanInProgress = true;
-    Q_EMIT scanInProgressChanged(true);
+    m_state = ApplicationState::ScanInProgress;
+    Q_EMIT applicationStateChanged();
 }
 
 Skanpage::ApplicationState Skanpage::applicationState() const
 {
     return m_state;
-}
-
-bool Skanpage::scanInProgress() const
-{
-    return m_scanInProgress;
 }
 
 void Skanpage::imageReady(const QImage &image)
@@ -128,7 +124,7 @@ void Skanpage::loadScannerOptions()
 
 void Skanpage::availableDevices(const QList<KSaneCore::DeviceInfo> &deviceList)
 {
-    if (m_state != ReadyForScan) {
+    if (m_state == SearchingForDevices) {
         m_availableDevices->updateDevicesList(deviceList);
 
         m_state = DeviceSelection;
@@ -279,5 +275,6 @@ void Skanpage::scanDone(KSaneCore::KSaneScanStatus status, const QString &strSta
     //only print debug, errors are already reported by KSaneCore::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
     m_scanInProgress = false;
-    Q_EMIT scanInProgressChanged(false);
+    m_state = ApplicationState::ReadyForScan;
+    Q_EMIT applicationStateChanged();
 }

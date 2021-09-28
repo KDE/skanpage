@@ -10,6 +10,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.12 as Kirigami
+import org.kde.skanpage 1.0
 
 Item {
     id: doc
@@ -47,7 +48,7 @@ Item {
             SplitView.fillWidth: true
             SplitView.fillHeight: true
 
-            visible: !inProgressImage.visible
+            visible: skanpage.applicationState == Skanpage.ReadyForScan
         }
 
         InProgressPage {
@@ -56,7 +57,7 @@ Item {
             SplitView.fillWidth: true
             SplitView.fillHeight: true
 
-            visible: skanpage.progress > 0 && skanpage.scanInProgress
+            visible: skanpage.applicationState == Skanpage.ScanInProgress
         }
     }
 }

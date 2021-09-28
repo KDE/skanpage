@@ -106,7 +106,7 @@ ApplicationWindow {
         icon.name: "document-scan"
         text: i18n("Scan")
         shortcut: "SPACE"
-        enabled: !skanpage.scanInProgress && skanpage.applicationState == Skanpage.ReadyForScan
+        enabled: skanpage.applicationState == Skanpage.ReadyForScan
         onTriggered: skanpage.startScan()
     }
 
@@ -115,7 +115,7 @@ ApplicationWindow {
         icon.name: "dialog-cancel"
         text: i18n("Cancel")
         shortcut: "Esc"
-        enabled: skanpage.scanInProgress
+        enabled: skanpage.applicationState == Skanpage.ScanInProgress
         onTriggered: skanpage.cancelScan()
     }
 
@@ -124,7 +124,7 @@ ApplicationWindow {
         icon.name: "configure"
         text: i18n("Scanner options")
         shortcut: "CTRL+SPACE"
-        enabled: !skanpage.scanInProgress && skanpage.applicationState == Skanpage.ReadyForScan
+        enabled: skanpage.applicationState == Skanpage.ReadyForScan
         onTriggered: optionsWindow.show()
     }
 
@@ -161,7 +161,7 @@ ApplicationWindow {
         icon.name: "view-refresh"
         text: i18n("Reselect scanning device")
         onTriggered: skanpage.reloadDevicesList()
-        enabled: !skanpage.scanInProgress
+        enabled: skanpage.applicationState == Skanpage.ReadyForScan
     }
 
     Menu {
@@ -226,13 +226,13 @@ ApplicationWindow {
                     ToolButton {
                         anchors.right: parent.right
                         action: scanAction
-                        visible: !skanpage.scanInProgress
+                        visible: !skanpage.applicationState == Skanpage.ScanInProgress
                     }
 
                     ToolButton {
                         anchors.right: parent.right
                         action: cancelAction
-                        visible: skanpage.scanInProgress
+                        visible: skanpage.applicationState == Skanpage.ScanInProgress
                     }
                 }
 
@@ -247,25 +247,25 @@ ApplicationWindow {
                 OptionDelegate {
                     modelItem: skanpage.resolutionOption
                     onValueChanged: skanpage.resolutionOption.value = value
-                    enabled: !skanpage.scanInProgress
+                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
                 }
 
                 OptionDelegate {
                     modelItem: skanpage.pageSizeOption
                     onValueChanged: skanpage.pageSizeOption.value = value
-                    enabled: !skanpage.scanInProgress
+                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
                 }
 
                 OptionDelegate {
                     modelItem: skanpage.sourceOption
                     onValueChanged: skanpage.sourceOption.value = value
-                    enabled: !skanpage.scanInProgress
+                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
                 }
 
                 OptionDelegate {
                     modelItem: skanpage.scanModeOption
                     onValueChanged: skanpage.scanModeOption.value = value
-                    enabled: !skanpage.scanInProgress
+                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
                 }
 
                 ToolButton {
@@ -291,7 +291,7 @@ ApplicationWindow {
         DocumentView {
             id: mainDocument
 
-            visible: skanpage.applicationState == Skanpage.ReadyForScan
+            visible: skanpage.applicationState == Skanpage.ReadyForScan || skanpage.applicationState == Skanpage.ScanInProgress
 
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -305,7 +305,7 @@ ApplicationWindow {
         DevicesView {
             id: devicesView
 
-            visible: skanpage.applicationState != Skanpage.ReadyForScan
+            visible: skanpage.applicationState != Skanpage.ReadyForScan && skanpage.applicationState != Skanpage.ScanInProgress 
 
             Layout.fillWidth: true
             Layout.fillHeight: true
