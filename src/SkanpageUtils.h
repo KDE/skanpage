@@ -36,6 +36,7 @@ namespace SkanpageUtils {
     bool operator==(const PageProperties& lhs, const PageProperties& rhs);
 }
 
+Q_DECLARE_METATYPE(SkanpageUtils::PageProperties)
 Q_DECLARE_METATYPE(SkanpageUtils::DocumentPages)
 
 #endif // SkanpageUtils_H

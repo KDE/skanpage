@@ -10,6 +10,7 @@
 #include <QUrl>
 #include <QTemporaryFile>
 #include <QImage>
+#include <QtConcurrent>
 
 #include <KLocalizedString>
 
@@ -23,6 +24,7 @@ DocumentModel::DocumentModel(QObject *parent)
     , m_documentSaver(std::make_unique<DocumentSaver>())
     , m_documentPrinter(std::make_unique<DocumentPrinter>())
 {
+    connect(this, &DocumentModel::temporaryFileSaved, this, &DocumentModel::addPageToModel);
     connect(m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
     connect(m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
     connect(m_documentPrinter.get(), &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
@@ -81,20 +83,30 @@ void DocumentModel::print()
     m_documentPrinter->printDocument(m_pages);
 }
 
-void DocumentModel::addImage(const QImage &image, const int dpi)
+void DocumentModel::addImage(const QImage &image)
 {
-    const double conversionFactorMM = static_cast<double>(dpi) / 25.4;
-    QPageSize pageSize = QPageSize(QSizeF(image.width() / conversionFactorMM, image.height()/ conversionFactorMM), QPageSize::Millimeter);
+    QtConcurrent::run(this, &DocumentModel::saveTemporaryFile, image);
+}
+
+void DocumentModel::saveTemporaryFile(const QImage &image)
+{
+    const QPageSize pageSize = QPageSize(QSizeF(image.width() * 1000.0 / image.dotsPerMeterX() , image.height() * 1000.0 / image.dotsPerMeterY()), QPageSize::Millimeter);
+    const int dpi = qRound(image.dotsPerMeterX() / 1000.0 * 25.4);
     QTemporaryFile *tempImageFile = new QTemporaryFile();
     tempImageFile->open();
     if (image.save(tempImageFile, "PNG")) {
-        qCDebug(SKANPAGE_LOG) << "Adding new image file" << tempImageFile << " with pageSize" << pageSize << "and resolution " << dpi << "dpi";
+        qCDebug(SKANPAGE_LOG) << "Adding new image file" << tempImageFile << "with page size" << pageSize << "and resolution" << dpi << "dpi";
     } else {
-         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save image"));
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save image"));
     }
     tempImageFile->close();
+    Q_EMIT temporaryFileSaved({std::shared_ptr<QTemporaryFile>(tempImageFile), pageSize, dpi});
+}
+
+void DocumentModel::addPageToModel(const SkanpageUtils::PageProperties &page)
+{
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
-    m_pages.append({std::shared_ptr<QTemporaryFile>(tempImageFile), pageSize, dpi});
+    m_pages.append(page);
     endInsertRows();
 
     Q_EMIT countChanged();
@@ -184,7 +196,6 @@ void DocumentModel::removeImage(int row)
         m_activePageIndex = m_pages.count() - 1;
     }
     Q_EMIT activePageChanged();
-
     Q_EMIT countChanged();
 
     if (!m_changed) {
@@ -231,8 +242,6 @@ void DocumentModel::clearData()
     m_pages.clear();
     m_activePageIndex = -1;
     endResetModel();
-    Q_EMIT countChanged();
-
     Q_EMIT countChanged();
 
     if (m_changed) {

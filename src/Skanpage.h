@@ -86,18 +86,19 @@ Q_SIGNALS:
     void newUserMessage(QVariant level, const QVariant &message);
 
 private Q_SLOTS:
-    void imageReady(const QImage &image);
     void availableDevices(const QList<KSaneIface::KSaneCore::DeviceInfo> &deviceList);
     void showKSaneMessage(KSaneIface::KSaneCore::KSaneScanStatus type, const QString &strStatus);
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &strStatus);
-
+    void imageReady(const QImage &image);
     void progressUpdated(int progress);
-    void scanDone(KSaneIface::KSaneCore::KSaneScanStatus statuts, const QString &strStatus);
+    void scanningFinished(KSaneIface::KSaneCore::KSaneScanStatus statuts, const QString &strStatus);
+    void imageTemporarilySaved();
 
 private:
     void finishOpeningDevice(const QString &deviceName);
     void loadScannerOptions();
     void saveScannerOptions();
+    void checkFinish();
     void signalErrorMessage(const QString &text);
 
     std::unique_ptr<KSaneIface::KSaneCore> m_ksaneInterface;
@@ -110,6 +111,7 @@ private:
     std::unique_ptr<SingleOption> m_scanModeOption;
 
     int m_progress = 100;
+    int m_scannedImages = 0;
     ApplicationState m_state = NoDeviceOpened;
     bool m_scanInProgress = false;
 };

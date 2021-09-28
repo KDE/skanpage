@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
     qmlRegisterType<InProgressPainter>("org.kde.skanpage", 1, 0, "InProgressPainter");
     qRegisterMetaType<SkanpageUtils::MessageLevel>();
+    qRegisterMetaType<SkanpageUtils::PageProperties>();
     qRegisterMetaType<SkanpageUtils::DocumentPages>();
 
     KLocalizedString::setApplicationDomain("skanpage");

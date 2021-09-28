@@ -43,7 +43,7 @@ public:
 
     void setActivePageIndex(int);
 
-    void addImage(const QImage &image, const int dpi);
+    void addImage(const QImage &image);
 
     Q_INVOKABLE void clearData();
 
@@ -68,11 +68,15 @@ Q_SIGNALS:
     void countChanged();
     void newImageAdded();
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
+    void temporaryFileSaved(const SkanpageUtils::PageProperties &page);
 
 private Q_SLOTS:
     void updateFileInformation(const QString &fileName, const SkanpageUtils::DocumentPages &document);
 
 private:
+    void saveTemporaryFile(const QImage &image);
+    void addPageToModel(const SkanpageUtils::PageProperties &page);
+
     SkanpageUtils::DocumentPages m_pages;
     QString m_name;
     bool m_changed = false;

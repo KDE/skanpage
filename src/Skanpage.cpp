@@ -34,9 +34,10 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksaneInterface.get(), &KSaneCore::availableDevices, this, &Skanpage::availableDevices);
     connect(m_ksaneInterface.get(), &KSaneCore::userMessage, this, &Skanpage::showKSaneMessage);
     connect(m_ksaneInterface.get(), &KSaneCore::scanProgress, this, &Skanpage::progressUpdated);
-    connect(m_ksaneInterface.get(), &KSaneCore::scanFinished, this, &Skanpage::scanDone);
+    connect(m_ksaneInterface.get(), &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
     connect(m_ksaneInterface.get(), &KSaneCore::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
     connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
+    connect(m_docHandler.get(), &DocumentModel::newImageAdded, this, &Skanpage::imageTemporarilySaved);
 
     reloadDevicesList();
 
@@ -86,7 +87,8 @@ Skanpage::ApplicationState Skanpage::applicationState() const
 
 void Skanpage::imageReady(const QImage &image)
 {
-    m_docHandler->addImage(image, m_resolutionOption->value().toInt());
+    m_docHandler->addImage(image);
+    m_scannedImages++;
 }
 
 void Skanpage::showAboutDialog(void)
@@ -270,11 +272,24 @@ void Skanpage::cancelScan()
     m_ksaneInterface->stopScan();
 }
 
-void Skanpage::scanDone(KSaneCore::KSaneScanStatus status, const QString &strStatus)
+void Skanpage::imageTemporarilySaved()
+{
+    m_scannedImages--;
+    checkFinish();
+}
+
+void Skanpage::scanningFinished(KSaneCore::KSaneScanStatus status, const QString &strStatus)
 {
     //only print debug, errors are already reported by KSaneCore::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
+    
     m_scanInProgress = false;
-    m_state = ApplicationState::ReadyForScan;
-    Q_EMIT applicationStateChanged();
+    checkFinish();
+}
+void Skanpage::checkFinish()
+{
+    if (m_scannedImages == 0 && !m_scanInProgress) {
+        m_state = ApplicationState::ReadyForScan;
+        Q_EMIT applicationStateChanged();
+    }
 }
