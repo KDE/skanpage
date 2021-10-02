@@ -120,5 +120,26 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
             pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
         }
     }
+}
 
+void DocumentSaver::saveNewPageTemporary(const int pageID, const QImage &image)
+{
+    QtConcurrent::run(this, &DocumentSaver::saveNewPage, pageID, image);
+}
+
+void DocumentSaver::saveNewPage(const int pageID, const QImage &image)
+{
+    const QPageSize pageSize = QPageSize(QSizeF(image.width() * 1000.0 / image.dotsPerMeterX() , image.height() * 1000.0 / image.dotsPerMeterY()), QPageSize::Millimeter);
+    const int dpi = qRound(image.dotsPerMeterX() / 1000.0 * 25.4);
+    QTemporaryFile *tempImageFile = new QTemporaryFile();
+    tempImageFile->open();
+    if (image.save(tempImageFile, "PNG")) {
+        qCDebug(SKANPAGE_LOG) << "Saved new image to temporary file.";
+    } else {
+        qCDebug(SKANPAGE_LOG) << "Saving new image to temporary file failed!";
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save image"));
+    }
+    qCDebug(SKANPAGE_LOG) << image << tempImageFile << "with page size" << pageSize << "and resolution of" << dpi << "dpi";
+    tempImageFile->close();
+    Q_EMIT pageTemporarilySaved(pageID, {std::shared_ptr<QTemporaryFile>(tempImageFile), pageSize, dpi});
 }

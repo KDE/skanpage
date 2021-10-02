@@ -34,6 +34,7 @@ namespace SkanpageUtils {
     typedef QList<PageProperties> DocumentPages;
 
     bool operator==(const PageProperties& lhs, const PageProperties& rhs);
+    QDebug operator<<(QDebug d, const PageProperties& pageProperties);
 }
 
 Q_DECLARE_METATYPE(SkanpageUtils::PageProperties)

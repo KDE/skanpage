@@ -33,7 +33,6 @@ Item {
             }
 
             Kirigami.PlaceholderMessage {
-
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 text: xi18nc("@info", "Searching for available devices.")
             }

@@ -10,7 +10,6 @@
 #include <QUrl>
 #include <QTemporaryFile>
 #include <QImage>
-#include <QtConcurrent>
 
 #include <KLocalizedString>
 
@@ -18,13 +17,23 @@
 #include "DocumentSaver.h"
 #include "DocumentPrinter.h"
 
+QDebug operator<<(QDebug d, const PreviewPageProperties& pageProperties)
+{
+    d << "ID: " << pageProperties.pageID << "\n";
+    d << "Aspect ratio: " << pageProperties.aspectRatio << "\n";
+    d << "Preview width: " << pageProperties.previewWidth << "\n";
+    d << "Preview height: " << pageProperties.previewHeight << "\n";
+    d << "Is saved: " << pageProperties.isSaved << "\n";
+    return d;
+}
+
 DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_name(i18n("New document"))
     , m_documentSaver(std::make_unique<DocumentSaver>())
     , m_documentPrinter(std::make_unique<DocumentPrinter>())
 {
-    connect(this, &DocumentModel::temporaryFileSaved, this, &DocumentModel::addPageToModel);
+    connect(m_documentSaver.get(), &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
     connect(m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
     connect(m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
     connect(m_documentPrinter.get(), &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
@@ -59,10 +68,7 @@ int DocumentModel::activePageRotation() const
 
 QUrl DocumentModel::activePageSource() const
 {
-    if (m_activePageIndex >= 0 && m_activePageIndex < rowCount()) {
-        return QUrl::fromLocalFile(m_pages.at(m_activePageIndex).temporaryFile->fileName());
-    }
-    return QUrl();
+    return data(index(m_activePageIndex, 0), ImageUrlRole).toUrl();
 }
 
 void DocumentModel::setActivePageIndex(int newIndex)
@@ -85,39 +91,48 @@ void DocumentModel::print()
 
 void DocumentModel::addImage(const QImage &image)
 {
-    QtConcurrent::run(this, &DocumentModel::saveTemporaryFile, image);
-}
-
-void DocumentModel::saveTemporaryFile(const QImage &image)
-{
-    const QPageSize pageSize = QPageSize(QSizeF(image.width() * 1000.0 / image.dotsPerMeterX() , image.height() * 1000.0 / image.dotsPerMeterY()), QPageSize::Millimeter);
-    const int dpi = qRound(image.dotsPerMeterX() / 1000.0 * 25.4);
-    QTemporaryFile *tempImageFile = new QTemporaryFile();
-    tempImageFile->open();
-    if (image.save(tempImageFile, "PNG")) {
-        qCDebug(SKANPAGE_LOG) << "Adding new image file" << tempImageFile << "with page size" << pageSize << "and resolution" << dpi << "dpi";
-    } else {
-        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save image"));
-    }
-    tempImageFile->close();
-    Q_EMIT temporaryFileSaved({std::shared_ptr<QTemporaryFile>(tempImageFile), pageSize, dpi});
-}
-
-void DocumentModel::addPageToModel(const SkanpageUtils::PageProperties &page)
-{
+    const double aspectRatio = static_cast<double>(image.height())/image.width();
     beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
-    m_pages.append(page);
+    const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), m_idCounter++, false};
+    qCDebug(SKANPAGE_LOG) << "Inserting new page into model:" << newPage;
+    m_details.append(newPage);
+    m_pages.append({nullptr, QPageSize(), 0});
     endInsertRows();
-
     Q_EMIT countChanged();
+    m_documentSaver->saveNewPageTemporary(newPage.pageID, image);
+}
+
+void DocumentModel::updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page)
+{
+    if (m_details.count() <= 0) {
+        return;
+    }
+    /* Most likely, the updated page is the last one in the model
+     * unless the user has deleted a page between the finished scanning and the
+     * processing. Thus try this first and look for the page ID if this is not the case. */
+    int pageIndex = m_details.count() - 1;
+    if (m_details.at(pageIndex).pageID != pageID) {
+        for (int i = m_details.count() - 1; i >= 0; i--) {
+            if (m_details.at(i).pageID == pageID) {
+                pageIndex = i;
+                break;
+            }
+        }
+    }
+    m_pages[pageIndex].dpi = page.dpi;
+    m_pages[pageIndex].temporaryFile = page.temporaryFile;
+    m_pages[pageIndex].pageSize = page.pageSize;
+    m_details[pageIndex].isSaved = true;
+    Q_EMIT dataChanged(index(pageIndex, 0), index(pageIndex, 0), {ImageUrlRole, IsSavedRole});
+
     if (!m_changed) {
         m_changed = true;
         Q_EMIT changedChanged();
     }
 
-    m_activePageIndex = m_pages.count() - 1;
+    m_activePageIndex = pageIndex;
     Q_EMIT activePageChanged();
-    Q_EMIT newImageAdded();
+    Q_EMIT newPageAdded();
 }
 
 void DocumentModel::moveImage(int from, int to)
@@ -142,6 +157,7 @@ void DocumentModel::moveImage(int from, int to)
         return;
     }
     m_pages.move(from, to);
+    m_details.move(from, to);
     endMoveRows();
 
     if (m_activePageIndex == from) {
@@ -177,7 +193,7 @@ void DocumentModel::rotateImage(int row, bool positiveDirection)
     if (row == m_activePageIndex) {
         Q_EMIT activePageChanged();
     }
-    Q_EMIT dataChanged(index(row,0), index(row,0), {RotationAngleRole});
+    Q_EMIT dataChanged(index(row, 0), index(row, 0), {RotationAngleRole});
 }
 
 void DocumentModel::removeImage(int row)
@@ -188,6 +204,7 @@ void DocumentModel::removeImage(int row)
 
     beginRemoveRows(QModelIndex(), row, row);
     m_pages.removeAt(row);
+    m_details.removeAt(row);
     endRemoveRows();
 
     if (row < m_activePageIndex) {
@@ -209,6 +226,10 @@ QHash<int, QByteArray> DocumentModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[ImageUrlRole] = "imageUrl";
     roles[RotationAngleRole] = "rotationAngle";
+    roles[IsSavedRole] = "isSaved";
+    roles[PreviewWidthRole] = "previewWidth";
+    roles[PreviewHeightRole] = "previewHeight";
+    roles[AspectRatioRole] = "aspectRatio";
     return roles;
 }
 
@@ -229,9 +250,21 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case ImageUrlRole:
-        return QUrl::fromLocalFile(m_pages.at(index.row()).temporaryFile->fileName());
+        if (m_details.at(index.row()).isSaved || m_pages.at(index.row()).temporaryFile.get() != nullptr) {
+            return QUrl::fromLocalFile(m_pages.at(index.row()).temporaryFile->fileName());
+        } else {
+            return QUrl();
+        }
     case RotationAngleRole:
         return m_pages.at(index.row()).rotationAngle;
+    case IsSavedRole:
+        return m_details.at(index.row()).isSaved;
+    case AspectRatioRole:
+        return m_details.at(index.row()).aspectRatio;
+    case PreviewWidthRole:
+        return m_details.at(index.row()).previewWidth;
+    case PreviewHeightRole:
+        return m_details.at(index.row()).previewHeight;
     }
     return QVariant();
 }
@@ -240,6 +273,7 @@ void DocumentModel::clearData()
 {
     beginResetModel();
     m_pages.clear();
+    m_details.clear();
     m_activePageIndex = -1;
     endResetModel();
     Q_EMIT countChanged();

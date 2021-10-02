@@ -51,13 +51,11 @@ ColumnLayout {
             delegate: Rectangle {
                 id: delegateRoot
 
-                readonly property url imageUrl: model.imageUrl
                 readonly property int contentWidth: width - border.width * 2
-                readonly property int rotationAngle: model.rotationAngle
                 readonly property bool landscape: (model.rotationAngle == 270 || model.rotationAngle == 90)
 
                 width: listView.width - scrollView.ScrollBar.vertical.width
-                height: (landscape ? contentWidth / iconImage.aspectRatio : contentWidth * iconImage.aspectRatio) + bottomRow.height + Kirigami.Units.smallSpacing * 2 + border.width * 2
+                height: (landscape ? contentWidth / model.aspectRatio : contentWidth * model.aspectRatio) + bottomRow.height + Kirigami.Units.smallSpacing * 2 + border.width * 2
 
                 color: Kirigami.Theme.backgroundColor
 
@@ -115,27 +113,55 @@ ColumnLayout {
                                 }
                             }
                         ]
-
+                        
                         Item {
-                            implicitWidth: delegateRoot.landscape ? iconImage.height : iconImage.width
+                            visible: !model.isSaved
+
+                            implicitWidth: contentWidth
+                            implicitHeight: contentWidth * model.aspectRatio
+                            
+                            ColumnLayout {
+                                anchors.centerIn: parent
+
+                                BusyIndicator {
+                                    running: parent.parent.visible
+
+                                    Layout.preferredWidth: Kirigami.Units.iconSizes.huge
+                                    Layout.preferredHeight: Kirigami.Units.iconSizes.huge
+                                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                                }
+
+                                Kirigami.PlaceholderMessage {
+                                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                                    text: xi18nc("@info", "Processing page...")
+                                }
+                            }
+                        }
+                        
+                        Item {
+                            visible: model.isSaved
+                            
+                            implicitWidth: contentWidth
                             implicitHeight: delegateRoot.landscape ? iconImage.width : iconImage.height
 
                             Image {
                                 id: iconImage
 
-                                readonly property real aspectRatio: sourceSize.height / sourceSize.width
-
                                 anchors {
                                     horizontalCenter: parent.horizontalCenter
                                     verticalCenter: parent.verticalCenter
                                 }
-                                source: model.imageUrl
 
-                                width: delegateRoot.landscape ? contentWidth / aspectRatio: contentWidth
-                                height: delegateRoot.landscape ? contentWidth : contentWidth * aspectRatio
+                                source: model.imageUrl
+                                sourceSize.height: model.previewHeight
+                                sourceSize.width: model.previewWidth
+
+                                width: delegateRoot.landscape ? contentWidth / model.aspectRatio: contentWidth
+                                height: delegateRoot.landscape ? contentWidth : contentWidth * model.aspectRatio
 
                                 transformOrigin: Item.Center
                                 rotation: model.rotationAngle
+                                asynchronous: true
                             }
                         }
 
@@ -162,7 +188,7 @@ ColumnLayout {
                             Button {
                                 icon.name: "go-up"
                                 onClicked: {
-                                    skanpage.documentModel.moveImage(index, index -1, 1);
+                                    skanpage.documentModel.moveImage(index, index - 1, 1);
                                     listView.positionViewAtIndex(index, ListView.Center);
                                 }
                                 enabled: index > 0

@@ -13,6 +13,7 @@
 #include <QString>
 #include <QFileInfo>
 #include <QFuture>
+#include <QImage>
 
 #include "SkanpageUtils.h"
 
@@ -26,16 +27,19 @@ public:
     ~DocumentSaver();
 
     void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document);
-
+    void saveNewPageTemporary(const int pageID, const QImage &image);
+    
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
     void fileSaved(const QString &fileName, const SkanpageUtils::DocumentPages &document);
+    void pageTemporarilySaved(const int pageID, const SkanpageUtils::PageProperties &page);
 
 private:
     void save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document);
     void savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document);
     void saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document);
-
+    void saveNewPage(const int pageID, const QImage &image);
+    
     QFuture<void> m_future;
 };
 

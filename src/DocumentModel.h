@@ -13,8 +13,17 @@
 #include <QAbstractListModel>
 #include <QString>
 #include <QUrl>
+#include <QSize>
 
 #include "SkanpageUtils.h"
+
+struct PreviewPageProperties {
+    double aspectRatio;
+    int previewWidth;
+    int previewHeight;
+    int pageID;
+    bool isSaved;
+};
 
 class DocumentSaver;
 class DocumentPrinter;
@@ -30,7 +39,12 @@ class DocumentModel : public QAbstractListModel
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
 public:
-    enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1 , RotationAngleRole};
+    enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1,
+        RotationAngleRole,
+        AspectRatioRole,
+        PreviewWidthRole,
+        PreviewHeightRole,
+        IsSavedRole};
 
     explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();
@@ -66,21 +80,21 @@ Q_SIGNALS:
     void changedChanged();
     void activePageChanged();
     void countChanged();
-    void newImageAdded();
+    void newPageAdded();
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
-    void temporaryFileSaved(const SkanpageUtils::PageProperties &page);
 
 private Q_SLOTS:
     void updateFileInformation(const QString &fileName, const SkanpageUtils::DocumentPages &document);
 
 private:
-    void saveTemporaryFile(const QImage &image);
-    void addPageToModel(const SkanpageUtils::PageProperties &page);
+    void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
 
     SkanpageUtils::DocumentPages m_pages;
+    QList<PreviewPageProperties> m_details;
     QString m_name;
     bool m_changed = false;
     int m_activePageIndex = -1;
+    int m_idCounter = 0;
     std::unique_ptr<DocumentSaver> m_documentSaver;
     std::unique_ptr<DocumentPrinter> m_documentPrinter;
 };

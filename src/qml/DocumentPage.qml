@@ -79,7 +79,7 @@ Item {
 
     Connections {
         target: skanpage.documentModel
-        function onNewImageAdded() {
+        function onActivePageSourceChanged() {
             zoomFitAction.trigger()
         }
     }

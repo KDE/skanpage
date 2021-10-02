@@ -37,7 +37,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksaneInterface.get(), &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
     connect(m_ksaneInterface.get(), &KSaneCore::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
     connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
-    connect(m_docHandler.get(), &DocumentModel::newImageAdded, this, &Skanpage::imageTemporarilySaved);
+    connect(m_docHandler.get(), &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
 
     reloadDevicesList();
 
