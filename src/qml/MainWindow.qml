@@ -224,13 +224,13 @@ ApplicationWindow {
                     implicitHeight: Math.max(children[0].height, children[1].height)
 
                     ToolButton {
-                        anchors.right: parent.right
+                        anchors.fill: parent
                         action: scanAction
                         visible: !skanpage.applicationState == Skanpage.ScanInProgress
                     }
 
                     ToolButton {
-                        anchors.right: parent.right
+                        anchors.fill: parent
                         action: cancelAction
                         visible: skanpage.applicationState == Skanpage.ScanInProgress
                     }
