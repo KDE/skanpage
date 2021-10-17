@@ -22,4 +22,4 @@ To submit a patch to Skanpage, use https://invent.kde.org/utilities/skanpage/-/m
 
 To build Skanpage from source, also see https://community.kde.org/Get_Involved/development.
 
-In order to build Skanpage, you need Qt 5.15, KDE Frameworks 5.83 and the KDE Gear 21.08 release of libksane.
+In order to build Skanpage, you need Qt 5.15.2, KDE Frameworks 5.87 and the KDE Gear 21.08.2 release of libksane.
