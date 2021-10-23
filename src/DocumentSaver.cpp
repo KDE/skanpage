@@ -69,21 +69,24 @@ void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::Docume
         writer.setPageSize(document.at(i).pageSize);
         writer.setPageMargins(QMarginsF(0, 0, 0, 0));
         rotationAngle = document.at(i).rotationAngle;
-
-        QTransform transformation;
-        if (rotationAngle != 0) {
-            transformation.translate(writer.height()/2, writer.width()/2);
-            transformation.rotate(rotationAngle);
-            transformation.translate(-writer.height()/2, -writer.width()/2);
-        }
         if (rotationAngle == 90 || rotationAngle == 270) {
             writer.setPageOrientation(QPageLayout::Landscape);
-            //strange that this is needed and Qt does not do this automatically
-            transformation.translate((writer.width()-writer.height())/2, (writer.height()-writer.width())/2);
         } else {
             writer.setPageOrientation(QPageLayout::Portrait);
         }
         writer.newPage();
+
+        QTransform transformation;
+        if (rotationAngle != 0) {
+            transformation.translate(writer.width()/2, writer.height()/2);
+            transformation.rotate(rotationAngle);
+            transformation.translate(-writer.width()/2, -writer.height()/2);
+        }
+        if (rotationAngle == 90 || rotationAngle == 270) {
+            //strange that this is needed and Qt does not do this automatically
+            transformation.translate((writer.width()-writer.height())/2, (writer.height()-writer.width())/2);
+        }
+
         if (i == 0) {
             painter.begin(&writer);
         }
