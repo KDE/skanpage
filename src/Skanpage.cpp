@@ -34,6 +34,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksaneInterface.get(), &KSaneCore::scanProgress, this, &Skanpage::progressUpdated);
     connect(m_ksaneInterface.get(), &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
     connect(m_ksaneInterface.get(), &KSaneCore::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
+    connect(m_ksaneInterface.get(), &KSaneCore::batchModeCountDown, this, &Skanpage::batchModeCountDown);
     connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
     connect(m_docHandler.get(), &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
 
@@ -214,9 +215,20 @@ void Skanpage::progressUpdated(int progress)
     Q_EMIT progressChanged(m_progress);
 }
 
+void Skanpage::batchModeCountDown(int remainingSeconds)
+{
+    m_remainingSeconds = remainingSeconds;
+    Q_EMIT countDownChanged(m_remainingSeconds);
+}
+
 int Skanpage::progress() const
 {
     return m_progress;
+}
+
+int Skanpage::countDown() const
+{
+    return m_remainingSeconds;
 }
 
 KSaneIface::KSaneCore *Skanpage::ksaneInterface() const

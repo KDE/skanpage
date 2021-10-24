@@ -15,9 +15,20 @@ import org.kde.skanpage 1.0
 Item {
     id: inProgressPage
 
+    Kirigami.PlaceholderMessage {
+        id: countDownTimerMessage
+
+        anchors.centerIn: parent
+        visible: skanpage.countDown > 0
+
+        icon.name: "clock"
+
+        text: xi18nc("Countdown string with time given in seconds", "Next scan starts in<nl/>%1 s", skanpage.countDown)
+    }
+
     ColumnLayout {
         id: documentLayout
-
+        visible: skanpage.countDown <= 0
         anchors.fill: parent
 
         Item {

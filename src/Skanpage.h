@@ -27,6 +27,7 @@ class Skanpage : public QObject
     Q_OBJECT
 
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
+    Q_PROPERTY(int countDown READ countDown NOTIFY countDownChanged)
     Q_PROPERTY(DocumentModel *documentModel READ documentModel CONSTANT)
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
     Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
@@ -61,6 +62,7 @@ public:
     QString deviceName() const;
 
     int progress() const;
+    int countDown() const;
     ApplicationState applicationState() const;
 
     DocumentModel *documentModel() const;
@@ -79,6 +81,7 @@ public:
 
 Q_SIGNALS:
     void progressChanged(int progress);
+    void countDownChanged(int remainingSeconds);
     void optionsChanged();
     void applicationStateChanged();
     void deviceInfoUpdated();
@@ -90,6 +93,7 @@ private Q_SLOTS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &strStatus);
     void imageReady(const QImage &image);
     void progressUpdated(int progress);
+    void batchModeCountDown(int remainingSeconds);
     void scanningFinished(KSaneIface::KSaneCore::KSaneScanStatus statuts, const QString &strStatus);
     void imageTemporarilySaved();
 
@@ -110,6 +114,7 @@ private:
     std::unique_ptr<SingleOption> m_scanModeOption;
 
     int m_progress = 100;
+    int m_remainingSeconds = 0;
     int m_scannedImages = 0;
     ApplicationState m_state = NoDeviceOpened;
     bool m_scanInProgress = false;

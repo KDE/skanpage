@@ -145,6 +145,9 @@ RowLayout {
             case KSaneOption.UnitMicroSecond:
                 return i18nc("Unit suffix for microsecond", "µs");
                 break;
+            case KSaneOption.UnitSecond:
+                return i18nc("Unit suffix for second", "s");
+                break;
             case KSaneOption.UnitMilliMeter:
                 return i18nc("Unit suffix for millimeter", "mm");
                 break;
