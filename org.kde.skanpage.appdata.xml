@@ -19,6 +19,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="es">Skanpage</name>
   <name xml:lang="fi">Skanpage</name>
   <name xml:lang="fr">Skanpage</name>
+  <name xml:lang="ia">Skanpage</name>
   <name xml:lang="id">Skanpage</name>
   <name xml:lang="it">Skanpage</name>
   <name xml:lang="ko">Skanpage</name>
@@ -43,6 +44,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="es">Sencilla aplicación para escanear múltiples páginas</summary>
   <summary xml:lang="fi">Yksinkertainen monta sivua lukeva kuvanlukusovellus</summary>
   <summary xml:lang="fr">Une application simple et multi-page de numérisation</summary>
+  <summary xml:lang="ia">Simple application pro scander multi-paginas</summary>
   <summary xml:lang="id">Aplikasi pemindaian multi halaman yang sederhana</summary>
   <summary xml:lang="it">Semplice applicazione per scansioni multipagina</summary>
   <summary xml:lang="ko">간단한 여러 쪽 스캔 프로그램</summary>
@@ -66,6 +68,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como documentos e imágenes.</p>
     <p xml:lang="fi">Skanpage on yksinkertainen monisivuisten tiedostojen ja kuvien lukemiseen ja tallentamiseen suunniteltu kuvanlukusovellus.</p>
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation sur plusieurs pages et l'enregistrement de documents et d'images.</p>
+    <p xml:lang="ia">Skanpage es un simple application de scadner designate per scander  multi-paginas e salveguardar documentos e imagines.</p>
     <p xml:lang="it">Skanpage è una semplice applicazione per scansionare progettata per scansioni multi-pagina e per il salvataggio di documenti e di immagini.</p>
     <p xml:lang="ko">Skanpage는 여러 쪽 스캔과 문서 및 그림 저장이 가능한 간단한 스캔 프로그램입니다.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van documenten en afbeeldingen.</p>
@@ -87,6 +90,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="es">Funcionalidades:</p>
     <p xml:lang="fi">Ominaisuuksia:</p>
     <p xml:lang="fr">Fonctionnalités :</p>
+    <p xml:lang="ia">Characteristicas:</p>
     <p xml:lang="it">Funzionalità:</p>
     <p xml:lang="ko">기능:</p>
     <p xml:lang="nl">Mogelijkheden:</p>
@@ -108,6 +112,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="es">Escanear mediante escáneres de cama plana y con alimentador automático de documentos</li>
       <li xml:lang="fi">Kuvanluku taso- ja ADF-skannereilta</li>
       <li xml:lang="fr">Numérisation à partir de périphériques de numérisation à plat ou « ADF ».</li>
+      <li xml:lang="ia">Scander exscanners  flatbed (i.e. le plan) e ADF</li>
       <li xml:lang="it">Scansione dagli scanner piani e ADF</li>
       <li xml:lang="ko">평판 및 ADF 스캐너에서 스캔</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
@@ -129,6 +134,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="es">Opciones configurables para el dispositivo de escaneo</li>
       <li xml:lang="fi">Kuvanlukulaitteiden mukautettavat asetukset</li>
       <li xml:lang="fr">Options configurables pour un périphérique de numérisation</li>
+      <li xml:lang="ia">Optiones configurabile per dispositivos de scander</li>
       <li xml:lang="it">Opzioni configurabili per gli scanner</li>
       <li xml:lang="ko">스캔 장치 설정</li>
       <li xml:lang="nl">Te configureren opties voor scanapparaat</li>
@@ -149,6 +155,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="es">Reordenar, rotar y borrar páginas escaneadas</li>
       <li xml:lang="fi">Luettujen sivujen järjestäminen, kiertäminen ja poistaminen</li>
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
+      <li xml:lang="ia">Reordinar, rotation  e deletion de paginas scandite</li>
       <li xml:lang="it">Riordinamento, rotazione ed eliminazione delle pagine scansionate</li>
       <li xml:lang="ko">스캔한 페이지 순서 조정, 회전, 삭제</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
@@ -170,6 +177,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="es">Guardar en documentos PDF multipágina y en archivos de imagen</li>
       <li xml:lang="fi">Useampisivuisten PDF- ja kuvatiedostojen tallennus</li>
       <li xml:lang="fr">Enregistrement de documents « PDF » sur plusieurs pages et de fichiers d'image.</li>
+      <li xml:lang="ia">Salveguardar a files de images e documentos PDF multi-pagina</li>
       <li xml:lang="it">Salvataggio in documenti PDF multi-pagine e in file d'immagine</li>
       <li xml:lang="ko">여러 쪽 PDF 문서 및 그림 파일로 저장</li>
       <li xml:lang="nl">Opslaan in multi-pagina PDF-documenten en afbeeldingsbestanden</li>
