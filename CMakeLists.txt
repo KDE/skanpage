@@ -39,7 +39,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         Config
 )
 
-find_package(KF5 "21.08.2" REQUIRED
+find_package(KF5 "21.11.70" REQUIRED
     COMPONENTS
         Sane
 )

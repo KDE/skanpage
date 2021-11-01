@@ -72,7 +72,6 @@ QString Skanpage::deviceName() const
 void Skanpage::startScan()
 {
     m_ksaneInterface->startScan();
-    progressUpdated(0);
     m_scanInProgress = true;
     m_state = ApplicationState::ScanInProgress;
     Q_EMIT applicationStateChanged();

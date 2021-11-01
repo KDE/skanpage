@@ -29,7 +29,7 @@ void InProgressPainter::initialize(Skanpage *skanpageApp)
 
 void InProgressPainter::paint(QPainter *painter)
 {
-    if (m_scanInterface != nullptr && m_progress > 0) {
+    if (m_scanInterface != nullptr && m_progress >= 0) {
         m_scanInterface->lockScanImage();
 
         const int imageHeight = m_scanInterface->scanImage()->height();
