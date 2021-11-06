@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<SingleOption>("org.kde.skanpage", 1, 0, "SingleOption", QStringLiteral("Single option class uncreateable"));
     qmlRegisterUncreatableType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
+    qmlRegisterUncreatableMetaObject(SkanpageUtils::staticMetaObject, "org.kde.skanpage", 1, 0, "SkanpageUtils", QStringLiteral("Error: only enums"));
     qmlRegisterType<InProgressPainter>("org.kde.skanpage", 1, 0, "InProgressPainter");
     qRegisterMetaType<SkanpageUtils::MessageLevel>();
     qRegisterMetaType<SkanpageUtils::PageProperties>();

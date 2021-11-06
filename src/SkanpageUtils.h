@@ -37,6 +37,7 @@ namespace SkanpageUtils {
     QDebug operator<<(QDebug d, const PageProperties& pageProperties);
 }
 
+Q_DECLARE_METATYPE(SkanpageUtils::MessageLevel)
 Q_DECLARE_METATYPE(SkanpageUtils::PageProperties)
 Q_DECLARE_METATYPE(SkanpageUtils::DocumentPages)
 

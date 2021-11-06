@@ -64,7 +64,7 @@ ApplicationWindow {
 
         function onNewUserMessage(level, message) {
             errorMessage.text = message
-            if (level == Skanpage.ErrorMessage) {
+            if (level == SkanpageUtils.ErrorMessage) {
                 errorMessage.type = Kirigami.MessageType.Error
             } else {
                 errorMessage.type = Kirigami.MessageType.Information
