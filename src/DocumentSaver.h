@@ -37,7 +37,7 @@ Q_SIGNALS:
 private:
     void save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document);
     void savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document);
-    void saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document);
+    bool saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document);
     void saveNewPage(const int pageID, const QImage &image);
     
     QFuture<void> m_future;

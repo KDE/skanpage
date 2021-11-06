@@ -343,7 +343,7 @@ ApplicationWindow {
         folder: shortcuts.documents
         selectExisting: false
         selectMultiple: false
-        nameFilters: [ i18n("PDF files (*.pdf)"), i18n("JPEG files (*.jpg)"), i18n("PNG files (*.png)"), i18n("All files (*)") ]
+        nameFilters: skanpage.documentModel.imageFormatNameFilter()
         onAccepted: skanpage.documentModel.save(fileUrl)
     }
     

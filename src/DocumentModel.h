@@ -59,6 +59,8 @@ public:
 
     void addImage(const QImage &image);
 
+    Q_INVOKABLE QVariantList imageFormatNameFilter() const;
+
     Q_INVOKABLE void clearData();
 
     Q_INVOKABLE void moveImage(int from, int to);
@@ -95,6 +97,7 @@ private:
     bool m_changed = false;
     int m_activePageIndex = -1;
     int m_idCounter = 0;
+    QVariantList m_imageFormatNameFilter;
     std::unique_ptr<DocumentSaver> m_documentSaver;
     std::unique_ptr<DocumentPrinter> m_documentPrinter;
 };

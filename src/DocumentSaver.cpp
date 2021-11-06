@@ -52,8 +52,11 @@ void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages
         savePDF(fileUrl.toLocalFile(), document);
         Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
     } else {
-        saveImage(fileInfo, document);
-        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
+        if (saveImage(fileInfo, document)) {
+            Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
+        } else {
+            Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save document as image."));
+        }
     }
     Q_EMIT fileSaved(fileInfo.fileName(), document);
 }
@@ -97,7 +100,7 @@ void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::Docume
     }
 }
 
-void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document)
+bool DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document)
 {
     const int count = document.count();
     QImage pageImage;
@@ -110,8 +113,9 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
         if (rotationAngle != 0) {
             pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
         }
-        pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+        return pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
     } else {
+        bool success = true;
         for (int i = 0; i < count; ++i) {
             pageImage.load(document.at(i).temporaryFile->fileName());
             const int rotationAngle = document.at(i).rotationAngle;
@@ -120,8 +124,11 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
             }
             fileName =
                 QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath(), fileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), fileInfo.suffix());
-            pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+            if(!pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData())) {
+                success = false;
+            }
         }
+        return success;
     }
 }
 
