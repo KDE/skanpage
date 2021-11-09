@@ -97,7 +97,7 @@ private:
     bool m_changed = false;
     int m_activePageIndex = -1;
     int m_idCounter = 0;
-    QVariantList m_imageFormatNameFilter;
+    QVariantList m_formatNameFilter;
     std::unique_ptr<DocumentSaver> m_documentSaver;
     std::unique_ptr<DocumentPrinter> m_documentPrinter;
 };
