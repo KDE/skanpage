@@ -43,7 +43,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
 
-        KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
+        KConfigGroup options(KSharedConfig::openStateConfig(), QStringLiteral("general"));
         const QString savedDeviceName = options.readEntry(QStringLiteral("deviceName"));
 
         openDevice(savedDeviceName);
@@ -91,7 +91,7 @@ void Skanpage::imageReady(const QImage &image)
 
 void Skanpage::saveScannerOptions()
 {
-    KConfigGroup options(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_ksaneInterface->deviceName()));
+    KConfigGroup options(KSharedConfig::openStateConfig(), QString::fromLatin1("Options For %1").arg(m_ksaneInterface->deviceName()));
 
     QMap<QString, QString> optionMap = m_ksaneInterface->getOptionsMap();
 
@@ -106,11 +106,7 @@ void Skanpage::saveScannerOptions()
 
 void Skanpage::loadScannerOptions()
 {
-    if (!m_ksaneInterface) {
-        return;
-    }
-
-    KConfigGroup scannerOptions(KSharedConfig::openConfig(), QString::fromLatin1("Options For %1").arg(m_ksaneInterface->deviceName()));
+    KConfigGroup scannerOptions(KSharedConfig::openStateConfig(), QString::fromLatin1("Options For %1").arg(m_ksaneInterface->deviceName()));
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Loading scanner options") << scannerOptions.entryMap();
 
@@ -156,7 +152,7 @@ void Skanpage::finishOpeningDevice(const QString &deviceName)
 {
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName);
 
-    KConfigGroup options(KSharedConfig::openConfig(), QStringLiteral("general"));
+    KConfigGroup options(KSharedConfig::openStateConfig(), QStringLiteral("general"));
     options.writeEntry(QStringLiteral("deviceName"), deviceName);
 
     m_optionsModel->setOptionsList(m_ksaneInterface->getOptionsList());
