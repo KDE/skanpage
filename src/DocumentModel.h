@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef DocumentModel_H
-#define DocumentModel_H
+#ifndef DOCUMENT_MODEL_H
+#define DOCUMENT_MODEL_H
 
 #include <memory>
 
@@ -102,4 +102,4 @@ private:
     std::unique_ptr<DocumentPrinter> m_documentPrinter;
 };
 
-#endif
+#endif // DOCUMENT_MODEL_H

@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef DOCUMENTPRINTER_H
-#define DOCUMENTPRINTER_H
+#ifndef DOCUMENT_PRINTER_H
+#define DOCUMENT_PRINTER_H
 
 #include <memory>
 
@@ -38,4 +38,4 @@ private:
     QFuture<void> m_future;
 };
 
-#endif
+#endif // DOCUMENT_PRINTER_H

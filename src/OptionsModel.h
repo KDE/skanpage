@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef OPTIONSMODEL_H
-#define OPTIONSMODEL_H
+#ifndef OPTIONS_MODEL_H
+#define OPTIONS_MODEL_H
 
 #include <QObject>
 #include <QList>
@@ -73,4 +73,4 @@ private:
     std::unique_ptr<OptionsModelPrivate> d;
 };
 
-#endif // OPTIONSMODEL_H
+#endif // OPTIONS_MODEL_H

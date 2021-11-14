@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef DocumentSaver_H
-#define DocumentSaver_H
+#ifndef DOCUMENT_SAVER_H
+#define DOCUMENT_SAVER_H
 
 #include <memory>
 
@@ -43,4 +43,4 @@ private:
     QFuture<void> m_future;
 };
 
-#endif
+#endif // DOCUMENT_SAVER_H

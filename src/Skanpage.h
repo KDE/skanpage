@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef Skanpage_h
-#define Skanpage_h
+#ifndef SKANPAGE_H
+#define SKANPAGE_H
 
 #include <QObject>
 #include <QString>
@@ -120,4 +120,4 @@ private:
     bool m_scanInProgress = false;
 };
 
-#endif
+#endif // SKANPAGE_H

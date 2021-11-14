@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef DEVICESMODEL_H
-#define DEVICESMODEL_H
+#ifndef DEVICES_MODEL_H
+#define DEVICES_MODEL_H
 
 #include <QAbstractListModel>
 #include <QDebug>
@@ -57,4 +57,4 @@ private:
 
 QDebug operator<<(QDebug d, const KSaneCore::DeviceInfo &deviceInfo);
 
-#endif // DEVICESMODEL_H
+#endif // DEVICES_MODEL_H

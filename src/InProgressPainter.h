@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef InProgressPainter_H
-#define InProgressPainter_H
+#ifndef IN_PROGRESS_PAINTER_H
+#define IN_PROGRESS_PAINTER_H
 
 #include <QQuickPaintedItem>
 
@@ -30,4 +30,4 @@ private:
     int m_progress = 0;
 };
 
-#endif
+#endif // IN_PROGRESS_PAINTER_H

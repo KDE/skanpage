@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef SkanpageUtils_H
-#define SkanpageUtils_H
+#ifndef SKANPAGE_UTILS_H
+#define SKANPAGE_UTILS_H
 
 #include <memory>
 
@@ -41,4 +41,4 @@ Q_DECLARE_METATYPE(SkanpageUtils::MessageLevel)
 Q_DECLARE_METATYPE(SkanpageUtils::PageProperties)
 Q_DECLARE_METATYPE(SkanpageUtils::DocumentPages)
 
-#endif // SkanpageUtils_H
+#endif // SKANPAGE_UTILS_H
