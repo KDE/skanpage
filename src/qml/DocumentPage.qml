@@ -14,69 +14,6 @@ import org.kde.kirigami 2.12 as Kirigami
 Item {
     id: documentPage
 
-    Action {
-        id: zoomInAction
-        icon.name: "zoom-in"
-        text: i18n("Zoom In")
-        shortcut: StandardKey.ZoomIn
-        onTriggered: bigImage.zoomScale *= 1.5
-        enabled: bigImage.zoomScale < 8
-    }
-
-    Action {
-        id: zoomOutAction
-        icon.name: "zoom-out"
-        text: i18n("Zoom Out")
-        shortcut: StandardKey.ZoomOut
-        onTriggered: bigImage.zoomScale *= 0.75
-        enabled: bigImage.width > imageViewer.availableWidth / 2
-    }
-
-    Action {
-        id: zoomFitAction
-        icon.name: "zoom-fit-best"
-        text: i18n("Zoom Fit")
-        shortcut: "A"
-        onTriggered: {
-            var zoomScaleWidth = imageViewer.availableWidth / bigImage.sourceSize.width
-            var zoomScaleHeight = imageViewer.availableHeight / bigImage.sourceSize.height
-            if (zoomScaleWidth < zoomScaleHeight) {
-                bigImage.zoomScale = zoomScaleWidth
-            } else {
-                bigImage.zoomScale = zoomScaleHeight
-            }
-        }
-    }
-
-    Action {
-        id: zoomOrigAction
-        icon.name: "zoom-original"
-        text: i18n("Zoom 100%")
-        shortcut: "F"
-        onTriggered: bigImage.zoomScale = 1
-    }
-
-    Action {
-        id: rotateLeftAction
-        icon.name: "object-rotate-left"
-        text: i18n("Rotate Left")
-        onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, true)
-    }
-
-    Action {
-        id: rotateRightAction
-        icon.name: "object-rotate-right"
-        text: i18n("Rotate Right")
-        onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, false)
-    }
-
-    Action {
-        id: deleteAction
-        icon.name: "delete"
-        text: i18n("Delete Page")
-        onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activeIndex)
-    }
-
     Connections {
         target: skanpage.documentModel
         function onActivePageSourceChanged() {
@@ -142,42 +79,76 @@ Item {
             }
         }
 
-        RowLayout {
+        Kirigami.ActionToolBar {
             Layout.fillWidth: true
             Layout.preferredHeight: Kirigami.Units.gridUnit * 2
 
-            ToolButton {
-                action: zoomInAction
-            }
+            alignment: Qt.AlignLeft
 
-            ToolButton {
-                action: zoomOutAction
-            }
+            actions: [
+                Kirigami.Action {
+                    id: zoomInAction
+                    icon.name: "zoom-in"
+                    text: i18n("Zoom In")
+                    shortcut: StandardKey.ZoomIn
+                    onTriggered: bigImage.zoomScale *= 1.5
+                    enabled: bigImage.zoomScale < 8
+                },
 
-            ToolButton {
-                action: zoomFitAction
-            }
+                Kirigami.Action {
+                    id: zoomOutAction
+                    icon.name: "zoom-out"
+                    text: i18n("Zoom Out")
+                    shortcut: StandardKey.ZoomOut
+                    onTriggered: bigImage.zoomScale *= 0.75
+                    enabled: bigImage.width > imageViewer.availableWidth / 2
+                },
 
-            ToolButton {
-                action: zoomOrigAction
-            }
+                Kirigami.Action {
+                    id: zoomFitAction
+                    icon.name: "zoom-fit-best"
+                    text: i18n("Zoom Fit")
+                    shortcut: "A"
+                    onTriggered: {
+                        var zoomScaleWidth = imageViewer.availableWidth / bigImage.sourceSize.width
+                        var zoomScaleHeight = imageViewer.availableHeight / bigImage.sourceSize.height
+                        if (zoomScaleWidth < zoomScaleHeight) {
+                            bigImage.zoomScale = zoomScaleWidth
+                        } else {
+                            bigImage.zoomScale = zoomScaleHeight
+                        }
+                    }
+                },
 
-            Item {
-                id: toolbarSpacer
-                Layout.fillWidth: true
-            }
+                Kirigami.Action {
+                    id: zoomOrigAction
+                    icon.name: "zoom-original"
+                    text: i18n("Zoom 100%")
+                    shortcut: "F"
+                    onTriggered: bigImage.zoomScale = 1
+                },
 
-            ToolButton {
-                action: rotateLeftAction
-            }
+                Kirigami.Action {
+                    id: rotateLeftAction
+                    icon.name: "object-rotate-left"
+                    text: i18n("Rotate Left")
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, true)
+                },
 
-            ToolButton {
-                action: rotateRightAction
-            }
+                Kirigami.Action {
+                    id: rotateRightAction
+                    icon.name: "object-rotate-right"
+                    text: i18n("Rotate Right")
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, false)
+                },
 
-            ToolButton {
-                action: deleteAction
-            }
+                Kirigami.Action {
+                    id: deleteAction
+                    icon.name: "delete"
+                    text: i18n("Delete Page")
+                    onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activeIndex)
+                }
+            ]
         }
     }
 }

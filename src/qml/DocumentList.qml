@@ -185,37 +185,45 @@ ColumnLayout {
                                 Layout.fillWidth: true
                             }
 
-                            Button {
-                                icon.name: "go-up"
-                                onClicked: {
-                                    skanpage.documentModel.moveImage(index, index - 1, 1);
-                                    listView.positionViewAtIndex(index, ListView.Center);
-                                }
-                                enabled: index > 0
-                            }
+                            Kirigami.ActionToolBar {
 
-                            Button {
-                                icon.name: "go-down"
-                                onClicked: {
-                                    skanpage.documentModel.moveImage(index, index + 1, 1);
-                                    listView.positionViewAtIndex(index, ListView.Center);
-                                }
-                                enabled: index < listView.count - 1
-                            }
+                                flat: false
+                                alignment: Qt.AlignRight
 
-                            Button {
-                                icon.name: "object-rotate-left"
-                                onClicked: skanpage.documentModel.rotateImage(index, true)
-                            }
+                                actions: [
+                                    Kirigami.Action {
+                                        icon.name: "go-up"
+                                        onTriggered: {
+                                            skanpage.documentModel.moveImage(index, index - 1, 1);
+                                            listView.positionViewAtIndex(index, ListView.Center);
+                                        }
+                                        enabled: index > 0
+                                    },
 
-                            Button {
-                                icon.name: "object-rotate-right"
-                                onClicked: skanpage.documentModel.rotateImage(index, false)
-                            }
+                                    Kirigami.Action {
+                                        icon.name: "go-down"
+                                        onTriggered: {
+                                            skanpage.documentModel.moveImage(index, index + 1, 1);
+                                            listView.positionViewAtIndex(index, ListView.Center);
+                                        }
+                                        enabled: index < listView.count - 1
+                                    },
 
-                            Button {
-                                icon.name: "delete"
-                                onClicked: skanpage.documentModel.removeImage(index)
+                                    Kirigami.Action {
+                                        icon.name: "object-rotate-left"
+                                        onTriggered: skanpage.documentModel.rotateImage(index, true)
+                                    },
+
+                                    Kirigami.Action {
+                                        icon.name: "object-rotate-right"
+                                        onTriggered: skanpage.documentModel.rotateImage(index, false)
+                                    },
+
+                                    Kirigami.Action {
+                                        icon.name: "delete"
+                                        onTriggered: skanpage.documentModel.removeImage(index)
+                                    }
+                                ]
                             }
                         }
                     }
