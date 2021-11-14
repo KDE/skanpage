@@ -5,8 +5,7 @@
  */
 
 //KDE includes
-
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include "OptionsModel.h"
 #include "skanpage_debug.h"
