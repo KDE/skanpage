@@ -6,16 +6,25 @@
 include_directories(${skanpage_BINARY_DIR})
 
 set(skanpage_SRCS
-    main.cpp
-    Skanpage.cpp
-    SkanpageUtils.cpp
-    DocumentModel.cpp
-    DocumentSaver.cpp
-    DocumentPrinter.cpp
     DevicesModel.cpp
-    OptionsModel.cpp
-    SingleOption.cpp
+    DevicesModel.h
+    DocumentModel.cpp
+    DocumentModel.h
+    DocumentPrinter.cpp
+    DocumentPrinter.h
+    DocumentSaver.cpp
+    DocumentSaver.h
     InProgressPainter.cpp
+    InProgressPainter.h
+    main.cpp
+    OptionsModel.cpp
+    OptionsModel.h
+    SingleOption.cpp
+    SingleOption.h
+    Skanpage.cpp
+    Skanpage.h
+    SkanpageUtils.cpp
+    SkanpageUtils.h
     )
 
 qt_add_resources(skanpage_SRCS qml.qrc)
