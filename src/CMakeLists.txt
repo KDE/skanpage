@@ -5,7 +5,9 @@
 
 include_directories(${skanpage_BINARY_DIR})
 
-set(skanpage_SRCS
+add_executable(skanpage)
+
+target_sources(skanpage PRIVATE
     DevicesModel.cpp
     DevicesModel.h
     DocumentModel.cpp
@@ -27,9 +29,9 @@ set(skanpage_SRCS
     SkanpageUtils.h
     )
 
-qt_add_resources(skanpage_SRCS qml.qrc)
+qt_add_resources(skanpage qml.qrc)
 
-ecm_qt_declare_logging_category(skanpage_SRCS
+ecm_qt_declare_logging_category(skanpage
     HEADER skanpage_debug.h
     IDENTIFIER SKANPAGE_LOG
     CATEGORY_NAME org.kde.skanpage
@@ -43,7 +45,6 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-add_executable(skanpage ${skanpage_SRCS})
 
 target_link_libraries(skanpage
   PRIVATE
