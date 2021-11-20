@@ -15,7 +15,7 @@
 #include "DocumentModel.h"
 #include "OptionsModel.h"
 #include "FormatModel.h"
-#include "SingleOption.h"
+#include "FilteredOptionsModel.h"
 #include "skanpage_debug.h"
 
 Skanpage::Skanpage(const QString &deviceName, QObject *parent)
@@ -24,12 +24,11 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     , m_docHandler(std::make_unique<DocumentModel>())
     , m_availableDevices(std::make_unique<DevicesModel>())
     , m_optionsModel(std::make_unique<OptionsModel>())
-    , m_resolutionOption(std::make_unique<SingleOption>())
-    , m_pageSizeOption(std::make_unique<SingleOption>())
-    , m_sourceOption(std::make_unique<SingleOption>())
-    , m_scanModeOption(std::make_unique<SingleOption>())
     , m_formatModel(std::make_unique<FormatModel>())
+    , m_filteredOptionsModel(std::make_unique<FilteredOptionsModel>())
 {
+    m_filteredOptionsModel->setSourceModel(m_optionsModel.get());
+
     connect(m_ksaneInterface.get(), &KSaneCore::scannedImageReady, this, &Skanpage::imageReady);
     connect(m_ksaneInterface.get(), &KSaneCore::availableDevices, this, &Skanpage::availableDevices);
     connect(m_ksaneInterface.get(), &KSaneCore::userMessage, this, &Skanpage::showKSaneMessage);
@@ -170,10 +169,6 @@ void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &dev
     Q_EMIT deviceInfoUpdated();
     
     m_optionsModel->setOptionsList(m_ksaneInterface->getOptionsList());
-    m_resolutionOption->setOption(m_ksaneInterface->getOption(KSaneCore::ResolutionOption));
-    m_pageSizeOption->setOption(m_ksaneInterface->getOption(KSaneCore::PageSizeOption));
-    m_sourceOption->setOption(m_ksaneInterface->getOption(KSaneCore::SourceOption));
-    m_scanModeOption->setOption(m_ksaneInterface->getOption(KSaneCore::ScanModeOption));
     Q_EMIT optionsChanged();
 
     // load saved options
@@ -193,10 +188,6 @@ void Skanpage::reloadDevicesList()
         m_deviceModel.clear();
         Q_EMIT deviceInfoUpdated();
         m_optionsModel->clearOptions();
-        m_resolutionOption->clearOption();
-        m_pageSizeOption->clearOption();
-        m_sourceOption->clearOption();
-        m_scanModeOption->clearOption();
         Q_EMIT optionsChanged();
     }
     m_state = SearchingForDevices;
@@ -260,34 +251,14 @@ DevicesModel *Skanpage::devicesModel() const
     return m_availableDevices.get();
 }
 
-OptionsModel *Skanpage::optionsModel() const
-{
-    return m_optionsModel.get();
-}
-
 FormatModel *Skanpage::formatModel() const
 {
     return m_formatModel.get();
 }
 
-SingleOption *Skanpage::resolutionOption() const
+FilteredOptionsModel *Skanpage::optionsModel() const
 {
-    return m_resolutionOption.get();
-}
-
-SingleOption *Skanpage::pageSizeOption() const
-{
-    return m_pageSizeOption.get();
-}
-
-SingleOption *Skanpage::sourceOption() const
-{
-    return m_sourceOption.get();
-}
-
-SingleOption *Skanpage::scanModeOption() const
-{
-    return m_scanModeOption.get();
+    return m_filteredOptionsModel.get();
 }
 
 void Skanpage::cancelScan()

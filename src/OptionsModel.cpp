@@ -14,8 +14,7 @@ class OptionsModelPrivate
 {
 public:
     QList<KSaneIface::KSaneOption *> mOptionsList;
-    QVariantList mCurrentValueList;
-    bool mIsModified = false;
+    QList<bool> mFilterList;
 };
 
 OptionsModel::OptionsModel(QObject *parent)
@@ -41,18 +40,14 @@ QHash<int, QByteArray> OptionsModel::roleNames() const
     roles[ValueListRole] = "valueList";
     roles[UnitRole] = "unit";
     roles[TypeRole] = "type";
-    roles[VisibleRole] = "visible";
+    roles[StateRole] = "state";
+    roles[FilterRole] = "filter";
     return roles;
 }
 
 int OptionsModel::rowCount(const QModelIndex &) const
 {
     return d->mOptionsList.count();
-}
-
-bool OptionsModel::isModified() const
-{
-    return d->mIsModified;
 }
 
 QVariant OptionsModel::data(const QModelIndex &index, int role) const
@@ -76,7 +71,7 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
         return d->mOptionsList.at(index.row())->description();
         break;
     case ValueRole:
-        return d->mCurrentValueList.at(index.row());
+        return d->mOptionsList.at(index.row())->value();
         break;
     case MaximumValueRole:
         return d->mOptionsList.at(index.row())->maximumValue();
@@ -96,8 +91,12 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
     case TypeRole:
         return d->mOptionsList.at(index.row())->type();
         break;
-    case VisibleRole:
-        return d->mOptionsList.at(index.row())->state() == KSaneIface::KSaneOption::KSaneOptionState::StateActive;
+    case StateRole:
+        return d->mOptionsList.at(index.row())->state();
+        break;
+    case FilterRole:
+        return d->mFilterList.at(index.row());
+        break;
     default:
         break;
     }
@@ -106,15 +105,18 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
 
 bool OptionsModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if (role != ValueRole || index.row() < 0 || index.row() >= d->mOptionsList.size()) {
+    if ((role != ValueRole && role != FilterRole) || index.row() < 0 || index.row() >= d->mOptionsList.size()) {
         return false;
     }
-    if (d->mOptionsList.at(index.row())->type() == KSaneIface::KSaneOption::TypeAction) {
+    if (role == ValueRole) {
         d->mOptionsList.at(index.row())->setValue(value);
-    } else {
-        d->mCurrentValueList[index.row()] = value;
-        d->mIsModified = true;
-        Q_EMIT isModifiedChanged();
+        qCDebug(SKANPAGE_LOG()) << "OptionsModel: Writing to option" << d->mOptionsList.at(index.row())->name() << value;
+        Q_EMIT dataChanged(index, index, {ValueRole});
+        return true;
+    }
+    if (role == FilterRole) {
+        d->mFilterList[index.row()] = value.toBool();
+        Q_EMIT dataChanged(index, index, {FilterRole});
     }
     return true;
 }
@@ -123,60 +125,28 @@ void OptionsModel::setOptionsList(const QList<KSaneIface::KSaneOption *> options
 {
     beginResetModel();
     d->mOptionsList = optionsList;
-    d->mCurrentValueList.clear();
-    d->mCurrentValueList.reserve(optionsList.size());
+    d->mFilterList.clear();
+    d->mFilterList.reserve(optionsList.size());
     for (int i = 0; i < d->mOptionsList.size(); i++) {
         KSaneIface::KSaneOption *option = d->mOptionsList.at(i);
         qCDebug(SKANPAGE_LOG()) << "OptionsModel: Importing option " << option->name() << ", type" << option->type() << ", state" << option->state();
-        d->mCurrentValueList.append(option->value());
-        connect(option, &KSaneIface::KSaneOption::optionReloaded, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {VisibleRole}); });
-        connect(option, &KSaneIface::KSaneOption::valueChanged, this, [=]() { d->mCurrentValueList[i] = option->value(); Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole}); });
+        connect(option, &KSaneIface::KSaneOption::optionReloaded, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {StateRole}); });
+        connect(option, &KSaneIface::KSaneOption::valueChanged, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole}); });
+        if (option->name() == QStringLiteral("KSane::PageSize") || option->name() == QStringLiteral("resolution") || option->name() == QStringLiteral("source") || option->name() == QStringLiteral("mode") ) {
+            d->mFilterList.insert(i, true);
+        } else {
+            d->mFilterList.insert(i, false);
+        }
     }
     endResetModel();
     Q_EMIT rowCountChanged();
-}
-
-void OptionsModel::resetOptionsValues()
-{
-    if (d->mIsModified == false) {
-        return;
-    }
-    for (int i = 0; i < d->mOptionsList.size(); i++) {
-        if (d->mCurrentValueList[i] != d->mOptionsList.at(i)->value()) {;
-            d->mCurrentValueList[i] = d->mOptionsList.at(i)->value();
-            Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole});
-        }
-    }
-    d->mIsModified = false;
-    Q_EMIT isModifiedChanged();
-    qCDebug(SKANPAGE_LOG()) << "OptionsModel reset";
-}
-
-void OptionsModel::saveOptionsValues()
-{
-    if (d->mIsModified == false) {
-        return;
-    }
-    for (int i = 0; i < d->mOptionsList.size(); i++) {
-        if (d->mOptionsList.at(i)->state() == KSaneIface::KSaneOption::KSaneOptionState::StateActive &&
-            d->mOptionsList.at(i)->type() != KSaneIface::KSaneOption::TypeAction &&
-            d->mOptionsList.at(i)->value() != d->mCurrentValueList.at(i)) {
-
-            d->mOptionsList.at(i)->setValue(d->mCurrentValueList.at(i));
-            qCDebug(SKANPAGE_LOG()) << "OptionsModel: Writing to option" << d->mOptionsList.at(i)->name() << d->mCurrentValueList.at(i);
-        }
-    }
-    d->mIsModified = false;
-    Q_EMIT isModifiedChanged();
 }
 
 void OptionsModel::clearOptions()
 {
     beginResetModel();
     d->mOptionsList.clear();
-    d->mCurrentValueList.clear();
-    d->mIsModified = false;
+    d->mFilterList.clear();
     endResetModel();
     Q_EMIT rowCountChanged();
-    Q_EMIT isModifiedChanged();
 }

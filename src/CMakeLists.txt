@@ -21,8 +21,8 @@ target_sources(skanpage PRIVATE
     main.cpp
     OptionsModel.cpp
     OptionsModel.h
-    SingleOption.cpp
-    SingleOption.h
+    FilteredOptionsModel.cpp
+    FilteredOptionsModel.cpp
     Skanpage.cpp
     Skanpage.h
     SkanpageUtils.cpp

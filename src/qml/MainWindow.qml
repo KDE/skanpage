@@ -20,10 +20,7 @@ ApplicationWindow {
 
     visible: true
 
-    title: skanpage.deviceVendor && skanpage.deviceModel ?
-        i18nc("document title - scanner device - app title", "%1 ― %2 %3 ― Skanpage",
-        mainDocument.name, skanpage.deviceVendor, skanpage.deviceModel)
-        : i18nc("document title: app title", "%1 ― Skanpage", mainDocument.name)
+    title: i18nc("document title: app title", "%1 ― Skanpage", mainView.name)
 
     width: persistentSettings.width
     height: persistentSettings.height
@@ -40,9 +37,9 @@ ApplicationWindow {
         property int y: 0
         property int width: 950
         property int height: 550
-        property int optionWidth: 600
-        property int optionHeight: 400
         property var splitViewState
+        property bool showOptions: true
+        property bool showAllOptions: false
     }
 
     Connections {
@@ -53,9 +50,9 @@ ApplicationWindow {
             persistentSettings.y = mainWindow.y
             persistentSettings.width = mainWindow.width
             persistentSettings.height = mainWindow.height
-            persistentSettings.splitViewState = mainDocument.splitView.saveState()
-            persistentSettings.optionHeight = optionsWindow.height
-            persistentSettings.optionWidth = optionsWindow.width
+            persistentSettings.splitViewState = mainView.splitView.saveState()
+            persistentSettings.showOptions = mainView.showOptions
+            persistentSettings.showAllOptions = allOptionsAction.checked
         }
     }
 
@@ -94,14 +91,6 @@ ApplicationWindow {
     }
 
     Action {
-        id: quitAction
-        icon.name: "window-close"
-        text: i18n("Quit")
-        shortcut: StandardKey.Quit
-        onTriggered: Qt.quit()
-    }
-
-    Action {
         id: scanAction
         icon.name: "document-scan"
         text: i18n("Scan")
@@ -120,12 +109,20 @@ ApplicationWindow {
     }
 
     Action {
-        id: optionsAction
-        icon.name: "configure"
-        text: i18n("Scanner options")
+        id: allOptionsAction
+        icon.name: "view-more-symbolic"
+        text: i18n("Show More")
         shortcut: "CTRL+SPACE"
-        enabled: skanpage.applicationState == Skanpage.ReadyForScan
-        onTriggered: optionsWindow.show()
+        checkable: true
+        checked: persistentSettings.showAllOptions
+        onTriggered: skanpage.optionsModel.showAllOptions(checked)
+    }
+
+    Action {
+        id: showOptionsAction
+        icon.name: "configure"
+        text: i18n("Show Scanner Options")
+        onTriggered: mainView.showOptions = !mainView.showOptions
     }
 
     Action {
@@ -138,18 +135,6 @@ ApplicationWindow {
     }
 
     Action {
-        id: openMenuAction
-        icon.name: "application-menu"
-        onTriggered: {
-            if (applicationMenu.visible) {
-                applicationMenu.close()
-            } else {
-                applicationMenu.popup(mainWindow.width - applicationMenu.width, mainToolBar.height)
-            }
-        }
-    }
-
-    Action {
         id: showAboutAction
         icon.name: "skanpage"
         text: i18n("About Skanpage")
@@ -159,25 +144,17 @@ ApplicationWindow {
     Action {
         id: reselectDevicesAction
         icon.name: "view-refresh"
-        text: i18n("Reselect scanning device")
+        text: i18n("Reselect Scanner")
         onTriggered: skanpage.reloadDevicesList()
         enabled: skanpage.applicationState == Skanpage.ReadyForScan
     }
-
-    Menu {
-        id: applicationMenu
-
-        MenuItem {
-            action: reselectDevicesAction
-        }
-
-        MenuItem {
-            action: showAboutAction
-        }
-
-        MenuItem {
-            action: quitAction
-        }
+    
+    Action {
+        id: quitAction
+        icon.name: "window-close"
+        text: i18n("Quit")
+        shortcut: StandardKey.Quit
+        onTriggered: Qt.quit()
     }
 
     Kirigami.InlineMessage {
@@ -226,13 +203,13 @@ ApplicationWindow {
                     ToolButton {
                         anchors.fill: parent
                         action: scanAction
-                        visible: !skanpage.applicationState == Skanpage.ScanInProgress
+                        visible: skanpage.applicationState !== Skanpage.ScanInProgress
                     }
 
                     ToolButton {
                         anchors.fill: parent
                         action: cancelAction
-                        visible: skanpage.applicationState == Skanpage.ScanInProgress
+                        visible: skanpage.applicationState === Skanpage.ScanInProgress
                     }
                 }
 
@@ -244,33 +221,8 @@ ApplicationWindow {
                     action: newDocAction
                 }
 
-                OptionDelegate {
-                    modelItem: skanpage.resolutionOption
-                    onValueChanged: skanpage.resolutionOption.value = value
-                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
-                }
-
-                OptionDelegate {
-                    modelItem: skanpage.pageSizeOption
-                    onValueChanged: skanpage.pageSizeOption.value = value
-                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
-                }
-
-                OptionDelegate {
-                    modelItem: skanpage.sourceOption
-                    onValueChanged: skanpage.sourceOption.value = value
-                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
-                }
-
-                OptionDelegate {
-                    modelItem: skanpage.scanModeOption
-                    onValueChanged: skanpage.scanModeOption.value = value
-                    enabled: skanpage.applicationState == Skanpage.ReadyForScan
-                }
-
                 ToolButton {
-                    action: optionsAction
-                    visible: skanpage.optionsModel.rowCount > 0
+                    action: printAction
                 }
 
                 Item {
@@ -279,19 +231,24 @@ ApplicationWindow {
                 }
 
                 ToolButton {
-                    action: printAction
+                    action: showOptionsAction
+                    visible: skanpage.applicationState === Skanpage.ReadyForScan || skanpage.applicationState === Skanpage.ScanInProgress
+                    checkable: true
+                    checked: mainView.showOptions
                 }
 
                 ToolButton {
-                    action: openMenuAction
+                    action: showAboutAction
                 }
             }
         }
 
-        DocumentView {
-            id: mainDocument
+        ContentView {
+            id: mainView
 
-            visible: skanpage.applicationState == Skanpage.ReadyForScan || skanpage.applicationState == Skanpage.ScanInProgress
+            showOptions: persistentSettings.showOptions
+            showAllOptions: persistentSettings.showAllOptions
+            visible: skanpage.applicationState === Skanpage.ReadyForScan || skanpage.applicationState === Skanpage.ScanInProgress
 
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -303,7 +260,7 @@ ApplicationWindow {
             }
 
             Component.onCompleted: {
-                mainDocument.splitView.restoreState(persistentSettings.splitViewState)
+                mainView.splitView.restoreState(persistentSettings.splitViewState)
             }
         }
 
@@ -316,13 +273,6 @@ ApplicationWindow {
             Layout.fillHeight: true
             focus: true
         }
-    }
-
-    OptionsWindow {
-        id: optionsWindow
-
-        height: persistentSettings.optionHeight
-        width: persistentSettings.optionWidth
     }
 
     Window {
@@ -361,5 +311,9 @@ ApplicationWindow {
     
     GlobalMenu {
         
+    }
+    
+    Component.onCompleted: {
+        skanpage.optionsModel.showAllOptions(persistentSettings.showAllOptions)
     }
 }

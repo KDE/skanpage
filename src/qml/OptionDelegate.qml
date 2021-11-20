@@ -11,126 +11,132 @@ import QtQuick.Layouts 1.1
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.skanpage 1.0
 
-RowLayout {
+Column {
     id: optionDelegate
 
     property var modelItem
 
-    signal valueChanged(var value)
+    spacing: Kirigami.Units.smallSpacing
+    padding: Kirigami.Units.smallSpacing
 
-    visible: modelItem.visible && modelItem.type != KSaneOption.TypeGamma && modelItem.type != KSaneOption.TypeDetectFail &&
-        (modelItem.type === KSaneOption.TypeValueList ? modelItem.valueList.length > 1 : true)
+    Label {
+        visible: modelItem.type !== KSaneOption.TypeBool
+        text: i18n("%1:", model.title)
+    }
 
-    Loader {
-        active: modelItem.type === KSaneOption.TypeInteger && modelItem.visible
-        visible: active
+    RowLayout {
 
-        sourceComponent: IntegerSpinBoxWithSuffix {
-            id: integerSpinBox
+        Loader {
+            active: modelItem.type === KSaneOption.TypeInteger
+            visible: active
 
-            stepSize: modelItem.step
-            from: modelItem.minimum
-            to: modelItem.maximum
-            suffix: getUnitString(modelItem.unit)
-            value: modelItem.value
-            editable: true
+            sourceComponent: IntegerSpinBoxWithSuffix {
+                id: integerSpinBox
 
-            onValueModified: {
-                if (value != modelItem.value) {
-                    optionDelegate.valueChanged(value)
+                stepSize: modelItem.step
+                from: modelItem.minimum
+                to: modelItem.maximum
+                suffix: getUnitString(modelItem.unit)
+                value: modelItem.value
+                editable: true
+
+                onValueModified: {
+                    if (value != modelItem.value) {
+                        modelItem.value = value
+                    }
                 }
             }
         }
-    }
 
-    Loader {
-        active: modelItem.type === KSaneOption.TypeDouble && modelItem.visible
-        visible: active
+        Loader {
+            active: modelItem.type === KSaneOption.TypeDouble
+            visible: active
 
-        sourceComponent: DoubleSpinBoxWithSuffix {
-            id: doubleSpinBox
+            sourceComponent: DoubleSpinBoxWithSuffix {
+                id: doubleSpinBox
 
-            stepSize: modelItem.step
-            from: modelItem.minimum
-            to: modelItem.maximum
+                stepSize: modelItem.step
+                from: modelItem.minimum
+                to: modelItem.maximum
 
-            suffix: getUnitString(modelItem.unit)
-            value: modelItem.value
-            editable: true
+                suffix: getUnitString(modelItem.unit)
+                value: modelItem.value
+                editable: true
 
-            onValueModified: {
-                if (value != modelItem.value) {
-                    optionDelegate.valueChanged(value)
+                onValueModified: {
+                    if (value != modelItem.value) {
+                        modelItem.value = value
+                    }
                 }
             }
         }
-    }
 
-    Loader {
-        active: modelItem.type === KSaneOption.TypeString && modelItem.visible
-        visible: active
+        Loader {
+            active: modelItem.type === KSaneOption.TypeString
+            visible: active
 
-        sourceComponent: TextField {
-            text: modelItem.value
-            onTextChanged:  {
-                if (text != modelItem.value) {
-                    optionDelegate.valueChanged(value)
+            sourceComponent: TextField {
+                text: modelItem.value
+                onTextChanged:  {
+                    if (text != modelItem.value) {
+                        modelItem.value = value
+                    }
                 }
             }
         }
-    }
 
-    Loader {
-        active: modelItem.type === KSaneOption.TypeBool && modelItem.visible
-        visible: active
+        Loader {
+            active: modelItem.type === KSaneOption.TypeBool
+            visible: active
 
-        sourceComponent: CheckBox {
-            text: modelItem.title
-            checked: modelItem.value
-            onClicked: optionDelegate.valueChanged(!modelItem.value)
-        }
-    }
-
-    Loader {
-        active: modelItem.type === KSaneOption.TypeAction && modelItem.visible
-        visible: active
-
-        sourceComponent: Button {
-            text: modelItem.title
-            onClicked: optionDelegate.valueChanged(1)
-        }
-    }
-
-    Loader {
-        id: comboLoader
-        active: modelItem.type === KSaneOption.TypeValueList && modelItem.visible && modelItem.valueList.length > 1
-        visible: active
-
-        property var entries: modelItem.valueList
-        property var modelValue: modelItem.value
-        property string unitSuffix: getUnitString(modelItem.unit)
-
-        sourceComponent: ComboBox {
-            id: combo
-
-            model: entries
-            displayText: unitSuffix === "" || currentText === "" ? currentText : i18nc("Adding unit suffix","%1 %2", currentText, unitSuffix)
-            currentIndex: indexOfValue(modelItem.value)
-
-            onCurrentValueChanged:  {
-                if (combo.currentValue != modelItem.value) {
-                    optionDelegate.valueChanged(combo.currentValue)
-                }
+            sourceComponent: CheckBox {
+                text: modelItem.title
+                checked: modelItem.value
+                onClicked: modelItem.value = !modelItem.value
             }
+        }
 
-            Connections {
-                target: comboLoader
-                function onModelValueChanged() {
-                    currentIndex = indexOfValue(modelItem.value)
-                }
+        Loader {
+            active: modelItem.type === KSaneOption.TypeAction
+            visible: active
+
+            sourceComponent: Button {
+                text: modelItem.title
+                onClicked: modelItem.value = 1
             }
+        }
 
-            Component.onCompleted: currentIndex = indexOfValue(modelItem.value)
+        Loader {
+            id: comboLoader
+            active: modelItem.type === KSaneOption.TypeValueList
+            visible: active
+
+            property var entries: modelItem.valueList
+            property var modelValue: modelItem.value
+            property string unitSuffix: getUnitString(modelItem.unit)
+
+            sourceComponent: ComboBox {
+                id: combo
+
+                model: entries
+                displayText: unitSuffix === "" || currentText === "" ? currentText : i18nc("Adding unit suffix","%1 %2", currentText, unitSuffix)
+                currentIndex: indexOfValue(modelItem.value)
+
+                onCurrentValueChanged: {
+                    if (combo.currentValue != modelItem.value) {
+                        modelItem.value = combo.currentValue
+                    }
+                }
+
+                Connections {
+                    target: comboLoader
+                    function onModelValueChanged() {
+                        currentIndex = indexOfValue(modelItem.value)
+                    }
+                }
+
+                Component.onCompleted: currentIndex = indexOfValue(modelItem.value)
+            }
         }
     }
 

@@ -19,6 +19,7 @@ Item {
 
     Connections {
         target: skanpage.documentModel
+
         function onActivePageSourceChanged() {
             zoomFitAction.trigger()
         }

@@ -6,12 +6,12 @@
 -->
     <qresource prefix="/">
         <file>qml/MainWindow.qml</file>
-        <file>qml/DocumentView.qml</file>
+        <file>qml/ContentView.qml</file>
         <file>qml/DocumentList.qml</file>
         <file>qml/DocumentPage.qml</file>
         <file>qml/InProgressPage.qml</file>
         <file>qml/DevicesView.qml</file>
-        <file>qml/OptionsWindow.qml</file>
+        <file>qml/OptionsPanel.qml</file>
         <file>qml/OptionDelegate.qml</file>
         <file>qml/IntegerSpinBoxWithSuffix.qml</file>
         <file>qml/DoubleSpinBoxWithSuffix.qml</file>

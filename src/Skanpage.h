@@ -21,7 +21,7 @@ class DocumentModel;
 class DevicesModel;
 class OptionsModel;
 class FormatModel;
-class SingleOption;
+class FilteredOptionsModel;
 
 class Skanpage : public QObject
 {
@@ -31,18 +31,13 @@ class Skanpage : public QObject
     Q_PROPERTY(int countDown READ countDown NOTIFY countDownChanged)
     Q_PROPERTY(DocumentModel *documentModel READ documentModel CONSTANT)
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
-    Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
     Q_PROPERTY(FormatModel *formatModel READ formatModel CONSTANT)
+    Q_PROPERTY(FilteredOptionsModel *optionsModel READ optionsModel CONSTANT)
     Q_PROPERTY(ApplicationState applicationState READ applicationState NOTIFY applicationStateChanged)
 
     Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
     Q_PROPERTY(QString deviceModel READ deviceModel NOTIFY deviceInfoUpdated)
     Q_PROPERTY(QString deviceName READ deviceName NOTIFY deviceInfoUpdated)
-
-    Q_PROPERTY(SingleOption *resolutionOption READ resolutionOption NOTIFY optionsChanged)
-    Q_PROPERTY(SingleOption *pageSizeOption READ pageSizeOption NOTIFY optionsChanged)
-    Q_PROPERTY(SingleOption *sourceOption READ sourceOption NOTIFY optionsChanged)
-    Q_PROPERTY(SingleOption *scanModeOption READ scanModeOption NOTIFY optionsChanged)
 
 public:
 
@@ -69,13 +64,9 @@ public:
 
     DocumentModel *documentModel() const;
     DevicesModel *devicesModel() const;
-    OptionsModel *optionsModel() const;
     FormatModel *formatModel() const;
+    FilteredOptionsModel *optionsModel() const;
     KSaneIface::KSaneCore *ksaneInterface() const;
-    SingleOption *resolutionOption() const;
-    SingleOption *pageSizeOption() const;
-    SingleOption *sourceOption() const;
-    SingleOption *scanModeOption() const;
 
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
@@ -111,11 +102,8 @@ private:
     std::unique_ptr<DocumentModel> m_docHandler;
     std::unique_ptr<DevicesModel> m_availableDevices;
     std::unique_ptr<OptionsModel> m_optionsModel;
-    std::unique_ptr<SingleOption> m_resolutionOption;
-    std::unique_ptr<SingleOption> m_pageSizeOption;
-    std::unique_ptr<SingleOption> m_sourceOption;
-    std::unique_ptr<SingleOption> m_scanModeOption;
     std::unique_ptr<FormatModel> m_formatModel;
+    std::unique_ptr<FilteredOptionsModel> m_filteredOptionsModel;
 
     int m_progress = 100;
     int m_remainingSeconds = 0;

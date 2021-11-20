@@ -61,12 +61,19 @@ MenuBar {
             onTriggered: cancelAction.trigger()
             enabled: cancelAction.enabled
         }
-
+        
         MenuItem {
-            text: optionsAction.text
-            iconName: optionsAction.icon.name
-            onTriggered: optionsAction.trigger()
-            enabled: optionsAction.enabled
+            text: showOptionsAction.text
+            iconName: showOptionsAction.icon.name
+            onTriggered: showOptionsAction.trigger()
+            enabled: showOptionsAction.enabled
+        }
+        
+        MenuItem {
+            text: allOptionsAction.text
+            iconName: allOptionsAction.icon.name
+            onTriggered: allOptionsAction.trigger()
+            enabled: allOptionsAction.enabled
         }
 
         MenuSeparator {

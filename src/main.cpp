@@ -19,9 +19,8 @@
 
 #include "DevicesModel.h"
 #include "DocumentModel.h"
-#include "OptionsModel.h"
 #include "FormatModel.h"
-#include "SingleOption.h"
+#include "FilteredOptionsModel.h"
 #include "InProgressPainter.h"
 #include "Skanpage.h"
 #include "SkanpageUtils.h"
@@ -36,9 +35,8 @@ int main(int argc, char *argv[])
 
     qmlRegisterUncreatableType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel", QStringLiteral("Document model class uncreateable"));
     qmlRegisterUncreatableType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel", QStringLiteral("Device model class uncreateable"));
-    qmlRegisterUncreatableType<OptionsModel>("org.kde.skanpage", 1, 0, "OptionsModel", QStringLiteral("Options model class uncreateable"));
     qmlRegisterUncreatableType<FormatModel>("org.kde.skanpage", 1, 0, "FormatModel", QStringLiteral("Format model class uncreateable"));
-    qmlRegisterUncreatableType<SingleOption>("org.kde.skanpage", 1, 0, "SingleOption", QStringLiteral("Single option class uncreateable"));
+    qmlRegisterUncreatableType<FilteredOptionsModel>("org.kde.skanpage", 1, 0, "FilteredOptionsModel", QStringLiteral("Filtered options model class uncreateable"));;
     qmlRegisterUncreatableType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
     qmlRegisterUncreatableMetaObject(SkanpageUtils::staticMetaObject, "org.kde.skanpage", 1, 0, "SkanpageUtils", QStringLiteral("Error: only enums"));
@@ -73,7 +71,8 @@ int main(int argc, char *argv[])
     QCommandLineOption deviceOption(
         QStringList({QLatin1String("d"), QLatin1String("device")}), i18n("Sane scanner device name. Use 'test' for test device."), i18n("device"));
     parser.addOption(deviceOption);
-    parser.process(app); // the --author and --license is shown anyway but they work only with the following line
+    parser.process(app);
+    // the --author and --license is shown anyway but they work only with the following line
     aboutData.processCommandLine(&parser);
 
     const QString deviceName = parser.value(deviceOption);
