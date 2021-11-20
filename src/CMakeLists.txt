@@ -27,9 +27,8 @@ target_sources(skanpage PRIVATE
     Skanpage.h
     SkanpageUtils.cpp
     SkanpageUtils.h
+    qml.qrc
     )
-
-qt_add_resources(skanpage qml.qrc)
 
 ecm_qt_declare_logging_category(skanpage
     HEADER skanpage_debug.h
