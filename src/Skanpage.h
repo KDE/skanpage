@@ -116,7 +116,7 @@ private:
     int m_progress = 100;
     int m_remainingSeconds = 0;
     int m_scannedImages = 0;
-    ApplicationState m_state = NoDeviceOpened;
+    ApplicationState m_state = SearchingForDevices;
     bool m_scanInProgress = false;
 };
 

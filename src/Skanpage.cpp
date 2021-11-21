@@ -38,8 +38,6 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
     connect(m_docHandler.get(), &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
 
-    reloadDevicesList();
-
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
 
