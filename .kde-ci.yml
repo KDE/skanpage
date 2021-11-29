@@ -10,3 +10,4 @@ Dependencies:
     'frameworks/kirigami': '@stable'
     'frameworks/kcrash': '@stable'
     'frameworks/kconfig': '@stable'
+    'graphics/libksane': '@latest'
