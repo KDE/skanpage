@@ -27,8 +27,27 @@ Item {
     }
 
     ColumnLayout {
+        anchors.centerIn: parent
+
+        visible: skanpage.progress < 0
+
+        BusyIndicator {
+            running: parent.visible
+
+            Layout.preferredWidth: Kirigami.Units.iconSizes.huge
+            Layout.preferredHeight: Kirigami.Units.iconSizes.huge
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+        }
+
+        Kirigami.PlaceholderMessage {
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+            text: i18nc("@info", "Scan in progress.")
+        }
+    }
+
+    ColumnLayout {
         id: documentLayout
-        visible: skanpage.countDown <= 0
+        visible: skanpage.countDown <= 0 && skanpage.progress >= 0
         anchors.fill: parent
 
         Item {

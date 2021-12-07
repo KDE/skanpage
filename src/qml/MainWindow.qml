@@ -298,7 +298,7 @@ ApplicationWindow {
             focus: true
 
             Component.onCompleted: {
-                mainDocument.splitView.restoreState(persistentSettings.splitViewState)
+                //mainDocument.splitView.restoreState(persistentSettings.splitViewState)
             }
         }
 
