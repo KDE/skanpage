@@ -106,9 +106,21 @@ void DocumentModel::setActivePageIndex(int newIndex)
     }
 }
 
-void DocumentModel::save(const QUrl &fileUrl)
+void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
 {
-    m_documentSaver->saveDocument(fileUrl, m_pages);
+    if (pageNumbers.isEmpty()) {
+        m_documentSaver->saveDocument(fileUrl, m_pages);
+    } else {
+        SkanpageUtils::DocumentPages doc;
+        std::sort(pageNumbers.begin(), pageNumbers.end());
+        for (int i = 0; i < pageNumbers.count(); i++) {
+            const int page = pageNumbers.at(i);
+            if (page >= 0 && page <  m_pages.count()) {
+                doc.append(m_pages.at(pageNumbers.at(i)));
+            }
+        }
+        m_documentSaver->saveDocument(fileUrl, doc);
+    }
 }
 
 void DocumentModel::print()

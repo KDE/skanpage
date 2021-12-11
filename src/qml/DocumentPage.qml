@@ -14,6 +14,8 @@ import org.kde.kirigami 2.12 as Kirigami
 Item {
     id: documentPage
 
+    signal saveSinglePage(int pageNumber)
+
     Connections {
         target: skanpage.documentModel
         function onActivePageSourceChanged() {
@@ -140,6 +142,13 @@ Item {
                     icon.name: "object-rotate-right"
                     text: i18n("Rotate Right")
                     onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, false)
+                },
+
+                Kirigami.Action {
+                    id: savePageAction
+                    icon.name: "document-save"
+                    text: i18n("Save Page")
+                    onTriggered: documentPage.saveSinglePage(skanpage.documentModel.activeIndex)
                 },
 
                 Kirigami.Action {

@@ -87,7 +87,7 @@ ApplicationWindow {
     Action {
         id: saveDocAction
         icon.name: "document-save"
-        text: i18n("Save")
+        text: i18n("Save All")
         shortcut: StandardKey.Save
         enabled: skanpage.documentModel.count !== 0
         onTriggered: saveFileDialog.open()
@@ -297,8 +297,13 @@ ApplicationWindow {
             Layout.fillHeight: true
             focus: true
 
+            onSaveSinglePage: {
+                saveFileDialog.pageNumbers.push(pageNumber)
+                saveFileDialog.open()
+            }
+
             Component.onCompleted: {
-                //mainDocument.splitView.restoreState(persistentSettings.splitViewState)
+                mainDocument.splitView.restoreState(persistentSettings.splitViewState)
             }
         }
 
@@ -340,11 +345,18 @@ ApplicationWindow {
 
     FileDialog {
         id: saveFileDialog
+
+        property var pageNumbers: []
+
         folder: shortcuts.documents
         selectExisting: false
         selectMultiple: false
         nameFilters: skanpage.documentModel.imageFormatNameFilter()
-        onAccepted: skanpage.documentModel.save(fileUrl)
+        onAccepted: {
+            skanpage.documentModel.save(fileUrl, pageNumbers)
+            pageNumbers = []
+        }
+        onRejected: pageNumbers = []
     }
     
     GlobalMenu {

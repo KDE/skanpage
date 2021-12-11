@@ -12,6 +12,9 @@ import QtQuick.Layouts 1.1
 import org.kde.kirigami 2.12 as Kirigami
 
 ColumnLayout {
+    id: documentList
+
+    signal saveSinglePage(int pageNumber)
 
     spacing: 0
 
@@ -189,10 +192,11 @@ ColumnLayout {
 
                                 flat: false
                                 alignment: Qt.AlignRight
-
+                                display: Button.IconsOnly
                                 actions: [
                                     Kirigami.Action {
                                         icon.name: "go-up"
+                                        text: i18n("Move Up")
                                         onTriggered: {
                                             skanpage.documentModel.moveImage(index, index - 1, 1);
                                             listView.positionViewAtIndex(index, ListView.Center);
@@ -202,6 +206,7 @@ ColumnLayout {
 
                                     Kirigami.Action {
                                         icon.name: "go-down"
+                                        text: i18n("Move Down")
                                         onTriggered: {
                                             skanpage.documentModel.moveImage(index, index + 1, 1);
                                             listView.positionViewAtIndex(index, ListView.Center);
@@ -211,16 +216,25 @@ ColumnLayout {
 
                                     Kirigami.Action {
                                         icon.name: "object-rotate-left"
+                                        text: i18n("Rotate Left")
                                         onTriggered: skanpage.documentModel.rotateImage(index, true)
                                     },
 
                                     Kirigami.Action {
                                         icon.name: "object-rotate-right"
+                                        text: i18n("Rotate Right")
                                         onTriggered: skanpage.documentModel.rotateImage(index, false)
                                     },
 
                                     Kirigami.Action {
+                                        icon.name: "document-save"
+                                        text: i18n("Save Page")
+                                        onTriggered: documentList.saveSinglePage(index)
+                                    },
+
+                                    Kirigami.Action {
                                         icon.name: "delete"
+                                        text: i18n("Delete Page")
                                         onTriggered: skanpage.documentModel.removeImage(index)
                                     }
                                 ]

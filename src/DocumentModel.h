@@ -69,7 +69,7 @@ public:
 
     Q_INVOKABLE void rotateImage(int row, bool positiveDirection);
 
-    Q_INVOKABLE void save(const QUrl &fileUrl);
+    Q_INVOKABLE void save(const QUrl &fileUrl, QList<int> pageNumbers = {});
 
     Q_INVOKABLE void print();
 

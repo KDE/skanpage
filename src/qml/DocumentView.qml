@@ -15,12 +15,12 @@ import org.kde.skanpage 1.0
 Item {
     id: doc
 
+    readonly property string name: skanpage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* %1", skanpage.documentModel.name) : skanpage.documentModel.name;
     property alias splitView: splitView
+    signal saveSinglePage(int pageNumber)
 
     focus: true
     clip: true
-
-    readonly property string name: skanpage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* %1", skanpage.documentModel.name) : skanpage.documentModel.name;
 
     SystemPalette {
         id: palette
@@ -40,6 +40,7 @@ Item {
 
             SplitView.fillHeight: true
             SplitView.preferredWidth: parent.width / 4
+            onSaveSinglePage: doc.saveSinglePage(pageNumber)
         }
 
         DocumentPage {
@@ -49,6 +50,7 @@ Item {
             SplitView.fillHeight: true
 
             visible: skanpage.applicationState == Skanpage.ReadyForScan
+            onSaveSinglePage: doc.saveSinglePage(pageNumber)
         }
 
         InProgressPage {
