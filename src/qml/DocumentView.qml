@@ -31,8 +31,14 @@ Item {
         anchors.fill: parent
         orientation: Qt.Horizontal
 
-        handle: Kirigami.Separator {
+        handle: Item {
             implicitWidth: Kirigami.Units.smallSpacing
+
+            Kirigami.Separator {
+                height: parent.height
+                width: Kirigami.Units.smallSpacing / 2
+                anchors.centerIn: parent
+            }
         }
 
         DocumentList {
