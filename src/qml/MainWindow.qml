@@ -77,8 +77,8 @@ ApplicationWindow {
 
     Action {
         id: newDocAction
-        icon.name: "document-replace"
-        text: i18n("Clear")
+        icon.name: "edit-delete-remove"
+        text: i18n("Discard All")
         shortcut: StandardKey.New
         enabled: skanpage.documentModel.count !== 0
         onTriggered: skanpage.documentModel.clearData()
