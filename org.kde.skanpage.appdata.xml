@@ -68,7 +68,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como documentos e imágenes.</p>
     <p xml:lang="fi">Skanpage on yksinkertainen monisivuisten tiedostojen ja kuvien lukemiseen ja tallentamiseen suunniteltu kuvanlukusovellus.</p>
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation sur plusieurs pages et l'enregistrement de documents et d'images.</p>
-    <p xml:lang="ia">Skanpage es un simple application de scadner designate per scander  multi-paginas e salveguardar documentos e imagines.</p>
+    <p xml:lang="ia">Skanpage es un simple application designate per scander de multi-paginas e salveguardar documentos e imagines.</p>
     <p xml:lang="it">Skanpage è una semplice applicazione per scansionare progettata per scansioni multi-pagina e per il salvataggio di documenti e di immagini.</p>
     <p xml:lang="ko">Skanpage는 여러 쪽 스캔과 문서 및 그림 저장이 가능한 간단한 스캔 프로그램입니다.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma ontworpen voor scannen van meerdere pagina's en opslaan van documenten en afbeeldingen.</p>
@@ -114,7 +114,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="es">Escanear mediante escáneres de cama plana y con alimentador automático de documentos</li>
       <li xml:lang="fi">Kuvanluku taso- ja ADF-skannereilta</li>
       <li xml:lang="fr">Numérisation à partir de périphériques de numérisation à plat ou « ADF ».</li>
-      <li xml:lang="ia">Scander exscanners  flatbed (i.e. le plan) e ADF</li>
+      <li xml:lang="ia">Scander ex scanners  flatbed (i.e. le plan) e ADF</li>
       <li xml:lang="it">Scansione dagli scanner piani e ADF</li>
       <li xml:lang="ko">평판 및 ADF 스캐너에서 스캔</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
