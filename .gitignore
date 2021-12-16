@@ -6,6 +6,13 @@ build/
 CMakeLists.txt.user
 skanpage.kdev4
 .vscode/
-.clang-format
 .cache/
 .reuse/
+
+# LSP & IDE
+/.clang-format
+/compile_commands.json
+.clangd
+.cache
+.idea
+/cmake-build*
