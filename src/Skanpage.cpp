@@ -33,7 +33,6 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(m_ksaneInterface.get(), &KSaneCore::userMessage, this, &Skanpage::showKSaneMessage);
     connect(m_ksaneInterface.get(), &KSaneCore::scanProgress, this, &Skanpage::progressUpdated);
     connect(m_ksaneInterface.get(), &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
-    connect(m_ksaneInterface.get(), &KSaneCore::openedDeviceInfoUpdated, this, &Skanpage::deviceInfoUpdated);
     connect(m_ksaneInterface.get(), &KSaneCore::batchModeCountDown, this, &Skanpage::batchModeCountDown);
     connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
     connect(m_docHandler.get(), &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
@@ -43,8 +42,12 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
 
         KConfigGroup options(KSharedConfig::openStateConfig(), QStringLiteral("general"));
         const QString savedDeviceName = options.readEntry(QStringLiteral("deviceName"));
+        const QString savedDeviceVendor = options.readEntry(QStringLiteral("deviceVendor"));
+        const QString savedDeviceModel = options.readEntry(QStringLiteral("deviceModel"));
 
-        openDevice(savedDeviceName);
+        if (!openDevice(savedDeviceName, savedDeviceVendor, savedDeviceModel)) {
+            reloadDevicesList();
+        }
     }
 }
 
@@ -55,17 +58,17 @@ Skanpage::~Skanpage()
 
 QString Skanpage::deviceVendor() const
 {
-    return m_ksaneInterface->deviceVendor();
+    return m_deviceVendor;
 }
 
 QString Skanpage::deviceModel() const
 {
-    return m_ksaneInterface->deviceModel();
+    return m_deviceModel;
 }
 
 QString Skanpage::deviceName() const
 {
-    return m_ksaneInterface->deviceName();
+    return m_deviceName;
 }
 
 void Skanpage::startScan()
@@ -128,14 +131,18 @@ void Skanpage::availableDevices(const QList<KSaneCore::DeviceInfo> &deviceList)
     }
 }
 
-bool Skanpage::openDevice(const QString &deviceName)
+bool Skanpage::openDevice(const QString &deviceName, const QString &deviceVendor, const QString &deviceModel)
 {
     KSaneCore::KSaneOpenStatus status = KSaneCore::OpeningFailed;
     if (!deviceName.isEmpty()) {
         qCDebug(SKANPAGE_LOG) << QStringLiteral("Trying to open device: %1").arg(deviceName);
         status = m_ksaneInterface->openDevice(deviceName);
         if (status == KSaneCore::OpeningSucceeded) {
-            finishOpeningDevice(deviceName);
+            if (!deviceVendor.isEmpty()) {
+                finishOpeningDevice(deviceName, deviceVendor, deviceModel);
+            } else {
+                finishOpeningDevice(deviceName, m_ksaneInterface->deviceVendor(), m_ksaneInterface->deviceModel());
+            }
         } else if (status == KSaneCore::OpeningDenied) {
             showUserMessage(SkanpageUtils::ErrorMessage, QStringLiteral("Access to selected device has been denied"));
         } else {
@@ -146,13 +153,20 @@ bool Skanpage::openDevice(const QString &deviceName)
     return status == KSaneCore::OpeningSucceeded;
 }
 
-void Skanpage::finishOpeningDevice(const QString &deviceName)
+void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &deviceVendor, const QString &deviceModel)
 {
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("Finishing opening of device %1 and loading options").arg(deviceName);
 
     KConfigGroup options(KSharedConfig::openStateConfig(), QStringLiteral("general"));
     options.writeEntry(QStringLiteral("deviceName"), deviceName);
+    options.writeEntry(QStringLiteral("deviceModel"), deviceVendor);
+    options.writeEntry(QStringLiteral("deviceVendor"), deviceModel);
 
+    m_deviceName = deviceName;
+    m_deviceVendor = deviceVendor;
+    m_deviceModel = deviceModel;
+    Q_EMIT deviceInfoUpdated();
+    
     m_optionsModel->setOptionsList(m_ksaneInterface->getOptionsList());
     m_resolutionOption->setOption(m_ksaneInterface->getOption(KSaneCore::ResolutionOption));
     m_pageSizeOption->setOption(m_ksaneInterface->getOption(KSaneCore::PageSizeOption));
@@ -172,6 +186,10 @@ void Skanpage::reloadDevicesList()
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("(Re-)loading devices list");
 
     if (m_ksaneInterface->closeDevice()) {
+        m_deviceName.clear();
+        m_deviceVendor.clear();
+        m_deviceModel.clear();
+        Q_EMIT deviceInfoUpdated();
         m_optionsModel->clearOptions();
         m_resolutionOption->clearOption();
         m_pageSizeOption->clearOption();

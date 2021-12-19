@@ -77,7 +77,7 @@ public:
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
-    Q_INVOKABLE bool openDevice(const QString &deviceName);
+    Q_INVOKABLE bool openDevice(const QString &deviceName, const QString &deviceVendor = QString(), const QString &deviceModel = QString());
 
 Q_SIGNALS:
     void progressChanged(int progress);
@@ -98,7 +98,7 @@ private Q_SLOTS:
     void imageTemporarilySaved();
 
 private:
-    void finishOpeningDevice(const QString &deviceName);
+    void finishOpeningDevice(const QString &deviceName, const QString &deviceVendor, const QString &deviceModel);
     void loadScannerOptions();
     void saveScannerOptions();
     void checkFinish();
@@ -118,6 +118,9 @@ private:
     int m_scannedImages = 0;
     ApplicationState m_state = SearchingForDevices;
     bool m_scanInProgress = false;
+    QString m_deviceName;
+    QString m_deviceVendor;
+    QString m_deviceModel;
 };
 
 #endif // SKANPAGE_H
