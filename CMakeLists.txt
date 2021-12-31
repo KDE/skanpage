@@ -39,10 +39,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         Config
 )
 
-find_package(KF5 "21.12.0" REQUIRED
-    COMPONENTS
-        Sane
-)
+find_package(KF5Sane "21.12.0" REQUIRED)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
