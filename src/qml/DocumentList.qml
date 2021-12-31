@@ -193,7 +193,7 @@ ColumnLayout {
 
                                 flat: false
                                 alignment: Qt.AlignRight
-                                display: Button.IconsOnly
+                                display: Button.IconOnly
                                 actions: [
                                     Kirigami.Action {
                                         icon.name: "go-up"
