@@ -10,6 +10,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.12 as Kirigami
+import org.kde.skanpage 1.0
 
 Item {
     id: documentPage
@@ -134,14 +135,21 @@ Item {
                     id: rotateLeftAction
                     icon.name: "object-rotate-left"
                     text: i18n("Rotate Left")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, true)
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Rotate90positive)
+                },
+
+                Kirigami.Action {
+                    id: flipVerticalAction
+                    icon.name: "object-flip-vertical"
+                    text: i18n("Flip")
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Flip180)
                 },
 
                 Kirigami.Action {
                     id: rotateRightAction
                     icon.name: "object-rotate-right"
                     text: i18n("Rotate Right")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, false)
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Rotate90negative)
                 },
 
                 Kirigami.Action {

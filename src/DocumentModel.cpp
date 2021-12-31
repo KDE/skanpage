@@ -212,14 +212,16 @@ void DocumentModel::moveImage(int from, int to)
     }
 }
 
-void DocumentModel::rotateImage(int row, bool positiveDirection)
+void DocumentModel::rotateImage(int row, RotateOption rotate)
 {
     if (row < 0 || row >= rowCount()) {
         return;
     }
     int rotationAngle = m_pages.at(row).rotationAngle;
-    if (positiveDirection) {
+    if (rotate == RotateOption::Rotate90positive) {
         rotationAngle += 90;
+    } else if (rotate == RotateOption::Flip180) {
+        rotationAngle += 180;
     } else {
         rotationAngle -= 90;
     }

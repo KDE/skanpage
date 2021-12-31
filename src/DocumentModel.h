@@ -46,6 +46,12 @@ public:
         PreviewHeightRole,
         IsSavedRole};
 
+    enum RotateOption { Rotate90positive,
+        Rotate90negative,
+        Flip180};
+
+    Q_ENUM(RotateOption);
+
     explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();
 
@@ -67,7 +73,7 @@ public:
 
     Q_INVOKABLE void removeImage(int row);
 
-    Q_INVOKABLE void rotateImage(int row, bool positiveDirection);
+    Q_INVOKABLE void rotateImage(int row, RotateOption rotate = RotateOption::Rotate90positive);
 
     Q_INVOKABLE void save(const QUrl &fileUrl, QList<int> pageNumbers = {});
 
