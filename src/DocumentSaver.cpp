@@ -34,17 +34,10 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
     const QFileInfo &fileInfo = QFileInfo(fileUrl.toLocalFile());
     const QString &fileSuffix = fileInfo.suffix();
 
-    QUrl saveUrl;
-    if (fileSuffix.isEmpty()) {
-        saveUrl = QUrl::fromLocalFile(fileUrl.toLocalFile() + QStringLiteral(".pdf"));
-        qCDebug(SKANPAGE_LOG) << QStringLiteral("File suffix is empty. Automatically setting format to PDF.");
-    } else {
-        saveUrl = fileUrl;
-        qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
-    }
+    qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
 
     if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
-        savePDF(saveUrl, document, type);
+        savePDF(fileUrl, document, type);
     } else {
         saveImage(fileInfo, document, type);
     }

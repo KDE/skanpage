@@ -324,7 +324,7 @@ ApplicationWindow {
         height: persistentSettings.optionHeight
         width: persistentSettings.optionWidth
     }
-    
+
     Window {
         id: aboutWindow
 
@@ -351,7 +351,7 @@ ApplicationWindow {
         folder: shortcuts.documents
         selectExisting: false
         selectMultiple: false
-        nameFilters: skanpage.documentModel.imageFormatNameFilter()
+        nameFilters: skanpage.formatModel.formatFilter()
         onAccepted: {
             skanpage.documentModel.save(fileUrl, pageNumbers)
             pageNumbers = []

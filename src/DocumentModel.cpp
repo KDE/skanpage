@@ -10,9 +10,7 @@
 #include <QUrl>
 #include <QTemporaryFile>
 #include <QImage>
-#include <QImageWriter>
-#include <QMimeType>
-#include <QMimeDatabase>
+#include <QString>
 
 #include <KLocalizedString>
 
@@ -37,24 +35,6 @@ DocumentModel::DocumentModel(QObject *parent)
     , m_documentSaver(std::make_unique<DocumentSaver>())
     , m_documentPrinter(std::make_unique<DocumentPrinter>())
 {
-    QList<QByteArray> tempList = QImageWriter::supportedMimeTypes();
-    const QMimeDatabase mimeDB;
-    // Put first class citizens at first place
-    tempList.removeAll(QByteArray("image/jpeg"));
-    tempList.removeAll(QByteArray("image/tiff"));
-    tempList.removeAll(QByteArray("image/png"));
-    tempList.insert(0, QByteArray("application/pdf"));
-    tempList.insert(1, QByteArray("image/png"));
-    tempList.insert(2, QByteArray("image/jpeg"));
-    tempList.insert(3, QByteArray("image/tiff"));
-
-    m_formatNameFilter.append({i18nc("Description for the name filter of a QML file dialog", "All files") + QStringLiteral("(*)")});
-
-    for (const auto &mimeString : tempList) {
-        const QMimeType mimeType = mimeDB.mimeTypeForName(QString::fromLatin1(mimeString));
-        // craft a string that QML's FileDialog understands
-        m_formatNameFilter.append({mimeType.comment() + QStringLiteral("(*.") + mimeType.preferredSuffix() + QStringLiteral(")")});
-    }
     m_fileIOThread.start();
     m_documentSaver->moveToThread(&m_fileIOThread);
 
@@ -70,11 +50,6 @@ DocumentModel::~DocumentModel()
 {
     m_fileIOThread.quit();
     m_fileIOThread.wait();
-}
-
-QVariantList DocumentModel::imageFormatNameFilter() const
-{
-    return m_formatNameFilter;
 }
 
 const QString DocumentModel::name() const
@@ -354,4 +329,3 @@ void DocumentModel::updateFileInformation(const QList<QUrl> &fileUrls, const Ska
         Q_EMIT nameChanged();
     }
 }
-

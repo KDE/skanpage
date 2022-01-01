@@ -14,6 +14,7 @@
 #include "DevicesModel.h"
 #include "DocumentModel.h"
 #include "OptionsModel.h"
+#include "FormatModel.h"
 #include "SingleOption.h"
 #include "skanpage_debug.h"
 
@@ -27,6 +28,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     , m_pageSizeOption(std::make_unique<SingleOption>())
     , m_sourceOption(std::make_unique<SingleOption>())
     , m_scanModeOption(std::make_unique<SingleOption>())
+    , m_formatModel(std::make_unique<FormatModel>())
 {
     connect(m_ksaneInterface.get(), &KSaneCore::scannedImageReady, this, &Skanpage::imageReady);
     connect(m_ksaneInterface.get(), &KSaneCore::availableDevices, this, &Skanpage::availableDevices);
@@ -261,6 +263,11 @@ DevicesModel *Skanpage::devicesModel() const
 OptionsModel *Skanpage::optionsModel() const
 {
     return m_optionsModel.get();
+}
+
+FormatModel *Skanpage::formatModel() const
+{
+    return m_formatModel.get();
 }
 
 SingleOption *Skanpage::resolutionOption() const

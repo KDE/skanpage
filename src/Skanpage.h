@@ -20,6 +20,7 @@
 class DocumentModel;
 class DevicesModel;
 class OptionsModel;
+class FormatModel;
 class SingleOption;
 
 class Skanpage : public QObject
@@ -31,6 +32,7 @@ class Skanpage : public QObject
     Q_PROPERTY(DocumentModel *documentModel READ documentModel CONSTANT)
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
     Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
+    Q_PROPERTY(FormatModel *formatModel READ formatModel CONSTANT)
     Q_PROPERTY(ApplicationState applicationState READ applicationState NOTIFY applicationStateChanged)
 
     Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
@@ -68,6 +70,7 @@ public:
     DocumentModel *documentModel() const;
     DevicesModel *devicesModel() const;
     OptionsModel *optionsModel() const;
+    FormatModel *formatModel() const;
     KSaneIface::KSaneCore *ksaneInterface() const;
     SingleOption *resolutionOption() const;
     SingleOption *pageSizeOption() const;
@@ -112,6 +115,7 @@ private:
     std::unique_ptr<SingleOption> m_pageSizeOption;
     std::unique_ptr<SingleOption> m_sourceOption;
     std::unique_ptr<SingleOption> m_scanModeOption;
+    std::unique_ptr<FormatModel> m_formatModel;
 
     int m_progress = 100;
     int m_remainingSeconds = 0;

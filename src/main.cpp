@@ -20,6 +20,7 @@
 #include "DevicesModel.h"
 #include "DocumentModel.h"
 #include "OptionsModel.h"
+#include "FormatModel.h"
 #include "SingleOption.h"
 #include "InProgressPainter.h"
 #include "Skanpage.h"
@@ -36,6 +37,7 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel", QStringLiteral("Document model class uncreateable"));
     qmlRegisterUncreatableType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel", QStringLiteral("Device model class uncreateable"));
     qmlRegisterUncreatableType<OptionsModel>("org.kde.skanpage", 1, 0, "OptionsModel", QStringLiteral("Options model class uncreateable"));
+    qmlRegisterUncreatableType<FormatModel>("org.kde.skanpage", 1, 0, "FormatModel", QStringLiteral("Format model class uncreateable"));
     qmlRegisterUncreatableType<SingleOption>("org.kde.skanpage", 1, 0, "SingleOption", QStringLiteral("Single option class uncreateable"));
     qmlRegisterUncreatableType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));

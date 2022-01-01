@@ -27,6 +27,8 @@ target_sources(skanpage PRIVATE
     Skanpage.h
     SkanpageUtils.cpp
     SkanpageUtils.h
+    FormatModel.cpp
+    FormatModel.h
     qml.qrc
     )
 
