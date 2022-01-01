@@ -54,7 +54,7 @@ Item {
 
         contentItem: Item {
 
-            implicitWidth: Math.max(minTextSize.width, maxTextSize.width) + suffixText.width + Kirigami.Units.smallSpacing + 2 * control.padding
+            implicitWidth: Math.max(minTextSize.width, maxTextSize.width) + suffixText.width + Kirigami.Units.smallSpacing
 
             TextInput {
                 id: textInput

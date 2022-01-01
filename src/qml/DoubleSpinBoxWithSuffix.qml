@@ -47,6 +47,7 @@ Item {
         onValueChanged: {
             if (container.value != value && !setup) {
                 container.valueModified(value / control.multiplier)
+                textInput.text = control.textFromValue(control.value, control.locale)
             }
         }
 
@@ -87,7 +88,7 @@ Item {
 
         contentItem: Item {
 
-            implicitWidth: Math.max(minTextSize.width, maxTextSize.width) + suffixText.width + Kirigami.Units.smallSpacing + 2 * control.padding
+            implicitWidth: Math.max(minTextSize.width, maxTextSize.width) + suffixText.width + Kirigami.Units.smallSpacing
 
             TextInput {
                 id: textInput
