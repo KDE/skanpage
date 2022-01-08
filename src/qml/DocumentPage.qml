@@ -139,17 +139,17 @@ Item {
                 },
 
                 Kirigami.Action {
-                    id: flipVerticalAction
-                    icon.name: "object-flip-vertical"
-                    text: i18n("Flip")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Flip180)
-                },
-
-                Kirigami.Action {
                     id: rotateRightAction
                     icon.name: "object-rotate-right"
                     text: i18n("Rotate Right")
                     onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Rotate90negative)
+                },
+
+                Kirigami.Action {
+                    id: flipVerticalAction
+                    icon.name: "object-flip-vertical"
+                    text: i18n("Flip")
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Flip180)
                 },
 
                 Kirigami.Action {

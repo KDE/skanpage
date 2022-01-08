@@ -222,15 +222,15 @@ ColumnLayout {
                                     },
 
                                     Kirigami.Action {
-                                        icon.name: "object-flip-vertical"
-                                        text: i18n("Flip")
-                                        onTriggered: skanpage.documentModel.rotateImage(index, DocumentModel.Flip180)
-                                    },
-
-                                    Kirigami.Action {
                                         icon.name: "object-rotate-right"
                                         text: i18n("Rotate Right")
                                         onTriggered: skanpage.documentModel.rotateImage(index, DocumentModel.Rotate90negative)
+                                    },
+
+                                    Kirigami.Action {
+                                        icon.name: "object-flip-vertical"
+                                        text: i18n("Flip")
+                                        onTriggered: skanpage.documentModel.rotateImage(index, DocumentModel.Flip180)
                                     },
 
                                     Kirigami.Action {
