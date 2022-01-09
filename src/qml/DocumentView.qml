@@ -22,10 +22,6 @@ Item {
     focus: true
     clip: true
 
-    SystemPalette {
-        id: palette
-    }
-
     SplitView {
         id: splitView
         anchors.fill: parent

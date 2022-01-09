@@ -19,6 +19,10 @@ ColumnLayout {
 
     spacing: 0
 
+    SystemPalette {
+        id: palette
+    }
+
     ScrollView {
         id: scrollView
 
