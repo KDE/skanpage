@@ -30,6 +30,8 @@ QDebug operator<<(QDebug d, const PreviewPageProperties& pageProperties)
     return d;
 }
 
+const static QString defaultFileName = i18n("New document");
+
 DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_name(i18n("New document"))
@@ -319,6 +321,10 @@ void DocumentModel::clearData()
     endResetModel();
     Q_EMIT countChanged();
 
+    if (defaultFileName != m_name) {
+        m_name = defaultFileName;
+        Q_EMIT nameChanged();
+    }
     if (m_changed) {
         m_changed = false;
         Q_EMIT changedChanged();
