@@ -121,7 +121,7 @@ void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
                 doc.append(m_pages.at(pageNumbers.at(i)));
             }
         }
-        m_documentSaver->saveDocument(fileUrl, doc);
+        m_documentSaver->saveDocument(fileUrl, doc, DocumentSaver::PageSelection);
     }
 }
 

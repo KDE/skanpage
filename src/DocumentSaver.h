@@ -23,10 +23,14 @@ class DocumentSaver : public QObject
 
 public:
 
+    enum FileType {
+        EntireDocument,
+        PageSelection};
+
     explicit DocumentSaver(QObject *parent = nullptr);
     ~DocumentSaver();
 
-    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document);
+    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type = EntireDocument);
     void saveNewPageTemporary(const int pageID, const QImage &image);
     
 Q_SIGNALS:
@@ -35,7 +39,7 @@ Q_SIGNALS:
     void pageTemporarilySaved(const int pageID, const SkanpageUtils::PageProperties &page);
 
 private:
-    void save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document);
+    void save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type);
     void savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document);
     bool saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document);
     void saveNewPage(const int pageID, const QImage &image);

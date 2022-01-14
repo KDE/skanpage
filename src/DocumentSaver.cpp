@@ -26,7 +26,7 @@ DocumentSaver::~DocumentSaver()
 {
 }
 
-void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document)
+void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type)
 {
     if (fileUrl.isEmpty() || document.isEmpty()) {
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Nothing to save."));
@@ -38,10 +38,10 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
     }
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
 
-    m_future = QtConcurrent::run(this, &DocumentSaver::save, fileUrl, document);
+    m_future = QtConcurrent::run(this, &DocumentSaver::save, fileUrl, document, type);
 }
 
-void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document)
+void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type)
 {
     const QFileInfo &fileInfo = QFileInfo(fileUrl.toLocalFile());
     const QString &fileSuffix = fileInfo.suffix();
@@ -51,14 +51,19 @@ void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages
     if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
         savePDF(fileUrl.toLocalFile(), document);
         Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
+        if (type == EntireDocument) {
+            Q_EMIT fileSaved(fileInfo.fileName(), document);
+        }
     } else {
         if (saveImage(fileInfo, document)) {
             Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
+            if (type == EntireDocument) {
+                Q_EMIT fileSaved(fileInfo.fileName(), document);
+            }
         } else {
             Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save document as image."));
         }
     }
-    Q_EMIT fileSaved(fileInfo.fileName(), document);
 }
 
 void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document)
