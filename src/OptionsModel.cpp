@@ -20,7 +20,7 @@ public:
 
 OptionsModel::OptionsModel(QObject *parent)
     : QAbstractListModel(parent)
-    , d(std::unique_ptr<OptionsModelPrivate>(new OptionsModelPrivate()))
+    , d(std::make_unique<OptionsModelPrivate>())
 {
 }
 

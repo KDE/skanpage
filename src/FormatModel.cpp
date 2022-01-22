@@ -21,7 +21,7 @@ public:
 
 FormatModel::FormatModel(QObject *parent)
     : QAbstractListModel(parent)
-    , d(std::unique_ptr<FormatModelPrivate>(new FormatModelPrivate()))
+    , d(std::make_unique<FormatModelPrivate>())
 {
     QList<QByteArray> tempList = QImageWriter::supportedMimeTypes();
     const QMimeDatabase mimeDB;

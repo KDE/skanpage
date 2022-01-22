@@ -30,66 +30,88 @@ QDebug operator<<(QDebug d, const PreviewPageProperties& pageProperties)
 
 const static QString defaultFileName = i18n("New document");
 
-DocumentModel::DocumentModel(QObject *parent)
-    : QAbstractListModel(parent)
-    , m_documentSaver(std::make_unique<DocumentSaver>())
+
+class DocumentModelPrivate
+{
+public:
+    explicit DocumentModelPrivate();
+
+    SkanpageUtils::DocumentPages m_pages;
+    QList<PreviewPageProperties> m_details;
+    QList<QUrl> m_fileUrls;
+    bool m_changed = false;
+    int m_activePageIndex = -1;
+    int m_idCounter = 0;
+    std::unique_ptr<DocumentSaver> m_documentSaver;
+    std::unique_ptr<DocumentPrinter> m_documentPrinter;
+    QThread m_fileIOThread;
+};
+
+DocumentModelPrivate::DocumentModelPrivate()
+    : m_documentSaver(std::make_unique<DocumentSaver>())
     , m_documentPrinter(std::make_unique<DocumentPrinter>())
 {
-    m_fileIOThread.start();
-    m_documentSaver->moveToThread(&m_fileIOThread);
+}
 
-    connect(this, &DocumentModel::saveDocument, m_documentSaver.get(), &DocumentSaver::saveDocument);
-    connect(this, &DocumentModel::saveNewPageTemporary, m_documentSaver.get(), &DocumentSaver::saveNewPageTemporary);
-    connect(m_documentSaver.get(), &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
-    connect(m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
-    connect(m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
-    connect(m_documentPrinter.get(), &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
+DocumentModel::DocumentModel(QObject *parent)
+    : QAbstractListModel(parent)
+    , d(std::make_unique<DocumentModelPrivate>())
+{
+    d->m_fileIOThread.start();
+    d->m_documentSaver->moveToThread(&d->m_fileIOThread);
+
+    connect(this, &DocumentModel::saveDocument, d->m_documentSaver.get(), &DocumentSaver::saveDocument);
+    connect(this, &DocumentModel::saveNewPageTemporary, d->m_documentSaver.get(), &DocumentSaver::saveNewPageTemporary);
+    connect(d->m_documentSaver.get(), &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
+    connect(d->m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
+    connect(d->m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
+    connect(d->m_documentPrinter.get(), &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
 }
 
 DocumentModel::~DocumentModel()
 {
-    m_fileIOThread.quit();
-    m_fileIOThread.wait();
+    d->m_fileIOThread.quit();
+    d->m_fileIOThread.wait();
 }
 
 const QString DocumentModel::name() const
 {
-    if (m_fileUrls.isEmpty()) {
+    if (d->m_fileUrls.isEmpty()) {
        return i18n("New document");
     }
-    if (m_fileUrls.count() > 1) {
-        return i18nc("for file names, indicates a range: from file0000.png to file0014.png","%1 ... %2", m_fileUrls.first().fileName(), m_fileUrls.last().fileName());
+    if (d->m_fileUrls.count() > 1) {
+        return i18nc("for file names, indicates a range: from file0000.png to file0014.png","%1 ... %2", d->m_fileUrls.first().fileName(), d->m_fileUrls.last().fileName());
     }
-    return m_fileUrls.first().fileName();
+    return d->m_fileUrls.first().fileName();
 }
 
 bool DocumentModel::changed() const
 {
-    return m_changed;
+    return d->m_changed;
 }
 
 int DocumentModel::activePageIndex() const
 {
-    return m_activePageIndex;
+    return d->m_activePageIndex;
 }
 
 int DocumentModel::activePageRotation() const
 {
-    if (m_activePageIndex >= 0 && m_activePageIndex < rowCount()) {
-        return m_pages.at(m_activePageIndex).rotationAngle;
+    if (d->m_activePageIndex >= 0 && d->m_activePageIndex < rowCount()) {
+        return d->m_pages.at(d->m_activePageIndex).rotationAngle;
     }
     return 0;
 }
 
 QUrl DocumentModel::activePageSource() const
 {
-    return data(index(m_activePageIndex, 0), ImageUrlRole).toUrl();
+    return data(index(d->m_activePageIndex, 0), ImageUrlRole).toUrl();
 }
 
 void DocumentModel::setActivePageIndex(int newIndex)
 {
-    if (newIndex != m_activePageIndex) {
-        m_activePageIndex = newIndex;
+    if (newIndex != d->m_activePageIndex) {
+        d->m_activePageIndex = newIndex;
         Q_EMIT activePageChanged();
     }
 }
@@ -97,14 +119,14 @@ void DocumentModel::setActivePageIndex(int newIndex)
 void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
 {
     if (pageNumbers.isEmpty()) {
-        Q_EMIT saveDocument(fileUrl, m_pages);
+        Q_EMIT saveDocument(fileUrl, d->m_pages);
     } else {
         SkanpageUtils::DocumentPages doc;
         std::sort(pageNumbers.begin(), pageNumbers.end());
         for (int i = 0; i < pageNumbers.count(); i++) {
             const int page = pageNumbers.at(i);
-            if (page >= 0 && page <  m_pages.count()) {
-                doc.append(m_pages.at(pageNumbers.at(i)));
+            if (page >= 0 && page <  d->m_pages.count()) {
+                doc.append(d->m_pages.at(pageNumbers.at(i)));
             }
         }
         Q_EMIT saveDocument(fileUrl, doc, SkanpageUtils::PageSelection);
@@ -113,17 +135,17 @@ void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
 
 void DocumentModel::print()
 {
-    m_documentPrinter->printDocument(m_pages);
+    d->m_documentPrinter->printDocument(d->m_pages);
 }
 
 void DocumentModel::addImage(const QImage &image)
 {
     const double aspectRatio = static_cast<double>(image.height())/image.width();
-    beginInsertRows(QModelIndex(), m_pages.count(), m_pages.count());
-    const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), m_idCounter++, false};
+    beginInsertRows(QModelIndex(), d->m_pages.count(), d->m_pages.count());
+    const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), d->m_idCounter++, false};
     qCDebug(SKANPAGE_LOG) << "Inserting new page into model:" << newPage;
-    m_details.append(newPage);
-    m_pages.append({nullptr, QPageSize(), 0});
+    d->m_details.append(newPage);
+    d->m_pages.append({nullptr, QPageSize(), 0});
     endInsertRows();
     Q_EMIT countChanged();
     Q_EMIT saveNewPageTemporary(newPage.pageID, image);
@@ -131,33 +153,33 @@ void DocumentModel::addImage(const QImage &image)
 
 void DocumentModel::updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page)
 {
-    if (m_details.count() <= 0) {
+    if (d->m_details.count() <= 0) {
         return;
     }
     /* Most likely, the updated page is the last one in the model
      * unless the user has deleted a page between the finished scanning and the
      * processing. Thus try this first and look for the page ID if this is not the case. */
-    int pageIndex = m_details.count() - 1;
-    if (m_details.at(pageIndex).pageID != pageID) {
-        for (int i = m_details.count() - 1; i >= 0; i--) {
-            if (m_details.at(i).pageID == pageID) {
+    int pageIndex = d->m_details.count() - 1;
+    if (d->m_details.at(pageIndex).pageID != pageID) {
+        for (int i = d->m_details.count() - 1; i >= 0; i--) {
+            if (d->m_details.at(i).pageID == pageID) {
                 pageIndex = i;
                 break;
             }
         }
     }
-    m_pages[pageIndex].dpi = page.dpi;
-    m_pages[pageIndex].temporaryFile = page.temporaryFile;
-    m_pages[pageIndex].pageSize = page.pageSize;
-    m_details[pageIndex].isSaved = true;
+    d->m_pages[pageIndex].dpi = page.dpi;
+    d->m_pages[pageIndex].temporaryFile = page.temporaryFile;
+    d->m_pages[pageIndex].pageSize = page.pageSize;
+    d->m_details[pageIndex].isSaved = true;
     Q_EMIT dataChanged(index(pageIndex, 0), index(pageIndex, 0), {ImageUrlRole, IsSavedRole});
 
-    if (!m_changed) {
-        m_changed = true;
+    if (!d->m_changed) {
+        d->m_changed = true;
         Q_EMIT changedChanged();
     }
 
-    m_activePageIndex = pageIndex;
+    d->m_activePageIndex = pageIndex;
     Q_EMIT activePageChanged();
     Q_EMIT newPageAdded();
 }
@@ -171,31 +193,31 @@ void DocumentModel::moveImage(int from, int to)
     if (to > from) {
         add = 1;
     }
-    if (from < 0 || from >= m_pages.count()) {
+    if (from < 0 || from >= d->m_pages.count()) {
         return;
     }
-    if (to < 0 || to >= m_pages.count()) {
+    if (to < 0 || to >= d->m_pages.count()) {
         return;
     }
 
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), to + add);
     if (!ok) {
-        qCDebug(SKANPAGE_LOG) << "Failed to move" << from << to << add << m_pages.count();
+        qCDebug(SKANPAGE_LOG) << "Failed to move" << from << to << add << d->m_pages.count();
         return;
     }
-    m_pages.move(from, to);
-    m_details.move(from, to);
+    d->m_pages.move(from, to);
+    d->m_details.move(from, to);
     endMoveRows();
 
-    if (m_activePageIndex == from) {
-        m_activePageIndex = to;
-    } else if (m_activePageIndex == to) {
-        m_activePageIndex = from;
+    if (d->m_activePageIndex == from) {
+        d->m_activePageIndex = to;
+    } else if (d->m_activePageIndex == to) {
+        d->m_activePageIndex = from;
     }
     Q_EMIT activePageChanged();
 
-    if (!m_changed) {
-        m_changed = true;
+    if (!d->m_changed) {
+        d->m_changed = true;
         Q_EMIT changedChanged();
     }
 }
@@ -205,7 +227,7 @@ void DocumentModel::rotateImage(int row, RotateOption rotate)
     if (row < 0 || row >= rowCount()) {
         return;
     }
-    int rotationAngle = m_pages.at(row).rotationAngle;
+    int rotationAngle = d->m_pages.at(row).rotationAngle;
     if (rotate == RotateOption::Rotate90positive) {
         rotationAngle += 90;
     } else if (rotate == RotateOption::Flip180) {
@@ -218,8 +240,8 @@ void DocumentModel::rotateImage(int row, RotateOption rotate)
     } else if (rotationAngle >= 360) {
         rotationAngle = rotationAngle - 360;
     }
-    m_pages[row].rotationAngle = rotationAngle;
-    if (row == m_activePageIndex) {
+    d->m_pages[row].rotationAngle = rotationAngle;
+    if (row == d->m_activePageIndex) {
         Q_EMIT activePageChanged();
     }
     Q_EMIT dataChanged(index(row, 0), index(row, 0), {RotationAngleRole});
@@ -227,25 +249,25 @@ void DocumentModel::rotateImage(int row, RotateOption rotate)
 
 void DocumentModel::removeImage(int row)
 {
-    if (row < 0 || row >= m_pages.count()) {
+    if (row < 0 || row >= d->m_pages.count()) {
         return;
     }
 
     beginRemoveRows(QModelIndex(), row, row);
-    m_pages.removeAt(row);
-    m_details.removeAt(row);
+    d->m_pages.removeAt(row);
+    d->m_details.removeAt(row);
     endRemoveRows();
 
-    if (row < m_activePageIndex) {
-        m_activePageIndex -= 1;
-    } else if (m_activePageIndex >= m_pages.count()) {
-        m_activePageIndex = m_pages.count() - 1;
+    if (row < d->m_activePageIndex) {
+        d->m_activePageIndex -= 1;
+    } else if (d->m_activePageIndex >= d->m_pages.count()) {
+        d->m_activePageIndex = d->m_pages.count() - 1;
     }
     Q_EMIT activePageChanged();
     Q_EMIT countChanged();
 
-    if (!m_changed) {
-        m_changed = true;
+    if (!d->m_changed) {
+        d->m_changed = true;
         Q_EMIT changedChanged();
     }
 }
@@ -264,7 +286,7 @@ QHash<int, QByteArray> DocumentModel::roleNames() const
 
 int DocumentModel::rowCount(const QModelIndex &) const
 {
-    return m_pages.count();
+    return d->m_pages.count();
 }
 
 QVariant DocumentModel::data(const QModelIndex &index, int role) const
@@ -273,27 +295,27 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    if (index.row() >= m_pages.size() || index.row() < 0) {
+    if (index.row() >= d->m_pages.size() || index.row() < 0) {
         return QVariant();
     }
 
     switch (role) {
     case ImageUrlRole:
-        if (m_details.at(index.row()).isSaved || m_pages.at(index.row()).temporaryFile.get() != nullptr) {
-            return QUrl::fromLocalFile(m_pages.at(index.row()).temporaryFile->fileName());
+        if (d->m_details.at(index.row()).isSaved || d->m_pages.at(index.row()).temporaryFile.get() != nullptr) {
+            return QUrl::fromLocalFile(d->m_pages.at(index.row()).temporaryFile->fileName());
         } else {
             return QUrl();
         }
     case RotationAngleRole:
-        return m_pages.at(index.row()).rotationAngle;
+        return d->m_pages.at(index.row()).rotationAngle;
     case IsSavedRole:
-        return m_details.at(index.row()).isSaved;
+        return d->m_details.at(index.row()).isSaved;
     case AspectRatioRole:
-        return m_details.at(index.row()).aspectRatio;
+        return d->m_details.at(index.row()).aspectRatio;
     case PreviewWidthRole:
-        return m_details.at(index.row()).previewWidth;
+        return d->m_details.at(index.row()).previewWidth;
     case PreviewHeightRole:
-        return m_details.at(index.row()).previewHeight;
+        return d->m_details.at(index.row()).previewHeight;
     }
     return QVariant();
 }
@@ -301,31 +323,31 @@ QVariant DocumentModel::data(const QModelIndex &index, int role) const
 void DocumentModel::clearData()
 {
     beginResetModel();
-    m_pages.clear();
-    m_details.clear();
-    m_activePageIndex = -1;
+    d->m_pages.clear();
+    d->m_details.clear();
+    d->m_activePageIndex = -1;
     endResetModel();
     Q_EMIT countChanged();
 
-    if (!m_fileUrls.isEmpty() && defaultFileName != m_fileUrls.first().fileName()) {
-        m_fileUrls.first() = QUrl::fromLocalFile(defaultFileName);
+    if (!d->m_fileUrls.isEmpty() && defaultFileName != d->m_fileUrls.first().fileName()) {
+        d->m_fileUrls.first() = QUrl::fromLocalFile(defaultFileName);
         Q_EMIT nameChanged();
     }
-    if (m_changed) {
-        m_changed = false;
+    if (d->m_changed) {
+        d->m_changed = false;
         Q_EMIT changedChanged();
     }
 }
 
 void DocumentModel::updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document)
 {
-    if (document == m_pages && m_changed) {
-        m_changed = false;
+    if (document == d->m_pages && d->m_changed) {
+        d->m_changed = false;
         Q_EMIT changedChanged();
     }
 
-    if (m_fileUrls != fileUrls) {
-        m_fileUrls = fileUrls;
+    if (d->m_fileUrls != fileUrls) {
+        d->m_fileUrls = fileUrls;
         Q_EMIT nameChanged();
     }
 }

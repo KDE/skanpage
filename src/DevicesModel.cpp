@@ -16,7 +16,7 @@ public:
 
 DevicesModel::DevicesModel(QObject *parent)
     : QAbstractListModel(parent)
-    , d(std::unique_ptr<DevicesModelPrivate>(new DevicesModelPrivate()))
+    , d(std::make_unique<DevicesModelPrivate>())
 {
 }
 

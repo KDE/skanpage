@@ -28,6 +28,7 @@ struct PreviewPageProperties {
 
 class DocumentSaver;
 class DocumentPrinter;
+class DocumentModelPrivate;
 
 class DocumentModel : public QAbstractListModel
 {
@@ -98,15 +99,7 @@ private Q_SLOTS:
 private:
     void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
 
-    SkanpageUtils::DocumentPages m_pages;
-    QList<PreviewPageProperties> m_details;
-    QList<QUrl> m_fileUrls;
-    bool m_changed = false;
-    int m_activePageIndex = -1;
-    int m_idCounter = 0;
-    std::unique_ptr<DocumentSaver> m_documentSaver;
-    std::unique_ptr<DocumentPrinter> m_documentPrinter;
-    QThread m_fileIOThread;
+    std::unique_ptr<DocumentModelPrivate> d;
 };
 
 #endif // DOCUMENT_MODEL_H
