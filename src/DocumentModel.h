@@ -92,14 +92,14 @@ Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
 
 private Q_SLOTS:
-    void updateFileInformation(const QString &fileName, const SkanpageUtils::DocumentPages &document);
+    void updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
 
 private:
     void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
 
     SkanpageUtils::DocumentPages m_pages;
     QList<PreviewPageProperties> m_details;
-    QString m_name;
+    QList<QUrl> m_fileUrls;
     bool m_changed = false;
     int m_activePageIndex = -1;
     int m_idCounter = 0;

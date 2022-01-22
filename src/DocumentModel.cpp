@@ -34,7 +34,6 @@ const static QString defaultFileName = i18n("New document");
 
 DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_name(i18n("New document"))
     , m_documentSaver(std::make_unique<DocumentSaver>())
     , m_documentPrinter(std::make_unique<DocumentPrinter>())
 {
@@ -74,7 +73,13 @@ QVariantList DocumentModel::imageFormatNameFilter() const
 
 const QString DocumentModel::name() const
 {
-    return m_name;
+    if (m_fileUrls.isEmpty()) {
+       return i18n("New document");
+    }
+    if (m_fileUrls.count() > 1) {
+        return i18nc("for file names, indicates a range: from file0000.png to file0014.png","%1 ... %2", m_fileUrls.first().fileName(), m_fileUrls.last().fileName());
+    }
+    return m_fileUrls.first().fileName();
 }
 
 bool DocumentModel::changed() const
@@ -321,8 +326,8 @@ void DocumentModel::clearData()
     endResetModel();
     Q_EMIT countChanged();
 
-    if (defaultFileName != m_name) {
-        m_name = defaultFileName;
+    if (!m_fileUrls.isEmpty() && defaultFileName != m_fileUrls.first().fileName()) {
+        m_fileUrls.first() = QUrl::fromLocalFile(defaultFileName);
         Q_EMIT nameChanged();
     }
     if (m_changed) {
@@ -331,15 +336,15 @@ void DocumentModel::clearData()
     }
 }
 
-void DocumentModel::updateFileInformation(const QString &fileName, const SkanpageUtils::DocumentPages &document)
+void DocumentModel::updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document)
 {
     if (document == m_pages && m_changed) {
         m_changed = false;
         Q_EMIT changedChanged();
     }
 
-    if (m_name != fileName) {
-        m_name = fileName;
+    if (m_fileUrls != fileUrls) {
+        m_fileUrls = fileUrls;
         Q_EMIT nameChanged();
     }
 }

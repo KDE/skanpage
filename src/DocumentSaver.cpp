@@ -26,7 +26,7 @@ DocumentSaver::~DocumentSaver()
 {
 }
 
-void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type)
+void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const FileType type)
 {
     if (fileUrl.isEmpty() || document.isEmpty()) {
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Nothing to save."));
@@ -41,34 +41,30 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
     m_future = QtConcurrent::run(this, &DocumentSaver::save, fileUrl, document, type);
 }
 
-void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type)
+void DocumentSaver::save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const FileType type)
 {
     const QFileInfo &fileInfo = QFileInfo(fileUrl.toLocalFile());
     const QString &fileSuffix = fileInfo.suffix();
 
-    qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
+    QUrl saveUrl;
+    if (fileSuffix.isEmpty()) {
+        saveUrl = QUrl::fromLocalFile(fileUrl.toLocalFile() + QStringLiteral(".pdf"));
+        qCDebug(SKANPAGE_LOG) << QStringLiteral("File suffix is empty. Automatically setting format to PDF.");
+    } else {
+        saveUrl = fileUrl;
+        qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
+    }
 
     if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
-        savePDF(fileUrl.toLocalFile(), document);
-        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
-        if (type == EntireDocument) {
-            Q_EMIT fileSaved(fileInfo.fileName(), document);
-        }
+        savePDF(saveUrl, document, type);
     } else {
-        if (saveImage(fileInfo, document)) {
-            Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
-            if (type == EntireDocument) {
-                Q_EMIT fileSaved(fileInfo.fileName(), document);
-            }
-        } else {
-            Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save document as image."));
-        }
+        saveImage(fileInfo, document, type);
     }
 }
 
-void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document)
+void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const FileType type)
 {
-    QPdfWriter writer(filePath);
+    QPdfWriter writer(fileUrl.toLocalFile());
     QPainter painter;
     int rotationAngle;
 
@@ -103,14 +99,20 @@ void DocumentSaver::savePDF(const QString &filePath, const SkanpageUtils::Docume
         QImage pageImage(document.at(i).temporaryFile->fileName());
         painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());
     }
+    Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
+    if (type == EntireDocument) {
+        Q_EMIT fileSaved({fileUrl}, document);
+    }
 }
 
-bool DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document)
+void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document, const FileType type)
 {
     const int count = document.count();
     QImage pageImage;
     QString fileName;
+    QList<QUrl> fileUrls;
 
+    bool success = true;
     if (count == 1) {
         pageImage.load(document.at(0).temporaryFile->fileName());
         fileName = fileInfo.absoluteFilePath();
@@ -118,9 +120,10 @@ bool DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
         if (rotationAngle != 0) {
             pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
         }
-        return pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+        success = pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+        fileUrls.append(QUrl::fromLocalFile(fileName));
     } else {
-        bool success = true;
+        fileUrls.reserve(count);
         for (int i = 0; i < count; ++i) {
             pageImage.load(document.at(i).temporaryFile->fileName());
             const int rotationAngle = document.at(i).rotationAngle;
@@ -132,9 +135,19 @@ bool DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
             if(!pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData())) {
                 success = false;
             }
+            fileUrls.append(QUrl::fromLocalFile(fileName));
         }
-        return success;
     }
+
+    if (success) {
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
+        if (type == EntireDocument) {
+            Q_EMIT fileSaved(fileUrls, document);
+        }
+    } else {
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save document as image."));
+    }
+    
 }
 
 void DocumentSaver::saveNewPageTemporary(const int pageID, const QImage &image)

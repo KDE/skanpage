@@ -30,18 +30,18 @@ public:
     explicit DocumentSaver(QObject *parent = nullptr);
     ~DocumentSaver();
 
-    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type = EntireDocument);
+    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const FileType type = EntireDocument);
     void saveNewPageTemporary(const int pageID, const QImage &image);
     
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
-    void fileSaved(const QString &fileName, const SkanpageUtils::DocumentPages &document);
+    void fileSaved(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
     void pageTemporarilySaved(const int pageID, const SkanpageUtils::PageProperties &page);
 
 private:
-    void save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, FileType type);
-    void savePDF(const QString &filePath, const SkanpageUtils::DocumentPages &document);
-    bool saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document);
+    void save(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const FileType type);
+    void savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const FileType type);
+    void saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document, const FileType type);
     void saveNewPage(const int pageID, const QImage &image);
     
     QFuture<void> m_future;
