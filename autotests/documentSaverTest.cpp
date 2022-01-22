@@ -10,8 +10,8 @@
 #include <QSignalSpy>
 #include <QTemporaryFile>
 #include <QPageSize>
+#include <QUrl>
 
-#include "testconfig.h"
 #include "../src/SkanpageUtils.h"
 #include "../src/DocumentSaver.h"
 
@@ -85,7 +85,7 @@ void DocumentSaverTest::testPDFWriter()
     DocumentSaver tempSaver;
     QSignalSpy spy(&tempSaver, &DocumentSaver::fileSaved);
 
-    tempSaver.saveDocument(QUrl::fromLocalFile(QStringLiteral("temp.pdf")), testDocument);
+    tempSaver.saveDocument(QUrl::fromLocalFile(QStringLiteral("temp.pdf")), testDocument, SkanpageUtils::EntireDocument);
     spy.wait();
 }
 

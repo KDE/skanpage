@@ -24,6 +24,13 @@ namespace SkanpageUtils {
 
     Q_ENUM_NS(MessageLevel)
 
+    enum FileType {
+        EntireDocument,
+        PageSelection,
+    };
+
+    Q_ENUM_NS(FileType)
+
     struct PageProperties {
         std::shared_ptr<QTemporaryFile> temporaryFile;
         QPageSize pageSize;

@@ -14,6 +14,7 @@
 #include <QString>
 #include <QUrl>
 #include <QSize>
+#include <QThread>
 
 #include "SkanpageUtils.h"
 
@@ -90,6 +91,8 @@ Q_SIGNALS:
     void countChanged();
     void newPageAdded();
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
+    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type = SkanpageUtils::EntireDocument);
+    void saveNewPageTemporary(const int pageID, const QImage &image);
 
 private Q_SLOTS:
     void updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
@@ -106,6 +109,7 @@ private:
     QVariantList m_formatNameFilter;
     std::unique_ptr<DocumentSaver> m_documentSaver;
     std::unique_ptr<DocumentPrinter> m_documentPrinter;
+    QThread m_fileIOThread;
 };
 
 #endif // DOCUMENT_MODEL_H

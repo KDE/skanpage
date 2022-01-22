@@ -55,7 +55,11 @@ DocumentModel::DocumentModel(QObject *parent)
         // craft a string that QML's FileDialog understands
         m_formatNameFilter.append({mimeType.comment() + QStringLiteral("(*.") + mimeType.preferredSuffix() + QStringLiteral(")")});
     }
+    m_fileIOThread.start();
+    m_documentSaver->moveToThread(&m_fileIOThread);
 
+    connect(this, &DocumentModel::saveDocument, m_documentSaver.get(), &DocumentSaver::saveDocument);
+    connect(this, &DocumentModel::saveNewPageTemporary, m_documentSaver.get(), &DocumentSaver::saveNewPageTemporary);
     connect(m_documentSaver.get(), &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
     connect(m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
     connect(m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
@@ -116,7 +120,7 @@ void DocumentModel::setActivePageIndex(int newIndex)
 void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
 {
     if (pageNumbers.isEmpty()) {
-        m_documentSaver->saveDocument(fileUrl, m_pages);
+        Q_EMIT saveDocument(fileUrl, m_pages);
     } else {
         SkanpageUtils::DocumentPages doc;
         std::sort(pageNumbers.begin(), pageNumbers.end());
@@ -126,7 +130,7 @@ void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
                 doc.append(m_pages.at(pageNumbers.at(i)));
             }
         }
-        m_documentSaver->saveDocument(fileUrl, doc, DocumentSaver::PageSelection);
+        Q_EMIT saveDocument(fileUrl, doc, SkanpageUtils::PageSelection);
     }
 }
 
@@ -145,7 +149,7 @@ void DocumentModel::addImage(const QImage &image)
     m_pages.append({nullptr, QPageSize(), 0});
     endInsertRows();
     Q_EMIT countChanged();
-    m_documentSaver->saveNewPageTemporary(newPage.pageID, image);
+    Q_EMIT saveNewPageTemporary(newPage.pageID, image);
 }
 
 void DocumentModel::updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page)

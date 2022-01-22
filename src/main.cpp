@@ -9,6 +9,7 @@
 #include <QQmlContext>
 #include <QCommandLineParser>
 #include <QIcon>
+#include <QImage>
 
 #include <KAboutData>
 #include <KCrash>
@@ -41,8 +42,10 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableMetaObject(SkanpageUtils::staticMetaObject, "org.kde.skanpage", 1, 0, "SkanpageUtils", QStringLiteral("Error: only enums"));
     qmlRegisterType<InProgressPainter>("org.kde.skanpage", 1, 0, "InProgressPainter");
     qRegisterMetaType<SkanpageUtils::MessageLevel>();
+    qRegisterMetaType<SkanpageUtils::FileType>();
     qRegisterMetaType<SkanpageUtils::PageProperties>();
     qRegisterMetaType<SkanpageUtils::DocumentPages>();
+    qRegisterMetaType<QImage>();
 
     KLocalizedString::setApplicationDomain("skanpage");
 
