@@ -68,6 +68,8 @@ DocumentModel::DocumentModel(QObject *parent)
 
 DocumentModel::~DocumentModel()
 {
+    m_fileIOThread.quit();
+    m_fileIOThread.wait();
 }
 
 QVariantList DocumentModel::imageFormatNameFilter() const
