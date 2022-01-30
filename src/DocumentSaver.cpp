@@ -46,6 +46,7 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
 void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)
 {
     QPdfWriter writer(fileUrl.toLocalFile());
+    writer.setCreator(QStringLiteral("org.kde.skanpage"));
     QPainter painter;
     int rotationAngle;
 
