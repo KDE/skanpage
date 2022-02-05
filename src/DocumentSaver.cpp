@@ -81,9 +81,13 @@ void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPa
         QImage pageImage(document.at(i).temporaryFile->fileName());
         painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());
     }
-    Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
+    if (type == SkanpageUtils::EntireDocument || type == SkanpageUtils::PageSelection) {
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
+    }
     if (type == SkanpageUtils::EntireDocument) {
         Q_EMIT fileSaved({fileUrl}, document);
+    } else if (type == SkanpageUtils::SharingDocument) {
+        Q_EMIT sharingFileSaved({fileUrl});
     }
 }
 
@@ -122,14 +126,19 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
     }
 
     if (success) {
-        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
+        if (type == SkanpageUtils::EntireDocument || type == SkanpageUtils::PageSelection) {
+            Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
+        }
         if (type == SkanpageUtils::EntireDocument) {
             Q_EMIT fileSaved(fileUrls, document);
+        } else if (type == SkanpageUtils::SharingDocument) {
+            Q_EMIT sharingFileSaved(fileUrls);
         }
     } else {
-        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save document as image."));
+        if (type == SkanpageUtils::EntireDocument || type == SkanpageUtils::PageSelection) {
+            Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save document as image."));
+        }
     }
-    
 }
 
 void DocumentSaver::saveNewPageTemporary(const int pageID, const QImage &image)

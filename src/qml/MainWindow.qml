@@ -37,6 +37,8 @@ ApplicationWindow {
         property int y: 0
         property int width: 950
         property int height: 550
+        property int shareWidth: 600
+        property int shareHeight: 400
         property var splitViewState
         property bool showOptions: true
         property bool showAllOptions: false
@@ -50,9 +52,11 @@ ApplicationWindow {
             persistentSettings.y = mainWindow.y
             persistentSettings.width = mainWindow.width
             persistentSettings.height = mainWindow.height
-            persistentSettings.splitViewState = mainView.splitView.saveState()
+            persistentSettings.splitViewState = mainDocument.splitView.saveState()
             persistentSettings.showOptions = mainView.showOptions
             persistentSettings.showAllOptions = allOptionsAction.checked
+            persistentSettings.shareHeight = shareWindow.height
+            persistentSettings.shareWidth = shareWindow.width
         }
     }
 
@@ -123,6 +127,14 @@ ApplicationWindow {
         icon.name: "configure"
         text: i18n("Show Scanner Options")
         onTriggered: mainView.showOptions = !mainView.showOptions
+    }
+
+    Action {
+        id: shareAction
+        icon.name: "document-share"
+        text: i18n("Share")
+        enabled: skanpage.documentModel.count !== 0
+        onTriggered: shareWindow.show()
     }
 
     Action {
@@ -222,6 +234,10 @@ ApplicationWindow {
                 }
 
                 ToolButton {
+                    action: shareAction
+                }
+
+                ToolButton {
                     action: printAction
                 }
 
@@ -275,6 +291,21 @@ ApplicationWindow {
         }
     }
 
+    ShareWindow {
+        id: shareWindow
+
+        height: persistentSettings.shareHeight
+        width: persistentSettings.shareWidth
+
+        onError: {
+            errorMessage.text = errorText
+            errorMessage.type = Kirigami.MessageType.Error
+            labelWidth.text = message
+            errorMessage.visible = true
+            hideNotificationTimer.start()
+        }
+    }
+
     Window {
         id: aboutWindow
 
@@ -320,6 +351,7 @@ ApplicationWindow {
        showAboutAction: showAboutAction
        reselectDevicesAction: reselectDevicesAction
        quitAction: quitAction
+       shareAction: shareAction
     }
     
     Component.onCompleted: {

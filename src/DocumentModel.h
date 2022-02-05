@@ -65,6 +65,8 @@ public:
 
     Q_INVOKABLE void save(const QUrl &fileUrl, QList<int> pageNumbers = {});
 
+    Q_INVOKABLE void createSharingFile(const QString &suffix, QList<int> pageNumbers = {});
+
     Q_INVOKABLE void print();
 
     QHash<int, QByteArray> roleNames() const override;
@@ -80,12 +82,15 @@ Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
     void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type = SkanpageUtils::EntireDocument);
     void saveNewPageTemporary(const int pageID, const QImage &image);
+    void sharingDocumentsCreated(const QVariantList &fileUrls);
 
 private Q_SLOTS:
     void updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
+    void updateSharingFileInformation(const QList<QUrl> &fileUrls);
 
 private:
     void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
+    SkanpageUtils::DocumentPages selectPages(QList<int> pageNumbers);
 
     std::unique_ptr<DocumentModelPrivate> d;
 };

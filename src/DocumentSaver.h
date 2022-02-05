@@ -22,7 +22,6 @@ class DocumentSaver : public QObject
     Q_OBJECT
 
 public:
-
     explicit DocumentSaver(QObject *parent = nullptr);
     ~DocumentSaver();
 
@@ -32,6 +31,7 @@ public:
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
     void fileSaved(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
+    void sharingFileSaved(const QList<QUrl> &fileUrls);
     void pageTemporarilySaved(const int pageID, const SkanpageUtils::PageProperties &page);
 
 private:

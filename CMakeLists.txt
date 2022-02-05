@@ -44,6 +44,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         Kirigami2
         Crash
         Config
+        Purpose
 )
 
 find_package(KF5Sane "21.12.0" REQUIRED)

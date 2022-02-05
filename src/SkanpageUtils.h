@@ -27,6 +27,7 @@ namespace SkanpageUtils {
     enum FileType {
         EntireDocument,
         PageSelection,
+        SharingDocument,
     };
 
     Q_ENUM_NS(FileType)

@@ -10,6 +10,7 @@
 #include <QUrl>
 #include <QTemporaryFile>
 #include <QImage>
+#include <QStandardPaths>
 #include <QString>
 #include <QThread>
 
@@ -72,6 +73,7 @@ DocumentModel::DocumentModel(QObject *parent)
     connect(&d->m_documentSaver, &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
     connect(&d->m_documentSaver, &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
     connect(&d->m_documentSaver, &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
+    connect(&d->m_documentSaver, &DocumentSaver::sharingFileSaved, this, &DocumentModel::updateSharingFileInformation);
     connect(&d->m_documentPrinter, &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
 }
 
@@ -84,7 +86,7 @@ DocumentModel::~DocumentModel()
 const QString DocumentModel::name() const
 {
     if (d->m_fileUrls.isEmpty()) {
-       return i18n("New document");
+        return i18n("New document");
     }
     if (d->m_fileUrls.count() > 1) {
         return i18nc("for file names, indicates a range: from file0000.png to file0014.png","%1 ... %2", d->m_fileUrls.first().fileName(), d->m_fileUrls.last().fileName());
@@ -128,16 +130,19 @@ void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
     if (pageNumbers.isEmpty()) {
         Q_EMIT saveDocument(fileUrl, d->m_pages);
     } else {
-        SkanpageUtils::DocumentPages doc;
-        std::sort(pageNumbers.begin(), pageNumbers.end());
-        for (int i = 0; i < pageNumbers.count(); i++) {
-            const int page = pageNumbers.at(i);
-            if (page >= 0 && page <  d->m_pages.count()) {
-                doc.append(d->m_pages.at(pageNumbers.at(i)));
-            }
-        }
-        Q_EMIT saveDocument(fileUrl, doc, SkanpageUtils::PageSelection);
+        Q_EMIT saveDocument(fileUrl, selectPages(pageNumbers), SkanpageUtils::PageSelection);
     }
+}
+
+void DocumentModel::createSharingFile(const QString &suffix, QList<int> pageNumbers)
+{
+    if (d->m_pages.isEmpty()) {
+        return;
+    }
+
+    const QUrl temporaryLocation = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::TempLocation)
+         + QStringLiteral("/document.") + suffix);
+    Q_EMIT saveDocument(temporaryLocation, selectPages(pageNumbers), SkanpageUtils::SharingDocument);
 }
 
 void DocumentModel::print()
@@ -357,4 +362,30 @@ void DocumentModel::updateFileInformation(const QList<QUrl> &fileUrls, const Ska
         d->m_fileUrls = fileUrls;
         Q_EMIT nameChanged();
     }
+}
+
+void DocumentModel::updateSharingFileInformation(const QList<QUrl> &fileUrls)
+{
+    QVariantList temp;
+    for (const auto &url : fileUrls) {
+        temp << url.toString();
+    }
+    Q_EMIT sharingDocumentsCreated(temp);
+}
+
+SkanpageUtils::DocumentPages DocumentModel::selectPages(QList<int> pageNumbers)
+{
+    if (pageNumbers.isEmpty()) {
+        return d->m_pages;
+    }
+
+    SkanpageUtils::DocumentPages document;
+    std::sort(pageNumbers.begin(), pageNumbers.end());
+    for (int i = 0; i < pageNumbers.count(); i++) {
+        const int page = pageNumbers.at(i);
+        if (page >= 0 && page <  d->m_pages.count()) {
+            document.append(d->m_pages.at(pageNumbers.at(i)));
+        }
+    }
+    return document;
 }
