@@ -11,12 +11,21 @@
 #include <QTemporaryFile>
 #include <QImage>
 #include <QString>
+#include <QThread>
 
 #include <KLocalizedString>
 
 #include "skanpage_debug.h"
 #include "DocumentSaver.h"
 #include "DocumentPrinter.h"
+
+struct PreviewPageProperties {
+    double aspectRatio;
+    int previewWidth;
+    int previewHeight;
+    int pageID;
+    bool isSaved;
+};
 
 QDebug operator<<(QDebug d, const PreviewPageProperties& pageProperties)
 {
@@ -42,14 +51,12 @@ public:
     bool m_changed = false;
     int m_activePageIndex = -1;
     int m_idCounter = 0;
-    std::unique_ptr<DocumentSaver> m_documentSaver;
-    std::unique_ptr<DocumentPrinter> m_documentPrinter;
+    DocumentSaver m_documentSaver;
+    DocumentPrinter m_documentPrinter;
     QThread m_fileIOThread;
 };
 
 DocumentModelPrivate::DocumentModelPrivate()
-    : m_documentSaver(std::make_unique<DocumentSaver>())
-    , m_documentPrinter(std::make_unique<DocumentPrinter>())
 {
 }
 
@@ -58,14 +65,14 @@ DocumentModel::DocumentModel(QObject *parent)
     , d(std::make_unique<DocumentModelPrivate>())
 {
     d->m_fileIOThread.start();
-    d->m_documentSaver->moveToThread(&d->m_fileIOThread);
+    d->m_documentSaver.moveToThread(&d->m_fileIOThread);
 
-    connect(this, &DocumentModel::saveDocument, d->m_documentSaver.get(), &DocumentSaver::saveDocument);
-    connect(this, &DocumentModel::saveNewPageTemporary, d->m_documentSaver.get(), &DocumentSaver::saveNewPageTemporary);
-    connect(d->m_documentSaver.get(), &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
-    connect(d->m_documentSaver.get(), &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
-    connect(d->m_documentSaver.get(), &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
-    connect(d->m_documentPrinter.get(), &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
+    connect(this, &DocumentModel::saveDocument, &d->m_documentSaver, &DocumentSaver::saveDocument);
+    connect(this, &DocumentModel::saveNewPageTemporary, &d->m_documentSaver, &DocumentSaver::saveNewPageTemporary);
+    connect(&d->m_documentSaver, &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
+    connect(&d->m_documentSaver, &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
+    connect(&d->m_documentSaver, &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
+    connect(&d->m_documentPrinter, &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
 }
 
 DocumentModel::~DocumentModel()
@@ -135,7 +142,7 @@ void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
 
 void DocumentModel::print()
 {
-    d->m_documentPrinter->printDocument(d->m_pages);
+    d->m_documentPrinter.printDocument(d->m_pages);
 }
 
 void DocumentModel::addImage(const QImage &image)

@@ -13,18 +13,8 @@
 #include <QAbstractListModel>
 #include <QString>
 #include <QUrl>
-#include <QSize>
-#include <QThread>
 
 #include "SkanpageUtils.h"
-
-struct PreviewPageProperties {
-    double aspectRatio;
-    int previewWidth;
-    int previewHeight;
-    int pageID;
-    bool isSaved;
-};
 
 class DocumentModelPrivate;
 
