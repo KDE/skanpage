@@ -26,8 +26,6 @@ struct PreviewPageProperties {
     bool isSaved;
 };
 
-class DocumentSaver;
-class DocumentPrinter;
 class DocumentModelPrivate;
 
 class DocumentModel : public QAbstractListModel
