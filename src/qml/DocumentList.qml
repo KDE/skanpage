@@ -19,9 +19,8 @@ ColumnLayout {
 
     spacing: 0
 
-    SystemPalette {
-        id: palette
-    }
+    //copied from Kirigami.Separator
+    property var midColor: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
 
     ScrollView {
         id: scrollView
@@ -67,8 +66,8 @@ ColumnLayout {
 
                 color: Kirigami.Theme.backgroundColor
 
-                border.width: 3
-                border.color: (index === skanpage.documentModel.activePageIndex) ? Kirigami.Theme.focusColor : palette.mid
+                border.width: 2
+                border.color: (index === skanpage.documentModel.activePageIndex) ? Kirigami.Theme.focusColor : documentList.midColor
                 radius: 3
 
                 focus: index === skanpage.documentModel.activePageIndex
