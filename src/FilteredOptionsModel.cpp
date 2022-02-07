@@ -19,12 +19,12 @@ bool FilteredOptionsModel::filterAcceptsRow(int source_row, const QModelIndex &s
     const auto &state = sourceModel()->data(index, OptionsModel::StateRole).value<KSaneIface::KSaneOption::KSaneOptionState>();
     const auto &type = sourceModel()->data(index, OptionsModel::TypeRole).value<KSaneIface::KSaneOption::KSaneOptionType>();
 
-     if (type == KSaneIface::KSaneOption::TypeValueList && sourceModel()->data(index, OptionsModel::ValueListRole).toList().length() <= 1) {
+    if (type == KSaneIface::KSaneOption::TypeValueList && sourceModel()->data(index, OptionsModel::ValueListRole).toList().length() <= 1) {
         return false;
     }
     
     if (!m_showAllOptions) {
-        return sourceModel()->data(index, OptionsModel::FilterRole).toBool();
+        return sourceModel()->data(index, OptionsModel::QuickAccessRole).toBool() && state == KSaneIface::KSaneOption::StateActive;
     }
     
     if (state != KSaneIface::KSaneOption::StateActive || type == KSaneIface::KSaneOption::TypeGamma || type == KSaneIface::KSaneOption::TypeDetectFail) {

@@ -36,7 +36,7 @@ public:
         UnitRole,
         TypeRole,
         StateRole,
-        FilterRole
+        QuickAccessRole
     };
 
     explicit OptionsModel(QObject *parent = nullptr);

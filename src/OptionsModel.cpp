@@ -5,7 +5,8 @@
  */
 
 //KDE includes
-#include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include "OptionsModel.h"
 #include "skanpage_debug.h"
@@ -14,17 +15,39 @@ class OptionsModelPrivate
 {
 public:
     QList<KSaneIface::KSaneOption *> mOptionsList;
-    QList<bool> mFilterList;
+    QList<bool> mQuickAccessList;
+    QSet<QString> mQuickAccessOptions;
+    bool mQuickAccessListChanged = false;
 };
 
 OptionsModel::OptionsModel(QObject *parent)
     : QAbstractListModel(parent)
     , d(std::make_unique<OptionsModelPrivate>())
 {
+    //if there are no defined quick access options yet, insert default ones
+    KConfigGroup quickOptions(KSharedConfig::openConfig(), QStringLiteral("quickAccessOptions"));
+    if (!quickOptions.exists()) {
+        d->mQuickAccessOptions.insert(QStringLiteral("KSane::PageSize"));
+        d->mQuickAccessOptions.insert(QStringLiteral("resolution"));
+        d->mQuickAccessOptions.insert(QStringLiteral("source"));
+        d->mQuickAccessOptions.insert(QStringLiteral("mode"));
+    } else {
+        const QStringList keys = quickOptions.keyList();
+        d->mQuickAccessOptions = QSet(keys.begin(), keys.end());
+    }
 }
 
 OptionsModel::~OptionsModel()
-{
+{    
+    if (d->mQuickAccessListChanged) {
+        KConfigGroup quickOptions(KSharedConfig::openConfig(), QStringLiteral("quickAccessOptions"));
+        quickOptions.deleteGroup();
+        for (int i = 0; i < d->mOptionsList.size(); i++) {
+            if (d->mQuickAccessList.at(i)) {
+                quickOptions.writeEntry(d->mOptionsList.at(i)->name(), true);
+            }
+        }
+    }
 }
 
 QHash<int, QByteArray> OptionsModel::roleNames() const
@@ -41,7 +64,7 @@ QHash<int, QByteArray> OptionsModel::roleNames() const
     roles[UnitRole] = "unit";
     roles[TypeRole] = "type";
     roles[StateRole] = "state";
-    roles[FilterRole] = "filter";
+    roles[QuickAccessRole] = "quickAccess";
     return roles;
 }
 
@@ -94,8 +117,8 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
     case StateRole:
         return d->mOptionsList.at(index.row())->state();
         break;
-    case FilterRole:
-        return d->mFilterList.at(index.row());
+    case QuickAccessRole:
+        return d->mQuickAccessList.at(index.row());
         break;
     default:
         break;
@@ -105,7 +128,7 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
 
 bool OptionsModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if ((role != ValueRole && role != FilterRole) || index.row() < 0 || index.row() >= d->mOptionsList.size()) {
+    if ((role != ValueRole && role != QuickAccessRole) || index.row() < 0 || index.row() >= d->mOptionsList.size()) {
         return false;
     }
     if (role == ValueRole) {
@@ -114,9 +137,10 @@ bool OptionsModel::setData(const QModelIndex &index, const QVariant &value, int 
         Q_EMIT dataChanged(index, index, {ValueRole});
         return true;
     }
-    if (role == FilterRole) {
-        d->mFilterList[index.row()] = value.toBool();
-        Q_EMIT dataChanged(index, index, {FilterRole});
+    if (role == QuickAccessRole) {
+        d->mQuickAccessList[index.row()] = value.toBool();
+        d->mQuickAccessListChanged = true;
+        Q_EMIT dataChanged(index, index, {QuickAccessRole});
     }
     return true;
 }
@@ -125,18 +149,14 @@ void OptionsModel::setOptionsList(const QList<KSaneIface::KSaneOption *> options
 {
     beginResetModel();
     d->mOptionsList = optionsList;
-    d->mFilterList.clear();
-    d->mFilterList.reserve(optionsList.size());
+    d->mQuickAccessList.clear();
+    d->mQuickAccessList.reserve(optionsList.size());
     for (int i = 0; i < d->mOptionsList.size(); i++) {
         KSaneIface::KSaneOption *option = d->mOptionsList.at(i);
         qCDebug(SKANPAGE_LOG()) << "OptionsModel: Importing option " << option->name() << ", type" << option->type() << ", state" << option->state();
         connect(option, &KSaneIface::KSaneOption::optionReloaded, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {StateRole}); });
         connect(option, &KSaneIface::KSaneOption::valueChanged, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole}); });
-        if (option->name() == QStringLiteral("KSane::PageSize") || option->name() == QStringLiteral("resolution") || option->name() == QStringLiteral("source") || option->name() == QStringLiteral("mode") ) {
-            d->mFilterList.insert(i, true);
-        } else {
-            d->mFilterList.insert(i, false);
-        }
+        d->mQuickAccessList.insert(i, d->mQuickAccessOptions.contains(option->name()));
     }
     endResetModel();
     Q_EMIT rowCountChanged();
@@ -146,7 +166,7 @@ void OptionsModel::clearOptions()
 {
     beginResetModel();
     d->mOptionsList.clear();
-    d->mFilterList.clear();
+    d->mQuickAccessList.clear();
     endResetModel();
     Q_EMIT rowCountChanged();
 }

@@ -12,12 +12,21 @@ import org.kde.kirigami 2.5 as Kirigami
 import org.kde.skanpage 1.0
 
 ColumnLayout {
-    id: optionDelegate
+    id: optionPanel
 
     property alias showAllOptions: allOptionsButton.checked
     property int targetWidth: Math.max(_maxChildrenWidth + optionsList.ScrollBar.vertical.width,
                                        allOptionsButton.implicitWidth, devicesButton.implicitWidth)
     property int _maxChildrenWidth: 0
+    
+    property bool editMode: false
+
+    Label {
+        Layout.alignment: Qt.AlignHCenter
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+        text: i18n("Select options for quick access:")
+        visible: editMode
+    }
 
     ScrollView {
         id: optionsList
@@ -34,19 +43,38 @@ ColumnLayout {
             
             delegate: OptionDelegate {
                 modelItem: model
+                
+                width: optionsList.width - optionsList.ScrollBar.vertical.width
+                
+                editMode: optionPanel.editMode
                 Component.onCompleted: {
-                    if (optionDelegate._maxChildrenWidth < implicitWidth) {
-                        optionDelegate._maxChildrenWidth = implicitWidth
+                    if (optionPanel._maxChildrenWidth < implicitWidth) {
+                        optionPanel._maxChildrenWidth = implicitWidth
                     }
                 }
             }
         }
     }
 
-    Button {
-        id: allOptionsButton
+    RowLayout {
         Layout.alignment: Qt.AlignHCenter
-        action: allOptionsAction
+
+        Button {
+            id: allOptionsButton
+            action: allOptionsAction
+            enabled: !editOptionsButton.checked
+        }
+
+        Button {
+            id: editOptionsButton
+            icon.name: "settings-configure"
+            text: i18n("Configure")
+            checkable: true
+            onClicked: {
+                optionPanel.editMode = checked
+                skanpage.optionsModel.showAllOptions(checked)
+            }
+        }
     }
 
     Button {
