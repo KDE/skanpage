@@ -21,6 +21,8 @@
 #include "DocumentSaver.h"
 #include "DocumentPrinter.h"
 #include "OCREngine.h"
+#include "skanpage_config.h"
+#include "skanpage_state.h"
 #include "skanpage_debug.h"
 
 class SkanpagePrivate {
@@ -35,6 +37,8 @@ public:
     DocumentPrinter m_documentPrinter;
     OCREngine m_OCREngine;
     QThread m_fileIOThread;
+    SkanpageConfiguration *m_configuration;
+    SkanpageState *m_stateConfiguration;
 
     int m_progress = 100;
     int m_remainingSeconds = 0;
@@ -52,6 +56,12 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     : QObject(parent)
     , d(std::make_unique<SkanpagePrivate>())
 {
+    d->m_stateConfiguration = SkanpageState::self();
+    d->m_configuration = SkanpageConfiguration::self();
+    if (d->m_configuration->defaultFolder().isEmpty()) {
+        d->m_configuration->setDefaultFolder(QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)));
+    }
+
     d->m_filteredOptionsModel.setSourceModel(&d->m_optionsModel);
 
     connect(&d->m_ksaneInterface, &Interface::scannedImageReady, this, &Skanpage::imageReady);
@@ -92,6 +102,8 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
 Skanpage::~Skanpage()
 {
     d->m_fileIOThread.quit();
+    d->m_configuration->save();
+    d->m_stateConfiguration->save();
     saveScannerOptions();
     d->m_fileIOThread.wait();
 }
@@ -231,7 +243,7 @@ void Skanpage::reloadDevicesList()
     }
     d->m_state = SearchingForDevices;
     Q_EMIT applicationStateChanged(d->m_state);
-    d->m_ksaneInterface.reloadDevicesList();
+    d->m_ksaneInterface.reloadDevicesList(d->m_configuration->showAllDevices() ? Interface::DeviceType::AllDevices : Interface::DeviceType::NoCameraAndVirtualDevices);
 }
 
 void Skanpage::showKSaneMessage(Interface::ScanStatus status, const QString &strStatus)
@@ -303,6 +315,16 @@ FilteredOptionsModel *Skanpage::optionsModel() const
 OCRLanguageModel *Skanpage::languageModel() const
 {
     return d->m_OCREngine.languages();
+}
+
+SkanpageConfiguration *Skanpage::configuration() const
+{
+    return d->m_configuration;
+}
+
+SkanpageState *Skanpage::stateConfiguration() const
+{
+    return d->m_stateConfiguration;
 }
 
 bool Skanpage::OCRavailable() const

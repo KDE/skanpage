@@ -18,7 +18,7 @@ class FormatModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    enum FormatModelRoles { NameRole = Qt::UserRole + 1, SuffixRole, CommentRole};
+    enum FormatModelRoles { NameRole = Qt::UserRole + 1, SuffixRole, CommentRole, NameFilterRole};
 
     Q_ENUM(FormatModelRoles)
 
@@ -35,6 +35,8 @@ public:
     Q_INVOKABLE QVariant getData(int index, int role) const;
 
     Q_INVOKABLE QVariantList formatFilter() const;
+
+    Q_INVOKABLE QString pdfFormatFilter() const;
 
 private:
     std::unique_ptr<FormatModelPrivate> d;

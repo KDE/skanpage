@@ -16,7 +16,8 @@ Item {
     id: mainContent
 
     readonly property string name: skanpage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* %1", skanpage.documentModel.name) : skanpage.documentModel.name;
-    property alias splitView: splitView
+    property int splitViewPreferredWidth: splitView.width / 4
+    property alias splitViewItemWidth: scrollView.width
     property bool showOptions: true
     property alias optionsPanel: optionsPanel
 
@@ -49,7 +50,8 @@ Item {
                 id: scrollView
 
                 SplitView.fillHeight: true
-                SplitView.preferredWidth: parent.width / 4
+                SplitView.preferredWidth: splitViewPreferredWidth
+                SplitView.minimumWidth: splitView.width / 10
                 onSaveSinglePage: mainContent.saveSinglePage(pageNumber)
             }
 
@@ -72,7 +74,7 @@ Item {
                 visible: skanpage.applicationState === Skanpage.ScanInProgress
             }
         }
-        
+
         Item {
             id: optionsSeparator
             Layout.fillHeight: true

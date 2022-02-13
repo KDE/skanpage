@@ -22,7 +22,7 @@ class DocumentModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
-    Q_PROPERTY(QUrl url READ url NOTIFY nameChanged)
+    Q_PROPERTY(QString fileName READ fileName NOTIFY nameChanged)
     Q_PROPERTY(bool changed READ changed NOTIFY changedChanged)
     Q_PROPERTY(int activePageIndex READ activePageIndex WRITE setActivePageIndex NOTIFY activePageChanged)
     Q_PROPERTY(QUrl activePageSource READ activePageSource NOTIFY activePageChanged)
@@ -46,8 +46,8 @@ public:
     explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();
 
-    const QString name() const;
-    const QUrl url() const;
+    QString name() const;
+    QString fileName() const;
     int activePageIndex() const;
     int activePageRotation() const;
     QUrl activePageSource() const;

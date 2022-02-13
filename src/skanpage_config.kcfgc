@@ -1,0 +1,7 @@
+ClassName=SkanpageConfiguration
+File=skanpage_config.kcfg
+Mutators=true
+Notifiers=true
+Singleton=true
+MemberVariables=dpointer
+GenerateProperties=true

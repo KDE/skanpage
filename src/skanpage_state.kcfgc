@@ -1,0 +1,7 @@
+ClassName=SkanpageState
+File=skanpage_state.kcfg
+Mutators=true
+Notifiers=true
+Singleton=true
+MemberVariables=dpointer
+GenerateProperties=true

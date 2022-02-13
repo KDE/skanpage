@@ -17,6 +17,8 @@
 #include <memory>
 
 #include "SkanpageUtils.h"
+#include "skanpage_config.h"
+#include "skanpage_state.h"
 
 class DocumentModel;
 class DevicesModel;
@@ -36,6 +38,8 @@ class Skanpage : public QObject
     Q_PROPERTY(FormatModel *formatModel READ formatModel CONSTANT)
     Q_PROPERTY(FilteredOptionsModel *optionsModel READ optionsModel CONSTANT)
     Q_PROPERTY(OCRLanguageModel *languageModel READ languageModel CONSTANT)
+    Q_PROPERTY(SkanpageConfiguration *configuration READ configuration CONSTANT)
+    Q_PROPERTY(SkanpageState *stateConfiguration READ stateConfiguration CONSTANT)
     Q_PROPERTY(ApplicationState applicationState READ applicationState NOTIFY applicationStateChanged)
 
     Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
@@ -71,6 +75,8 @@ public:
     FilteredOptionsModel *optionsModel() const;
     OCRLanguageModel *languageModel() const;
     KSaneCore::Interface *ksaneInterface() const;
+    SkanpageConfiguration *configuration() const;
+    SkanpageState *stateConfiguration() const;
 
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();

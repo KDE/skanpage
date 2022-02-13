@@ -64,7 +64,7 @@ DocumentModel::~DocumentModel()
 {
 }
 
-const QString DocumentModel::name() const
+QString DocumentModel::name() const
 {
     if (d->m_fileUrls.isEmpty()) {
         return i18n("New document");
@@ -75,12 +75,12 @@ const QString DocumentModel::name() const
     return d->m_fileUrls.first().fileName();
 }
 
-const QUrl DocumentModel::url() const
+QString DocumentModel::fileName() const
 {
     if (d->m_fileUrls.isEmpty() || d->m_fileUrls.count() > 1) {
-        return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/New Document.pdf"));
+        return QString(i18n("New document") + QStringLiteral(".pdf"));
     }
-    return d->m_fileUrls.first();
+    return d->m_fileUrls.first().fileName();
 }
 
 bool DocumentModel::changed() const

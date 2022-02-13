@@ -58,7 +58,7 @@ Window {
         TextField {
             id: fileNameItem
             Layout.fillWidth: true
-            text: skanpage.documentModel.url
+            text: skanpage.configuration.defaultFolder + "/" + skanpage.documentModel.fileName
         }
 
         ToolButton {
@@ -188,10 +188,10 @@ Window {
 
     FileDialog {
         id: fileNameDialog
-        folder: shortcuts.documents
+        folder: skanpage.configuration.defaultFolder
         selectExisting: false
         selectMultiple: false
-        nameFilters: ["PDF files (*.pdf)"]
+        nameFilters: skanpage.formatModel.pdfFormatFilter()
         onAccepted: fileNameItem.text = fileUrl
     }
 }

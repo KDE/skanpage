@@ -50,6 +50,8 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
+kconfig_add_kcfg_files(skanpage skanpage_state.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(skanpage skanpage_config.kcfgc GENERATE_MOC)
 
 target_link_libraries(skanpage
   PRIVATE
@@ -67,6 +69,7 @@ target_link_libraries(skanpage
     KF5::Kirigami2
     KF5::Crash
     KF5::ConfigCore
+    KF5::ConfigGui
     KF5::Purpose
 )
 

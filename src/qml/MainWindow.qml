@@ -10,7 +10,6 @@ import QtQuick.Controls 2.12
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.3
-import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.skanpage 1.0
@@ -22,45 +21,31 @@ ApplicationWindow {
 
     title: i18nc("document title: app title", "%1 ― Skanpage", mainView.name)
 
-    width: persistentSettings.width
-    height: persistentSettings.height
-    x: persistentSettings.x
-    y: persistentSettings.y
+    width: skanpage.stateConfiguration.width
+    height: skanpage.stateConfiguration.height
+    x: skanpage.stateConfiguration.x
+    y: skanpage.stateConfiguration.y
 
     minimumWidth: mainToolBar.implicitWidth
     minimumHeight: 400
-
-    Settings {
-        id: persistentSettings
-
-        property int x: 0
-        property int y: 0
-        property int width: 950
-        property int height: 550
-        property int shareWidth: 600
-        property int shareHeight: 400
-        property int exportWidth: 600
-        property int exportHeight: 400
-        property var splitViewState
-        property bool showOptions: true
-        property bool showAllOptions: false
-    }
 
     Connections {
         target: Qt.application
 
         function onAboutToQuit() {
-            persistentSettings.x = mainWindow.x
-            persistentSettings.y = mainWindow.y
-            persistentSettings.width = mainWindow.width
-            persistentSettings.height = mainWindow.height
-            persistentSettings.splitViewState = mainView.splitView.saveState()
-            persistentSettings.showOptions = mainView.showOptions
-            persistentSettings.showAllOptions = mainView.optionsPanel.allOptionsAction.checked
-            persistentSettings.shareHeight = shareWindow.height
-            persistentSettings.shareWidth = shareWindow.width
-            persistentSettings.exportHeight = exportWindow.height
-            persistentSettings.exportWidth = exportWindow.width
+            skanpage.stateConfiguration.x = mainWindow.x
+            skanpage.stateConfiguration.y = mainWindow.y
+            skanpage.stateConfiguration.width = mainWindow.width
+            skanpage.stateConfiguration.height = mainWindow.height
+            skanpage.stateConfiguration.splitViewItemWidth = mainView.splitViewItemWidth
+            skanpage.stateConfiguration.showOptions = mainView.showOptions
+            skanpage.stateConfiguration.showAllOptions = mainView.optionsPanel.allOptionsAction.checked
+            skanpage.stateConfiguration.shareHeight = shareWindow.height
+            skanpage.stateConfiguration.shareWidth = shareWindow.width
+            skanpage.stateConfiguration.exportHeight = exportWindow.height
+            skanpage.stateConfiguration.exportWidth = exportWindow.width
+            skanpage.stateConfiguration.settingsHeight = settingsWindow.height
+            skanpage.stateConfiguration.settingsWidth = settingsWindow.width
         }
     }
 
@@ -140,6 +125,9 @@ ApplicationWindow {
         id: showOptionsAction
         icon.name: "configure"
         text: i18n("Show Scanner Options")
+        shortcut: "CTRL+O"
+        checkable: true
+        checked: mainView.showOptions
         onTriggered: mainView.showOptions = !mainView.showOptions
     }
 
@@ -161,10 +149,30 @@ ApplicationWindow {
     }
 
     Action {
+        id: openMenuAction
+        icon.name: "application-menu"
+        onTriggered: {
+            if (applicationMenu.visible) {
+                applicationMenu.close()
+            } else {
+                applicationMenu.popup(mainWindow.width - applicationMenu.width, mainToolBar.height)
+            }
+        }
+    }
+
+    Action {
         id: showAboutAction
         icon.name: "skanpage"
         text: i18n("About Skanpage")
         onTriggered: aboutWindow.show()
+    }
+
+    Action {
+        id: settingsAction
+        icon.name: "settings-configure"
+        text: i18n("Settings")
+        shortcut: "CTRL+C"
+        onTriggered: settingsWindow.show()
     }
     
     Action {
@@ -259,13 +267,23 @@ ApplicationWindow {
                 ToolButton {
                     action: showOptionsAction
                     visible: skanpage.applicationState === Skanpage.ReadyForScan || skanpage.applicationState === Skanpage.ScanInProgress
-                    checkable: true
-                    checked: mainView.showOptions
                 }
 
                 ToolButton {
-                    action: showAboutAction
+                    action: openMenuAction
                 }
+            }
+        }
+
+        Menu {
+            id: applicationMenu
+
+            MenuItem {
+                action: settingsAction
+            }
+
+            MenuItem {
+                action: showAboutAction
             }
         }
 
@@ -278,23 +296,19 @@ ApplicationWindow {
             initialItem: ContentView {
                 id: mainView
 
-                showOptions: persistentSettings.showOptions
-                optionsPanel.allOptionsAction.checked: persistentSettings.showAllOptions
-
+                showOptions: skanpage.stateConfiguration.showOptions
+                optionsPanel.allOptionsAction.checked: skanpage.stateConfiguration.showAllOptions
+                splitViewPreferredWidth: skanpage.stateConfiguration.splitViewItemWidth
                 focus: true
 
                 onSaveSinglePage: {
                     saveFileDialog.pageNumbers.push(pageNumber)
                     saveFileDialog.open()
                 }
-
-                Component.onCompleted: {
-                    mainView.splitView.restoreState(persistentSettings.splitViewState)
-                }
             }
         }
     }
-    
+
     Component {
         id: deviceSelection
 
@@ -314,8 +328,8 @@ ApplicationWindow {
     ShareWindow {
         id: shareWindow
 
-        height: persistentSettings.shareHeight
-        width: persistentSettings.shareWidth
+        height: skanpage.stateConfiguration.shareHeight
+        width: skanpage.stateConfiguration.shareWidth
 
         onError: {
             errorMessage.text = errorText
@@ -349,10 +363,11 @@ ApplicationWindow {
 
         property var pageNumbers: []
 
-        folder: shortcuts.documents
+        folder: skanpage.configuration.defaultFolder
         selectExisting: false
         selectMultiple: false
         nameFilters: skanpage.formatModel.formatFilter()
+        selectedNameFilter: skanpage.configuration.defaultNameFilter
         onAccepted: {
             skanpage.documentModel.save(fileUrl, pageNumbers)
             pageNumbers = []
@@ -377,12 +392,18 @@ ApplicationWindow {
     ExportWindow {
         id: exportWindow
 
-        height: persistentSettings.exportHeight
-        width: persistentSettings.exportWidth
+        height: skanpage.stateConfiguration.exportHeight
+        width: skanpage.stateConfiguration.exportWidth
     }
-    
+
+    SettingsWindow {
+        id: settingsWindow
+        height: skanpage.stateConfiguration.settingsHeight
+        width: skanpage.stateConfiguration.settingsWidth
+    }
+
     Component.onCompleted: {
-        skanpage.optionsModel.showAllOptions(persistentSettings.showAllOptions)
+        skanpage.optionsModel.showAllOptions(skanpage.stateConfiguration.showAllOptions)
         if (skanpage.applicationState == Skanpage.SearchingForDevices) {
             stackView.push(devicesLoading)
         } else if (skanpage.applicationState == Skanpage.DeviceSelection) {

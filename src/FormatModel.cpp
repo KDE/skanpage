@@ -52,6 +52,7 @@ QHash<int, QByteArray> FormatModel::roleNames() const
     roles[NameRole] = "name";
     roles[SuffixRole] = "suffix";
     roles[CommentRole] = "comment";
+    roles[NameFilterRole] = "nameFilter";
     return roles;
 }
 
@@ -85,6 +86,9 @@ QVariant FormatModel::getData(int index, int role) const
     case CommentRole:
         return d->m_formatList.at(index).comment();
         break;
+    case NameFilterRole:
+        return d->m_formatFilter.at(index);
+        break;
     default:
         break;
     }
@@ -94,4 +98,9 @@ QVariant FormatModel::getData(int index, int role) const
 QVariantList FormatModel::formatFilter() const
 {
     return d->m_formatFilter;
+}
+
+QString FormatModel::pdfFormatFilter() const
+{
+    return d->m_formatFilter.at(0).toString();
 }
