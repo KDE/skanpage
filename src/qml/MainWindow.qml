@@ -310,7 +310,16 @@ ApplicationWindow {
     }
     
     GlobalMenu {
-        
+       newDocAction: newDocAction
+       saveDocAction: saveDocAction
+       scanAction: scanAction
+       cancelAction: cancelAction
+       allOptionsAction: allOptionsAction
+       showOptionsAction: showOptionsAction
+       printAction: printAction
+       showAboutAction: showAboutAction
+       reselectDevicesAction: reselectDevicesAction
+       quitAction: quitAction
     }
     
     Component.onCompleted: {

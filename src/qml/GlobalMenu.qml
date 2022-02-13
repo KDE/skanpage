@@ -5,11 +5,21 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Window 2.7
 import Qt.labs.platform 1.1
-import org.kde.skanpage 1.0
 
 MenuBar {
+
+    property var newDocAction
+    property var saveDocAction
+    property var printAction
+    property var quitAction
+    property var scanAction
+    property var cancelAction
+    property var showOptionsAction
+    property var allOptionsAction
+    property var reselectDevicesAction
+    property var showAboutAction
+
     Menu {
         title: i18nc("menu category", "File")
 
@@ -44,6 +54,7 @@ MenuBar {
             enabled: quitAction.enabled
         }
     }
+
     Menu {
         title: i18nc("menu category", "Scan")
 
@@ -54,7 +65,6 @@ MenuBar {
             enabled: scanAction.enabled
         }
 
-
         MenuItem {
             text: cancelAction.text
             iconName: cancelAction.icon.name
@@ -62,11 +72,16 @@ MenuBar {
             enabled: cancelAction.enabled
         }
         
+        MenuSeparator {
+        }
+
         MenuItem {
             text: showOptionsAction.text
             iconName: showOptionsAction.icon.name
             onTriggered: showOptionsAction.trigger()
             enabled: showOptionsAction.enabled
+            checkable: showOptionsAction.checkable
+            checked: showOptionsAction.checked
         }
         
         MenuItem {
@@ -74,6 +89,8 @@ MenuBar {
             iconName: allOptionsAction.icon.name
             onTriggered: allOptionsAction.trigger()
             enabled: allOptionsAction.enabled
+            checkable: allOptionsAction.checkable
+            checked: allOptionsAction.checked
         }
 
         MenuSeparator {
@@ -86,6 +103,7 @@ MenuBar {
             enabled: reselectDevicesAction.enabled
         }
     }
+
     Menu {
         title: i18nc("menu category", "Help")
 
