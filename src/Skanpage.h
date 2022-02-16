@@ -77,7 +77,7 @@ Q_SIGNALS:
     void progressChanged(int progress);
     void countDownChanged(int remainingSeconds);
     void optionsChanged();
-    void applicationStateChanged();
+    void applicationStateChanged(ApplicationState state);
     void deviceInfoUpdated();
     void newUserMessage(QVariant level, const QVariant &message);
 

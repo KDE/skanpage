@@ -74,6 +74,18 @@ ApplicationWindow {
             errorMessage.visible = true
             hideNotificationTimer.start()
         }
+
+        function onApplicationStateChanged(state) {
+            if (state == Skanpage.SearchingForDevices) {
+                stackView.push(devicesLoading)
+            } else if (state == Skanpage.DeviceSelection) {
+                stackView.replace(deviceSelection)
+            } else if (state == Skanpage.ReadyForScan) {
+                while(stackView.depth > 1) {
+                    stackView.pop()
+                }
+            }
+        }
     }
 
     Action {
@@ -259,35 +271,45 @@ ApplicationWindow {
             }
         }
 
-        ContentView {
-            id: mainView
-
-            showOptions: persistentSettings.showOptions
-            showAllOptions: persistentSettings.showAllOptions
-            visible: skanpage.applicationState === Skanpage.ReadyForScan || skanpage.applicationState === Skanpage.ScanInProgress
-
+        StackView {
+            id: stackView
+            
             Layout.fillWidth: true
             Layout.fillHeight: true
-            focus: true
+            
+            initialItem: ContentView {
+                id: mainView
 
-            onSaveSinglePage: {
-                saveFileDialog.pageNumbers.push(pageNumber)
-                saveFileDialog.open()
-            }
+                showOptions: persistentSettings.showOptions
+                showAllOptions: persistentSettings.showAllOptions
 
-            Component.onCompleted: {
-                mainView.splitView.restoreState(persistentSettings.splitViewState)
+                focus: true
+
+                onSaveSinglePage: {
+                    saveFileDialog.pageNumbers.push(pageNumber)
+                    saveFileDialog.open()
+                }
+
+                Component.onCompleted: {
+                    mainView.splitView.restoreState(persistentSettings.splitViewState)
+                }
             }
         }
+    }
+    
+    Component {
+        id: deviceSelection
 
-        DevicesView {
-            id: devicesView
-
-            visible: skanpage.applicationState != Skanpage.ReadyForScan && skanpage.applicationState != Skanpage.ScanInProgress 
-
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+        DeviceSelection {
             focus: true
+        }
+    }
+
+    Component {
+        id: devicesLoading
+
+        DevicesLoading {
+
         }
     }
 
@@ -356,5 +378,10 @@ ApplicationWindow {
     
     Component.onCompleted: {
         skanpage.optionsModel.showAllOptions(persistentSettings.showAllOptions)
+        if (skanpage.applicationState == Skanpage.SearchingForDevices) {
+            stackView.push(devicesLoading)
+        } else if (skanpage.applicationState == Skanpage.DeviceSelection) {
+            stackView.push(deviceSelection)
+        }
     }
 }

@@ -77,7 +77,7 @@ void Skanpage::startScan()
     m_ksaneInterface->startScan();
     m_scanInProgress = true;
     m_state = ApplicationState::ScanInProgress;
-    Q_EMIT applicationStateChanged();
+    Q_EMIT applicationStateChanged(m_state);
 }
 
 Skanpage::ApplicationState Skanpage::applicationState() const
@@ -121,7 +121,7 @@ void Skanpage::availableDevices(const QList<KSaneCore::DeviceInfo> &deviceList)
         m_availableDevices->updateDevicesList(deviceList);
 
         m_state = DeviceSelection;
-        Q_EMIT applicationStateChanged();
+        Q_EMIT applicationStateChanged(m_state);
 
         // if there is only one scanning device available, open it
         if (m_availableDevices->rowCount() == 1) {
@@ -175,7 +175,7 @@ void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &dev
     loadScannerOptions();
 
     m_state = ReadyForScan;
-    Q_EMIT applicationStateChanged();
+    Q_EMIT applicationStateChanged(m_state);
 }
 
 void Skanpage::reloadDevicesList()
@@ -191,7 +191,7 @@ void Skanpage::reloadDevicesList()
         Q_EMIT optionsChanged();
     }
     m_state = SearchingForDevices;
-    Q_EMIT applicationStateChanged();
+    Q_EMIT applicationStateChanged(m_state);
     m_ksaneInterface->reloadDevicesList();
 }
 
@@ -284,6 +284,6 @@ void Skanpage::checkFinish()
 {
     if (m_scannedImages == 0 && !m_scanInProgress) {
         m_state = ApplicationState::ReadyForScan;
-        Q_EMIT applicationStateChanged();
+        Q_EMIT applicationStateChanged(m_state);
     }
 }

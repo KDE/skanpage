@@ -10,7 +10,8 @@
         <file>qml/DocumentList.qml</file>
         <file>qml/DocumentPage.qml</file>
         <file>qml/InProgressPage.qml</file>
-        <file>qml/DevicesView.qml</file>
+        <file>qml/DeviceSelection.qml</file>
+        <file>qml/DevicesLoading.qml</file>
         <file>qml/OptionsPanel.qml</file>
         <file>qml/OptionDelegate.qml</file>
         <file>qml/IntegerSpinBoxWithSuffix.qml</file>
