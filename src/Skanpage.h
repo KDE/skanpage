@@ -19,9 +19,9 @@
 
 class DocumentModel;
 class DevicesModel;
-class OptionsModel;
 class FormatModel;
 class FilteredOptionsModel;
+class SkanpagePrivate;
 
 class Skanpage : public QObject
 {
@@ -79,7 +79,7 @@ Q_SIGNALS:
     void optionsChanged();
     void applicationStateChanged(ApplicationState state);
     void deviceInfoUpdated();
-    void newUserMessage(QVariant level, const QVariant &message);
+    void newUserMessage(const QVariant &level, const QVariant &message);
 
 private Q_SLOTS:
     void availableDevices(const QList<KSaneIface::KSaneCore::DeviceInfo> &deviceList);
@@ -98,21 +98,7 @@ private:
     void checkFinish();
     void signalErrorMessage(const QString &text);
 
-    std::unique_ptr<KSaneIface::KSaneCore> m_ksaneInterface;
-    std::unique_ptr<DocumentModel> m_docHandler;
-    std::unique_ptr<DevicesModel> m_availableDevices;
-    std::unique_ptr<OptionsModel> m_optionsModel;
-    std::unique_ptr<FormatModel> m_formatModel;
-    std::unique_ptr<FilteredOptionsModel> m_filteredOptionsModel;
-
-    int m_progress = 100;
-    int m_remainingSeconds = 0;
-    int m_scannedImages = 0;
-    ApplicationState m_state = SearchingForDevices;
-    bool m_scanInProgress = false;
-    QString m_deviceName;
-    QString m_deviceVendor;
-    QString m_deviceModel;
+    std::unique_ptr<SkanpagePrivate> d;
 };
 
 #endif // SKANPAGE_H

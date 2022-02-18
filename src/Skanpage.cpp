@@ -18,25 +18,39 @@
 #include "FilteredOptionsModel.h"
 #include "skanpage_debug.h"
 
+class SkanpagePrivate {
+public:
+    KSaneIface::KSaneCore m_ksaneInterface;
+    DocumentModel m_documentHandler;
+    DevicesModel m_availableDevices;
+    OptionsModel m_optionsModel;
+    FormatModel m_formatModel;
+    FilteredOptionsModel m_filteredOptionsModel;
+
+    int m_progress = 100;
+    int m_remainingSeconds = 0;
+    int m_scannedImages = 0;
+    Skanpage::ApplicationState m_state = Skanpage::SearchingForDevices;
+    bool m_scanInProgress = false;
+    QString m_deviceName;
+    QString m_deviceVendor;
+    QString m_deviceModel;
+};
+
 Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     : QObject(parent)
-    , m_ksaneInterface(std::make_unique<KSaneIface::KSaneCore>())
-    , m_docHandler(std::make_unique<DocumentModel>())
-    , m_availableDevices(std::make_unique<DevicesModel>())
-    , m_optionsModel(std::make_unique<OptionsModel>())
-    , m_formatModel(std::make_unique<FormatModel>())
-    , m_filteredOptionsModel(std::make_unique<FilteredOptionsModel>())
+    , d(std::make_unique<SkanpagePrivate>())
 {
-    m_filteredOptionsModel->setSourceModel(m_optionsModel.get());
+    d->m_filteredOptionsModel.setSourceModel(&d->m_optionsModel);
 
-    connect(m_ksaneInterface.get(), &KSaneCore::scannedImageReady, this, &Skanpage::imageReady);
-    connect(m_ksaneInterface.get(), &KSaneCore::availableDevices, this, &Skanpage::availableDevices);
-    connect(m_ksaneInterface.get(), &KSaneCore::userMessage, this, &Skanpage::showKSaneMessage);
-    connect(m_ksaneInterface.get(), &KSaneCore::scanProgress, this, &Skanpage::progressUpdated);
-    connect(m_ksaneInterface.get(), &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
-    connect(m_ksaneInterface.get(), &KSaneCore::batchModeCountDown, this, &Skanpage::batchModeCountDown);
-    connect(m_docHandler.get(), &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
-    connect(m_docHandler.get(), &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
+    connect(&d->m_ksaneInterface, &KSaneCore::scannedImageReady, this, &Skanpage::imageReady);
+    connect(&d->m_ksaneInterface, &KSaneCore::availableDevices, this, &Skanpage::availableDevices);
+    connect(&d->m_ksaneInterface, &KSaneCore::userMessage, this, &Skanpage::showKSaneMessage);
+    connect(&d->m_ksaneInterface, &KSaneCore::scanProgress, this, &Skanpage::progressUpdated);
+    connect(&d->m_ksaneInterface, &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
+    connect(&d->m_ksaneInterface, &KSaneCore::batchModeCountDown, this, &Skanpage::batchModeCountDown);
+    connect(&d->m_documentHandler, &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
+    connect(&d->m_documentHandler, &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
 
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
@@ -59,43 +73,43 @@ Skanpage::~Skanpage()
 
 QString Skanpage::deviceVendor() const
 {
-    return m_deviceVendor;
+    return d->m_deviceVendor;
 }
 
 QString Skanpage::deviceModel() const
 {
-    return m_deviceModel;
+    return d->m_deviceModel;
 }
 
 QString Skanpage::deviceName() const
 {
-    return m_deviceName;
+    return d->m_deviceName;
 }
 
 void Skanpage::startScan()
 {
-    m_ksaneInterface->startScan();
-    m_scanInProgress = true;
-    m_state = ApplicationState::ScanInProgress;
-    Q_EMIT applicationStateChanged(m_state);
+    d->m_ksaneInterface.startScan();
+    d->m_scanInProgress = true;
+    d->m_state = ApplicationState::ScanInProgress;
+    Q_EMIT applicationStateChanged(d->m_state);
 }
 
 Skanpage::ApplicationState Skanpage::applicationState() const
 {
-    return m_state;
+    return d->m_state;
 }
 
 void Skanpage::imageReady(const QImage &image)
 {
-    m_docHandler->addImage(image);
-    m_scannedImages++;
+    d->m_documentHandler.addImage(image);
+    d->m_scannedImages++;
 }
 
 void Skanpage::saveScannerOptions()
 {
-    KConfigGroup options(KSharedConfig::openStateConfig(), QString::fromLatin1("Options For %1").arg(m_ksaneInterface->deviceName()));
+    KConfigGroup options(KSharedConfig::openStateConfig(), QString::fromLatin1("Options For %1").arg(d->m_ksaneInterface.deviceName()));
 
-    QMap<QString, QString> optionMap = m_ksaneInterface->getOptionsMap();
+    QMap<QString, QString> optionMap = d->m_ksaneInterface.getOptionsMap();
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving scanner options") << optionMap;
     QMap<QString, QString>::const_iterator it = optionMap.constBegin();
@@ -108,26 +122,26 @@ void Skanpage::saveScannerOptions()
 
 void Skanpage::loadScannerOptions()
 {
-    KConfigGroup scannerOptions(KSharedConfig::openStateConfig(), QString::fromLatin1("Options For %1").arg(m_ksaneInterface->deviceName()));
+    KConfigGroup scannerOptions(KSharedConfig::openStateConfig(), QString::fromLatin1("Options For %1").arg(d->m_ksaneInterface.deviceName()));
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Loading scanner options") << scannerOptions.entryMap();
 
-    m_ksaneInterface->setOptionsMap(scannerOptions.entryMap());
+    d->m_ksaneInterface.setOptionsMap(scannerOptions.entryMap());
 }
 
 void Skanpage::availableDevices(const QList<KSaneCore::DeviceInfo> &deviceList)
 {
-    if (m_state == SearchingForDevices) {
-        m_availableDevices->updateDevicesList(deviceList);
+    if (d->m_state == SearchingForDevices) {
+        d->m_availableDevices.updateDevicesList(deviceList);
 
-        m_state = DeviceSelection;
-        Q_EMIT applicationStateChanged(m_state);
+        d->m_state = DeviceSelection;
+        Q_EMIT applicationStateChanged(d->m_state);
 
         // if there is only one scanning device available, open it
-        if (m_availableDevices->rowCount() == 1) {
-            m_availableDevices->selectDevice(0);
-            qCDebug(SKANPAGE_LOG) << QStringLiteral("Automatically selecting only available device: ") << m_availableDevices->getSelectedDeviceName();
-            openDevice(m_availableDevices->getSelectedDeviceName());
+        if (d->m_availableDevices.rowCount() == 1) {
+            d->m_availableDevices.selectDevice(0);
+            qCDebug(SKANPAGE_LOG) << QStringLiteral("Automatically selecting only available device: ") << d->m_availableDevices.getSelectedDeviceName();
+            openDevice(d->m_availableDevices.getSelectedDeviceName());
         }
     }
 }
@@ -137,12 +151,12 @@ bool Skanpage::openDevice(const QString &deviceName, const QString &deviceVendor
     KSaneCore::KSaneOpenStatus status = KSaneCore::OpeningFailed;
     if (!deviceName.isEmpty()) {
         qCDebug(SKANPAGE_LOG) << QStringLiteral("Trying to open device: %1").arg(deviceName);
-        status = m_ksaneInterface->openDevice(deviceName);
+        status = d->m_ksaneInterface.openDevice(deviceName);
         if (status == KSaneCore::OpeningSucceeded) {
             if (!deviceVendor.isEmpty()) {
                 finishOpeningDevice(deviceName, deviceVendor, deviceModel);
             } else {
-                finishOpeningDevice(deviceName, m_ksaneInterface->deviceVendor(), m_ksaneInterface->deviceModel());
+                finishOpeningDevice(deviceName, d->m_ksaneInterface.deviceVendor(), d->m_ksaneInterface.deviceModel());
             }
         } else if (status == KSaneCore::OpeningDenied) {
             showUserMessage(SkanpageUtils::ErrorMessage, QStringLiteral("Access to selected device has been denied"));
@@ -163,36 +177,36 @@ void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &dev
     options.writeEntry(QStringLiteral("deviceModel"), deviceVendor);
     options.writeEntry(QStringLiteral("deviceVendor"), deviceModel);
 
-    m_deviceName = deviceName;
-    m_deviceVendor = deviceVendor;
-    m_deviceModel = deviceModel;
+    d->m_deviceName = deviceName;
+    d->m_deviceVendor = deviceVendor;
+    d->m_deviceModel = deviceModel;
     Q_EMIT deviceInfoUpdated();
     
-    m_optionsModel->setOptionsList(m_ksaneInterface->getOptionsList());
+    d->m_optionsModel.setOptionsList(d->m_ksaneInterface.getOptionsList());
     Q_EMIT optionsChanged();
 
     // load saved options
     loadScannerOptions();
 
-    m_state = ReadyForScan;
-    Q_EMIT applicationStateChanged(m_state);
+    d->m_state = ReadyForScan;
+    Q_EMIT applicationStateChanged(d->m_state);
 }
 
 void Skanpage::reloadDevicesList()
 {
     qCDebug(SKANPAGE_LOG()) << QStringLiteral("(Re-)loading devices list");
 
-    if (m_ksaneInterface->closeDevice()) {
-        m_deviceName.clear();
-        m_deviceVendor.clear();
-        m_deviceModel.clear();
+    if (d->m_ksaneInterface.closeDevice()) {
+        d->m_deviceName.clear();
+        d->m_deviceVendor.clear();
+        d->m_deviceModel.clear();
         Q_EMIT deviceInfoUpdated();
-        m_optionsModel->clearOptions();
+        d->m_optionsModel.clearOptions();
         Q_EMIT optionsChanged();
     }
-    m_state = SearchingForDevices;
-    Q_EMIT applicationStateChanged(m_state);
-    m_ksaneInterface->reloadDevicesList();
+    d->m_state = SearchingForDevices;
+    Q_EMIT applicationStateChanged(d->m_state);
+    d->m_ksaneInterface.reloadDevicesList();
 }
 
 void Skanpage::showKSaneMessage(KSaneIface::KSaneCore::KSaneScanStatus status, const QString &strStatus)
@@ -216,59 +230,59 @@ void Skanpage::showUserMessage(SkanpageUtils::MessageLevel level, const QString 
 
 void Skanpage::progressUpdated(int progress)
 {
-    m_progress = progress;
-    Q_EMIT progressChanged(m_progress);
+    d->m_progress = progress;
+    Q_EMIT progressChanged(d->m_progress);
 }
 
 void Skanpage::batchModeCountDown(int remainingSeconds)
 {
-    m_remainingSeconds = remainingSeconds;
-    Q_EMIT countDownChanged(m_remainingSeconds);
+    d->m_remainingSeconds = remainingSeconds;
+    Q_EMIT countDownChanged(d->m_remainingSeconds);
 }
 
 int Skanpage::progress() const
 {
-    return m_progress;
+    return d->m_progress;
 }
 
 int Skanpage::countDown() const
 {
-    return m_remainingSeconds;
+    return d->m_remainingSeconds;
 }
 
 KSaneIface::KSaneCore *Skanpage::ksaneInterface() const
 {
-    return m_ksaneInterface.get();
+    return &d->m_ksaneInterface;
 }
 
 DocumentModel *Skanpage::documentModel() const
 {
-    return m_docHandler.get();
+    return &d->m_documentHandler;
 }
 
 DevicesModel *Skanpage::devicesModel() const
 {
-    return m_availableDevices.get();
+    return &d->m_availableDevices;
 }
 
 FormatModel *Skanpage::formatModel() const
 {
-    return m_formatModel.get();
+    return &d->m_formatModel;
 }
 
 FilteredOptionsModel *Skanpage::optionsModel() const
 {
-    return m_filteredOptionsModel.get();
+    return &d->m_filteredOptionsModel;
 }
 
 void Skanpage::cancelScan()
 {
-    m_ksaneInterface->stopScan();
+    d->m_ksaneInterface.stopScan();
 }
 
 void Skanpage::imageTemporarilySaved()
 {
-    m_scannedImages--;
+    d->m_scannedImages--;
     checkFinish();
 }
 
@@ -277,13 +291,13 @@ void Skanpage::scanningFinished(KSaneCore::KSaneScanStatus status, const QString
     //only print debug, errors are already reported by KSaneCore::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
     
-    m_scanInProgress = false;
+    d->m_scanInProgress = false;
     checkFinish();
 }
 void Skanpage::checkFinish()
 {
-    if (m_scannedImages == 0 && !m_scanInProgress) {
-        m_state = ApplicationState::ReadyForScan;
-        Q_EMIT applicationStateChanged(m_state);
+    if (d->m_scannedImages == 0 && !d->m_scanInProgress) {
+        d->m_state = ApplicationState::ReadyForScan;
+        Q_EMIT applicationStateChanged(d->m_state);
     }
 }
