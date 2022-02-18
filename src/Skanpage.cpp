@@ -7,6 +7,8 @@
 
 #include "Skanpage.h"
 
+#include <QThread>
+
 #include <KAboutData>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -16,6 +18,8 @@
 #include "OptionsModel.h"
 #include "FormatModel.h"
 #include "FilteredOptionsModel.h"
+#include "DocumentSaver.h"
+#include "DocumentPrinter.h"
 #include "skanpage_debug.h"
 
 class SkanpagePrivate {
@@ -26,6 +30,9 @@ public:
     OptionsModel m_optionsModel;
     FormatModel m_formatModel;
     FilteredOptionsModel m_filteredOptionsModel;
+    DocumentSaver m_documentSaver;
+    DocumentPrinter m_documentPrinter;
+    QThread m_fileIOThread;
 
     int m_progress = 100;
     int m_remainingSeconds = 0;
@@ -49,8 +56,19 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(&d->m_ksaneInterface, &KSaneCore::scanProgress, this, &Skanpage::progressUpdated);
     connect(&d->m_ksaneInterface, &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
     connect(&d->m_ksaneInterface, &KSaneCore::batchModeCountDown, this, &Skanpage::batchModeCountDown);
-    connect(&d->m_documentHandler, &DocumentModel::showUserMessage, this, &Skanpage::showUserMessage);
     connect(&d->m_documentHandler, &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
+    connect(&d->m_documentHandler, &DocumentModel::printDocument, &d->m_documentPrinter, &DocumentPrinter::printDocument);
+    
+    d->m_fileIOThread.start();
+    d->m_documentSaver.moveToThread(&d->m_fileIOThread);
+
+    connect(&d->m_documentHandler, &DocumentModel::saveDocument, &d->m_documentSaver, &DocumentSaver::saveDocument);
+    connect(&d->m_documentHandler, &DocumentModel::saveNewPageTemporary, &d->m_documentSaver, &DocumentSaver::saveNewPageTemporary);
+    connect(&d->m_documentSaver, &DocumentSaver::pageTemporarilySaved, &d->m_documentHandler, &DocumentModel::updatePageInModel);
+    connect(&d->m_documentSaver, &DocumentSaver::showUserMessage, this, &Skanpage::showUserMessage);
+    connect(&d->m_documentSaver, &DocumentSaver::fileSaved, &d->m_documentHandler, &DocumentModel::updateFileInformation);
+    connect(&d->m_documentSaver, &DocumentSaver::sharingFileSaved, &d->m_documentHandler, &DocumentModel::updateSharingFileInformation);
+    connect(&d->m_documentPrinter, &DocumentPrinter::showUserMessage, this, &Skanpage::showUserMessage);
 
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
@@ -68,7 +86,9 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
 
 Skanpage::~Skanpage()
 {
+    d->m_fileIOThread.quit();
     saveScannerOptions();
+    d->m_fileIOThread.wait();
 }
 
 QString Skanpage::deviceVendor() const

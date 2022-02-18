@@ -52,9 +52,6 @@ public:
     bool m_changed = false;
     int m_activePageIndex = -1;
     int m_idCounter = 0;
-    DocumentSaver m_documentSaver;
-    DocumentPrinter m_documentPrinter;
-    QThread m_fileIOThread;
 };
 
 DocumentModelPrivate::DocumentModelPrivate()
@@ -65,22 +62,11 @@ DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
     , d(std::make_unique<DocumentModelPrivate>())
 {
-    d->m_fileIOThread.start();
-    d->m_documentSaver.moveToThread(&d->m_fileIOThread);
 
-    connect(this, &DocumentModel::saveDocument, &d->m_documentSaver, &DocumentSaver::saveDocument);
-    connect(this, &DocumentModel::saveNewPageTemporary, &d->m_documentSaver, &DocumentSaver::saveNewPageTemporary);
-    connect(&d->m_documentSaver, &DocumentSaver::pageTemporarilySaved, this, &DocumentModel::updatePageInModel);
-    connect(&d->m_documentSaver, &DocumentSaver::showUserMessage, this, &DocumentModel::showUserMessage);
-    connect(&d->m_documentSaver, &DocumentSaver::fileSaved, this, &DocumentModel::updateFileInformation);
-    connect(&d->m_documentSaver, &DocumentSaver::sharingFileSaved, this, &DocumentModel::updateSharingFileInformation);
-    connect(&d->m_documentPrinter, &DocumentPrinter::showUserMessage, this, &DocumentModel::showUserMessage);
 }
 
 DocumentModel::~DocumentModel()
 {
-    d->m_fileIOThread.quit();
-    d->m_fileIOThread.wait();
 }
 
 const QString DocumentModel::name() const
@@ -147,7 +133,7 @@ void DocumentModel::createSharingFile(const QString &suffix, QList<int> pageNumb
 
 void DocumentModel::print()
 {
-    d->m_documentPrinter.printDocument(d->m_pages);
+    Q_EMIT printDocument(d->m_pages);
 }
 
 void DocumentModel::addImage(const QImage &image)

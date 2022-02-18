@@ -79,17 +79,18 @@ Q_SIGNALS:
     void activePageChanged();
     void countChanged();
     void newPageAdded();
-    void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
     void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type = SkanpageUtils::EntireDocument);
+    void printDocument(const SkanpageUtils::DocumentPages &document);
     void saveNewPageTemporary(const int pageID, const QImage &image);
     void sharingDocumentsCreated(const QVariantList &fileUrls);
 
-private Q_SLOTS:
+public Q_SLOTS:
     void updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
     void updateSharingFileInformation(const QList<QUrl> &fileUrls);
+    void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
 
 private:
-    void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
+
     SkanpageUtils::DocumentPages selectPages(QList<int> pageNumbers);
 
     std::unique_ptr<DocumentModelPrivate> d;
