@@ -22,12 +22,10 @@ set(REQUIRED_KF5_VERSION "5.91")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
 find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
-
 include(FeatureSummary)
-include(ECMSetupVersion) 
+include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMQtDeclareLoggingCategory)
 include(KDEInstallDirs)
@@ -36,6 +34,9 @@ include(KDEClangFormat)
 include(KDECMakeSettings)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
+
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
+
 
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
     COMPONENTS
@@ -56,7 +57,7 @@ ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX SKANPAGE
     VERSION_HEADER skanpage_version.h)
 
-install(PROGRAMS org.kde.skanpage.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(PROGRAMS org.kde.skanpage.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.skanpage.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR} )
 
 add_subdirectory(src)
