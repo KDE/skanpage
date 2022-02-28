@@ -14,11 +14,14 @@ import org.kde.skanpage 1.0
 ColumnLayout {
     id: optionPanel
 
-    property alias showAllOptions: allOptionsButton.checked
     property int targetWidth: Math.max(_maxChildrenWidth + optionsList.ScrollBar.vertical.width,
-                                       allOptionsButton.implicitWidth, devicesButton.implicitWidth)
+                                       optionsConfiguration.implicitWidth)
     property int _maxChildrenWidth: 0
-    
+
+    property alias allOptionsAction: allOptionsAction
+    property alias reselectDevicesAction: reselectDevicesAction
+    property alias configureVisibilityAction: configureVisibilityAction
+
     property bool editMode: false
 
     Label {
@@ -56,37 +59,52 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
-        Layout.alignment: Qt.AlignHCenter
-
-        Button {
-            id: allOptionsButton
-            action: allOptionsAction
-            enabled: !editOptionsButton.checked
-        }
-
-        Button {
-            id: editOptionsButton
-            icon.name: "settings-configure"
-            text: i18n("Configure")
-            checkable: true
-            onClicked: {
-                optionPanel.editMode = checked
-                skanpage.optionsModel.showAllOptions(checked)
-            }
-        }
-    }
-
-    Button {
-        id: devicesButton
-        Layout.alignment: Qt.AlignHCenter
-        action: reselectDevicesAction
-    }
-
     Label {
         Layout.alignment: Qt.AlignHCenter
         Layout.preferredHeight: Kirigami.Units.gridUnit * 2
         text: skanpage.deviceVendor && skanpage.deviceModel ?
         i18nc("scanner device vendor and model", "%1 %2", skanpage.deviceVendor, skanpage.deviceModel) : ""
     }
+    
+    Kirigami.ActionToolBar {
+        id: optionsConfiguration
+        flat: false
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+        alignment: Qt.AlignCenter
+        display: Button.IconOnly
+        actions: [
+            Kirigami.Action {
+                id: allOptionsAction
+                icon.name: "view-more-symbolic"
+                text: i18n("Show More")
+                shortcut: "CTRL+SPACE"
+                checkable: true
+                onTriggered: skanpage.optionsModel.showAllOptions(checked)
+            },
+
+            Kirigami.Action {
+                id: configureVisibilityAction
+                icon.name: "settings-configure"
+                text: i18n("Configure Visibility")
+                checkable: true
+                onTriggered: {
+                    optionPanel.editMode = checked
+                    if (checked) {
+                        skanpage.optionsModel.showAllOptions(checked)
+                    } else {
+                        skanpage.optionsModel.showAllOptions(allOptionsAction.checked)
+                    }
+                }
+            },
+            
+            Kirigami.Action {
+                id: reselectDevicesAction
+                icon.name: "view-refresh"
+                text: i18n("Reselect Scanner")
+                onTriggered: skanpage.reloadDevicesList()
+                enabled: skanpage.applicationState == Skanpage.ReadyForScan
+            }
+        ]
+    }
+
 }

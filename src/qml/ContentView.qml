@@ -17,8 +17,8 @@ Item {
 
     readonly property string name: skanpage.documentModel.changed ? i18nc("Prefix for document name indicating an unsaved document", "* %1", skanpage.documentModel.name) : skanpage.documentModel.name;
     property alias splitView: splitView
-    property alias showAllOptions: optionsPanel.showAllOptions
     property bool showOptions: true
+    property alias optionsPanel: optionsPanel
 
     signal saveSinglePage(int pageNumber)
 

@@ -52,9 +52,9 @@ ApplicationWindow {
             persistentSettings.y = mainWindow.y
             persistentSettings.width = mainWindow.width
             persistentSettings.height = mainWindow.height
-            persistentSettings.splitViewState = mainDocument.splitView.saveState()
+            persistentSettings.splitViewState = mainView.splitView.saveState()
             persistentSettings.showOptions = mainView.showOptions
-            persistentSettings.showAllOptions = allOptionsAction.checked
+            persistentSettings.showAllOptions = mainView.optionsPanel.allOptionsAction.checked
             persistentSettings.shareHeight = shareWindow.height
             persistentSettings.shareWidth = shareWindow.width
         }
@@ -125,16 +125,6 @@ ApplicationWindow {
     }
 
     Action {
-        id: allOptionsAction
-        icon.name: "view-more-symbolic"
-        text: i18n("Show More")
-        shortcut: "CTRL+SPACE"
-        checkable: true
-        checked: persistentSettings.showAllOptions
-        onTriggered: skanpage.optionsModel.showAllOptions(checked)
-    }
-
-    Action {
         id: showOptionsAction
         icon.name: "configure"
         text: i18n("Show Scanner Options")
@@ -163,14 +153,6 @@ ApplicationWindow {
         icon.name: "skanpage"
         text: i18n("About Skanpage")
         onTriggered: aboutWindow.show()
-    }
-
-    Action {
-        id: reselectDevicesAction
-        icon.name: "view-refresh"
-        text: i18n("Reselect Scanner")
-        onTriggered: skanpage.reloadDevicesList()
-        enabled: skanpage.applicationState == Skanpage.ReadyForScan
     }
     
     Action {
@@ -281,7 +263,7 @@ ApplicationWindow {
                 id: mainView
 
                 showOptions: persistentSettings.showOptions
-                showAllOptions: persistentSettings.showAllOptions
+                optionsPanel.allOptionsAction.checked: persistentSettings.showAllOptions
 
                 focus: true
 
@@ -367,11 +349,11 @@ ApplicationWindow {
        saveDocAction: saveDocAction
        scanAction: scanAction
        cancelAction: cancelAction
-       allOptionsAction: allOptionsAction
+       allOptionsAction: mainView.optionsPanel.allOptionsAction
        showOptionsAction: showOptionsAction
        printAction: printAction
        showAboutAction: showAboutAction
-       reselectDevicesAction: reselectDevicesAction
+       reselectDevicesAction: mainView.optionsPanel.reselectDevicesAction
        quitAction: quitAction
        shareAction: shareAction
     }
