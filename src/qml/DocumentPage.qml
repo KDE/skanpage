@@ -136,35 +136,35 @@ Item {
                     id: rotateLeftAction
                     icon.name: "object-rotate-left"
                     text: i18n("Rotate Left")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Rotate90positive)
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90positive)
                 },
 
                 Kirigami.Action {
                     id: rotateRightAction
                     icon.name: "object-rotate-right"
                     text: i18n("Rotate Right")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Rotate90negative)
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90negative)
                 },
 
                 Kirigami.Action {
                     id: flipVerticalAction
                     icon.name: "object-flip-vertical"
                     text: i18n("Flip")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activeIndex, DocumentModel.Flip180)
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Flip180)
                 },
 
                 Kirigami.Action {
                     id: savePageAction
                     icon.name: "document-save"
                     text: i18n("Save Page")
-                    onTriggered: documentPage.saveSinglePage(skanpage.documentModel.activeIndex)
+                    onTriggered: documentPage.saveSinglePage(skanpage.documentModel.activePageIndex)
                 },
 
                 Kirigami.Action {
                     id: deleteAction
                     icon.name: "delete"
                     text: i18n("Delete Page")
-                    onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activeIndex)
+                    onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activePageIndex)
                 }
             ]
         }
