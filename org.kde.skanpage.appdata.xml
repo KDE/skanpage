@@ -62,7 +62,7 @@ SPDX-License-Identifier: CC0-1.0
     <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
     <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لإجراء مسح ضوئي متعدد الصفحات وحفظ الصور والمستندات.</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al desament de documents i imatges.</p>
-    <p xml:lang="ca-valencia">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al guardar de documents i imatges.</p>
+    <p xml:lang="ca-valencia">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al guardada de documents i imatges.</p>
     <p xml:lang="el">Το Skanpage Μια απλή εφαρμογή σάρωσης σχεδιασμένη για σάρωση πολλών σελίδων και αποθήκευση των εγγράφων και των εικόνων.</p>
     <p xml:lang="en-GB">Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como documentos e imágenes.</p>
@@ -180,7 +180,7 @@ SPDX-License-Identifier: CC0-1.0
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
       <li xml:lang="ca">Desament en documents PDF multipàgina i fitxers d'imatge</li>
-      <li xml:lang="ca-valencia">Guardar en documents PDF multipàgina i fitxers d'imatge</li>
+      <li xml:lang="ca-valencia">Guardada en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="cs">Ukládání do vícestránkových souborů PDF a souborů obrázků</li>
       <li xml:lang="el">Αποθήκευση σε πολυσέλιδα PDF έγγραφα και σε αρχεία εικόνων</li>
       <li xml:lang="en-GB">Saving to multi-page PDF documents and image files</li>
