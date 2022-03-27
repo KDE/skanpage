@@ -11,7 +11,8 @@
 #include <QObject>
 #include <QString>
 
-#include <KSaneCore>
+#include <CoreInterface>
+#include <DeviceInformation>
 
 #include <memory>
 
@@ -69,7 +70,7 @@ public:
     FormatModel *formatModel() const;
     FilteredOptionsModel *optionsModel() const;
     OCRLanguageModel *languageModel() const;
-    KSaneIface::KSaneCore *ksaneInterface() const;
+    KSane::CoreInterface *ksaneInterface() const;
 
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
@@ -86,13 +87,14 @@ Q_SIGNALS:
     void newUserMessage(const QVariant &level, const QVariant &message);
 
 private Q_SLOTS:
-    void availableDevices(const QList<KSaneIface::KSaneCore::DeviceInfo> &deviceList);
-    void showKSaneMessage(KSaneIface::KSaneCore::KSaneScanStatus type, const QString &strStatus);
-    void showUserMessage(SkanpageUtils::MessageLevel level, const QString &strStatus);
+
     void imageReady(const QImage &image);
+    void availableDevices(const QList<KSane::DeviceInformation *> &deviceList);
+    void showKSaneMessage(KSane::CoreInterface::ScanStatus type, const QString &strStatus);
+    void showUserMessage(SkanpageUtils::MessageLevel level, const QString &strStatus);
     void progressUpdated(int progress);
     void batchModeCountDown(int remainingSeconds);
-    void scanningFinished(KSaneIface::KSaneCore::KSaneScanStatus statuts, const QString &strStatus);
+    void scanningFinished(KSane::CoreInterface::ScanStatus status, const QString &strStatus);
     void imageTemporarilySaved();
 
 private:

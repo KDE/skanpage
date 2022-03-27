@@ -26,7 +26,7 @@ private Q_SLOTS:
     void updateImage(int progress);
 
 private:
-    KSaneIface::KSaneCore *m_scanInterface = nullptr;
+    KSane::CoreInterface *m_scanInterface = nullptr;
     int m_progress = 0;
 };
 

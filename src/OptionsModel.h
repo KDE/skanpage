@@ -13,7 +13,7 @@
 
 #include <memory>
 
-#include <KSaneOption>
+#include <CoreOption>
 
 class OptionsModelPrivate;
 
@@ -51,7 +51,7 @@ public:
 
     bool setData(const QModelIndex &index, const QVariant &value, int role = ValueRole) override;
 
-    void setOptionsList(const QList<KSaneIface::KSaneOption *> optionsList);
+    void setOptionsList(const QList<KSane::CoreOption *> &optionsList);
 
     void clearOptions();
 

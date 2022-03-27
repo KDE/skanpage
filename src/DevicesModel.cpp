@@ -3,13 +3,14 @@
  *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
+#include <DeviceInformation>
 
 #include "DevicesModel.h"
 
 class DevicesModelPrivate
 {
 public:
-    QList<KSaneCore::DeviceInfo> mDeviceslist;
+    QList<KSane::DeviceInformation *> mDeviceslist;
 
     int mSelectedDevice = 0;
 };
@@ -51,16 +52,16 @@ QVariant DevicesModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case NameRole:
-        return d->mDeviceslist.at(index.row()).name;
+        return d->mDeviceslist.at(index.row())->name();
         break;
     case VendorRole:
-        return d->mDeviceslist.at(index.row()).vendor;
+        return d->mDeviceslist.at(index.row())->vendor();
         break;
     case ModelRole:
-        return d->mDeviceslist.at(index.row()).model;
+        return d->mDeviceslist.at(index.row())->model();
         break;
     case TypeRole:
-        return d->mDeviceslist.at(index.row()).type;
+        return d->mDeviceslist.at(index.row())->type();
         break;
     default:
         break;
@@ -68,7 +69,7 @@ QVariant DevicesModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-void DevicesModel::updateDevicesList(QList<KSaneCore::DeviceInfo> deviceList)
+void DevicesModel::updateDevicesList(const QList<KSane::DeviceInformation *> &deviceList)
 {
     beginResetModel();
     d->mDeviceslist = deviceList;
@@ -79,7 +80,7 @@ void DevicesModel::updateDevicesList(QList<KSaneCore::DeviceInfo> deviceList)
 QString DevicesModel::getSelectedDeviceName() const
 {
     if (d->mSelectedDevice >= 0 && d->mSelectedDevice < d->mDeviceslist.count()) {
-        return d->mDeviceslist.at(d->mSelectedDevice).name;
+        return d->mDeviceslist.at(d->mSelectedDevice)->name();
     }
     return QString();
 }
@@ -89,11 +90,11 @@ void DevicesModel::selectDevice(int i)
     d->mSelectedDevice = i;
 }
 
-QDebug operator<<(QDebug d, const KSaneCore::DeviceInfo &deviceInfo)
+QDebug operator<<(QDebug d, KSane::DeviceInformation *deviceInfo)
 {
-    d << "Device name: " << deviceInfo.name << "\n";
-    d << "Device vendor: " << deviceInfo.vendor << "\n";
-    d << "Device model: " << deviceInfo.model << "\n";
-    d << "Device type: " << deviceInfo.type << "\n";
+    d << "Device name: " << deviceInfo->name() << "\n";
+    d << "Device vendor: " << deviceInfo->vendor() << "\n";
+    d << "Device model: " << deviceInfo->model() << "\n";
+    d << "Device type: " << deviceInfo->type() << "\n";
     return d;
 }

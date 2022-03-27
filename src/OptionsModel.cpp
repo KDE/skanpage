@@ -14,7 +14,7 @@
 class OptionsModelPrivate
 {
 public:
-    QList<KSaneIface::KSaneOption *> mOptionsList;
+    QList<KSane::CoreOption *> mOptionsList;
     QList<bool> mQuickAccessList;
     QSet<QString> mQuickAccessOptions;
     bool mQuickAccessListChanged = false;
@@ -145,17 +145,17 @@ bool OptionsModel::setData(const QModelIndex &index, const QVariant &value, int 
     return true;
 }
 
-void OptionsModel::setOptionsList(const QList<KSaneIface::KSaneOption *> optionsList)
+void OptionsModel::setOptionsList(const QList<KSane::CoreOption *> &optionsList)
 {
     beginResetModel();
     d->mOptionsList = optionsList;
     d->mQuickAccessList.clear();
     d->mQuickAccessList.reserve(optionsList.size());
     for (int i = 0; i < d->mOptionsList.size(); i++) {
-        KSaneIface::KSaneOption *option = d->mOptionsList.at(i);
+        KSane::CoreOption *option = d->mOptionsList.at(i);
         qCDebug(SKANPAGE_LOG()) << "OptionsModel: Importing option " << option->name() << ", type" << option->type() << ", state" << option->state();
-        connect(option, &KSaneIface::KSaneOption::optionReloaded, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {StateRole}); });
-        connect(option, &KSaneIface::KSaneOption::valueChanged, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole}); });
+        connect(option, &KSane::CoreOption::optionReloaded, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {StateRole}); });
+        connect(option, &KSane::CoreOption::valueChanged, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole}); });
         d->mQuickAccessList.insert(i, d->mQuickAccessOptions.contains(option->name()));
     }
     endResetModel();

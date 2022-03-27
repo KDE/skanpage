@@ -61,7 +61,7 @@ target_link_libraries(skanpage
     Qt::QuickControls2
     Qt::Concurrent
   PRIVATE
-    KF5::Sane
+    KSane::Core
     KF5::CoreAddons
     KF5::I18n
     KF5::Kirigami2

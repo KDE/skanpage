@@ -14,11 +14,9 @@
 
 #include <memory>
 
-#include <KSaneCore>
+#include <CoreInterface>
 
 class DevicesModelPrivate;
-
-using namespace KSaneIface;
 
 class DevicesModel : public QAbstractListModel
 {
@@ -41,7 +39,7 @@ public:
 
     Q_INVOKABLE QString getSelectedDeviceName() const;
 
-    void updateDevicesList(QList<KSaneCore::DeviceInfo> deviceList);
+    void updateDevicesList(const QList<KSane::DeviceInformation *> &deviceList);
 
 public Q_SLOTS:
 
@@ -55,6 +53,6 @@ private:
     std::unique_ptr<DevicesModelPrivate> d;
 };
 
-QDebug operator<<(QDebug d, const KSaneCore::DeviceInfo &deviceInfo);
+QDebug operator<<(QDebug d, KSane::DeviceInformation *deviceInfo);
 
 #endif // DEVICES_MODEL_H

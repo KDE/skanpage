@@ -47,7 +47,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         Purpose
 )
 
-find_package(KF5Sane "21.12.0" REQUIRED)
+find_package(KSaneCore "22.03.70" REQUIRED)
 
 find_package(Tesseract 4)
 find_package(Leptonica)

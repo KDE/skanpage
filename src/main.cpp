@@ -16,7 +16,7 @@
 #include <KCrash>
 #include <KLocalizedContext>
 #include <KLocalizedString>
-#include <KSaneOption>
+#include <CoreOption>
 
 #include "DevicesModel.h"
 #include "DocumentModel.h"
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<FormatModel>("org.kde.skanpage", 1, 0, "FormatModel", QStringLiteral("Format model class uncreateable"));
     qmlRegisterUncreatableType<FilteredOptionsModel>("org.kde.skanpage", 1, 0, "FilteredOptionsModel", QStringLiteral("Filtered options model class uncreateable"));
     qmlRegisterUncreatableType<OCRLanguageModel>("org.kde.skanpage", 1, 0, "OCRLanguageModel", QStringLiteral("OCR language model class uncreateable"));;
-    qmlRegisterUncreatableType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
+    qmlRegisterUncreatableType<KSane::CoreOption>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
     qmlRegisterUncreatableMetaObject(SkanpageUtils::staticMetaObject, "org.kde.skanpage", 1, 0, "SkanpageUtils", QStringLiteral("Error: only enums"));
     qmlRegisterType<InProgressPainter>("org.kde.skanpage", 1, 0, "InProgressPainter");
