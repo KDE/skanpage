@@ -14,8 +14,12 @@
 #include <QList>
 #include <QUrl>
 #include <QImage>
+#include <QPainter>
+#include <QPdfWriter>
 
 #include "SkanpageUtils.h"
+
+class OCREngine;
 
 class DocumentSaver : public QObject
 {
@@ -25,9 +29,10 @@ public:
     explicit DocumentSaver(QObject *parent = nullptr);
     ~DocumentSaver();
 
-    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
+    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type, const QString &title);
     void saveNewPageTemporary(const int pageID, const QImage &image);
-    
+    void setOCREngine(OCREngine *engine);
+
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
     void fileSaved(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
@@ -37,6 +42,9 @@ Q_SIGNALS:
 private:
     void savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
     void saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
+    void saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const QString &title);
+    void printPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page, bool firstPage);
+    OCREngine *m_OCREngine;
 };
 
 #endif // DOCUMENT_SAVER_H

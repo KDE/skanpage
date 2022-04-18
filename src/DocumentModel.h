@@ -22,12 +22,13 @@ class DocumentModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
+    Q_PROPERTY(QUrl url READ url NOTIFY nameChanged)
     Q_PROPERTY(bool changed READ changed NOTIFY changedChanged)
     Q_PROPERTY(int activePageIndex READ activePageIndex WRITE setActivePageIndex NOTIFY activePageChanged)
     Q_PROPERTY(QUrl activePageSource READ activePageSource NOTIFY activePageChanged)
     Q_PROPERTY(int activePageRotation READ activePageRotation NOTIFY activePageChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
-
+    
 public:
     enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1,
         RotationAngleRole,
@@ -46,6 +47,7 @@ public:
     ~DocumentModel();
 
     const QString name() const;
+    const QUrl url() const;
     int activePageIndex() const;
     int activePageRotation() const;
     QUrl activePageSource() const;
@@ -67,7 +69,7 @@ public:
 
     Q_INVOKABLE void createSharingFile(const QString &suffix, QList<int> pageNumbers = {});
 
-    Q_INVOKABLE void print();
+    Q_INVOKABLE void exportPDF(const QUrl &fileUrl, const QString &title, const bool useOCR);
 
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -79,8 +81,7 @@ Q_SIGNALS:
     void activePageChanged();
     void countChanged();
     void newPageAdded();
-    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type = SkanpageUtils::EntireDocument);
-    void printDocument(const SkanpageUtils::DocumentPages &document);
+    void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type = SkanpageUtils::EntireDocument, const QString &title = QString());
     void saveNewPageTemporary(const int pageID, const QImage &image);
     void sharingDocumentsCreated(const QVariantList &fileUrls);
 

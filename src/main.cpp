@@ -10,6 +10,7 @@
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QImage>
+#include <QAbstractListModel>
 
 #include <KAboutData>
 #include <KCrash>
@@ -21,6 +22,7 @@
 #include "DocumentModel.h"
 #include "FormatModel.h"
 #include "FilteredOptionsModel.h"
+#include "OCRLanguageModel.h"
 #include "InProgressPainter.h"
 #include "Skanpage.h"
 #include "SkanpageUtils.h"
@@ -37,7 +39,8 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel", QStringLiteral("Document model class uncreateable"));
     qmlRegisterUncreatableType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel", QStringLiteral("Device model class uncreateable"));
     qmlRegisterUncreatableType<FormatModel>("org.kde.skanpage", 1, 0, "FormatModel", QStringLiteral("Format model class uncreateable"));
-    qmlRegisterUncreatableType<FilteredOptionsModel>("org.kde.skanpage", 1, 0, "FilteredOptionsModel", QStringLiteral("Filtered options model class uncreateable"));;
+    qmlRegisterUncreatableType<FilteredOptionsModel>("org.kde.skanpage", 1, 0, "FilteredOptionsModel", QStringLiteral("Filtered options model class uncreateable"));
+    qmlRegisterUncreatableType<OCRLanguageModel>("org.kde.skanpage", 1, 0, "OCRLanguageModel", QStringLiteral("OCR language model class uncreateable"));;
     qmlRegisterUncreatableType<KSaneOption>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
     qmlRegisterUncreatableMetaObject(SkanpageUtils::staticMetaObject, "org.kde.skanpage", 1, 0, "SkanpageUtils", QStringLiteral("Error: only enums"));

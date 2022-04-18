@@ -37,7 +37,6 @@ include(ECMInstallIcons)
 
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
 
-
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
     COMPONENTS
         CoreAddons
@@ -50,6 +49,15 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
 
 find_package(KF5Sane "21.12.0" REQUIRED)
 
+find_package(Tesseract 4)
+find_package(Leptonica)
+
+if (LEPTONICA_FOUND AND TESSERACT_FOUND)
+   set(OCR_AVAILABLE 1)
+else()
+   message(STATUS "Skanpage will be built without OCR as libraries are missing.")
+endif()
+
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055A00)
 
@@ -59,6 +67,10 @@ ecm_setup_version(${PROJECT_VERSION}
 
 install(PROGRAMS org.kde.skanpage.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.skanpage.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR} )
+
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
+configure_file(config-skanpage.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-skanpage.h)
 
 add_subdirectory(src)
 add_subdirectory(icons)

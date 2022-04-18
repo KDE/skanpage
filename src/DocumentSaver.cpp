@@ -6,13 +6,12 @@
 
 #include "DocumentSaver.h"
 
-#include <QPainter>
-#include <QPdfWriter>
 #include <QTransform>
 
 #include <KLocalizedString>
 
 #include "skanpage_debug.h"
+#include "OCREngine.h"
 
 DocumentSaver::DocumentSaver(QObject *parent)
     : QObject(parent)
@@ -23,9 +22,18 @@ DocumentSaver::~DocumentSaver()
 {
 }
 
-void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)
+void DocumentSaver::setOCREngine(OCREngine *engine)
 {
-    if (fileUrl.isEmpty() || document.isEmpty()) {
+    m_OCREngine = engine;
+}
+
+void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type, const QString &title)
+{
+    if (fileUrl.isEmpty()) {
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("No file path given."));
+        return;
+    }
+    if (document.isEmpty()) {
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Nothing to save."));
         return;
     }
@@ -36,7 +44,10 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
 
-    if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
+    if (type == SkanpageUtils::OCRDocument) {
+        m_OCREngine->InitForOCR();
+        saveSearchablePDF(fileUrl, document, title);
+    } else if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
         savePDF(fileUrl, document, type);
     } else {
         saveImage(fileInfo, document, type);
@@ -48,47 +59,72 @@ void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPa
     QPdfWriter writer(fileUrl.toLocalFile());
     writer.setCreator(QStringLiteral("org.kde.skanpage"));
     QPainter painter;
-    int rotationAngle;
 
     for (int i = 0; i < document.count(); ++i) {
-        writer.setResolution(document.at(i).dpi);
-        writer.setPageSize(document.at(i).pageSize);
-        writer.setPageMargins(QMarginsF(0, 0, 0, 0));
-        rotationAngle = document.at(i).rotationAngle;
-        if (rotationAngle == 90 || rotationAngle == 270) {
-            writer.setPageOrientation(QPageLayout::Landscape);
-        } else {
-            writer.setPageOrientation(QPageLayout::Portrait);
-        }
-        writer.newPage();
-
-        QTransform transformation;
-        if (rotationAngle != 0) {
-            transformation.translate(writer.width()/2, writer.height()/2);
-            transformation.rotate(rotationAngle);
-            transformation.translate(-writer.width()/2, -writer.height()/2);
-        }
-        if (rotationAngle == 90 || rotationAngle == 270) {
-            //strange that this is needed and Qt does not do this automatically
-            transformation.translate((writer.width()-writer.height())/2, (writer.height()-writer.width())/2);
-        }
-
-        if (i == 0) {
-            painter.begin(&writer);
-        }
-
-        painter.setTransform(transformation);
-        QImage pageImage(document.at(i).temporaryFile->fileName());
-        painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());
+        printPage(writer, painter, document.at(i), i == 0);
     }
+
     if (type == SkanpageUtils::EntireDocument || type == SkanpageUtils::PageSelection) {
         Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
     }
+
     if (type == SkanpageUtils::EntireDocument) {
         Q_EMIT fileSaved({fileUrl}, document);
     } else if (type == SkanpageUtils::SharingDocument) {
         Q_EMIT sharingFileSaved({fileUrl});
     }
+}
+
+void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const QString &title)
+{
+    if (m_OCREngine == nullptr) {
+        return;
+    }
+    
+    QPdfWriter writer(fileUrl.toLocalFile());
+    writer.setCreator(QStringLiteral("org.kde.skanpage"));
+    writer.setTitle(title);
+    QPainter painter;
+    
+    for (int i = 0; i < document.count(); ++i) {
+        printPage(writer, painter, document.at(i), i == 0);
+        m_OCREngine->OCRPage(writer, painter, document.at(i));
+    }
+    
+    Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved with OCR as PDF."));
+}
+
+void DocumentSaver::printPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page, bool firstPage)
+{
+    writer.setResolution(page.dpi);
+    writer.setPageSize(page.pageSize);
+    writer.setPageMargins(QMarginsF(0, 0, 0, 0));
+    int rotationAngle = page.rotationAngle;
+    if (rotationAngle == 90 || rotationAngle == 270) {
+        writer.setPageOrientation(QPageLayout::Landscape);
+    } else {
+        writer.setPageOrientation(QPageLayout::Portrait);
+    }
+    writer.newPage();
+
+    QTransform transformation;
+    if (rotationAngle != 0) {
+        transformation.translate(writer.width()/2, writer.height()/2);
+        transformation.rotate(rotationAngle);
+        transformation.translate(-writer.width()/2, -writer.height()/2);
+    }
+    if (rotationAngle == 90 || rotationAngle == 270) {
+        //strange that this is needed and Qt does not do this automatically
+        transformation.translate((writer.width()-writer.height())/2, (writer.height()-writer.width())/2);
+    }
+
+    if (firstPage) {
+        painter.begin(&writer);
+    }
+
+    painter.setTransform(transformation);
+    QImage pageImage(page.temporaryFile->fileName());
+    painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());
 }
 
 void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)

@@ -39,6 +39,8 @@ ApplicationWindow {
         property int height: 550
         property int shareWidth: 600
         property int shareHeight: 400
+        property int exportWidth: 600
+        property int exportHeight: 400
         property var splitViewState
         property bool showOptions: true
         property bool showAllOptions: false
@@ -57,6 +59,8 @@ ApplicationWindow {
             persistentSettings.showAllOptions = mainView.optionsPanel.allOptionsAction.checked
             persistentSettings.shareHeight = shareWindow.height
             persistentSettings.shareWidth = shareWindow.width
+            persistentSettings.exportHeight = exportWindow.height
+            persistentSettings.exportWidth = exportWindow.width
         }
     }
 
@@ -104,6 +108,14 @@ ApplicationWindow {
         shortcut: StandardKey.Save
         enabled: skanpage.documentModel.count !== 0
         onTriggered: saveFileDialog.open()
+    }
+    
+    Action {
+        id: exportDocAction
+        icon.name: "document-save"
+        text: i18n("Export PDF")
+        enabled: skanpage.documentModel.count !== 0
+        onTriggered: exportWindow.show()
     }
 
     Action {
@@ -221,6 +233,10 @@ ApplicationWindow {
 
                 ToolButton {
                     action: saveDocAction
+                }
+      
+                ToolButton {
+                    action: exportDocAction 
                 }
 
                 ToolButton {
@@ -343,7 +359,7 @@ ApplicationWindow {
         }
         onRejected: pageNumbers = []
     }
-    
+
     GlobalMenu {
        newDocAction: newDocAction
        saveDocAction: saveDocAction
@@ -356,6 +372,13 @@ ApplicationWindow {
        reselectDevicesAction: mainView.optionsPanel.reselectDevicesAction
        quitAction: quitAction
        shareAction: shareAction
+    }    
+
+    ExportWindow {
+        id: exportWindow
+
+        height: persistentSettings.exportHeight
+        width: persistentSettings.exportWidth
     }
     
     Component.onCompleted: {

@@ -29,6 +29,10 @@ target_sources(skanpage PRIVATE
     SkanpageUtils.h
     FormatModel.cpp
     FormatModel.h
+    OCREngine.cpp
+    OCREngine.h
+    OCRLanguageModel.cpp
+    OCRLanguageModel.h
     qml.qrc
     )
 
@@ -65,5 +69,13 @@ target_link_libraries(skanpage
     KF5::ConfigCore
     KF5::Purpose
 )
+
+if (TESSERACT_FOUND AND LEPTONICA_FOUND)
+    target_link_libraries(skanpage
+    PRIVATE
+        Tesseract::Tesseract
+        Leptonica::Leptonica
+    )
+endif()
 
 install(TARGETS skanpage ${INSTALL_TARGETS_DEFAULT_ARGS})

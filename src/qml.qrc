@@ -18,5 +18,6 @@
         <file>qml/DoubleSpinBoxWithSuffix.qml</file>
         <file>qml/GlobalMenu.qml</file>
         <file>qml/ShareWindow.qml</file>
+        <file>qml/ExportWindow.qml</file>
     </qresource>
 </RCC>

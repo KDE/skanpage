@@ -21,6 +21,7 @@ class DocumentModel;
 class DevicesModel;
 class FormatModel;
 class FilteredOptionsModel;
+class OCRLanguageModel;
 class SkanpagePrivate;
 
 class Skanpage : public QObject
@@ -33,6 +34,7 @@ class Skanpage : public QObject
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
     Q_PROPERTY(FormatModel *formatModel READ formatModel CONSTANT)
     Q_PROPERTY(FilteredOptionsModel *optionsModel READ optionsModel CONSTANT)
+    Q_PROPERTY(OCRLanguageModel *languageModel READ languageModel CONSTANT)
     Q_PROPERTY(ApplicationState applicationState READ applicationState NOTIFY applicationStateChanged)
 
     Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
@@ -66,12 +68,14 @@ public:
     DevicesModel *devicesModel() const;
     FormatModel *formatModel() const;
     FilteredOptionsModel *optionsModel() const;
+    OCRLanguageModel *languageModel() const;
     KSaneIface::KSaneCore *ksaneInterface() const;
 
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
-    Q_INVOKABLE bool openDevice(const QString &deviceName, const QString &deviceVendor = QString(), const QString &deviceModel = QString());
+    Q_INVOKABLE bool openDevice(const QString &deviceName, const QString &deviceVendor = QString(), const QString &deviceModel = QString());    
+    Q_INVOKABLE bool OCRavailable() const;
 
 Q_SIGNALS:
     void progressChanged(int progress);

@@ -17,8 +17,6 @@
 #include <KLocalizedString>
 
 #include "skanpage_debug.h"
-#include "DocumentSaver.h"
-#include "DocumentPrinter.h"
 
 struct PreviewPageProperties {
     double aspectRatio;
@@ -39,7 +37,6 @@ QDebug operator<<(QDebug d, const PreviewPageProperties& pageProperties)
 }
 
 const static QString defaultFileName = i18n("New document");
-
 
 class DocumentModelPrivate
 {
@@ -62,7 +59,6 @@ DocumentModel::DocumentModel(QObject *parent)
     : QAbstractListModel(parent)
     , d(std::make_unique<DocumentModelPrivate>())
 {
-
 }
 
 DocumentModel::~DocumentModel()
@@ -78,6 +74,14 @@ const QString DocumentModel::name() const
         return i18nc("for file names, indicates a range: from file0000.png to file0014.png","%1 ... %2", d->m_fileUrls.first().fileName(), d->m_fileUrls.last().fileName());
     }
     return d->m_fileUrls.first().fileName();
+}
+
+const QUrl DocumentModel::url() const
+{
+    if (d->m_fileUrls.isEmpty() || d->m_fileUrls.count() > 1) {
+        return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/New Document.pdf"));
+    }
+    return d->m_fileUrls.first();
 }
 
 bool DocumentModel::changed() const
@@ -130,10 +134,14 @@ void DocumentModel::createSharingFile(const QString &suffix, QList<int> pageNumb
          + QStringLiteral("/document.") + suffix);
     Q_EMIT saveDocument(temporaryLocation, selectPages(pageNumbers), SkanpageUtils::SharingDocument);
 }
-
-void DocumentModel::print()
+    
+void DocumentModel::exportPDF(const QUrl &fileUrl, const QString &title, const bool useOCR)
 {
-    Q_EMIT printDocument(d->m_pages);
+    if (useOCR) {
+        Q_EMIT saveDocument(fileUrl, d->m_pages, SkanpageUtils::OCRDocument, title);
+    } else {
+        Q_EMIT saveDocument(fileUrl, d->m_pages, SkanpageUtils::EntireDocument, title);
+    }
 }
 
 void DocumentModel::addImage(const QImage &image)

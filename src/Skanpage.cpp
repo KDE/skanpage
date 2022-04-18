@@ -20,6 +20,7 @@
 #include "FilteredOptionsModel.h"
 #include "DocumentSaver.h"
 #include "DocumentPrinter.h"
+#include "OCREngine.h"
 #include "skanpage_debug.h"
 
 class SkanpagePrivate {
@@ -32,6 +33,7 @@ public:
     FilteredOptionsModel m_filteredOptionsModel;
     DocumentSaver m_documentSaver;
     DocumentPrinter m_documentPrinter;
+    OCREngine m_OCREngine;
     QThread m_fileIOThread;
 
     int m_progress = 100;
@@ -57,10 +59,11 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(&d->m_ksaneInterface, &KSaneCore::scanFinished, this, &Skanpage::scanningFinished);
     connect(&d->m_ksaneInterface, &KSaneCore::batchModeCountDown, this, &Skanpage::batchModeCountDown);
     connect(&d->m_documentHandler, &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
-    connect(&d->m_documentHandler, &DocumentModel::printDocument, &d->m_documentPrinter, &DocumentPrinter::printDocument);
     
     d->m_fileIOThread.start();
     d->m_documentSaver.moveToThread(&d->m_fileIOThread);
+    d->m_OCREngine.moveToThread(&d->m_fileIOThread);
+    d->m_documentSaver.setOCREngine(&d->m_OCREngine);
 
     connect(&d->m_documentHandler, &DocumentModel::saveDocument, &d->m_documentSaver, &DocumentSaver::saveDocument);
     connect(&d->m_documentHandler, &DocumentModel::saveNewPageTemporary, &d->m_documentSaver, &DocumentSaver::saveNewPageTemporary);
@@ -293,6 +296,16 @@ FormatModel *Skanpage::formatModel() const
 FilteredOptionsModel *Skanpage::optionsModel() const
 {
     return &d->m_filteredOptionsModel;
+}
+
+OCRLanguageModel *Skanpage::languageModel() const
+{
+    return d->m_OCREngine.languages();
+}
+
+bool Skanpage::OCRavailable() const
+{
+    return d->m_OCREngine.available();
 }
 
 void Skanpage::cancelScan()

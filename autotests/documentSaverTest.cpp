@@ -14,16 +14,20 @@
 
 #include "../src/SkanpageUtils.h"
 #include "../src/DocumentSaver.h"
+#include "../src/OCREngine.h"
 
 class DocumentSaverTest : public QObject
 {
     Q_OBJECT
-    
+
     SkanpageUtils::DocumentPages testDocument;
+    SkanpageUtils::DocumentPages testDocumentOCRSerif;
+    SkanpageUtils::DocumentPages testDocumentOCRSans;
 
 private Q_SLOTS:
     void initTestCase();
     void testPDFWriter();
+    void testPDFOCRWriter();
 };
 
 void DocumentSaverTest::initTestCase()
@@ -78,6 +82,59 @@ void DocumentSaverTest::initTestCase()
     tempImageFile7->close();
     testDocument.append({std::shared_ptr<QTemporaryFile>(tempImageFile7), pageSize, 150, 0});
 
+    QImage imageOCRSerif(QFINDTESTDATA("images/testOCRSerif150.jpg"));
+    QImage imageOCRSerifFlipped(QFINDTESTDATA("images/testOCRSerif150Flipped.jpg"));
+    QImage imageOCRSerifRight(QFINDTESTDATA("images/testOCRSerif150Right.jpg"));
+    QImage imageOCRSerifLeft(QFINDTESTDATA("images/testOCRSerif150Left.jpg"));
+    rotation = 0;
+    for (int i = 0; i < 5; i++) {
+        QTemporaryFile *tempImageFile8 = new QTemporaryFile();
+        tempImageFile8->open();
+        imageOCRSerif.save(tempImageFile8, "PNG");
+        tempImageFile8->close();
+        testDocumentOCRSerif.append({std::shared_ptr<QTemporaryFile>(tempImageFile8), pageSize, 150, rotation});
+        rotation += 90;
+        if (rotation >= 360) {
+            rotation = 0;
+        }
+    }
+    for (int i = 0; i < 5; i++) {
+        QTemporaryFile *tempImageFile9 = new QTemporaryFile();
+        tempImageFile9->open();
+        imageOCRSerifFlipped.save(tempImageFile9, "PNG");
+        tempImageFile9->close();
+        testDocumentOCRSerif.append({std::shared_ptr<QTemporaryFile>(tempImageFile9), pageSize, 150, rotation});
+        rotation += 90;
+        if (rotation >= 360) {
+            rotation = 0;
+        }
+    }
+    QSizeF pageSizeMM = pageSize.size(QPageSize::Millimeter);
+    QPageSize pageSizeLandscape = QPageSize(QSizeF(pageSizeMM.height(), pageSizeMM.width()), QPageSize::Millimeter);
+    QTemporaryFile *tempImageFileRight = new QTemporaryFile();
+    tempImageFileRight->open();
+    imageOCRSerifRight.save(tempImageFileRight, "PNG");
+    tempImageFileRight->close();
+    testDocumentOCRSerif.append({std::shared_ptr<QTemporaryFile>(tempImageFileRight), pageSizeLandscape, 150, 90});
+    QTemporaryFile *tempImageFileLeft = new QTemporaryFile();
+    tempImageFileLeft->open();
+    imageOCRSerifLeft.save(tempImageFileLeft, "PNG");
+    tempImageFileLeft->close();
+    testDocumentOCRSerif.append({std::shared_ptr<QTemporaryFile>(tempImageFileLeft), pageSizeLandscape, 150, 270});
+
+    QImage imageOCRSans(QFINDTESTDATA("images/testOCRSans150.jpg"));
+    rotation = 0;
+    for (int i = 0; i < 5; i++) {
+        QTemporaryFile *tempImageFile10 = new QTemporaryFile();
+        tempImageFile10->open();
+        imageOCRSans.save(tempImageFile10, "PNG");
+        tempImageFile10->close();
+        testDocumentOCRSans.append({std::shared_ptr<QTemporaryFile>(tempImageFile10), pageSize, 150, rotation});
+        rotation += 90;
+        if (rotation >= 360) {
+            rotation = 0;
+        }
+    }
 }
 
 void DocumentSaverTest::testPDFWriter()
@@ -85,7 +142,21 @@ void DocumentSaverTest::testPDFWriter()
     DocumentSaver tempSaver;
     QSignalSpy spy(&tempSaver, &DocumentSaver::fileSaved);
 
-    tempSaver.saveDocument(QUrl::fromLocalFile(QStringLiteral("temp.pdf")), testDocument, SkanpageUtils::EntireDocument);
+    tempSaver.saveDocument(QUrl::fromLocalFile(QStringLiteral("temp.pdf")), testDocument, SkanpageUtils::EntireDocument, QString());
+    spy.wait();
+}
+
+void DocumentSaverTest::testPDFOCRWriter()
+{
+    DocumentSaver tempSaver;
+    OCREngine ocrEngine;
+    ocrEngine.setColor(Qt::red);
+    tempSaver.setOCREngine(&ocrEngine);
+    QSignalSpy spy(&tempSaver, &DocumentSaver::fileSaved);
+    tempSaver.saveDocument(QUrl::fromLocalFile(QStringLiteral("tempOCRSerif.pdf")), testDocumentOCRSerif, SkanpageUtils::OCRDocument, QString());
+    spy.wait();
+
+    tempSaver.saveDocument(QUrl::fromLocalFile(QStringLiteral("tempOCRSans.pdf")), testDocumentOCRSans, SkanpageUtils::OCRDocument, QString());
     spy.wait();
 }
 

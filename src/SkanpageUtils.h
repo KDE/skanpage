@@ -26,6 +26,7 @@ namespace SkanpageUtils {
 
     enum FileType {
         EntireDocument,
+        OCRDocument,
         PageSelection,
         SharingDocument,
     };
