@@ -11,7 +11,6 @@
 #include <QTemporaryFile>
 #include <QImage>
 #include <QStandardPaths>
-#include <QString>
 #include <QThread>
 
 #include <KLocalizedString>
