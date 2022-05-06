@@ -12,3 +12,5 @@ Dependencies:
     'frameworks/kconfig': '@stable'
     'frameworks/purpose': '@stable'
     'graphics/libksane': '@latest'
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD']
