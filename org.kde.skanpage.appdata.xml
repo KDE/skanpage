@@ -214,6 +214,7 @@ SPDX-License-Identifier: CC0-1.0
   </provides>
   <project_group>KDE</project_group>
   <releases>
+    <release version="22.04.1" date="2022-05-12"/>
     <release version="22.04.0" date="2022-04-21"/>
     <release version="1.0.0" date="2021-11-1"/>
   </releases>
