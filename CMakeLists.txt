@@ -54,6 +54,7 @@ find_package(Leptonica)
 
 if (LEPTONICA_FOUND AND TESSERACT_FOUND)
    set(OCR_AVAILABLE 1)
+   set(CMAKE_CXX_FLAGS "-fopenmp")
 else()
    message(STATUS "Skanpage will be built without OCR as libraries are missing.")
 endif()
