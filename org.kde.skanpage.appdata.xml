@@ -209,6 +209,7 @@ SPDX-License-Identifier: CC0-1.0
     </screenshot>
   </screenshots>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=skanpage</url>
+  <url type="homepage">https://apps.kde.org/skanpage/</url>
   <provides>
     <binary>skanpage</binary>
   </provides>
