@@ -17,7 +17,7 @@ project(skanpage
         LANGUAGES CXX)
 
 set(REQUIRED_QT_VERSION "5.15.2")
-set(REQUIRED_KF5_VERSION "5.91")
+set(REQUIRED_KF5_VERSION "5.94")
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
@@ -47,7 +47,7 @@ find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
         Purpose
 )
 
-find_package(KSaneCore "22.03.70" REQUIRED)
+find_package(KSaneCore "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}" REQUIRED)
 
 find_package(Tesseract 4)
 find_package(Leptonica)
