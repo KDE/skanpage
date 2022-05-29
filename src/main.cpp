@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
                          QLatin1String(SKANPAGE_VERSION_STRING),
                          i18n("Page-scanning application by KDE based on libksane."),
                          KAboutLicense::GPL,
-                         i18n("© 2015-2021 Kåre Särs, Alexander Stippich")
+                         i18n("© 2015-2022 Kåre Särs, Alexander Stippich")
     );
 
     aboutData.addAuthor(QStringLiteral("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
