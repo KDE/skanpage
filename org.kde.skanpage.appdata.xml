@@ -28,6 +28,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="pl">Skanpage</name>
   <name xml:lang="pt">Skanpage</name>
   <name xml:lang="pt-BR">Skanpage</name>
+  <name xml:lang="ru">Skanpage</name>
   <name xml:lang="sk">Skanpage</name>
   <name xml:lang="sl">Skanpage</name>
   <name xml:lang="sv">Skanpage</name>
@@ -52,6 +53,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="pl">Prosty program do wielostronicowego skanowania</summary>
   <summary xml:lang="pt">Aplicação de digitalização multi-páginas simples</summary>
   <summary xml:lang="pt-BR">Aplicativo simples de digitalização de múltiplas páginas</summary>
+  <summary xml:lang="ru">Простое приложение для многостраничного сканирования</summary>
   <summary xml:lang="sk">Jednoduchá viacstranová skenovania aplikácia</summary>
   <summary xml:lang="sl">Enostavna aplikacija za optično branje več strani</summary>
   <summary xml:lang="sv">Enkelt bildinläsningsprogram för flera sidor</summary>
@@ -76,6 +78,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pl">Skanpage jest prostym programem opracowany do wielostronicowego skanowania i zapisywania dokumentów i obrazów.</p>
     <p xml:lang="pt">Uma aplicação de digitalização simples que está desenhada para a digitalização e gravação de várias páginas e na gravação dos documentos e imagens.</p>
     <p xml:lang="pt-BR">Skanpage é um aplicativo simples de digitalização desenhado para digitalizar múltiplas páginas e salvar documentos e imagens.</p>
+    <p xml:lang="ru">Skanpage — простое приложение для сканирования и сохранения документов и изображений, состоящих из нескольких страниц.</p>
     <p xml:lang="sk">Skanpage je jednoduchá skenovacia aplikácia určená na viacstránkové skenovanie a ukladanie dokumentov a obrázkov.</p>
     <p xml:lang="sl">Preprosta aplikacija za optično branje več strani in shranjevanje dokumentov in slik.</p>
     <p xml:lang="sv">Skanpage är ett enkelt program för bildinläsning konstruerat för inläsning av flera sidor och för att spara dokument och bilder.</p>
@@ -100,6 +103,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pl">Możliwości:</p>
     <p xml:lang="pt">Funcionalidades:</p>
     <p xml:lang="pt-BR">Funcionalidades:</p>
+    <p xml:lang="ru">Возможности:</p>
     <p xml:lang="sk">Funkcie:</p>
     <p xml:lang="sl">Možnosti:</p>
     <p xml:lang="sv">Funktioner:</p>
@@ -124,6 +128,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pl">Skanowanie na skanerach płaskich oraz ADF</li>
       <li xml:lang="pt">Digitalização de 'scanners' planos e ADF</li>
       <li xml:lang="pt-BR">Digitalização a partir de scanners de mesa e com alimentador automático</li>
+      <li xml:lang="ru">Поддержка планшетных сканеров и сканеров с устройством автоматической подачи;</li>
       <li xml:lang="sk">Skenovanie z plochých skenerov a ADF skenerov</li>
       <li xml:lang="sl">Optično branje z namiznih in bralnikov s podajalniki listov</li>
       <li xml:lang="sv">Inläsning från flatbädds- och ADF-bildläsare</li>
@@ -148,6 +153,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pl">Możliwość zmiany ustawień urządzenia skanującego</li>
       <li xml:lang="pt">Opções configuráveis do dispositivo de digitalização</li>
       <li xml:lang="pt-BR">Opções configuráveis para o dispositivo de digitalização</li>
+      <li xml:lang="ru">Настройка параметров сканирования;</li>
       <li xml:lang="sk">Nastaviteľné možnosti pre skenovacie zariadenie</li>
       <li xml:lang="sl">Nastavljanje možnosti za bralno napravo</li>
       <li xml:lang="sv">Anpassningsbara alternativ för bildläsarenhet</li>
@@ -171,6 +177,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pl">Zmiana kolejności, obrót i usuwanie zeskanowanych stron</li>
       <li xml:lang="pt">Reordenação, rotação e remoção das páginas digitalizadas</li>
       <li xml:lang="pt-BR">Reordenar, rotação e exclusão de páginas digitalizadas</li>
+      <li xml:lang="ru">Упорядочивание, вращение у удаление отсканированных страниц;</li>
       <li xml:lang="sk">Zmena poradia, otočenie a vymazanie naskenovaných strán</li>
       <li xml:lang="sl">Zamenjava vrstnega reda, vrtenje in brisanje prebranih strani</li>
       <li xml:lang="sv">Omordning, rotation och borttagning av inlästa sidor</li>
@@ -195,6 +202,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pl">Zapisywanie wielostronicowych dokumentów PDF i plików obrazów</li>
       <li xml:lang="pt">Gravação multi-páginas em documentos PDF e ficheiros de imagem</li>
       <li xml:lang="pt-BR">Salvar em documentos PDF de várias páginas e arquivos de imagem</li>
+      <li xml:lang="ru">Поддержка формата PDF для сохранения документов и форматов файлов изображений</li>
       <li xml:lang="sk">Ukladanie do viacstranových dokumentov PDF a obrazových súborov</li>
       <li xml:lang="sl">Shranjevanje v večstranske dokumente PDF in slikovne datoteke</li>
       <li xml:lang="sv">Spara PDF-dokument med flera sidor och bildfiler</li>
