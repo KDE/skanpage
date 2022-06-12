@@ -16,14 +16,14 @@ FilteredOptionsModel::~FilteredOptionsModel() = default;
 bool FilteredOptionsModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     const auto index = sourceModel()->index(source_row, 0, source_parent);
-    const auto &state = sourceModel()->data(index, OptionsModel::StateRole).value<KSane::CoreOption::OptionState>();
-    const auto &type = sourceModel()->data(index, OptionsModel::TypeRole).value<KSane::CoreOption::OptionType>();
+    const auto &state = sourceModel()->data(index, OptionsModel::StateRole).value<KSaneCore::Option::OptionState>();
+    const auto &type = sourceModel()->data(index, OptionsModel::TypeRole).value<KSaneCore::Option::OptionType>();
     
     if (!m_showAllOptions) {
-        return sourceModel()->data(index, OptionsModel::QuickAccessRole).toBool() && state == KSane::CoreOption::StateActive;
+        return sourceModel()->data(index, OptionsModel::QuickAccessRole).toBool() && state == KSaneCore::Option::StateActive;
     }
     
-    if (state != KSane::CoreOption::StateActive || type == KSane::CoreOption::TypeGamma || type == KSane::CoreOption::TypeDetectFail) {
+    if (state != KSaneCore::Option::StateActive || type == KSaneCore::Option::TypeGamma || type == KSaneCore::Option::TypeDetectFail) {
         return false;
     }
 
