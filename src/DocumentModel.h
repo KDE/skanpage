@@ -43,6 +43,12 @@ public:
 
     Q_ENUM(RotateOption);
 
+    enum ReorderOption { ReorderDuplex,
+        ReorderDuplexReversed,
+        Reverse};
+
+    Q_ENUM(ReorderOption);
+
     explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();
 
@@ -64,6 +70,8 @@ public:
     Q_INVOKABLE void removeImage(int row);
 
     Q_INVOKABLE void rotateImage(int row, RotateOption rotate = RotateOption::Rotate90positive);
+
+    Q_INVOKABLE void reorderPages(ReorderOption reorder);
 
     Q_INVOKABLE void save(const QUrl &fileUrl, QList<int> pageNumbers = {});
 

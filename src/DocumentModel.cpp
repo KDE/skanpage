@@ -252,6 +252,44 @@ void DocumentModel::rotateImage(int row, RotateOption rotate)
     Q_EMIT dataChanged(index(row, 0), index(row, 0), {RotationAngleRole});
 }
 
+void DocumentModel::reorderPages(ReorderOption reorder)
+{
+    Q_EMIT layoutAboutToBeChanged();
+    if (reorder == Reverse) {
+        std::reverse(d->m_pages.begin(), d->m_pages.end());
+        std::reverse(d->m_details.begin(), d->m_details.end());
+    } else {
+        SkanpageUtils::DocumentPages newPages;
+        QList<PreviewPageProperties> newDetails;
+        newPages.reserve(d->m_pages.count());
+        newDetails.reserve(d->m_pages.count());
+        const int halfStart = d->m_pages.count() / 2;
+        const int oddOffset = d->m_pages.count() % 2;
+        if (reorder == ReorderDuplex) {
+            for (int i = 0; i < halfStart; i++) {
+                newPages.append(d->m_pages.at(i));
+                newPages.append(d->m_pages.at(i + halfStart + oddOffset));
+                newDetails.append(d->m_details.at(i));
+                newDetails.append(d->m_details.at(i + halfStart + oddOffset));
+            }
+        } else {
+            for (int i = 0; i < halfStart; i++) {
+                newPages.append(d->m_pages.at(i));
+                newPages.append(d->m_pages.at(d->m_pages.count() - 1 - i));
+                newDetails.append(d->m_details.at(i));
+                newDetails.append(d->m_details.at(d->m_details.count() - 1 - i));
+            }
+        }
+        if (oddOffset == 1) {
+            newPages.append(d->m_pages.at(halfStart));
+            newDetails.append(d->m_details.at(halfStart));
+        };
+        d->m_pages = newPages;
+        d->m_details = newDetails;
+    }
+    Q_EMIT layoutChanged();
+}
+
 void DocumentModel::removeImage(int row)
 {
     if (row < 0 || row >= d->m_pages.count()) {

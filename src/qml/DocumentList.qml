@@ -260,16 +260,44 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.preferredHeight: Kirigami.Units.gridUnit * 2
 
-        Item {
-            Layout.fillWidth: true
-        }
-
         Label {
+            Layout.margins: Kirigami.Units.largeSpacing
             text: i18np("%1 page", "%1 pages", skanpage.documentModel.count)
         }
 
-        Item {
-            Layout.fillWidth: true
+        Kirigami.ActionToolBar {
+            id: optionsConfiguration
+
+            alignment: Qt.AlignRight
+            actions: [
+                Kirigami.Action {
+                    id: reorderAction
+                    icon.name: "exchange-positions"
+                    text: i18n("Reorder pages")
+                    enabled: skanpage.documentModel.count > 1
+
+                    Kirigami.Action {
+                        id: reorderDuplexAction
+                        text: i18nc("Indicates how pages are going to be reordered", "13 24 → 1234")
+                        onTriggered: skanpage.documentModel.reorderPages(DocumentModel.ReorderDuplex)
+                        enabled: skanpage.documentModel.count > 2
+                    }
+
+                    Kirigami.Action {
+                        id: reorderDuplexReverseAction
+                        text: i18nc("Indicates how pages are going to be reordered", "13 42 → 1234")
+                        onTriggered: skanpage.documentModel.reorderPages(DocumentModel.ReorderDuplexReversed)
+                        enabled: skanpage.documentModel.count > 2
+                    }
+
+                    Kirigami.Action {
+                        id: reverseAction
+                        text: i18n("Reverse Order")
+                        onTriggered: skanpage.documentModel.reorderPages(DocumentModel.Reverse)
+                        enabled: skanpage.documentModel.count > 1
+                    }
+                }
+            ]
         }
     }
 }

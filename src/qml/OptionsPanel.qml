@@ -65,7 +65,7 @@ ColumnLayout {
         text: skanpage.deviceVendor && skanpage.deviceModel ?
         i18nc("scanner device vendor and model", "%1 %2", skanpage.deviceVendor, skanpage.deviceModel) : ""
     }
-    
+
     Kirigami.ActionToolBar {
         id: optionsConfiguration
         flat: false
@@ -106,5 +106,4 @@ ColumnLayout {
             }
         ]
     }
-
 }
