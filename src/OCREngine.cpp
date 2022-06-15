@@ -10,7 +10,6 @@
 
 #include <QLocale>
 #include <KLocalizedString>
-#include <QPainter>
 #include <QPdfWriter>
 #include <QAbstractListModel>
 
