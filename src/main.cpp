@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     KAboutData aboutData(QLatin1String("skanpage"),
                          i18n("Skanpage"),
                          QLatin1String(SKANPAGE_VERSION_STRING),
-                         i18n("Page-scanning application by KDE based on libksane."),
+                         i18n("Mulit-page scanning application by KDE."),
                          KAboutLicense::GPL,
                          i18n("© 2015-2022 Kåre Särs, Alexander Stippich")
     );
