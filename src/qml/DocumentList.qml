@@ -273,7 +273,7 @@ ColumnLayout {
                 Kirigami.Action {
                     id: reorderAction
                     icon.name: "exchange-positions"
-                    text: i18n("Reorder pages")
+                    text: i18n("Reorder Pages")
                     enabled: skanpage.documentModel.count > 1
 
                     Kirigami.Action {
