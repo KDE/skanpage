@@ -121,6 +121,9 @@ void OCREngine::OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUti
     const QTransform oldTransformation = painter.transform();
     if (it != nullptr) {
         do {
+            if (it->Empty(level)) {
+                continue;
+            }
             const char* word = it->GetUTF8Text(level);
             it->Baseline(level, &baseX1, &baseY1, &baseX2, &baseY2);
             it->WordFontAttributes(&bold, &italic, &underlined, &monospace,
