@@ -10,80 +10,83 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.3
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.skanpage 1.0
 
 Window {
     id: settingsWindow
 
-    title: i18n("Skanpage Settings")
+    title: i18n("Configure")
     color: Kirigami.Theme.backgroundColor
 
     flags: Qt.Dialog | Qt.CustomizeWindowHint | Qt.WindowTitleHint
         | Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint
 
-    minimumWidth: 500
-    minimumHeight: 300
+    minimumWidth: Kirigami.Units.gridUnit * 30
+    minimumHeight: Kirigami.Units.gridUnit * 15
 
     Kirigami.FormLayout {
-        anchors.fill:parent
+        anchors.fill: parent
 
-        CheckBox {
-            Layout.fillWidth: true
+        ButtonGroup { id: allDevicesGroup }
 
-            text: i18n("Show all devices including virtual and cameras")
-            checked: skanpage.configuration.showAllDevices
-            onClicked: skanpage.configuration.showAllDevices = checked
+        RadioButton {
+            Kirigami.FormData.label: i18n("Devices to show:")
+            text: i18nc("@option:radio Devices to show for scanning", "Scanners only")
+            ButtonGroup.group: allDevicesGroup
+            checked: !skanpage.configuration.showAllDevices
         }
+
+        RadioButton {
+            text: i18nc("@option:radio Devices to show for scanning", "Scanners, cameras, and virtual devices")
+            ButtonGroup.group: allDevicesGroup
+            checked: skanpage.configuration.showAllDevices
+            onCheckedChanged: skanpage.configuration.showAllDevices = checked
+        }
+
+        ComboBox {
+            Kirigami.FormData.label: i18n("Default file format:")
+
+            model: skanpage.formatModel
+            textRole: "comment"
+            valueRole: "nameFilter"
+
+            onActivated: skanpage.configuration.defaultNameFilter = currentValue
+            Component.onCompleted: {
+                var index = indexOfValue(skanpage.configuration.defaultNameFilter)
+                if (index < 0) {
+                    currentIndex = 0
+                } else {
+                    currentIndex = index
+                }
+            }
+        }
+
 
         RowLayout {
-            Layout.fillWidth: true
+            Kirigami.FormData.label: i18n("Default save location:")
 
-            Label {
-                text: i18n("Default file format:")
-            }
+            Kirigami.ActionTextField {
+                id: folderLabel
+                text: skanpage.configuration.defaultFolder
 
-            ComboBox {
-                model: skanpage.formatModel
-                textRole: "comment"
-                valueRole: "nameFilter"
-
-                onActivated: skanpage.configuration.defaultNameFilter = currentValue
-                Component.onCompleted: {
-                    var index = indexOfValue(skanpage.configuration.defaultNameFilter)
-                    if (index < 0) {
-                        currentIndex = 0
-                    } else {
-                        currentIndex = index
+                rightActions: Kirigami.Action {
+                    icon.name: "edit-clear"
+                    visible: folderLabel.text !== ""
+                    onTriggered: {
+                        folderLabel.clear();
                     }
                 }
+
+                onEditingFinished: skanpage.configuration.defaultFolder = text
+            }
+
+            Button {
+                icon.name: "document-open-folder"
+                onClicked: selectFolderDialog.open()
             }
         }
 
-        ColumnLayout {
-            Layout.fillWidth: true
-
-            RowLayout {
-                Layout.fillWidth: true
-
-                Label {
-                    text: i18n("Default save location:")
-                }
-
-                Button {
-                    icon.name: "document-save"
-                    onClicked: selectFolderDialog.open()
-                }
-            }
-
-            TextField {
-                id: folderLabel
-                readOnly: true
-                Layout.fillWidth: true
-
-                text: skanpage.configuration.defaultFolder
-            }
-        }
     }
 
     RowLayout {
