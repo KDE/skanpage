@@ -170,8 +170,8 @@ ApplicationWindow {
     Action {
         id: settingsAction
         icon.name: "settings-configure"
-        text: i18n("Settings")
-        shortcut: "CTRL+C"
+        text: i18n("Configure Skanpage…")
+        shortcut: StandardKey.Preferences
         onTriggered: settingsWindow.show()
     }
     
