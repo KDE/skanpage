@@ -21,8 +21,6 @@
 #include "DocumentSaver.h"
 #include "DocumentPrinter.h"
 #include "OCREngine.h"
-#include "skanpage_config.h"
-#include "skanpage_state.h"
 #include "skanpage_debug.h"
 
 class SkanpagePrivate {
