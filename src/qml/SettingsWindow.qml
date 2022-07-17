@@ -69,16 +69,7 @@ Window {
             Kirigami.ActionTextField {
                 id: folderLabel
                 text: skanpage.configuration.defaultFolder
-
-                rightActions: Kirigami.Action {
-                    icon.name: "edit-clear"
-                    visible: folderLabel.text !== ""
-                    onTriggered: {
-                        folderLabel.clear();
-                    }
-                }
-
-                onEditingFinished: skanpage.configuration.defaultFolder = text
+                readOnly: true
             }
 
             Button {
