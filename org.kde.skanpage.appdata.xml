@@ -10,6 +10,7 @@ SPDX-License-Identifier: CC0-1.0
   <project_license>GPL-2.0+</project_license>
   <name>Skanpage</name>
   <name xml:lang="ar">ماسح الصفحات</name>
+  <name xml:lang="bg">Skanpage</name>
   <name xml:lang="ca">Skanpage</name>
   <name xml:lang="ca-valencia">Skanpage</name>
   <name xml:lang="cs">Skanpage</name>
@@ -38,6 +39,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
   <summary>Simple, multi-page scanning application</summary>
   <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
+  <summary xml:lang="bg">Просто за употреба приложение с възможност за сканиране на много страници</summary>
   <summary xml:lang="ca">Aplicació senzilla d'escaneig multipàgina</summary>
   <summary xml:lang="ca-valencia">Aplicació senzilla d'escaneig multipàgina</summary>
   <summary xml:lang="de">Anwendung zum Scannen von mehreren Seiten</summary>
@@ -65,6 +67,7 @@ SPDX-License-Identifier: CC0-1.0
   <description>
     <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
     <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لإجراء مسح ضوئي متعدد الصفحات وحفظ الصور والمستندات.</p>
+    <p xml:lang="bg">Skanpage е просто приложение за сканиране, предназначено за сканиране на много страници и запазване на документи и изображения.</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al desament de documents i imatges.</p>
     <p xml:lang="ca-valencia">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al guardada de documents i imatges.</p>
     <p xml:lang="el">Το Skanpage Μια απλή εφαρμογή σάρωσης σχεδιασμένη για σάρωση πολλών σελίδων και αποθήκευση των εγγράφων και των εικόνων.</p>
@@ -90,6 +93,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="zh-CN">Skanpage 是一款简易扫描应用程序，可以进行多页扫描并保存文档和图像。</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
+    <p xml:lang="bg">Функции:</p>
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
     <p xml:lang="cs">Vlastnosti:</p>
@@ -117,6 +121,7 @@ SPDX-License-Identifier: CC0-1.0
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
       <li xml:lang="ar">المسح الضوئي من الماسحات الضوئية المسطحة ووحدة تغذية المستندات التلقائية</li>
+      <li xml:lang="bg">Сканиране с плоски и ADF скенери</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="ca-valencia">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="el">Σάρωση από επίπεδους και ADF σαρωτές</li>
@@ -142,6 +147,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-CN">支持平板式扫描仪和自动送纸器扫描仪</li>
       <li>Configurable options for scanning device</li>
       <li xml:lang="ar">خيارات قابلة للضبط لمسح الجهاز</li>
+      <li xml:lang="bg">Конфигуриране на сканиращи устройства</li>
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="cs">Nastavitelné volby skenovacího zařízení</li>
@@ -168,6 +174,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
       <li>Reordering, rotation and deletion of scanned pages</li>
       <li xml:lang="ar">إعادة ترتيب وتدوير وحذف الصفحات الممسوحة ضوئيًا</li>
+      <li xml:lang="bg">Пренареждане, завъртане и изтриване на сканирани страници</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="el">Αναδιάταξη, περιστροφή και διαγραφή των σαρωμένων εικόνων</li>
@@ -193,6 +200,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-CN">对已扫描的页面进行重新排序、旋转和删除</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
+      <li xml:lang="bg">Записване в многостранични PDF документи и файлове с изображения</li>
       <li xml:lang="ca">Desament en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="ca-valencia">Guardada en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="cs">Ukládání do vícestránkových souborů PDF a souborů obrázků</li>
