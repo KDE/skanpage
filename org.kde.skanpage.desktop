@@ -98,6 +98,5 @@ Name[tr]=Skanpage
 Name[uk]=Skanpage
 Name[x-test]=xxSkanpagexx
 Name[zh_CN]=Skanpage 扫描工具
-StartupNotify=false
 Terminal=false
 Type=Application
