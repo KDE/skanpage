@@ -10,7 +10,6 @@
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QImage>
-#include <QAbstractListModel>
 
 #include <KAboutData>
 #include <KCrash>

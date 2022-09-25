@@ -8,10 +8,8 @@
 
 #include "config-skanpage.h"
 
-#include <QLocale>
 #include <KLocalizedString>
 #include <QPdfWriter>
-#include <QAbstractListModel>
 
 #if OCR_AVAILABLE
 #include <tesseract/baseapi.h>

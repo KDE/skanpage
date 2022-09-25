@@ -9,7 +9,6 @@
 
 #include <QThread>
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KSharedConfig>
 

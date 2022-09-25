@@ -8,7 +8,6 @@
 #include "DocumentModel.h"
 
 #include <QUrl>
-#include <QTemporaryFile>
 #include <QImage>
 #include <QStandardPaths>
 #include <QThread>
