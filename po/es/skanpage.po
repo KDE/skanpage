@@ -1,0 +1,617 @@
+# Spanish translations for skanpage.po package.
+# Copyright (C) 2021 This file is copyright:
+# This file is distributed under the same license as the skanpage package.
+#
+# Automatically generated, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: skanpage\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"PO-Revision-Date: 2022-07-15 18:00+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Eloy Cuadra"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ecuadra@eloihr.net"
+
+#: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
+#, kde-format
+msgid "New document"
+msgstr "Documento nuevo"
+
+#: DocumentModel.cpp:72
+#, kde-format
+msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
+msgid "%1 ... %2"
+msgstr "%1 ... %2"
+
+#: DocumentPrinter.cpp:33
+#, kde-format
+msgid "Nothing to print."
+msgstr "No hay nada que imprimir."
+
+#: DocumentPrinter.cpp:37
+#, kde-format
+msgid "Previous printing operation still in progress."
+msgstr "La operación de impresión anterior todavía está en curso."
+
+#: DocumentPrinter.cpp:74
+#, kde-format
+msgid "Document sent to printer."
+msgstr "Documento enviado a la impresora."
+
+#: DocumentSaver.cpp:33
+#, kde-format
+msgid "No file path given."
+msgstr "No se ha proporcionado ninguna ruta de archivo."
+
+#: DocumentSaver.cpp:37
+#, kde-format
+msgid "Nothing to save."
+msgstr "No hay nada que guardar."
+
+#: DocumentSaver.cpp:68
+#, kde-format
+msgid "Document saved as PDF."
+msgstr "Documento guardado como PDF."
+
+#: DocumentSaver.cpp:94
+#, kde-format
+msgid "Document saved with OCR as PDF."
+msgstr "Documento guardado con OCR como PDF."
+
+#: DocumentSaver.cpp:166
+#, kde-format
+msgid "Document saved as image."
+msgstr "Documento guardado como imagen."
+
+#: DocumentSaver.cpp:175
+#, kde-format
+msgid "Failed to save document as image."
+msgstr "No se ha podido guardar el documento como imagen."
+
+#: DocumentSaver.cpp:190
+#, kde-format
+msgid "Failed to save image"
+msgstr "No se ha podido guardar la imagen"
+
+#: main.cpp:60
+#, kde-format
+msgid "Skanpage"
+msgstr "Skanpage"
+
+#: main.cpp:62
+#, kde-format
+msgid "Multi-page scanning application by KDE."
+msgstr "Aplicación de escaneo multipágina creada por KDE."
+
+#: main.cpp:64
+#, kde-format
+msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+
+#: main.cpp:67 main.cpp:68
+#, kde-format
+msgid "developer"
+msgstr "desarrollador"
+
+#: main.cpp:79
+#, kde-format
+msgid "Sane scanner device name. Use 'test' for test device."
+msgstr ""
+"Nombre de dispositivo de escáner Sane. Use «prueba» para probar el "
+"dispositivo."
+
+#: main.cpp:79
+#, kde-format
+msgid "device"
+msgstr "dispositivo"
+
+#: qml/ContentView.qml:18
+#, kde-format
+msgctxt "Prefix for document name indicating an unsaved document"
+msgid "* %1"
+msgstr "* %1"
+
+#: qml/DeviceSelection.qml:50
+#, kde-format
+msgctxt ""
+"Device vendor with device model, followed by the device name identifier"
+msgid ""
+"%1 %2\n"
+"(%3)"
+msgstr ""
+"%1 %2\n"
+"(%3)"
+
+#: qml/DeviceSelection.qml:65
+#, kde-kuit-format
+msgctxt "@info"
+msgid "No devices found."
+msgstr "No se han encontrado dispositivos."
+
+#: qml/DeviceSelection.qml:82
+#, kde-format
+msgid "Open selected device"
+msgstr "Abrir el dispositivo seleccionado"
+
+#: qml/DeviceSelection.qml:91
+#, kde-format
+msgid "Reload devices list"
+msgstr "Volver a cargar la lista de dispositivos"
+
+#: qml/DevicesLoading.qml:29
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Searching for available devices."
+msgstr "Buscando los dispositivos disponibles."
+
+#: qml/DocumentList.qml:143
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Processing page..."
+msgstr "Procesando página..."
+
+#: qml/DocumentList.qml:188
+#, kde-format
+msgctxt "Page index"
+msgid "Page %1"
+msgstr "Página %1"
+
+#: qml/DocumentList.qml:203
+#, kde-format
+msgid "Move Up"
+msgstr "Subir"
+
+#: qml/DocumentList.qml:213
+#, kde-format
+msgid "Move Down"
+msgstr "Bajar"
+
+#: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
+#, kde-format
+msgid "Rotate Left"
+msgstr "Rotar a la izquierda"
+
+#: qml/DocumentList.qml:229 qml/DocumentPage.qml:145
+#, kde-format
+msgid "Rotate Right"
+msgstr "Rotar a la derecha"
+
+#: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
+#, kde-format
+msgid "Flip"
+msgstr "Invertir"
+
+#: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
+#, kde-format
+msgid "Save Page"
+msgstr "Guardar página"
+
+#: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
+#, kde-format
+msgid "Delete Page"
+msgstr "Borrar página"
+
+#: qml/DocumentList.qml:265
+#, kde-format
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] "%1 página"
+msgstr[1] "%1 páginas"
+
+#: qml/DocumentList.qml:276
+#, kde-format
+msgid "Reorder Pages"
+msgstr "Reordenar páginas"
+
+#: qml/DocumentList.qml:281
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 24 → 1234"
+msgstr "13 24 → 1234"
+
+#: qml/DocumentList.qml:288
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 42 → 1234"
+msgstr "13 42 → 1234"
+
+#: qml/DocumentList.qml:295
+#, kde-format
+msgid "Reverse Order"
+msgstr "Invertir orden"
+
+#: qml/DocumentPage.qml:38
+#, kde-kuit-format
+msgctxt "@info"
+msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+msgstr ""
+"No existe ninguna imagen en este documento.<nl/><nl/>Empiece a escanear."
+
+#: qml/DocumentPage.qml:96
+#, kde-format
+msgid "Zoom In"
+msgstr "Ampliar"
+
+#: qml/DocumentPage.qml:105
+#, kde-format
+msgid "Zoom Out"
+msgstr "Reducir"
+
+#: qml/DocumentPage.qml:114
+#, kde-format
+msgid "Zoom Fit"
+msgstr "Ajustar"
+
+#: qml/DocumentPage.qml:130
+#, kde-format
+msgid "Zoom 100%"
+msgstr "Ampliar al 100%"
+
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#, kde-format
+msgid "Export PDF"
+msgstr "Exportar PDF"
+
+#: qml/ExportWindow.qml:38
+#, kde-format
+msgid "Title:"
+msgstr "Título:"
+
+#: qml/ExportWindow.qml:54
+#, kde-format
+msgid "File:"
+msgstr "Archivo:"
+
+#: qml/ExportWindow.qml:79
+#, kde-format
+msgid "Enable optical character recognition (OCR)"
+msgstr "Activar el reconocimiento óptico de caracteres (OCR)"
+
+#: qml/ExportWindow.qml:97
+#, kde-format
+msgid "Languages:"
+msgstr "Idiomas:"
+
+#: qml/ExportWindow.qml:119
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: qml/ExportWindow.qml:138
+#, kde-format
+msgid ""
+"If your required language is not listed, please install Tesseract's language "
+"file with your package manager."
+msgstr ""
+"Si el idioma que necesita no aparece en la lista, instale el archivo del "
+"idioma de Tesseract con su gestor de paquetes."
+
+#: qml/ExportWindow.qml:169
+#, kde-format
+msgid "Save"
+msgstr "Guardar"
+
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: qml/GlobalMenu.qml:25
+#, kde-format
+msgctxt "menu category"
+msgid "File"
+msgstr "Archivo"
+
+#: qml/GlobalMenu.qml:67
+#, kde-format
+msgctxt "menu category"
+msgid "Scan"
+msgstr "Escanear"
+
+#: qml/GlobalMenu.qml:116
+#, kde-format
+msgctxt "menu category"
+msgid "Help"
+msgstr "Ayuda"
+
+#: qml/InProgressPage.qml:26
+#, kde-kuit-format
+msgctxt "Countdown string with time given in seconds"
+msgid "Next scan starts in<nl/>%1 s"
+msgstr "El próximo escaneo empieza en<nl/>%1 s"
+
+#: qml/InProgressPage.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "Scan in progress."
+msgstr "Escaneo en curso."
+
+#: qml/MainWindow.qml:22
+#, kde-format
+msgctxt "document title: app title"
+msgid "%1 ― Skanpage"
+msgstr "%1 ― Skanpage"
+
+#: qml/MainWindow.qml:83
+#, kde-format
+msgid "Discard All"
+msgstr "Descartar todo"
+
+#: qml/MainWindow.qml:92
+#, kde-format
+msgid "Save All"
+msgstr "Guardar todo"
+
+#: qml/MainWindow.qml:109
+#, kde-format
+msgid "Scan"
+msgstr "Escanear"
+
+#: qml/MainWindow.qml:127
+#, kde-format
+msgid "Show Scanner Options"
+msgstr "Mostrar las opciones del escáner"
+
+#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#, kde-format
+msgid "Share"
+msgstr "Compartir"
+
+#: qml/MainWindow.qml:145
+#, kde-format
+msgid "Print"
+msgstr "Imprimir"
+
+#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#, kde-format
+msgid "About Skanpage"
+msgstr "Acerca de Skanpage"
+
+#: qml/MainWindow.qml:173
+#, kde-format
+msgid "Configure Skanpage…"
+msgstr "Configurar Skanpage..."
+
+#: qml/MainWindow.qml:181
+#, kde-format
+msgid "Quit"
+msgstr "Salir"
+
+#: qml/OptionDelegate.qml:55
+#, kde-format
+msgid "%1:"
+msgstr "%1:"
+
+#: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "Adding unit suffix"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionDelegate.qml:179
+#, kde-format
+msgctxt "Unit suffix for bit"
+msgid "bit"
+msgstr "bits"
+
+#: qml/OptionDelegate.qml:182
+#, kde-format
+msgctxt "Unit suffix for DPI"
+msgid "DPI"
+msgstr "PPP"
+
+#: qml/OptionDelegate.qml:185
+#, kde-format
+msgctxt "Unit suffix for microsecond"
+msgid "µs"
+msgstr "µs"
+
+#: qml/OptionDelegate.qml:188
+#, kde-format
+msgctxt "Unit suffix for second"
+msgid "s"
+msgstr "s"
+
+#: qml/OptionDelegate.qml:191
+#, kde-format
+msgctxt "Unit suffix for millimeter"
+msgid "mm"
+msgstr "mm"
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "Unit suffix for percent"
+msgid "%"
+msgstr "%"
+
+#: qml/OptionDelegate.qml:197
+#, kde-format
+msgctxt "Unit suffix for pixel"
+msgid "px"
+msgstr "px"
+
+#: qml/OptionsPanel.qml:30
+#, kde-format
+msgid "Select options for quick access:"
+msgstr "Seleccione las opciones para acceso rápido:"
+
+#: qml/OptionsPanel.qml:66
+#, kde-format
+msgctxt "scanner device vendor and model"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionsPanel.qml:79
+#, kde-format
+msgid "Show More"
+msgstr "Mostrar más"
+
+#: qml/OptionsPanel.qml:88
+#, kde-format
+msgid "Configure Visibility"
+msgstr "Configurar la visibilidad"
+
+#: qml/OptionsPanel.qml:103
+#, kde-format
+msgid "Reselect Scanner"
+msgstr "Volver a seleccionar el escáner"
+
+#: qml/SettingsWindow.qml:19
+#, kde-format
+msgid "Configure"
+msgstr "Configurar"
+
+#: qml/SettingsWindow.qml:34
+#, kde-format
+msgid "Devices to show:"
+msgstr "Dispositivos que se muestran:"
+
+#: qml/SettingsWindow.qml:35
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners only"
+msgstr "Solo escáneres"
+
+#: qml/SettingsWindow.qml:41
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners, cameras, and virtual devices"
+msgstr "Escáneres, cámaras y dispositivos virtuales"
+
+#: qml/SettingsWindow.qml:48
+#, kde-format
+msgid "Default file format:"
+msgstr "Formato de archivo predeterminado:"
+
+#: qml/SettingsWindow.qml:67
+#, kde-format
+msgid "Default save location:"
+msgstr "Ubicación predeterminada donde guardar:"
+
+#: qml/SettingsWindow.qml:100
+#, kde-format
+msgid "Close"
+msgstr "Cerrar"
+
+#: qml/ShareWindow.qml:41
+#, kde-format
+msgid "Share as:"
+msgstr "Compartir como:"
+
+#~ msgid "Settings"
+#~ msgstr "Preferencias"
+
+#~ msgid "Skanpage Settings"
+#~ msgstr "Preferencias de Skanpage"
+
+#~ msgid "Show all devices including virtual and cameras"
+#~ msgstr ""
+#~ "Mostrar todos los dispositivos, incluidos los virtuales y las cámaras"
+
+#~ msgctxt "document title - scanner device - app title"
+#~ msgid "%1 ― %2 %3 ― Skanpage"
+#~ msgstr "%1 ― %2 %3 ― Skanpage"
+
+#~ msgid "Reset"
+#~ msgstr "Reiniciar"
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#~ msgctxt "Description for the name filter of a QML file dialog"
+#~ msgid "All files"
+#~ msgstr "Todos los archivos"
+
+#~ msgid "Saving still in progress."
+#~ msgstr "Todavía se está guardando."
+
+#~ msgid "Clear"
+#~ msgstr "Borrar todo"
+
+#~ msgid "PDF files (*.pdf)"
+#~ msgstr "Archivos PDF (*.pdf)"
+
+#~ msgid "JPEG files (*.jpg)"
+#~ msgstr "Archivos JPEG (*.jpg)"
+
+#~ msgid "PNG files (*.png)"
+#~ msgstr "Archivos PNG (*.png)"
+
+#~ msgctxt "Device vendor and device model name"
+#~ msgid "Options for %1 %2"
+#~ msgstr "Opciones para %1 %2"
+
+#~ msgid "(C) 2015 Kåre Särs"
+#~ msgstr "© 2015 Kåre Särs"
+
+#~ msgid "Zoom Fit Width"
+#~ msgstr "Ajustar a la anchura"
+
+#~ msgid "We do not support 16 per color scans at the moment!"
+#~ msgstr "Por el momento no se permite escanear a 16 bits por color."
+
+#~ msgid "Draft (75 DPI)"
+#~ msgstr "Borrador (75 PPP)"
+
+#~ msgid "Normal (150 DPI)"
+#~ msgstr "Normal (150 PPP)"
+
+#~ msgid "High Quality (300 DPI)"
+#~ msgstr "Alta calidad (300 PPP)"
+
+#~ msgid "Best Quality (600 DPI)"
+#~ msgstr "Mejor calidad (600 PPP)"
+
+#~ msgid "Color"
+#~ msgstr "Color"
+
+#~ msgid "Gray"
+#~ msgstr "Gris"
+
+#~ msgid "A4"
+#~ msgstr "A4"
+
+#~ msgid "B5"
+#~ msgstr "B5"
+
+#~ msgid "Letter"
+#~ msgstr "Carta"
+
+#~ msgid "Legal"
+#~ msgstr "Legal"
+
+#~ msgid "Executive"
+#~ msgstr "Ejecutivo"
+
+#~ msgid "A5"
+#~ msgstr "A5"
+
+#~ msgid "A6"
+#~ msgstr "A6"
+
+#~ msgid "Custom"
+#~ msgstr "Personalizado"
+
+#~ msgid "Application menu"
+#~ msgstr "Menú Aplicación"
+
+#~ msgctxt "Device vendor and device model name"
+#~ msgid "Device: %1 %2"
+#~ msgstr "Dispositivo: %1 %2"

@@ -1,0 +1,509 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"PO-Revision-Date: 2022-09-20 01:57\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/skanpage/skanpage.pot\n"
+"X-Crowdin-File-ID: 25354\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tyson Tan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tysontan@tysontan.com"
+
+#: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
+#, kde-format
+msgid "New document"
+msgstr "新文档"
+
+#: DocumentModel.cpp:72
+#, kde-format
+msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
+msgid "%1 ... %2"
+msgstr "%1 ... %2"
+
+#: DocumentPrinter.cpp:33
+#, kde-format
+msgid "Nothing to print."
+msgstr "无可打印内容。"
+
+#: DocumentPrinter.cpp:37
+#, kde-format
+msgid "Previous printing operation still in progress."
+msgstr "之前的打印作业仍在进行中。"
+
+#: DocumentPrinter.cpp:74
+#, kde-format
+msgid "Document sent to printer."
+msgstr "文档已发送到打印机。"
+
+#: DocumentSaver.cpp:33
+#, kde-format
+msgid "No file path given."
+msgstr "没有指定文件路径。"
+
+#: DocumentSaver.cpp:37
+#, kde-format
+msgid "Nothing to save."
+msgstr "没有可供保存的图像。"
+
+#: DocumentSaver.cpp:68
+#, kde-format
+msgid "Document saved as PDF."
+msgstr "文档已保存为 PDF。"
+
+#: DocumentSaver.cpp:94
+#, kde-format
+msgid "Document saved with OCR as PDF."
+msgstr "文档已通过 OCR 保存为 PDF。"
+
+#: DocumentSaver.cpp:166
+#, kde-format
+msgid "Document saved as image."
+msgstr "文档已保存为图像。"
+
+#: DocumentSaver.cpp:175
+#, kde-format
+msgid "Failed to save document as image."
+msgstr "无法将文档保存为图像。"
+
+#: DocumentSaver.cpp:190
+#, kde-format
+msgid "Failed to save image"
+msgstr "无法保存图像"
+
+#: main.cpp:60
+#, kde-format
+msgid "Skanpage"
+msgstr "Skanpage"
+
+#: main.cpp:62
+#, kde-format
+msgid "Multi-page scanning application by KDE."
+msgstr "KDE 多页扫描应用程序"
+
+#: main.cpp:64
+#, kde-format
+msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+
+#: main.cpp:67 main.cpp:68
+#, kde-format
+msgid "developer"
+msgstr "开发人员"
+
+#: main.cpp:79
+#, kde-format
+msgid "Sane scanner device name. Use 'test' for test device."
+msgstr "Sane 扫描仪设备名称。测试设备请使用“test”。"
+
+#: main.cpp:79
+#, kde-format
+msgid "device"
+msgstr "设备"
+
+#: qml/ContentView.qml:18
+#, kde-format
+msgctxt "Prefix for document name indicating an unsaved document"
+msgid "* %1"
+msgstr "* %1"
+
+#: qml/DeviceSelection.qml:50
+#, kde-format
+msgctxt ""
+"Device vendor with device model, followed by the device name identifier"
+msgid ""
+"%1 %2\n"
+"(%3)"
+msgstr ""
+"%1 %2\n"
+"(%3)"
+
+#: qml/DeviceSelection.qml:65
+#, kde-kuit-format
+msgctxt "@info"
+msgid "No devices found."
+msgstr "未找到设备。"
+
+#: qml/DeviceSelection.qml:82
+#, kde-format
+msgid "Open selected device"
+msgstr "打开所选设备"
+
+#: qml/DeviceSelection.qml:91
+#, kde-format
+msgid "Reload devices list"
+msgstr "刷新设备列表"
+
+#: qml/DevicesLoading.qml:29
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Searching for available devices."
+msgstr "正在扫描可用设备。"
+
+#: qml/DocumentList.qml:143
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Processing page..."
+msgstr "正在处理页面..."
+
+#: qml/DocumentList.qml:188
+#, kde-format
+msgctxt "Page index"
+msgid "Page %1"
+msgstr "第 %1 页"
+
+#: qml/DocumentList.qml:203
+#, kde-format
+msgid "Move Up"
+msgstr "上移"
+
+#: qml/DocumentList.qml:213
+#, kde-format
+msgid "Move Down"
+msgstr "下移"
+
+#: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
+#, kde-format
+msgid "Rotate Left"
+msgstr "向左旋转"
+
+#: qml/DocumentList.qml:229 qml/DocumentPage.qml:145
+#, kde-format
+msgid "Rotate Right"
+msgstr "向右旋转"
+
+#: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
+#, kde-format
+msgid "Flip"
+msgstr "翻转"
+
+#: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
+#, kde-format
+msgid "Save Page"
+msgstr "保存页面"
+
+#: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
+#, kde-format
+msgid "Delete Page"
+msgstr "删除页面"
+
+#: qml/DocumentList.qml:265
+#, kde-format
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] "%1 页"
+
+#: qml/DocumentList.qml:276
+#, kde-format
+msgid "Reorder Pages"
+msgstr "页面重新排序"
+
+#: qml/DocumentList.qml:281
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 24 → 1234"
+msgstr "13 24 → 1234"
+
+#: qml/DocumentList.qml:288
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 42 → 1234"
+msgstr "13 42 → 1234"
+
+#: qml/DocumentList.qml:295
+#, kde-format
+msgid "Reverse Order"
+msgstr "反向排序"
+
+#: qml/DocumentPage.qml:38
+#, kde-kuit-format
+msgctxt "@info"
+msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+msgstr "此文档尚未包含任何图像。<nl/><nl/>请开始扫描。"
+
+#: qml/DocumentPage.qml:96
+#, kde-format
+msgid "Zoom In"
+msgstr "放大"
+
+#: qml/DocumentPage.qml:105
+#, kde-format
+msgid "Zoom Out"
+msgstr "缩小"
+
+#: qml/DocumentPage.qml:114
+#, kde-format
+msgid "Zoom Fit"
+msgstr "自适应缩放"
+
+#: qml/DocumentPage.qml:130
+#, kde-format
+msgid "Zoom 100%"
+msgstr "缩放至 100%"
+
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#, kde-format
+msgid "Export PDF"
+msgstr "导出 PDF"
+
+#: qml/ExportWindow.qml:38
+#, kde-format
+msgid "Title:"
+msgstr "标题："
+
+#: qml/ExportWindow.qml:54
+#, kde-format
+msgid "File:"
+msgstr "文件："
+
+#: qml/ExportWindow.qml:79
+#, kde-format
+msgid "Enable optical character recognition (OCR)"
+msgstr "启用光学字符识别 (OCR)"
+
+#: qml/ExportWindow.qml:97
+#, kde-format
+msgid "Languages:"
+msgstr "语言："
+
+#: qml/ExportWindow.qml:119
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: qml/ExportWindow.qml:138
+#, kde-format
+msgid ""
+"If your required language is not listed, please install Tesseract's language "
+"file with your package manager."
+msgstr ""
+"如果您所需的语言未被列出，请使用本机系统的包管理器安装 Tesseract 的语言文件。"
+
+#: qml/ExportWindow.qml:169
+#, kde-format
+msgid "Save"
+msgstr "保存"
+
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#, kde-format
+msgid "Cancel"
+msgstr "取消"
+
+#: qml/GlobalMenu.qml:25
+#, kde-format
+msgctxt "menu category"
+msgid "File"
+msgstr "文件"
+
+#: qml/GlobalMenu.qml:67
+#, kde-format
+msgctxt "menu category"
+msgid "Scan"
+msgstr "扫描"
+
+#: qml/GlobalMenu.qml:116
+#, kde-format
+msgctxt "menu category"
+msgid "Help"
+msgstr "帮助"
+
+#: qml/InProgressPage.qml:26
+#, kde-kuit-format
+msgctxt "Countdown string with time given in seconds"
+msgid "Next scan starts in<nl/>%1 s"
+msgstr "下次扫描将在<nl/>%1 秒后开始"
+
+#: qml/InProgressPage.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "Scan in progress."
+msgstr "正在扫描。"
+
+#: qml/MainWindow.qml:22
+#, kde-format
+msgctxt "document title: app title"
+msgid "%1 ― Skanpage"
+msgstr "%1 ― Skanpage"
+
+#: qml/MainWindow.qml:83
+#, kde-format
+msgid "Discard All"
+msgstr "全部丢弃"
+
+#: qml/MainWindow.qml:92
+#, kde-format
+msgid "Save All"
+msgstr "全部保存"
+
+#: qml/MainWindow.qml:109
+#, kde-format
+msgid "Scan"
+msgstr "扫描"
+
+#: qml/MainWindow.qml:127
+#, kde-format
+msgid "Show Scanner Options"
+msgstr "显示扫描仪选项"
+
+#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#, kde-format
+msgid "Share"
+msgstr "分享"
+
+#: qml/MainWindow.qml:145
+#, kde-format
+msgid "Print"
+msgstr "打印"
+
+#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#, kde-format
+msgid "About Skanpage"
+msgstr "关于 Skanpage"
+
+#: qml/MainWindow.qml:173
+#, kde-format
+msgid "Configure Skanpage…"
+msgstr "配置 Skanpage…"
+
+#: qml/MainWindow.qml:181
+#, kde-format
+msgid "Quit"
+msgstr "退出"
+
+#: qml/OptionDelegate.qml:55
+#, kde-format
+msgid "%1:"
+msgstr "%1："
+
+#: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "Adding unit suffix"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionDelegate.qml:179
+#, kde-format
+msgctxt "Unit suffix for bit"
+msgid "bit"
+msgstr "位"
+
+#: qml/OptionDelegate.qml:182
+#, kde-format
+msgctxt "Unit suffix for DPI"
+msgid "DPI"
+msgstr "DPI"
+
+#: qml/OptionDelegate.qml:185
+#, kde-format
+msgctxt "Unit suffix for microsecond"
+msgid "µs"
+msgstr "微秒"
+
+#: qml/OptionDelegate.qml:188
+#, kde-format
+msgctxt "Unit suffix for second"
+msgid "s"
+msgstr "秒"
+
+#: qml/OptionDelegate.qml:191
+#, kde-format
+msgctxt "Unit suffix for millimeter"
+msgid "mm"
+msgstr "毫米"
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "Unit suffix for percent"
+msgid "%"
+msgstr "%"
+
+#: qml/OptionDelegate.qml:197
+#, kde-format
+msgctxt "Unit suffix for pixel"
+msgid "px"
+msgstr "像素"
+
+#: qml/OptionsPanel.qml:30
+#, kde-format
+msgid "Select options for quick access:"
+msgstr "选择快速访问选项："
+
+#: qml/OptionsPanel.qml:66
+#, kde-format
+msgctxt "scanner device vendor and model"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionsPanel.qml:79
+#, kde-format
+msgid "Show More"
+msgstr "显示更多"
+
+#: qml/OptionsPanel.qml:88
+#, kde-format
+msgid "Configure Visibility"
+msgstr "配置可见性"
+
+#: qml/OptionsPanel.qml:103
+#, kde-format
+msgid "Reselect Scanner"
+msgstr "重新选择扫描仪"
+
+#: qml/SettingsWindow.qml:19
+#, kde-format
+msgid "Configure"
+msgstr "配置"
+
+#: qml/SettingsWindow.qml:34
+#, kde-format
+msgid "Devices to show:"
+msgstr "显示的设备："
+
+#: qml/SettingsWindow.qml:35
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners only"
+msgstr "仅扫描仪"
+
+#: qml/SettingsWindow.qml:41
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners, cameras, and virtual devices"
+msgstr "扫描仪、数码相机、虚拟设备"
+
+#: qml/SettingsWindow.qml:48
+#, kde-format
+msgid "Default file format:"
+msgstr "默认文件格式："
+
+#: qml/SettingsWindow.qml:67
+#, kde-format
+msgid "Default save location:"
+msgstr "默认保存位置："
+
+#: qml/SettingsWindow.qml:100
+#, kde-format
+msgid "Close"
+msgstr "关闭"
+
+#: qml/ShareWindow.qml:41
+#, kde-format
+msgid "Share as:"
+msgstr "分享为："

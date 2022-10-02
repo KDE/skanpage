@@ -1,0 +1,512 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the skanpage package.
+#
+# Volkan Gezer <volkangezer@gmail.com>, 2021.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: skanpage\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"PO-Revision-Date: 2022-07-25 13:26+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Hasan Kıran, Emir SARI"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sunder67@hotmail.com, emir_sari@icloud.com"
+
+#: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
+#, kde-format
+msgid "New document"
+msgstr "Yeni belge"
+
+#: DocumentModel.cpp:72
+#, kde-format
+msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
+msgid "%1 ... %2"
+msgstr "%1 ... %2"
+
+#: DocumentPrinter.cpp:33
+#, kde-format
+msgid "Nothing to print."
+msgstr "Yazdırılacak bir şey yok."
+
+#: DocumentPrinter.cpp:37
+#, kde-format
+msgid "Previous printing operation still in progress."
+msgstr "Bir önceki yazdırma işlemi hâlâ sürüyor."
+
+#: DocumentPrinter.cpp:74
+#, kde-format
+msgid "Document sent to printer."
+msgstr "Belge, yazıcıya gönderildi."
+
+#: DocumentSaver.cpp:33
+#, kde-format
+msgid "No file path given."
+msgstr "Dosya yolu verilmedi."
+
+#: DocumentSaver.cpp:37
+#, kde-format
+msgid "Nothing to save."
+msgstr "Kaydedilecek bir şey yok."
+
+#: DocumentSaver.cpp:68
+#, kde-format
+msgid "Document saved as PDF."
+msgstr "Belge, PDF olarak kaydedildi."
+
+#: DocumentSaver.cpp:94
+#, kde-format
+msgid "Document saved with OCR as PDF."
+msgstr "Belge, OCR ile PDF olarak kaydedildi."
+
+#: DocumentSaver.cpp:166
+#, kde-format
+msgid "Document saved as image."
+msgstr "Belge, görsel olarak kaydedildi."
+
+#: DocumentSaver.cpp:175
+#, kde-format
+msgid "Failed to save document as image."
+msgstr "Belge, görsel olarak kaydedilemedi."
+
+#: DocumentSaver.cpp:190
+#, kde-format
+msgid "Failed to save image"
+msgstr "Görsel kaydedilemedi"
+
+#: main.cpp:60
+#, kde-format
+msgid "Skanpage"
+msgstr "Skanpage"
+
+#: main.cpp:62
+#, kde-format
+msgid "Multi-page scanning application by KDE."
+msgstr "KDE tarafından yapılmış çoklu sayfa tarama uygulaması."
+
+#: main.cpp:64
+#, kde-format
+msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+
+#: main.cpp:67 main.cpp:68
+#, kde-format
+msgid "developer"
+msgstr "geliştirici"
+
+#: main.cpp:79
+#, kde-format
+msgid "Sane scanner device name. Use 'test' for test device."
+msgstr "Sane tarayıcı aygıt adı. Sınama aygıtı için 'test' kullanın."
+
+#: main.cpp:79
+#, kde-format
+msgid "device"
+msgstr "aygıt"
+
+#: qml/ContentView.qml:18
+#, kde-format
+msgctxt "Prefix for document name indicating an unsaved document"
+msgid "* %1"
+msgstr "* %1"
+
+#: qml/DeviceSelection.qml:50
+#, kde-format
+msgctxt ""
+"Device vendor with device model, followed by the device name identifier"
+msgid ""
+"%1 %2\n"
+"(%3)"
+msgstr ""
+"%1 %2\n"
+"(%3)"
+
+#: qml/DeviceSelection.qml:65
+#, kde-kuit-format
+msgctxt "@info"
+msgid "No devices found."
+msgstr "Aygıt bulunamadı."
+
+#: qml/DeviceSelection.qml:82
+#, kde-format
+msgid "Open selected device"
+msgstr "Seçili aygıtı aç"
+
+#: qml/DeviceSelection.qml:91
+#, kde-format
+msgid "Reload devices list"
+msgstr "Aygıt listesini yeniden yükle"
+
+#: qml/DevicesLoading.qml:29
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Searching for available devices."
+msgstr "Kullanılabilir aygıtlar aranıyor."
+
+#: qml/DocumentList.qml:143
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Processing page..."
+msgstr "Sayfa işleniyor..."
+
+#: qml/DocumentList.qml:188
+#, kde-format
+msgctxt "Page index"
+msgid "Page %1"
+msgstr "Sayfa %1"
+
+#: qml/DocumentList.qml:203
+#, kde-format
+msgid "Move Up"
+msgstr "Yukarı Taşı"
+
+#: qml/DocumentList.qml:213
+#, kde-format
+msgid "Move Down"
+msgstr "Aşağı Taşı"
+
+#: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
+#, kde-format
+msgid "Rotate Left"
+msgstr "Sola Döndür"
+
+#: qml/DocumentList.qml:229 qml/DocumentPage.qml:145
+#, kde-format
+msgid "Rotate Right"
+msgstr "Sağa Döndür"
+
+#: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
+#, kde-format
+msgid "Flip"
+msgstr "Ters Çevir"
+
+#: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
+#, kde-format
+msgid "Save Page"
+msgstr "Sayfayı Kaydet"
+
+#: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
+#, kde-format
+msgid "Delete Page"
+msgstr "Sayfayı Sil"
+
+#: qml/DocumentList.qml:265
+#, kde-format
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] "%1 sayfa"
+msgstr[1] "%1 sayfa"
+
+#: qml/DocumentList.qml:276
+#, kde-format
+msgid "Reorder Pages"
+msgstr "Sayfaları Yeniden Sırala"
+
+#: qml/DocumentList.qml:281
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 24 → 1234"
+msgstr "13 24 → 1234"
+
+#: qml/DocumentList.qml:288
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 42 → 1234"
+msgstr "13 42 → 1234"
+
+#: qml/DocumentList.qml:295
+#, kde-format
+msgid "Reverse Order"
+msgstr "Sırayı Tersine Çevir"
+
+#: qml/DocumentPage.qml:38
+#, kde-kuit-format
+msgctxt "@info"
+msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+msgstr "Bu belgede hiç görsel yok.<nl/><nl/>Taramayı başlatın!"
+
+#: qml/DocumentPage.qml:96
+#, kde-format
+msgid "Zoom In"
+msgstr "Yakınlaştır"
+
+#: qml/DocumentPage.qml:105
+#, kde-format
+msgid "Zoom Out"
+msgstr "Uzaklaştır"
+
+#: qml/DocumentPage.qml:114
+#, kde-format
+msgid "Zoom Fit"
+msgstr "Sığdır"
+
+#: qml/DocumentPage.qml:130
+#, kde-format
+msgid "Zoom 100%"
+msgstr "%​100'e Büyüt"
+
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#, kde-format
+msgid "Export PDF"
+msgstr "PDF Olarak Dışa Aktar"
+
+#: qml/ExportWindow.qml:38
+#, kde-format
+msgid "Title:"
+msgstr "Başlık:"
+
+#: qml/ExportWindow.qml:54
+#, kde-format
+msgid "File:"
+msgstr "Dosya:"
+
+#: qml/ExportWindow.qml:79
+#, kde-format
+msgid "Enable optical character recognition (OCR)"
+msgstr "Optik karakter tanımayı (OCR) etkinleştir"
+
+#: qml/ExportWindow.qml:97
+#, kde-format
+msgid "Languages:"
+msgstr "Diller:"
+
+#: qml/ExportWindow.qml:119
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: qml/ExportWindow.qml:138
+#, kde-format
+msgid ""
+"If your required language is not listed, please install Tesseract's language "
+"file with your package manager."
+msgstr ""
+"İstediğiniz dil listede yoksa paket yöneticiniz ile Tessaract'ın dil "
+"dosyalarını kurun."
+
+#: qml/ExportWindow.qml:169
+#, kde-format
+msgid "Save"
+msgstr "Kaydet"
+
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#, kde-format
+msgid "Cancel"
+msgstr "İptal"
+
+#: qml/GlobalMenu.qml:25
+#, kde-format
+msgctxt "menu category"
+msgid "File"
+msgstr "Dosya"
+
+#: qml/GlobalMenu.qml:67
+#, kde-format
+msgctxt "menu category"
+msgid "Scan"
+msgstr "Tara"
+
+#: qml/GlobalMenu.qml:116
+#, kde-format
+msgctxt "menu category"
+msgid "Help"
+msgstr "Yardım"
+
+#: qml/InProgressPage.qml:26
+#, kde-kuit-format
+msgctxt "Countdown string with time given in seconds"
+msgid "Next scan starts in<nl/>%1 s"
+msgstr "Sonraki taramanın başlama süresi:<nl/>%1 sn"
+
+#: qml/InProgressPage.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "Scan in progress."
+msgstr "Tarama sürüyor."
+
+#: qml/MainWindow.qml:22
+#, kde-format
+msgctxt "document title: app title"
+msgid "%1 ― Skanpage"
+msgstr "%1 ― Skanpage"
+
+#: qml/MainWindow.qml:83
+#, kde-format
+msgid "Discard All"
+msgstr "Tümünü At"
+
+#: qml/MainWindow.qml:92
+#, kde-format
+msgid "Save All"
+msgstr "Tümünü Kaydet"
+
+#: qml/MainWindow.qml:109
+#, kde-format
+msgid "Scan"
+msgstr "Tara"
+
+#: qml/MainWindow.qml:127
+#, kde-format
+msgid "Show Scanner Options"
+msgstr "Tarayıcı Seçeneklerini Göster"
+
+#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#, kde-format
+msgid "Share"
+msgstr "Paylaş"
+
+#: qml/MainWindow.qml:145
+#, kde-format
+msgid "Print"
+msgstr "Yazdır"
+
+#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#, kde-format
+msgid "About Skanpage"
+msgstr "Skanpage Hakkında"
+
+#: qml/MainWindow.qml:173
+#, kde-format
+msgid "Configure Skanpage…"
+msgstr "Skanpage'i Yapılandır…"
+
+#: qml/MainWindow.qml:181
+#, kde-format
+msgid "Quit"
+msgstr "Çık"
+
+#: qml/OptionDelegate.qml:55
+#, kde-format
+msgid "%1:"
+msgstr "%1:"
+
+#: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "Adding unit suffix"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionDelegate.qml:179
+#, kde-format
+msgctxt "Unit suffix for bit"
+msgid "bit"
+msgstr "bit"
+
+#: qml/OptionDelegate.qml:182
+#, kde-format
+msgctxt "Unit suffix for DPI"
+msgid "DPI"
+msgstr "DPI"
+
+#: qml/OptionDelegate.qml:185
+#, kde-format
+msgctxt "Unit suffix for microsecond"
+msgid "µs"
+msgstr "µs"
+
+#: qml/OptionDelegate.qml:188
+#, kde-format
+msgctxt "Unit suffix for second"
+msgid "s"
+msgstr "sn"
+
+#: qml/OptionDelegate.qml:191
+#, kde-format
+msgctxt "Unit suffix for millimeter"
+msgid "mm"
+msgstr "mm"
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "Unit suffix for percent"
+msgid "%"
+msgstr "%"
+
+#: qml/OptionDelegate.qml:197
+#, kde-format
+msgctxt "Unit suffix for pixel"
+msgid "px"
+msgstr "pks"
+
+#: qml/OptionsPanel.qml:30
+#, kde-format
+msgid "Select options for quick access:"
+msgstr "Hızlı erişim için seçenekleri seçin:"
+
+#: qml/OptionsPanel.qml:66
+#, kde-format
+msgctxt "scanner device vendor and model"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionsPanel.qml:79
+#, kde-format
+msgid "Show More"
+msgstr "Daha Fazla Göster"
+
+#: qml/OptionsPanel.qml:88
+#, kde-format
+msgid "Configure Visibility"
+msgstr "Görünürlüğü Yapılandır"
+
+#: qml/OptionsPanel.qml:103
+#, kde-format
+msgid "Reselect Scanner"
+msgstr "Tarayıcıyı Yeniden Seç"
+
+#: qml/SettingsWindow.qml:19
+#, kde-format
+msgid "Configure"
+msgstr "Yapılandır"
+
+#: qml/SettingsWindow.qml:34
+#, kde-format
+msgid "Devices to show:"
+msgstr "Gösterilecek aygıtlar:"
+
+#: qml/SettingsWindow.qml:35
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners only"
+msgstr "Yalnızca tarayıcılar"
+
+#: qml/SettingsWindow.qml:41
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners, cameras, and virtual devices"
+msgstr "Tarayıcılar, kameralar ve sanal aygıtlar"
+
+#: qml/SettingsWindow.qml:48
+#, kde-format
+msgid "Default file format:"
+msgstr "Öntanımlı dosya biçimi:"
+
+#: qml/SettingsWindow.qml:67
+#, kde-format
+msgid "Default save location:"
+msgstr "Öntanımlı kaydetme konumu:"
+
+#: qml/SettingsWindow.qml:100
+#, kde-format
+msgid "Close"
+msgstr "Kapat"
+
+#: qml/ShareWindow.qml:41
+#, kde-format
+msgid "Share as:"
+msgstr "Paylaş:"

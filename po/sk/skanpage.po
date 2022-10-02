@@ -1,0 +1,601 @@
+# translation of skanpage.po to Slovak
+# Roman Paholík <wizzardsk@gmail.com>, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: skanpage\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"PO-Revision-Date: 2022-04-07 18:24+0200\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com"
+
+#: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
+#, kde-format
+msgid "New document"
+msgstr "Nový dokument"
+
+#: DocumentModel.cpp:72
+#, kde-format
+msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
+msgid "%1 ... %2"
+msgstr "%1 ... %2"
+
+#: DocumentPrinter.cpp:33
+#, kde-format
+msgid "Nothing to print."
+msgstr "Nie je čo tlačiť."
+
+#: DocumentPrinter.cpp:37
+#, kde-format
+msgid "Previous printing operation still in progress."
+msgstr "Predchádzajúca tlačová operácia stále prebieha."
+
+#: DocumentPrinter.cpp:74
+#, kde-format
+msgid "Document sent to printer."
+msgstr "Dokument odoslaný do tlačiarne."
+
+#: DocumentSaver.cpp:33
+#, kde-format
+msgid "No file path given."
+msgstr ""
+
+#: DocumentSaver.cpp:37
+#, kde-format
+msgid "Nothing to save."
+msgstr "Nie je čo uložiť."
+
+#: DocumentSaver.cpp:68
+#, kde-format
+msgid "Document saved as PDF."
+msgstr "Dokument uložený ako PDF."
+
+#: DocumentSaver.cpp:94
+#, fuzzy, kde-format
+#| msgid "Document saved as PDF."
+msgid "Document saved with OCR as PDF."
+msgstr "Dokument uložený ako PDF."
+
+#: DocumentSaver.cpp:166
+#, kde-format
+msgid "Document saved as image."
+msgstr "Dokument uložený ako obrázok."
+
+#: DocumentSaver.cpp:175
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to save document as image."
+msgstr "Zlyhalo uloženie obrázku"
+
+#: DocumentSaver.cpp:190
+#, kde-format
+msgid "Failed to save image"
+msgstr "Zlyhalo uloženie obrázku"
+
+#: main.cpp:60
+#, kde-format
+msgid "Skanpage"
+msgstr "Skanpage"
+
+#: main.cpp:62
+#, fuzzy, kde-format
+#| msgid "Page-scanning application by KDE based on libksane."
+msgid "Multi-page scanning application by KDE."
+msgstr "Aplikácia na skenovanie stránok od KDE založená na libksane."
+
+#: main.cpp:64
+#, fuzzy, kde-format
+#| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
+msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
+
+#: main.cpp:67 main.cpp:68
+#, kde-format
+msgid "developer"
+msgstr "vývojár"
+
+#: main.cpp:79
+#, kde-format
+msgid "Sane scanner device name. Use 'test' for test device."
+msgstr ""
+"Názov zariadenia skenera Sane. Použite 'test' pre testovacie zariadenie."
+
+#: main.cpp:79
+#, kde-format
+msgid "device"
+msgstr "zariadenie"
+
+#: qml/ContentView.qml:18
+#, kde-format
+msgctxt "Prefix for document name indicating an unsaved document"
+msgid "* %1"
+msgstr "* %1"
+
+#: qml/DeviceSelection.qml:50
+#, kde-format
+msgctxt ""
+"Device vendor with device model, followed by the device name identifier"
+msgid ""
+"%1 %2\n"
+"(%3)"
+msgstr ""
+"%1 %2\n"
+"(%3)"
+
+#: qml/DeviceSelection.qml:65
+#, kde-kuit-format
+msgctxt "@info"
+msgid "No devices found."
+msgstr "Nenašli sa zariadenia."
+
+#: qml/DeviceSelection.qml:82
+#, kde-format
+msgid "Open selected device"
+msgstr "Otvoriť vybrané zariadenie"
+
+#: qml/DeviceSelection.qml:91
+#, kde-format
+msgid "Reload devices list"
+msgstr "Obnoviť zoznam zariadení"
+
+#: qml/DevicesLoading.qml:29
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Searching for available devices."
+msgstr "Hľadajú sa dostupné zariadenia."
+
+#: qml/DocumentList.qml:143
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Processing page..."
+msgstr ""
+
+#: qml/DocumentList.qml:188
+#, kde-format
+msgctxt "Page index"
+msgid "Page %1"
+msgstr "Stránka %1"
+
+#: qml/DocumentList.qml:203
+#, fuzzy, kde-format
+msgid "Move Up"
+msgstr "Posunúť hore"
+
+#: qml/DocumentList.qml:213
+#, fuzzy, kde-format
+msgid "Move Down"
+msgstr "Posunúť dole"
+
+#: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
+#, kde-format
+msgid "Rotate Left"
+msgstr "Otočiť vľavo"
+
+#: qml/DocumentList.qml:229 qml/DocumentPage.qml:145
+#, kde-format
+msgid "Rotate Right"
+msgstr "Otočiť vpravo"
+
+#: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
+#, kde-format
+msgid "Flip"
+msgstr "Prevrátiť"
+
+#: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
+#, fuzzy, kde-format
+#| msgid "Save"
+msgid "Save Page"
+msgstr "Uložiť"
+
+#: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
+#, kde-format
+msgid "Delete Page"
+msgstr "Odstrániť stranu"
+
+#: qml/DocumentList.qml:265
+#, kde-format
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] "%1 strana"
+msgstr[1] "%1 strany"
+msgstr[2] "%1 strán"
+
+#: qml/DocumentList.qml:276
+#, kde-format
+msgid "Reorder Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:281
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 24 → 1234"
+msgstr ""
+
+#: qml/DocumentList.qml:288
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 42 → 1234"
+msgstr ""
+
+#: qml/DocumentList.qml:295
+#, kde-format
+msgid "Reverse Order"
+msgstr ""
+
+#: qml/DocumentPage.qml:38
+#, kde-kuit-format
+msgctxt "@info"
+msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+msgstr "V tomto dokumente nie sú žiadne obrázky.<nl/><nl/>Začnite skenovať!"
+
+#: qml/DocumentPage.qml:96
+#, kde-format
+msgid "Zoom In"
+msgstr "Priblížiť"
+
+#: qml/DocumentPage.qml:105
+#, kde-format
+msgid "Zoom Out"
+msgstr "Oddialiť"
+
+#: qml/DocumentPage.qml:114
+#, kde-format
+msgid "Zoom Fit"
+msgstr "Oddialiť"
+
+#: qml/DocumentPage.qml:130
+#, kde-format
+msgid "Zoom 100%"
+msgstr "Priblížiť 100%"
+
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#, kde-format
+msgid "Export PDF"
+msgstr ""
+
+#: qml/ExportWindow.qml:38
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: qml/ExportWindow.qml:54
+#, fuzzy, kde-format
+#| msgctxt "menu category"
+#| msgid "File"
+msgid "File:"
+msgstr "Súbor"
+
+#: qml/ExportWindow.qml:79
+#, kde-format
+msgid "Enable optical character recognition (OCR)"
+msgstr ""
+
+#: qml/ExportWindow.qml:97
+#, kde-format
+msgid "Languages:"
+msgstr ""
+
+#: qml/ExportWindow.qml:119
+#, kde-format
+msgid "%1 [%2]"
+msgstr ""
+
+#: qml/ExportWindow.qml:138
+#, kde-format
+msgid ""
+"If your required language is not listed, please install Tesseract's language "
+"file with your package manager."
+msgstr ""
+
+#: qml/ExportWindow.qml:169
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save"
+msgstr "Uložiť všetko"
+
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#, kde-format
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: qml/GlobalMenu.qml:25
+#, kde-format
+msgctxt "menu category"
+msgid "File"
+msgstr "Súbor"
+
+#: qml/GlobalMenu.qml:67
+#, fuzzy, kde-format
+#| msgid "Scan"
+msgctxt "menu category"
+msgid "Scan"
+msgstr "Skenovať"
+
+#: qml/GlobalMenu.qml:116
+#, fuzzy, kde-format
+msgctxt "menu category"
+msgid "Help"
+msgstr "Pomoc"
+
+#: qml/InProgressPage.qml:26
+#, fuzzy, kde-kuit-format
+msgctxt "Countdown string with time given in seconds"
+msgid "Next scan starts in<nl/>%1 s"
+msgstr "Ďalšie skenovanie začne o %1 s."
+
+#: qml/InProgressPage.qml:44
+#, fuzzy, kde-format
+#| msgid "Saving still in progress."
+msgctxt "@info"
+msgid "Scan in progress."
+msgstr "Ukladanie stále prebieha."
+
+#: qml/MainWindow.qml:22
+#, kde-format
+msgctxt "document title: app title"
+msgid "%1 ― Skanpage"
+msgstr "%1 ― Skanpage"
+
+#: qml/MainWindow.qml:83
+#, kde-format
+msgid "Discard All"
+msgstr "Zahodiť všetko"
+
+#: qml/MainWindow.qml:92
+#, kde-format
+msgid "Save All"
+msgstr "Uložiť všetko"
+
+#: qml/MainWindow.qml:109
+#, kde-format
+msgid "Scan"
+msgstr "Skenovať"
+
+#: qml/MainWindow.qml:127
+#, fuzzy, kde-format
+#| msgid "Scanner Options"
+msgid "Show Scanner Options"
+msgstr "Možnosti skenera"
+
+#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#, kde-format
+msgid "Share"
+msgstr "Zdieľať"
+
+#: qml/MainWindow.qml:145
+#, kde-format
+msgid "Print"
+msgstr "Tlačiť"
+
+#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#, kde-format
+msgid "About Skanpage"
+msgstr "O Skanpage"
+
+#: qml/MainWindow.qml:173
+#, fuzzy, kde-format
+#| msgid "About Skanpage"
+msgid "Configure Skanpage…"
+msgstr "O Skanpage"
+
+#: qml/MainWindow.qml:181
+#, kde-format
+msgid "Quit"
+msgstr "Ukončiť"
+
+#: qml/OptionDelegate.qml:55
+#, kde-format
+msgid "%1:"
+msgstr "%1:"
+
+#: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "Adding unit suffix"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionDelegate.qml:179
+#, kde-format
+msgctxt "Unit suffix for bit"
+msgid "bit"
+msgstr "bit"
+
+#: qml/OptionDelegate.qml:182
+#, kde-format
+msgctxt "Unit suffix for DPI"
+msgid "DPI"
+msgstr "DPI"
+
+#: qml/OptionDelegate.qml:185
+#, kde-format
+msgctxt "Unit suffix for microsecond"
+msgid "µs"
+msgstr "µs"
+
+#: qml/OptionDelegate.qml:188
+#, kde-format
+msgctxt "Unit suffix for second"
+msgid "s"
+msgstr "s"
+
+#: qml/OptionDelegate.qml:191
+#, kde-format
+msgctxt "Unit suffix for millimeter"
+msgid "mm"
+msgstr "mm"
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "Unit suffix for percent"
+msgid "%"
+msgstr "%"
+
+#: qml/OptionDelegate.qml:197
+#, kde-format
+msgctxt "Unit suffix for pixel"
+msgid "px"
+msgstr "px"
+
+#: qml/OptionsPanel.qml:30
+#, kde-format
+msgid "Select options for quick access:"
+msgstr ""
+
+#: qml/OptionsPanel.qml:66
+#, kde-format
+msgctxt "scanner device vendor and model"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionsPanel.qml:79
+#, fuzzy, kde-format
+msgid "Show More"
+msgstr "Zobraziť ďalších %1"
+
+#: qml/OptionsPanel.qml:88
+#, kde-format
+msgid "Configure Visibility"
+msgstr ""
+
+#: qml/OptionsPanel.qml:103
+#, fuzzy, kde-format
+#| msgid "Reselect scanning device"
+msgid "Reselect Scanner"
+msgstr "Znova vyberte skenovacie zariadenie"
+
+#: qml/SettingsWindow.qml:19
+#, kde-format
+msgid "Configure"
+msgstr ""
+
+#: qml/SettingsWindow.qml:34
+#, kde-format
+msgid "Devices to show:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:35
+#, fuzzy, kde-format
+#| msgid "Scanner options"
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners only"
+msgstr "Možnosti skenera"
+
+#: qml/SettingsWindow.qml:41
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners, cameras, and virtual devices"
+msgstr ""
+
+#: qml/SettingsWindow.qml:48
+#, kde-format
+msgid "Default file format:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:67
+#, kde-format
+msgid "Default save location:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:100
+#, kde-format
+msgid "Close"
+msgstr ""
+
+#: qml/ShareWindow.qml:41
+#, kde-format
+msgid "Share as:"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Skanpage"
+#~ msgid "Skanpage Settings"
+#~ msgstr "Skanpage"
+
+#, fuzzy
+#~| msgctxt "document title: app title"
+#~| msgid "%1 ― Skanpage"
+#~ msgctxt "document title - scanner device - app title"
+#~ msgid "%1 ― %2 %3 ― Skanpage"
+#~ msgstr "%1 ― Skanpage"
+
+#, fuzzy
+#~| msgid "All files (*)"
+#~ msgctxt "Description for the name filter of a QML file dialog"
+#~ msgid "All files"
+#~ msgstr "Všetky súbory (*)"
+
+#~ msgid "Saving still in progress."
+#~ msgstr "Ukladanie stále prebieha."
+
+#~ msgid "Clear"
+#~ msgstr "Vyčistiť"
+
+#~ msgid "PDF files (*.pdf)"
+#~ msgstr "PDF súbory (*.pdf)"
+
+#~ msgid "JPEG files (*.jpg)"
+#~ msgstr "JPEG súbory (*.jpg)"
+
+#~ msgid "PNG files (*.png)"
+#~ msgstr "PNG súbory (*.png)"
+
+#~ msgctxt "Device vendor and device model name"
+#~ msgid "Options for %1 %2"
+#~ msgstr "Možnosti pre %1 %2"
+
+#~ msgid "(C) 2015 Kåre Särs"
+#~ msgstr "(C) 2015 Kåre Särs"
+
+#~ msgid "Color"
+#~ msgstr "Farba"
+
+#~ msgid "Gray"
+#~ msgstr "Šedá"
+
+#~ msgid "A4"
+#~ msgstr "A4"
+
+#~ msgid "B5"
+#~ msgstr "B5"
+
+#~ msgid "Letter"
+#~ msgstr "Letter"
+
+#~ msgid "Legal"
+#~ msgstr "Legal"
+
+#~ msgid "Executive"
+#~ msgstr "Executive"
+
+#~ msgid "A5"
+#~ msgstr "A5"
+
+#~ msgid "A6"
+#~ msgstr "A6"
+
+#~ msgid "Custom"
+#~ msgstr "Vlastné"
+
+#~ msgid "Application menu"
+#~ msgstr "Aplikačná ponuka"
+
+#~ msgctxt "Device vendor and device model name"
+#~ msgid "Device: %1 %2"
+#~ msgstr "Zariadenie: %1 %2"

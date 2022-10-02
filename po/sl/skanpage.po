@@ -1,0 +1,524 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the skanpage package.
+#
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: skanpage\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"PO-Revision-Date: 2022-07-15 05:15+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Matjaž Jeran,Martin Srebotnjak"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "matjaz.jeran@amis.net,miles@filmsi.net"
+
+#: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
+#, kde-format
+msgid "New document"
+msgstr "Nov dokument"
+
+#: DocumentModel.cpp:72
+#, kde-format
+msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
+msgid "%1 ... %2"
+msgstr "%1 ... %2"
+
+#: DocumentPrinter.cpp:33
+#, kde-format
+msgid "Nothing to print."
+msgstr "Ni česa natisniti."
+
+#: DocumentPrinter.cpp:37
+#, kde-format
+msgid "Previous printing operation still in progress."
+msgstr "Prejšnja operacija tiskanja je še v teku."
+
+#: DocumentPrinter.cpp:74
+#, kde-format
+msgid "Document sent to printer."
+msgstr "Dokument poslan na tiskalnik."
+
+#: DocumentSaver.cpp:33
+#, kde-format
+msgid "No file path given."
+msgstr "Ni dana pot datoteke."
+
+#: DocumentSaver.cpp:37
+#, kde-format
+msgid "Nothing to save."
+msgstr "Ni česa shraniti."
+
+#: DocumentSaver.cpp:68
+#, kde-format
+msgid "Document saved as PDF."
+msgstr "Dokument shranjen kot PDF."
+
+#: DocumentSaver.cpp:94
+#, kde-format
+msgid "Document saved with OCR as PDF."
+msgstr "Dokument shranjen z OCR kot PDF."
+
+#: DocumentSaver.cpp:166
+#, kde-format
+msgid "Document saved as image."
+msgstr "Dokument shranjen kot slika."
+
+#: DocumentSaver.cpp:175
+#, kde-format
+msgid "Failed to save document as image."
+msgstr "Shranjevanje dokumenta kot slike ni uspelo."
+
+#: DocumentSaver.cpp:190
+#, kde-format
+msgid "Failed to save image"
+msgstr "Shranjevanje slike ni uspelo"
+
+#: main.cpp:60
+#, kde-format
+msgid "Skanpage"
+msgstr "Skanpage"
+
+#: main.cpp:62
+#, kde-format
+msgid "Multi-page scanning application by KDE."
+msgstr "Aplikacija za optično branje več strani KDE."
+
+#: main.cpp:64
+#, kde-format
+msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+
+#: main.cpp:67 main.cpp:68
+#, kde-format
+msgid "developer"
+msgstr "razvijalec"
+
+#: main.cpp:79
+#, kde-format
+msgid "Sane scanner device name. Use 'test' for test device."
+msgstr ""
+"Ime naprave optičnega bralnika Sane. Uporabite 'test' za preizkusno napravo."
+
+#: main.cpp:79
+#, kde-format
+msgid "device"
+msgstr "naprava"
+
+#: qml/ContentView.qml:18
+#, kde-format
+msgctxt "Prefix for document name indicating an unsaved document"
+msgid "* %1"
+msgstr "* %1"
+
+#: qml/DeviceSelection.qml:50
+#, kde-format
+msgctxt ""
+"Device vendor with device model, followed by the device name identifier"
+msgid ""
+"%1 %2\n"
+"(%3)"
+msgstr ""
+"%1 %2\n"
+"(%3)"
+
+#: qml/DeviceSelection.qml:65
+#, kde-kuit-format
+msgctxt "@info"
+msgid "No devices found."
+msgstr "Ni najdenih naprav."
+
+#: qml/DeviceSelection.qml:82
+#, kde-format
+msgid "Open selected device"
+msgstr "Odpri izbrano napravo"
+
+#: qml/DeviceSelection.qml:91
+#, kde-format
+msgid "Reload devices list"
+msgstr "Ponovno naloži seznam naprav"
+
+#: qml/DevicesLoading.qml:29
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Searching for available devices."
+msgstr "Poišči razpoložljive naprave."
+
+#: qml/DocumentList.qml:143
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Processing page..."
+msgstr "Obdelovanje strani ..."
+
+#: qml/DocumentList.qml:188
+#, kde-format
+msgctxt "Page index"
+msgid "Page %1"
+msgstr "Stran %1"
+
+#: qml/DocumentList.qml:203
+#, kde-format
+msgid "Move Up"
+msgstr "Pomakni gor"
+
+#: qml/DocumentList.qml:213
+#, kde-format
+msgid "Move Down"
+msgstr "Pomakni dol"
+
+#: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
+#, kde-format
+msgid "Rotate Left"
+msgstr "Zasukaj levo"
+
+#: qml/DocumentList.qml:229 qml/DocumentPage.qml:145
+#, kde-format
+msgid "Rotate Right"
+msgstr "Zasukaj desno"
+
+#: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
+#, kde-format
+msgid "Flip"
+msgstr "Obrni"
+
+#: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
+#, kde-format
+msgid "Save Page"
+msgstr "Shrani stran"
+
+#: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
+#, kde-format
+msgid "Delete Page"
+msgstr "Izbriši stran"
+
+#: qml/DocumentList.qml:265
+#, kde-format
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] "%1 stran"
+msgstr[1] "%1 strani"
+msgstr[2] "%1 strani"
+msgstr[3] "%1 strani"
+
+#: qml/DocumentList.qml:276
+#, kde-format
+msgid "Reorder Pages"
+msgstr "Ponovno razvrsti strani"
+
+#: qml/DocumentList.qml:281
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 24 → 1234"
+msgstr "13 24 → 1234"
+
+#: qml/DocumentList.qml:288
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 42 → 1234"
+msgstr "13 42 → 1234"
+
+#: qml/DocumentList.qml:295
+#, kde-format
+msgid "Reverse Order"
+msgstr "Obratni vrstni red"
+
+#: qml/DocumentPage.qml:38
+#, kde-kuit-format
+msgctxt "@info"
+msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+msgstr "Nimate nobenih slik v tem dokumentu.<nl/><nl/>Začni skenirati!"
+
+#: qml/DocumentPage.qml:96
+#, kde-format
+msgid "Zoom In"
+msgstr "Približaj"
+
+#: qml/DocumentPage.qml:105
+#, kde-format
+msgid "Zoom Out"
+msgstr "Oddalji"
+
+#: qml/DocumentPage.qml:114
+#, kde-format
+msgid "Zoom Fit"
+msgstr "Prilagojena povečava"
+
+#: qml/DocumentPage.qml:130
+#, kde-format
+msgid "Zoom 100%"
+msgstr "Povečava 100 %"
+
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#, kde-format
+msgid "Export PDF"
+msgstr "Izvozi PDF"
+
+#: qml/ExportWindow.qml:38
+#, kde-format
+msgid "Title:"
+msgstr "Naslov:"
+
+#: qml/ExportWindow.qml:54
+#, kde-format
+msgid "File:"
+msgstr "Datoteka:"
+
+#: qml/ExportWindow.qml:79
+#, kde-format
+msgid "Enable optical character recognition (OCR)"
+msgstr "Omogoči razpoznavanje znakov besedila (OCR)"
+
+#: qml/ExportWindow.qml:97
+#, kde-format
+msgid "Languages:"
+msgstr "Jeziki:"
+
+#: qml/ExportWindow.qml:119
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: qml/ExportWindow.qml:138
+#, kde-format
+msgid ""
+"If your required language is not listed, please install Tesseract's language "
+"file with your package manager."
+msgstr ""
+"Če vaš zahtevan jezik ni omenjen, namestite jezikovno datoteko Tesseract z "
+"vašim upravljalnikom paketov."
+
+#: qml/ExportWindow.qml:169
+#, kde-format
+msgid "Save"
+msgstr "Shrani"
+
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#, kde-format
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: qml/GlobalMenu.qml:25
+#, kde-format
+msgctxt "menu category"
+msgid "File"
+msgstr "Datoteka"
+
+#: qml/GlobalMenu.qml:67
+#, kde-format
+msgctxt "menu category"
+msgid "Scan"
+msgstr "Zajeta slika"
+
+#: qml/GlobalMenu.qml:116
+#, kde-format
+msgctxt "menu category"
+msgid "Help"
+msgstr "Pomoč"
+
+#: qml/InProgressPage.qml:26
+#, kde-kuit-format
+msgctxt "Countdown string with time given in seconds"
+msgid "Next scan starts in<nl/>%1 s"
+msgstr "Naslednje optično branje se začne po <nl/>%1 s"
+
+#: qml/InProgressPage.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "Scan in progress."
+msgstr "Optično branje v teku."
+
+#: qml/MainWindow.qml:22
+#, kde-format
+msgctxt "document title: app title"
+msgid "%1 ― Skanpage"
+msgstr "%1 ― Skanpage"
+
+#: qml/MainWindow.qml:83
+#, kde-format
+msgid "Discard All"
+msgstr "Zavrzi vse"
+
+#: qml/MainWindow.qml:92
+#, kde-format
+msgid "Save All"
+msgstr "Shrani vse"
+
+#: qml/MainWindow.qml:109
+#, kde-format
+msgid "Scan"
+msgstr "Optično preberi"
+
+#: qml/MainWindow.qml:127
+#, kde-format
+msgid "Show Scanner Options"
+msgstr "Prikaži možnosti optičnega bralnika"
+
+#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#, kde-format
+msgid "Share"
+msgstr "Deli"
+
+#: qml/MainWindow.qml:145
+#, kde-format
+msgid "Print"
+msgstr "Tiskaj"
+
+#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#, kde-format
+msgid "About Skanpage"
+msgstr "O programu Skanpage"
+
+#: qml/MainWindow.qml:173
+#, kde-format
+msgid "Configure Skanpage…"
+msgstr "Konfiguriraj Skanpage…"
+
+#: qml/MainWindow.qml:181
+#, kde-format
+msgid "Quit"
+msgstr "Zapusti"
+
+#: qml/OptionDelegate.qml:55
+#, kde-format
+msgid "%1:"
+msgstr "%1:"
+
+#: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "Adding unit suffix"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionDelegate.qml:179
+#, kde-format
+msgctxt "Unit suffix for bit"
+msgid "bit"
+msgstr "bitov"
+
+#: qml/OptionDelegate.qml:182
+#, kde-format
+msgctxt "Unit suffix for DPI"
+msgid "DPI"
+msgstr "DPI"
+
+#: qml/OptionDelegate.qml:185
+#, kde-format
+msgctxt "Unit suffix for microsecond"
+msgid "µs"
+msgstr "µs"
+
+#: qml/OptionDelegate.qml:188
+#, kde-format
+msgctxt "Unit suffix for second"
+msgid "s"
+msgstr "s"
+
+#: qml/OptionDelegate.qml:191
+#, kde-format
+msgctxt "Unit suffix for millimeter"
+msgid "mm"
+msgstr "mm"
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "Unit suffix for percent"
+msgid "%"
+msgstr "%"
+
+#: qml/OptionDelegate.qml:197
+#, kde-format
+msgctxt "Unit suffix for pixel"
+msgid "px"
+msgstr "px"
+
+#: qml/OptionsPanel.qml:30
+#, kde-format
+msgid "Select options for quick access:"
+msgstr "Izberite možnosti za hitri dostop:"
+
+#: qml/OptionsPanel.qml:66
+#, kde-format
+msgctxt "scanner device vendor and model"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionsPanel.qml:79
+#, kde-format
+msgid "Show More"
+msgstr "Prikaži več"
+
+#: qml/OptionsPanel.qml:88
+#, kde-format
+msgid "Configure Visibility"
+msgstr "Nastavi vidnost"
+
+#: qml/OptionsPanel.qml:103
+#, kde-format
+msgid "Reselect Scanner"
+msgstr "Ponovno izberi napravo za optično branje"
+
+#: qml/SettingsWindow.qml:19
+#, kde-format
+msgid "Configure"
+msgstr "Konfiguriraj"
+
+#: qml/SettingsWindow.qml:34
+#, kde-format
+msgid "Devices to show:"
+msgstr "Naprave za prikaz:"
+
+#: qml/SettingsWindow.qml:35
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners only"
+msgstr "Samo optični bralniki"
+
+#: qml/SettingsWindow.qml:41
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners, cameras, and virtual devices"
+msgstr "Bralniki, kamere in navidezne naprave"
+
+#: qml/SettingsWindow.qml:48
+#, kde-format
+msgid "Default file format:"
+msgstr "Privzeti format datoteke:"
+
+#: qml/SettingsWindow.qml:67
+#, kde-format
+msgid "Default save location:"
+msgstr "Privzeto mesto shranjevanja:"
+
+#: qml/SettingsWindow.qml:100
+#, kde-format
+msgid "Close"
+msgstr "Zapri"
+
+#: qml/ShareWindow.qml:41
+#, kde-format
+msgid "Share as:"
+msgstr "Postavi v skupno rabo kot:"
+
+#~ msgid "Settings"
+#~ msgstr "Nastavitve"
+
+#~ msgid "Skanpage Settings"
+#~ msgstr "Nastavitve Skanpage"
+
+#~ msgid "Show all devices including virtual and cameras"
+#~ msgstr "Prikaži vse naprave vključno z navideznimi in kamerami"
