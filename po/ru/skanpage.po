@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:50+0000\n"
-"PO-Revision-Date: 2022-05-14 12:54+0300\n"
+"PO-Revision-Date: 2022-10-02 19:51+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -96,16 +96,14 @@ msgid "Skanpage"
 msgstr "Skanpage"
 
 #: main.cpp:62
-#, fuzzy, kde-format
-#| msgid "Page-scanning application by KDE based on libksane."
+#, kde-format
 msgid "Multi-page scanning application by KDE."
-msgstr "Приложение от KDE для сканирования, основанное на libksane."
+msgstr "Приложение от KDE для сканирования."
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
-msgstr "© Kåre Särs, 2015–2021"
+msgstr "© Kåre Särs, Alexander Stippich, 2015–2022"
 
 #: main.cpp:67 main.cpp:68
 #, kde-format
@@ -222,24 +220,24 @@ msgstr[3] "%1 страница"
 #: qml/DocumentList.qml:276
 #, kde-format
 msgid "Reorder Pages"
-msgstr ""
+msgstr "Изменять порядок страниц"
 
 #: qml/DocumentList.qml:281
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
-msgstr ""
+msgstr "13 24 → 1234"
 
 #: qml/DocumentList.qml:288
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
-msgstr ""
+msgstr "13 42 → 1234"
 
 #: qml/DocumentList.qml:295
 #, kde-format
 msgid "Reverse Order"
-msgstr ""
+msgstr "На обратный порядок"
 
 #: qml/DocumentPage.qml:38
 #, kde-kuit-format
@@ -481,43 +479,41 @@ msgid "Reselect Scanner"
 msgstr "Выбрать другой сканер"
 
 #: qml/SettingsWindow.qml:19
-#, fuzzy, kde-format
-#| msgid "Configure Visibility"
+#, kde-format
 msgid "Configure"
-msgstr "Настройка видимости инструментов"
+msgstr "Настройка"
 
 #: qml/SettingsWindow.qml:34
 #, kde-format
 msgid "Devices to show:"
-msgstr ""
+msgstr "Используемые устройства:"
 
 #: qml/SettingsWindow.qml:35
-#, fuzzy, kde-format
-#| msgid "Show Scanner Options"
+#, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
-msgstr "Параметры сканера"
+msgstr "Только сканеры"
 
 #: qml/SettingsWindow.qml:41
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
-msgstr ""
+msgstr "Сканеры, камеры и виртуальные устройства"
 
 #: qml/SettingsWindow.qml:48
 #, kde-format
 msgid "Default file format:"
-msgstr ""
+msgstr "Формат файла по умолчанию:"
 
 #: qml/SettingsWindow.qml:67
 #, kde-format
 msgid "Default save location:"
-msgstr ""
+msgstr "Папка для сохранения по умолчанию:"
 
 #: qml/SettingsWindow.qml:100
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: qml/ShareWindow.qml:41
 #, kde-format
