@@ -74,6 +74,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="bg">Skanpage е просто приложение за сканиране, предназначено за сканиране на много страници и запазване на документи и изображения.</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al desament de documents i imatges.</p>
     <p xml:lang="ca-valencia">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al guardada de documents i imatges.</p>
+    <p xml:lang="de">Skanpage ist eine einfache Anwendung zum Scannen von mehreren Seiten und Speichern von Dokumenten und Bildern.</p>
     <p xml:lang="el">Το Skanpage Μια απλή εφαρμογή σάρωσης σχεδιασμένη για σάρωση πολλών σελίδων και αποθήκευση των εγγράφων και των εικόνων.</p>
     <p xml:lang="en-GB">Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla diseñada para escanear múltiples páginas y guardarlas como documentos e imágenes.</p>
@@ -103,6 +104,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
     <p xml:lang="cs">Vlastnosti:</p>
+    <p xml:lang="de">Funktionen:</p>
     <p xml:lang="el">Χαρακτηριστικά:</p>
     <p xml:lang="en-GB">Features:</p>
     <p xml:lang="es">Funcionalidades:</p>
@@ -132,6 +134,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="bg">Сканиране с плоски и ADF скенери</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="ca-valencia">Escaneig amb escàners de superfície plana i ADF</li>
+      <li xml:lang="de">Von Flachbett- und automatischen Dokumenteneinzugsscannern scannen</li>
       <li xml:lang="el">Σάρωση από επίπεδους και ADF σαρωτές</li>
       <li xml:lang="en-GB">Scanning from flatbed and ADF scanners</li>
       <li xml:lang="es">Escanear mediante escáneres de cama plana y con alimentador automático de documentos</li>
@@ -161,6 +164,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="cs">Nastavitelné volby skenovacího zařízení</li>
+      <li xml:lang="de">Konfigurierbare Einstellungen für Scan-Gerät</li>
       <li xml:lang="el">Διαμορφώσιμες επιλογές για τη συσκευή σάρωσης</li>
       <li xml:lang="en-GB">Configurable options for scanning device</li>
       <li xml:lang="es">Opciones configurables para el dispositivo de escaneo</li>
@@ -189,6 +193,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="bg">Пренареждане, завъртане и изтриване на сканирани страници</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
+      <li xml:lang="de">Gescannte Seiten neu anordnen, drehen und löschen</li>
       <li xml:lang="el">Αναδιάταξη, περιστροφή και διαγραφή των σαρωμένων εικόνων</li>
       <li xml:lang="en-GB">Reordering, rotation and deletion of scanned pages</li>
       <li xml:lang="es">Reordenar, rotar y borrar páginas escaneadas</li>
@@ -218,6 +223,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ca">Desament en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="ca-valencia">Guardada en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="cs">Ukládání do vícestránkových souborů PDF a souborů obrázků</li>
+      <li xml:lang="de">In mehrseitigen PDF-Dokumenten und Bilddateien speichern</li>
       <li xml:lang="el">Αποθήκευση σε πολυσέλιδα PDF έγγραφα και σε αρχεία εικόνων</li>
       <li xml:lang="en-GB">Saving to multi-page PDF documents and image files</li>
       <li xml:lang="es">Guardar en documentos PDF multipágina y en archivos de imagen</li>
