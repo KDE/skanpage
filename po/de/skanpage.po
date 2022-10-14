@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the skanpage package.
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022.
+# Alois Spitzbart <spitz234@hotmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:50+0000\n"
-"PO-Revision-Date: 2022-03-13 09:37+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2022-09-29 16:02+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,21 +46,19 @@ msgid "Nothing to print."
 msgstr "Nichts zum Drucken."
 
 #: DocumentPrinter.cpp:37
-#, fuzzy, kde-format
-#| msgid "Saving still in progress."
+#, kde-format
 msgid "Previous printing operation still in progress."
-msgstr "Die Speicherung wird noch ausgeführt."
+msgstr "Der vorherige Druckvorgang wird noch ausgeführt."
 
 #: DocumentPrinter.cpp:74
-#, fuzzy, kde-format
-#| msgid "Document saved as image."
+#, kde-format
 msgid "Document sent to printer."
-msgstr "Das Dokument wurde als Bild gespeichert."
+msgstr "Das Dokument wurde an den Drucker gesendet."
 
 #: DocumentSaver.cpp:33
 #, kde-format
 msgid "No file path given."
-msgstr ""
+msgstr "Kein Dateipfad angegeben."
 
 #: DocumentSaver.cpp:37
 #, kde-format
@@ -72,10 +71,9 @@ msgid "Document saved as PDF."
 msgstr "Das Dokument wurde als PDF gespeichert."
 
 #: DocumentSaver.cpp:94
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgid "Document saved with OCR as PDF."
-msgstr "Das Dokument wurde als PDF gespeichert."
+msgstr "Das Dokument wurde mit OCR als PDF gespeichert."
 
 #: DocumentSaver.cpp:166
 #, kde-format
@@ -83,10 +81,9 @@ msgid "Document saved as image."
 msgstr "Das Dokument wurde als Bild gespeichert."
 
 #: DocumentSaver.cpp:175
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save document as image."
-msgstr "Fehler beim Speichern des Bildes"
+msgstr "Das Speichern des Dokument als Bild ist fehlgeschlagen."
 
 #: DocumentSaver.cpp:190
 #, kde-format
@@ -99,15 +96,14 @@ msgid "Skanpage"
 msgstr "Skanpage"
 
 #: main.cpp:62
-#, fuzzy, kde-format
-#| msgid "Page-scanning application by KDE based on libksane."
+#, kde-format
 msgid "Multi-page scanning application by KDE."
-msgstr "Scan-Anwendung von KDE für mehrere Seiten auf der Basis von libksane."
+msgstr "Scan-Anwendung von KDE für mehrere Seiten."
 
 #: main.cpp:64
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
-msgstr ""
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:67 main.cpp:68
 #, kde-format
@@ -167,7 +163,7 @@ msgstr "Suchen nach verfügbaren Geräten."
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
-msgstr ""
+msgstr "Seite wird verarbeitet ..."
 
 #: qml/DocumentList.qml:188
 #, kde-format
@@ -178,12 +174,12 @@ msgstr "Seite %1"
 #: qml/DocumentList.qml:203
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Nach oben"
 
 #: qml/DocumentList.qml:213
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Nach unten"
 
 #: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
 #, kde-format
@@ -198,13 +194,12 @@ msgstr "Nach rechts drehen"
 #: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
 #, kde-format
 msgid "Flip"
-msgstr ""
+msgstr "Spiegeln"
 
 #: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgid "Save Page"
-msgstr "Speichern"
+msgstr "Seite speichern"
 
 #: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
 #, kde-format
@@ -212,35 +207,33 @@ msgid "Delete Page"
 msgstr "Seite löschen"
 
 #: qml/DocumentList.qml:265
-#, fuzzy, kde-format
-#| msgid "1 page"
-#| msgid_plural "%1 pages"
+#, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
-msgstr[0] "1 Seite"
+msgstr[0] "%1 Seite"
 msgstr[1] "%1 Seiten"
 
 #: qml/DocumentList.qml:276
 #, kde-format
 msgid "Reorder Pages"
-msgstr ""
+msgstr "Seiten neu ordnen"
 
 #: qml/DocumentList.qml:281
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
-msgstr ""
+msgstr "13 24 → 1234"
 
 #: qml/DocumentList.qml:288
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
-msgstr ""
+msgstr "13 42 → 1234"
 
 #: qml/DocumentList.qml:295
 #, kde-format
 msgid "Reverse Order"
-msgstr ""
+msgstr "in umgekehrter Reihenfolge"
 
 #: qml/DocumentPage.qml:38
 #, kde-kuit-format
@@ -260,10 +253,9 @@ msgid "Zoom Out"
 msgstr "Verkleinern"
 
 #: qml/DocumentPage.qml:114
-#, fuzzy, kde-format
-#| msgid "Zoom Out"
+#, kde-format
 msgid "Zoom Fit"
-msgstr "Verkleinern"
+msgstr "Auf Fenstergröße einpassen"
 
 #: qml/DocumentPage.qml:130
 #, kde-format
@@ -273,32 +265,32 @@ msgstr "Vergrößerung 100%"
 #: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
 #, kde-format
 msgid "Export PDF"
-msgstr ""
+msgstr "PDF exportieren"
 
 #: qml/ExportWindow.qml:38
 #, kde-format
 msgid "Title:"
-msgstr ""
+msgstr "Titel:"
 
 #: qml/ExportWindow.qml:54
 #, kde-format
 msgid "File:"
-msgstr ""
+msgstr "Datei:"
 
 #: qml/ExportWindow.qml:79
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
-msgstr ""
+msgstr "Optische Zeichenerkennung (OCR) aktivieren"
 
 #: qml/ExportWindow.qml:97
 #, kde-format
 msgid "Languages:"
-msgstr ""
+msgstr "Sprachen:"
 
 #: qml/ExportWindow.qml:119
 #, kde-format
 msgid "%1 [%2]"
-msgstr ""
+msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:138
 #, kde-format
@@ -306,6 +298,8 @@ msgid ""
 "If your required language is not listed, please install Tesseract's language "
 "file with your package manager."
 msgstr ""
+"Falls die von Ihnen benötigte Sprache nicht angeführt ist, installieren Sie "
+"bitte die Sprachdatei von Tesseract mit Ihrem Paketmanager."
 
 #: qml/ExportWindow.qml:169
 #, kde-format
@@ -321,11 +315,10 @@ msgstr "Abbrechen"
 #, kde-format
 msgctxt "menu category"
 msgid "File"
-msgstr ""
+msgstr "Datei"
 
 #: qml/GlobalMenu.qml:67
-#, fuzzy, kde-format
-#| msgid "Scan"
+#, kde-format
 msgctxt "menu category"
 msgid "Scan"
 msgstr "Scannen"
@@ -334,20 +327,19 @@ msgstr "Scannen"
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
-msgstr ""
+msgstr "Hilfe"
 
 #: qml/InProgressPage.qml:26
 #, kde-kuit-format
 msgctxt "Countdown string with time given in seconds"
 msgid "Next scan starts in<nl/>%1 s"
-msgstr ""
+msgstr "Das nächste Scannen beginnen in<nl/>%1 s"
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgid "Saving still in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress."
-msgstr "Die Speicherung wird noch ausgeführt."
+msgstr "Scan läuft."
 
 #: qml/MainWindow.qml:22
 #, kde-format
@@ -358,13 +350,12 @@ msgstr "%1 ― Skanpage"
 #: qml/MainWindow.qml:83
 #, kde-format
 msgid "Discard All"
-msgstr ""
+msgstr "Alles verwerfen"
 
 #: qml/MainWindow.qml:92
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgid "Save All"
-msgstr "Speichern"
+msgstr "Alles speichern"
 
 #: qml/MainWindow.qml:109
 #, kde-format
@@ -372,15 +363,14 @@ msgid "Scan"
 msgstr "Scannen"
 
 #: qml/MainWindow.qml:127
-#, fuzzy, kde-format
-#| msgid "Scanner Options"
+#, kde-format
 msgid "Show Scanner Options"
-msgstr "Scanner-Einstellungen"
+msgstr "Scanner-Einstellungen anzeigen"
 
 #: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Teilen"
 
 #: qml/MainWindow.qml:145
 #, kde-format
@@ -393,10 +383,9 @@ msgid "About Skanpage"
 msgstr "Über Skanpage"
 
 #: qml/MainWindow.qml:173
-#, fuzzy, kde-format
-#| msgid "About Skanpage"
+#, kde-format
 msgid "Configure Skanpage…"
-msgstr "Über Skanpage"
+msgstr "Skanpage einrichten ..."
 
 #: qml/MainWindow.qml:181
 #, kde-format
@@ -404,9 +393,7 @@ msgid "Quit"
 msgstr "Beenden"
 
 #: qml/OptionDelegate.qml:55
-#, fuzzy, kde-format
-#| msgctxt "Separator between a title and a value"
-#| msgid "%1:"
+#, kde-format
 msgid "%1:"
 msgstr "%1:"
 
@@ -438,7 +425,7 @@ msgstr "µs"
 #, kde-format
 msgctxt "Unit suffix for second"
 msgid "s"
-msgstr ""
+msgstr "s"
 
 #: qml/OptionDelegate.qml:191
 #, kde-format
@@ -461,12 +448,10 @@ msgstr "px"
 #: qml/OptionsPanel.qml:30
 #, kde-format
 msgid "Select options for quick access:"
-msgstr ""
+msgstr "Optionen für den Schnellzugriff auswählen:"
 
 #: qml/OptionsPanel.qml:66
-#, fuzzy, kde-format
-#| msgctxt "Adding unit suffix"
-#| msgid "%1 %2"
+#, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
@@ -474,61 +459,59 @@ msgstr "%1 %2"
 #: qml/OptionsPanel.qml:79
 #, kde-format
 msgid "Show More"
-msgstr ""
+msgstr "Mehr anzeigen"
 
 #: qml/OptionsPanel.qml:88
 #, kde-format
 msgid "Configure Visibility"
-msgstr ""
+msgstr "Sichtbarkeit einrichten"
 
 #: qml/OptionsPanel.qml:103
-#, fuzzy, kde-format
-#| msgid "Reselect scanning device"
+#, kde-format
 msgid "Reselect Scanner"
-msgstr "Scan-Gerät neu auswählen"
+msgstr "Scanner neu auswählen"
 
 #: qml/SettingsWindow.qml:19
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Einrichten"
 
 #: qml/SettingsWindow.qml:34
 #, kde-format
 msgid "Devices to show:"
-msgstr ""
+msgstr "Die anzuzeigenden Geräte:"
 
 #: qml/SettingsWindow.qml:35
-#, fuzzy, kde-format
-#| msgid "Scanner options"
+#, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
-msgstr "Scanner-Einstellungen"
+msgstr "Nur Scanner"
 
 #: qml/SettingsWindow.qml:41
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
-msgstr ""
+msgstr "Scanner, Kameras und virtuelle Geräte"
 
 #: qml/SettingsWindow.qml:48
 #, kde-format
 msgid "Default file format:"
-msgstr ""
+msgstr "Standard-Dateiformat:"
 
 #: qml/SettingsWindow.qml:67
 #, kde-format
 msgid "Default save location:"
-msgstr ""
+msgstr "Standard-Speicherort:"
 
 #: qml/SettingsWindow.qml:100
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: qml/ShareWindow.qml:41
 #, kde-format
 msgid "Share as:"
-msgstr ""
+msgstr "Teilen als:"
 
 #, fuzzy
 #~| msgid "Skanpage"
