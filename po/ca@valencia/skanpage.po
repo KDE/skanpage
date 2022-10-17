@@ -44,7 +44,7 @@ msgstr "%1... %2"
 #: DocumentPrinter.cpp:33
 #, kde-format
 msgid "Nothing to print."
-msgstr "No hi ha res a imprimir."
+msgstr "No hi ha res per a imprimir."
 
 #: DocumentPrinter.cpp:37
 #, kde-format
@@ -64,7 +64,7 @@ msgstr "No s'ha proporcionat cap camí cap al fitxer."
 #: DocumentSaver.cpp:37
 #, kde-format
 msgid "Nothing to save."
-msgstr "No hi ha res a guardar."
+msgstr "No hi ha res que s'haja de guardar."
 
 #: DocumentSaver.cpp:68
 #, kde-format
