@@ -15,7 +15,6 @@
 #include <memory>
 
 class OCREnginePrivate;
-class QPainter;
 class QPdfWriter;
 class OCRLanguageModel;
 
