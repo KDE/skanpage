@@ -27,10 +27,13 @@ Window {
 
     Kirigami.FormLayout {
         anchors.fill: parent
+        anchors.leftMargin: Kirigami.Units.gridUnit
+        anchors.rightMargin: Kirigami.Units.gridUnit
 
         ButtonGroup { id: allDevicesGroup }
 
         RadioButton {
+            Layout.fillWidth: true
             Kirigami.FormData.label: i18n("Devices to show:")
             text: i18nc("@option:radio Devices to show for scanning", "Scanners only")
             ButtonGroup.group: allDevicesGroup
@@ -38,6 +41,7 @@ Window {
         }
 
         RadioButton {
+            Layout.fillWidth: true
             text: i18nc("@option:radio Devices to show for scanning", "Scanners, cameras, and virtual devices")
             ButtonGroup.group: allDevicesGroup
             checked: skanpage.configuration.showAllDevices
