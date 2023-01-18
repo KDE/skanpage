@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-01-18 01:01+0000\n"
 "PO-Revision-Date: 2022-11-12 09:36+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -476,34 +476,34 @@ msgstr "Eskanerra berriz hautatzea"
 msgid "Configure"
 msgstr "Konfiguratu"
 
-#: qml/SettingsWindow.qml:34
+#: qml/SettingsWindow.qml:37
 #, kde-format
 msgid "Devices to show:"
 msgstr "Erakutsi beharreko gailuak:"
 
-#: qml/SettingsWindow.qml:35
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Eskanerrak bakarrik"
 
-#: qml/SettingsWindow.qml:41
+#: qml/SettingsWindow.qml:45
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "Eskanerrak, kamerak, eta alegiazko gailuak"
 
-#: qml/SettingsWindow.qml:48
+#: qml/SettingsWindow.qml:52
 #, kde-format
 msgid "Default file format:"
 msgstr "Fitxategi-formatu lehenetsia:"
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:71
 #, kde-format
 msgid "Default save location:"
 msgstr "Gordetzeko kokaleku lehenetsia:"
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:104
 #, kde-format
 msgid "Close"
 msgstr "Itxi"

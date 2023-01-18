@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-01-18 01:01+0000\n"
 "PO-Revision-Date: 2022-07-22 16:03+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -473,34 +473,34 @@ msgstr "Reselect Scanner"
 msgid "Configure"
 msgstr "Configure"
 
-#: qml/SettingsWindow.qml:34
+#: qml/SettingsWindow.qml:37
 #, kde-format
 msgid "Devices to show:"
 msgstr "Devices to show:"
 
-#: qml/SettingsWindow.qml:35
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Scanners only"
 
-#: qml/SettingsWindow.qml:41
+#: qml/SettingsWindow.qml:45
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "Scanners, cameras, and virtual devices"
 
-#: qml/SettingsWindow.qml:48
+#: qml/SettingsWindow.qml:52
 #, kde-format
 msgid "Default file format:"
 msgstr "Default file format:"
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:71
 #, kde-format
 msgid "Default save location:"
 msgstr "Default save location:"
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:104
 #, kde-format
 msgid "Close"
 msgstr "Close"

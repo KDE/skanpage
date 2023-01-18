@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-01-18 01:01+0000\n"
 "PO-Revision-Date: 2023-01-05 19:56+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -475,35 +475,35 @@ msgstr "Re-sélectionner le périphérique de numérisation"
 msgid "Configure"
 msgstr "Configurer"
 
-#: qml/SettingsWindow.qml:34
+#: qml/SettingsWindow.qml:37
 #, kde-format
 msgid "Devices to show:"
 msgstr "Périphériques à afficher :"
 
-#: qml/SettingsWindow.qml:35
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Uniquement les périphériques de numérisation"
 
-#: qml/SettingsWindow.qml:41
+#: qml/SettingsWindow.qml:45
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr ""
 "Périphérique de numérisation, appareils photo et périphériques virtuels"
 
-#: qml/SettingsWindow.qml:48
+#: qml/SettingsWindow.qml:52
 #, kde-format
 msgid "Default file format:"
 msgstr "Format de fichier par défaut :"
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:71
 #, kde-format
 msgid "Default save location:"
 msgstr "Emplacement d'enregistrement par défaut :"
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:104
 #, kde-format
 msgid "Close"
 msgstr "Fermer"

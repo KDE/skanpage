@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-01-18 01:01+0000\n"
 "PO-Revision-Date: 2023-01-12 10:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -471,34 +471,34 @@ msgstr "重新选择扫描仪"
 msgid "Configure"
 msgstr "配置"
 
-#: qml/SettingsWindow.qml:34
+#: qml/SettingsWindow.qml:37
 #, kde-format
 msgid "Devices to show:"
 msgstr "显示的设备："
 
-#: qml/SettingsWindow.qml:35
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "仅扫描仪"
 
-#: qml/SettingsWindow.qml:41
+#: qml/SettingsWindow.qml:45
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "扫描仪、数码相机、虚拟设备"
 
-#: qml/SettingsWindow.qml:48
+#: qml/SettingsWindow.qml:52
 #, kde-format
 msgid "Default file format:"
 msgstr "默认文件格式："
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:71
 #, kde-format
 msgid "Default save location:"
 msgstr "默认保存位置："
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:104
 #, kde-format
 msgid "Close"
 msgstr "关闭"

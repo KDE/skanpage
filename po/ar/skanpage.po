@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-01-18 01:01+0000\n"
 "PO-Revision-Date: 2022-08-08 22:25+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -478,34 +478,34 @@ msgstr "أعد تحديد الماسحة"
 msgid "Configure"
 msgstr "اضبط"
 
-#: qml/SettingsWindow.qml:34
+#: qml/SettingsWindow.qml:37
 #, kde-format
 msgid "Devices to show:"
 msgstr "الأجهزة المعروضة:"
 
-#: qml/SettingsWindow.qml:35
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "الماسحات فقط"
 
-#: qml/SettingsWindow.qml:41
+#: qml/SettingsWindow.qml:45
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "الماسحات و الكاميرات والأجهزة الافتراضية"
 
-#: qml/SettingsWindow.qml:48
+#: qml/SettingsWindow.qml:52
 #, kde-format
 msgid "Default file format:"
 msgstr "تنسيق الملف المبدئي:"
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:71
 #, kde-format
 msgid "Default save location:"
 msgstr "موقع الحفظ المبدئي:"
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:104
 #, kde-format
 msgid "Close"
 msgstr "أغلق"
