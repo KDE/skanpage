@@ -27,16 +27,6 @@ Item {
     implicitWidth: control.implicitWidth
     implicitHeight: control.implicitHeight
 
-    Connections {
-        target: container
-        function onValueChanged() {
-            if (control.value != (container.value * control.multiplier)) {
-                control.value = container.value * control.multiplier
-                textInput.text = control.textFromValue(control.value, control.locale)
-            }
-        }
-    }
-
     SpinBox {
         id: control
 
@@ -44,10 +34,15 @@ Item {
         property int decimals: 0
         property bool setup: true
 
+        from: container.from * multiplier
+        to: container.to * multiplier
+        stepSize: container.stepSize * multiplier
+        value: container.value * multiplier
+
         onValueChanged: {
             if (container.value != value && !setup) {
-                container.valueModified(value / control.multiplier)
-                textInput.text = control.textFromValue(control.value, control.locale)
+                container.value = value / multiplier
+                container.valueModified(container.value)
             }
         }
 
@@ -73,33 +68,32 @@ Item {
             control.stepSize = container.stepSize * control.multiplier
             control.value = container.value * control.multiplier
             setup = false
-            minTextSize.text = Number(container.from).toLocaleString(control.locale, 'f', decimals)
-            maxTextSize.text = Number(container.to).toLocaleString(control.locale, 'f', decimals)
-            textInput.text = control.textFromValue(control.value, control.locale)
         }
 
         TextMetrics {
             id: minTextSize
+            font: textInput.font
+            text: control.textFromValue(control.from, control.locale)
         }
 
         TextMetrics {
             id: maxTextSize
+            font: textInput.font
+            text: control.textFromValue(control.to, control.locale)
         }
 
-        contentItem: Item {
-
-            implicitWidth: Math.max(minTextSize.width, maxTextSize.width) + suffixText.width + Kirigami.Units.smallSpacing
+        contentItem: Row {
+            spacing: Kirigami.Units.smallSpacing
 
             TextInput {
                 id: textInput
-
-                anchors.right: suffixText.left
-                anchors.rightMargin: Kirigami.Units.smallSpacing
-
                 color: Kirigami.Theme.textColor
                 selectByMouse: true
+                text: control.textFromValue(control.value, control.locale)
                 horizontalAlignment: Qt.AlignRight
                 verticalAlignment: Qt.AlignVCenter
+                validator: control.validator
+                inputMethodHints: Qt.ImhFormattedNumbersOnly
 
                 readOnly: !control.editable
 
@@ -125,13 +119,12 @@ Item {
                         textInput.text = control.textFromValue(control.value, control.locale)
                     }
                 }
+
+                width: Math.max(minTextSize.width, maxTextSize.width) + Kirigami.Units.smallSpacing
             }
 
             Text {
                 id: suffixText
-
-                anchors.right: parent.right
-                anchors.rightMargin: control.padding + Kirigami.Units.smallSpacing
 
                 font: textInput.font
                 color: textInput.color
