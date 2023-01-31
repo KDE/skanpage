@@ -20,6 +20,7 @@ ApplicationWindow {
     visible: true
 
     title: i18nc("document title: app title", "%1 ― Skanpage", mainView.name)
+    color: Kirigami.Theme.backgroundColor
 
     width: skanpage.stateConfiguration.width
     height: skanpage.stateConfiguration.height
