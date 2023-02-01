@@ -15,16 +15,16 @@ import org.kde.kirigami 2.12 as Kirigami
 
 Item {
     id: container
-    property var value
+    property real value
     property real from
     property real to
     property real stepSize
     property alias suffix: suffixText.text
     property alias editable: control.editable
 
-    signal valueModified(var value)
+    signal valueModified(real value)
 
-    implicitWidth: control.implicitWidth
+    implicitWidth: control.width
     implicitHeight: control.implicitHeight
 
     SpinBox {
@@ -47,26 +47,18 @@ Item {
         }
 
         textFromValue: function(value, locale) {
-            return Number(value / control.multiplier).toLocaleString(locale, 'f', decimals)
+            return Number(value / multiplier).toLocaleString(locale, 'f', decimals)
         }
 
         valueFromText: function(text, locale) {
-            return Number.fromLocaleString(locale, text.replace(locale.groupSeparator, "")) * control.multiplier
+            return Number.fromLocaleString(locale, text) * multiplier
         }
 
         Component.onCompleted: {
-            var step = container.stepSize
-            control.decimals = 0
-            control.multiplier = 1
-            while (step < 1 && step != 0) {
-                step = step * 10
-                control.decimals = control.decimals + 1
-                control.multiplier = control.multiplier * 10
+            while (container.stepSize * multiplier < 1 && container.stepSize != 0) {
+                multiplier = multiplier * 10
+                decimals = decimals + 1
             }
-            control.to = container.to * control.multiplier
-            control.from = container.from * control.multiplier
-            control.stepSize = container.stepSize * control.multiplier
-            control.value = container.value * control.multiplier
             setup = false
         }
 
@@ -88,49 +80,23 @@ Item {
             TextInput {
                 id: textInput
                 color: Kirigami.Theme.textColor
-                selectByMouse: true
+                readOnly: !control.editable
                 text: control.textFromValue(control.value, control.locale)
+
                 horizontalAlignment: Qt.AlignRight
                 verticalAlignment: Qt.AlignVCenter
                 validator: control.validator
                 inputMethodHints: Qt.ImhFormattedNumbersOnly
 
-                readOnly: !control.editable
-
-                onTextChanged: {
-                    var newValue = control.valueFromText(textInput.text, control.locale)
-                    if (!isFinite(newValue)) {
-                        return
-                    }
-                    if (newValue > control.to) {
-                        newValue = control.to
-                        control.value = newValue
-                        textInput.text = control.textFromValue(control.value, control.locale)
-                        return
-                    }
-                    if (newValue < control.from) {
-                        newValue = control.from
-                        control.value = newValue
-                        textInput.text = control.textFromValue(control.value, control.locale)
-                        return
-                    }
-                    if (control.value != newValue) {
-                        control.value = newValue
-                        textInput.text = control.textFromValue(control.value, control.locale)
-                    }
+                onTextEdited: {
+                    control.value = control.valueFromText(text, control.locale)
                 }
 
                 width: Math.max(minTextSize.width, maxTextSize.width) + Kirigami.Units.smallSpacing
             }
 
-            Text {
+            Label {
                 id: suffixText
-
-                font: textInput.font
-                color: textInput.color
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignLeft
-
                 visible: text != ''
             }
         }
