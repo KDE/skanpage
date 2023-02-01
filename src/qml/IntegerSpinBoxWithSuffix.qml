@@ -22,7 +22,7 @@ Item {
     implicitWidth: control.width
     implicitHeight: control.implicitHeight
 
-    signal valueModified(var value)
+    signal valueModified(int value)
 
     SpinBox {
         id: control
@@ -51,41 +51,23 @@ Item {
             TextInput {
                 id: textInput
                 color: Kirigami.Theme.textColor
-                selectByMouse: true
+                readOnly: !control.editable
                 text: control.textFromValue(control.value, control.locale)
+
                 horizontalAlignment: Qt.AlignRight
                 verticalAlignment: Qt.AlignVCenter
-
-                readOnly: !control.editable
                 validator: control.validator
                 inputMethodHints: Qt.ImhFormattedNumbersOnly
 
                 onTextEdited: {
-                    var newValue = control.valueFromText(textInput.text.replace(/\D/g, ""), control.locale)
-                    if (!isFinite(newValue)) {
-                        return
-                    }
-                    if (newValue > control.to) {
-                        newValue = control.to
-                    }
-                    if (newValue < control.from) {
-                        newValue = control.from
-                    }
-                    if (control.value != newValue) {
-                        control.value = newValue
-                    }
+                    control.value = control.valueFromText(text, control.locale)
                 }
 
                 width: Math.max(minTextSize.width, maxTextSize.width) + Kirigami.Units.smallSpacing
             }
 
-            Text {
+            Label {
                 id: suffixText
-                font: textInput.font
-                color: textInput.color
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignLeft
-
                 visible: text != ''
             }
         }
