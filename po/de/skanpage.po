@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-02-02 02:54+0000\n"
 "PO-Revision-Date: 2022-09-29 16:02+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -262,7 +262,7 @@ msgstr "Auf Fenstergröße einpassen"
 msgid "Zoom 100%"
 msgstr "Vergrößerung 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF exportieren"
@@ -306,7 +306,7 @@ msgstr ""
 msgid "Save"
 msgstr "Speichern"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -347,47 +347,47 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:84
 #, kde-format
 msgid "Discard All"
 msgstr "Alles verwerfen"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:93
 #, kde-format
 msgid "Save All"
 msgstr "Alles speichern"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgid "Scan"
 msgstr "Scannen"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Scanner-Einstellungen anzeigen"
 
-#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Teilen"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Print"
 msgstr "Drucken"
 
-#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
 #, kde-format
 msgid "About Skanpage"
 msgstr "Über Skanpage"
 
-#: qml/MainWindow.qml:173
+#: qml/MainWindow.qml:174
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage einrichten ..."
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:182
 #, kde-format
 msgid "Quit"
 msgstr "Beenden"

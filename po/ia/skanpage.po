@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-02-02 02:54+0000\n"
 "PO-Revision-Date: 2022-07-15 12:21+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -261,7 +261,7 @@ msgstr "Zoom a adaptar"
 msgid "Zoom 100%"
 msgstr "Zoom 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
 msgstr "Exporta PDF"
@@ -305,7 +305,7 @@ msgstr ""
 msgid "Save"
 msgstr "Salveguarda"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Cancella"
@@ -346,47 +346,47 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:84
 #, kde-format
 msgid "Discard All"
 msgstr "Abandona toto"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:93
 #, kde-format
 msgid "Save All"
 msgstr "Salveguarda toto"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgid "Scan"
 msgstr "Scande"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Monstra Optiones de scanner"
 
-#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Comparti"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Print"
 msgstr "Imprime"
 
-#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
 #, kde-format
 msgid "About Skanpage"
 msgstr "Re Skanpage"
 
-#: qml/MainWindow.qml:173
+#: qml/MainWindow.qml:174
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Configura  Skanpage..."
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:182
 #, kde-format
 msgid "Quit"
 msgstr "Quita"

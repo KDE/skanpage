@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-02-02 02:54+0000\n"
 "PO-Revision-Date: 2023-01-05 19:56+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -261,7 +261,7 @@ msgstr "Ajustement du zoom"
 msgid "Zoom 100%"
 msgstr "Zoom à 100 %"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
 msgstr "Exporter vers le format « PDF »"
@@ -305,7 +305,7 @@ msgstr ""
 msgid "Save"
 msgstr "Enregistrer"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Annuler"
@@ -346,47 +346,47 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:84
 #, kde-format
 msgid "Discard All"
 msgstr "Tout rejeter"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:93
 #, kde-format
 msgid "Save All"
 msgstr "Tout enregistrer"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgid "Scan"
 msgstr "Numériser"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Afficher les options du périphérique de numérisation"
 
-#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Partager"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Print"
 msgstr "Imprimer"
 
-#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
 #, kde-format
 msgid "About Skanpage"
 msgstr "A propos de SKanpage"
 
-#: qml/MainWindow.qml:173
+#: qml/MainWindow.qml:174
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Configurer SKanpage"
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:182
 #, kde-format
 msgid "Quit"
 msgstr "Quitter"

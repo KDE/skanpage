@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-02-02 02:54+0000\n"
 "PO-Revision-Date: 2022-04-07 18:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -265,7 +265,7 @@ msgstr "Oddialiť"
 msgid "Zoom 100%"
 msgstr "Priblížiť 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -310,7 +310,7 @@ msgstr ""
 msgid "Save"
 msgstr "Uložiť všetko"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -353,49 +353,49 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:84
 #, kde-format
 msgid "Discard All"
 msgstr "Zahodiť všetko"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:93
 #, kde-format
 msgid "Save All"
 msgstr "Uložiť všetko"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgid "Scan"
 msgstr "Skenovať"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:128
 #, fuzzy, kde-format
 #| msgid "Scanner Options"
 msgid "Show Scanner Options"
 msgstr "Možnosti skenera"
 
-#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Zdieľať"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Print"
 msgstr "Tlačiť"
 
-#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
 #, kde-format
 msgid "About Skanpage"
 msgstr "O Skanpage"
 
-#: qml/MainWindow.qml:173
+#: qml/MainWindow.qml:174
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "O Skanpage"
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:182
 #, kde-format
 msgid "Quit"
 msgstr "Ukončiť"

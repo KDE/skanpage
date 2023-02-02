@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:50+0000\n"
+"POT-Creation-Date: 2023-02-02 02:54+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -264,7 +264,7 @@ msgstr "Ζουμ με ταίριασμα"
 msgid "Zoom 100%"
 msgstr "Ζουμ 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -309,7 +309,7 @@ msgstr ""
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -351,50 +351,50 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 - Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:84
 #, kde-format
 msgid "Discard All"
 msgstr ""
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:93
 #, fuzzy, kde-format
 #| msgid "Save"
 msgid "Save All"
 msgstr "Αποθήκευση"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:128
 #, fuzzy, kde-format
 #| msgid "Scanner Options"
 msgid "Show Scanner Options"
 msgstr "Επιλογές σαρωτή"
 
-#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
 #, kde-format
 msgid "About Skanpage"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:173
+#: qml/MainWindow.qml:174
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:182
 #, kde-format
 msgid "Quit"
 msgstr "Έξοδος"
