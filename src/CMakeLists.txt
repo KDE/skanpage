@@ -64,13 +64,13 @@ target_link_libraries(skanpage
     Qt::Concurrent
   PRIVATE
     KSane::Core
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::Kirigami2
-    KF5::Crash
-    KF5::ConfigCore
-    KF5::ConfigGui
-    KF5::Purpose
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::Kirigami2
+    KF${KF_MAJOR_VERSION}::Crash
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::ConfigGui
+    KF${KF_MAJOR_VERSION}::Purpose
 )
 
 if (TESSERACT_FOUND AND LEPTONICA_FOUND)

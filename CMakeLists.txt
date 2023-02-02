@@ -35,10 +35,17 @@ include(KDECMakeSettings)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
 include(ECMDeprecationSettings)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+    set(KF_MIN_VERSION "5.240.0")
+    set(KF_MAJOR_VERSION "6")
+else()
+    set(KF_MAJOR_VERSION "5")
+endif()
 
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
 
-find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED
+find_package(KF${KF_MAJOR_VERSION} ${REQUIRED_KF5_VERSION} REQUIRED
     COMPONENTS
         CoreAddons
         I18n
@@ -60,7 +67,7 @@ else()
    message(STATUS "Skanpage will be built without OCR as libraries are missing.")
 endif()
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2
+ecm_set_disabled_deprecation_versions(QT 6.4
     KF 5.101
 )
 

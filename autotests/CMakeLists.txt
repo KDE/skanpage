@@ -21,7 +21,7 @@ ecm_add_test(documentSaverTest.cpp ../src/DocumentSaver.cpp  ../src/OCREngine.cp
         Qt::Test
         Qt::Gui
         Qt::Concurrent
-        KF5::I18n
+        KF${KF_MAJOR_VERSION}::I18n
 )
 
 if (TESSERACT_FOUND AND LEPTONICA_FOUND)
