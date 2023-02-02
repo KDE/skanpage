@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-18 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:02+0000\n"
 "PO-Revision-Date: 2022-11-12 09:36+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -262,7 +262,7 @@ msgstr "Zooma doitu"
 msgid "Zoom 100%"
 msgstr "Zooma % 100"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
 msgstr "Esportatu PDF"
@@ -306,7 +306,7 @@ msgstr ""
 msgid "Save"
 msgstr "Gorde"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
@@ -347,47 +347,47 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:84
 #, kde-format
 msgid "Discard All"
 msgstr "Baztertu dena"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:93
 #, kde-format
 msgid "Save All"
 msgstr "Gorde dena"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgid "Scan"
 msgstr "Eskaneatu"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Erakutsi eskanerraren aukerak"
 
-#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Partekatu"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Print"
 msgstr "Inprimatu"
 
-#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage-ri buruz"
 
-#: qml/MainWindow.qml:173
+#: qml/MainWindow.qml:174
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Konfiguratu Skanpage…"
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:182
 #, kde-format
 msgid "Quit"
 msgstr "Irten"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-18 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:02+0000\n"
 "PO-Revision-Date: 2023-01-18 22:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -260,7 +260,7 @@ msgstr "Sığdır"
 msgid "Zoom 100%"
 msgstr "%​100'e Yakınlaştır"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:101
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF Olarak Dışa Aktar"
@@ -304,7 +304,7 @@ msgstr ""
 msgid "Save"
 msgstr "Kaydet"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:118
+#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "İptal"
@@ -345,47 +345,47 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:84
 #, kde-format
 msgid "Discard All"
 msgstr "Tümünü At"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:93
 #, kde-format
 msgid "Save All"
 msgstr "Tümünü Kaydet"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgid "Scan"
 msgstr "Tara"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Tarayıcı Seçeneklerini Göster"
 
-#: qml/MainWindow.qml:137 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Paylaş"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Print"
 msgstr "Yazdır"
 
-#: qml/MainWindow.qml:166 qml/MainWindow.qml:346
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage Hakkında"
 
-#: qml/MainWindow.qml:173
+#: qml/MainWindow.qml:174
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage'i Yapılandır…"
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:182
 #, kde-format
 msgid "Quit"
 msgstr "Çık"
