@@ -28,9 +28,7 @@ Item {
         id: control
 
         onValueChanged: {
-            if (container.value != value) {
-                container.valueModified(value)
-            }
+            container.valueModified(value)
         }
 
         TextMetrics {
