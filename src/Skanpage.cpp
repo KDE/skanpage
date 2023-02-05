@@ -329,6 +329,10 @@ bool Skanpage::OCRavailable() const
     return d->m_OCREngine.available();
 }
 
+void Skanpage::print() {
+    d->m_documentPrinter.printDocument(d->m_documentHandler.selectPages(QList<int>()));
+}
+
 void Skanpage::cancelScan()
 {
     d->m_ksaneInterface.stopScan();

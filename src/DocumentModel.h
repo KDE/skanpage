@@ -79,6 +79,8 @@ public:
 
     Q_INVOKABLE void exportPDF(const QUrl &fileUrl, const QString &title, const bool useOCR);
 
+    SkanpageUtils::DocumentPages selectPages(QList<int> pageNumbers) const;
+
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -99,9 +101,6 @@ public Q_SLOTS:
     void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
 
 private:
-
-    SkanpageUtils::DocumentPages selectPages(QList<int> pageNumbers);
-
     std::unique_ptr<DocumentModelPrivate> d;
 };
 
