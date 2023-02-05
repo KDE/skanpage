@@ -403,7 +403,7 @@ void DocumentModel::updateSharingFileInformation(const QList<QUrl> &fileUrls)
     Q_EMIT sharingDocumentsCreated(temp);
 }
 
-SkanpageUtils::DocumentPages DocumentModel::selectPages(QList<int> pageNumbers)
+SkanpageUtils::DocumentPages DocumentModel::selectPages(QList<int> pageNumbers) const
 {
     if (pageNumbers.isEmpty()) {
         return d->m_pages;

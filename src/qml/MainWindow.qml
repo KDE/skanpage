@@ -146,7 +146,7 @@ ApplicationWindow {
         text: i18n("Print")
         shortcut: StandardKey.Print
         enabled: skanpage.documentModel.count !== 0
-        onTriggered: skanpage.documentModel.print()
+        onTriggered: skanpage.print()
     }
 
     Action {
