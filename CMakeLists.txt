@@ -58,6 +58,8 @@ find_package(KF${KF_MAJOR_VERSION} ${REQUIRED_KF5_VERSION} REQUIRED
 
 find_package(KSaneCore "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}" REQUIRED)
 
+find_package(KQuickImageEditor REQUIRED)
+
 find_package(Tesseract 4)
 find_package(Leptonica)
 

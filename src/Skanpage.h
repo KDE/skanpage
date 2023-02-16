@@ -10,6 +10,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QImage>
 
 #include <KActionCollection>
 
@@ -49,6 +50,7 @@ class Skanpage : public QObject
     Q_PROPERTY(QString deviceName READ deviceName NOTIFY deviceInfoUpdated)
 
     Q_PROPERTY(QRectF scanArea READ scanArea WRITE setScanArea NOTIFY scanAreaChanged)
+    Q_PROPERTY(QImage previewImage READ previewImage NOTIFY previewImageChanged)
 
 public:
 
@@ -71,6 +73,7 @@ public:
 
     QRectF scanArea() const;
     void setScanArea(QRectF area);
+    QImage previewImage() const;
 
     int progress() const;
     int countDown() const;
@@ -102,6 +105,7 @@ Q_SIGNALS:
     void applicationStateChanged(ApplicationState state);
     void deviceInfoUpdated();
     void scanAreaChanged(const QRectF &area);
+    void previewImageChanged(const QImage& preview);
     void newUserMessage(const QVariant &level, const QVariant &message);
 
 private Q_SLOTS:

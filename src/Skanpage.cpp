@@ -48,6 +48,7 @@ public:
     bool m_scanIsPreview = false;
     QRectF m_maximumScanArea;
     QRectF m_scanArea; // Rectangle from (0, 0) to (1, 1)
+    QImage m_previewImage;
     QString m_deviceName;
     QString m_deviceVendor;
     QString m_deviceModel;
@@ -179,6 +180,11 @@ void Skanpage::setScanArea(QRectF area)
     d->m_ksaneInterface.getOption(Interface::BottomRightYOption)->setValue(area.bottom() * d->m_maximumScanArea.height());
 }
 
+QImage Skanpage::previewImage() const
+{
+    return d->m_previewImage;
+}
+
 void Skanpage::preview()
 {
     if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption)) opt->storeCurrentData();
@@ -230,10 +236,14 @@ Skanpage::ApplicationState Skanpage::applicationState() const
 void Skanpage::imageReady(const QImage &image)
 {
     if (d->m_scanIsPreview) {
+        d->m_ksaneInterface.stopScan(); // Needed for ADF
         finishPreview();
+        d->m_previewImage = image;
+        Q_EMIT previewImageChanged(d->m_previewImage);
+    } else {
+        d->m_documentHandler.addImage(image);
+        d->m_scannedImages++;
     }
-    d->m_documentHandler.addImage(image);
-    d->m_scannedImages++;
 }
 
 void Skanpage::saveScannerOptions()

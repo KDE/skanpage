@@ -10,6 +10,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kquickimageeditor 1.0 as KQuickImageEditor
 import org.kde.skanpage 1.0
 
 Item {
@@ -31,11 +32,22 @@ Item {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
 
-        visible: skanpage.documentModel.count === 0
+        visible: skanpage.documentModel.count === 0 && previewImage.null
 
         icon.name: "document"
 
         text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
+    }
+
+    KQuickImageEditor.ImageItem {
+        id: previewImage
+        visible: skanpage.documentModel.count === 0 && !previewImage.null
+
+        anchors.fill: parent
+        anchors.margins: Kirigami.Units.gridUnit
+        fillMode: KQuickImageEditor.ImageItem.PreserveAspectFit
+        smooth: true // The classic fuzzyness of low res
+        image: skanpage.previewImage
     }
 
     ColumnLayout {
