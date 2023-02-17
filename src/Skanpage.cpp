@@ -490,6 +490,13 @@ void Skanpage::showShortcutsDialog() {
 
 void Skanpage::cancelScan()
 {
+    if (d->m_progress > 0 && d->m_ksaneInterface.scanImage()) {
+        d->m_ksaneInterface.lockScanImage();
+        QImage image = *d->m_ksaneInterface.scanImage();
+        d->m_ksaneInterface.unlockScanImage();
+        imageReady(image);
+    }
+
     d->m_ksaneInterface.stopScan();
 }
 
@@ -507,6 +514,7 @@ void Skanpage::scanningFinished(Interface::ScanStatus status, const QString &str
     d->m_scanInProgress = false;
     checkFinish();
 }
+
 void Skanpage::checkFinish()
 {
     if (d->m_scannedImages == 0 && !d->m_scanInProgress) {
