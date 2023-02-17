@@ -260,6 +260,7 @@ SPDX-License-Identifier: CC0-1.0
   <screenshots>
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/skanpage/skanpage.png</image>
+      <caption>Skanpage main window</caption>
     </screenshot>
   </screenshots>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=skanpage</url>
