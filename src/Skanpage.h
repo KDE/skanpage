@@ -48,6 +48,8 @@ class Skanpage : public QObject
     Q_PROPERTY(QString deviceModel READ deviceModel NOTIFY deviceInfoUpdated)
     Q_PROPERTY(QString deviceName READ deviceName NOTIFY deviceInfoUpdated)
 
+    Q_PROPERTY(QRectF scanArea READ scanArea WRITE setScanArea NOTIFY scanAreaChanged)
+
 public:
 
     enum ApplicationState {
@@ -67,6 +69,9 @@ public:
     QString deviceModel() const;
     QString deviceName() const;
 
+    QRectF scanArea() const;
+    void setScanArea(QRectF area);
+
     int progress() const;
     int countDown() const;
     ApplicationState applicationState() const;
@@ -80,6 +85,7 @@ public:
     SkanpageConfiguration *configuration() const;
     SkanpageState *stateConfiguration() const;
 
+    Q_INVOKABLE void preview();
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
@@ -95,6 +101,7 @@ Q_SIGNALS:
     void optionsChanged();
     void applicationStateChanged(ApplicationState state);
     void deviceInfoUpdated();
+    void scanAreaChanged(const QRectF &area);
     void newUserMessage(const QVariant &level, const QVariant &message);
 
 private Q_SLOTS:
@@ -113,6 +120,8 @@ private:
     void loadScannerOptions();
     void saveScannerOptions();
     void checkFinish();
+    void finishPreview();
+    void setupScanningBounds();
     void signalErrorMessage(const QString &text);
 
     std::unique_ptr<SkanpagePrivate> d;

@@ -105,6 +105,15 @@ ApplicationWindow {
     }
 
     ShortcutsAction {
+        id: previewAction
+        icon.name: "document-preview"
+        text: i18n("Preview")
+        shortcut: "P"
+        enabled: skanpage.applicationState == Skanpage.ReadyForScan
+        onTriggered: skanpage.preview()
+    }
+
+    ShortcutsAction {
         id: scanAction
         icon.name: "document-scan"
         text: i18n("Scan")
@@ -232,13 +241,19 @@ ApplicationWindow {
 
                 Item {
 
-                    implicitWidth: Math.max(children[0].width, children[1].width)
-                    implicitHeight: Math.max(children[0].height, children[1].height)
+                    implicitWidth: Math.max(children[0].implicitWidth, children[1].implicitWidth)
+                    implicitHeight: Math.max(children[0].implicitHeight, children[1].implicitHeight)
 
-                    ToolButton {
-                        anchors.fill: parent
-                        action: scanAction
+                    Row {
                         visible: skanpage.applicationState !== Skanpage.ScanInProgress
+
+                        ToolButton {
+                            action: previewAction
+                        }
+
+                        ToolButton {
+                            action: scanAction
+                        }
                     }
 
                     ToolButton {
@@ -390,6 +405,7 @@ ApplicationWindow {
     GlobalMenu {
        newDocAction: newDocAction
        saveDocAction: saveDocAction
+       previewAction: previewAction
        scanAction: scanAction
        cancelAction: cancelAction
        allOptionsAction: mainView.optionsPanel.allOptionsAction

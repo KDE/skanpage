@@ -45,6 +45,9 @@ public:
     int m_scannedImages = 0;
     Skanpage::ApplicationState m_state = Skanpage::SearchingForDevices;
     bool m_scanInProgress = false;
+    bool m_scanIsPreview = false;
+    QRectF m_maximumScanArea;
+    QRectF m_scanArea; // Rectangle from (0, 0) to (1, 1)
     QString m_deviceName;
     QString m_deviceVendor;
     QString m_deviceModel;
@@ -125,6 +128,92 @@ QString Skanpage::deviceName() const
     return d->m_deviceName;
 }
 
+void Skanpage::setupScanningBounds()
+{
+    Option *tlx = d->m_ksaneInterface.getOption(Interface::TopLeftXOption);
+    Option *tly = d->m_ksaneInterface.getOption(Interface::TopLeftYOption);
+    Option *brx = d->m_ksaneInterface.getOption(Interface::BottomRightXOption);
+    Option *bry = d->m_ksaneInterface.getOption(Interface::BottomRightYOption);
+
+    if (tlx && tly && brx && bry) {
+        QVariant tlxMin = tlx->minimumValue(), tlyMin = tly->minimumValue();
+        QVariant brxMax = brx->maximumValue(), bryMax = bry->maximumValue();
+        if (tlxMin.isValid() && tlyMin.isValid() && brxMax.isValid() && bryMax.isValid()) {
+            d->m_maximumScanArea.setCoords(tlxMin.toReal(), tlyMin.toReal(), brxMax.toReal(), bryMax.toReal());
+            d->m_scanArea.setCoords(tlx->value().toReal() / d->m_maximumScanArea.width(),
+                                    tly->value().toReal() / d->m_maximumScanArea.height(),
+                                    brx->value().toReal() / d->m_maximumScanArea.width(),
+                                    bry->value().toReal() / d->m_maximumScanArea.height());
+
+            connect(tlx, &Option::valueChanged, this, [&](const QVariant &value){
+                d->m_scanArea.setLeft(value.toReal() / d->m_maximumScanArea.width());
+                Q_EMIT scanAreaChanged(d->m_scanArea);
+            });
+            connect(tly, &Option::valueChanged, this, [&](const QVariant &value){
+                d->m_scanArea.setTop(value.toReal() / d->m_maximumScanArea.height());
+                Q_EMIT scanAreaChanged(d->m_scanArea);
+            });
+            connect(brx, &Option::valueChanged, this, [&](const QVariant &value){
+                d->m_scanArea.setRight(value.toReal() / d->m_maximumScanArea.width());
+                Q_EMIT scanAreaChanged(d->m_scanArea);
+            });
+            connect(bry, &Option::valueChanged, this, [&](const QVariant &value){
+                d->m_scanArea.setBottom(value.toReal() / d->m_maximumScanArea.height());
+                Q_EMIT scanAreaChanged(d->m_scanArea);
+            });
+        }
+    }
+}
+
+QRectF Skanpage::scanArea() const
+{
+    return d->m_scanArea;
+}
+
+void Skanpage::setScanArea(QRectF area)
+{
+    if (area == d->m_scanArea) return;
+    d->m_ksaneInterface.getOption(Interface::TopLeftXOption)->setValue(area.left() * d->m_maximumScanArea.width());
+    d->m_ksaneInterface.getOption(Interface::TopLeftYOption)->setValue(area.top() * d->m_maximumScanArea.height());
+    d->m_ksaneInterface.getOption(Interface::BottomRightXOption)->setValue(area.right() * d->m_maximumScanArea.width());
+    d->m_ksaneInterface.getOption(Interface::BottomRightYOption)->setValue(area.bottom() * d->m_maximumScanArea.height());
+}
+
+void Skanpage::preview()
+{
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption)) opt->storeCurrentData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption)) opt->storeCurrentData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption)) opt->storeCurrentData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption)) opt->storeCurrentData();
+    if (d->m_maximumScanArea.isValid()) setScanArea(QRectF(0.0, 0.0, 1.0, 1.0));
+
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::ResolutionOption)) {
+        opt->storeCurrentData();
+        if (QVariant minRes = opt->minimumValue(); minRes.isValid()) {
+            if (opt->type() == Option::TypeValueList) opt->setValue(minRes);
+            else opt->setValue(minRes.toInt() < 25 ? 25 : minRes);
+        }
+    }
+    if (Option* opt = d->m_ksaneInterface.getOption(Interface::PreviewOption)) opt->setValue(true);
+
+    d->m_scanIsPreview = true;
+
+    startScan();
+}
+
+void Skanpage::finishPreview()
+{
+    if (Option* opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption)) opt->restoreSavedData();
+    if (Option* opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption)) opt->restoreSavedData();
+    if (Option* opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption)) opt->restoreSavedData();
+    if (Option* opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption)) opt->restoreSavedData();
+
+    if (Option* opt = d->m_ksaneInterface.getOption(Interface::ResolutionOption)) opt->restoreSavedData();
+    if (Option* opt = d->m_ksaneInterface.getOption(Interface::PreviewOption)) opt->setValue(false);
+
+    d->m_scanIsPreview = false;
+}
+
 void Skanpage::startScan()
 {
     d->m_ksaneInterface.startScan();
@@ -140,6 +229,9 @@ Skanpage::ApplicationState Skanpage::applicationState() const
 
 void Skanpage::imageReady(const QImage &image)
 {
+    if (d->m_scanIsPreview) {
+        finishPreview();
+    }
     d->m_documentHandler.addImage(image);
     d->m_scannedImages++;
 }
@@ -226,6 +318,8 @@ void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &dev
 
     // load saved options
     loadScannerOptions();
+
+    setupScanningBounds();
 
     d->m_state = ReadyForScan;
     Q_EMIT applicationStateChanged(d->m_state);

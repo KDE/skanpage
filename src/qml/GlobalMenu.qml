@@ -14,6 +14,7 @@ MenuBar {
     property var printAction
     property var shareAction
     property var quitAction
+    property var previewAction
     property var scanAction
     property var cancelAction
     property var showOptionsAction
@@ -65,6 +66,13 @@ MenuBar {
 
     Menu {
         title: i18nc("menu category", "Scan")
+
+        MenuItem {
+            text: previewAction.text
+            iconName: previewAction.icon.name
+            onTriggered: previewAction.trigger()
+            enabled: previewAction.enabled
+        }
 
         MenuItem {
             text: scanAction.text
