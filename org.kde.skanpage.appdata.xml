@@ -40,7 +40,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="uk">Skanpage</name>
   <name xml:lang="x-test">xxSkanpagexx</name>
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
-  <summary>Simple, multi-page scanning application</summary>
+  <summary>Multi-page document scanning application</summary>
   <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
   <summary xml:lang="bg">Просто за употреба приложение с възможност за сканиране на много страници</summary>
   <summary xml:lang="ca">Aplicació senzilla d'escaneig multipàgina</summary>
@@ -71,7 +71,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="x-test">xxSimple, multi-page scanning applicationxx</summary>
   <summary xml:lang="zh-CN">简易多页扫描应用程序</summary>
   <description>
-    <p>Skanpage is a simple scanning application designed for multi-page scanning and saving of documents and images.</p>
+    <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
     <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لإجراء مسح ضوئي متعدد الصفحات وحفظ الصور والمستندات.</p>
     <p xml:lang="bg">Skanpage е просто приложение за сканиране, предназначено за сканиране на много страници и запазване на документи и изображения.</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig dissenyada per a l'escaneig multipàgina i per al desament de documents i imatges.</p>
@@ -194,7 +194,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="uk">Можливість налаштовування параметрів сканування</li>
       <li xml:lang="x-test">xxConfigurable options for scanning devicexx</li>
       <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
-      <li>Reordering, rotation and deletion of scanned pages</li>
+      <li>Reordering, rotation, and deletion of scanned pages</li>
       <li xml:lang="ar">إعادة ترتيب وتدوير وحذف الصفحات الممسوحة ضوئيًا</li>
       <li xml:lang="bg">Пренареждане, завъртане и изтриване на сканирани страници</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>

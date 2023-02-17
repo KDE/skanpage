@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: CC0-1.0
 [Desktop Entry]
 Categories=Qt;KDE;Graphics;Scanning;
-Comment=Scan and save images
+Comment=Scan and save multi-page documents
 Comment[ar]=امسح الصّور ضوئيًّا واحفظها
 Comment[bg]=Сканиране и запазване на изображения
 Comment[ca]=Escaneja i desa imatges
@@ -37,7 +37,7 @@ Comment[uk]=Сканування і збереження зображень
 Comment[x-test]=xxScan and save imagesxx
 Comment[zh_CN]=扫描和保存图像
 Exec=skanpage
-GenericName=Image Scanning Application
+GenericName=Multi-Page Document Scanning Application
 GenericName[ar]=تطبيق لمسح الصّور ضوئيًّا
 GenericName[bg]=Приложение за сканиране на изображения
 GenericName[ca]=Aplicació de digitalització d'imatges
