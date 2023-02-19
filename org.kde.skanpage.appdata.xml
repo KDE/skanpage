@@ -40,9 +40,24 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="uk">Skanpage</name>
   <name xml:lang="x-test">xxSkanpagexx</name>
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
+  <name xml:lang="zh-TW">Skanpage</name>
   <summary>Multi-page document scanning application</summary>
+  <summary xml:lang="ca">Aplicació d'escaneig de documents multipàgina</summary>
+  <summary xml:lang="es">Aplicación para escanear documentos multipágina</summary>
+  <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპლიკაცია</summary>
+  <summary xml:lang="nl">Scanprogramma voor document met meerdere pagina's</summary>
+  <summary xml:lang="tr">Çok sayfalı belge tarama uygulaması</summary>
+  <summary xml:lang="uk">Програма для сканування послідовностей сторінок</summary>
+  <summary xml:lang="x-test">xxMulti-page document scanning applicationxx</summary>
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
+    <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i desar documents i imatges d'una pàgina.</p>
+    <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla optimizada para escanear documentos con varias páginas. También puede escanear y guardar imágenes y documentos de una sola página.</p>
+    <p xml:lang="ka">Skanpage არის მარტივი სკანირების აპლიკაცია, რომელიც შექმნილია როგორც მრავალგვერდიანი, ისე ერთგვერდიანი დოკუმენტებისა და სურათების სკანირებისთვის და შესანახად.</p>
+    <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma geoptimaliseerd voor scannen van documenten met meerdere pagina's. Het kan ook documenten en afbeeldingen met een enkele pagina scannen en opslaan.</p>
+    <p xml:lang="tr">Skanpage, çok sayfalı belgeleri taramak için eniyilenmiş yalın bir tarama uygulamasıdır. Ayrıca tek sayfalı belgeleri veya görselleri de tarayıp kaydedebilir.</p>
+    <p xml:lang="uk">Skanpage — проста програма для сканування, яку розроблено для сканування послідовностей багатосторінкових документів. Вона також може зберігати односторінкові документи та зображення.</p>
+    <p xml:lang="x-test">xxSkanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.xx</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
     <p xml:lang="bg">Функции:</p>
@@ -74,6 +89,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="uk">Можливості:</p>
     <p xml:lang="x-test">xxFeatures:xx</p>
     <p xml:lang="zh-CN">程序功能：</p>
+    <p xml:lang="zh-TW">功能：</p>
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
       <li xml:lang="ar">المسح الضوئي من الماسحات الضوئية المسطحة ووحدة تغذية المستندات التلقائية</li>
@@ -105,6 +121,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="uk">Сканування з планшетних сканерів та сканерів із автоматичною подачею документів</li>
       <li xml:lang="x-test">xxScanning from flatbed and ADF scannersxx</li>
       <li xml:lang="zh-CN">支持平板式扫描仪和自动送纸器扫描仪</li>
+      <li xml:lang="zh-TW">從平台式或自動進紙式掃描器進行掃描</li>
       <li>Configurable options for scanning device</li>
       <li xml:lang="ar">خيارات قابلة للضبط لمسح الجهاز</li>
       <li xml:lang="bg">Конфигуриране на сканиращи устройства</li>
@@ -136,7 +153,15 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="uk">Можливість налаштовування параметрів сканування</li>
       <li xml:lang="x-test">xxConfigurable options for scanning devicexx</li>
       <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
+      <li xml:lang="zh-TW">掃描裝置的可設定選項</li>
       <li>Reordering, rotation, and deletion of scanned pages</li>
+      <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
+      <li xml:lang="es">Reordenar, rotar y borrar páginas escaneadas</li>
+      <li xml:lang="ka">სკანირებული გვერდების გადალაგება, მობრუნება და წაშლა</li>
+      <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
+      <li xml:lang="tr">Taranan sayfaların yeniden sıralanması, döndürülmesi ve silinmesi</li>
+      <li xml:lang="uk">Переупорядковування, обертання та вилучення сканованих сторінок</li>
+      <li xml:lang="x-test">xxReordering, rotation, and deletion of scanned pagesxx</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
       <li xml:lang="bg">Записване в многостранични PDF документи и файлове с изображения</li>
@@ -168,12 +193,21 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="uk">Збереження багатосторінкових документів PDF та файлів зображень</li>
       <li xml:lang="x-test">xxSaving to multi-page PDF documents and image filesxx</li>
       <li xml:lang="zh-CN">保存为多页 PDF 文档和图像文件</li>
+      <li xml:lang="zh-TW">儲存到多頁 PDF 文件或影像檔</li>
     </ul>
   </description>
   <screenshots>
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/skanpage/skanpage.png</image>
       <caption>Skanpage main window</caption>
+      <caption xml:lang="ca">Finestra principal de l'Skanpage</caption>
+      <caption xml:lang="es">Ventana principal de Skanpage</caption>
+      <caption xml:lang="ka">Skanpage-ის მთავარი ფანჯარა</caption>
+      <caption xml:lang="nl">Hoofdvenster van Skanpage</caption>
+      <caption xml:lang="tr">Skanpage ana penceresi</caption>
+      <caption xml:lang="uk">Головне вікно Skanpage</caption>
+      <caption xml:lang="x-test">xxSkanpage main windowxx</caption>
+      <caption xml:lang="zh-TW">Skanpage 主視窗</caption>
     </screenshot>
   </screenshots>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=skanpage</url>
