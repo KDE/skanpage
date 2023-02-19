@@ -34,7 +34,7 @@ Window {
         anchors.margins: Kirigami.Units.smallSpacing
         columns: 3
 
-        Text {
+        Label {
             text: i18n("Title:")
             Layout.alignment: Qt.AlignRight
         }
@@ -50,7 +50,7 @@ Window {
             height: 1
         }
 
-        Text {
+        Label {
             text: i18n("File:")
             Layout.alignment: Qt.AlignRight
         }
@@ -92,7 +92,7 @@ Window {
             height: 1
         }
 
-        Text {
+        Label {
             visible: skanpage.OCRavailable()
             text: i18n("Languages:")
         }
