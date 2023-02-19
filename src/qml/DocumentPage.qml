@@ -8,6 +8,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kquickimageeditor 1.0 as KQuickImageEditor
@@ -26,6 +27,10 @@ Item {
         }
     }
 
+    function getScanArea() {
+        return Qt.rect(selection.selectionX / selection.width, selection.selectionY / selection.height, selection.selectionWidth / selection.width, selection.selectionHeight / selection.height)
+    }
+
     Kirigami.PlaceholderMessage {
         id: emptyDocumentMessage
 
@@ -42,12 +47,56 @@ Item {
     KQuickImageEditor.ImageItem {
         id: previewImage
         visible: skanpage.documentModel.count === 0 && !previewImage.null
+        enabled: visible
 
         anchors.fill: parent
         anchors.margins: Kirigami.Units.gridUnit
         fillMode: KQuickImageEditor.ImageItem.PreserveAspectFit
         smooth: true // The classic fuzzyness of low res
         image: skanpage.previewImage
+
+        KQuickImageEditor.SelectionTool {
+            id: selection
+            visible: skanpage.scanArea.width > 0
+            enabled: visible
+            x: previewImage.horizontalPadding + 1
+            y: previewImage.verticalPadding + 1
+            width: previewImage.paintedWidth
+            height: previewImage.paintedHeight
+
+            property bool pressed: pressedHandle || selectionArea.pressed
+            onPressedChanged: if (!pressed) skanpage.scanArea = getScanArea()
+
+            // A shortcut for scanning the full area seems useful
+            selectionArea.onDoubleClicked: { // It is updated then releasing the mouse
+                selectionX = 0; selectionY = 0; selectionWidth = width; selectionHeight = height
+            }
+            // Binding types: to keep the selection area propertional to the image, not constant pixel values
+            Binding on selectionX {
+                value: skanpage.scanArea.x * selection.width
+                when: !selection.pressed; restoreMode: Binding.RestoreNone
+            }
+            Binding on selectionY {
+                value: skanpage.scanArea.y * selection.height
+                when: !selection.pressed; restoreMode: Binding.RestoreNone
+            }
+            Binding on selectionWidth {
+                value: skanpage.scanArea.width * selection.width
+                when: !selection.pressed; restoreMode: Binding.RestoreNone
+            }
+            Binding on selectionHeight {
+                value: skanpage.scanArea.height * selection.height
+                when: !selection.pressed; restoreMode: Binding.RestoreNone
+            }
+
+            KQuickImageEditor.CropBackground {
+                anchors.fill: parent
+                insideX: selection.selectionX
+                insideY: selection.selectionY
+                insideWidth: selection.selectionWidth
+                insideHeight: selection.selectionHeight
+            }
+        }
     }
 
     ColumnLayout {

@@ -119,7 +119,10 @@ ApplicationWindow {
         text: i18n("Scan")
         shortcut: "SPACE"
         enabled: skanpage.applicationState == Skanpage.ReadyForScan
-        onTriggered: skanpage.startScan()
+        onTriggered: {
+            skanpage.scanArea = mainView.activeDocument.getScanArea()
+            skanpage.startScan()
+        }
     }
 
     Action {

@@ -20,6 +20,7 @@ Item {
     property alias splitViewItemWidth: scrollView.width
     property bool showOptions: true
     property alias optionsPanel: optionsPanel
+    property alias activeDocument: activeDocument
 
     signal saveSinglePage(int pageNumber)
 
