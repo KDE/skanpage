@@ -47,6 +47,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ca-valencia">Aplicació d'escaneig de documents multipàgina</summary>
   <summary xml:lang="cs">Aplikace pro vícestránkové skenování</summary>
   <summary xml:lang="es">Aplicación para escanear documentos multipágina</summary>
+  <summary xml:lang="eu">Orri anitzeko dokumentua eskaneatzeko aplikazioa</summary>
   <summary xml:lang="fr">Application de numérisation de documents composés de plusieurs pages</summary>
   <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპლიკაცია</summary>
   <summary xml:lang="nl">Scanprogramma voor document met meerdere pagina's</summary>
@@ -60,6 +61,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i desar documents i imatges d'una pàgina.</p>
     <p xml:lang="ca-valencia">Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i guardar documents i imatges d'una pàgina.</p>
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla optimizada para escanear documentos con varias páginas. También puede escanear y guardar imágenes y documentos de una sola página.</p>
+    <p xml:lang="eu">«Skanpage» orri anitzeko dokumentuak eskaneatzeko optimizatuta dagoen aplikazio bat da. Orri bakarreko dokumentuak eta irudiak ere eskaneatu eta gorde ditzake.</p>
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation de documents composés de plusieurs pages et l'enregistrement de documents et d'images sur une unique page.</p>
     <p xml:lang="ka">Skanpage არის მარტივი სკანირების აპლიკაცია, რომელიც შექმნილია როგორც მრავალგვერდიანი, ისე ერთგვერდიანი დოკუმენტებისა და სურათების სკანირებისთვის და შესანახად.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma geoptimaliseerd voor scannen van documenten met meerdere pagina's. Het kan ook documenten en afbeeldingen met een enkele pagina scannen en opslaan.</p>
@@ -168,6 +170,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="es">Reordenar, rotar y borrar páginas escaneadas</li>
+      <li xml:lang="eu">Eskaneatutako orrialdeak berrantolatzea, biratzea eta kentzea</li>
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
       <li xml:lang="ka">სკანირებული გვერდების გადალაგება, მობრუნება და წაშლა</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
@@ -218,6 +221,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ca-valencia">Finestra principal d'Skanpage</caption>
       <caption xml:lang="cs">Hlavní okno Skanpage</caption>
       <caption xml:lang="es">Ventana principal de Skanpage</caption>
+      <caption xml:lang="eu">«Skanpage» leiho nagusia</caption>
       <caption xml:lang="fr">Fenêtre principale de Skanpage</caption>
       <caption xml:lang="ka">Skanpage-ის მთავარი ფანჯარა</caption>
       <caption xml:lang="nl">Hoofdvenster van Skanpage</caption>
