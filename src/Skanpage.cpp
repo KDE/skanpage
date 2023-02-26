@@ -48,6 +48,7 @@ public:
     bool m_scanIsPreview = false;
     QRectF m_maximumScanArea;
     QRectF m_scanArea; // Rectangle from (0, 0) to (1, 1)
+    bool m_scanAreaConnectionsDone = false;
     QImage m_previewImage;
     QString m_deviceName;
     QString m_deviceVendor;
@@ -131,12 +132,17 @@ QString Skanpage::deviceName() const
 
 void Skanpage::setupScanningBounds()
 {
+    d->m_scanArea = QRectF();
+
     Option *tlx = d->m_ksaneInterface.getOption(Interface::TopLeftXOption);
     Option *tly = d->m_ksaneInterface.getOption(Interface::TopLeftYOption);
     Option *brx = d->m_ksaneInterface.getOption(Interface::BottomRightXOption);
     Option *bry = d->m_ksaneInterface.getOption(Interface::BottomRightYOption);
 
-    if (tlx && tly && brx && bry) {
+    if (tlx && tly && brx && bry &&
+        tlx->state() == Option::StateActive && tly->state() == Option::StateActive &&
+        brx->state() == Option::StateActive && bry->state() == Option::StateActive
+    ) {
         QVariant tlxMin = tlx->minimumValue(), tlyMin = tly->minimumValue();
         QVariant brxMax = brx->maximumValue(), bryMax = bry->maximumValue();
         if (tlxMin.isValid() && tlyMin.isValid() && brxMax.isValid() && bryMax.isValid()) {
@@ -146,24 +152,32 @@ void Skanpage::setupScanningBounds()
                                     brx->value().toReal() / d->m_maximumScanArea.width(),
                                     bry->value().toReal() / d->m_maximumScanArea.height());
 
-            connect(tlx, &Option::valueChanged, this, [&](const QVariant &value){
-                d->m_scanArea.setLeft(value.toReal() / d->m_maximumScanArea.width());
-                Q_EMIT scanAreaChanged(d->m_scanArea);
-            });
-            connect(tly, &Option::valueChanged, this, [&](const QVariant &value){
-                d->m_scanArea.setTop(value.toReal() / d->m_maximumScanArea.height());
-                Q_EMIT scanAreaChanged(d->m_scanArea);
-            });
-            connect(brx, &Option::valueChanged, this, [&](const QVariant &value){
-                d->m_scanArea.setRight(value.toReal() / d->m_maximumScanArea.width());
-                Q_EMIT scanAreaChanged(d->m_scanArea);
-            });
-            connect(bry, &Option::valueChanged, this, [&](const QVariant &value){
-                d->m_scanArea.setBottom(value.toReal() / d->m_maximumScanArea.height());
-                Q_EMIT scanAreaChanged(d->m_scanArea);
-            });
+            if (!d->m_scanAreaConnectionsDone) {
+                connect(tlx, &Option::valueChanged, this, [&](const QVariant &value){
+                    d->m_scanArea.setLeft(value.toReal() / d->m_maximumScanArea.width());
+                    Q_EMIT scanAreaChanged(d->m_scanArea);
+                });
+                connect(tly, &Option::valueChanged, this, [&](const QVariant &value){
+                    d->m_scanArea.setTop(value.toReal() / d->m_maximumScanArea.height());
+                    Q_EMIT scanAreaChanged(d->m_scanArea);
+                });
+                connect(brx, &Option::valueChanged, this, [&](const QVariant &value){
+                    d->m_scanArea.setRight(value.toReal() / d->m_maximumScanArea.width());
+                    Q_EMIT scanAreaChanged(d->m_scanArea);
+                });
+                connect(bry, &Option::valueChanged, this, [&](const QVariant &value){
+                    d->m_scanArea.setBottom(value.toReal() / d->m_maximumScanArea.height());
+                    Q_EMIT scanAreaChanged(d->m_scanArea);
+                });
+                d->m_scanAreaConnectionsDone = true;
+            }
         }
+        connect(tlx, &Option::optionReloaded, this, &Skanpage::setupScanningBounds, Qt::UniqueConnection);
+        connect(tly, &Option::optionReloaded, this, &Skanpage::setupScanningBounds, Qt::UniqueConnection);
+        connect(brx, &Option::optionReloaded, this, &Skanpage::setupScanningBounds, Qt::UniqueConnection);
+        connect(bry, &Option::optionReloaded, this, &Skanpage::setupScanningBounds, Qt::UniqueConnection);
     }
+    Q_EMIT scanAreaChanged(d->m_scanArea);
 }
 
 QRectF Skanpage::scanArea() const
@@ -329,6 +343,7 @@ void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &dev
     // load saved options
     loadScannerOptions();
 
+    d->m_scanAreaConnectionsDone = false;
     setupScanningBounds();
 
     d->m_state = ReadyForScan;
