@@ -54,6 +54,7 @@ Item {
                 SplitView.preferredWidth: splitViewPreferredWidth
                 SplitView.minimumWidth: splitView.width / 10
                 onSaveSinglePage: mainContent.saveSinglePage(pageNumber)
+                onShowScannedPage: activeDocument.showPreview = false
             }
 
             DocumentPage {

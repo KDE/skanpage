@@ -110,7 +110,10 @@ ApplicationWindow {
         text: i18n("Preview")
         shortcut: "P"
         enabled: skanpage.applicationState == Skanpage.ReadyForScan
-        onTriggered: skanpage.preview()
+        onTriggered: {
+            mainView.activeDocument.showPreview = true
+            skanpage.preview()
+        }
     }
 
     ShortcutsAction {
@@ -120,6 +123,7 @@ ApplicationWindow {
         shortcut: "SPACE"
         enabled: skanpage.applicationState == Skanpage.ReadyForScan
         onTriggered: {
+            mainView.activeDocument.showPreview = false
             skanpage.scanArea = mainView.activeDocument.getScanArea()
             skanpage.startScan()
         }

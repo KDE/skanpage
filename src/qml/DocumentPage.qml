@@ -27,8 +27,34 @@ Item {
         }
     }
 
+    property bool showPreview: false
+
     function getScanArea() {
         return Qt.rect(selection.selectionX / selection.width, selection.selectionY / selection.height, selection.selectionWidth / selection.width, selection.selectionHeight / selection.height)
+    }
+
+    component CornerCloseButton: RoundButton {
+        visible: action ? action.enabled : true
+        anchors.right: parent.right
+        anchors.top: parent.top
+        readonly property bool needSpace: parent.height < implicitHeight + 2*Kirigami.Units.smallSpacing ||
+                                          parent.width  < implicitWidth  + 2*Kirigami.Units.smallSpacing
+        anchors.margins: needSpace ? 0 : Kirigami.Units.smallSpacing
+        display: AbstractButton.IconOnly
+        Kirigami.Theme.colorSet: Kirigami.Theme.Button
+        hoverEnabled: true
+        opacity: hovered ? 1.0 : 0.5
+        width: needSpace ? Math.min(implicitWidth, parent.width) : implicitWidth
+        height: needSpace ? Math.min(implicitHeight, parent.height) : implicitHeight
+    }
+
+    Action {
+        id: showPreviewAction
+        icon.name: "dialog-close"
+        text: i18n("Show Preview")
+        shortcut: "Esc"
+        enabled: !previewImage.null
+        onTriggered: showPreview = true
     }
 
     Kirigami.PlaceholderMessage {
@@ -37,7 +63,7 @@ Item {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
 
-        visible: skanpage.documentModel.count === 0 && previewImage.null
+        visible: skanpage.documentModel.count === 0 && !showPreview && previewImage.null
 
         icon.name: "document"
 
@@ -46,7 +72,7 @@ Item {
 
     KQuickImageEditor.ImageItem {
         id: previewImage
-        visible: skanpage.documentModel.count === 0 && !previewImage.null
+        visible: (skanpage.documentModel.count === 0 || showPreview) && !previewImage.null
         enabled: visible
 
         anchors.fill: parent
@@ -106,7 +132,7 @@ Item {
 
         spacing: 0
 
-        visible: skanpage.documentModel.count > 0
+        visible: skanpage.documentModel.count > 0 && (!showPreview || previewImage.null)
 
         ScrollView {
             id: imageViewer
@@ -140,6 +166,13 @@ Item {
 
                     rotation: skanpage.documentModel.activePageRotation
                     transformOrigin: Item.Center
+
+                    CornerCloseButton {
+                        action: showPreviewAction
+                        ToolTip.visible: hovered
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.text: i18n("Show the preview image")
+                    }
                 }
             }
         }

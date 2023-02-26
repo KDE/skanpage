@@ -16,6 +16,7 @@ ColumnLayout {
     id: documentList
 
     signal saveSinglePage(int pageNumber)
+    signal showScannedPage()
 
     spacing: 0
 
@@ -91,7 +92,10 @@ ColumnLayout {
                     hoverEnabled: true
                     acceptedButtons: Qt.LeftButton
 
-                    onClicked: skanpage.documentModel.activePageIndex = index
+                    onClicked: {
+                        skanpage.documentModel.activePageIndex = index
+                        showScannedPage()
+                    }
 
                     DropArea {
                         anchors.fill: parent
