@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.7
+import QtQuick 2.15
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
 
@@ -44,6 +44,8 @@ Item {
                     height: parent.height
                     width: Kirigami.Units.smallSpacing / 2
                     anchors.centerIn: parent
+
+                    HoverHandler { cursorShape: Qt.SizeHorCursor }
                 }
             }
 
@@ -61,6 +63,7 @@ Item {
                 id: activeDocument
 
                 SplitView.fillWidth: true
+                SplitView.minimumWidth: splitView.width / 5
                 SplitView.fillHeight: true
 
                 visible: skanpage.applicationState === Skanpage.ReadyForScan
