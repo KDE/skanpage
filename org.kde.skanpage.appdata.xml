@@ -42,10 +42,12 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
   <name xml:lang="zh-TW">Skanpage</name>
   <summary>Multi-page document scanning application</summary>
+  <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
   <summary xml:lang="bg">Приложение с възможност за сканиране на много страници</summary>
   <summary xml:lang="ca">Aplicació d'escaneig de documents multipàgina</summary>
   <summary xml:lang="ca-valencia">Aplicació d'escaneig de documents multipàgina</summary>
   <summary xml:lang="cs">Aplikace pro vícestránkové skenování</summary>
+  <summary xml:lang="en-GB">Multi-page document scanning application</summary>
   <summary xml:lang="es">Aplicación para escanear documentos multipágina</summary>
   <summary xml:lang="eu">Orri anitzeko dokumentua eskaneatzeko aplikazioa</summary>
   <summary xml:lang="fr">Application de numérisation de documents composés de plusieurs pages</summary>
@@ -61,9 +63,11 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="zh-CN">多页文档扫描应用</summary>
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
+    <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لمسح المستندات متعددة الصفحات ضوئياً. يمكنه أيضا مسح وحفظ الصور والمستندات ذات الصفحة الواحدة.</p>
     <p xml:lang="bg">Skanpage е просто приложение за сканиране, оптимизирано за сканиране на много страници. То също така може да сканира и запазва  документи с една страница и изображения .</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i desar documents i imatges d'una pàgina.</p>
     <p xml:lang="ca-valencia">Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i guardar documents i imatges d'una pàgina.</p>
+    <p xml:lang="en-GB">Skanpage is a simple scanning application optimised for multi-page document scanning. It can also scan and save single-page documents and images.</p>
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla optimizada para escanear documentos con varias páginas. También puede escanear y guardar imágenes y documentos de una sola página.</p>
     <p xml:lang="eu">«Skanpage» orri anitzeko dokumentuak eskaneatzeko optimizatuta dagoen aplikazio bat da. Orri bakarreko dokumentuak eta irudiak ere eskaneatu eta gorde ditzake.</p>
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation de documents composés de plusieurs pages et l'enregistrement de documents et d'images sur une unique page.</p>
@@ -174,9 +178,11 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
       <li xml:lang="zh-TW">掃描裝置的可設定選項</li>
       <li>Reordering, rotation, and deletion of scanned pages</li>
+      <li xml:lang="ar">إعادة ترتيب وتدوير وحذف الصفحات الممسوحة ضوئيًا</li>
       <li xml:lang="bg">Пренареждане, завъртане и изтриване на сканирани страници</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
+      <li xml:lang="en-GB">Reordering, rotation, and deletion of scanned pages</li>
       <li xml:lang="es">Reordenar, rotar y borrar páginas escaneadas</li>
       <li xml:lang="eu">Eskaneatutako orrialdeak berrantolatzea, biratzea eta kentzea</li>
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
@@ -228,10 +234,12 @@ SPDX-License-Identifier: CC0-1.0
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/skanpage/skanpage.png</image>
       <caption>Skanpage main window</caption>
+      <caption xml:lang="ar">نافذة ماسح الصفحات الرئيسة</caption>
       <caption xml:lang="bg">Основният прозорец на Skanpage</caption>
       <caption xml:lang="ca">Finestra principal de l'Skanpage</caption>
       <caption xml:lang="ca-valencia">Finestra principal d'Skanpage</caption>
       <caption xml:lang="cs">Hlavní okno Skanpage</caption>
+      <caption xml:lang="en-GB">Skanpage main window</caption>
       <caption xml:lang="es">Ventana principal de Skanpage</caption>
       <caption xml:lang="eu">«Skanpage» leiho nagusia</caption>
       <caption xml:lang="fr">Fenêtre principale de Skanpage</caption>
