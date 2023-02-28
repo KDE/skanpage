@@ -4,10 +4,12 @@
 [Desktop Entry]
 Categories=Qt;KDE;Graphics;Scanning;
 Comment=Scan and save multi-page documents
+Comment[ar]=امسح المستندات متعددة الصفحات ضوئيًّا واحفظها
 Comment[bg]=Сканиране и запазване на многостранични документи
 Comment[ca]=Escaneja i desa documents multipàgina
 Comment[ca@valencia]=Escaneja i guarda documents multipàgina
 Comment[cs]=Skenujte a ukládejte dokumenty o více stránkách
+Comment[en_GB]=Scan and save multi-page documents
 Comment[es]=Escanear y guardar documentos multipágina
 Comment[eu]=Eskaneatu eta gorde orri anitzeko dokumentuak
 Comment[fr]=Numériser et enregistrer les documents composés de plusieurs pages 
@@ -24,10 +26,12 @@ Comment[zh_CN]=扫描和保存多页文档
 Comment[zh_TW]=掃描並儲存多頁文件
 Exec=skanpage
 GenericName=Multi-Page Document Scanning Application
+GenericName[ar]=تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا
 GenericName[bg]=Приложение за сканиране на многостранични документи
 GenericName[ca]=Aplicació d'escaneig de documents multipàgina
 GenericName[ca@valencia]=Aplicació d'escaneig de documents multipàgina
 GenericName[cs]=Aplikace pro vícestránkové skenování
+GenericName[en_GB]=Multi-Page Document Scanning Application
 GenericName[es]=Aplicación para escanear documentos multipágina
 GenericName[eu]=Orri anitzeko dokumentuak eskaneatzeko aplikazioa
 GenericName[fr]=Application de numérisation de documents composés de plusieurs pages
