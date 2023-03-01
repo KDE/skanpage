@@ -48,6 +48,8 @@ public:
     bool m_scanIsPreview = false;
     QRectF m_maximumScanArea;
     QRectF m_scanArea; // Rectangle from (0, 0) to (1, 1)
+    Skanpage::ScanSplit m_scanSplit = Skanpage::ScanNotSplit;
+    QList<QRectF> m_scanSubAreas;
     bool m_scanAreaConnectionsDone = false;
     QImage m_previewImage;
     QString m_deviceName;
@@ -194,6 +196,67 @@ void Skanpage::setScanArea(QRectF area)
     d->m_ksaneInterface.getOption(Interface::BottomRightYOption)->setValue(area.bottom() * d->m_maximumScanArea.height());
 }
 
+Skanpage::ScanSplit Skanpage::scanSplit() const
+{
+    return d->m_scanSplit;
+}
+
+void Skanpage::setScanSplit(Skanpage::ScanSplit split)
+{
+    if (split != d->m_scanSplit) {
+        d->m_scanSplit = split;
+        Q_EMIT scanSplitChanged(d->m_scanSplit);
+        if (split != ScanNotSplit) clearSubAreas();
+    }
+}
+
+const QList<QRectF> &Skanpage::scanSubAreas()
+{
+    return d->m_scanSubAreas;
+}
+
+void Skanpage::clearSubAreas()
+{
+    if (!d->m_scanSubAreas.isEmpty()) {
+        d->m_scanSubAreas.clear();
+        Q_EMIT scanSubAreasChanged(d->m_scanSubAreas);
+    }
+}
+
+void Skanpage::eraseSubArea(int index)
+{
+    d->m_scanSubAreas.removeAt(index);
+    Q_EMIT scanSubAreasChanged(d->m_scanSubAreas);
+}
+
+bool Skanpage::appendSubArea(QRectF area)
+{
+    for (int i = 0; i < d->m_scanSubAreas.length(); i++) {
+        if (area == d->m_scanSubAreas[i]) { // If the appended area is a duplicate
+            return false;
+        } else if (area.contains(d->m_scanSubAreas[i])) { // This area contains a smaller one within
+            d->m_scanSubAreas.removeAt(i); i--; // Remove redundant areas
+        } else if (area.intersects(d->m_scanSubAreas[i])) { // Avoid very similar (overlaping too much)
+            // return; // To not allow any overlap
+            QRectF intersect = area.intersected(d->m_scanSubAreas[i]);
+            float overlapProportion = intersect.width()*intersect.height() / (area.width()*area.height());
+            if (overlapProportion > 0.33) { d->m_scanSubAreas.removeAt(i); i--; }
+        }
+    }
+    d->m_scanSubAreas.append(area);
+    Q_EMIT scanSubAreasChanged(d->m_scanSubAreas);
+    setScanSplit(Skanpage::ScanNotSplit); // Spliting and sub-areas... no
+    return true;
+}
+
+void Skanpage::selectSubArea(int index)
+{
+    QRectF tmp = scanArea();
+    setScanArea(scanSubAreas().at(index));
+    eraseSubArea(index);
+    appendSubArea(tmp);
+}
+
 QImage Skanpage::previewImage() const
 {
     return d->m_previewImage;
@@ -236,6 +299,13 @@ void Skanpage::finishPreview()
 
 void Skanpage::startScan()
 {
+    if (!d->m_scanSubAreas.isEmpty()) {
+        QRectF totalArea = d->m_scanArea; // Include last (unadded) area
+        // This makes a rectangle that covers all the areas
+        for (const QRectF& area : d->m_scanSubAreas) totalArea = totalArea.united(area);
+        appendSubArea(d->m_scanArea); // Remember last area, for later use
+        setScanArea(totalArea); // Scan all the needed area
+    }
     d->m_ksaneInterface.startScan();
     d->m_scanInProgress = true;
     d->m_state = ApplicationState::ScanInProgress;
@@ -254,10 +324,35 @@ void Skanpage::imageReady(const QImage &image)
         finishPreview();
         d->m_previewImage = image;
         Q_EMIT previewImageChanged(d->m_previewImage);
-    } else {
+        return; // Do not save the preview to disk
+    }
+    if (d->m_scanSplit == ScanNotSplit && d->m_scanSubAreas.isEmpty()) {
         d->m_documentHandler.addImage(image);
         d->m_scannedImages++;
+        return; // Regular scan ends here
     }
+    auto applySubAreasToImage = [&]() {
+        auto toOrigin = QTransform::fromTranslate(-d->m_scanArea.left(), -d->m_scanArea.top());
+        auto toScale = QTransform::fromScale(image.width() / d->m_scanArea.width(), image.height() / d->m_scanArea.height());
+        for (const QRectF& area : d->m_scanSubAreas) {
+            QImage individualImage = image.copy(toScale.mapRect(toOrigin.mapRect(area)).toRect());
+            d->m_documentHandler.addImage(individualImage);
+            d->m_scannedImages++;
+        }
+    };
+    if (!d->m_scanSubAreas.isEmpty()) { // There are sub-areas
+        applySubAreasToImage();
+        setScanArea(d->m_scanSubAreas.back()); // Leave scanArea as last selection
+    } else {
+        bool v = d->m_scanSplit == ScanIsSplitV;
+        QRectF half = d->m_scanArea;
+        if (v) half.setWidth(half.width()/2); else half.setHeight(half.height()/2);
+        d->m_scanSubAreas.append(half); // Fake sub-areas, no need for notification
+        if (v) half.moveRight(d->m_scanArea.right()); else half.moveBottom(d->m_scanArea.bottom());
+        d->m_scanSubAreas.append(half);
+        applySubAreasToImage();
+    }
+    clearSubAreas(); // The sub-areas last just one scan
 }
 
 void Skanpage::saveScannerOptions()
