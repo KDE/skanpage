@@ -97,7 +97,7 @@ msgstr "ماسح الصفحات"
 #: main.cpp:62
 #, kde-format
 msgid "Multi-page scanning application by KDE."
-msgstr "تطبيق لمسح الصفحات ضوئيا بواسطة كدي."
+msgstr "تطبيق لمسح الصفحات ضوئيا بواسطة كِيدِي."
 
 #: main.cpp:64
 #, kde-format
