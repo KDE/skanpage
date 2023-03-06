@@ -92,11 +92,11 @@ Item {
                     to: modelItem.maximum
 
                     suffix: getUnitString(modelItem.unit)
-                    value: modelItem.value
+                    Binding on value {value: modelItem.value}
                     editable: true
 
                     onValueModified: {
-                        if (value != modelItem.value) {
+                        if (!doubleSpinBox.approxeq(value, modelItem.value, stepSize / 1000)) {
                             modelItem.value = value
                         }
                     }

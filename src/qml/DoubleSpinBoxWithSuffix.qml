@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.kirigami 2.12 as Kirigami
 
@@ -27,6 +28,9 @@ Item {
     implicitWidth: control.width
     implicitHeight: control.implicitHeight
 
+    onStepSizeChanged: control.findMultiplier() // Needed when reloading scanner
+    property var approxeq: function(v1, v2, epsilon) { return Math.abs(v1 - v2) < epsilon }
+
     SpinBox {
         id: control
 
@@ -37,10 +41,10 @@ Item {
         from: container.from * multiplier
         to: container.to * multiplier
         stepSize: container.stepSize * multiplier
-        value: container.value * multiplier
+        Binding on value {value: Math.round(container.value * control.multiplier)}
 
-        onValueChanged: {
-            if (container.value != value && !setup) {
+        onValueModified: {
+            if (!approxeq(container.value, value / multiplier, stepSize / 1000) && !setup) {
                 container.value = value / multiplier
                 container.valueModified(container.value)
             }
@@ -54,7 +58,8 @@ Item {
             return Number.fromLocaleString(locale, text) * multiplier
         }
 
-        Component.onCompleted: {
+        Component.onCompleted: findMultiplier()
+        function findMultiplier() {
             while (container.stepSize * multiplier < 1 && container.stepSize != 0) {
                 multiplier = multiplier * 10
                 decimals = decimals + 1
