@@ -267,7 +267,7 @@ msgstr "Zoom 100%"
 #: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
 msgid "Export PDF"
-msgstr "Exporta a PDF"
+msgstr "Exporta cap a PDF"
 
 #: qml/ExportWindow.qml:38
 #, kde-format
