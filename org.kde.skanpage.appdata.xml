@@ -10,6 +10,7 @@ SPDX-License-Identifier: CC0-1.0
   <project_license>GPL-2.0+</project_license>
   <name>Skanpage</name>
   <name xml:lang="ar">ماسح الصفحات</name>
+  <name xml:lang="be">Skanpage</name>
   <name xml:lang="bg">Skanpage</name>
   <name xml:lang="ca">Skanpage</name>
   <name xml:lang="ca-valencia">Skanpage</name>
@@ -43,6 +44,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-TW">Skanpage</name>
   <summary>Multi-page document scanning application</summary>
   <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
+  <summary xml:lang="be">Праграма для сканавання шматстаронкавых дакументаў</summary>
   <summary xml:lang="bg">Приложение с възможност за сканиране на много страници</summary>
   <summary xml:lang="ca">Aplicació d'escaneig de documents multipàgina</summary>
   <summary xml:lang="ca-valencia">Aplicació d'escaneig de documents multipàgina</summary>
@@ -66,6 +68,7 @@ SPDX-License-Identifier: CC0-1.0
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
     <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لمسح المستندات متعددة الصفحات ضوئياً. يمكنه أيضا مسح وحفظ الصور والمستندات ذات الصفحة الواحدة.</p>
+    <p xml:lang="be">Skanpage - гэта простая праграма для сканавання, аптымізаваная для шматстаронкавых дакументаў. Таксама праграма можа сканаваць і захоўваць аднастаронкавыя дакументы і выявы.</p>
     <p xml:lang="bg">Skanpage е просто приложение за сканиране, оптимизирано за сканиране на много страници. То също така може да сканира и запазва  документи с една страница и изображения .</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i desar documents i imatges d'una pàgina.</p>
     <p xml:lang="ca-valencia">Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i guardar documents i imatges d'una pàgina.</p>
@@ -87,6 +90,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="zh-CN">Skanpage 是一款简易扫描应用程序，针对多页扫描任务进行优化。它也可以扫描并保存单页文档和图像。</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
+    <p xml:lang="be">Магчымасці:</p>
     <p xml:lang="bg">Функции:</p>
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
@@ -120,6 +124,7 @@ SPDX-License-Identifier: CC0-1.0
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
       <li xml:lang="ar">المسح الضوئي من الماسحات الضوئية المسطحة ووحدة تغذية المستندات التلقائية</li>
+      <li xml:lang="be">Сканаванне з планшэтных сканераў і сканераў ADF</li>
       <li xml:lang="bg">Сканиране с плоски и ADF скенери</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="ca-valencia">Escaneig amb escàners de superfície plana i ADF</li>
@@ -151,6 +156,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-TW">從平台式或自動進紙式掃描器進行掃描</li>
       <li>Configurable options for scanning device</li>
       <li xml:lang="ar">خيارات قابلة للضبط لمسح الجهاز</li>
+      <li xml:lang="be">Параметры сканера</li>
       <li xml:lang="bg">Конфигуриране на сканиращи устройства</li>
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
@@ -183,6 +189,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-TW">掃描裝置的可設定選項</li>
       <li>Reordering, rotation, and deletion of scanned pages</li>
       <li xml:lang="ar">إعادة ترتيب وتدوير وحذف الصفحات الممسوحة ضوئيًا</li>
+      <li xml:lang="be">Парадкаванне, паварочванне і выдаленне адсканаваных старонак</li>
       <li xml:lang="bg">Пренареждане, завъртане и изтриване на сканирани страници</li>
       <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
       <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
@@ -204,6 +211,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-CN">对已扫描的页面进行重新排序、旋转和删除</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
+      <li xml:lang="be">Захаванне ў шматстаронкавыя PDF-дакументы і файлы выяў</li>
       <li xml:lang="bg">Записване в многостранични PDF документи и файлове с изображения</li>
       <li xml:lang="ca">Desament en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="ca-valencia">Guardada en documents PDF multipàgina i fitxers d'imatge</li>
@@ -241,6 +249,7 @@ SPDX-License-Identifier: CC0-1.0
       <image>https://cdn.kde.org/screenshots/skanpage/skanpage.png</image>
       <caption>Skanpage main window</caption>
       <caption xml:lang="ar">نافذة ماسح الصفحات الرئيسة</caption>
+      <caption xml:lang="be">Галоўнае акно Skanpage</caption>
       <caption xml:lang="bg">Основният прозорец на Skanpage</caption>
       <caption xml:lang="ca">Finestra principal de l'Skanpage</caption>
       <caption xml:lang="ca-valencia">Finestra principal d'Skanpage</caption>
