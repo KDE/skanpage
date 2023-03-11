@@ -132,8 +132,8 @@ bool OptionsModel::setData(const QModelIndex &index, const QVariant &value, int 
         return false;
     }
     if (role == ValueRole) {
-        d->mOptionsList.at(index.row())->setValue(value);
         qCDebug(SKANPAGE_LOG()) << "OptionsModel: Writing to option" << d->mOptionsList.at(index.row())->name() << value;
+        d->mOptionsList.at(index.row())->setValue(value);
         Q_EMIT dataChanged(index, index, {ValueRole});
         return true;
     }

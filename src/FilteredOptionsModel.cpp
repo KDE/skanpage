@@ -23,7 +23,7 @@ bool FilteredOptionsModel::filterAcceptsRow(int source_row, const QModelIndex &s
         return sourceModel()->data(index, OptionsModel::QuickAccessRole).toBool() && state == KSaneCore::Option::StateActive;
     }
     
-    if (state != KSaneCore::Option::StateActive || type == KSaneCore::Option::TypeGamma || type == KSaneCore::Option::TypeDetectFail) {
+    if (state != KSaneCore::Option::StateActive || type == KSaneCore::Option::TypeDetectFail) {
         return false;
     }
 

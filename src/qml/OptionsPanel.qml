@@ -50,7 +50,7 @@ ColumnLayout {
                 width: optionsList.width - optionsList.ScrollBar.vertical.width
                 
                 editMode: optionPanel.editMode
-                Component.onCompleted: {
+                onImplicitWidthChanged: {
                     if (optionPanel._maxChildrenWidth < implicitWidth) {
                         optionPanel._maxChildrenWidth = implicitWidth
                     }

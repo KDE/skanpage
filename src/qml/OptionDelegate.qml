@@ -51,7 +51,7 @@ Item {
         padding: Kirigami.Units.smallSpacing
       
         Label {
-            visible: modelItem.type !== KSaneOption.TypeBool
+            visible: modelItem.type !== KSaneOption.TypeBool && modelItem.type !== KSaneOption.TypeGamma
             text: i18n("%1:", model.title)
         }
 
@@ -135,6 +135,76 @@ Item {
                 sourceComponent: Button {
                     text: modelItem.title
                     onClicked: modelItem.value = 1
+                }
+            }
+
+            Loader {
+                active: modelItem.type === KSaneOption.TypeGamma
+                visible: active
+
+                sourceComponent: ColumnLayout {
+                    readonly property bool isDefaultConfig:
+                        modelItem.value[0] == 0 && modelItem.value[1] == 0 && modelItem.value[2] == 100
+                    RowLayout {
+                        Label {
+                            text: i18nc("Add ':' to make a header text", "%1:", model.title)
+                        }
+                        CheckBox {
+                            id: gammaEnableCheckbox
+                            text: i18nc("@option:check a noun, as in 'the default setting'", "Default")
+                            checked: isDefaultConfig
+                            onClicked: {
+                                if (checked) modelItem.value = [0, 0, 100]
+                                else checked = false // Remove binding
+                            }
+                        }
+                    }
+                    Frame {
+                        visible: !gammaEnableCheckbox.checked
+                        ColumnLayout {
+                            property int tmpVal: 0 // KSaneCore accepts int, Slider gives floats
+                            spacing: Kirigami.Units.smallSpacing
+                            Label {
+                                text: i18nc("%1 is a numeric value", "Brightness: %1", modelItem.value[0])
+                            }
+                            Slider {
+                                implicitWidth: 10 * Kirigami.Units.gridUnit
+                                from: -50; to: 50
+                                value: modelItem.value[0]
+                                onMoved: {
+                                    gammaEnableCheckbox.checked = false // Remove binding
+                                    parent.tmpVal = value
+                                    modelItem.value = [parent.tmpVal, modelItem.value[1], modelItem.value[2]]
+                                }
+                            }
+                            Label {
+                                text: i18nc("%1 is a numeric value", "Contrast: %1", modelItem.value[1])
+                            }
+                            Slider {
+                                implicitWidth: 10 * Kirigami.Units.gridUnit
+                                from: -50; to: 50
+                                value: modelItem.value[1]
+                                onMoved: {
+                                    gammaEnableCheckbox.checked = false // Remove binding
+                                    parent.tmpVal = value
+                                    modelItem.value = [modelItem.value[0], parent.tmpVal, modelItem.value[2]]
+                                }
+                            }
+                            Label {
+                                text: i18nc("%1 is a numeric value", "Gamma: %1", modelItem.value[2])
+                            }
+                            Slider {
+                                implicitWidth: 10 * Kirigami.Units.gridUnit
+                                from: 30; to: 300
+                                value: modelItem.value[2]
+                                onMoved: {
+                                    gammaEnableCheckbox.checked = false // Remove binding
+                                    parent.tmpVal = value
+                                    modelItem.value = [modelItem.value[0], modelItem.value[1], parent.tmpVal]
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
