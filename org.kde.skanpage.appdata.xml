@@ -10,6 +10,7 @@ SPDX-License-Identifier: CC0-1.0
   <project_license>GPL-2.0+</project_license>
   <name>Skanpage</name>
   <name xml:lang="ar">ماسح الصفحات</name>
+  <name xml:lang="be">Skanpage</name>
   <name xml:lang="bg">Skanpage</name>
   <name xml:lang="ca">Skanpage</name>
   <name xml:lang="ca-valencia">Skanpage</name>
@@ -42,10 +43,54 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
   <name xml:lang="zh-TW">Skanpage</name>
   <summary>Multi-page document scanning application</summary>
+  <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
+  <summary xml:lang="be">Праграма для сканавання шматстаронкавых дакументаў</summary>
+  <summary xml:lang="bg">Приложение с възможност за сканиране на много страници</summary>
+  <summary xml:lang="ca">Aplicació d'escaneig de documents multipàgina</summary>
+  <summary xml:lang="ca-valencia">Aplicació d'escaneig de documents multipàgina</summary>
+  <summary xml:lang="cs">Aplikace pro vícestránkové skenování</summary>
+  <summary xml:lang="en-GB">Multi-page document scanning application</summary>
+  <summary xml:lang="es">Aplicación para escanear documentos multipágina</summary>
+  <summary xml:lang="eu">Orri anitzeko dokumentua eskaneatzeko aplikazioa</summary>
+  <summary xml:lang="fi">Yksinkertainen monisivuisia tiedostoja tukeva kuvanlukusovellus</summary>
+  <summary xml:lang="fr">Application de numérisation de documents composés de plusieurs pages</summary>
+  <summary xml:lang="ia">Application pro scander documento multi-pagina</summary>
+  <summary xml:lang="it">Applicazione per scansionare documenti multi pagina</summary>
+  <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპლიკაცია</summary>
+  <summary xml:lang="nl">Scanprogramma voor document met meerdere pagina's</summary>
+  <summary xml:lang="pl">Program do wielostronicowego skanowania</summary>
+  <summary xml:lang="pt">Aplicação de digitalização de documentos multi-páginas</summary>
+  <summary xml:lang="pt-BR">Aplicativo de digitalização de documentos de múltiplas páginas</summary>
+  <summary xml:lang="sl">Aplikacija za optično branje več stranskega dokumenta</summary>
+  <summary xml:lang="tr">Çok sayfalı belge tarama uygulaması</summary>
+  <summary xml:lang="uk">Програма для сканування послідовностей сторінок</summary>
+  <summary xml:lang="x-test">xxMulti-page document scanning applicationxx</summary>
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
+    <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لمسح المستندات متعددة الصفحات ضوئياً. يمكنه أيضا مسح وحفظ الصور والمستندات ذات الصفحة الواحدة.</p>
+    <p xml:lang="be">Skanpage - гэта простая праграма для сканавання, аптымізаваная для шматстаронкавых дакументаў. Таксама праграма можа сканаваць і захоўваць аднастаронкавыя дакументы і выявы.</p>
+    <p xml:lang="bg">Skanpage е просто приложение за сканиране, оптимизирано за сканиране на много страници. То също така може да сканира и запазва  документи с една страница и изображения .</p>
+    <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i desar documents i imatges d'una pàgina.</p>
+    <p xml:lang="ca-valencia">Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i guardar documents i imatges d'una pàgina.</p>
+    <p xml:lang="en-GB">Skanpage is a simple scanning application optimised for multi-page document scanning. It can also scan and save single-page documents and images.</p>
+    <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla optimizada para escanear documentos con varias páginas. También puede escanear y guardar imágenes y documentos de una sola página.</p>
+    <p xml:lang="eu">«Skanpage» orri anitzeko dokumentuak eskaneatzeko optimizatuta dagoen aplikazio bat da. Orri bakarreko dokumentuak eta irudiak ere eskaneatu eta gorde ditzake.</p>
+    <p xml:lang="fi">Skanpage on yksinkertainen kuvanlukusovellus, joka on optimoitu monisivuisten tiedostojen ja lukemiseen. Se lukee ja tallentaa toki myös yksisivuisia tiedostoja ja kuvia.</p>
+    <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation de documents composés de plusieurs pages et l'enregistrement de documents et d'images sur une unique page.</p>
+    <p xml:lang="ia">Skanpage es un simple application de scander optimisate per scander documento multi-pagina. Illo anque pote scander e salveguardar documentos a singule pagina e imagines.</p>
+    <p xml:lang="it">Skanpage è una semplice applicazione per scansionare ottimizzata per scansioni di documenti multi-pagina. Può scansionare e salvare anche documenti a pagina singola e immagini.</p>
+    <p xml:lang="ka">Skanpage არის მარტივი სკანირების აპლიკაცია, რომელიც შექმნილია როგორც მრავალგვერდიანი, ისე ერთგვერდიანი დოკუმენტებისა და სურათების სკანირებისთვის და შესანახად.</p>
+    <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma geoptimaliseerd voor scannen van documenten met meerdere pagina's. Het kan ook documenten en afbeeldingen met een enkele pagina scannen en opslaan.</p>
+    <p xml:lang="pl">Skanpage jest prostym programem opracowany do wielostronicowego skanowania dokumentów. Może także skanować i zapisywać jednostronnicowe dokumenty i obrazy.</p>
+    <p xml:lang="pt">O Skanpage é uma aplicação de digitalização simples que está desenhada para a digitalização de documentos com várias páginas. Também consegue digitalizar e gravar documentos e imagens com páginas individuais.</p>
+    <p xml:lang="pt-BR">Skanpage é um aplicativo simples de digitalização otimizado para digitalizar documentos de múltiplas páginas. Ele também pode digitalizar e salvar documentos de única página e imagens.</p>
+    <p xml:lang="sl">Skanpage je preprosta aplikacija za optično branje več stranskega dokumenta. Lahko skenira in shranjuje tudi enostranske dokumente in slike.</p>
+    <p xml:lang="tr">Skanpage, çok sayfalı belgeleri taramak için eniyilenmiş yalın bir tarama uygulamasıdır. Ayrıca tek sayfalı belgeleri veya görselleri de tarayıp kaydedebilir.</p>
+    <p xml:lang="uk">Skanpage — проста програма для сканування, яку розроблено для сканування послідовностей багатосторінкових документів. Вона також може зберігати односторінкові документи та зображення.</p>
+    <p xml:lang="x-test">xxSkanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.xx</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
+    <p xml:lang="be">Магчымасці:</p>
     <p xml:lang="bg">Функции:</p>
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
@@ -79,6 +124,7 @@ SPDX-License-Identifier: CC0-1.0
     <ul>
       <li>Scanning from flatbed and ADF scanners</li>
       <li xml:lang="ar">المسح الضوئي من الماسحات الضوئية المسطحة ووحدة تغذية المستندات التلقائية</li>
+      <li xml:lang="be">Сканаванне з планшэтных сканераў і сканераў ADF</li>
       <li xml:lang="bg">Сканиране с плоски и ADF скенери</li>
       <li xml:lang="ca">Escaneig amb escàners de superfície plana i ADF</li>
       <li xml:lang="ca-valencia">Escaneig amb escàners de superfície plana i ADF</li>
@@ -110,6 +156,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-TW">從平台式或自動進紙式掃描器進行掃描</li>
       <li>Configurable options for scanning device</li>
       <li xml:lang="ar">خيارات قابلة للضبط لمسح الجهاز</li>
+      <li xml:lang="be">Параметры сканера</li>
       <li xml:lang="bg">Конфигуриране на сканиращи устройства</li>
       <li xml:lang="ca">Opcions configurables per al dispositiu d'escaneig</li>
       <li xml:lang="ca-valencia">Opcions configurables per al dispositiu d'escaneig</li>
@@ -141,8 +188,30 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
       <li xml:lang="zh-TW">掃描裝置的可設定選項</li>
       <li>Reordering, rotation, and deletion of scanned pages</li>
+      <li xml:lang="ar">إعادة ترتيب وتدوير وحذف الصفحات الممسوحة ضوئيًا</li>
+      <li xml:lang="be">Парадкаванне, паварочванне і выдаленне адсканаваных старонак</li>
+      <li xml:lang="bg">Пренареждане, завъртане и изтриване на сканирани страници</li>
+      <li xml:lang="ca">Reordenació, gir i supressió de pàgines escanejades</li>
+      <li xml:lang="ca-valencia">Reordenació, gir i supressió de pàgines escanejades</li>
+      <li xml:lang="en-GB">Reordering, rotation, and deletion of scanned pages</li>
+      <li xml:lang="es">Reordenar, rotar y borrar páginas escaneadas</li>
+      <li xml:lang="eu">Eskaneatutako orrialdeak berrantolatzea, biratzea eta kentzea</li>
+      <li xml:lang="fi">Luettujen sivujen järjestäminen, kiertäminen ja poistaminen</li>
+      <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
+      <li xml:lang="ia">Reordinar, rotation  e deletion de paginas scandite</li>
+      <li xml:lang="it">Riordinamento, rotazione ed eliminazione delle pagine scansionate</li>
+      <li xml:lang="ka">სკანირებული გვერდების გადალაგება, მობრუნება და წაშლა</li>
+      <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
+      <li xml:lang="pl">Zmiana kolejności, obrót i usuwanie zeskanowanych stron</li>
+      <li xml:lang="pt">Reordenação, rotação e remoção das páginas digitalizadas</li>
+      <li xml:lang="pt-BR">Reordenar, rotação e exclusão de páginas digitalizadas</li>
+      <li xml:lang="sl">Zamenjava vrstnega reda, sukanje in brisanje prebranih strani</li>
+      <li xml:lang="tr">Taranan sayfaların yeniden sıralanması, döndürülmesi ve silinmesi</li>
+      <li xml:lang="uk">Переупорядковування, обертання та вилучення сканованих сторінок</li>
+      <li xml:lang="x-test">xxReordering, rotation, and deletion of scanned pagesxx</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
+      <li xml:lang="be">Захаванне ў шматстаронкавыя PDF-дакументы і файлы выяў</li>
       <li xml:lang="bg">Записване в многостранични PDF документи и файлове с изображения</li>
       <li xml:lang="ca">Desament en documents PDF multipàgina i fitxers d'imatge</li>
       <li xml:lang="ca-valencia">Guardada en documents PDF multipàgina i fitxers d'imatge</li>
@@ -179,6 +248,29 @@ SPDX-License-Identifier: CC0-1.0
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/skanpage/skanpage.png</image>
       <caption>Skanpage main window</caption>
+      <caption xml:lang="ar">نافذة ماسح الصفحات الرئيسة</caption>
+      <caption xml:lang="be">Галоўнае акно Skanpage</caption>
+      <caption xml:lang="bg">Основният прозорец на Skanpage</caption>
+      <caption xml:lang="ca">Finestra principal de l'Skanpage</caption>
+      <caption xml:lang="ca-valencia">Finestra principal d'Skanpage</caption>
+      <caption xml:lang="cs">Hlavní okno Skanpage</caption>
+      <caption xml:lang="en-GB">Skanpage main window</caption>
+      <caption xml:lang="es">Ventana principal de Skanpage</caption>
+      <caption xml:lang="eu">«Skanpage» leiho nagusia</caption>
+      <caption xml:lang="fi">Skanpagen pääikkuna</caption>
+      <caption xml:lang="fr">Fenêtre principale de Skanpage</caption>
+      <caption xml:lang="ia">Pagina  principal de Skanpage</caption>
+      <caption xml:lang="it">La finestra principale di Skanpage</caption>
+      <caption xml:lang="ka">Skanpage-ის მთავარი ფანჯარა</caption>
+      <caption xml:lang="nl">Hoofdvenster van Skanpage</caption>
+      <caption xml:lang="pl">Główne okno Skanpage</caption>
+      <caption xml:lang="pt">Janela principal do Skanpage</caption>
+      <caption xml:lang="pt-BR">Janela principal do Skanpage</caption>
+      <caption xml:lang="sl">Skanpage glavno okno</caption>
+      <caption xml:lang="tr">Skanpage ana penceresi</caption>
+      <caption xml:lang="uk">Головне вікно Skanpage</caption>
+      <caption xml:lang="x-test">xxSkanpage main windowxx</caption>
+      <caption xml:lang="zh-TW">Skanpage 主視窗</caption>
     </screenshot>
   </screenshots>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=skanpage</url>
