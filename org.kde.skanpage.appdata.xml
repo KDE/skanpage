@@ -55,6 +55,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="fi">Yksinkertainen monisivuisia tiedostoja tukeva kuvanlukusovellus</summary>
   <summary xml:lang="fr">Application de numérisation de documents composés de plusieurs pages</summary>
   <summary xml:lang="ia">Application pro scander documento multi-pagina</summary>
+  <summary xml:lang="is">Forrit til skönnunar á mörgum síðum</summary>
   <summary xml:lang="it">Applicazione per scansionare documenti multi pagina</summary>
   <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპლიკაცია</summary>
   <summary xml:lang="nl">Scanprogramma voor document met meerdere pagina's</summary>
@@ -79,6 +80,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fi">Skanpage on yksinkertainen kuvanlukusovellus, joka on optimoitu monisivuisten tiedostojen ja lukemiseen. Se lukee ja tallentaa toki myös yksisivuisia tiedostoja ja kuvia.</p>
     <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation de documents composés de plusieurs pages et l'enregistrement de documents et d'images sur une unique page.</p>
     <p xml:lang="ia">Skanpage es un simple application de scander optimisate per scander documento multi-pagina. Illo anque pote scander e salveguardar documentos a singule pagina e imagines.</p>
+    <p xml:lang="is">Skanpage er einfalt skönnunarforrit, hannað til að skanna margar síður í einu en einnig til að vista einnar-síðu skjöl og myndir.</p>
     <p xml:lang="it">Skanpage è una semplice applicazione per scansionare ottimizzata per scansioni di documenti multi-pagina. Può scansionare e salvare anche documenti a pagina singola e immagini.</p>
     <p xml:lang="ka">Skanpage არის მარტივი სკანირების აპლიკაცია, რომელიც შექმნილია როგორც მრავალგვერდიანი, ისე ერთგვერდიანი დოკუმენტებისა და სურათების სკანირებისთვის და შესანახად.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma geoptimaliseerd voor scannen van documenten met meerdere pagina's. Het kan ook documenten en afbeeldingen met een enkele pagina scannen en opslaan.</p>
@@ -201,6 +203,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fi">Luettujen sivujen järjestäminen, kiertäminen ja poistaminen</li>
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
       <li xml:lang="ia">Reordinar, rotation  e deletion de paginas scandite</li>
+      <li xml:lang="is">Endurröðun, snúningur og eyðing á skönnuðum síðum</li>
       <li xml:lang="it">Riordinamento, rotazione ed eliminazione delle pagine scansionate</li>
       <li xml:lang="ka">სკანირებული გვერდების გადალაგება, მობრუნება და წაშლა</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
@@ -263,6 +266,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="fi">Skanpagen pääikkuna</caption>
       <caption xml:lang="fr">Fenêtre principale de Skanpage</caption>
       <caption xml:lang="ia">Pagina  principal de Skanpage</caption>
+      <caption xml:lang="is">Aðalgluggi Skanpage</caption>
       <caption xml:lang="it">La finestra principale di Skanpage</caption>
       <caption xml:lang="ka">Skanpage-ის მთავარი ფანჯარა</caption>
       <caption xml:lang="nl">Hoofdvenster van Skanpage</caption>
