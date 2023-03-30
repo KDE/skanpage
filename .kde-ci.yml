@@ -10,6 +10,7 @@ Dependencies:
     'frameworks/kirigami': '@latest-kf6'
     'frameworks/kcrash': '@latest-kf6'
     'frameworks/kconfig': '@latest-kf6'
+    'frameworks/kxmlgui': '@latest-kf6'
     'frameworks/purpose': '@latest-kf6'
     'libraries/ksanecore': '@same'
 
@@ -21,6 +22,7 @@ Dependencies:
     'frameworks/kirigami': '@stable'
     'frameworks/kcrash': '@stable'
     'frameworks/kconfig': '@stable'
+    'frameworks/kxmlgui': '@stable'
     'frameworks/purpose': '@stable'
     'libraries/ksanecore': '@same'
 Options:

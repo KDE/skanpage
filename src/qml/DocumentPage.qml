@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.7
+import QtQuick 2.15
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.1
 
@@ -90,25 +90,25 @@ Item {
             alignment: Qt.AlignLeft
 
             actions: [
-                Kirigami.Action {
+                ShortcutsAction {
                     id: zoomInAction
                     icon.name: "zoom-in"
                     text: i18n("Zoom In")
-                    shortcut: StandardKey.ZoomIn
+                    shortcutsName: "ZoomIn"
                     onTriggered: bigImage.zoomScale *= 1.5
                     enabled: bigImage.zoomScale < 8
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: zoomOutAction
                     icon.name: "zoom-out"
                     text: i18n("Zoom Out")
-                    shortcut: StandardKey.ZoomOut
+                    shortcutsName: "ZoomOut"
                     onTriggered: bigImage.zoomScale *= 0.75
                     enabled: bigImage.width > imageViewer.availableWidth / 2
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: zoomFitAction
                     icon.name: "zoom-fit-best"
                     text: i18n("Zoom Fit")
@@ -124,7 +124,7 @@ Item {
                     }
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: zoomOrigAction
                     icon.name: "zoom-original"
                     text: i18n("Zoom 100%")
@@ -132,38 +132,39 @@ Item {
                     onTriggered: bigImage.zoomScale = 1
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: rotateLeftAction
                     icon.name: "object-rotate-left"
                     text: i18n("Rotate Left")
                     onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90positive)
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: rotateRightAction
                     icon.name: "object-rotate-right"
                     text: i18n("Rotate Right")
                     onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90negative)
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: flipVerticalAction
                     icon.name: "object-flip-vertical"
                     text: i18n("Flip")
                     onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Flip180)
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: savePageAction
                     icon.name: "document-save"
                     text: i18n("Save Page")
                     onTriggered: documentPage.saveSinglePage(skanpage.documentModel.activePageIndex)
                 },
 
-                Kirigami.Action {
+                ShortcutsAction {
                     id: deleteAction
                     icon.name: "delete"
                     text: i18n("Delete Page")
+                    shortcut: StandardKey.Delete
                     onTriggered: skanpage.documentModel.removeImage(skanpage.documentModel.activePageIndex)
                 }
             ]

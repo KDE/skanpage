@@ -71,6 +71,7 @@ target_link_libraries(skanpage
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::ConfigGui
     KF${KF_MAJOR_VERSION}::Purpose
+    KF${KF_MAJOR_VERSION}::XmlGui
 )
 
 if (TESSERACT_FOUND AND LEPTONICA_FOUND)

@@ -53,6 +53,7 @@ find_package(KF${KF_MAJOR_VERSION} ${REQUIRED_KF5_VERSION} REQUIRED
         Crash
         Config
         Purpose
+        XmlGui
 )
 
 find_package(KSaneCore "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}" REQUIRED)

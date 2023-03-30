@@ -55,6 +55,16 @@ ColumnLayout {
 
             onCurrentItemChanged: skanpage.documentModel.activePageIndex = currentIndex
 
+            Shortcut {
+                sequence: StandardKey.MoveToNextLine
+                onActivated: skanpage.documentModel.activePageIndex++
+            }
+
+            Shortcut {
+                sequence: StandardKey.MoveToPreviousLine
+                onActivated: skanpage.documentModel.activePageIndex--
+            }
+
             delegate: Rectangle {
                 id: delegateRoot
 

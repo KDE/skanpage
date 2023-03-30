@@ -107,7 +107,7 @@ QUrl DocumentModel::activePageSource() const
 
 void DocumentModel::setActivePageIndex(int newIndex)
 {
-    if (newIndex != d->m_activePageIndex) {
+    if (newIndex != d->m_activePageIndex && newIndex >= 0 && newIndex < rowCount()) {
         d->m_activePageIndex = newIndex;
         Q_EMIT activePageChanged();
     }

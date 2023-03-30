@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.7
+import QtQuick 2.15
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
@@ -78,25 +78,25 @@ ApplicationWindow {
         }
     }
 
-    Action {
+    ShortcutsAction {
         id: newDocAction
         icon.name: "edit-delete-remove"
         text: i18n("Discard All")
-        shortcut: StandardKey.New
+        shortcutsName: "New"
         enabled: skanpage.documentModel.count !== 0
         onTriggered: skanpage.documentModel.clearData()
     }
 
-    Action {
+    ShortcutsAction {
         id: saveDocAction
         icon.name: "document-save"
         text: i18n("Save All")
-        shortcut: StandardKey.Save
+        shortcutsName: "Save"
         enabled: skanpage.documentModel.count !== 0
         onTriggered: saveFileDialog.open()
     }
     
-    Action {
+    ShortcutsAction {
         id: exportDocAction
         icon.name: "document-save"
         text: i18n("Export PDF")
@@ -104,7 +104,7 @@ ApplicationWindow {
         onTriggered: exportWindow.show()
     }
 
-    Action {
+    ShortcutsAction {
         id: scanAction
         icon.name: "document-scan"
         text: i18n("Scan")
@@ -122,7 +122,7 @@ ApplicationWindow {
         onTriggered: skanpage.cancelScan()
     }
 
-    Action {
+    ShortcutsAction {
         id: showOptionsAction
         icon.name: "configure"
         text: i18n("Show Scanner Options")
@@ -132,7 +132,7 @@ ApplicationWindow {
         onTriggered: mainView.showOptions = !mainView.showOptions
     }
 
-    Action {
+    ShortcutsAction {
         id: shareAction
         icon.name: "document-share"
         text: i18n("Share")
@@ -140,11 +140,11 @@ ApplicationWindow {
         onTriggered: shareWindow.show()
     }
 
-    Action {
+    ShortcutsAction {
         id: printAction
         icon.name: "document-print"
         text: i18n("Print")
-        shortcut: StandardKey.Print
+        shortcutsName: "Print"
         enabled: skanpage.documentModel.count !== 0
         onTriggered: skanpage.print()
     }
@@ -161,26 +161,34 @@ ApplicationWindow {
         }
     }
 
-    Action {
+    ShortcutsAction {
         id: showAboutAction
         icon.name: "skanpage"
         text: i18n("About Skanpage")
         onTriggered: aboutWindow.show()
     }
 
-    Action {
+    ShortcutsAction {
         id: settingsAction
         icon.name: "settings-configure"
         text: i18n("Configure Skanpage…")
-        shortcut: StandardKey.Preferences
+        shortcutsName: "Preferences"
         onTriggered: settingsWindow.show()
     }
+
+    ShortcutsAction {
+        id: shortcutSettingsAction
+        icon.name: "configure-shortcuts"
+        text: i18n("Configure Keyboard Shortcuts…")
+        shortcutsName: "KeyBindings"
+        onTriggered: skanpage.showShortcutsDialog()
+    }
     
-    Action {
+    ShortcutsAction {
         id: quitAction
         icon.name: "window-close"
         text: i18n("Quit")
-        shortcut: StandardKey.Quit
+        shortcutsName: "Quit"
         onTriggered: Qt.quit()
     }
 
@@ -284,6 +292,10 @@ ApplicationWindow {
             }
 
             MenuItem {
+                action: shortcutSettingsAction
+            }
+
+            MenuItem {
                 action: showAboutAction
             }
         }
@@ -298,7 +310,6 @@ ApplicationWindow {
                 id: mainView
 
                 showOptions: skanpage.stateConfiguration.showOptions
-                optionsPanel.allOptionsAction.checked: skanpage.stateConfiguration.showAllOptions
                 splitViewPreferredWidth: skanpage.stateConfiguration.splitViewItemWidth
                 focus: true
 

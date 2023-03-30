@@ -73,16 +73,17 @@ ColumnLayout {
         alignment: Qt.AlignCenter
         display: Button.IconOnly
         actions: [
-            Kirigami.Action {
+            ShortcutsAction {
                 id: allOptionsAction
                 icon.name: "view-more-symbolic"
                 text: i18n("Show More")
                 shortcut: "CTRL+SPACE"
                 checkable: true
+                checked: skanpage.stateConfiguration.showAllOptions
                 onTriggered: skanpage.optionsModel.showAllOptions(checked)
             },
 
-            Kirigami.Action {
+            ShortcutsAction {
                 id: configureVisibilityAction
                 icon.name: "settings-configure"
                 text: i18n("Configure Visibility")
@@ -97,7 +98,7 @@ ColumnLayout {
                 }
             },
             
-            Kirigami.Action {
+            ShortcutsAction {
                 id: reselectDevicesAction
                 icon.name: "view-refresh"
                 text: i18n("Reselect Scanner")

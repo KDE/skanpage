@@ -11,6 +11,8 @@
 #include <QObject>
 #include <QString>
 
+#include <KActionCollection>
+
 #include <Interface>
 #include <DeviceInformation>
 
@@ -84,6 +86,8 @@ public:
     Q_INVOKABLE bool openDevice(const QString &deviceName, const QString &deviceVendor = QString(), const QString &deviceModel = QString());    
     Q_INVOKABLE bool OCRavailable() const;
     Q_INVOKABLE void print();
+    Q_INVOKABLE void registerAction(QObject* item, QObject* shortcuts, const QString &iconText);
+    Q_INVOKABLE void showShortcutsDialog();
 
 Q_SIGNALS:
     void progressChanged(int progress);

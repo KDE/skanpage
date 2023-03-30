@@ -8,9 +8,11 @@
 #include "Skanpage.h"
 
 #include <QThread>
+#include <QtQml>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KShortcutsDialog>
 
 #include "DevicesModel.h"
 #include "DocumentModel.h"
@@ -35,6 +37,7 @@ public:
     OCREngine m_OCREngine;
     QThread m_fileIOThread;
     SkanpageConfiguration *m_configuration;
+    KActionCollection *m_actionCollection;
     SkanpageState *m_stateConfiguration;
 
     int m_progress = 100;
@@ -60,6 +63,8 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     }
 
     d->m_filteredOptionsModel.setSourceModel(&d->m_optionsModel);
+
+    d->m_actionCollection = new KActionCollection(this);
 
     connect(&d->m_ksaneInterface, &Interface::scannedImageReady, this, &Skanpage::imageReady);
     connect(&d->m_ksaneInterface, &Interface::availableDevices, this, &Skanpage::availableDevices);
@@ -331,6 +336,62 @@ bool Skanpage::OCRavailable() const
 
 void Skanpage::print() {
     d->m_documentPrinter.printDocument(d->m_documentHandler.selectPages(QList<int>()));
+}
+
+void Skanpage::registerAction(QObject* item, QObject* shortcuts, const QString &iconText)
+{
+    auto getQKeySequence = [](const QVariant &variant) -> QKeySequence {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        if (variant.type() == QVariant::KeySequence) return variant.value<QKeySequence>();
+        else if (variant.type() == QVariant::String) return variant.value<QString>();
+#else
+        if (variant.typeId() == QMetaType::QKeySequence) return variant.value<QKeySequence>();
+        else if (variant.typeId() == QMetaType::QString) return variant.value<QString>();
+#endif
+        else return variant.value<QKeySequence::StandardKey>();
+    };
+
+    auto getKStandardShortcuts = [](const QVariant &variant) -> QList<QKeySequence> {
+        auto id = KStandardShortcut::findByName(variant.toString());
+        if (id != KStandardShortcut::AccelNone) {
+            return KStandardShortcut::shortcut(id);
+        } else {
+            qCDebug(SKANPAGE_LOG) << "Invalid KStandardShortcut specified from QML" << variant.toString();
+            return QList<QKeySequence>();
+        }
+    };
+
+    QString id = QQmlEngine::contextForObject(item)->nameForObject(item);
+
+    QAction *act = d->m_actionCollection->addAction(id);
+    act->setText(item->property("text").toString());
+    act->setIcon(QIcon::fromTheme(iconText));
+    act->setIconVisibleInMenu(true);
+
+    QList<QKeySequence> sequences;
+    if (QVariant prop = item->property("shortcut"); prop.isValid()) {
+        QKeySequence seq = getQKeySequence(prop);
+        if (!seq.isEmpty()) sequences.append(seq);
+    }
+    if (QVariant prop = item->property("shortcutsName"); prop.isValid() && !prop.toString().isEmpty()) {
+        sequences.append(getKStandardShortcuts(prop));
+    }
+    d->m_actionCollection->setDefaultShortcuts(act, sequences);
+    d->m_actionCollection->readSettings();
+
+    auto updateKeySequences = [=]() {
+        if (act->shortcuts().isEmpty()) return;
+        item->setProperty("shortcut", act->shortcuts().front());
+        QList<QVariant> sequenceList;
+        for (int i = 1; i < act->shortcuts().size(); i++) sequenceList.append(act->shortcuts().at(i));
+        shortcuts->setProperty("sequences", sequenceList);
+    };
+    updateKeySequences(); // Move the specified shortcut to the QML Shortcut object
+    connect(act, &QAction::changed, this, updateKeySequences);
+}
+
+void Skanpage::showShortcutsDialog() {
+    KShortcutsDialog::showDialog(d->m_actionCollection);
 }
 
 void Skanpage::cancelScan()
