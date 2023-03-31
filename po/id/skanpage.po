@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 01:02+0000\n"
+"POT-Creation-Date: 2023-03-31 00:50+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -160,78 +160,78 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Mencari peranti yang tersedia."
 
-#: qml/DocumentList.qml:143
+#: qml/DocumentList.qml:153
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Halamaan pemrosesan..."
 
-#: qml/DocumentList.qml:188
+#: qml/DocumentList.qml:198
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Halaman %1"
 
-#: qml/DocumentList.qml:203
+#: qml/DocumentList.qml:213
 #, kde-format
 msgid "Move Up"
 msgstr "Geser Naik"
 
-#: qml/DocumentList.qml:213
+#: qml/DocumentList.qml:223
 #, kde-format
 msgid "Move Down"
 msgstr "Geser Turun"
 
-#: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
+#: qml/DocumentList.qml:233 qml/DocumentPage.qml:138
 #, kde-format
 msgid "Rotate Left"
 msgstr "Rotasikan Kiri"
 
-#: qml/DocumentList.qml:229 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:239 qml/DocumentPage.qml:145
 #, kde-format
 msgid "Rotate Right"
 msgstr "Rotasikan Kanan"
 
-#: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:245 qml/DocumentPage.qml:152
 #, kde-format
 msgid "Flip"
 msgstr "Lipat"
 
-#: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:251 qml/DocumentPage.qml:159
 #, kde-format
 msgid "Save Page"
 msgstr "Simpan Halaman"
 
-#: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:257 qml/DocumentPage.qml:166
 #, kde-format
 msgid "Delete Page"
 msgstr "Hapus Halaman"
 
-#: qml/DocumentList.qml:265
+#: qml/DocumentList.qml:275
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 halaman"
 msgstr[1] "%1 halaman"
 
-#: qml/DocumentList.qml:276
+#: qml/DocumentList.qml:286
 #, kde-format
 msgid "Reorder Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:281
+#: qml/DocumentList.qml:291
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr ""
 
-#: qml/DocumentList.qml:288
+#: qml/DocumentList.qml:298
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr ""
 
-#: qml/DocumentList.qml:295
+#: qml/DocumentList.qml:305
 #, kde-format
 msgid "Reverse Order"
 msgstr ""
@@ -380,7 +380,7 @@ msgstr "Bagikan"
 msgid "Print"
 msgstr "Cetak"
 
-#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:358
 #, kde-format
 msgid "About Skanpage"
 msgstr "Tentang Skanpage"
@@ -392,6 +392,11 @@ msgid "Configure Skanpage…"
 msgstr "Tentang Skanpage"
 
 #: qml/MainWindow.qml:182
+#, kde-format
+msgid "Configure Keyboard Shortcuts…"
+msgstr ""
+
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Quit"
 msgstr "Berhenti"
@@ -465,12 +470,12 @@ msgstr "%1 %2"
 msgid "Show More"
 msgstr "Tampilkan Selebihnya"
 
-#: qml/OptionsPanel.qml:88
+#: qml/OptionsPanel.qml:89
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Konfigurasi Ketampakan"
 
-#: qml/OptionsPanel.qml:103
+#: qml/OptionsPanel.qml:104
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Pemilihan Ulang Pemindai"

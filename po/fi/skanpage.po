@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 01:02+0000\n"
+"POT-Creation-Date: 2023-03-31 00:50+0000\n"
 "PO-Revision-Date: 2022-07-18 22:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -157,78 +157,78 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Etsitään käytettävissä olevia laitteita."
 
-#: qml/DocumentList.qml:143
+#: qml/DocumentList.qml:153
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Käsitellään sivua…"
 
-#: qml/DocumentList.qml:188
+#: qml/DocumentList.qml:198
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Sivu %1"
 
-#: qml/DocumentList.qml:203
+#: qml/DocumentList.qml:213
 #, kde-format
 msgid "Move Up"
 msgstr "Siirrä ylemmäs"
 
-#: qml/DocumentList.qml:213
+#: qml/DocumentList.qml:223
 #, kde-format
 msgid "Move Down"
 msgstr "Siirrä alemmas"
 
-#: qml/DocumentList.qml:223 qml/DocumentPage.qml:138
+#: qml/DocumentList.qml:233 qml/DocumentPage.qml:138
 #, kde-format
 msgid "Rotate Left"
 msgstr "Kierrä vasemmalle"
 
-#: qml/DocumentList.qml:229 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:239 qml/DocumentPage.qml:145
 #, kde-format
 msgid "Rotate Right"
 msgstr "Kierrä oikealle"
 
-#: qml/DocumentList.qml:235 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:245 qml/DocumentPage.qml:152
 #, kde-format
 msgid "Flip"
 msgstr "Pyöräytä"
 
-#: qml/DocumentList.qml:241 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:251 qml/DocumentPage.qml:159
 #, kde-format
 msgid "Save Page"
 msgstr "Tallenna sivu"
 
-#: qml/DocumentList.qml:247 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:257 qml/DocumentPage.qml:166
 #, kde-format
 msgid "Delete Page"
 msgstr "Poista sivu"
 
-#: qml/DocumentList.qml:265
+#: qml/DocumentList.qml:275
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "Yksi sivu"
 msgstr[1] "%1 sivua"
 
-#: qml/DocumentList.qml:276
+#: qml/DocumentList.qml:286
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Järjestä sivut uudelleen"
 
-#: qml/DocumentList.qml:281
+#: qml/DocumentList.qml:291
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:288
+#: qml/DocumentList.qml:298
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:295
+#: qml/DocumentList.qml:305
 #, kde-format
 msgid "Reverse Order"
 msgstr "Käänteinen järjestys"
@@ -374,7 +374,7 @@ msgstr "Jaa"
 msgid "Print"
 msgstr "Tulosta"
 
-#: qml/MainWindow.qml:167 qml/MainWindow.qml:347
+#: qml/MainWindow.qml:167 qml/MainWindow.qml:358
 #, kde-format
 msgid "About Skanpage"
 msgstr "Tietoa Skanpagesta"
@@ -385,6 +385,11 @@ msgid "Configure Skanpage…"
 msgstr "Skanpagen asetukset…"
 
 #: qml/MainWindow.qml:182
+#, kde-format
+msgid "Configure Keyboard Shortcuts…"
+msgstr ""
+
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Quit"
 msgstr "Lopeta"
@@ -458,12 +463,12 @@ msgstr "%1 %2"
 msgid "Show More"
 msgstr "Näytä lisää"
 
-#: qml/OptionsPanel.qml:88
+#: qml/OptionsPanel.qml:89
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Näkyvyysasetukset"
 
-#: qml/OptionsPanel.qml:103
+#: qml/OptionsPanel.qml:104
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Valitse kuvanlukulaite uudelleen"
