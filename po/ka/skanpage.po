@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-31 00:50+0000\n"
-"PO-Revision-Date: 2023-02-02 09:09+0100\n"
+"PO-Revision-Date: 2023-04-01 06:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -390,7 +390,7 @@ msgstr "Skanpage-ის მორგება…"
 #: qml/MainWindow.qml:182
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr ""
+msgstr "კლავიატურის მალსახმობების მორგება…"
 
 #: qml/MainWindow.qml:190
 #, kde-format

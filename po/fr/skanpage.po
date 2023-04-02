@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-31 00:50+0000\n"
-"PO-Revision-Date: 2023-01-05 19:56+0100\n"
+"PO-Revision-Date: 2023-04-01 08:41+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -389,7 +389,7 @@ msgstr "Configurer SKanpage"
 #: qml/MainWindow.qml:182
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr ""
+msgstr "Configurer les raccourcis de clavier..."
 
 #: qml/MainWindow.qml:190
 #, kde-format

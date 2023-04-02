@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-31 00:50+0000\n"
-"PO-Revision-Date: 2022-07-14 09:31+0100\n"
+"PO-Revision-Date: 2023-04-01 11:59+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -392,7 +392,7 @@ msgstr "Configurar o Skanpage…"
 #: qml/MainWindow.qml:182
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr ""
+msgstr "Configurar os Atalhos…"
 
 #: qml/MainWindow.qml:190
 #, kde-format
