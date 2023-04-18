@@ -136,14 +136,14 @@ Item {
                     id: rotateLeftAction
                     icon.name: "object-rotate-left"
                     text: i18n("Rotate Left")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90positive)
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90negative)
                 },
 
                 Kirigami.Action {
                     id: rotateRightAction
                     icon.name: "object-rotate-right"
                     text: i18n("Rotate Right")
-                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90negative)
+                    onTriggered: skanpage.documentModel.rotateImage(skanpage.documentModel.activePageIndex, DocumentModel.Rotate90positive)
                 },
 
                 Kirigami.Action {
