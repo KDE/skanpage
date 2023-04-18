@@ -235,13 +235,13 @@ ColumnLayout {
                                     Kirigami.Action {
                                         icon.name: "object-rotate-left"
                                         text: i18n("Rotate Left")
-                                        onTriggered: skanpage.documentModel.rotateImage(index, DocumentModel.Rotate90positive)
+                                        onTriggered: skanpage.documentModel.rotateImage(index, DocumentModel.Rotate90negative)
                                     },
 
                                     Kirigami.Action {
                                         icon.name: "object-rotate-right"
                                         text: i18n("Rotate Right")
-                                        onTriggered: skanpage.documentModel.rotateImage(index, DocumentModel.Rotate90negative)
+                                        onTriggered: skanpage.documentModel.rotateImage(index, DocumentModel.Rotate90positive)
                                     },
 
                                     Kirigami.Action {
