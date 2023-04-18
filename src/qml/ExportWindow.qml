@@ -28,153 +28,165 @@ Window {
     minimumHeight: 300
     minimumWidth: 600
 
-    GridLayout {
-        id: mainLayout
+    ColumnLayout {
         anchors.fill: parent
         anchors.margins: Kirigami.Units.smallSpacing
-        columns: 3
+        spacing: Kirigami.Units.smallSpacing
 
-        Label {
-            text: i18n("Title:")
-            Layout.alignment: Qt.AlignRight
-        }
-
-        TextField {
-            id: fileTitleItem
+        GridLayout {
             Layout.fillWidth: true
-            text: skanpage.documentModel.name
-        }
-
-        Item {
-            width: 1
-            height: 1
-        }
-
-        Label {
-            text: i18n("File:")
-            Layout.alignment: Qt.AlignRight
-        }
-
-        TextField {
-            id: fileNameItem
-            Layout.fillWidth: true
-            text: skanpage.configuration.defaultFolder + "/" + skanpage.documentModel.fileName
-        }
-
-        ToolButton {
-            icon.name: "folder"
-            width: height
-            onClicked: fileNameDialog.open()
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        CheckBox {
-            id: ocrCheckBox
-            visible: skanpage.OCRavailable()
-            text: i18n("Enable optical character recognition (OCR)")
-            checked: true
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        Label {
-            visible: skanpage.OCRavailable()
-            text: i18n("Languages:")
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        ListView {
-            visible: skanpage.OCRavailable()
-            enabled: ocrCheckBox.checked
-            Layout.preferredHeight: contentHeight
-            model: skanpage.languageModel
-
-            delegate: CheckDelegate {
-                text: i18n("%1 [%2]", model.name, model.code)
-                onClicked: model.use = checked
-            }
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        Label {
-            visible: skanpage.OCRavailable()
-            text: i18n("If your required language is not listed, please install Tesseract's language file with your package manager.")
-            font.italic: true
-            wrapMode: Text.WordWrap
-            Layout.maximumWidth: fileNameItem.width
-        }
-
-        Item {
-            visible: skanpage.OCRavailable()
-            width: 1
-            height: 1
-        }
-
-        Item { 
             Layout.fillHeight: true
-            Layout.fillWidth: true
-            Layout.columnSpan: 3
-        }
-    }
+            columns: 3
+            rowSpacing: Kirigami.Units.smallSpacing
+            columnSpacing: Kirigami.Units.smallSpacing
 
-    RowLayout {
-        id: buttonRow
+            Label {
+                text: i18n("Title:")
+                Layout.alignment: Qt.AlignRight
+            }
 
-        anchors {
-            bottom: parent.bottom
-            right: parent.right
-            margins: Kirigami.Units.smallSpacing
-        }
+            TextField {
+                id: fileTitleItem
+                Layout.fillWidth: true
+                text: skanpage.documentModel.name
+            }
 
-        Button {
-            id: saveButton
-            icon.name: "document-save"
-            text: i18n("Save")
-            onClicked: { 
-                skanpage.documentModel.exportPDF(fileNameItem.text, fileTitleItem.text, ocrCheckBox.checked && skanpage.OCRavailable())
-                exportWindow.close()
+            Item {
+                width: 1
+                height: 1
+            }
+
+            Label {
+                text: i18n("File:")
+                Layout.alignment: Qt.AlignRight
+            }
+
+            TextField {
+                id: fileNameItem
+                Layout.fillWidth: true
+                text: skanpage.configuration.defaultFolder + "/" + skanpage.documentModel.fileName
+            }
+
+            ToolButton {
+                icon.name: "folder"
+                width: height
+                onClicked: fileNameDialog.open()
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            CheckBox {
+                id: ocrCheckBox
+                visible: skanpage.OCRavailable()
+                text: i18n("Enable optical character recognition (OCR)")
+                checked: true
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            Label {
+                visible: skanpage.OCRavailable()
+                enabled: ocrCheckBox.checked
+                text: i18n("Languages:")
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            ScrollView {
+                id: ocrScroll
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                visible: skanpage.OCRavailable()
+                enabled: ocrCheckBox.checked
+
+                Component.onCompleted: ocrScroll.background.visible = true
+
+                ListView {
+                    clip: true
+                    model: skanpage.languageModel
+
+                    delegate: CheckDelegate {
+                        text: i18n("%1 [%2]", model.name, model.code)
+                        onClicked: model.use = checked
+                        width: ocrScroll.width
+                    }
+                }
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            Label {
+                visible: skanpage.OCRavailable()
+                text: i18n("If your required language is not listed, please install Tesseract's language file with your package manager.")
+                font.italic: true
+                wrapMode: Text.WordWrap
+                Layout.maximumWidth: fileNameItem.width
+            }
+
+            Item {
+                visible: skanpage.OCRavailable()
+                width: 1
+                height: 1
+            }
+
+            Item { 
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                Layout.columnSpan: 3
             }
         }
 
-        Button {
-            action: cancelAction
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+            Layout.alignment: Qt.AlignRight
+
+            Button {
+                id: saveButton
+                icon.name: "document-save"
+                text: i18n("Save")
+                onClicked: { 
+                    skanpage.documentModel.exportPDF(fileNameItem.text, fileTitleItem.text, ocrCheckBox.checked && skanpage.OCRavailable())
+                    exportWindow.close()
+                }
+            }
+
+            Button {
+                action: cancelAction
+            }
         }
     }
 
