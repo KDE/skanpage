@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 01:02+0000\n"
+"POT-Creation-Date: 2023-04-19 02:56+0000\n"
 "PO-Revision-Date: 2022-07-14 09:31+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -269,32 +269,32 @@ msgstr "Ampliação a 100%"
 msgid "Export PDF"
 msgstr "Exportar o PDF"
 
-#: qml/ExportWindow.qml:38
+#: qml/ExportWindow.qml:44
 #, kde-format
 msgid "Title:"
 msgstr "Título:"
 
-#: qml/ExportWindow.qml:54
+#: qml/ExportWindow.qml:60
 #, kde-format
 msgid "File:"
 msgstr "Ficheiro:"
 
-#: qml/ExportWindow.qml:79
+#: qml/ExportWindow.qml:85
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
 msgstr "Activar o reconhecimento óptico de caracteres (OCR)"
 
-#: qml/ExportWindow.qml:97
+#: qml/ExportWindow.qml:104
 #, kde-format
 msgid "Languages:"
 msgstr "Línguas:"
 
-#: qml/ExportWindow.qml:119
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:138
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -303,12 +303,12 @@ msgstr ""
 "Se a sua língua obrigatória não for indicado, instale por favor o ficheiro "
 "da língua do Tesseract com o seu gestor de pacotes."
 
-#: qml/ExportWindow.qml:169
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "Gravar"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"

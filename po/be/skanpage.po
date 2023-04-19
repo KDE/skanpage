@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 01:02+0000\n"
+"POT-Creation-Date: 2023-04-19 02:56+0000\n"
 "PO-Revision-Date: 2023-03-07 07:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -270,32 +270,32 @@ msgstr "Маштабаваць да 100%"
 msgid "Export PDF"
 msgstr "Экспартаваць у PDF"
 
-#: qml/ExportWindow.qml:38
+#: qml/ExportWindow.qml:44
 #, kde-format
 msgid "Title:"
 msgstr "Назва:"
 
-#: qml/ExportWindow.qml:54
+#: qml/ExportWindow.qml:60
 #, kde-format
 msgid "File:"
 msgstr "Файл:"
 
-#: qml/ExportWindow.qml:79
+#: qml/ExportWindow.qml:85
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
 msgstr "Уключыць аптычнае распазнаванне знакаў (OCR)"
 
-#: qml/ExportWindow.qml:97
+#: qml/ExportWindow.qml:104
 #, kde-format
 msgid "Languages:"
 msgstr "Мовы:"
 
-#: qml/ExportWindow.qml:119
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:138
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -304,12 +304,12 @@ msgstr ""
 "Калі неабходнай мовы няма ў спісе, усталюйце ў кіраўніку пакункаў моўны файл "
 "Tesseract."
 
-#: qml/ExportWindow.qml:169
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "Захаваць"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Скасаваць"

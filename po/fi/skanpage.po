@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the skanpage package.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 01:02+0000\n"
+"POT-Creation-Date: 2023-04-19 02:56+0000\n"
 "PO-Revision-Date: 2022-07-18 22:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -264,32 +264,32 @@ msgstr "Lähennys 100 %"
 msgid "Export PDF"
 msgstr "Vie PDF"
 
-#: qml/ExportWindow.qml:38
+#: qml/ExportWindow.qml:44
 #, kde-format
 msgid "Title:"
 msgstr "Otsikko:"
 
-#: qml/ExportWindow.qml:54
+#: qml/ExportWindow.qml:60
 #, kde-format
 msgid "File:"
 msgstr "Tiedosto:"
 
-#: qml/ExportWindow.qml:79
+#: qml/ExportWindow.qml:85
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
 msgstr "Käytä optista tekstintunnistusta (OCR)"
 
-#: qml/ExportWindow.qml:97
+#: qml/ExportWindow.qml:104
 #, kde-format
 msgid "Languages:"
 msgstr "Kielet:"
 
-#: qml/ExportWindow.qml:119
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:138
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -298,12 +298,12 @@ msgstr ""
 "Ellei tarvitsemaasi kieltä ole luettelossa, aseta paketinhallinnalla "
 "Tesseractin kielitiedosto."
 
-#: qml/ExportWindow.qml:169
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "Tallenna"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Peru"
