@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:50+0000\n"
+"POT-Creation-Date: 2023-04-19 00:52+0000\n"
 "PO-Revision-Date: 2022-08-03 09:16+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -157,104 +157,135 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Söker efter tillgängliga enheter."
 
-#: qml/DocumentList.qml:153
+#: qml/DocumentList.qml:157
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Behandlar sida..."
 
-#: qml/DocumentList.qml:198
+#: qml/DocumentList.qml:202
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Sida %1"
 
-#: qml/DocumentList.qml:213
+#: qml/DocumentList.qml:217
 #, kde-format
 msgid "Move Up"
 msgstr "Flytta upp"
 
-#: qml/DocumentList.qml:223
+#: qml/DocumentList.qml:227
 #, kde-format
 msgid "Move Down"
 msgstr "Flytta ner"
 
-#: qml/DocumentList.qml:233 qml/DocumentPage.qml:138
+#: qml/DocumentList.qml:237 qml/DocumentPage.qml:417
 #, kde-format
 msgid "Rotate Left"
 msgstr "Rotera åt vänster"
 
-#: qml/DocumentList.qml:239 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:243 qml/DocumentPage.qml:424
 #, kde-format
 msgid "Rotate Right"
 msgstr "Rotera åt höger"
 
-#: qml/DocumentList.qml:245 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:431
 #, kde-format
 msgid "Flip"
 msgstr "Vänd"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:438
 #, kde-format
 msgid "Save Page"
 msgstr "Spara sida"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:445
 #, kde-format
 msgid "Delete Page"
 msgstr "Ta bort sida"
 
-#: qml/DocumentList.qml:275
+#: qml/DocumentList.qml:279
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 sida"
 msgstr[1] "%1 sidor"
 
-#: qml/DocumentList.qml:286
+#: qml/DocumentList.qml:290
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Ordna om sidor"
 
-#: qml/DocumentList.qml:291
+#: qml/DocumentList.qml:295
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:298
+#: qml/DocumentList.qml:302
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:309
 #, kde-format
 msgid "Reverse Order"
 msgstr "Omvänd ordning"
 
-#: qml/DocumentPage.qml:38
+#: qml/DocumentPage.qml:56
+#, fuzzy, kde-format
+#| msgid "Show More"
+msgid "Show Preview"
+msgstr "Visa mer"
+
+#: qml/DocumentPage.qml:72
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
 msgstr "Du har inte några bilder i dokumentet.<nl/><nl/>Börja inläsning."
 
-#: qml/DocumentPage.qml:96
+#: qml/DocumentPage.qml:258
+#, kde-format
+msgid "Discard this selection"
+msgstr ""
+
+#: qml/DocumentPage.qml:278
+#, kde-format
+msgid "Add Selection Area"
+msgstr ""
+
+#: qml/DocumentPage.qml:283
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr ""
+
+#: qml/DocumentPage.qml:293
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr ""
+
+#: qml/DocumentPage.qml:304
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr ""
+
+#: qml/DocumentPage.qml:375
 #, kde-format
 msgid "Zoom In"
 msgstr "Zooma in"
 
-#: qml/DocumentPage.qml:105
+#: qml/DocumentPage.qml:384
 #, kde-format
 msgid "Zoom Out"
 msgstr "Zooma ut"
 
-#: qml/DocumentPage.qml:114
+#: qml/DocumentPage.qml:393
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Anpassa"
 
-#: qml/DocumentPage.qml:130
+#: qml/DocumentPage.qml:409
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Zooma 100 %"
@@ -264,32 +295,32 @@ msgstr "Zooma 100 %"
 msgid "Export PDF"
 msgstr "Exportera PDF"
 
-#: qml/ExportWindow.qml:38
+#: qml/ExportWindow.qml:44
 #, kde-format
 msgid "Title:"
 msgstr "Titel:"
 
-#: qml/ExportWindow.qml:54
+#: qml/ExportWindow.qml:60
 #, kde-format
 msgid "File:"
 msgstr "Fil:"
 
-#: qml/ExportWindow.qml:79
+#: qml/ExportWindow.qml:85
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
 msgstr "Aktivera optisk teckenigenkänning"
 
-#: qml/ExportWindow.qml:97
+#: qml/ExportWindow.qml:104
 #, kde-format
 msgid "Languages:"
 msgstr "Språk:"
 
-#: qml/ExportWindow.qml:119
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:138
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -298,29 +329,29 @@ msgstr ""
 "Om språket du behöver inte listas, installera Tesseracts språkfil med "
 "pakethanteraren."
 
-#: qml/ExportWindow.qml:169
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "Spara"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:135
 #, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: qml/GlobalMenu.qml:25
+#: qml/GlobalMenu.qml:26
 #, kde-format
 msgctxt "menu category"
 msgid "File"
 msgstr "Arkiv"
 
-#: qml/GlobalMenu.qml:67
+#: qml/GlobalMenu.qml:68
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
 msgstr "Läs in"
 
-#: qml/GlobalMenu.qml:116
+#: qml/GlobalMenu.qml:124
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
@@ -356,40 +387,45 @@ msgstr "Spara alla"
 
 #: qml/MainWindow.qml:110
 #, kde-format
+msgid "Preview"
+msgstr ""
+
+#: qml/MainWindow.qml:122
+#, kde-format
 msgid "Scan"
 msgstr "Läs in"
 
-#: qml/MainWindow.qml:128
+#: qml/MainWindow.qml:144
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Visa bildläsaralternativ"
 
-#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:154 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Dela"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Print"
 msgstr "Skriv ut"
 
-#: qml/MainWindow.qml:167 qml/MainWindow.qml:358
+#: qml/MainWindow.qml:183 qml/MainWindow.qml:380
 #, kde-format
 msgid "About Skanpage"
 msgstr "Om Skanpage"
 
-#: qml/MainWindow.qml:174
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Anpassa Skanpage…"
 
-#: qml/MainWindow.qml:182
+#: qml/MainWindow.qml:198
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:206
 #, kde-format
 msgid "Quit"
 msgstr "Avsluta"

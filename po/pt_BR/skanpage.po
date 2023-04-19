@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:50+0000\n"
+"POT-Creation-Date: 2023-04-19 00:52+0000\n"
 "PO-Revision-Date: 2023-04-05 09:50-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -160,105 +160,136 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Procurando por dispositivos disponíveis."
 
-#: qml/DocumentList.qml:153
+#: qml/DocumentList.qml:157
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Processando página..."
 
-#: qml/DocumentList.qml:198
+#: qml/DocumentList.qml:202
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Página %1"
 
-#: qml/DocumentList.qml:213
+#: qml/DocumentList.qml:217
 #, kde-format
 msgid "Move Up"
 msgstr "Mover para cima"
 
-#: qml/DocumentList.qml:223
+#: qml/DocumentList.qml:227
 #, kde-format
 msgid "Move Down"
 msgstr "Mover para baixo"
 
-#: qml/DocumentList.qml:233 qml/DocumentPage.qml:138
+#: qml/DocumentList.qml:237 qml/DocumentPage.qml:417
 #, kde-format
 msgid "Rotate Left"
 msgstr "Girar à esquerda"
 
-#: qml/DocumentList.qml:239 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:243 qml/DocumentPage.qml:424
 #, kde-format
 msgid "Rotate Right"
 msgstr "Girar à direita"
 
-#: qml/DocumentList.qml:245 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:431
 #, kde-format
 msgid "Flip"
 msgstr "Inverter"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:438
 #, kde-format
 msgid "Save Page"
 msgstr "Salvar página"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:445
 #, kde-format
 msgid "Delete Page"
 msgstr "Excluir página"
 
-#: qml/DocumentList.qml:275
+#: qml/DocumentList.qml:279
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 página"
 msgstr[1] "%1 páginas"
 
-#: qml/DocumentList.qml:286
+#: qml/DocumentList.qml:290
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Reordenar páginas"
 
-#: qml/DocumentList.qml:291
+#: qml/DocumentList.qml:295
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:298
+#: qml/DocumentList.qml:302
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:309
 #, kde-format
 msgid "Reverse Order"
 msgstr "Ordem inversa"
 
-#: qml/DocumentPage.qml:38
+#: qml/DocumentPage.qml:56
+#, fuzzy, kde-format
+#| msgid "Show More"
+msgid "Show Preview"
+msgstr "Mostrar mais"
+
+#: qml/DocumentPage.qml:72
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
 msgstr ""
 "Você não possui imagens neste documento.<nl/><nl/>Começar a digitalização!"
 
-#: qml/DocumentPage.qml:96
+#: qml/DocumentPage.qml:258
+#, kde-format
+msgid "Discard this selection"
+msgstr ""
+
+#: qml/DocumentPage.qml:278
+#, kde-format
+msgid "Add Selection Area"
+msgstr ""
+
+#: qml/DocumentPage.qml:283
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr ""
+
+#: qml/DocumentPage.qml:293
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr ""
+
+#: qml/DocumentPage.qml:304
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr ""
+
+#: qml/DocumentPage.qml:375
 #, kde-format
 msgid "Zoom In"
 msgstr "Ampliar"
 
-#: qml/DocumentPage.qml:105
+#: qml/DocumentPage.qml:384
 #, kde-format
 msgid "Zoom Out"
 msgstr "Reduzir"
 
-#: qml/DocumentPage.qml:114
+#: qml/DocumentPage.qml:393
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Ampliar para encaixar"
 
-#: qml/DocumentPage.qml:130
+#: qml/DocumentPage.qml:409
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Zoom 100%"
@@ -268,32 +299,32 @@ msgstr "Zoom 100%"
 msgid "Export PDF"
 msgstr "Exportar para PDF"
 
-#: qml/ExportWindow.qml:38
+#: qml/ExportWindow.qml:44
 #, kde-format
 msgid "Title:"
 msgstr "Título:"
 
-#: qml/ExportWindow.qml:54
+#: qml/ExportWindow.qml:60
 #, kde-format
 msgid "File:"
 msgstr "Arquivo:"
 
-#: qml/ExportWindow.qml:79
+#: qml/ExportWindow.qml:85
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
 msgstr "Habilitar OCR (reconhecimento ótico de caracteres)"
 
-#: qml/ExportWindow.qml:97
+#: qml/ExportWindow.qml:104
 #, kde-format
 msgid "Languages:"
 msgstr "Idiomas:"
 
-#: qml/ExportWindow.qml:119
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:138
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -302,29 +333,29 @@ msgstr ""
 "Se seu idioma solicitado não estiver na lista, instale o arquivo de idioma "
 "do Tesseract com o seu gerenciador de pacotes."
 
-#: qml/ExportWindow.qml:169
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "Salvar"
 
-#: qml/ExportWindow.qml:184 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:135
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: qml/GlobalMenu.qml:25
+#: qml/GlobalMenu.qml:26
 #, kde-format
 msgctxt "menu category"
 msgid "File"
 msgstr "Arquivo"
 
-#: qml/GlobalMenu.qml:67
+#: qml/GlobalMenu.qml:68
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
 msgstr "Digitalizar"
 
-#: qml/GlobalMenu.qml:116
+#: qml/GlobalMenu.qml:124
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
@@ -360,40 +391,45 @@ msgstr "Salvar tudo"
 
 #: qml/MainWindow.qml:110
 #, kde-format
+msgid "Preview"
+msgstr ""
+
+#: qml/MainWindow.qml:122
+#, kde-format
 msgid "Scan"
 msgstr "Digitalizar"
 
-#: qml/MainWindow.qml:128
+#: qml/MainWindow.qml:144
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Mostrar opções do dispositivo de digitalização"
 
-#: qml/MainWindow.qml:138 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:154 qml/ShareWindow.qml:19
 #, kde-format
 msgid "Share"
 msgstr "Compartilhar"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Print"
 msgstr "Imprimir"
 
-#: qml/MainWindow.qml:167 qml/MainWindow.qml:358
+#: qml/MainWindow.qml:183 qml/MainWindow.qml:380
 #, kde-format
 msgid "About Skanpage"
 msgstr "Sobre o Skanpage"
 
-#: qml/MainWindow.qml:174
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Configurar Skanpage..."
 
-#: qml/MainWindow.qml:182
+#: qml/MainWindow.qml:198
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Configurar atalhos do teclado…"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:206
 #, kde-format
 msgid "Quit"
 msgstr "Sair"
