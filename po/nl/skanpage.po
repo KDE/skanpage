@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-03-31 11:43+0200\n"
+"PO-Revision-Date: 2023-04-19 10:47+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -234,10 +234,9 @@ msgid "Reverse Order"
 msgstr "Omgekeerde volgorde"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Meer tonen"
+msgstr "Voorbeeld tonen"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -248,27 +247,27 @@ msgstr "U hebt geen afbeeldingen in dit document.<nl/><nl/>Scannen starten!"
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Deze selectie verwerpen"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Selectiegebied toevoegen"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Klik en sleep om een ander gebied te selecteren"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Scan verticaal splitsen"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Scan horizontaal splitsen"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -388,7 +387,7 @@ msgstr "Alles opslaan"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Voorbeeld"
 
 #: qml/MainWindow.qml:122
 #, kde-format

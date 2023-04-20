@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-03-31 12:59+0200\n"
+"PO-Revision-Date: 2023-04-19 13:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 20.12.0\n"
 "X-Accelerator-Marker: &\n"
 
 #, kde-format
@@ -239,10 +239,9 @@ msgid "Reverse Order"
 msgstr "Ordre invers"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Mostra'n més"
+msgstr "Mostra la vista prèvia"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -253,27 +252,27 @@ msgstr "Ni hi ha cap imatge en aquest document.<nl/><nl/>Inicia l'escaneig!"
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Descarta aquesta selecció"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Afegeix una àrea de selecció"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Feu clic i arrossegueu per a seleccionar una altra àrea"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Divideix verticalment l'escaneig"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Divideix horitzontalment l'escaneig"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -393,7 +392,7 @@ msgstr "Desa-ho tot"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Vista prèvia"
 
 #: qml/MainWindow.qml:122
 #, kde-format

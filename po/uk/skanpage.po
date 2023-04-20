@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-03-31 14:38+0300\n"
+"PO-Revision-Date: 2023-04-19 08:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -239,10 +239,9 @@ msgid "Reverse Order"
 msgstr "Зворотний порядок"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Докладніше"
+msgstr "Показати попередній перегляд"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -254,27 +253,28 @@ msgstr ""
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Відкинути це позначення"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Додати позначену ділянку"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
 msgstr ""
+"Натисніть кнопку миші і перетягніть вказівник, щоб позначити іншу ділянку"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Розділити скановане вертикально"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Розділити скановане горизонтально"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -395,7 +395,7 @@ msgstr "Зберегти все"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Перегляд"
 
 #: qml/MainWindow.qml:122
 #, kde-format
