@@ -630,6 +630,10 @@ void Skanpage::scanningFinished(Interface::ScanStatus status, const QString &str
 {
     //only print debug, errors are already reported by Interface::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
+
+    if (d->m_scanIsPreview) { // imageReady didn't execute (there was an error)
+        finishPreview(); // Restore options anyways
+    }
     
     d->m_scanInProgress = false;
     checkFinish();
