@@ -51,7 +51,8 @@ Item {
 
                 SplitView.fillHeight: true
                 SplitView.preferredWidth: splitViewPreferredWidth
-                SplitView.minimumWidth: splitView.width / 10
+                SplitView.minimumWidth: scrollView.minimumWidth
+                SplitView.maximumWidth: splitView.width - activeDocument.width - optionsSeparator.width
                 onSaveSinglePage: mainContent.saveSinglePage(pageNumber)
             }
 

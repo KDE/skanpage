@@ -18,6 +18,8 @@ ColumnLayout {
     signal saveSinglePage(int pageNumber)
 
     spacing: 0
+    property int minimumWidth: optionsConfigurationLabel.width + optionsConfiguration.width
+                             + 2 * Kirigami.Units.largeSpacing
 
     //copied from Kirigami.Separator
     property var midColor: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
@@ -129,16 +131,20 @@ ColumnLayout {
                             
                             ColumnLayout {
                                 anchors.centerIn: parent
+                                height: parent.implicitHeight
 
                                 BusyIndicator {
                                     running: parent.parent.visible
 
                                     Layout.preferredWidth: Kirigami.Units.iconSizes.huge
-                                    Layout.preferredHeight: Kirigami.Units.iconSizes.huge
+                                    Layout.preferredHeight: Layout.preferredWidth
+                                    Layout.maximumHeight: parent.parent.implicitHeight
                                     Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                                 }
 
                                 Kirigami.PlaceholderMessage {
+                                    visible: parent.parent.implicitHeight > Kirigami.Units.iconSizes.huge + height
+                                    Layout.maximumWidth: contentWidth
                                     Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                                     text: xi18nc("@info", "Processing page...")
                                 }
@@ -186,6 +192,15 @@ ColumnLayout {
 
                                 level: 2
                                 text: i18nc("Page index", "Page %1", model.index + 1)
+
+                                ToolButton { id: dummyButton; visible: false }
+                                Component.onCompleted: {
+                                    let newVal = pageNumber.width + dummyButton.width
+                                        + 4 * Kirigami.Units.smallSpacing + 2 * delegateRoot.border.width
+                                        + scrollView.ScrollBar.vertical.width
+                                    // Select highest minimum width (highest numbered page)
+                                    if (documentList.minimumWidth < newVal) documentList.minimumWidth = newVal
+                                }
                             }
 
                             Item {
@@ -193,7 +208,6 @@ ColumnLayout {
                             }
 
                             Kirigami.ActionToolBar {
-
                                 flat: false
                                 alignment: Qt.AlignRight
                                 display: Button.IconOnly
@@ -261,6 +275,7 @@ ColumnLayout {
         Layout.preferredHeight: Kirigami.Units.gridUnit * 2
 
         Label {
+            id: optionsConfigurationLabel
             Layout.margins: Kirigami.Units.largeSpacing
             text: i18np("%1 page", "%1 pages", skanpage.documentModel.count)
         }

@@ -34,8 +34,6 @@ QDebug operator<<(QDebug d, const PreviewPageProperties& pageProperties)
     return d;
 }
 
-const static QString defaultFileName = i18n("New document");
-
 class DocumentModelPrivate
 {
 public:
@@ -47,9 +45,11 @@ public:
     bool m_changed = false;
     int m_activePageIndex = -1;
     int m_idCounter = 0;
+    const QString m_defaultFileName;
 };
 
 DocumentModelPrivate::DocumentModelPrivate()
+    : m_defaultFileName(i18n("New document"))
 {
 }
 
@@ -371,8 +371,8 @@ void DocumentModel::clearData()
     endResetModel();
     Q_EMIT countChanged();
 
-    if (!d->m_fileUrls.isEmpty() && defaultFileName != d->m_fileUrls.first().fileName()) {
-        d->m_fileUrls.first() = QUrl::fromLocalFile(defaultFileName);
+    if (!d->m_fileUrls.isEmpty() && d->m_defaultFileName != d->m_fileUrls.first().fileName()) {
+        d->m_fileUrls.first() = QUrl::fromLocalFile(d->m_defaultFileName);
         Q_EMIT nameChanged();
     }
     if (d->m_changed) {
