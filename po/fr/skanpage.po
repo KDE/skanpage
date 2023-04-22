@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-04-01 08:41+0200\n"
+"PO-Revision-Date: 2023-04-20 11:33+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -234,10 +234,9 @@ msgid "Reverse Order"
 msgstr "Ordre inverse"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Afficher plus"
+msgstr "Afficher l'aperçu"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -250,27 +249,27 @@ msgstr ""
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Annuler cette sélection"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Ajouter un zone de sélection"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Cliquer et faire glisser pour la sélection d'une autre zone"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Scinder verticalement la numérisation"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Scinder horizontalement la numérisation"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -390,7 +389,7 @@ msgstr "Tout enregistrer"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Aperçu"
 
 #: qml/MainWindow.qml:122
 #, kde-format

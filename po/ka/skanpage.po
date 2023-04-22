@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-04-01 06:55+0200\n"
+"PO-Revision-Date: 2023-04-21 07:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -237,10 +237,9 @@ msgid "Reverse Order"
 msgstr "შებრუნებული მიმდევრობით"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "მეტის ჩვენება"
+msgstr "მინიატურის ჩვენება"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -251,27 +250,27 @@ msgstr "თქვენს დოკუმენტში სურათებ�
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "ამ მონიშნულის მოცილება"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "მონისნული ადგილის დამატება"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "სხვა ადგილის მოსანიშნად დააწკაპუნეთ და გადაათრიეთ"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "სკანირების ვერტიკალურად გაყოფა"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "სკანირების ჰორიზონტალურად გაყოფა"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -391,7 +390,7 @@ msgstr "ყველას შენახვა"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "მინიატურა"
 
 #: qml/MainWindow.qml:122
 #, kde-format

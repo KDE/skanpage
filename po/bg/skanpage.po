@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-04-06 18:14+0200\n"
+"PO-Revision-Date: 2023-04-21 23:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -236,10 +236,9 @@ msgid "Reverse Order"
 msgstr "В обратен ред"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Показване на още"
+msgstr "Показване на предварителен преглед"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -251,27 +250,27 @@ msgstr ""
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Отказване на тази селекция"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Добавяне на област на селекция"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Кликнете и завлечете с мишката, за да избере друга област"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Разделяне на сканирането вертикално"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Разделяне на сканирането хоризонтално"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -391,7 +390,7 @@ msgstr "Запис на всички"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Предварителен преглед"
 
 #: qml/MainWindow.qml:122
 #, kde-format
