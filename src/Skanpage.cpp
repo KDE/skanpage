@@ -160,6 +160,13 @@ void Skanpage::loadScannerOptions()
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Loading scanner options") << scannerOptions.entryMap();
 
+    { // NOTE: These options are not reachable from Skanpage, for now disregard user config
+        scannerOptions.writeEntry(  "red-gamma-table", "0:0:100"); // Because they have/had wrong
+        scannerOptions.writeEntry("green-gamma-table", "0:0:100"); // configs, and can't be fixed
+        scannerOptions.writeEntry( "blue-gamma-table", "0:0:100"); // by hand from the interface
+        scannerOptions.writeEntry(      "gamma-table", "0:0:100");
+    }
+
     d->m_ksaneInterface.setOptionsMap(scannerOptions.entryMap());
 }
 
