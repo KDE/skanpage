@@ -58,7 +58,8 @@ Item {
                 inputMethodHints: Qt.ImhFormattedNumbersOnly
 
                 onTextEdited: {
-                    control.value = control.valueFromText(text, control.locale)
+                    control.value = control.valueFromText(text.replace(control.locale.groupSeparator, ""), control.locale)
+                    control.valueModified()
                 }
 
                 width: Math.max(minTextSize.width, maxTextSize.width) + Kirigami.Units.smallSpacing
