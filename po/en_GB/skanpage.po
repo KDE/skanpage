@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-04-01 17:49+0100\n"
+"PO-Revision-Date: 2023-04-22 10:59+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -234,10 +234,9 @@ msgid "Reverse Order"
 msgstr "Reverse Order"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Show More"
+msgstr "Show Preview"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -248,27 +247,27 @@ msgstr "You do not have any images in this document.<nl/><nl/>Start scanning!"
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Discard this selection"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Add Selection Area"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Click and drag to select another area"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Split Scan Vertically"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Split Scan Horizontally"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -388,7 +387,7 @@ msgstr "Save All"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Preview"
 
 #: qml/MainWindow.qml:122
 #, kde-format
