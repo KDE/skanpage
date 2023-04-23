@@ -62,6 +62,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="pl">Program do wielostronicowego skanowania</summary>
   <summary xml:lang="pt">Aplicação de digitalização de documentos multi-páginas</summary>
   <summary xml:lang="pt-BR">Aplicativo de digitalização de documentos de múltiplas páginas</summary>
+  <summary xml:lang="ru">Приложение для сканирования многостраничных документов</summary>
   <summary xml:lang="sl">Aplikacija za optično branje več stranskega dokumenta</summary>
   <summary xml:lang="tr">Çok sayfalı belge tarama uygulaması</summary>
   <summary xml:lang="uk">Програма для сканування послідовностей сторінок</summary>
@@ -86,6 +87,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pl">Skanpage jest prostym programem opracowany do wielostronicowego skanowania dokumentów. Może także skanować i zapisywać jednostronnicowe dokumenty i obrazy.</p>
     <p xml:lang="pt">O Skanpage é uma aplicação de digitalização simples que está desenhada para a digitalização de documentos com várias páginas. Também consegue digitalizar e gravar documentos e imagens com páginas individuais.</p>
     <p xml:lang="pt-BR">Skanpage é um aplicativo simples de digitalização otimizado para digitalizar documentos de múltiplas páginas. Ele também pode digitalizar e salvar documentos de única página e imagens.</p>
+    <p xml:lang="ru">Skanpage — простое приложение для сканирования и сохранения документов и изображений, состоящих из одной или нескольких страниц.</p>
     <p xml:lang="sl">Skanpage je preprosta aplikacija za optično branje več stranskega dokumenta. Lahko skenira in shranjuje tudi enostranske dokumente in slike.</p>
     <p xml:lang="tr">Skanpage, çok sayfalı belgeleri taramak için eniyilenmiş yalın bir tarama uygulamasıdır. Ayrıca tek sayfalı belgeleri veya görselleri de tarayıp kaydedebilir.</p>
     <p xml:lang="uk">Skanpage — проста програма для сканування, яку розроблено для сканування послідовностей багатосторінкових документів. Вона також може зберігати односторінкові документи та зображення.</p>
@@ -209,6 +211,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pl">Zmiana kolejności, obrót i usuwanie zeskanowanych stron</li>
       <li xml:lang="pt">Reordenação, rotação e remoção das páginas digitalizadas</li>
       <li xml:lang="pt-BR">Reordenar, rotação e exclusão de páginas digitalizadas</li>
+      <li xml:lang="ru">Упорядочивание, вращение и удаление отсканированных страниц;</li>
       <li xml:lang="sl">Zamenjava vrstnega reda, sukanje in brisanje prebranih strani</li>
       <li xml:lang="tr">Taranan sayfaların yeniden sıralanması, döndürülmesi ve silinmesi</li>
       <li xml:lang="uk">Переупорядковування, обертання та вилучення сканованих сторінок</li>
@@ -272,6 +275,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="pl">Główne okno Skanpage</caption>
       <caption xml:lang="pt">Janela principal do Skanpage</caption>
       <caption xml:lang="pt-BR">Janela principal do Skanpage</caption>
+      <caption xml:lang="ru">Главное окно Skanpage</caption>
       <caption xml:lang="sl">Skanpage glavno okno</caption>
       <caption xml:lang="tr">Skanpage ana penceresi</caption>
       <caption xml:lang="uk">Головне вікно Skanpage</caption>
