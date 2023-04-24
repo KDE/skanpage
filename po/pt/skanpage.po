@@ -238,10 +238,9 @@ msgid "Reverse Order"
 msgstr "Ordem Inversa"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Mostrar Mais"
+msgstr "Mostrar a Antevisão"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -393,7 +392,7 @@ msgstr "Gravar Tudo"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Antevisão"
 
 #: qml/MainWindow.qml:122
 #, kde-format

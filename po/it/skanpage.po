@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the skanpage package.
-# Paolo Zamponi <zapaolo@email.it>, 2021, 2022, 2023.
+# Paolo Zamponi <feus73@gmail.com>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-04-09 18:24+0200\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2023-04-22 14:24+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "Paolo Zamponi"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zapaolo@email.it"
+msgstr "feus73@gmail.com"
 
 #: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
 #, kde-format
@@ -234,10 +234,9 @@ msgid "Reverse Order"
 msgstr "Ordine inverso"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Mostra altro"
+msgstr "Mostra anteprima"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -249,27 +248,27 @@ msgstr ""
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Scarta questa selezione"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Aggiungi area di selezione"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Fai clic e trascina per selezionare un'altra area"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Dividi la scansione verticalmente"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Dividi la scansione orizzontalmente"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -389,7 +388,7 @@ msgstr "Salva tutto"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Anteprima"
 
 #: qml/MainWindow.qml:122
 #, kde-format
