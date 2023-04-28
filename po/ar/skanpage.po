@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-04-06 09:43+0400\n"
+"PO-Revision-Date: 2023-04-27 11:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -239,10 +239,9 @@ msgid "Reverse Order"
 msgstr "بالتّرتيب المعكوس"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "اعرض المزيد"
+msgstr "اعرض معاينة"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -253,27 +252,27 @@ msgstr "لا يوجد أي صور حتى الآن في هذا المستند <nl
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "أهمل هذا التحديد"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "أضف منطقة تحديد"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "انقر واسحب لتحدد منطقة أخرى"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "اقسم المسح رأسياً"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "اقسم المسح أفقياً"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -393,7 +392,7 @@ msgstr "احفظ الكلّ"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "عاين"
 
 #: qml/MainWindow.qml:122
 #, kde-format
