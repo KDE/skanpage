@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-19 00:52+0000\n"
-"PO-Revision-Date: 2023-04-16 12:32\n"
+"PO-Revision-Date: 2023-04-29 08:35\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -233,10 +233,9 @@ msgid "Reverse Order"
 msgstr "反向排序"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "显示更多"
+msgstr "显示预览"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -247,27 +246,27 @@ msgstr "此文档尚未包含任何图像。<nl/><nl/>请开始扫描。"
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "丢弃此选区"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "添加选区"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "点击并拖动以选择另一个区域"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "垂直拆分扫描"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "水平拆分扫描"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -386,7 +385,7 @@ msgstr "全部保存"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "预览"
 
 #: qml/MainWindow.qml:122
 #, kde-format
