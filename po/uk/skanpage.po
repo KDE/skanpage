@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 00:52+0000\n"
+"POT-Creation-Date: 2023-05-02 00:51+0000\n"
 "PO-Revision-Date: 2023-04-19 08:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
+#: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
 #, kde-format
 msgid "New document"
 msgstr "Новий документ"
@@ -160,54 +160,54 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Шукаємо доступні пристрої."
 
-#: qml/DocumentList.qml:157
+#: qml/DocumentList.qml:163
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Обробляємо сторінку…"
 
-#: qml/DocumentList.qml:202
+#: qml/DocumentList.qml:208
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Сторінка %1"
 
-#: qml/DocumentList.qml:217
+#: qml/DocumentList.qml:231
 #, kde-format
 msgid "Move Up"
 msgstr "Пересунути вище"
 
-#: qml/DocumentList.qml:227
+#: qml/DocumentList.qml:241
 #, kde-format
 msgid "Move Down"
 msgstr "Пересунути нижче"
 
-#: qml/DocumentList.qml:237 qml/DocumentPage.qml:417
+#: qml/DocumentList.qml:251 qml/DocumentPage.qml:417
 #, kde-format
 msgid "Rotate Left"
 msgstr "Обернути ліворуч"
 
-#: qml/DocumentList.qml:243 qml/DocumentPage.qml:424
+#: qml/DocumentList.qml:257 qml/DocumentPage.qml:424
 #, kde-format
 msgid "Rotate Right"
 msgstr "Обернути праворуч"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:431
+#: qml/DocumentList.qml:263 qml/DocumentPage.qml:431
 #, kde-format
 msgid "Flip"
 msgstr "Віддзеркалення"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:438
+#: qml/DocumentList.qml:269 qml/DocumentPage.qml:438
 #, kde-format
 msgid "Save Page"
 msgstr "Зберегти сторінку"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:445
+#: qml/DocumentList.qml:275 qml/DocumentPage.qml:445
 #, kde-format
 msgid "Delete Page"
 msgstr "Вилучити сторінку"
 
-#: qml/DocumentList.qml:279
+#: qml/DocumentList.qml:294
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
@@ -216,24 +216,24 @@ msgstr[1] "%1 сторінки"
 msgstr[2] "%1 сторінок"
 msgstr[3] "1 сторінка"
 
-#: qml/DocumentList.qml:290
+#: qml/DocumentList.qml:305
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Перевпорядкувати сторінки"
 
-#: qml/DocumentList.qml:295
+#: qml/DocumentList.qml:310
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:302
+#: qml/DocumentList.qml:317
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:309
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Reverse Order"
 msgstr "Зворотний порядок"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 00:52+0000\n"
+"POT-Creation-Date: 2023-05-02 00:51+0000\n"
 "PO-Revision-Date: 2023-04-20 02:06+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
-#: DocumentModel.cpp:37 DocumentModel.cpp:69 DocumentModel.cpp:80
+#: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
 #, kde-format
 msgid "New document"
 msgstr "Documento nuevo"
@@ -161,78 +161,78 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Buscando los dispositivos disponibles."
 
-#: qml/DocumentList.qml:157
+#: qml/DocumentList.qml:163
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Procesando página..."
 
-#: qml/DocumentList.qml:202
+#: qml/DocumentList.qml:208
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Página %1"
 
-#: qml/DocumentList.qml:217
+#: qml/DocumentList.qml:231
 #, kde-format
 msgid "Move Up"
 msgstr "Subir"
 
-#: qml/DocumentList.qml:227
+#: qml/DocumentList.qml:241
 #, kde-format
 msgid "Move Down"
 msgstr "Bajar"
 
-#: qml/DocumentList.qml:237 qml/DocumentPage.qml:417
+#: qml/DocumentList.qml:251 qml/DocumentPage.qml:417
 #, kde-format
 msgid "Rotate Left"
 msgstr "Rotar a la izquierda"
 
-#: qml/DocumentList.qml:243 qml/DocumentPage.qml:424
+#: qml/DocumentList.qml:257 qml/DocumentPage.qml:424
 #, kde-format
 msgid "Rotate Right"
 msgstr "Rotar a la derecha"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:431
+#: qml/DocumentList.qml:263 qml/DocumentPage.qml:431
 #, kde-format
 msgid "Flip"
 msgstr "Invertir"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:438
+#: qml/DocumentList.qml:269 qml/DocumentPage.qml:438
 #, kde-format
 msgid "Save Page"
 msgstr "Guardar página"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:445
+#: qml/DocumentList.qml:275 qml/DocumentPage.qml:445
 #, kde-format
 msgid "Delete Page"
 msgstr "Borrar página"
 
-#: qml/DocumentList.qml:279
+#: qml/DocumentList.qml:294
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 página"
 msgstr[1] "%1 páginas"
 
-#: qml/DocumentList.qml:290
+#: qml/DocumentList.qml:305
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Reordenar páginas"
 
-#: qml/DocumentList.qml:295
+#: qml/DocumentList.qml:310
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:302
+#: qml/DocumentList.qml:317
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:309
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Reverse Order"
 msgstr "Invertir orden"
