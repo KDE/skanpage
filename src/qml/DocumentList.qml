@@ -58,14 +58,35 @@ ColumnLayout {
 
             onCurrentItemChanged: skanpage.documentModel.activePageIndex = currentIndex
 
-            Shortcut {
-                sequence: StandardKey.MoveToNextLine
-                onActivated: skanpage.documentModel.activePageIndex++
+            ShortcutsAction {
+                id: selectUpAction
+                text: i18n("Select previous page")
+                shortcut: "UP"
+                onTriggered: skanpage.documentModel.activePageIndex--
             }
-
-            Shortcut {
-                sequence: StandardKey.MoveToPreviousLine
-                onActivated: skanpage.documentModel.activePageIndex--
+            ShortcutsAction {
+                id: selectDownAction
+                text: i18n("Select next page")
+                shortcut: "DOWN"
+                onTriggered: skanpage.documentModel.activePageIndex++
+            }
+            ShortcutsAction {
+                id: moveUpAction
+                text: i18n("Move selected page up")
+                shortcut: "CTRL+SHIFT+UP"
+                onTriggered: {
+                    const i = skanpage.documentModel.activePageIndex
+                    skanpage.documentModel.moveImage(i, i - 1);
+                }
+            }
+            ShortcutsAction {
+                id: moveDownAction
+                text: i18n("Move selected page down")
+                shortcut: "CTRL+SHIFT+DOWN"
+                onTriggered: {
+                    const i = skanpage.documentModel.activePageIndex
+                    skanpage.documentModel.moveImage(i, i + 1);
+                }
             }
 
             delegate: Rectangle {

@@ -390,6 +390,11 @@ ApplicationWindow {
             aboutData: _aboutData
             anchors.fill: parent
         }
+
+        Shortcut {
+            sequence: "Esc"
+            onActivated: aboutWindow.close()
+        }
     }
 
     FileDialog {
