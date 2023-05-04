@@ -42,7 +42,7 @@ ColumnLayout {
         ListView {
             model: skanpage.optionsModel
 
-            enabled: skanpage.applicationState == Skanpage.ReadyForScan
+            enabled: skanpage.applicationState === Skanpage.ReadyForScan
             
             delegate: OptionDelegate {
                 modelItem: model
@@ -103,7 +103,7 @@ ColumnLayout {
                 icon.name: "view-refresh"
                 text: i18n("Reselect Scanner")
                 onTriggered: skanpage.reloadDevicesList()
-                enabled: skanpage.applicationState == Skanpage.ReadyForScan
+                enabled: skanpage.applicationState === Skanpage.ReadyForScan
             }
         ]
     }

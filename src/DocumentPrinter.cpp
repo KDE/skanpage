@@ -51,14 +51,13 @@ void DocumentPrinter::printDocument(const SkanpageUtils::DocumentPages &document
 
 void DocumentPrinter::print(const SkanpageUtils::DocumentPages &document)
 {
-    int rotationAngle;
     QPainter painter(m_printer.get());
     QRect rect = painter.viewport();
     for (int i = 0; i < document.count(); ++i) {
         if (i != 0) {
             m_printer->newPage();
         }
-        rotationAngle = document.at(i).rotationAngle;
+        int rotationAngle = document.at(i).rotationAngle;
         QImage pageImage(document.at(i).temporaryFile->fileName());
         if (rotationAngle != 0) {
             pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));

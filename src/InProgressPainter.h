@@ -16,7 +16,7 @@ class InProgressPainter : public QQuickPaintedItem
     Q_OBJECT
 
 public:
-    InProgressPainter(QQuickItem *parent = nullptr);
+    explicit InProgressPainter(QQuickItem *parent = nullptr);
     ~InProgressPainter();
 
     void paint(QPainter *painter) override;

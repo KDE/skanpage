@@ -104,12 +104,12 @@ Item {
             MouseArea {
                 id: newAreaSelector
                 anchors.fill: parent
-                anchors.rightMargin: selection.state == "queueNewArea"
+                anchors.rightMargin: selection.state === "queueNewArea"
                                    ? Kirigami.Units.gridUnit : selection.selectionWidth
-                anchors.bottomMargin: selection.state == "queueNewArea"
+                anchors.bottomMargin: selection.state === "queueNewArea"
                                     ? Kirigami.Units.gridUnit : selection.selectionHeight
-                property bool active: selection.state == "queueNewArea" ||
-                                      selection.state == "addingNewArea" || selection.state == "sizingNewArea"
+                property bool active: selection.state === "queueNewArea" ||
+                                      selection.state === "addingNewArea" || selection.state === "sizingNewArea"
                 z: active ? 1 : -1
 
                 onPressed: if (active) {
@@ -128,7 +128,7 @@ Item {
                     // that doesn't update immediately after changing its z value
                     id: newAreaSensor
                     onHoveredChanged: if (hovered) { // onEntered the area
-                        if (selection.state == "queueNewArea") selection.state = "addingNewArea"
+                        if (selection.state === "queueNewArea") selection.state = "addingNewArea"
                     }
                 }
             }
@@ -250,10 +250,10 @@ Item {
                             rightMargin: Math.min(Math.max(
                                 parent.width/2 - implicitWidth, 0), Kirigami.Units.smallSpacing)
                         }
-                        width: anchors.rightMargin == 0 ? parent.width / 2 : implicitWidth
-                        height: anchors.topMargin  == 0 ? parent.height    : implicitHeight
+                        width: anchors.rightMargin === 0 ? parent.width / 2 : implicitWidth
+                        height: anchors.topMargin  === 0 ? parent.height    : implicitHeight
                         z: 1
-                        icon.name: anchors.rightMargin == 0 || anchors.topMargin == 0 ? "" : "edit-delete-remove"
+                        icon.name: anchors.rightMargin === 0 || anchors.topMargin === 0 ? "" : "edit-delete-remove"
                         onClicked: skanpage.eraseSubArea(index)
                         ToolTip.text: i18n("Discard this selection")
                     }
@@ -337,7 +337,7 @@ Item {
                 Image {
                     id: bigImage
 
-                    readonly property bool landscape: (rotation == 270 || rotation == 90)
+                    readonly property bool landscape: rotation === 270 || rotation === 90
                     property double zoomScale: Math.min(imageViewer.availableWidth / bigImage.sourceSize.width, 1)
 
                     anchors {

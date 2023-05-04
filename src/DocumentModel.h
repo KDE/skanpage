@@ -73,9 +73,9 @@ public:
 
     Q_INVOKABLE void reorderPages(ReorderOption reorder);
 
-    Q_INVOKABLE void save(const QUrl &fileUrl, QList<int> pageNumbers = {});
+    Q_INVOKABLE void save(const QUrl &fileUrl, const QList<int> &pageNumbers = {});
 
-    Q_INVOKABLE void createSharingFile(const QString &suffix, QList<int> pageNumbers = {});
+    Q_INVOKABLE void createSharingFile(const QString &suffix, const QList<int> &pageNumbers = {});
 
     Q_INVOKABLE void exportPDF(const QUrl &fileUrl, const QString &title, const bool useOCR);
 

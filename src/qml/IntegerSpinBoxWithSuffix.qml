@@ -67,7 +67,7 @@ Item {
 
             Label {
                 id: suffixText
-                visible: text != ''
+                visible: text !== ''
             }
         }
     }

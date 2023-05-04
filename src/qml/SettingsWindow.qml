@@ -57,12 +57,8 @@ Window {
 
             onActivated: skanpage.configuration.defaultNameFilter = currentValue
             Component.onCompleted: {
-                var index = indexOfValue(skanpage.configuration.defaultNameFilter)
-                if (index < 0) {
-                    currentIndex = 0
-                } else {
-                    currentIndex = index
-                }
+                const index = indexOfValue(skanpage.configuration.defaultNameFilter)
+                currentIndex = index >= 0 ? index : 0
             }
         }
 

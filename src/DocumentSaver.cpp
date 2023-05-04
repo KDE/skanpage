@@ -15,6 +15,7 @@
 
 DocumentSaver::DocumentSaver(QObject *parent)
     : QObject(parent)
+    , m_OCREngine(nullptr)
 {
 }
 

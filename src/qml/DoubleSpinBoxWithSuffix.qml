@@ -60,7 +60,7 @@ Item {
 
         Component.onCompleted: findMultiplier()
         function findMultiplier() {
-            while (container.stepSize * multiplier < 1 && container.stepSize != 0) {
+            while (container.stepSize * multiplier < 1 && container.stepSize !== 0) {
                 multiplier = multiplier * 10
                 decimals = decimals + 1
             }
@@ -103,7 +103,7 @@ Item {
 
             Label {
                 id: suffixText
-                visible: text != ''
+                visible: text !== ''
             }
         }
     }

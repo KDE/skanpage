@@ -17,7 +17,7 @@ Item {
         anchors.centerIn: parent
 
         BusyIndicator {
-            running: skanpage.applicationState == Skanpage.SearchingForDevices
+            running: skanpage.applicationState === Skanpage.SearchingForDevices
 
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge

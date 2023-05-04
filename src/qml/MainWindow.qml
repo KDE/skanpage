@@ -55,7 +55,7 @@ ApplicationWindow {
 
         function onNewUserMessage(level, message) {
             errorMessage.text = message
-            if (level == SkanpageUtils.ErrorMessage) {
+            if (level === SkanpageUtils.ErrorMessage) {
                 errorMessage.type = Kirigami.MessageType.Error
             } else {
                 errorMessage.type = Kirigami.MessageType.Information
@@ -66,11 +66,11 @@ ApplicationWindow {
         }
 
         function onApplicationStateChanged(state) {
-            if (state == Skanpage.SearchingForDevices) {
+            if (state === Skanpage.SearchingForDevices) {
                 stackView.push(devicesLoading)
-            } else if (state == Skanpage.DeviceSelection) {
+            } else if (state === Skanpage.DeviceSelection) {
                 stackView.replace(deviceSelection)
-            } else if (state == Skanpage.ReadyForScan) {
+            } else if (state === Skanpage.ReadyForScan) {
                 while(stackView.depth > 1) {
                     stackView.pop()
                 }
@@ -109,7 +109,7 @@ ApplicationWindow {
         icon.name: "document-preview"
         text: i18n("Preview")
         shortcut: "P"
-        enabled: skanpage.applicationState == Skanpage.ReadyForScan
+        enabled: skanpage.applicationState === Skanpage.ReadyForScan
         onTriggered: {
             mainView.activeDocument.showPreview = true
             skanpage.preview()
@@ -121,7 +121,7 @@ ApplicationWindow {
         icon.name: "document-scan"
         text: i18n("Scan")
         shortcut: "SPACE"
-        enabled: skanpage.applicationState == Skanpage.ReadyForScan
+        enabled: skanpage.applicationState === Skanpage.ReadyForScan
         onTriggered: {
             mainView.activeDocument.showPreview = false
             skanpage.scanArea = mainView.activeDocument.getScanArea()
@@ -134,7 +134,7 @@ ApplicationWindow {
         icon.name: "dialog-cancel"
         text: i18n("Cancel")
         shortcut: "Esc"
-        enabled: skanpage.applicationState == Skanpage.ScanInProgress
+        enabled: skanpage.applicationState === Skanpage.ScanInProgress
         onTriggered: skanpage.cancelScan()
     }
 
@@ -443,9 +443,9 @@ ApplicationWindow {
 
     Component.onCompleted: {
         skanpage.optionsModel.showAllOptions(skanpage.stateConfiguration.showAllOptions)
-        if (skanpage.applicationState == Skanpage.SearchingForDevices) {
+        if (skanpage.applicationState === Skanpage.SearchingForDevices) {
             stackView.push(devicesLoading)
-        } else if (skanpage.applicationState == Skanpage.DeviceSelection) {
+        } else if (skanpage.applicationState === Skanpage.DeviceSelection) {
             stackView.push(deviceSelection)
         }
     }

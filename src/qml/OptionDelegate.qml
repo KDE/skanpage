@@ -73,7 +73,7 @@ Item {
                     editable: true
 
                     onValueModified: {
-                        if (value != modelItem.value) {
+                        if (value !== modelItem.value) {
                             modelItem.value = value
                         }
                     }
@@ -110,7 +110,7 @@ Item {
                 sourceComponent: TextField {
                     text: modelItem.value
                     onTextChanged:  {
-                        if (text != modelItem.value) {
+                        if (text !== modelItem.value) {
                             modelItem.value = value
                         }
                     }
@@ -144,7 +144,7 @@ Item {
 
                 sourceComponent: ColumnLayout {
                     readonly property bool isDefaultConfig:
-                        modelItem.value[0] == 0 && modelItem.value[1] == 0 && modelItem.value[2] == 100
+                        modelItem.value[0] === 0 && modelItem.value[1] === 0 && modelItem.value[2] === 100
                     RowLayout {
                         Label {
                             text: i18nc("Add ':' to make a header text", "%1:", model.title)
@@ -225,7 +225,7 @@ Item {
                     currentIndex: indexOfValue(modelItem.value)
 
                     onCurrentValueChanged: {
-                        if (combo.currentValue != modelItem.value) {
+                        if (combo.currentValue !== modelItem.value) {
                             modelItem.value = combo.currentValue
                         }
                     }

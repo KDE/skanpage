@@ -134,7 +134,7 @@ Window {
                     'mimeType': [formatSelection.currentValue]
                 }
                 //remove any busy indicator in case there is one
-                if (purposeView.depth == 2) {
+                if (purposeView.depth === 2) {
                     purposeView.pop()
                 }
                 purposeView.push(jobComponent, {index: selectedIndex})

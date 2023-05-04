@@ -113,7 +113,7 @@ void DocumentModel::setActivePageIndex(int newIndex)
     }
 }
 
-void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
+void DocumentModel::save(const QUrl &fileUrl, const QList<int> &pageNumbers)
 {
     if (pageNumbers.isEmpty()) {
         Q_EMIT saveDocument(fileUrl, d->m_pages);
@@ -122,7 +122,7 @@ void DocumentModel::save(const QUrl &fileUrl, QList<int> pageNumbers)
     }
 }
 
-void DocumentModel::createSharingFile(const QString &suffix, QList<int> pageNumbers)
+void DocumentModel::createSharingFile(const QString &suffix, const QList<int> &pageNumbers)
 {
     if (d->m_pages.isEmpty()) {
         return;
