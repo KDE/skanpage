@@ -594,10 +594,13 @@ void Skanpage::registerAction(QObject* item, QObject* shortcuts, const QString &
     d->m_actionCollection->readSettings();
 
     auto updateKeySequences = [=]() {
-        if (act->shortcuts().isEmpty()) return;
-        item->setProperty("shortcut", act->shortcuts().front());
-        QList<QVariant> sequenceList;
-        for (int i = 1; i < act->shortcuts().size(); i++) sequenceList.append(act->shortcuts().at(i));
+        // Set the first, only, or empty shortcut. Passing a QKeySequence doesn't always work
+        item->setProperty("shortcut", act->shortcut().toString(QKeySequence::PortableText));
+
+        QList<QVariant> sequenceList; // To set the alternate shortcuts
+        for (int i = 1; i < act->shortcuts().size(); i++) {
+            sequenceList.append(act->shortcuts().at(i).toString(QKeySequence::PortableText));
+        }
         shortcuts->setProperty("sequences", sequenceList);
     };
     updateKeySequences(); // Move the specified shortcut to the QML Shortcut object
