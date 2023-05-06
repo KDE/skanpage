@@ -27,12 +27,12 @@ FormatModel::FormatModel(QObject *parent)
     const QMimeDatabase mimeDB;
     // Put first class citizens at first place
     tempList.removeAll(QByteArray("image/jpeg"));
-    tempList.removeAll(QByteArray("image/tiff"));
     tempList.removeAll(QByteArray("image/png"));
+    int count = tempList.removeAll(QByteArray("image/tiff")); // TIFF is not on the base list of formats
     tempList.insert(0, QByteArray("application/pdf"));
     tempList.insert(1, QByteArray("image/png"));
     tempList.insert(2, QByteArray("image/jpeg"));
-    tempList.insert(3, QByteArray("image/tiff"));
+    if (count > 0) tempList.insert(3, QByteArray("image/tiff"));
 
     for (const auto &mimeString : tempList) {
         const QMimeType mimeType = mimeDB.mimeTypeForName(QString::fromLatin1(mimeString));
