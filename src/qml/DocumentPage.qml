@@ -325,8 +325,8 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            contentWidth: Math.max(bigImage.width, imageViewer.availableWidth)
-            contentHeight: Math.max(bigImage.height, imageViewer.availableHeight)
+            contentWidth: Math.max(bigImage.parent.width, imageViewer.availableWidth)
+            contentHeight: Math.max(bigImage.parent.height, imageViewer.availableHeight)
 
             Item {
                 anchors.centerIn: parent
@@ -352,13 +352,14 @@ Item {
 
                     rotation: skanpage.documentModel.activePageRotation
                     transformOrigin: Item.Center
-
-                    TransparentButton {
-                        anchors.top: parent.top
-                        anchors.right: parent.right
-                        action: showPreviewAction
-                    }
                 }
+            }
+
+            TransparentButton {
+                parent: imageViewer
+                anchors.top: parent.top
+                anchors.right: parent.ScrollBar.vertical.visible ? parent.ScrollBar.vertical.left : parent.right
+                action: showPreviewAction
             }
         }
 

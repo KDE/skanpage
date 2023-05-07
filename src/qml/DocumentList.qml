@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.7
+import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.1
 
@@ -19,8 +19,17 @@ ColumnLayout {
     signal showScannedPage()
 
     spacing: 0
-    property int minimumWidth: optionsConfigurationLabel.width + optionsConfiguration.width
-                             + 2 * Kirigami.Units.largeSpacing
+    property int minimumWidth: {
+        let res = listFooter.implicitWidth
+        for (var i = 0; i < listView.count; i++) {
+            const el = listView.itemAtIndex(i)
+            if (el !== null) {
+                const w = el.implicitWidth + scrollView.ScrollBar.vertical.width
+                if (w > res) res = w
+            }
+        }
+        return res
+    }
 
     //copied from Kirigami.Separator
     property var midColor: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
@@ -89,162 +98,130 @@ ColumnLayout {
                 }
             }
 
-            delegate: Rectangle {
-                id: delegateRoot
+            delegate: MouseArea {
+                id: mouseArea
+                width: Math.max(listView.width - scrollView.ScrollBar.vertical.width, delegateRoot.implicitWidth)
+                implicitWidth: delegateRoot.implicitWidth
+                implicitHeight: delegateRoot.implicitHeight
 
-                readonly property int contentWidth: width - border.width * 2
-                readonly property bool landscape: (model.rotationAngle == 270 || model.rotationAngle == 90)
+                property int actualIndex: index // Needs to be redeclared so it shows up from the dragged-into item
 
-                width: listView.width - scrollView.ScrollBar.vertical.width
-                height: (landscape ? contentWidth / model.aspectRatio : contentWidth * model.aspectRatio) + bottomRow.height + Kirigami.Units.smallSpacing * 2 + border.width * 2
+                drag.target: delegateRoot
+                drag.axis: Drag.YAxis
 
-                color: Kirigami.Theme.backgroundColor
-
-                border.width: 2
-                border.color: (index === skanpage.documentModel.activePageIndex) ? Kirigami.Theme.focusColor : documentList.midColor
-                radius: 3
-
-                focus: index === skanpage.documentModel.activePageIndex
-
-                MouseArea {
-                    id: mouseArea
-
+                DropArea {
                     anchors.fill: parent
-                    drag.target: contentColumn
+                    onEntered: function(drag) {
+                        if (drag.source.actualIndex !== mouseArea.actualIndex)
+                            skanpage.documentModel.moveImage(drag.source.actualIndex, mouseArea.actualIndex)
+                    }
+                }
 
-                    hoverEnabled: true
-                    acceptedButtons: Qt.LeftButton
+                onClicked: {
+                    skanpage.documentModel.activePageIndex = index
+                    showScannedPage()
+                }
 
-                    onClicked: {
-                        skanpage.documentModel.activePageIndex = index
-                        showScannedPage()
+                Control {
+                    id: delegateRoot
+
+                    readonly property bool landscape: model.rotationAngle === 270 || model.rotationAngle === 90
+                    focus: index === skanpage.documentModel.activePageIndex
+
+                    width: mouseArea.width
+                    padding: 2
+
+                    Drag.active: mouseArea.drag.active
+                    Drag.source: mouseArea
+                    Drag.hotSpot: Qt.point(width / 2, height / 2)
+
+                    states: [
+                        State {
+                            name: ""
+                            ParentChange {
+                                target: delegateRoot
+                                parent: mouseArea // Reset parent
+                            }
+                            PropertyChanges {
+                                target: delegateRoot
+                                x: 0; y: 0 // Snap back to parent's origin (they are the same size)
+                            }
+                        },
+                        State {
+                            name: "dragging"
+                            when: mouseArea.drag.active
+                            ParentChange {
+                                target: delegateRoot
+                                parent: listView // Lift the item up so it's always visible
+                            }
+                        }
+                    ]
+
+                    background: Rectangle {
+                        color: Kirigami.Theme.backgroundColor
+                        border.width: delegateRoot.padding
+                        border.color: delegateRoot.focus ? Kirigami.Theme.focusColor : documentList.midColor
+                        radius: 3
                     }
 
-                    DropArea {
-                        anchors.fill: parent
-                        onEntered: skanpage.documentModel.moveImage(drag.source.index, delegateRoot.index, 1)
-                    }
-
-                    ColumnLayout {
+                    contentItem: ColumnLayout {
                         id: contentColumn
 
-                        spacing: 0
-                        width: contentWidth
-
-                        anchors {
-                            horizontalCenter: parent.horizontalCenter
-                            verticalCenter: parent.verticalCenter
-                        }
-
-                        Drag.active: mouseArea.drag.active
-                        Drag.source: delegateRoot
-                        Drag.hotSpot.x: width / 2
-                        Drag.hotSpot.y: height / 2
-
-                        states: [
-                            State {
-                                when: mouseArea.drag.active
-
-                                ParentChange {
-                                    target: contentColumn
-                                    parent: doc
-                                }
-
-                                AnchorChanges {
-                                    target: contentColumn
-                                    anchors.horizontalCenter: undefined
-                                    anchors.verticalCenter: undefined
-                                }
-                            }
-                        ]
-                        
                         Item {
-                            visible: !model.isSaved
-
-                            implicitWidth: contentWidth
-                            implicitHeight: contentWidth * model.aspectRatio
-                            
-                            ColumnLayout {
-                                anchors.centerIn: parent
-                                height: parent.implicitHeight
-
-                                BusyIndicator {
-                                    running: parent.parent.visible
-
-                                    Layout.preferredWidth: Kirigami.Units.iconSizes.huge
-                                    Layout.preferredHeight: Layout.preferredWidth
-                                    Layout.maximumHeight: parent.parent.implicitHeight
-                                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                                }
-
-                                Kirigami.PlaceholderMessage {
-                                    visible: parent.parent.implicitHeight > Kirigami.Units.iconSizes.huge + height
-                                    Layout.maximumWidth: contentWidth
-                                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                                    text: xi18nc("@info", "Processing page...")
-                                }
-                            }
-                        }
-                        
-                        Item {
-                            visible: model.isSaved
-                            
-                            implicitWidth: contentWidth
-                            implicitHeight: delegateRoot.landscape ? iconImage.width : iconImage.height
-
+                            Layout.fillWidth: true
+                            implicitHeight: delegateRoot.landscape ?
+                                            width / model.aspectRatio : width * model.aspectRatio
                             Image {
-                                id: iconImage
-
-                                anchors {
-                                    horizontalCenter: parent.horizontalCenter
-                                    verticalCenter: parent.verticalCenter
-                                }
+                                visible: model.isSaved
+                                width:  delegateRoot.landscape ? parent.height : parent.width
+                                height: delegateRoot.landscape ? parent.width  : parent.height
+                                anchors.centerIn: parent
 
                                 source: model.imageUrl
                                 sourceSize.height: model.previewHeight
                                 sourceSize.width: model.previewWidth
 
-                                width: delegateRoot.landscape ? contentWidth / model.aspectRatio: contentWidth
-                                height: delegateRoot.landscape ? contentWidth : contentWidth * model.aspectRatio
-
-                                transformOrigin: Item.Center
                                 rotation: model.rotationAngle
                                 asynchronous: true
+                            }
+
+                            ColumnLayout {
+                                visible: !model.isSaved
+                                anchors.fill: parent
+
+                                BusyIndicator {
+                                    running: visible
+
+                                    Layout.preferredWidth: Kirigami.Units.iconSizes.huge
+                                    Layout.preferredHeight: Layout.preferredWidth
+                                    Layout.maximumHeight: parent.height
+                                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                                }
+
+                                Kirigami.PlaceholderMessage {
+                                    visible: parent.height > Kirigami.Units.iconSizes.huge + height
+                                    Layout.maximumWidth: parent.width
+                                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                                    text: xi18nc("@info", "Processing page...")
+                                }
                             }
                         }
 
                         RowLayout {
                             id: bottomRow
-                            Layout.margins: Kirigami.Units.smallSpacing
+                            Layout.fillWidth: true
                             spacing: Kirigami.Units.smallSpacing
 
-                            width: contentWidth
-
                             Kirigami.Heading {
-                                id: pageNumber
-
                                 Layout.alignment: Qt.AlignLeft
-
                                 level: 2
                                 text: i18nc("Page index", "Page %1", model.index + 1)
-
-                                ToolButton { id: dummyButton; visible: false }
-                                Component.onCompleted: {
-                                    let newVal = pageNumber.width + dummyButton.width
-                                        + 4 * Kirigami.Units.smallSpacing + 2 * delegateRoot.border.width
-                                        + scrollView.ScrollBar.vertical.width
-                                    // Select highest minimum width (highest numbered page)
-                                    if (documentList.minimumWidth < newVal) documentList.minimumWidth = newVal
-                                }
-                            }
-
-                            Item {
-                                Layout.fillWidth: true
                             }
 
                             Kirigami.ActionToolBar {
-                                flat: false
+                                Layout.alignment: Qt.AlignRight
                                 alignment: Qt.AlignRight
+                                flat: false
                                 display: Button.IconOnly
                                 actions: [
                                     Kirigami.Action {
@@ -306,18 +283,16 @@ ColumnLayout {
     }
 
     RowLayout {
+        id: listFooter
         Layout.fillWidth: true
         Layout.preferredHeight: Kirigami.Units.gridUnit * 2
 
         Label {
-            id: optionsConfigurationLabel
             Layout.margins: Kirigami.Units.largeSpacing
             text: i18np("%1 page", "%1 pages", skanpage.documentModel.count)
         }
 
         Kirigami.ActionToolBar {
-            id: optionsConfiguration
-
             alignment: Qt.AlignRight
             actions: [
                 Kirigami.Action {

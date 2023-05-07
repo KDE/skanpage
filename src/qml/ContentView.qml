@@ -6,7 +6,7 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.14
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.12 as Kirigami
@@ -58,7 +58,11 @@ Item {
                 SplitView.maximumWidth: splitView.width - activeDocument.width - optionsSeparator.width
                 onSaveSinglePage: mainContent.saveSinglePage(pageNumber)
                 onShowScannedPage: activeDocument.showPreview = false
+                onMinimumWidthChanged: // Do not prefer a width lower than a minimum
+                    if (SplitView.preferredWidth < minimumWidth) SplitView.preferredWidth = minimumWidth
             }
+
+            onResizingChanged: if (!resizing) scrollView.minimumWidthChanged()
 
             DocumentPage {
                 id: activeDocument
