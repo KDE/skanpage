@@ -209,7 +209,7 @@ msgstr "احذف الصفحة"
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
-msgstr[0] "٠ صفحة"
+msgstr[0] "0 صفحة"
 msgstr[1] "صفحة واحدة"
 msgstr[2] "صفحتين"
 msgstr[3] "%1 صفحات"
@@ -292,7 +292,7 @@ msgstr "لائم التقريب"
 #: qml/DocumentPage.qml:409
 #, kde-format
 msgid "Zoom 100%"
-msgstr "تكبير ١٠٠٪"
+msgstr "تكبير 100٪"
 
 #: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
 #, kde-format
@@ -598,4 +598,4 @@ msgstr "شارك كـ:"
 #~ msgstr "خيارات ‏%1 ‏%2"
 
 #~ msgid "(C) 2015 Kåre Särs"
-#~ msgstr "الحقوق محفوظة © ٢٠١٥ Kåre Särs"
+#~ msgstr "الحقوق محفوظة © 2015 Kåre Särs"
