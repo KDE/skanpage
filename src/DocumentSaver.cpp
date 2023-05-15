@@ -57,7 +57,13 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
 
 void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)
 {
-    QPdfWriter writer(fileUrl.toLocalFile());
+    QFile file(fileUrl.toLocalFile());
+    bool ok = file.open(QIODevice::ReadWrite);
+    if (!ok) {
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18nc("%1 is the error message", "An error ocurred while saving: %1.", file.errorString()));
+        return;
+    }
+    QPdfWriter writer(&file);
     writer.setCreator(QStringLiteral("org.kde.skanpage"));
     QPainter painter;
 
@@ -81,8 +87,14 @@ void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::
     if (m_OCREngine == nullptr) {
         return;
     }
-    
-    QPdfWriter writer(fileUrl.toLocalFile());
+
+    QFile file(fileUrl.toLocalFile());
+    bool ok = file.open(QIODevice::ReadWrite);
+    if (!ok) {
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18nc("%1 is the error message", "An error ocurred while saving: %1.", file.errorString()));
+        return;
+    }
+    QPdfWriter writer(&file);
     writer.setCreator(QStringLiteral("org.kde.skanpage"));
     writer.setTitle(title);
     QPainter painter;
