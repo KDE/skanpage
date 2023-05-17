@@ -104,7 +104,7 @@ Window {
                     delegate: Kirigami.BasicListItem {
                         id: shareDelegate
 
-                        required property string display
+                        //required property string display
                         required property string iconName
                         required property int index
 

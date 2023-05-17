@@ -9,7 +9,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
-import QtQuick.Dialogs 1.3
+import @QTQUICK_DIALOGS_IMPORT@
 
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.skanpage 1.0
@@ -397,11 +397,10 @@ ApplicationWindow {
 
         property var pageNumbers: []
 
-        folder: skanpage.configuration.defaultFolder
-        selectExisting: false
-        selectMultiple: false
+        @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
+        @FILEDIALOG_MODE_SAVE@
         nameFilters: skanpage.formatModel.formatFilter()
-        selectedNameFilter: skanpage.configuration.defaultNameFilter
+        @FILEDIALOG_SELECTED_NAME_FILTER@: skanpage.configuration.defaultNameFilter
         onAccepted: {
             skanpage.documentModel.save(fileUrl, pageNumbers)
             pageNumbers = []

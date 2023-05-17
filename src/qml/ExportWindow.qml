@@ -9,7 +9,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-import QtQuick.Dialogs 1.3
+import @QTQUICK_DIALOGS_IMPORT@
 
 import org.kde.kirigami 2.12 as Kirigami
 
@@ -200,9 +200,8 @@ Window {
 
     FileDialog {
         id: fileNameDialog
-        folder: skanpage.configuration.defaultFolder
-        selectExisting: false
-        selectMultiple: false
+        @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
+        @FILEDIALOG_MODE_LOAD_FOLDER_NOTSELECTFOLDER@
         nameFilters: skanpage.formatModel.pdfFormatFilter()
         onAccepted: fileNameItem.text = fileUrl
     }

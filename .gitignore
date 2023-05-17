@@ -16,3 +16,5 @@ skanpage.kdev4
 .cache
 .idea
 /cmake-build*
+
+src/qml.generated.qrc

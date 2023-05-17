@@ -5,6 +5,12 @@
 
 include_directories(${skanpage_BINARY_DIR})
 
+configure_file(qml/GlobalMenu.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/GlobalMenu.qml)
+configure_file(qml/SettingsWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/SettingsWindow.qml)
+configure_file(qml/ExportWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/ExportWindow.qml)
+configure_file(qml/MainWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/MainWindow.qml)
+configure_file(qml.qrc.in ${CMAKE_CURRENT_SOURCE_DIR}/qml.generated.qrc)
+
 add_executable(skanpage)
 
 target_sources(skanpage PRIVATE
@@ -33,7 +39,7 @@ target_sources(skanpage PRIVATE
     OCREngine.h
     OCRLanguageModel.cpp
     OCRLanguageModel.h
-    qml.qrc
+    ${CMAKE_CURRENT_SOURCE_DIR}/qml.generated.qrc
     )
 
 ecm_qt_declare_logging_category(skanpage

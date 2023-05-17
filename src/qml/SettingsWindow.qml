@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-import QtQuick.Dialogs 1.3
+import @QTQUICK_DIALOGS_IMPORT@
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.skanpage 1.0
@@ -106,13 +106,12 @@ Window {
         onTriggered: settingsWindow.close()
     }
 
-    FileDialog {
+    @FILEDIALOG_MODE_LOAD_FOLDER@ {
         id: selectFolderDialog
 
-        folder: skanpage.configuration.defaultFolder
-        selectExisting: true
-        selectMultiple: false
-        selectFolder: true
+        @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
+        @FILEDIALOG_MODE_LOAD_FOLDER_SELECTEXISTING@
+        @FILEDIALOG_MODE_LOAD_FOLDER_SELECTFOLDER@
         onAccepted: skanpage.configuration.defaultFolder = fileUrl
     }
 }

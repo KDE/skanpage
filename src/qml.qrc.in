@@ -5,7 +5,7 @@
  SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 -->
     <qresource prefix="/">
-        <file>qml/MainWindow.qml</file>
+        <file alias="qml/MainWindow.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/MainWindow.qml</file>
         <file>qml/ContentView.qml</file>
         <file>qml/DocumentList.qml</file>
         <file>qml/DocumentPage.qml</file>
@@ -17,9 +17,9 @@
         <file>qml/IntegerSpinBoxWithSuffix.qml</file>
         <file>qml/DoubleSpinBoxWithSuffix.qml</file>
         <file>qml/ShortcutsAction.qml</file>
-        <file>qml/GlobalMenu.qml</file>
+        <file alias="qml/GlobalMenu.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/GlobalMenu.qml</file>
         <file>qml/ShareWindow.qml</file>
-        <file>qml/ExportWindow.qml</file>
-        <file>qml/SettingsWindow.qml</file>
+        <file alias="qml/ExportWindow.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/ExportWindow.qml</file>
+        <file alias="qml/SettingsWindow.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/SettingsWindow.qml</file>
     </qresource>
 </RCC>

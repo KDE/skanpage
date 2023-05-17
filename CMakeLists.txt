@@ -43,6 +43,30 @@ else()
     set(KF_MAJOR_VERSION "5")
 endif()
 
+
+if(QT_MAJOR_VERSION STREQUAL "6")
+    set(KIRIGAMI_ICON_NAME "icon.name")
+    set(FILEDIALOG_CURRENT_FOLDER "currentFolder")
+    set(FILEDIALOG_SELECTED_NAME_FILTER "selectedNameFilter.index")
+    set(FILEDIALOG_MODE_SAVE "fileMode: FileDialog.SaveFile")
+    set(FILEDIALOG_MODE_LOAD_FOLDER "FolderDialog")
+    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTEXISTING "")
+    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTFOLDER "")
+    set(FILEDIALOG_MODE_LOAD_FOLDER_NOTSELECTFOLDER "")
+    set(QTQUICK_DIALOGS_IMPORT "QtQuick.Dialogs")
+else()
+    set(KIRIGAMI_ICON_NAME "iconName")
+    set(FILEDIALOG_CURRENT_FOLDER "folder")
+    set(FILEDIALOG_SELECTED_NAME_FILTER "selectedNameFilter")
+    set(FILEDIALOG_MODE_SAVE "selectExisting: false")
+    set(FILEDIALOG_MODE_LOAD_FOLDER "FileDialog")
+    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTEXISTING "selectExisting: true")
+    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTFOLDER "selectFolder: true")
+    set(FILEDIALOG_MODE_LOAD_FOLDER_NOTSELECTFOLDER "selectExisting: false")
+    set(QTQUICK_DIALOGS_IMPORT "QtQuick.Dialogs 1.3")
+endif()
+
+
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
 
 find_package(KF${KF_MAJOR_VERSION} ${REQUIRED_KF5_VERSION} REQUIRED
