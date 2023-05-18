@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 00:51+0000\n"
+"POT-Creation-Date: 2023-05-18 00:51+0000\n"
 "PO-Revision-Date: 2021-03-24 22:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -427,49 +427,79 @@ msgstr ""
 msgid "%1:"
 msgstr ""
 
+#: qml/OptionDelegate.qml:150
+#, kde-format
+msgctxt "Add ':' to make a header text"
+msgid "%1:"
+msgstr ""
+
 #: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "@option:check a noun, as in 'the default setting'"
+msgid "Default"
+msgstr ""
+
+#: qml/OptionDelegate.qml:168
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Brightness: %1"
+msgstr ""
+
+#: qml/OptionDelegate.qml:181
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Contrast: %1"
+msgstr ""
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Gamma: %1"
+msgstr ""
+
+#: qml/OptionDelegate.qml:224
 #, kde-format
 msgctxt "Adding unit suffix"
 msgid "%1 %2"
 msgstr ""
 
-#: qml/OptionDelegate.qml:179
+#: qml/OptionDelegate.qml:249
 #, kde-format
 msgctxt "Unit suffix for bit"
 msgid "bit"
 msgstr ""
 
-#: qml/OptionDelegate.qml:182
+#: qml/OptionDelegate.qml:252
 #, kde-format
 msgctxt "Unit suffix for DPI"
 msgid "DPI"
 msgstr ""
 
-#: qml/OptionDelegate.qml:185
+#: qml/OptionDelegate.qml:255
 #, kde-format
 msgctxt "Unit suffix for microsecond"
 msgid "µs"
 msgstr ""
 
-#: qml/OptionDelegate.qml:188
+#: qml/OptionDelegate.qml:258
 #, kde-format
 msgctxt "Unit suffix for second"
 msgid "s"
 msgstr ""
 
-#: qml/OptionDelegate.qml:191
+#: qml/OptionDelegate.qml:261
 #, kde-format
 msgctxt "Unit suffix for millimeter"
 msgid "mm"
 msgstr ""
 
-#: qml/OptionDelegate.qml:194
+#: qml/OptionDelegate.qml:264
 #, kde-format
 msgctxt "Unit suffix for percent"
 msgid "%"
 msgstr ""
 
-#: qml/OptionDelegate.qml:197
+#: qml/OptionDelegate.qml:267
 #, kde-format
 msgctxt "Unit suffix for pixel"
 msgid "px"
