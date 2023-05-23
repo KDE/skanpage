@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:51+0000\n"
-"PO-Revision-Date: 2023-04-29 08:35\n"
+"PO-Revision-Date: 2023-05-22 14:01\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -433,8 +433,7 @@ msgid "%1:"
 msgstr "%1："
 
 #: qml/OptionDelegate.qml:150
-#, fuzzy, kde-format
-#| msgid "%1:"
+#, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
 msgstr "%1："
@@ -443,25 +442,25 @@ msgstr "%1："
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Brightness: %1"
-msgstr ""
+msgstr "亮度：%1"
 
 #: qml/OptionDelegate.qml:181
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Contrast: %1"
-msgstr ""
+msgstr "对比度：%1"
 
 #: qml/OptionDelegate.qml:194
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Gamma: %1"
-msgstr ""
+msgstr "伽玛值：%1"
 
 #: qml/OptionDelegate.qml:224
 #, kde-format
