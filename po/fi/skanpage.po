@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:51+0000\n"
-"PO-Revision-Date: 2023-04-04 23:08+0300\n"
+"PO-Revision-Date: 2023-05-05 18:17+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -234,10 +234,9 @@ msgid "Reverse Order"
 msgstr "Käänteinen järjestys"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Näytä lisää"
+msgstr "Näytä esikatselu"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -248,27 +247,27 @@ msgstr "Tiedostossa ei ole kuvia.<nl/><nl/>Ala lukea kuvia!"
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Hylkää tämä valinta"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Lisää valinta-alue"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Valitse napsauttamalla ja vetämällä toinen alue"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Jaa pystysuuntaan"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Jaa vaakasuuntaan"
 
 #: qml/DocumentPage.qml:375
 #, kde-format
@@ -388,7 +387,7 @@ msgstr "Tallenna kaikki"
 #: qml/MainWindow.qml:110
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Esikatselu"
 
 #: qml/MainWindow.qml:122
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-18 00:51+0000\n"
-"PO-Revision-Date: 2023-04-21 23:08+0200\n"
+"PO-Revision-Date: 2023-05-27 21:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -438,8 +438,7 @@ msgid "%1:"
 msgstr "%1:"
 
 #: qml/OptionDelegate.qml:150
-#, fuzzy, kde-format
-#| msgid "%1:"
+#, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
 msgstr "%1:"
@@ -448,25 +447,25 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr ""
+msgstr "По подразбиране"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Brightness: %1"
-msgstr ""
+msgstr "Яркост: %1"
 
 #: qml/OptionDelegate.qml:181
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Contrast: %1"
-msgstr ""
+msgstr "Контраст: %1"
 
 #: qml/OptionDelegate.qml:194
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Gamma: %1"
-msgstr ""
+msgstr "Гама: %1"
 
 #: qml/OptionDelegate.qml:224
 #, kde-format
