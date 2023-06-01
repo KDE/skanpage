@@ -35,7 +35,7 @@ public:
 OCREngine::OCREngine(QObject *parent) : QObject(parent), d(std::make_unique<OCREnginePrivate>())
 {
 #if OCR_AVAILABLE
-    if (d->m_tesseract.Init(nullptr, "eng")){
+    if (d->m_tesseract.Init(nullptr, nullptr)) { // Use a default language, not necessarily English
         qCDebug(SKANPAGE_LOG) << "Failed tesseract OCR init";
         return;
     }
