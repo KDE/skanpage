@@ -83,7 +83,8 @@ Window {
                 id: ocrCheckBox
                 visible: skanpage.OCRavailable()
                 text: i18n("Enable optical character recognition (OCR)")
-                checked: true
+                enabled: ocrList.count > 0
+                checked: enabled
             }
 
             Item {
@@ -126,6 +127,7 @@ Window {
                 Component.onCompleted: ocrScroll.background.visible = true
 
                 ListView {
+                    id: ocrList
                     clip: true
                     model: skanpage.languageModel
 
