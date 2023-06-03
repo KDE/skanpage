@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-18 00:51+0000\n"
+"POT-Creation-Date: 2023-06-03 00:50+0000\n"
 "PO-Revision-Date: 2022-08-02 14:02+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -310,17 +310,17 @@ msgstr "Skrá:"
 msgid "Enable optical character recognition (OCR)"
 msgstr "Virkja ljóslestur (OCR)"
 
-#: qml/ExportWindow.qml:104
+#: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
 msgstr "Tungumál:"
 
-#: qml/ExportWindow.qml:133
+#: qml/ExportWindow.qml:135
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:154
+#: qml/ExportWindow.qml:156
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -329,12 +329,12 @@ msgstr ""
 "Ef umbeðið tungumál finnst ekki á listanum, ættirðu að setja upp viðkomandi "
 "Tesseract-tungumálaskrá með pakkastjóranum þínum."
 
-#: qml/ExportWindow.qml:180
+#: qml/ExportWindow.qml:182
 #, kde-format
 msgid "Save"
 msgstr "Vista"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
 #, kde-format
 msgid "Cancel"
 msgstr "Hætta við"

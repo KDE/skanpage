@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-18 00:51+0000\n"
+"POT-Creation-Date: 2023-06-03 00:50+0000\n"
 "PO-Revision-Date: 2023-05-18 06:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -316,17 +316,17 @@ msgstr "Файл:"
 msgid "Enable optical character recognition (OCR)"
 msgstr "Увімкнути оптичне розпізнавання знаків (OCR)"
 
-#: qml/ExportWindow.qml:104
+#: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
 msgstr "Мови:"
 
-#: qml/ExportWindow.qml:133
+#: qml/ExportWindow.qml:135
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:154
+#: qml/ExportWindow.qml:156
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -336,12 +336,12 @@ msgstr ""
 "мовний файл Tesseract за допомогою програми для керування пакунками вашої "
 "системи."
 
-#: qml/ExportWindow.qml:180
+#: qml/ExportWindow.qml:182
 #, kde-format
 msgid "Save"
 msgstr "Зберегти"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"

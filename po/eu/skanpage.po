@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-18 00:51+0000\n"
+"POT-Creation-Date: 2023-06-03 00:50+0000\n"
 "PO-Revision-Date: 2023-04-10 23:15+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -313,17 +313,17 @@ msgstr "Fitxategia:"
 msgid "Enable optical character recognition (OCR)"
 msgstr "Gaitu karaktereen ezagutze optikoa (OCR)"
 
-#: qml/ExportWindow.qml:104
+#: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
 msgstr "Hizkuntzak:"
 
-#: qml/ExportWindow.qml:133
+#: qml/ExportWindow.qml:135
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:154
+#: qml/ExportWindow.qml:156
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -332,12 +332,12 @@ msgstr ""
 "Behar duzun hizkuntza zerrendatuta ez badago, mesedez, instalatu "
 "«Tesseract»eren hizkuntza-fitxategia zure pakete-kudeatzailea erabiliz."
 
-#: qml/ExportWindow.qml:180
+#: qml/ExportWindow.qml:182
 #, kde-format
 msgid "Save"
 msgstr "Gorde"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
