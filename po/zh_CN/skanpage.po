@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:54+0000\n"
+"POT-Creation-Date: 2023-06-03 02:40+0000\n"
 "PO-Revision-Date: 2023-05-22 14:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -278,17 +278,17 @@ msgstr "文件："
 msgid "Enable optical character recognition (OCR)"
 msgstr "启用光学字符识别 (OCR)"
 
-#: qml/ExportWindow.qml:104
+#: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
 msgstr "语言："
 
-#: qml/ExportWindow.qml:133
+#: qml/ExportWindow.qml:135
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:154
+#: qml/ExportWindow.qml:156
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -296,12 +296,12 @@ msgid ""
 msgstr ""
 "如果您所需的语言未被列出，请使用本机系统的包管理器安装 Tesseract 的语言文件。"
 
-#: qml/ExportWindow.qml:180
+#: qml/ExportWindow.qml:182
 #, kde-format
 msgid "Save"
 msgstr "保存"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "取消"

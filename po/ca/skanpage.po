@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:54+0000\n"
+"POT-Creation-Date: 2023-06-03 02:40+0000\n"
 "PO-Revision-Date: 2022-07-14 11:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -284,17 +284,17 @@ msgstr "Fitxer:"
 msgid "Enable optical character recognition (OCR)"
 msgstr "Activa el reconeixement òptic de caràcters (OCR)"
 
-#: qml/ExportWindow.qml:104
+#: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
 msgstr "Idiomes:"
 
-#: qml/ExportWindow.qml:133
+#: qml/ExportWindow.qml:135
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:154
+#: qml/ExportWindow.qml:156
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -303,12 +303,12 @@ msgstr ""
 "No l'idioma requerit no està llistat, instal·leu el fitxer d'idioma del "
 "Tesseract amb el gestor de paquets."
 
-#: qml/ExportWindow.qml:180
+#: qml/ExportWindow.qml:182
 #, kde-format
 msgid "Save"
 msgstr "Desa"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "Cancel·la"

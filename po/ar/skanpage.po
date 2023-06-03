@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:54+0000\n"
+"POT-Creation-Date: 2023-06-03 02:40+0000\n"
 "PO-Revision-Date: 2022-08-08 22:25+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -284,17 +284,17 @@ msgstr "الملف:"
 msgid "Enable optical character recognition (OCR)"
 msgstr "مكن التعرّف البصري على المحارف"
 
-#: qml/ExportWindow.qml:104
+#: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
 msgstr "اللغات:"
 
-#: qml/ExportWindow.qml:133
+#: qml/ExportWindow.qml:135
 #, kde-format
 msgid "%1 [%2]"
 msgstr "‏%1 [%2]"
 
-#: qml/ExportWindow.qml:154
+#: qml/ExportWindow.qml:156
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -303,12 +303,12 @@ msgstr ""
 "إذا لم تكن لغتك المطلوبة مدرجة، فالرجاء تثبيت ملف لغة Tesseract بواسطة مدير "
 "الحزم الخاص بك."
 
-#: qml/ExportWindow.qml:180
+#: qml/ExportWindow.qml:182
 #, kde-format
 msgid "Save"
 msgstr "احفظ"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:119
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"
