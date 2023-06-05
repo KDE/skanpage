@@ -106,6 +106,7 @@ Window {
 
                         required property string iconName
                         required property int index
+                        required property string display
 
                         label: shareDelegate.display
                         icon: shareDelegate.iconName
