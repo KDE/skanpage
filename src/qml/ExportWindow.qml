@@ -205,7 +205,7 @@ Window {
         @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
         @FILEDIALOG_MODE_LOAD_FOLDER_NOTSELECTFOLDER@
         nameFilters: skanpage.formatModel.pdfFormatFilter()
-        onAccepted: fileNameItem.text = fileUrl
+        onAccepted: fileNameItem.text = @FILEDIALOG_SELECTED_FILE@
     }
 }
 

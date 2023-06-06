@@ -402,7 +402,7 @@ ApplicationWindow {
         nameFilters: skanpage.formatModel.formatFilter()
         @FILEDIALOG_SELECTED_NAME_FILTER@: skanpage.configuration.defaultNameFilter
         onAccepted: {
-            skanpage.documentModel.save(fileUrl, pageNumbers)
+            skanpage.documentModel.save(@FILEDIALOG_SELECTED_FILE@, pageNumbers)
             pageNumbers = []
         }
         onRejected: pageNumbers = []

@@ -112,6 +112,6 @@ Window {
         @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
         @FILEDIALOG_MODE_LOAD_FOLDER_SELECTEXISTING@
         @FILEDIALOG_MODE_LOAD_FOLDER_SELECTFOLDER@
-        onAccepted: skanpage.configuration.defaultFolder = fileUrl
+        onAccepted: skanpage.configuration.defaultFolder = @FILEDIALOG_SELECTED_FILE@
     }
 }
