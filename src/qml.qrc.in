@@ -18,7 +18,7 @@
         <file>qml/DoubleSpinBoxWithSuffix.qml</file>
         <file>qml/ShortcutsAction.qml</file>
         <file alias="qml/GlobalMenu.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/GlobalMenu.qml</file>
-        <file>qml/ShareWindow.qml</file>
+        <file alias="qml/ShareWindow.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/ShareWindow.qml</file>
         <file alias="qml/ExportWindow.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/ExportWindow.qml</file>
         <file alias="qml/SettingsWindow.qml">@CMAKE_CURRENT_BINARY_DIR@/qml/SettingsWindow.qml</file>
     </qresource>

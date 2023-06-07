@@ -9,6 +9,7 @@ configure_file(qml/GlobalMenu.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/GlobalMenu.qml
 configure_file(qml/SettingsWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/SettingsWindow.qml)
 configure_file(qml/ExportWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/ExportWindow.qml)
 configure_file(qml/MainWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/MainWindow.qml)
+configure_file(qml/ShareWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/ShareWindow.qml)
 configure_file(qml.qrc.in ${CMAKE_CURRENT_SOURCE_DIR}/qml.generated.qrc)
 
 add_executable(skanpage)

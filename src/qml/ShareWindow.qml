@@ -108,7 +108,7 @@ Window {
                         required property int index
 
                         label: shareDelegate.display
-                        icon: shareDelegate.iconName
+                        @BASICLISTITEM_ICON@: shareDelegate.iconName
                         onClicked: purposeView.proceed(shareDelegate.index)
                         Keys.onReturnPressed: purposeView.proceed(shareDelegate.index)
                         Keys.onEnterPressed: purposeView.proceed(shareDelegate.index)
