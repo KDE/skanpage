@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 00:50+0000\n"
+"POT-Creation-Date: 2023-06-07 00:51+0000\n"
 "PO-Revision-Date: 2023-02-19 06:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -51,42 +51,48 @@ msgstr "沒有要列印的東西。"
 msgid "Previous printing operation still in progress."
 msgstr "上一個列印操作仍在進行中。"
 
-#: DocumentPrinter.cpp:74
+#: DocumentPrinter.cpp:73
 #, kde-format
 msgid "Document sent to printer."
 msgstr "文件已傳送至印表機。"
 
-#: DocumentSaver.cpp:33
+#: DocumentSaver.cpp:34
 #, kde-format
 msgid "No file path given."
 msgstr "未提供檔案路徑。"
 
-#: DocumentSaver.cpp:37
+#: DocumentSaver.cpp:38
 #, kde-format
 msgid "Nothing to save."
 msgstr "沒有要儲存的東西。"
 
-#: DocumentSaver.cpp:68
+#: DocumentSaver.cpp:63 DocumentSaver.cpp:94
+#, kde-format
+msgctxt "%1 is the error message"
+msgid "An error ocurred while saving: %1."
+msgstr ""
+
+#: DocumentSaver.cpp:75
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "文件已儲存為 PDF。"
 
-#: DocumentSaver.cpp:94
+#: DocumentSaver.cpp:107
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "文件已儲存為含有光學文字辨識結果的 PDF。"
 
-#: DocumentSaver.cpp:166
+#: DocumentSaver.cpp:179
 #, kde-format
 msgid "Document saved as image."
 msgstr "文件已儲存為影像。"
 
-#: DocumentSaver.cpp:175
+#: DocumentSaver.cpp:188
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "無法將文件儲存為影像。"
 
-#: DocumentSaver.cpp:190
+#: DocumentSaver.cpp:203
 #, kde-format
 msgid "Failed to save image"
 msgstr "儲存影像失敗"
@@ -160,77 +166,97 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "正在掃描可用裝置。"
 
-#: qml/DocumentList.qml:163
+#: qml/DocumentList.qml:72
+#, kde-format
+msgid "Select previous page"
+msgstr ""
+
+#: qml/DocumentList.qml:78
+#, kde-format
+msgid "Select next page"
+msgstr ""
+
+#: qml/DocumentList.qml:84
+#, kde-format
+msgid "Move selected page up"
+msgstr ""
+
+#: qml/DocumentList.qml:93
+#, kde-format
+msgid "Move selected page down"
+msgstr ""
+
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "頁面處理中…"
 
-#: qml/DocumentList.qml:208
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "第 %1 頁"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "上移"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "下移"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:417
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:418
 #, kde-format
 msgid "Rotate Left"
 msgstr "左旋"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:424
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:425
 #, kde-format
 msgid "Rotate Right"
 msgstr "右旋"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:431
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
 msgstr "翻轉"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:438
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:439
 #, kde-format
 msgid "Save Page"
 msgstr "儲存頁面"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:445
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:446
 #, kde-format
 msgid "Delete Page"
 msgstr "刪除頁面"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 頁"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Reorder Pages"
 msgstr "重新排列頁面"
 
-#: qml/DocumentList.qml:310
+#: qml/DocumentList.qml:306
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:317
+#: qml/DocumentList.qml:313
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:324
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Reverse Order"
 msgstr "反轉順序"
@@ -272,22 +298,22 @@ msgstr ""
 msgid "Split Scan Horizontally"
 msgstr ""
 
-#: qml/DocumentPage.qml:375
+#: qml/DocumentPage.qml:376
 #, kde-format
 msgid "Zoom In"
 msgstr "放大"
 
-#: qml/DocumentPage.qml:384
+#: qml/DocumentPage.qml:385
 #, kde-format
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: qml/DocumentPage.qml:393
+#: qml/DocumentPage.qml:394
 #, kde-format
 msgid "Zoom Fit"
 msgstr "縮放到適合"
 
-#: qml/DocumentPage.qml:409
+#: qml/DocumentPage.qml:410
 #, kde-format
 msgid "Zoom 100%"
 msgstr "縮放到 100%"
@@ -568,12 +594,12 @@ msgstr "掃描器、相機與虛擬裝置"
 msgid "Default file format:"
 msgstr "預設檔案格式："
 
-#: qml/SettingsWindow.qml:71
+#: qml/SettingsWindow.qml:67
 #, kde-format
 msgid "Default save location:"
 msgstr "預設儲存位置："
 
-#: qml/SettingsWindow.qml:104
+#: qml/SettingsWindow.qml:100
 #, kde-format
 msgid "Close"
 msgstr "關閉"

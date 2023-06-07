@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 00:50+0000\n"
+"POT-Creation-Date: 2023-06-07 00:51+0000\n"
 "PO-Revision-Date: 2023-05-18 20:13+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -50,42 +50,48 @@ msgstr "No hay nada que imprimir."
 msgid "Previous printing operation still in progress."
 msgstr "La operación de impresión anterior todavía está en curso."
 
-#: DocumentPrinter.cpp:74
+#: DocumentPrinter.cpp:73
 #, kde-format
 msgid "Document sent to printer."
 msgstr "Documento enviado a la impresora."
 
-#: DocumentSaver.cpp:33
+#: DocumentSaver.cpp:34
 #, kde-format
 msgid "No file path given."
 msgstr "No se ha proporcionado ninguna ruta de archivo."
 
-#: DocumentSaver.cpp:37
+#: DocumentSaver.cpp:38
 #, kde-format
 msgid "Nothing to save."
 msgstr "No hay nada que guardar."
 
-#: DocumentSaver.cpp:68
+#: DocumentSaver.cpp:63 DocumentSaver.cpp:94
+#, kde-format
+msgctxt "%1 is the error message"
+msgid "An error ocurred while saving: %1."
+msgstr ""
+
+#: DocumentSaver.cpp:75
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Documento guardado como PDF."
 
-#: DocumentSaver.cpp:94
+#: DocumentSaver.cpp:107
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "Documento guardado con OCR como PDF."
 
-#: DocumentSaver.cpp:166
+#: DocumentSaver.cpp:179
 #, kde-format
 msgid "Document saved as image."
 msgstr "Documento guardado como imagen."
 
-#: DocumentSaver.cpp:175
+#: DocumentSaver.cpp:188
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "No se ha podido guardar el documento como imagen."
 
-#: DocumentSaver.cpp:190
+#: DocumentSaver.cpp:203
 #, kde-format
 msgid "Failed to save image"
 msgstr "No se ha podido guardar la imagen"
@@ -161,78 +167,98 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Buscando los dispositivos disponibles."
 
-#: qml/DocumentList.qml:163
+#: qml/DocumentList.qml:72
+#, kde-format
+msgid "Select previous page"
+msgstr ""
+
+#: qml/DocumentList.qml:78
+#, kde-format
+msgid "Select next page"
+msgstr ""
+
+#: qml/DocumentList.qml:84
+#, kde-format
+msgid "Move selected page up"
+msgstr ""
+
+#: qml/DocumentList.qml:93
+#, kde-format
+msgid "Move selected page down"
+msgstr ""
+
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Procesando página..."
 
-#: qml/DocumentList.qml:208
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Página %1"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "Subir"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "Bajar"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:417
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:418
 #, kde-format
 msgid "Rotate Left"
 msgstr "Rotar a la izquierda"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:424
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:425
 #, kde-format
 msgid "Rotate Right"
 msgstr "Rotar a la derecha"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:431
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
 msgstr "Invertir"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:438
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:439
 #, kde-format
 msgid "Save Page"
 msgstr "Guardar página"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:445
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:446
 #, kde-format
 msgid "Delete Page"
 msgstr "Borrar página"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 página"
 msgstr[1] "%1 páginas"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Reordenar páginas"
 
-#: qml/DocumentList.qml:310
+#: qml/DocumentList.qml:306
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:317
+#: qml/DocumentList.qml:313
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:324
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Reverse Order"
 msgstr "Invertir orden"
@@ -274,22 +300,22 @@ msgstr "Dividir el escaneo verticalmente"
 msgid "Split Scan Horizontally"
 msgstr "Dividir el escaneo horizontalmente"
 
-#: qml/DocumentPage.qml:375
+#: qml/DocumentPage.qml:376
 #, kde-format
 msgid "Zoom In"
 msgstr "Ampliar"
 
-#: qml/DocumentPage.qml:384
+#: qml/DocumentPage.qml:385
 #, kde-format
 msgid "Zoom Out"
 msgstr "Reducir"
 
-#: qml/DocumentPage.qml:393
+#: qml/DocumentPage.qml:394
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Ajustar"
 
-#: qml/DocumentPage.qml:409
+#: qml/DocumentPage.qml:410
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Ampliar al 100%"
@@ -570,12 +596,12 @@ msgstr "Escáneres, cámaras y dispositivos virtuales"
 msgid "Default file format:"
 msgstr "Formato de archivo predeterminado:"
 
-#: qml/SettingsWindow.qml:71
+#: qml/SettingsWindow.qml:67
 #, kde-format
 msgid "Default save location:"
 msgstr "Ubicación predeterminada donde guardar:"
 
-#: qml/SettingsWindow.qml:104
+#: qml/SettingsWindow.qml:100
 #, kde-format
 msgid "Close"
 msgstr "Cerrar"

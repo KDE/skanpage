@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 00:50+0000\n"
+"POT-Creation-Date: 2023-06-07 00:51+0000\n"
 "PO-Revision-Date: 2022-10-12 16:29+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -50,43 +50,49 @@ msgstr "Отсутствует документ, который возможно
 msgid "Previous printing operation still in progress."
 msgstr "Предыдущая операция ещё продолжается."
 
-#: DocumentPrinter.cpp:74
+#: DocumentPrinter.cpp:73
 #, kde-format
 msgid "Document sent to printer."
 msgstr "Документ отправлен на печать."
 
-#: DocumentSaver.cpp:33
+#: DocumentSaver.cpp:34
 #, kde-format
 msgid "No file path given."
 msgstr "Не указать путь."
 
-#: DocumentSaver.cpp:37
+#: DocumentSaver.cpp:38
 #, kde-format
 msgid "Nothing to save."
 msgstr "Отсутствует документ, который возможно сохранить."
 
-#: DocumentSaver.cpp:68
+#: DocumentSaver.cpp:63 DocumentSaver.cpp:94
+#, kde-format
+msgctxt "%1 is the error message"
+msgid "An error ocurred while saving: %1."
+msgstr ""
+
+#: DocumentSaver.cpp:75
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Документ сохранён в формате PDF."
 
-#: DocumentSaver.cpp:94
+#: DocumentSaver.cpp:107
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr ""
 "Документ сохранён в формате PDF с  использованием распознавания текста."
 
-#: DocumentSaver.cpp:166
+#: DocumentSaver.cpp:179
 #, kde-format
 msgid "Document saved as image."
 msgstr "Документ сохранён в формате изображения."
 
-#: DocumentSaver.cpp:175
+#: DocumentSaver.cpp:188
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Не удалось сохранить документ в формате изображения."
 
-#: DocumentSaver.cpp:190
+#: DocumentSaver.cpp:203
 #, kde-format
 msgid "Failed to save image"
 msgstr "Не удалось сохранить изображение"
@@ -162,54 +168,74 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Поиск доступных устройств…"
 
-#: qml/DocumentList.qml:163
+#: qml/DocumentList.qml:72
+#, kde-format
+msgid "Select previous page"
+msgstr ""
+
+#: qml/DocumentList.qml:78
+#, kde-format
+msgid "Select next page"
+msgstr ""
+
+#: qml/DocumentList.qml:84
+#, kde-format
+msgid "Move selected page up"
+msgstr ""
+
+#: qml/DocumentList.qml:93
+#, kde-format
+msgid "Move selected page down"
+msgstr ""
+
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Обработка страницы…"
 
-#: qml/DocumentList.qml:208
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Страница %1"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "Переместить вверх"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "Переместить вниз"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:417
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:418
 #, kde-format
 msgid "Rotate Left"
 msgstr "Повернуть влево"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:424
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:425
 #, kde-format
 msgid "Rotate Right"
 msgstr "Повернуть вправо"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:431
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
 msgstr "Отразить"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:438
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:439
 #, kde-format
 msgid "Save Page"
 msgstr "Сохранить страницу"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:445
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:446
 #, kde-format
 msgid "Delete Page"
 msgstr "Удалить страницу"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
@@ -218,24 +244,24 @@ msgstr[1] "%1 страницы"
 msgstr[2] "%1 страниц"
 msgstr[3] "%1 страница"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Изменять порядок страниц"
 
-#: qml/DocumentList.qml:310
+#: qml/DocumentList.qml:306
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:317
+#: qml/DocumentList.qml:313
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:324
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Reverse Order"
 msgstr "На обратный порядок"
@@ -279,22 +305,22 @@ msgstr ""
 msgid "Split Scan Horizontally"
 msgstr ""
 
-#: qml/DocumentPage.qml:375
+#: qml/DocumentPage.qml:376
 #, kde-format
 msgid "Zoom In"
 msgstr "Увеличить масштаб"
 
-#: qml/DocumentPage.qml:384
+#: qml/DocumentPage.qml:385
 #, kde-format
 msgid "Zoom Out"
 msgstr "Уменьшить масштаб"
 
-#: qml/DocumentPage.qml:393
+#: qml/DocumentPage.qml:394
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Вместить в окно"
 
-#: qml/DocumentPage.qml:409
+#: qml/DocumentPage.qml:410
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Масштаб 100%"
@@ -577,12 +603,12 @@ msgstr "Сканеры, камеры и виртуальные устройст�
 msgid "Default file format:"
 msgstr "Формат файла по умолчанию:"
 
-#: qml/SettingsWindow.qml:71
+#: qml/SettingsWindow.qml:67
 #, kde-format
 msgid "Default save location:"
 msgstr "Папка для сохранения по умолчанию:"
 
-#: qml/SettingsWindow.qml:104
+#: qml/SettingsWindow.qml:100
 #, kde-format
 msgid "Close"
 msgstr "Закрыть"
