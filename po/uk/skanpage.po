@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:51+0000\n"
-"PO-Revision-Date: 2023-05-18 06:25+0300\n"
+"PO-Revision-Date: 2023-06-07 16:18+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -70,7 +70,7 @@ msgstr "Нічого зберігати."
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "Сталася помилка під час спроби зберегти дані: %1."
 
 #: DocumentSaver.cpp:75
 #, kde-format
@@ -169,22 +169,22 @@ msgstr "Шукаємо доступні пристрої."
 #: qml/DocumentList.qml:72
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "Вибрати попередню сторінку"
 
 #: qml/DocumentList.qml:78
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "Вибрати наступну сторінку"
 
 #: qml/DocumentList.qml:84
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "Пересунути позначену сторінку вище"
 
 #: qml/DocumentList.qml:93
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "Пересунути позначену сторінку нижче"
 
 #: qml/DocumentList.qml:205
 #, kde-kuit-format

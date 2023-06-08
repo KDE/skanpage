@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:51+0000\n"
-"PO-Revision-Date: 2023-05-18 11:52+0200\n"
+"PO-Revision-Date: 2023-06-07 10:34+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -67,7 +67,7 @@ msgstr "Niets op te slaan."
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "Er deed zich een fout voor tijdens opslaan: %1."
 
 #: DocumentSaver.cpp:75
 #, kde-format
@@ -166,22 +166,22 @@ msgstr "Naar beschikbare apparaten wordt gescand."
 #: qml/DocumentList.qml:72
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "Vorig pagina selecteren"
 
 #: qml/DocumentList.qml:78
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "Volgende pagina selecteren"
 
 #: qml/DocumentList.qml:84
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "Geselecteerde pagina omhoog schuiven"
 
 #: qml/DocumentList.qml:93
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "Geselecteerde pagina omlaag schuiven"
 
 #: qml/DocumentList.qml:205
 #, kde-kuit-format

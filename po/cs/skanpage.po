@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:51+0000\n"
-"PO-Revision-Date: 2023-06-05 11:16+0200\n"
+"PO-Revision-Date: 2023-06-07 12:01+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -67,7 +67,7 @@ msgstr "Nic k uložení"
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "Při ukládání souboru došlo k chybě: %1."
 
 #: DocumentSaver.cpp:75
 #, kde-format
@@ -166,22 +166,22 @@ msgstr "Vyhledávám dostupná zařízení."
 #: qml/DocumentList.qml:72
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "Vybrat předchozí stranu"
 
 #: qml/DocumentList.qml:78
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "Vybrat následující stranu"
 
 #: qml/DocumentList.qml:84
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "Posunout vybranou stranu výš"
 
 #: qml/DocumentList.qml:93
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "Posunout vybranou stranu níž"
 
 #: qml/DocumentList.qml:205
 #, kde-kuit-format
