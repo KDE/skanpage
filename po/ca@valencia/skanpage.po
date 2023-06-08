@@ -177,12 +177,12 @@ msgstr "Pàgina %1"
 #: qml/DocumentList.qml:217
 #, kde-format
 msgid "Move Up"
-msgstr "Mou amunt"
+msgstr "Mou cap amunt"
 
 #: qml/DocumentList.qml:227
 #, kde-format
 msgid "Move Down"
-msgstr "Mou avall"
+msgstr "Mou cap avall"
 
 #: qml/DocumentList.qml:237 qml/DocumentPage.qml:138
 #, kde-format
