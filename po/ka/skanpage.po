@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:51+0000\n"
-"PO-Revision-Date: 2023-05-19 05:23+0200\n"
+"PO-Revision-Date: 2023-06-08 06:19+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -68,7 +68,7 @@ msgstr "შესანახი არაფერია."
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "შეცდომა შენახვისას: %1."
 
 #: DocumentSaver.cpp:75
 #, kde-format
@@ -169,22 +169,22 @@ msgstr "ხელმისაწვდომი მოწყობილობ�
 #: qml/DocumentList.qml:72
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "წინა გვერდის არჩევა"
 
 #: qml/DocumentList.qml:78
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "შემდეგი გვერდის არჩევა"
 
 #: qml/DocumentList.qml:84
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "მონიშნული გვერდის მაღლა ატანა"
 
 #: qml/DocumentList.qml:93
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "მონიშნული გვერდის დაბლა ჩამოტანა"
 
 #: qml/DocumentList.qml:205
 #, kde-kuit-format
