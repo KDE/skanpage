@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:51+0000\n"
-"PO-Revision-Date: 2023-05-21 14:56+0100\n"
+"PO-Revision-Date: 2023-06-17 12:13+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -67,7 +67,7 @@ msgstr "Nothing to save."
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "An error occurred while saving: %1."
 
 #: DocumentSaver.cpp:75
 #, kde-format
@@ -166,22 +166,22 @@ msgstr "Searching for available devices."
 #: qml/DocumentList.qml:72
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "Select previous page"
 
 #: qml/DocumentList.qml:78
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "Select next page"
 
 #: qml/DocumentList.qml:84
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "Move selected page up"
 
 #: qml/DocumentList.qml:93
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "Move selected page down"
 
 #: qml/DocumentList.qml:205
 #, kde-kuit-format
