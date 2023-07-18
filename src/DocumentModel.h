@@ -41,13 +41,13 @@ public:
         Rotate90negative,
         Flip180};
 
-    Q_ENUM(RotateOption);
+    Q_ENUM(RotateOption)
 
     enum ReorderOption { ReorderDuplex,
         ReorderDuplexReversed,
         Reverse};
 
-    Q_ENUM(ReorderOption);
+    Q_ENUM(ReorderOption)
 
     explicit DocumentModel(QObject *parent = nullptr);
     ~DocumentModel();

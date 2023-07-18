@@ -63,7 +63,7 @@ public:
         SearchingForDevices,
         NoDeviceOpened
     };
-    Q_ENUM(ApplicationState);
+    Q_ENUM(ApplicationState)
 
     enum ScanSplit {
         ScanNotSplit,
