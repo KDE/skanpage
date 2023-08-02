@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:51+0000\n"
-"PO-Revision-Date: 2023-06-07 13:01+0300\n"
+"PO-Revision-Date: 2023-08-01 12:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -98,7 +98,7 @@ msgstr "Görsel kaydedilemedi"
 #: main.cpp:60
 #, kde-format
 msgid "Skanpage"
-msgstr "Skanpage"
+msgstr "SayfaTara"
 
 #: main.cpp:62
 #, kde-format
@@ -399,7 +399,7 @@ msgstr "Tarama sürüyor."
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
-msgstr "%1 ― Skanpage"
+msgstr "%1 ― SayfaTara"
 
 #: qml/MainWindow.qml:84
 #, kde-format
@@ -439,12 +439,12 @@ msgstr "Yazdır"
 #: qml/MainWindow.qml:183 qml/MainWindow.qml:380
 #, kde-format
 msgid "About Skanpage"
-msgstr "Skanpage Hakkında"
+msgstr "SayfaTara Hakkında"
 
 #: qml/MainWindow.qml:190
 #, kde-format
 msgid "Configure Skanpage…"
-msgstr "Skanpage'i Yapılandır…"
+msgstr "SayfaTara'yı Yapılandır…"
 
 #: qml/MainWindow.qml:198
 #, kde-format
