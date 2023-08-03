@@ -39,7 +39,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="sk">Skanpage</name>
   <name xml:lang="sl">Skanpage</name>
   <name xml:lang="sv">Skanpage</name>
-  <name xml:lang="tr">Skanpage</name>
+  <name xml:lang="tr">SayfaTara</name>
   <name xml:lang="uk">Skanpage</name>
   <name xml:lang="x-test">xxSkanpagexx</name>
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
@@ -101,7 +101,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ru">Skanpage — простое приложение для сканирования и сохранения документов и изображений, состоящих из одной или нескольких страниц.</p>
     <p xml:lang="sl">Skanpage je preprosta aplikacija za optično branje več stranskega dokumenta. Lahko skenira in shranjuje tudi enostranske dokumente in slike.</p>
     <p xml:lang="sv">Skanpage är ett enkelt program för bildinläsning optimerat för inläsning av flersidiga dokument. Det kan också läsa in och spara ensidiga dokument och bilder.</p>
-    <p xml:lang="tr">Skanpage, çok sayfalı belgeleri taramak için eniyilenmiş yalın bir tarama uygulamasıdır. Ayrıca tek sayfalı belgeleri veya görselleri de tarayıp kaydedebilir.</p>
+    <p xml:lang="tr">SayfaTara, çok sayfalı belgeleri taramak için eniyilenmiş yalın bir tarama uygulamasıdır. Ayrıca tek sayfalı belgeleri veya görselleri de tarayıp kaydedebilir.</p>
     <p xml:lang="uk">Skanpage — проста програма для сканування, яку розроблено для сканування послідовностей багатосторінкових документів. Вона також може зберігати односторінкові документи та зображення.</p>
     <p xml:lang="x-test">xxSkanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.xx</p>
     <p xml:lang="zh-CN">Skanpage 是一款简易扫描应用程序，针对多页扫描任务进行优化。它也可以扫描并保存单页文档和图像。</p>
@@ -307,7 +307,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ru">Главное окно Skanpage</caption>
       <caption xml:lang="sl">Skanpage glavno okno</caption>
       <caption xml:lang="sv">Huvudfönstret i Skanpage</caption>
-      <caption xml:lang="tr">Skanpage ana penceresi</caption>
+      <caption xml:lang="tr">SayfaTara ana penceresi</caption>
       <caption xml:lang="uk">Головне вікно Skanpage</caption>
       <caption xml:lang="x-test">xxSkanpage main windowxx</caption>
       <caption xml:lang="zh-CN">Skanpage 主窗口</caption>
