@@ -21,8 +21,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/libusb/libusb/releases/download/v1.0.25/libusb-1.0.25.tar.bz2",
-                            "sha256": "8a28ef197a797ebac2702f095e81975e2b02b2eeff2774fa909c78a74ef50849",
+                            "url": "https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2",
+                            "sha256": "12ce7a61fc9854d1d2a1ffe095f7b5fac19ddba095c259e6067a46500381b5a5",
                             "x-checker-data": {
                                 "type": "anitya",
                                 "project-id": 1749,
@@ -80,12 +80,12 @@
                         {
                             "type": "git",
                             "url": "https://gitlab.com/sane-project/backends",
-                            "tag": "1.1.1",
+                            "tag": "1.2.1",
                             "x-checker-data": {
                                 "type": "git",
                                 "tag-pattern": "^([\\d.]+)$"
                             },
-                            "commit": "332edc8b7ce642bb06132cf204a8c2dd57720bce"
+                            "commit": "103c2b5d8e6d4e43026e90c5fb3b6b6a19cd5ee5"
                         }
                     ]
                 },
