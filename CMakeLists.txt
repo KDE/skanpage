@@ -111,7 +111,7 @@ install(FILES org.kde.skanpage.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-configure_file(config-skanpage.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-skanpage.h)
+configure_file(config-skanpage.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-skanpage.h)
 
 add_subdirectory(src)
 add_subdirectory(icons)
