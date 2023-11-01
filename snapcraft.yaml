@@ -240,6 +240,7 @@ parts:
         - libpng-dev
         - libkf5doctools-dev
         - libkf5purpose-dev
+        - kquickimageeditor-dev
         stage-packages:
         - qml-module-org-kde-kirigami2
         - libkf5purpose5
