@@ -157,7 +157,7 @@ parts:
         - libpng-dev
         - libxml2-dev
         - libgnutls28-dev
-ksanecore:
+    ksanecore:
         after:
         - kde-neon
         - libsane
