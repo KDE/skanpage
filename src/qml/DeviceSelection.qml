@@ -25,13 +25,13 @@ ColumnLayout {
             Layout.fillWidth: true
         }
 
-        Item {
-            Layout.preferredWidth: listView.contentItem.childrenRect.width
-            Layout.preferredHeight: listView.contentItem.childrenRect.height
+        ScrollView {
+            Layout.fillHeight: true
 
             ListView {
-                id: listView
                 anchors.fill: parent
+                contentWidth: contentItem.childrenRect.width + 2 * Kirigami.Units.smallSpacing
+
                 model: skanpage.devicesModel
 
                 visible: skanpage.devicesModel.rowCount !== 0
