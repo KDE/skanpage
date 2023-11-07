@@ -42,6 +42,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="sv">Skanpage</name>
   <name xml:lang="tr">SayfaTara</name>
   <name xml:lang="uk">Skanpage</name>
+  <name xml:lang="x-test">xxSkanpagexx</name>
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
   <name xml:lang="zh-TW">Skanpage</name>
   <summary>Multi-page document scanning application</summary>
@@ -74,6 +75,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="sv">Program för bildinläsning av flersidiga dokument</summary>
   <summary xml:lang="tr">Çok sayfalı belge tarama uygulaması</summary>
   <summary xml:lang="uk">Програма для сканування послідовностей сторінок</summary>
+  <summary xml:lang="x-test">xxMulti-page document scanning applicationxx</summary>
   <summary xml:lang="zh-CN">多页文档扫描应用</summary>
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
@@ -104,6 +106,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="sv">Skanpage är ett enkelt program för bildinläsning optimerat för inläsning av flersidiga dokument. Det kan också läsa in och spara ensidiga dokument och bilder.</p>
     <p xml:lang="tr">SayfaTara, çok sayfalı belgeleri taramak için eniyilenmiş yalın bir tarama uygulamasıdır. Ayrıca tek sayfalı belgeleri veya görselleri de tarayıp kaydedebilir.</p>
     <p xml:lang="uk">Skanpage — проста програма для сканування, яку розроблено для сканування послідовностей багатосторінкових документів. Вона також може зберігати односторінкові документи та зображення.</p>
+    <p xml:lang="x-test">xxSkanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.xx</p>
     <p xml:lang="zh-CN">Skanpage 是一款简易扫描应用程序，针对多页扫描任务进行优化。它也可以扫描并保存单页文档和图像。</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
@@ -138,6 +141,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="sv">Funktioner:</p>
     <p xml:lang="tr">Özellikler:</p>
     <p xml:lang="uk">Можливості:</p>
+    <p xml:lang="x-test">xxFeatures:xx</p>
     <p xml:lang="zh-CN">功能特性：</p>
     <p xml:lang="zh-TW">功能：</p>
     <ul>
@@ -173,6 +177,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="sv">Inläsning från flatbädds- och ADF-bildläsare</li>
       <li xml:lang="tr">Düz yatak ve ADF tarayıcılardan tarama</li>
       <li xml:lang="uk">Сканування з планшетних сканерів та сканерів із автоматичною подачею документів</li>
+      <li xml:lang="x-test">xxScanning from flatbed and ADF scannersxx</li>
       <li xml:lang="zh-CN">支持平板式扫描仪和自动送纸器扫描仪</li>
       <li xml:lang="zh-TW">從平台式或自動進紙式掃描器進行掃描</li>
       <li>Configurable options for scanning device</li>
@@ -208,6 +213,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="sv">Anpassningsbara alternativ för bildläsarenhet</li>
       <li xml:lang="tr">Tarama aygıtı için yapılandırılabilir seçenekler</li>
       <li xml:lang="uk">Можливість налаштовування параметрів сканування</li>
+      <li xml:lang="x-test">xxConfigurable options for scanning devicexx</li>
       <li xml:lang="zh-CN">支持配置扫描设备的选项</li>
       <li xml:lang="zh-TW">掃描裝置的可設定選項</li>
       <li>Reordering, rotation, and deletion of scanned pages</li>
@@ -239,6 +245,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="sv">Omordning, rotation och borttagning av inlästa sidor</li>
       <li xml:lang="tr">Taranan sayfaların yeniden sıralanması, döndürülmesi ve silinmesi</li>
       <li xml:lang="uk">Переупорядковування, обертання та вилучення сканованих сторінок</li>
+      <li xml:lang="x-test">xxReordering, rotation, and deletion of scanned pagesxx</li>
       <li xml:lang="zh-CN">对已扫描的页面进行重新排序、旋转和删除</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
@@ -273,6 +280,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="sv">Spara PDF-dokument med flera sidor och bildfiler</li>
       <li xml:lang="tr">Çoklu sayfalı PDF belgeleri ve görsel dosyaları olarak kayıt</li>
       <li xml:lang="uk">Збереження багатосторінкових документів PDF та файлів зображень</li>
+      <li xml:lang="x-test">xxSaving to multi-page PDF documents and image filesxx</li>
       <li xml:lang="zh-CN">保存为多页 PDF 文档和图像文件</li>
       <li xml:lang="zh-TW">儲存到多頁 PDF 文件或影像檔</li>
     </ul>
@@ -310,6 +318,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="sv">Huvudfönstret i Skanpage</caption>
       <caption xml:lang="tr">SayfaTara ana penceresi</caption>
       <caption xml:lang="uk">Головне вікно Skanpage</caption>
+      <caption xml:lang="x-test">xxSkanpage main windowxx</caption>
       <caption xml:lang="zh-CN">Skanpage 主窗口</caption>
       <caption xml:lang="zh-TW">Skanpage 主視窗</caption>
     </screenshot>
