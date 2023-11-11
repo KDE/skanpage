@@ -38,6 +38,10 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Nothing to save."));
         return;
     }
+    if (!fileUrl.isLocalFile()) {
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Saving to non-local directories is currently unsupported."));
+        return;
+    }
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
 
     const QFileInfo &fileInfo = QFileInfo(fileUrl.toLocalFile());
