@@ -60,8 +60,10 @@ ColumnLayout {
     }
 
     Label {
-        Layout.alignment: Qt.AlignHCenter
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+        horizontalAlignment: Qt.AlignHCenter
+        Layout.fillWidth: true
+        Layout.margins: Kirigami.Units.smallSpacing
+        wrapMode: Text.WordWrap
         text: skanpage.deviceVendor && skanpage.deviceModel ?
         i18nc("scanner device vendor and model", "%1 %2", skanpage.deviceVendor, skanpage.deviceModel) : ""
     }
