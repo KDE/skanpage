@@ -27,10 +27,14 @@ ColumnLayout {
 
         ScrollView {
             Layout.fillHeight: true
+            Layout.maximumHeight: deviceList.contentHeight
 
             ListView {
+                id: deviceList
+
                 anchors.fill: parent
                 contentWidth: contentItem.childrenRect.width + 2 * Kirigami.Units.smallSpacing
+                contentHeight: contentItem.childrenRect.height + 2 * Kirigami.Units.smallSpacing
 
                 model: skanpage.devicesModel
 
