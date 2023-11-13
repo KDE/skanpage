@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2023-11-13 00:44+0000\n"
 "PO-Revision-Date: 2023-06-10 20:42+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -63,33 +63,38 @@ msgstr "Non è stato fornito nessun percorso per il file."
 msgid "Nothing to save."
 msgstr "Niente da salvare."
 
-#: DocumentSaver.cpp:63 DocumentSaver.cpp:94
+#: DocumentSaver.cpp:42
+#, kde-format
+msgid "Saving to non-local directories is currently unsupported."
+msgstr ""
+
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Si è verificato un errore durante il salvataggio: %1."
 
-#: DocumentSaver.cpp:75
+#: DocumentSaver.cpp:79
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Documento salvato come PDF."
 
-#: DocumentSaver.cpp:107
+#: DocumentSaver.cpp:111
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "Documento con OCR salvato in PDF."
 
-#: DocumentSaver.cpp:179
+#: DocumentSaver.cpp:183
 #, kde-format
 msgid "Document saved as image."
 msgstr "Documento salvato come immagine."
 
-#: DocumentSaver.cpp:188
+#: DocumentSaver.cpp:192
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Impossibile salvare il documento come immagine."
 
-#: DocumentSaver.cpp:203
+#: DocumentSaver.cpp:207
 #, kde-format
 msgid "Failed to save image"
 msgstr "Impossibile salvare l'immagine"
@@ -130,7 +135,7 @@ msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
 msgstr "* %1"
 
-#: qml/DeviceSelection.qml:50
+#: qml/DeviceSelection.qml:54
 #, kde-format
 msgctxt ""
 "Device vendor with device model, followed by the device name identifier"
@@ -141,18 +146,18 @@ msgstr ""
 "%1 %2\n"
 "(%3)"
 
-#: qml/DeviceSelection.qml:65
+#: qml/DeviceSelection.qml:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
 msgstr "Nessun dispositivo trovato."
 
-#: qml/DeviceSelection.qml:82
+#: qml/DeviceSelection.qml:86
 #, kde-format
 msgid "Open selected device"
 msgstr "Apri il dispositivo selezionato"
 
-#: qml/DeviceSelection.qml:91
+#: qml/DeviceSelection.qml:95
 #, kde-format
 msgid "Reload devices list"
 msgstr "Ricarica la lista dei dispositivi"
@@ -544,23 +549,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "Seleziona opzioni per l'accesso rapido:"
 
-#: qml/OptionsPanel.qml:66
+#: qml/OptionsPanel.qml:68
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:79
+#: qml/OptionsPanel.qml:81
 #, kde-format
 msgid "Show More"
 msgstr "Mostra altro"
 
-#: qml/OptionsPanel.qml:89
+#: qml/OptionsPanel.qml:91
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Configura visibilità"
 
-#: qml/OptionsPanel.qml:104
+#: qml/OptionsPanel.qml:106
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Riseleziona scanner"

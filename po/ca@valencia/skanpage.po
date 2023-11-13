@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2023-11-13 00:44+0000\n"
 "PO-Revision-Date: 2023-06-07 11:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -66,33 +66,38 @@ msgstr "No s'ha proporcionat cap camí cap al fitxer."
 msgid "Nothing to save."
 msgstr "No hi ha res que s'haja de guardar."
 
-#: DocumentSaver.cpp:63 DocumentSaver.cpp:94
+#: DocumentSaver.cpp:42
+#, kde-format
+msgid "Saving to non-local directories is currently unsupported."
+msgstr ""
+
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "S'ha produït un error en guardar: %1."
 
-#: DocumentSaver.cpp:75
+#: DocumentSaver.cpp:79
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "El document s'ha guardat com a PDF."
 
-#: DocumentSaver.cpp:107
+#: DocumentSaver.cpp:111
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "El document s'ha guardat amb OCR com a PDF."
 
-#: DocumentSaver.cpp:179
+#: DocumentSaver.cpp:183
 #, kde-format
 msgid "Document saved as image."
 msgstr "El document s'ha guardat com a imatge."
 
-#: DocumentSaver.cpp:188
+#: DocumentSaver.cpp:192
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "No s'ha pogut guardar el document com a imatge."
 
-#: DocumentSaver.cpp:203
+#: DocumentSaver.cpp:207
 #, kde-format
 msgid "Failed to save image"
 msgstr "No s'ha pogut guardar la imatge"
@@ -135,7 +140,7 @@ msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
 msgstr "* %1"
 
-#: qml/DeviceSelection.qml:50
+#: qml/DeviceSelection.qml:54
 #, kde-format
 msgctxt ""
 "Device vendor with device model, followed by the device name identifier"
@@ -146,18 +151,18 @@ msgstr ""
 "%1 %2\n"
 "(%3)"
 
-#: qml/DeviceSelection.qml:65
+#: qml/DeviceSelection.qml:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
 msgstr "No s'ha trobat cap dispositiu."
 
-#: qml/DeviceSelection.qml:82
+#: qml/DeviceSelection.qml:86
 #, kde-format
 msgid "Open selected device"
 msgstr "Obri el dispositiu seleccionat"
 
-#: qml/DeviceSelection.qml:91
+#: qml/DeviceSelection.qml:95
 #, kde-format
 msgid "Reload devices list"
 msgstr "Actualitza la llista de dispositius"
@@ -548,23 +553,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "Seleccioneu les opcions per a l'accés ràpid:"
 
-#: qml/OptionsPanel.qml:66
+#: qml/OptionsPanel.qml:68
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:79
+#: qml/OptionsPanel.qml:81
 #, kde-format
 msgid "Show More"
 msgstr "Mostra'n més"
 
-#: qml/OptionsPanel.qml:89
+#: qml/OptionsPanel.qml:91
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Configura la visibilitat"
 
-#: qml/OptionsPanel.qml:104
+#: qml/OptionsPanel.qml:106
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Torna a seleccionar l'escàner"

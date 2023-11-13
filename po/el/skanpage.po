@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2023-11-13 00:44+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -63,35 +63,40 @@ msgstr ""
 msgid "Nothing to save."
 msgstr "Τίποτε για αποθήκευση."
 
-#: DocumentSaver.cpp:63 DocumentSaver.cpp:94
+#: DocumentSaver.cpp:42
+#, kde-format
+msgid "Saving to non-local directories is currently unsupported."
+msgstr ""
+
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr ""
 
-#: DocumentSaver.cpp:75
+#: DocumentSaver.cpp:79
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Το έγγραφο αποθηκεύτηκε ως PDF."
 
-#: DocumentSaver.cpp:107
+#: DocumentSaver.cpp:111
 #, fuzzy, kde-format
 #| msgid "Document saved as PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Το έγγραφο αποθηκεύτηκε ως PDF."
 
-#: DocumentSaver.cpp:179
+#: DocumentSaver.cpp:183
 #, kde-format
 msgid "Document saved as image."
 msgstr "Το έγγραφο αποθηκεύτηκε ως εικόνα."
 
-#: DocumentSaver.cpp:188
+#: DocumentSaver.cpp:192
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save document as image."
 msgstr "Αποτυχία αποθήκευσης εικόνας"
 
-#: DocumentSaver.cpp:203
+#: DocumentSaver.cpp:207
 #, kde-format
 msgid "Failed to save image"
 msgstr "Αποτυχία αποθήκευσης εικόνας"
@@ -134,7 +139,7 @@ msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
 msgstr "* %1"
 
-#: qml/DeviceSelection.qml:50
+#: qml/DeviceSelection.qml:54
 #, kde-format
 msgctxt ""
 "Device vendor with device model, followed by the device name identifier"
@@ -145,18 +150,18 @@ msgstr ""
 "%1 %2\n"
 "(%3)"
 
-#: qml/DeviceSelection.qml:65
+#: qml/DeviceSelection.qml:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
 msgstr "Δε βρέθηκαν συσκευές."
 
-#: qml/DeviceSelection.qml:82
+#: qml/DeviceSelection.qml:86
 #, kde-format
 msgid "Open selected device"
 msgstr "Άνοιγμα επιλεγμένης συσκευής"
 
-#: qml/DeviceSelection.qml:91
+#: qml/DeviceSelection.qml:95
 #, kde-format
 msgid "Reload devices list"
 msgstr "Ανανέωση λίστας συσκευών"
@@ -557,7 +562,7 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr ""
 
-#: qml/OptionsPanel.qml:66
+#: qml/OptionsPanel.qml:68
 #, fuzzy, kde-format
 #| msgctxt "Adding unit suffix"
 #| msgid "%1 %2"
@@ -565,17 +570,17 @@ msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:79
+#: qml/OptionsPanel.qml:81
 #, kde-format
 msgid "Show More"
 msgstr ""
 
-#: qml/OptionsPanel.qml:89
+#: qml/OptionsPanel.qml:91
 #, kde-format
 msgid "Configure Visibility"
 msgstr ""
 
-#: qml/OptionsPanel.qml:104
+#: qml/OptionsPanel.qml:106
 #, fuzzy, kde-format
 #| msgid "Reselect scanning device"
 msgid "Reselect Scanner"

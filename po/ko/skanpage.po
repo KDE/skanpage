@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2023-11-13 00:44+0000\n"
 "PO-Revision-Date: 2023-07-26 00:23+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -63,33 +63,38 @@ msgstr "파일 경로를 지정하지 않았습니다."
 msgid "Nothing to save."
 msgstr "저장할 항목이 없습니다."
 
-#: DocumentSaver.cpp:63 DocumentSaver.cpp:94
+#: DocumentSaver.cpp:42
+#, kde-format
+msgid "Saving to non-local directories is currently unsupported."
+msgstr ""
+
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "저장하는 중 오류 발생: %1."
 
-#: DocumentSaver.cpp:75
+#: DocumentSaver.cpp:79
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "문서를 PDF로 저장했습니다."
 
-#: DocumentSaver.cpp:107
+#: DocumentSaver.cpp:111
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "문서를 OCR 처리된 PDF로 저장했습니다."
 
-#: DocumentSaver.cpp:179
+#: DocumentSaver.cpp:183
 #, kde-format
 msgid "Document saved as image."
 msgstr "문서를 그림으로 저장했습니다."
 
-#: DocumentSaver.cpp:188
+#: DocumentSaver.cpp:192
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "문서를 그림으로 저장할 수 없습니다."
 
-#: DocumentSaver.cpp:203
+#: DocumentSaver.cpp:207
 #, kde-format
 msgid "Failed to save image"
 msgstr "그림을 저장할 수 없음"
@@ -131,7 +136,7 @@ msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
 msgstr "* %1"
 
-#: qml/DeviceSelection.qml:50
+#: qml/DeviceSelection.qml:54
 #, kde-format
 msgctxt ""
 "Device vendor with device model, followed by the device name identifier"
@@ -142,18 +147,18 @@ msgstr ""
 "%1 %2\n"
 "(%3)"
 
-#: qml/DeviceSelection.qml:65
+#: qml/DeviceSelection.qml:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
 msgstr "장치를 찾을 수 없습니다."
 
-#: qml/DeviceSelection.qml:82
+#: qml/DeviceSelection.qml:86
 #, kde-format
 msgid "Open selected device"
 msgstr "선택한 장치 열기"
 
-#: qml/DeviceSelection.qml:91
+#: qml/DeviceSelection.qml:95
 #, kde-format
 msgid "Reload devices list"
 msgstr "장치 목록 새로 고침"
@@ -543,23 +548,23 @@ msgstr "픽셀"
 msgid "Select options for quick access:"
 msgstr "빠른 접근 옵션 선택:"
 
-#: qml/OptionsPanel.qml:66
+#: qml/OptionsPanel.qml:68
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:79
+#: qml/OptionsPanel.qml:81
 #, kde-format
 msgid "Show More"
 msgstr "더 보기"
 
-#: qml/OptionsPanel.qml:89
+#: qml/OptionsPanel.qml:91
 #, kde-format
 msgid "Configure Visibility"
 msgstr "표시 여부 설정"
 
-#: qml/OptionsPanel.qml:104
+#: qml/OptionsPanel.qml:106
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "스캐너 다시 선택"
