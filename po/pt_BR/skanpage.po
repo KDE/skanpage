@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-13 00:44+0000\n"
-"PO-Revision-Date: 2023-07-04 15:24-0300\n"
+"PO-Revision-Date: 2023-11-14 12:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -67,7 +67,7 @@ msgstr "Nada a salvar."
 #: DocumentSaver.cpp:42
 #, kde-format
 msgid "Saving to non-local directories is currently unsupported."
-msgstr ""
+msgstr "Salvar em pastas não locais não é suportado atualmente."
 
 #: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
