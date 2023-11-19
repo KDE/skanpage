@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Stefan Asserhäll <stefan.asserhall@bredband.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-13 00:44+0000\n"
-"PO-Revision-Date: 2023-07-25 14:02+0200\n"
+"PO-Revision-Date: 2023-11-18 22:20+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -66,7 +66,7 @@ msgstr "Ingenting att spara."
 #: DocumentSaver.cpp:42
 #, kde-format
 msgid "Saving to non-local directories is currently unsupported."
-msgstr ""
+msgstr "Spara i icke-lokala kataloger stöds för närvarande inte."
 
 #: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
