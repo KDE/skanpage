@@ -406,7 +406,7 @@ ApplicationWindow {
         currentFolder: skanpage.configuration.defaultFolder
         fileMode: FileDialog.SaveFile
         nameFilters: skanpage.formatModel.formatFilter()
-        selectedNameFilter.index: skanpage.configuration.defaultNameFilter
+        selectedNameFilter.index: skanpage.configuration.defaultNameFilterIndex
         onAccepted: {
             skanpage.documentModel.save(selectedFile, pageNumbers)
             pageNumbers = []
