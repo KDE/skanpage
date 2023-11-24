@@ -41,11 +41,7 @@ void DocumentPrinter::printDocument(const SkanpageUtils::DocumentPages &document
     QPrintDialog printDialog(m_printer.get());
 
     if (printDialog.exec() == QDialog::Accepted) {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        m_future = QtConcurrent::run(this, &DocumentPrinter::print, document);
-#else
         m_future = QtConcurrent::run(&DocumentPrinter::print, this, document);
-#endif
     }
 }
 

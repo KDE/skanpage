@@ -555,13 +555,8 @@ void Skanpage::print() {
 void Skanpage::registerAction(QObject* item, QObject* shortcuts, const QString &iconText)
 {
     auto getQKeySequence = [](const QVariant &variant) -> QKeySequence {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        if (variant.type() == QVariant::KeySequence) return variant.value<QKeySequence>();
-        else if (variant.type() == QVariant::String) return variant.value<QString>();
-#else
         if (variant.typeId() == QMetaType::QKeySequence) return variant.value<QKeySequence>();
         else if (variant.typeId() == QMetaType::QString) return variant.value<QString>();
-#endif
         else return variant.value<QKeySequence::StandardKey>();
     };
 

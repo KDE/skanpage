@@ -5,14 +5,15 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.12
-import QtQuick.Window 2.2
-import QtQuick.Layouts 1.1
-import @QTQUICK_DIALOGS_IMPORT@
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Dialogs
 
-import org.kde.kirigami 2.19 as Kirigami
-import org.kde.skanpage 1.0
+import org.kde.kirigami as Kirigami
+
+import org.kde.skanpage
 
 ApplicationWindow {
     id: mainWindow
@@ -402,12 +403,12 @@ ApplicationWindow {
 
         property var pageNumbers: []
 
-        @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
-        @FILEDIALOG_MODE_SAVE@
+        currentFolder: skanpage.configuration.defaultFolder
+        fileMode: FileDialog.SaveFile
         nameFilters: skanpage.formatModel.formatFilter()
-        @FILEDIALOG_SELECTED_NAME_FILTER@: skanpage.configuration.defaultNameFilter
+        selectedNameFilter.index: skanpage.configuration.defaultNameFilter
         onAccepted: {
-            skanpage.documentModel.save(@FILEDIALOG_SELECTED_FILE@, pageNumbers)
+            skanpage.documentModel.save(selectedFile, pageNumbers)
             pageNumbers = []
         }
         onRejected: pageNumbers = []

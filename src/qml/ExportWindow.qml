@@ -5,15 +5,15 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.7
-import QtQuick.Controls 2.12
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
-import @QTQUICK_DIALOGS_IMPORT@
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Dialogs
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 
-import org.kde.skanpage 1.0
+import org.kde.skanpage
 
 Window {
     id: exportWindow
@@ -202,10 +202,9 @@ Window {
 
     FileDialog {
         id: fileNameDialog
-        @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
-        @FILEDIALOG_MODE_LOAD_FOLDER_NOTSELECTFOLDER@
+        currentFolder: skanpage.configuration.defaultFolder
         nameFilters: skanpage.formatModel.pdfFormatFilter()
-        onAccepted: fileNameItem.text = @FILEDIALOG_SELECTED_FILE@
+        onAccepted: fileNameItem.text = selectedFile
     }
 }
 

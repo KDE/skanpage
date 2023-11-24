@@ -16,13 +16,13 @@ project(skanpage
         VERSION ${RELEASE_SERVICE_VERSION}
         LANGUAGES CXX)
 
-set(REQUIRED_QT_VERSION "5.15.2")
-set(REQUIRED_KF5_VERSION "5.94")
+set(QT_REQUIRED_VERSION "6.5.0")
+set(KF_MIN_VERSION "5.240.0")
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 include(FeatureSummary)
 include(ECMSetupVersion)
@@ -35,45 +35,11 @@ include(KDECMakeSettings)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
 include(ECMDeprecationSettings)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.5.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
 
 
-if(QT_MAJOR_VERSION STREQUAL "6")
-    set(KIRIGAMI_ICON_NAME "icon.name")
-    set(FILEDIALOG_CURRENT_FOLDER "currentFolder")
-    set(FILEDIALOG_SELECTED_NAME_FILTER "selectedNameFilter.index")
-    set(FILEDIALOG_SELECTED_FILE "selectedFile")
-    set(FILEDIALOG_MODE_SAVE "fileMode: FileDialog.SaveFile")
-    set(FILEDIALOG_MODE_LOAD_FOLDER "FolderDialog")
-    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTEXISTING "")
-    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTFOLDER "")
-    set(FILEDIALOG_MODE_LOAD_FOLDER_NOTSELECTFOLDER "")
-    set(QTQUICK_DIALOGS_IMPORT "QtQuick.Dialogs")
-    set(BASICLISTITEM_ICON "icon.name")
-else()
-    set(KIRIGAMI_ICON_NAME "iconName")
-    set(FILEDIALOG_CURRENT_FOLDER "folder")
-    set(FILEDIALOG_SELECTED_NAME_FILTER "selectedNameFilter")
-    set(FILEDIALOG_MODE_SAVE "selectExisting: false")
-    set(FILEDIALOG_SELECTED_FILE "fileUrl")
-    set(FILEDIALOG_MODE_LOAD_FOLDER "FileDialog")
-    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTEXISTING "selectExisting: true")
-    set(FILEDIALOG_MODE_LOAD_FOLDER_SELECTFOLDER "selectFolder: true")
-    set(FILEDIALOG_MODE_LOAD_FOLDER_NOTSELECTFOLDER "selectExisting: false")
-    set(QTQUICK_DIALOGS_IMPORT "QtQuick.Dialogs 1.3")
-    set(BASICLISTITEM_ICON "icon")
-endif()
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
 
-
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
-
-find_package(KF${KF_MAJOR_VERSION} ${REQUIRED_KF5_VERSION} REQUIRED
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     COMPONENTS
         CoreAddons
         I18n

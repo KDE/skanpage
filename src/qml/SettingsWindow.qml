@@ -4,14 +4,15 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
-import @QTQUICK_DIALOGS_IMPORT@
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Dialogs
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.skanpage 1.0
+import org.kde.kirigami as Kirigami
+
+import org.kde.skanpage
 
 Window {
     id: settingsWindow
@@ -102,12 +103,10 @@ Window {
         onTriggered: settingsWindow.close()
     }
 
-    @FILEDIALOG_MODE_LOAD_FOLDER@ {
+    FolderDialog {
         id: selectFolderDialog
 
-        @FILEDIALOG_CURRENT_FOLDER@: skanpage.configuration.defaultFolder
-        @FILEDIALOG_MODE_LOAD_FOLDER_SELECTEXISTING@
-        @FILEDIALOG_MODE_LOAD_FOLDER_SELECTFOLDER@
-        onAccepted: skanpage.configuration.defaultFolder = @FILEDIALOG_SELECTED_FILE@
+        currentFolder: skanpage.configuration.defaultFolder
+        onAccepted: skanpage.configuration.defaultFolder = selectedFile
     }
 }

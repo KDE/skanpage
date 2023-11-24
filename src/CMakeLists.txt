@@ -5,13 +5,6 @@
 
 include_directories(${skanpage_BINARY_DIR})
 
-configure_file(qml/GlobalMenu.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/GlobalMenu.qml)
-configure_file(qml/SettingsWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/SettingsWindow.qml)
-configure_file(qml/ExportWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/ExportWindow.qml)
-configure_file(qml/MainWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/MainWindow.qml)
-configure_file(qml/ShareWindow.qml ${CMAKE_CURRENT_BINARY_DIR}/qml/ShareWindow.qml)
-configure_file(qml.qrc.in ${CMAKE_CURRENT_SOURCE_DIR}/qml.generated.qrc)
-
 add_executable(skanpage)
 
 target_sources(skanpage PRIVATE
@@ -40,7 +33,7 @@ target_sources(skanpage PRIVATE
     OCREngine.h
     OCRLanguageModel.cpp
     OCRLanguageModel.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/qml.generated.qrc
+    qml.qrc
     )
 
 ecm_qt_declare_logging_category(skanpage
@@ -71,14 +64,14 @@ target_link_libraries(skanpage
     Qt::Concurrent
   PRIVATE
     KSane::Core
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::Kirigami2
-    KF${KF_MAJOR_VERSION}::Crash
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::ConfigGui
-    KF${KF_MAJOR_VERSION}::Purpose
-    KF${KF_MAJOR_VERSION}::XmlGui
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::Kirigami2
+    KF6::Crash
+    KF6::ConfigCore
+    KF6::ConfigGui
+    KF6::Purpose
+    KF6::XmlGui
 )
 
 if (TESSERACT_FOUND AND LEPTONICA_FOUND)

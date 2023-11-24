@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 #
 
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 
 include(ECMAddTests)
 
@@ -21,7 +21,7 @@ ecm_add_test(documentSaverTest.cpp ../src/DocumentSaver.cpp  ../src/OCREngine.cp
         Qt::Test
         Qt::Gui
         Qt::Concurrent
-        KF${KF_MAJOR_VERSION}::I18n
+        KF6::I18n
 )
 
 if (TESSERACT_FOUND AND LEPTONICA_FOUND)

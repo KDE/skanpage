@@ -27,28 +27,28 @@ MenuBar {
 
         MenuItem {
             text: newDocAction.text
-            @KIRIGAMI_ICON_NAME@: newDocAction.icon.name
+            icon.name: newDocAction.icon.name
             onTriggered: newDocAction.trigger()
             enabled: newDocAction.enabled
         }
 
         MenuItem {
             text: saveDocAction.text
-            @KIRIGAMI_ICON_NAME@: saveDocAction.icon.name
+            icon.name: saveDocAction.icon.name
             onTriggered: saveDocAction.trigger()
             enabled: saveDocAction.enabled
         }
 
         MenuItem {
             text: shareAction.text
-            @KIRIGAMI_ICON_NAME@: shareAction.icon.name
+            icon.name: shareAction.icon.name
             onTriggered: shareAction.trigger()
             enabled: shareAction.enabled
         }
 
         MenuItem {
             text: printAction.text
-            @KIRIGAMI_ICON_NAME@: printAction.icon.name
+            icon.name: printAction.icon.name
             onTriggered: printAction.trigger()
             enabled: printAction.enabled
         }
@@ -58,7 +58,7 @@ MenuBar {
 
         MenuItem {
             text: quitAction.text
-            @KIRIGAMI_ICON_NAME@: quitAction.icon.name
+            icon.name: quitAction.icon.name
             onTriggered: quitAction.trigger()
             enabled: quitAction.enabled
         }
@@ -69,21 +69,21 @@ MenuBar {
 
         MenuItem {
             text: previewAction.text
-            @KIRIGAMI_ICON_NAME@: previewAction.icon.name
+            icon.name: previewAction.icon.name
             onTriggered: previewAction.trigger()
             enabled: previewAction.enabled
         }
 
         MenuItem {
             text: scanAction.text
-            @KIRIGAMI_ICON_NAME@: scanAction.icon.name
+            icon.name: scanAction.icon.name
             onTriggered: scanAction.trigger()
             enabled: scanAction.enabled
         }
 
         MenuItem {
             text: cancelAction.text
-            @KIRIGAMI_ICON_NAME@: cancelAction.icon.name
+            icon.name: cancelAction.icon.name
             onTriggered: cancelAction.trigger()
             enabled: cancelAction.enabled
         }
@@ -93,7 +93,7 @@ MenuBar {
 
         MenuItem {
             text: showOptionsAction.text
-            @KIRIGAMI_ICON_NAME@: showOptionsAction.icon.name
+            icon.name: showOptionsAction.icon.name
             onTriggered: showOptionsAction.trigger()
             enabled: showOptionsAction.enabled
             checkable: showOptionsAction.checkable
@@ -102,7 +102,7 @@ MenuBar {
         
         MenuItem {
             text: allOptionsAction.text
-            @KIRIGAMI_ICON_NAME@: allOptionsAction.icon.name
+            icon.name: allOptionsAction.icon.name
             onTriggered: allOptionsAction.trigger()
             enabled: allOptionsAction.enabled
             checkable: allOptionsAction.checkable
@@ -114,7 +114,7 @@ MenuBar {
         
         MenuItem {
             text: reselectDevicesAction.text
-            @KIRIGAMI_ICON_NAME@: reselectDevicesAction.icon.name
+            icon.name: reselectDevicesAction.icon.name
             onTriggered: reselectDevicesAction.trigger()
             enabled: reselectDevicesAction.enabled
         }
@@ -125,7 +125,7 @@ MenuBar {
 
         MenuItem {
             text: showAboutAction.text
-            @KIRIGAMI_ICON_NAME@: showAboutAction.icon.name
+            icon.name: showAboutAction.icon.name
             onTriggered: showAboutAction.trigger()
             enabled: showAboutAction.enabled
         }

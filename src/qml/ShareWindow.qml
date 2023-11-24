@@ -4,14 +4,15 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Window
 
-import org.kde.kirigami 2.5 as Kirigami
-import org.kde.purpose 1.0 as Purpose
-import org.kde.skanpage 1.0
+import org.kde.kirigami as Kirigami
+import org.kde.kirigami.delegates as KD
+import org.kde.purpose as Purpose
+import org.kde.skanpage
 
 Window {
     id: shareWindow
@@ -90,9 +91,6 @@ Window {
             initialItem: ScrollView {
                 id: alternativesList
 
-                // FIXME: Remove once the Qt bug always showing the horizontal scrollbar is resolved
-                ScrollBar.horizontal.visible: false
-
                 contentItem: ListView {
                     focus: true
                     model: alternativesModel
@@ -101,21 +99,30 @@ Window {
 
                     currentIndex: -1
 
-                    delegate: Kirigami.BasicListItem {
+                    delegate: ItemDelegate {
                         id: shareDelegate
 
                         required property string iconName
                         required property int index
 
-                        label: shareDelegate.display
-                        @BASICLISTITEM_ICON@: shareDelegate.iconName
+                        contentItem: RowLayout {
+                            spacing: Kirigami.Units.smallSpacing
+
+                            KD.SubtitleDelegate {
+                                text: shareDelegate.display
+                                icon.name: shareDelegate.iconName
+                            }
+                            Kirigami.Icon {
+                                implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                                implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                                source: "arrow-right"
+                            }
+                        }
+
                         onClicked: purposeView.proceed(shareDelegate.index)
                         Keys.onReturnPressed: purposeView.proceed(shareDelegate.index)
                         Keys.onEnterPressed: purposeView.proceed(shareDelegate.index)
 
-                        trailing: Kirigami.Icon {
-                            source: "arrow-right"
-                        }
                     }
                 }
 

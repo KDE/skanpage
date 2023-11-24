@@ -15,17 +15,5 @@ Dependencies:
     'libraries/ksanecore': '@same'
     'libraries/kquickimageeditor': '@latest'
 
-- 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5', 'Android/Qt5']
-  'require':
-    'frameworks/extra-cmake-modules': '@stable'
-    'frameworks/kcoreaddons': '@stable'
-    'frameworks/ki18n': '@stable'
-    'frameworks/kirigami': '@stable'
-    'frameworks/kcrash': '@stable'
-    'frameworks/kconfig': '@stable'
-    'frameworks/kxmlgui': '@stable'
-    'frameworks/purpose': '@stable'
-    'libraries/ksanecore': '@same'
-    'libraries/kquickimageeditor': '@latest'
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD']
