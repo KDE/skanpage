@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 00:44+0000\n"
+"POT-Creation-Date: 2023-11-28 00:42+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "Τίποτε για εκτύπωση."
 msgid "Previous printing operation still in progress."
 msgstr "Η προηγούμενη λειτουργία εκτύπωσης είναι ακόμη σε εξέλιξη."
 
-#: DocumentPrinter.cpp:73
+#: DocumentPrinter.cpp:69
 #, kde-format
 msgid "Document sent to printer."
 msgstr "Το έγγραφο εστάλη στον εκτυπωτή."
@@ -101,34 +101,34 @@ msgstr "Αποτυχία αποθήκευσης εικόνας"
 msgid "Failed to save image"
 msgstr "Αποτυχία αποθήκευσης εικόνας"
 
-#: main.cpp:60
+#: main.cpp:56
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:62
+#: main.cpp:58
 #, fuzzy, kde-format
 #| msgid "Page-scanning application by KDE based on libksane."
 msgid "Multi-page scanning application by KDE."
 msgstr "Εφαρμογή σάρωσης σελίδων από το KDE με βάση το libksane."
 
-#: main.cpp:64
+#: main.cpp:60
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:63 main.cpp:64
 #, kde-format
 msgid "developer"
 msgstr "προγραμματιστής"
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "Όνομα συσκευής σαρωτή sane. Δώστε 'test' για δοκιμή της συσκευής."
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "device"
 msgstr "συσκευή"
@@ -325,7 +325,7 @@ msgstr "Ζουμ με ταίριασμα"
 msgid "Zoom 100%"
 msgstr "Ζουμ 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -370,7 +370,7 @@ msgstr ""
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -406,66 +406,66 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "Αποθήκευση ακόμη σε εξέλιξη."
 
-#: qml/MainWindow.qml:22
+#: qml/MainWindow.qml:23
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 - Skanpage"
 
-#: qml/MainWindow.qml:84
+#: qml/MainWindow.qml:85
 #, kde-format
 msgid "Discard All"
 msgstr ""
 
-#: qml/MainWindow.qml:93
+#: qml/MainWindow.qml:94
 #, fuzzy, kde-format
 #| msgid "Save"
 msgid "Save All"
 msgstr "Αποθήκευση"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:122
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: qml/MainWindow.qml:144
+#: qml/MainWindow.qml:145
 #, fuzzy, kde-format
 #| msgid "Scanner Options"
 msgid "Show Scanner Options"
 msgstr "Επιλογές σαρωτή"
 
-#: qml/MainWindow.qml:154 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: qml/MainWindow.qml:183 qml/MainWindow.qml:380
+#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
 #, kde-format
 msgid "About Skanpage"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:191
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:198
+#: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:206
+#: qml/MainWindow.qml:207
 #, kde-format
 msgid "Quit"
 msgstr "Έξοδος"
@@ -586,45 +586,45 @@ msgstr ""
 msgid "Reselect Scanner"
 msgstr "Επανεπιλογή συσκευής σάρωσης"
 
-#: qml/SettingsWindow.qml:19
+#: qml/SettingsWindow.qml:20
 #, kde-format
 msgid "Configure"
 msgstr ""
 
-#: qml/SettingsWindow.qml:37
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgid "Devices to show:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:39
 #, fuzzy, kde-format
 #| msgid "Scanner options"
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Επιλογές σαρωτή"
 
-#: qml/SettingsWindow.qml:45
+#: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr ""
 
-#: qml/SettingsWindow.qml:52
+#: qml/SettingsWindow.qml:53
 #, kde-format
 msgid "Default file format:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:68
 #, kde-format
 msgid "Default save location:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: qml/ShareWindow.qml:41
+#: qml/ShareWindow.qml:42
 #, kde-format
 msgid "Share as:"
 msgstr ""

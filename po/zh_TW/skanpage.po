@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 00:44+0000\n"
+"POT-Creation-Date: 2023-11-28 00:42+0000\n"
 "PO-Revision-Date: 2023-02-19 06:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -51,7 +51,7 @@ msgstr "沒有要列印的東西。"
 msgid "Previous printing operation still in progress."
 msgstr "上一個列印操作仍在進行中。"
 
-#: DocumentPrinter.cpp:73
+#: DocumentPrinter.cpp:69
 #, kde-format
 msgid "Document sent to printer."
 msgstr "文件已傳送至印表機。"
@@ -102,32 +102,32 @@ msgstr "無法將文件儲存為影像。"
 msgid "Failed to save image"
 msgstr "儲存影像失敗"
 
-#: main.cpp:60
+#: main.cpp:56
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:62
+#: main.cpp:58
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "來自 KDE 的多頁掃描應用程式。"
 
-#: main.cpp:64
+#: main.cpp:60
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:63 main.cpp:64
 #, kde-format
 msgid "developer"
 msgstr "開發者"
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "Sane 掃描器的裝置名稱。使用「test」代表測試裝置。"
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "device"
 msgstr "裝置"
@@ -323,7 +323,7 @@ msgstr "縮放到適合"
 msgid "Zoom 100%"
 msgstr "縮放到 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
 msgid "Export PDF"
 msgstr "匯出 PDF"
@@ -366,7 +366,7 @@ msgstr ""
 msgid "Save"
 msgstr "儲存"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -401,63 +401,63 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "掃描中。"
 
-#: qml/MainWindow.qml:22
+#: qml/MainWindow.qml:23
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:84
+#: qml/MainWindow.qml:85
 #, kde-format
 msgid "Discard All"
 msgstr "丟棄全部"
 
-#: qml/MainWindow.qml:93
+#: qml/MainWindow.qml:94
 #, kde-format
 msgid "Save All"
 msgstr "儲存全部"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:122
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Scan"
 msgstr "掃描"
 
-#: qml/MainWindow.qml:144
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "顯示掃描器選項"
 
-#: qml/MainWindow.qml:154 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "分享"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Print"
 msgstr "列印"
 
-#: qml/MainWindow.qml:183 qml/MainWindow.qml:380
+#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
 #, kde-format
 msgid "About Skanpage"
 msgstr "關於 Skanpage"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:191
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "設定 Skanpage…"
 
-#: qml/MainWindow.qml:198
+#: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:206
+#: qml/MainWindow.qml:207
 #, kde-format
 msgid "Quit"
 msgstr "離開"
@@ -572,44 +572,44 @@ msgstr "設定可見度"
 msgid "Reselect Scanner"
 msgstr "重新選取掃描器"
 
-#: qml/SettingsWindow.qml:19
+#: qml/SettingsWindow.qml:20
 #, kde-format
 msgid "Configure"
 msgstr "設定"
 
-#: qml/SettingsWindow.qml:37
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgid "Devices to show:"
 msgstr "要顯示的裝置："
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:39
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "僅掃描器"
 
-#: qml/SettingsWindow.qml:45
+#: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "掃描器、相機與虛擬裝置"
 
-#: qml/SettingsWindow.qml:52
+#: qml/SettingsWindow.qml:53
 #, kde-format
 msgid "Default file format:"
 msgstr "預設檔案格式："
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:68
 #, kde-format
 msgid "Default save location:"
 msgstr "預設儲存位置："
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Close"
 msgstr "關閉"
 
-#: qml/ShareWindow.qml:41
+#: qml/ShareWindow.qml:42
 #, kde-format
 msgid "Share as:"
 msgstr "分享為："

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 00:44+0000\n"
+"POT-Creation-Date: 2023-11-28 00:42+0000\n"
 "PO-Revision-Date: 2023-11-13 13:28+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "Няма нищо за отпечатване."
 msgid "Previous printing operation still in progress."
 msgstr "Предишната операция по отпечатване все още се изпълнява."
 
-#: DocumentPrinter.cpp:73
+#: DocumentPrinter.cpp:69
 #, kde-format
 msgid "Document sent to printer."
 msgstr "Документът е изпратен до принтера."
@@ -99,34 +99,34 @@ msgstr "Неуспех при запазването на документа к�
 msgid "Failed to save image"
 msgstr "Неуспех при запазване на изображението"
 
-#: main.cpp:60
+#: main.cpp:56
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:62
+#: main.cpp:58
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "Приложение на КДЕ за сканиране на много страници."
 
-#: main.cpp:64
+#: main.cpp:60
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:63 main.cpp:64
 #, kde-format
 msgid "developer"
 msgstr "разработчик"
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "Име на Sane скенер устройство. Използвайте 'test' за тестване на "
 "устройството."
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "device"
 msgstr "устройство"
@@ -323,7 +323,7 @@ msgstr "Оптимално мащабиране"
 msgid "Zoom 100%"
 msgstr "Мащабиране 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
 msgid "Export PDF"
 msgstr "Експортиране в PDF"
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Save"
 msgstr "Запазване"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "Отказ"
@@ -402,63 +402,63 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "Сканирането се изпълнява."
 
-#: qml/MainWindow.qml:22
+#: qml/MainWindow.qml:23
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:84
+#: qml/MainWindow.qml:85
 #, kde-format
 msgid "Discard All"
 msgstr "Отхвърляне на всичко"
 
-#: qml/MainWindow.qml:93
+#: qml/MainWindow.qml:94
 #, kde-format
 msgid "Save All"
 msgstr "Запис на всички"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
 msgstr "Предварителен преглед"
 
-#: qml/MainWindow.qml:122
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Scan"
 msgstr "Сканиране"
 
-#: qml/MainWindow.qml:144
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Показване на настройки на скенер"
 
-#: qml/MainWindow.qml:154 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Споделяне"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Print"
 msgstr "Отпечатване"
 
-#: qml/MainWindow.qml:183 qml/MainWindow.qml:380
+#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
 #, kde-format
 msgid "About Skanpage"
 msgstr "Относно Skanpage"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:191
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Конфигуриране на Skanpage…"
 
-#: qml/MainWindow.qml:198
+#: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Конфигуриране на клавишни комбинации…"
 
-#: qml/MainWindow.qml:206
+#: qml/MainWindow.qml:207
 #, kde-format
 msgid "Quit"
 msgstr "Изход"
@@ -572,44 +572,44 @@ msgstr "Настройване на видимостта"
 msgid "Reselect Scanner"
 msgstr "Повторно избиране на скенера"
 
-#: qml/SettingsWindow.qml:19
+#: qml/SettingsWindow.qml:20
 #, kde-format
 msgid "Configure"
 msgstr "Настройване"
 
-#: qml/SettingsWindow.qml:37
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgid "Devices to show:"
 msgstr "Устройства за показване:"
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:39
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Само скенери"
 
-#: qml/SettingsWindow.qml:45
+#: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "Скенери, камери и виртуални устройства"
 
-#: qml/SettingsWindow.qml:52
+#: qml/SettingsWindow.qml:53
 #, kde-format
 msgid "Default file format:"
 msgstr "Файлов формат по подразбиране:"
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:68
 #, kde-format
 msgid "Default save location:"
 msgstr "Място за запис:"
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Close"
 msgstr "Затваряне"
 
-#: qml/ShareWindow.qml:41
+#: qml/ShareWindow.qml:42
 #, kde-format
 msgid "Share as:"
 msgstr "Споделяне като:"

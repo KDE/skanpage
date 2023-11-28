@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 00:44+0000\n"
+"POT-Creation-Date: 2023-11-28 00:42+0000\n"
 "PO-Revision-Date: 2023-07-26 00:23+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "인쇄할 항목이 없습니다."
 msgid "Previous printing operation still in progress."
 msgstr "이전 인쇄 작업이 진행 중입니다."
 
-#: DocumentPrinter.cpp:73
+#: DocumentPrinter.cpp:69
 #, kde-format
 msgid "Document sent to printer."
 msgstr "문서를 인쇄했습니다."
@@ -99,33 +99,33 @@ msgstr "문서를 그림으로 저장할 수 없습니다."
 msgid "Failed to save image"
 msgstr "그림을 저장할 수 없음"
 
-#: main.cpp:60
+#: main.cpp:56
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:62
+#: main.cpp:58
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "KDE의 여러 쪽 스캔 앱입니다."
 
-#: main.cpp:64
+#: main.cpp:60
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:63 main.cpp:64
 #, kde-format
 msgid "developer"
 msgstr "개발자"
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "SANE 스캐너 장치 이름입니다. 테스트 장치를 사용하려면 'test'를 입력하십시오."
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "device"
 msgstr "장치"
@@ -320,7 +320,7 @@ msgstr "맞추기"
 msgid "Zoom 100%"
 msgstr "확대/축소 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF 내보내기"
@@ -364,7 +364,7 @@ msgstr ""
 msgid "Save"
 msgstr "저장"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
@@ -399,63 +399,63 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "스캔 중."
 
-#: qml/MainWindow.qml:22
+#: qml/MainWindow.qml:23
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:84
+#: qml/MainWindow.qml:85
 #, kde-format
 msgid "Discard All"
 msgstr "모두 버리기"
 
-#: qml/MainWindow.qml:93
+#: qml/MainWindow.qml:94
 #, kde-format
 msgid "Save All"
 msgstr "모두 저장"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
 msgstr "미리 보기"
 
-#: qml/MainWindow.qml:122
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Scan"
 msgstr "스캔"
 
-#: qml/MainWindow.qml:144
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "스캐너 옵션 표시"
 
-#: qml/MainWindow.qml:154 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "공유"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Print"
 msgstr "인쇄"
 
-#: qml/MainWindow.qml:183 qml/MainWindow.qml:380
+#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage 정보"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:191
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage 설정…"
 
-#: qml/MainWindow.qml:198
+#: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "키보드 단축키 설정…"
 
-#: qml/MainWindow.qml:206
+#: qml/MainWindow.qml:207
 #, kde-format
 msgid "Quit"
 msgstr "끝내기"
@@ -569,44 +569,44 @@ msgstr "표시 여부 설정"
 msgid "Reselect Scanner"
 msgstr "스캐너 다시 선택"
 
-#: qml/SettingsWindow.qml:19
+#: qml/SettingsWindow.qml:20
 #, kde-format
 msgid "Configure"
 msgstr "설정"
 
-#: qml/SettingsWindow.qml:37
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgid "Devices to show:"
 msgstr "표시할 장치:"
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:39
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "스캐너만"
 
-#: qml/SettingsWindow.qml:45
+#: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "스캐너, 카메라, 가상 장치"
 
-#: qml/SettingsWindow.qml:52
+#: qml/SettingsWindow.qml:53
 #, kde-format
 msgid "Default file format:"
 msgstr "기본 파일 형식:"
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:68
 #, kde-format
 msgid "Default save location:"
 msgstr "기본 저장 위치:"
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Close"
 msgstr "닫기"
 
-#: qml/ShareWindow.qml:41
+#: qml/ShareWindow.qml:42
 #, kde-format
 msgid "Share as:"
 msgstr "다음으로 공유:"

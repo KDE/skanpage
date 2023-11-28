@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 00:44+0000\n"
+"POT-Creation-Date: 2023-11-28 00:42+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -48,7 +48,7 @@ msgstr "Tidak ada yang dicetak."
 msgid "Previous printing operation still in progress."
 msgstr "Operasi pencetakan sebelumnya masih dalam progres."
 
-#: DocumentPrinter.cpp:73
+#: DocumentPrinter.cpp:69
 #, kde-format
 msgid "Document sent to printer."
 msgstr "Dokumen dikirimkan ke printer."
@@ -100,34 +100,34 @@ msgstr "Gagal menyimpan dokumen sebagai citra."
 msgid "Failed to save image"
 msgstr "Gagal menyimpan citra"
 
-#: main.cpp:60
+#: main.cpp:56
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:62
+#: main.cpp:58
 #, fuzzy, kde-format
 #| msgid "Page-scanning application by KDE based on libksane."
 msgid "Multi-page scanning application by KDE."
 msgstr "Aplikasi pemindaian halaman oleh KDE berdasarkan pada libksane."
 
-#: main.cpp:64
+#: main.cpp:60
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:63 main.cpp:64
 #, kde-format
 msgid "developer"
 msgstr "pengembang"
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "Nama peranti pemindai Sane. Gunakan 'uji' untuk menguji peranti."
 
-#: main.cpp:79
+#: main.cpp:75
 #, kde-format
 msgid "device"
 msgstr "peranti"
@@ -326,7 +326,7 @@ msgstr "Zoom Paskan"
 msgid "Zoom 100%"
 msgstr "Zoom 100%\""
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:102
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -371,7 +371,7 @@ msgstr ""
 msgid "Save"
 msgstr "Simpan Semua"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:135
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "Batal"
@@ -406,64 +406,64 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "Pemindaian sedang dalam progres."
 
-#: qml/MainWindow.qml:22
+#: qml/MainWindow.qml:23
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 - Skanpage"
 
-#: qml/MainWindow.qml:84
+#: qml/MainWindow.qml:85
 #, kde-format
 msgid "Discard All"
 msgstr "Buang Semua"
 
-#: qml/MainWindow.qml:93
+#: qml/MainWindow.qml:94
 #, kde-format
 msgid "Save All"
 msgstr "Simpan Semua"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:122
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Scan"
 msgstr "Pindai"
 
-#: qml/MainWindow.qml:144
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Tampilkan Opsi Pemindai"
 
-#: qml/MainWindow.qml:154 qml/ShareWindow.qml:19
+#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Bagikan"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Print"
 msgstr "Cetak"
 
-#: qml/MainWindow.qml:183 qml/MainWindow.qml:380
+#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
 #, kde-format
 msgid "About Skanpage"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:191
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:198
+#: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:206
+#: qml/MainWindow.qml:207
 #, kde-format
 msgid "Quit"
 msgstr "Berhenti"
@@ -578,46 +578,46 @@ msgstr "Konfigurasi Ketampakan"
 msgid "Reselect Scanner"
 msgstr "Pemilihan Ulang Pemindai"
 
-#: qml/SettingsWindow.qml:19
+#: qml/SettingsWindow.qml:20
 #, fuzzy, kde-format
 #| msgid "Configure Visibility"
 msgid "Configure"
 msgstr "Konfigurasi Ketampakan"
 
-#: qml/SettingsWindow.qml:37
+#: qml/SettingsWindow.qml:38
 #, kde-format
 msgid "Devices to show:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:39
 #, fuzzy, kde-format
 #| msgid "Show Scanner Options"
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Tampilkan Opsi Pemindai"
 
-#: qml/SettingsWindow.qml:45
+#: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr ""
 
-#: qml/SettingsWindow.qml:52
+#: qml/SettingsWindow.qml:53
 #, kde-format
 msgid "Default file format:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:67
+#: qml/SettingsWindow.qml:68
 #, kde-format
 msgid "Default save location:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:100
+#: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Close"
 msgstr ""
 
-#: qml/ShareWindow.qml:41
+#: qml/ShareWindow.qml:42
 #, kde-format
 msgid "Share as:"
 msgstr "Bagikan sebagai:"
