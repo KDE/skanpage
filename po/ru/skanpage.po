@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the skanpage package.
 #
 # Alexander Yavorsky <kekcuha@gmail.com>, 2022.
-# Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-28 00:42+0000\n"
-"PO-Revision-Date: 2022-10-12 16:29+0300\n"
+"PO-Revision-Date: 2023-11-29 16:44+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Александр Яворский"
+msgstr "Александр Яворский,Олеся Герасименко"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kekcuha@gmail.com"
+msgstr "kekcuha@gmail.com,translation-team@basealt.ru"
 
 #: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
 #, kde-format
@@ -74,7 +74,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "При сохранении произошла ошибка: %1."
 
 #: DocumentSaver.cpp:79
 #, kde-format
@@ -176,22 +176,22 @@ msgstr "Поиск доступных устройств…"
 #: qml/DocumentList.qml:72
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "Выбрать предыдущую страницу"
 
 #: qml/DocumentList.qml:78
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "Выбрать следующую страницу"
 
 #: qml/DocumentList.qml:84
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "Переместить выбранную страницу вверх"
 
 #: qml/DocumentList.qml:93
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "Переместить выбранную страницу вниз"
 
 #: qml/DocumentList.qml:205
 #, kde-kuit-format
@@ -272,10 +272,9 @@ msgid "Reverse Order"
 msgstr "На обратный порядок"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Дополнительные параметры"
+msgstr "Выполнить предварительный просмотр"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -288,27 +287,28 @@ msgstr ""
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Отменить это выделение"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Добавить область выделения"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
 msgstr ""
+"Чтобы выбрать другую область, сделайте щелчок и выполните перетаскивание"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Разделить отсканированное по вертикали"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Разделить отсканированное по горизонтали"
 
 #: qml/DocumentPage.qml:376
 #, kde-format
@@ -429,7 +429,7 @@ msgstr "Сохранить все"
 #: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Предварительный просмотр"
 
 #: qml/MainWindow.qml:123
 #, kde-format
@@ -464,7 +464,7 @@ msgstr "Настроить Skanpage…"
 #: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr ""
+msgstr "Настроить комбинации клавиш…"
 
 #: qml/MainWindow.qml:207
 #, kde-format
@@ -477,8 +477,7 @@ msgid "%1:"
 msgstr "%1:"
 
 #: qml/OptionDelegate.qml:150
-#, fuzzy, kde-format
-#| msgid "%1:"
+#, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
 msgstr "%1:"
@@ -487,25 +486,25 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr ""
+msgstr "Значение по умолчанию"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Brightness: %1"
-msgstr ""
+msgstr "Яркость: %1"
 
 #: qml/OptionDelegate.qml:181
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Contrast: %1"
-msgstr ""
+msgstr "Контрастность: %1"
 
 #: qml/OptionDelegate.qml:194
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Gamma: %1"
-msgstr ""
+msgstr "Гамма: %1"
 
 #: qml/OptionDelegate.qml:224
 #, kde-format
@@ -624,6 +623,5 @@ msgid "Share as:"
 msgstr "Опубликовать как:"
 
 #, fuzzy
-#~| msgid "Skanpage"
 #~ msgid "Skanpage Settings"
 #~ msgstr "Skanpage"
