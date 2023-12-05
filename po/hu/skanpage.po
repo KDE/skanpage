@@ -1,0 +1,613 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the skanpage package.
+#
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <kiszel.kristof@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: skanpage\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-28 00:42+0000\n"
+"PO-Revision-Date: 2023-12-04 20:58+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Mészáros Tamás,Meskó Balázs"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tamasm78@gmx.com,mesko.balazs@fsf.hu"
+
+#: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
+#, kde-format
+msgid "New document"
+msgstr "Új dokumentum"
+
+#: DocumentModel.cpp:72
+#, kde-format
+msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
+msgid "%1 ... %2"
+msgstr "%1 … %2"
+
+#: DocumentPrinter.cpp:33
+#, kde-format
+msgid "Nothing to print."
+msgstr "Nincs mit nyomtatni."
+
+#: DocumentPrinter.cpp:37
+#, kde-format
+msgid "Previous printing operation still in progress."
+msgstr "Az előző nyomtatási művelet még folyamatban van."
+
+#: DocumentPrinter.cpp:69
+#, kde-format
+msgid "Document sent to printer."
+msgstr "A dokumentum elküldve a nyomtatónak."
+
+#: DocumentSaver.cpp:34
+#, kde-format
+msgid "No file path given."
+msgstr "Nincs megadva fájlelérési útvonal."
+
+#: DocumentSaver.cpp:38
+#, kde-format
+msgid "Nothing to save."
+msgstr "Nincs mit menteni."
+
+#: DocumentSaver.cpp:42
+#, kde-format
+msgid "Saving to non-local directories is currently unsupported."
+msgstr "A nem helyi könyvtárakba történő mentés jelenleg nem támogatott."
+
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
+#, kde-format
+msgctxt "%1 is the error message"
+msgid "An error ocurred while saving: %1."
+msgstr "Hiba történt a mentés során: %1."
+
+#: DocumentSaver.cpp:79
+#, kde-format
+msgid "Document saved as PDF."
+msgstr "A dokumentum elmentve PDF-ként formátumban."
+
+#: DocumentSaver.cpp:111
+#, kde-format
+msgid "Document saved with OCR as PDF."
+msgstr "A dokumentum elmentve OCR-rel PDF formátumban."
+
+#: DocumentSaver.cpp:183
+#, kde-format
+msgid "Document saved as image."
+msgstr "A dokumentum elmentve képként."
+
+#: DocumentSaver.cpp:192
+#, kde-format
+msgid "Failed to save document as image."
+msgstr "Nem sikerült képként menteni a dokumentumot."
+
+#: DocumentSaver.cpp:207
+#, kde-format
+msgid "Failed to save image"
+msgstr "A kép mentése sikertelen"
+
+#: main.cpp:56
+#, kde-format
+msgid "Skanpage"
+msgstr "Skanpage"
+
+#: main.cpp:58
+#, kde-format
+msgid "Multi-page scanning application by KDE."
+msgstr "Többoldalas szkennelő alkalmazás a KDE-től."
+
+#: main.cpp:60
+#, kde-format
+msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+
+#: main.cpp:63 main.cpp:64
+#, kde-format
+msgid "developer"
+msgstr "fejlesztő"
+
+#: main.cpp:75
+#, kde-format
+msgid "Sane scanner device name. Use 'test' for test device."
+msgstr "Sane szkennelő eszköz neve. Használja a „test” nevet a teszteszközhöz."
+
+#: main.cpp:75
+#, kde-format
+msgid "device"
+msgstr "eszköz"
+
+#: qml/ContentView.qml:18
+#, kde-format
+msgctxt "Prefix for document name indicating an unsaved document"
+msgid "* %1"
+msgstr "* %1"
+
+#: qml/DeviceSelection.qml:54
+#, kde-format
+msgctxt ""
+"Device vendor with device model, followed by the device name identifier"
+msgid ""
+"%1 %2\n"
+"(%3)"
+msgstr ""
+"%1 %2\n"
+"(%3)"
+
+#: qml/DeviceSelection.qml:69
+#, kde-kuit-format
+msgctxt "@info"
+msgid "No devices found."
+msgstr "Nem található eszköz."
+
+#: qml/DeviceSelection.qml:86
+#, kde-format
+msgid "Open selected device"
+msgstr "A kiválasztott eszköz megnyitása"
+
+#: qml/DeviceSelection.qml:95
+#, kde-format
+msgid "Reload devices list"
+msgstr "Az eszközök listájának újratöltése"
+
+#: qml/DevicesLoading.qml:29
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Searching for available devices."
+msgstr "Elérhető eszközök keresése."
+
+#: qml/DocumentList.qml:72
+#, kde-format
+msgid "Select previous page"
+msgstr "Előző oldal kiválasztása"
+
+#: qml/DocumentList.qml:78
+#, kde-format
+msgid "Select next page"
+msgstr "Következő oldal kiválasztása"
+
+#: qml/DocumentList.qml:84
+#, kde-format
+msgid "Move selected page up"
+msgstr "A kiválasztott oldal felfelé mozgatása"
+
+#: qml/DocumentList.qml:93
+#, kde-format
+msgid "Move selected page down"
+msgstr "A kiválasztott oldal lefelé mozgatása"
+
+#: qml/DocumentList.qml:205
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Processing page..."
+msgstr "Oldal feldolgozása…"
+
+#: qml/DocumentList.qml:218
+#, kde-format
+msgctxt "Page index"
+msgid "Page %1"
+msgstr "%1. oldal"
+
+#: qml/DocumentList.qml:229
+#, kde-format
+msgid "Move Up"
+msgstr "Mozgatás felfelé"
+
+#: qml/DocumentList.qml:239
+#, kde-format
+msgid "Move Down"
+msgstr "Mozgatás lefelé"
+
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:418
+#, kde-format
+msgid "Rotate Left"
+msgstr "Forgatás balra"
+
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:425
+#, kde-format
+msgid "Rotate Right"
+msgstr "Forgatás jobbra"
+
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:432
+#, kde-format
+msgid "Flip"
+msgstr "Átfordítás"
+
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:439
+#, kde-format
+msgid "Save Page"
+msgstr "Oldal mentése"
+
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:446
+#, kde-format
+msgid "Delete Page"
+msgstr "Oldal törlése"
+
+#: qml/DocumentList.qml:292
+#, kde-format
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] "%1 oldal"
+msgstr[1] "%1 oldal"
+
+#: qml/DocumentList.qml:301
+#, kde-format
+msgid "Reorder Pages"
+msgstr "Oldalak átrendezése"
+
+#: qml/DocumentList.qml:306
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 24 → 1234"
+msgstr "13 24 → 1234"
+
+#: qml/DocumentList.qml:313
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 42 → 1234"
+msgstr "13 42 → 1234"
+
+#: qml/DocumentList.qml:320
+#, kde-format
+msgid "Reverse Order"
+msgstr "Sorrend megfordítása"
+
+#: qml/DocumentPage.qml:56
+#, kde-format
+msgid "Show Preview"
+msgstr "Előnézet megjelenítése"
+
+#: qml/DocumentPage.qml:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+msgstr ""
+"Ebben a dokumentumban nincsenek képek.<nl/><nl/>Kezdje meg a beolvasást!"
+
+#: qml/DocumentPage.qml:258
+#, kde-format
+msgid "Discard this selection"
+msgstr "Kijelölés elvetése"
+
+#: qml/DocumentPage.qml:278
+#, kde-format
+msgid "Add Selection Area"
+msgstr "Kijelölési terület hozzáadása"
+
+#: qml/DocumentPage.qml:283
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr "Kattintson és húzza egy másik terület kiválasztásához"
+
+#: qml/DocumentPage.qml:293
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr "Függőlegesen megosztott beolvasás"
+
+#: qml/DocumentPage.qml:304
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr "Vízszintesen megosztott beolvasás"
+
+#: qml/DocumentPage.qml:376
+#, kde-format
+msgid "Zoom In"
+msgstr "Nagyítás"
+
+#: qml/DocumentPage.qml:385
+#, kde-format
+msgid "Zoom Out"
+msgstr "Kicsinyítés"
+
+#: qml/DocumentPage.qml:394
+#, kde-format
+msgid "Zoom Fit"
+msgstr "Illeszkedő nagyítás"
+
+#: qml/DocumentPage.qml:410
+#, kde-format
+msgid "Zoom 100%"
+msgstr "100%-os nagyítás"
+
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
+#, kde-format
+msgid "Export PDF"
+msgstr "PDF exportálása"
+
+#: qml/ExportWindow.qml:44
+#, kde-format
+msgid "Title:"
+msgstr "Cím:"
+
+#: qml/ExportWindow.qml:60
+#, kde-format
+msgid "File:"
+msgstr "Fájl:"
+
+#: qml/ExportWindow.qml:85
+#, kde-format
+msgid "Enable optical character recognition (OCR)"
+msgstr "Optikai karakterfelismerés (OCR) engedélyezése"
+
+#: qml/ExportWindow.qml:105
+#, kde-format
+msgid "Languages:"
+msgstr "Nyelvek:"
+
+#: qml/ExportWindow.qml:135
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: qml/ExportWindow.qml:156
+#, kde-format
+msgid ""
+"If your required language is not listed, please install Tesseract's language "
+"file with your package manager."
+msgstr ""
+"Ha a kívánt nyelv nem szerepel a listában, akkor telepítse a Tesseract "
+"nyelvi fájlt a csomagkezelőjével."
+
+#: qml/ExportWindow.qml:182
+#, kde-format
+msgid "Save"
+msgstr "Mentés"
+
+#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
+#, kde-format
+msgid "Cancel"
+msgstr "Mégse"
+
+#: qml/GlobalMenu.qml:26
+#, kde-format
+msgctxt "menu category"
+msgid "File"
+msgstr "Fájl"
+
+#: qml/GlobalMenu.qml:68
+#, kde-format
+msgctxt "menu category"
+msgid "Scan"
+msgstr "szkennelés"
+
+#: qml/GlobalMenu.qml:124
+#, kde-format
+msgctxt "menu category"
+msgid "Help"
+msgstr "Súgó"
+
+#: qml/InProgressPage.qml:26
+#, kde-kuit-format
+msgctxt "Countdown string with time given in seconds"
+msgid "Next scan starts in<nl/>%1 s"
+msgstr "A következő keresés<nl/>%1 mp múlva kezdődik"
+
+#: qml/InProgressPage.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "Scan in progress."
+msgstr "A szkennelés folyamatban."
+
+#: qml/MainWindow.qml:23
+#, kde-format
+msgctxt "document title: app title"
+msgid "%1 ― Skanpage"
+msgstr "%1 ― Skanpage"
+
+#: qml/MainWindow.qml:85
+#, kde-format
+msgid "Discard All"
+msgstr "Összes elvetése"
+
+#: qml/MainWindow.qml:94
+#, kde-format
+msgid "Save All"
+msgstr "Összes mentése"
+
+#: qml/MainWindow.qml:111
+#, kde-format
+msgid "Preview"
+msgstr "Előnézet"
+
+#: qml/MainWindow.qml:123
+#, kde-format
+msgid "Scan"
+msgstr "Szkennelés"
+
+#: qml/MainWindow.qml:145
+#, kde-format
+msgid "Show Scanner Options"
+msgstr "Szkennerbeállítások megjelenítése"
+
+#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
+#, kde-format
+msgid "Share"
+msgstr "Megosztás"
+
+#: qml/MainWindow.qml:163
+#, kde-format
+msgid "Print"
+msgstr "Nyomtatás"
+
+#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
+#, kde-format
+msgid "About Skanpage"
+msgstr "A Skanpage névjegye"
+
+#: qml/MainWindow.qml:191
+#, kde-format
+msgid "Configure Skanpage…"
+msgstr "A Skanpage beállítása…"
+
+#: qml/MainWindow.qml:199
+#, kde-format
+msgid "Configure Keyboard Shortcuts…"
+msgstr "Gyorsbillentyűk beállítása…"
+
+#: qml/MainWindow.qml:207
+#, kde-format
+msgid "Quit"
+msgstr "Kilépés"
+
+#: qml/OptionDelegate.qml:55
+#, kde-format
+msgid "%1:"
+msgstr "%1:"
+
+#: qml/OptionDelegate.qml:150
+#, kde-format
+msgctxt "Add ':' to make a header text"
+msgid "%1:"
+msgstr "%1:"
+
+#: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "@option:check a noun, as in 'the default setting'"
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: qml/OptionDelegate.qml:168
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Brightness: %1"
+msgstr "Fényerő: %1"
+
+#: qml/OptionDelegate.qml:181
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Contrast: %1"
+msgstr "Kontraszt: %1"
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Gamma: %1"
+msgstr "Gamma: %1"
+
+#: qml/OptionDelegate.qml:224
+#, kde-format
+msgctxt "Adding unit suffix"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionDelegate.qml:249
+#, kde-format
+msgctxt "Unit suffix for bit"
+msgid "bit"
+msgstr "bit"
+
+#: qml/OptionDelegate.qml:252
+#, kde-format
+msgctxt "Unit suffix for DPI"
+msgid "DPI"
+msgstr "DPI"
+
+#: qml/OptionDelegate.qml:255
+#, kde-format
+msgctxt "Unit suffix for microsecond"
+msgid "µs"
+msgstr "µs"
+
+#: qml/OptionDelegate.qml:258
+#, kde-format
+msgctxt "Unit suffix for second"
+msgid "s"
+msgstr "s"
+
+#: qml/OptionDelegate.qml:261
+#, kde-format
+msgctxt "Unit suffix for millimeter"
+msgid "mm"
+msgstr "mm"
+
+#: qml/OptionDelegate.qml:264
+#, kde-format
+msgctxt "Unit suffix for percent"
+msgid "%"
+msgstr "%"
+
+#: qml/OptionDelegate.qml:267
+#, kde-format
+msgctxt "Unit suffix for pixel"
+msgid "px"
+msgstr "px"
+
+#: qml/OptionsPanel.qml:30
+#, kde-format
+msgid "Select options for quick access:"
+msgstr "Válassza ki a gyors hozzáféréshez szükséges beállításokat:"
+
+#: qml/OptionsPanel.qml:68
+#, kde-format
+msgctxt "scanner device vendor and model"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: qml/OptionsPanel.qml:81
+#, kde-format
+msgid "Show More"
+msgstr "Több megjelenítése"
+
+#: qml/OptionsPanel.qml:91
+#, kde-format
+msgid "Configure Visibility"
+msgstr "Láthatóság beállítása"
+
+#: qml/OptionsPanel.qml:106
+#, kde-format
+msgid "Reselect Scanner"
+msgstr "Szkenner újraválasztása"
+
+#: qml/SettingsWindow.qml:20
+#, kde-format
+msgid "Configure"
+msgstr "Beállítás"
+
+#: qml/SettingsWindow.qml:38
+#, kde-format
+msgid "Devices to show:"
+msgstr "Megjelenítendő eszközök:"
+
+#: qml/SettingsWindow.qml:39
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners only"
+msgstr "Csak szkennerek"
+
+#: qml/SettingsWindow.qml:46
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners, cameras, and virtual devices"
+msgstr "Szkennerek, kamerák és virtuális eszközök"
+
+#: qml/SettingsWindow.qml:53
+#, kde-format
+msgid "Default file format:"
+msgstr "Alapértelmezett fájlformátum:"
+
+#: qml/SettingsWindow.qml:68
+#, kde-format
+msgid "Default save location:"
+msgstr "Alapértelmezett mentési hely:"
+
+#: qml/SettingsWindow.qml:101
+#, kde-format
+msgid "Close"
+msgstr "Bezárás"
+
+#: qml/ShareWindow.qml:42
+#, kde-format
+msgid "Share as:"
+msgstr "Megosztás mint:"
