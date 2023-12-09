@@ -28,6 +28,7 @@ class DocumentModel : public QAbstractListModel
     Q_PROPERTY(QUrl activePageSource READ activePageSource NOTIFY activePageChanged)
     Q_PROPERTY(int activePageRotation READ activePageRotation NOTIFY activePageChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
+    Q_PROPERTY(bool isReady READ isReady NOTIFY isReadyChanged)
     
 public:
     enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1,
@@ -64,6 +65,7 @@ public:
     int activePageRotation() const;
     QUrl activePageSource() const;
     bool changed() const;
+    bool isReady() const;
 
     void setActivePageIndex(int);
 
@@ -98,6 +100,7 @@ Q_SIGNALS:
     void changedChanged();
     void activePageChanged();
     void countChanged();
+    void isReadyChanged(const bool isReady);
     void newPageAdded();
     void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type = SkanpageUtils::EntireDocument, const QString &title = QString());
     void saveNewPageTemporary(const int pageID, const QImage &image);

@@ -93,7 +93,7 @@ ApplicationWindow {
         icon.name: "document-save"
         text: i18n("Save All")
         shortcutsName: "Save"
-        enabled: skanpage.documentModel.count !== 0
+        enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
         onTriggered: saveFileDialog.open()
     }
     
@@ -101,7 +101,7 @@ ApplicationWindow {
         id: exportDocAction
         icon.name: "document-save"
         text: i18n("Export PDF")
-        enabled: skanpage.documentModel.count !== 0
+        enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
         onTriggered: exportWindow.show()
     }
 
@@ -153,7 +153,7 @@ ApplicationWindow {
         id: shareAction
         icon.name: "document-share"
         text: i18n("Share")
-        enabled: skanpage.documentModel.count !== 0
+        enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
         onTriggered: shareWindow.show()
     }
 
@@ -162,7 +162,7 @@ ApplicationWindow {
         icon.name: "document-print"
         text: i18n("Print")
         shortcutsName: "Print"
-        enabled: skanpage.documentModel.count !== 0
+        enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
         onTriggered: skanpage.print()
     }
 

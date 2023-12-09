@@ -11,6 +11,7 @@
 #include <QImage>
 #include <QStandardPaths>
 #include <QThread>
+#include <QSet>
 
 #include <KLocalizedString>
 
@@ -46,6 +47,7 @@ public:
     int m_activePageIndex = -1;
     int m_idCounter = 0;
     const QString m_defaultFileName;
+    QSet<int> m_nonSavedPages;
 };
 
 DocumentModelPrivate::DocumentModelPrivate()
@@ -85,6 +87,11 @@ QString DocumentModel::fileName() const
 bool DocumentModel::changed() const
 {
     return d->m_changed;
+}
+
+bool DocumentModel::isReady() const
+{
+    return d->m_nonSavedPages.isEmpty();
 }
 
 int DocumentModel::activePageIndex() const
@@ -146,7 +153,13 @@ void DocumentModel::addImage(const QImage &image)
 {
     const double aspectRatio = static_cast<double>(image.height())/image.width();
     beginInsertRows(QModelIndex(), d->m_pages.count(), d->m_pages.count());
-    const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), d->m_idCounter++, false};
+    const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), d->m_idCounter, false};
+    const int oldSize = d->m_nonSavedPages.size();
+    d->m_nonSavedPages.insert(d->m_idCounter);
+    if (oldSize == 0 && d->m_nonSavedPages.size() > 0) {
+        Q_EMIT isReadyChanged(false);
+    }
+    d->m_idCounter++;
     qCDebug(SKANPAGE_LOG) << "Inserting new page into model:" << newPage;
     d->m_details.append(newPage);
     d->m_pages.append({nullptr, QPageSize(), 0});
@@ -176,6 +189,10 @@ void DocumentModel::updatePageInModel(const int pageID, const SkanpageUtils::Pag
     d->m_pages[pageIndex].temporaryFile = page.temporaryFile;
     d->m_pages[pageIndex].pageSize = page.pageSize;
     d->m_details[pageIndex].isSaved = true;
+    d->m_nonSavedPages.remove(pageID);
+    if (d->m_nonSavedPages.isEmpty()) {
+        Q_EMIT isReadyChanged(true);
+    }
     Q_EMIT dataChanged(index(pageIndex, 0), index(pageIndex, 0), {ImageUrlRole, IsSavedRole});
 
     if (!d->m_changed) {
