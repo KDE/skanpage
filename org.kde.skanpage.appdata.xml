@@ -77,6 +77,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="uk">Програма для сканування послідовностей сторінок</summary>
   <summary xml:lang="x-test">xxMulti-page document scanning applicationxx</summary>
   <summary xml:lang="zh-CN">多页文档扫描应用</summary>
+  <summary xml:lang="zh-TW">多頁文件掃描應用程式</summary>
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
     <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لمسح المستندات متعددة الصفحات ضوئياً. يمكنه أيضا مسح وحفظ الصور والمستندات ذات الصفحة الواحدة.</p>
@@ -108,6 +109,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="uk">Skanpage — проста програма для сканування, яку розроблено для сканування послідовностей багатосторінкових документів. Вона також може зберігати односторінкові документи та зображення.</p>
     <p xml:lang="x-test">xxSkanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.xx</p>
     <p xml:lang="zh-CN">Skanpage 是一款简易扫描应用程序，针对多页扫描任务进行优化。它也可以扫描并保存单页文档和图像。</p>
+    <p xml:lang="zh-TW">Skanpage 是一個簡潔的影像掃描應用程式，設計來進行多頁文件的掃描。它也可以掃描並儲存單頁的文件或影像。</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
     <p xml:lang="az">İmkanları:</p>
@@ -247,6 +249,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="uk">Переупорядковування, обертання та вилучення сканованих сторінок</li>
       <li xml:lang="x-test">xxReordering, rotation, and deletion of scanned pagesxx</li>
       <li xml:lang="zh-CN">对已扫描的页面进行重新排序、旋转和删除</li>
+      <li xml:lang="zh-TW">已掃描頁面的重新排序、旋轉與刪除</li>
       <li>Saving to multi-page PDF documents and image files</li>
       <li xml:lang="ar">الحفظ في مستندات بي دي اف متعددة الصفحات وملفات صور</li>
       <li xml:lang="az">Çoxsəhifəli PDF sənədlərində və şəkil fayllarında saxlamaq</li>
