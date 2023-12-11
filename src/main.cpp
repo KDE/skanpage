@@ -15,7 +15,7 @@
 #include <KCrash>
 #include <KLocalizedContext>
 #include <KLocalizedString>
-#include <Option>
+#include <KSaneCore/Option>
 
 #include "DevicesModel.h"
 #include "DocumentModel.h"

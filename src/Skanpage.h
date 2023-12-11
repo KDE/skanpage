@@ -14,8 +14,8 @@
 
 #include <KActionCollection>
 
-#include <Interface>
-#include <DeviceInformation>
+#include <KSaneCore/Interface>
+#include <KSaneCore/DeviceInformation>
 
 #include <memory>
 

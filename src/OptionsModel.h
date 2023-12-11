@@ -13,7 +13,7 @@
 
 #include <memory>
 
-#include <Option>
+#include <KSaneCore/Option>
 
 class OptionsModelPrivate;
 

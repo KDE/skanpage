@@ -14,7 +14,7 @@
 
 #include <memory>
 
-#include <Interface>
+#include <KSaneCore/Interface>
 
 class DevicesModelPrivate;
 
