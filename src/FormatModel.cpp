@@ -104,3 +104,5 @@ QString FormatModel::pdfFormatFilter() const
 {
     return d->m_formatFilter.at(0).toString();
 }
+
+#include "moc_FormatModel.cpp"

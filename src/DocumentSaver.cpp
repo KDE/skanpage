@@ -210,3 +210,5 @@ void DocumentSaver::saveNewPageTemporary(const int pageID, const QImage &image)
     tempImageFile->close();
     Q_EMIT pageTemporarilySaved(pageID, {std::shared_ptr<QTemporaryFile>(tempImageFile), pageSize, dpi});
 }
+
+#include "moc_DocumentSaver.cpp"

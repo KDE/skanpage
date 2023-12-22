@@ -419,3 +419,5 @@ SkanpageUtils::DocumentPages DocumentModel::selectPages(QList<int> pageNumbers) 
     }
     return document;
 }
+
+#include "moc_DocumentModel.cpp"

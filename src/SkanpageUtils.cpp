@@ -22,3 +22,5 @@ QDebug SkanpageUtils::operator<<(QDebug d, const PageProperties& pageProperties)
     d << "Temporary file: " << pageProperties.temporaryFile.get() << "\n";
     return d;
 }
+
+#include "moc_SkanpageUtils.cpp"

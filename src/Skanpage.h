@@ -22,12 +22,11 @@
 #include "SkanpageUtils.h"
 #include "skanpage_config.h"
 #include "skanpage_state.h"
-
-class DocumentModel;
-class DevicesModel;
-class FormatModel;
-class FilteredOptionsModel;
-class OCRLanguageModel;
+#include "DocumentModel.h"
+#include "OCRLanguageModel.h"
+#include "FilteredOptionsModel.h"
+#include "FormatModel.h"
+#include "DevicesModel.h"
 class SkanpagePrivate;
 
 class Skanpage : public QObject

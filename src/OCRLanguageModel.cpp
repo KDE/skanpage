@@ -93,3 +93,5 @@ std::string OCRLanguageModel::getLanguagesString() const
     }
     return languageCodes;
 }
+
+#include "moc_OCRLanguageModel.cpp"

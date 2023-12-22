@@ -37,3 +37,5 @@ void FilteredOptionsModel::showAllOptions(bool show)
         invalidateFilter();
     }
 }
+
+#include "moc_FilteredOptionsModel.cpp"

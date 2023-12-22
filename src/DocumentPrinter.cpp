@@ -68,3 +68,5 @@ void DocumentPrinter::print(const SkanpageUtils::DocumentPages &document)
 
     Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document sent to printer."));
 }
+
+#include "moc_DocumentPrinter.cpp"

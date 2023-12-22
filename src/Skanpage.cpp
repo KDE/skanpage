@@ -15,7 +15,6 @@
 #include <KShortcutsDialog>
 
 #include "DevicesModel.h"
-#include "DocumentModel.h"
 #include "OptionsModel.h"
 #include "FormatModel.h"
 #include "FilteredOptionsModel.h"
@@ -644,3 +643,5 @@ void Skanpage::checkFinish()
         Q_EMIT applicationStateChanged(d->m_state);
     }
 }
+
+#include "moc_Skanpage.cpp"

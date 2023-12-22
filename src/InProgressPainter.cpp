@@ -53,3 +53,5 @@ void InProgressPainter::updateImage(int progress)
     m_progress = progress;
     update();
 }
+
+#include "moc_InProgressPainter.cpp"

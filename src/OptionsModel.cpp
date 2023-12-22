@@ -170,3 +170,5 @@ void OptionsModel::clearOptions()
     endResetModel();
     Q_EMIT rowCountChanged();
 }
+
+#include "moc_OptionsModel.cpp"

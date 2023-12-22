@@ -98,3 +98,5 @@ QDebug operator<<(QDebug d, KSaneCore::DeviceInformation *deviceInfo)
     d << "Device type: " << deviceInfo->type() << "\n";
     return d;
 }
+
+#include "moc_DevicesModel.cpp"
