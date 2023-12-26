@@ -33,6 +33,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="ko">Skanpage</name>
   <name xml:lang="nl">Skanpage</name>
   <name xml:lang="nn">Skanpage</name>
+  <name xml:lang="pa">ਸਕੈਨ-ਪੇਜ਼</name>
   <name xml:lang="pl">Skanpage</name>
   <name xml:lang="pt">Skanpage</name>
   <name xml:lang="pt-BR">Skanpage</name>
@@ -67,6 +68,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპლიკაცია</summary>
   <summary xml:lang="ko">여러 쪽 문서 스캔 앱</summary>
   <summary xml:lang="nl">Scanprogramma voor document met meerdere pagina's</summary>
+  <summary xml:lang="pa">ਕਈ ਸਫ਼ਿਆਂ ਦੇ ਡੌਕੂਮੈਂਟ ਨੂੰ ਸਕੈਨ ਕਰਨ ਵਾਲੀ ਐਪਲੀਕੇਸ਼ਨ</summary>
   <summary xml:lang="pl">Program do wielostronicowego skanowania</summary>
   <summary xml:lang="pt">Aplicação de digitalização de documentos multi-páginas</summary>
   <summary xml:lang="pt-BR">Aplicativo de digitalização de documentos de múltiplas páginas</summary>
@@ -99,6 +101,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ka">Skanpage არის მარტივი სკანირების აპლიკაცია, რომელიც შექმნილია როგორც მრავალგვერდიანი, ისე ერთგვერდიანი დოკუმენტებისა და სურათების სკანირებისთვის და შესანახად.</p>
     <p xml:lang="ko">Skanpage는 여러 쪽 문서 스캔에 최적화된 간단한 스캔 앱입니다. 단일 쪽 문서와 그림도 스캔 및 저장이 가능합니다.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma geoptimaliseerd voor scannen van documenten met meerdere pagina's. Het kan ook documenten en afbeeldingen met een enkele pagina scannen en opslaan.</p>
+    <p xml:lang="pa">ਸਕੈਨਪੇਜ਼ (Skanpage) ਕਈ ਸਫ਼ਿਆਂ ਦੇ ਡੌਕੂਮੈੰਟ ਨੂੰ ਸਕੈਨ ਕਰਨ ਵਾਲੀ ਸਰਲ ਬਣਾਈ ਸਕੈਨਿੰਗ ਐਪਲੀਕੇਸ਼ਨ ਹੈ। ਇਹ ਇੱਕ ਸਫ਼ੇ ਵਾਲੇ ਡੌਕੂਮੈਂਟ ਅਤੇ ਚਿੱਤਰਾਂ ਨੂੰ ਵੀ ਸਕੈਨ ਕਰ ਅਤੇ ਸੰਭਾਲ ਸਕਦੀ ਹੈ।</p>
     <p xml:lang="pl">Skanpage jest prostym programem opracowany do wielostronicowego skanowania dokumentów. Może także skanować i zapisywać jednostronnicowe dokumenty i obrazy.</p>
     <p xml:lang="pt">O Skanpage é uma aplicação de digitalização simples que está desenhada para a digitalização de documentos com várias páginas. Também consegue digitalizar e gravar documentos e imagens com páginas individuais.</p>
     <p xml:lang="pt-BR">Skanpage é um aplicativo simples de digitalização otimizado para digitalizar documentos de múltiplas páginas. Ele também pode digitalizar e salvar documentos de única página e imagens.</p>
@@ -134,6 +137,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ka">თვისებები:</p>
     <p xml:lang="ko">기능:</p>
     <p xml:lang="nl">Mogelijkheden:</p>
+    <p xml:lang="pa">ਫੀਚਰ:</p>
     <p xml:lang="pl">Możliwości:</p>
     <p xml:lang="pt">Funcionalidades:</p>
     <p xml:lang="pt-BR">Funcionalidades:</p>
@@ -170,6 +174,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ka">Flatbed და ADF სკანერებიდან სკანრება</li>
       <li xml:lang="ko">평판 및 ADF 스캐너에서 스캔</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
+      <li xml:lang="pa">ਫਲੈਟ-ਬੈਡ ਅਤੇ ADF ਸਕੈਨਰ ਲਈ ਸਕੈਨਿੰਗ</li>
       <li xml:lang="pl">Skanowanie na skanerach płaskich oraz ADF</li>
       <li xml:lang="pt">Digitalização de 'scanners' planos e ADF</li>
       <li xml:lang="pt-BR">Digitalização a partir de scanners de mesa e com alimentador automático</li>
@@ -206,6 +211,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ka">სკანერის პარამეტრების მორგება</li>
       <li xml:lang="ko">스캔 장치 설정</li>
       <li xml:lang="nl">Te configureren opties voor scanapparaat</li>
+      <li xml:lang="pa">ਸਕੈਨ ਕਰਨ ਵਾਲੇ ਡਿਵਾਈਸ ਲਈ ਸੰਰਚਨਾ ਕਰਨ ਯੋਗ ਚੋਣਾਂ</li>
       <li xml:lang="pl">Możliwość zmiany ustawień urządzenia skanującego</li>
       <li xml:lang="pt">Opções configuráveis do dispositivo de digitalização</li>
       <li xml:lang="pt-BR">Opções configuráveis para o dispositivo de digitalização</li>
@@ -239,6 +245,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ka">სკანირებული გვერდების გადალაგება, მობრუნება და წაშლა</li>
       <li xml:lang="ko">스캔한 페이지 순서 조정, 회전, 삭제</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
+      <li xml:lang="pa">ਸਕੈਨ ਕੀਤੇ ਸਫ਼ਿਆਂ ਦੀ ਲੜੀ ਬਦਲਣੀ, ਘੁੰਮਾਉਣ ਅਤੇ ਹਟਾਉਣਾ</li>
       <li xml:lang="pl">Zmiana kolejności, obrót i usuwanie zeskanowanych stron</li>
       <li xml:lang="pt">Reordenação, rotação e remoção das páginas digitalizadas</li>
       <li xml:lang="pt-BR">Reordenar, rotação e exclusão de páginas digitalizadas</li>
@@ -274,6 +281,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ka">მრავალგვერდიან PDF დოკუმენტებში და გამოსახულებებში შენახვა</li>
       <li xml:lang="ko">여러 쪽 PDF 문서 및 그림 파일로 저장</li>
       <li xml:lang="nl">Opslaan in multi-pagina PDF-documenten en afbeeldingsbestanden</li>
+      <li xml:lang="pa">ਕਈ ਸਫ਼ਿਆਂ ਦੇ ਡੌਕੂਮੈੰਟ ਅਤੇ ਚਿੱਤਰ ਫਾਇਲਾਂ ਨੂੰ ਸੰਭਾਲਣਾ</li>
       <li xml:lang="pl">Zapisywanie wielostronicowych dokumentów PDF i plików obrazów</li>
       <li xml:lang="pt">Gravação multi-páginas em documentos PDF e ficheiros de imagem</li>
       <li xml:lang="pt-BR">Salvar em documentos PDF de várias páginas e arquivos de imagem</li>
@@ -313,6 +321,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ka">Skanpage-ის მთავარი ფანჯარა</caption>
       <caption xml:lang="ko">Skanpage 주 창</caption>
       <caption xml:lang="nl">Hoofdvenster van Skanpage</caption>
+      <caption xml:lang="pa">ਸਕੈਨ-ਪੇਜ਼ ਮੁੱਖ ਵਿੰਡੋ</caption>
       <caption xml:lang="pl">Główne okno Skanpage</caption>
       <caption xml:lang="pt">Janela principal do Skanpage</caption>
       <caption xml:lang="pt-BR">Janela principal do Skanpage</caption>
