@@ -2,15 +2,22 @@
     "id": "org.kde.skanpage",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-22.08",
+    "runtime-version": "6.6-kf6preview",
     "sdk": "org.kde.Sdk",
     "command": "skanpage",
-    "tags": ["nightly"],
+    "tags": [
+        "nightly"
+    ],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=all",
-                    "--share=network", "--system-talk-name=org.freedesktop.Avahi" ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=all",
+        "--share=network",
+        "--system-talk-name=org.freedesktop.Avahi"
+    ],
     "separate-locales": false,
-
     "modules": [
         {
             "name": "ksane-dependencies",
@@ -104,12 +111,22 @@
                 {
                     "name": "libksanecore",
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/ksanecore" } ]
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://invent.kde.org/libraries/ksanecore"
+                        }
+                    ]
                 },
                 {
                     "name": "libksane",
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/libksane" } ]
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://invent.kde.org/graphics/libksane"
+                        }
+                    ]
                 }
             ]
         },
@@ -218,8 +235,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "3cfba775498e031f6963669ee0e4426d4fddd48a244b9583620de4d312ba92ca",
-                    "url": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-0.2.0.tar.xz",
+                    "sha256": "330ebf3653883eeebde54385d783c51c2d30ff77d41b294ece79af7e9c21c6f8",
+                    "url": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-0.3.0.tar.xz",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 229033,
@@ -233,7 +250,12 @@
             "name": "skanpage",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "dir", "path": "." } ]
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
         }
     ]
 }
