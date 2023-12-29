@@ -49,6 +49,8 @@ ColumnLayout {
 
             spacing: Kirigami.Units.smallSpacing
 
+            clip: true
+
             Connections {
                 target: skanpage.documentModel
                 function onActivePageChanged() {

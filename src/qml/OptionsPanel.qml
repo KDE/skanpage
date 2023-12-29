@@ -43,6 +43,8 @@ ColumnLayout {
             model: skanpage.optionsModel
 
             enabled: skanpage.applicationState === Skanpage.ReadyForScan
+
+            clip: true
             
             delegate: OptionDelegate {
                 modelItem: model
