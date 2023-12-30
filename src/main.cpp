@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     qRegisterMetaType<SkanpageUtils::DocumentPages>();
     qRegisterMetaType<QImage>();
 
-    KLocalizedString::setApplicationDomain("skanpage");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("skanpage"));
 
     KAboutData aboutData(QLatin1String("skanpage"),
                          i18n("Skanpage"),
