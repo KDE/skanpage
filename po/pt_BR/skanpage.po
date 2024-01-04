@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 00:42+0000\n"
+"POT-Creation-Date: 2024-01-04 01:37+0000\n"
 "PO-Revision-Date: 2023-11-14 12:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -171,98 +171,98 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Procurando por dispositivos disponíveis."
 
-#: qml/DocumentList.qml:72
+#: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
 msgstr "Selecionar página anterior"
 
-#: qml/DocumentList.qml:78
+#: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
 msgstr "Selecionar próxima página"
 
-#: qml/DocumentList.qml:84
+#: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
 msgstr "Mover página selecionada para cima"
 
-#: qml/DocumentList.qml:93
+#: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
 msgstr "Mover página selecionada para baixo"
 
-#: qml/DocumentList.qml:205
+#: qml/DocumentList.qml:207
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Processando página..."
 
-#: qml/DocumentList.qml:218
+#: qml/DocumentList.qml:220
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Página %1"
 
-#: qml/DocumentList.qml:229
+#: qml/DocumentList.qml:231
 #, kde-format
 msgid "Move Up"
 msgstr "Mover para cima"
 
-#: qml/DocumentList.qml:239
+#: qml/DocumentList.qml:241
 #, kde-format
 msgid "Move Down"
 msgstr "Mover para baixo"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:418
+#: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
 #, kde-format
 msgid "Rotate Left"
 msgstr "Girar à esquerda"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:425
+#: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
 #, kde-format
 msgid "Rotate Right"
 msgstr "Girar à direita"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:432
+#: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
 msgstr "Inverter"
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:439
+#: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
 #, kde-format
 msgid "Save Page"
 msgstr "Salvar página"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:446
+#: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
 #, kde-format
 msgid "Delete Page"
 msgstr "Excluir página"
 
-#: qml/DocumentList.qml:292
+#: qml/DocumentList.qml:294
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 página"
 msgstr[1] "%1 páginas"
 
-#: qml/DocumentList.qml:301
+#: qml/DocumentList.qml:303
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Reordenar páginas"
 
-#: qml/DocumentList.qml:306
+#: qml/DocumentList.qml:308
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:313
+#: qml/DocumentList.qml:315
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:320
+#: qml/DocumentList.qml:322
 #, kde-format
 msgid "Reverse Order"
 msgstr "Ordem inversa"
@@ -552,23 +552,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "Selecionar opções para acesso rápido:"
 
-#: qml/OptionsPanel.qml:68
+#: qml/OptionsPanel.qml:70
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:81
+#: qml/OptionsPanel.qml:83
 #, kde-format
 msgid "Show More"
 msgstr "Mostrar mais"
 
-#: qml/OptionsPanel.qml:91
+#: qml/OptionsPanel.qml:93
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Configurar visibilidade"
 
-#: qml/OptionsPanel.qml:106
+#: qml/OptionsPanel.qml:108
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Selecionar novamente o dispositivo de digitalização"

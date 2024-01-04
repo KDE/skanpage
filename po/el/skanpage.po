@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 00:42+0000\n"
+"POT-Creation-Date: 2024-01-04 01:37+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -172,99 +172,99 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Αναζήτηση για διαθέσιμες συσκευές."
 
-#: qml/DocumentList.qml:72
+#: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
 msgstr ""
 
-#: qml/DocumentList.qml:78
+#: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
 msgstr ""
 
-#: qml/DocumentList.qml:84
+#: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
 msgstr ""
 
-#: qml/DocumentList.qml:93
+#: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
 msgstr ""
 
-#: qml/DocumentList.qml:205
+#: qml/DocumentList.qml:207
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Επεξεργασία σελίδας..."
 
-#: qml/DocumentList.qml:218
+#: qml/DocumentList.qml:220
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Σελίδα %1"
 
-#: qml/DocumentList.qml:229
+#: qml/DocumentList.qml:231
 #, kde-format
 msgid "Move Up"
 msgstr ""
 
-#: qml/DocumentList.qml:239
+#: qml/DocumentList.qml:241
 #, kde-format
 msgid "Move Down"
 msgstr ""
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:418
+#: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
 #, kde-format
 msgid "Rotate Left"
 msgstr "Περιστροφή αριστερά"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:425
+#: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
 #, kde-format
 msgid "Rotate Right"
 msgstr "Περιστροφή δεξιά"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:432
+#: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
 msgstr ""
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:439
+#: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
 #, fuzzy, kde-format
 #| msgid "Save"
 msgid "Save Page"
 msgstr "Αποθήκευση"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:446
+#: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
 #, kde-format
 msgid "Delete Page"
 msgstr "Διαγραφή σελίδας"
 
-#: qml/DocumentList.qml:292
+#: qml/DocumentList.qml:294
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 σελίδα"
 msgstr[1] "%1 σελίδες"
 
-#: qml/DocumentList.qml:301
+#: qml/DocumentList.qml:303
 #, kde-format
 msgid "Reorder Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:306
+#: qml/DocumentList.qml:308
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr ""
 
-#: qml/DocumentList.qml:313
+#: qml/DocumentList.qml:315
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr ""
 
-#: qml/DocumentList.qml:320
+#: qml/DocumentList.qml:322
 #, kde-format
 msgid "Reverse Order"
 msgstr ""
@@ -562,7 +562,7 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr ""
 
-#: qml/OptionsPanel.qml:68
+#: qml/OptionsPanel.qml:70
 #, fuzzy, kde-format
 #| msgctxt "Adding unit suffix"
 #| msgid "%1 %2"
@@ -570,17 +570,17 @@ msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:81
+#: qml/OptionsPanel.qml:83
 #, kde-format
 msgid "Show More"
 msgstr ""
 
-#: qml/OptionsPanel.qml:91
+#: qml/OptionsPanel.qml:93
 #, kde-format
 msgid "Configure Visibility"
 msgstr ""
 
-#: qml/OptionsPanel.qml:106
+#: qml/OptionsPanel.qml:108
 #, fuzzy, kde-format
 #| msgid "Reselect scanning device"
 msgid "Reselect Scanner"
