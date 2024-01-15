@@ -30,6 +30,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="id">Skanpage</name>
   <name xml:lang="is">Skanpage</name>
   <name xml:lang="it">Skanpage</name>
+  <name xml:lang="ja">Skanpage</name>
   <name xml:lang="ka">Skanpage</name>
   <name xml:lang="ko">Skanpage</name>
   <name xml:lang="nl">Skanpage</name>
@@ -67,6 +68,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ia">Application pro scander documento multi-pagina</summary>
   <summary xml:lang="is">Forrit til skönnunar á mörgum síðum</summary>
   <summary xml:lang="it">Applicazione per scansionare documenti multi pagina</summary>
+  <summary xml:lang="ja">複数ページのドキュメントのスキャン用アプリケーション</summary>
   <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპლიკაცია</summary>
   <summary xml:lang="ko">여러 쪽 문서 스캔 앱</summary>
   <summary xml:lang="nl">Scanprogramma voor document met meerdere pagina's</summary>
@@ -101,6 +103,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ia">Skanpage es un simple application de scander optimisate per scander documento multi-pagina. Illo anque pote scander e salveguardar documentos a singule pagina e imagines.</p>
     <p xml:lang="is">Skanpage er einfalt skönnunarforrit, hannað til að skanna margar síður í einu en einnig til að vista einnar-síðu skjöl og myndir.</p>
     <p xml:lang="it">Skanpage è una semplice applicazione per scansionare ottimizzata per scansioni di documenti multi-pagina. Può scansionare e salvare anche documenti a pagina singola e immagini.</p>
+    <p xml:lang="ja">Skanpage は複数ページのドキュメントのスキャンに最適化されたシンプルなスキャン用アプリケーションです。単一ページのドキュメントや画像をスキャンして保存することもできます。</p>
     <p xml:lang="ka">Skanpage არის მარტივი სკანირების აპლიკაცია, რომელიც შექმნილია როგორც მრავალგვერდიანი, ისე ერთგვერდიანი დოკუმენტებისა და სურათების სკანირებისთვის და შესანახად.</p>
     <p xml:lang="ko">Skanpage는 여러 쪽 문서 스캔에 최적화된 간단한 스캔 앱입니다. 단일 쪽 문서와 그림도 스캔 및 저장이 가능합니다.</p>
     <p xml:lang="nl">Skanpage is een eenvoudig scanprogramma geoptimaliseerd voor scannen van documenten met meerdere pagina's. Het kan ook documenten en afbeeldingen met een enkele pagina scannen en opslaan.</p>
@@ -138,6 +141,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="id">Fitur:</p>
     <p xml:lang="is">Eiginleikar:</p>
     <p xml:lang="it">Funzionalità:</p>
+    <p xml:lang="ja">機能:</p>
     <p xml:lang="ka">თვისებები:</p>
     <p xml:lang="ko">기능:</p>
     <p xml:lang="nl">Mogelijkheden:</p>
@@ -176,6 +180,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="id">Pemindaian dari pemindai flatbed dan ADF</li>
       <li xml:lang="is">Skönnun á ADF-skönnum og flatskönnum</li>
       <li xml:lang="it">Scansione dagli scanner piani e ADF</li>
+      <li xml:lang="ja">フラットベッドおよび ADF スキャナからのスキャン</li>
       <li xml:lang="ka">Flatbed და ADF სკანერებიდან სკანრება</li>
       <li xml:lang="ko">평판 및 ADF 스캐너에서 스캔</li>
       <li xml:lang="nl">Scannen uit flatbed en ADF scanners</li>
@@ -214,6 +219,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="id">Opsi yang dapat dikonfigurasikan untuk peranti pemindai</li>
       <li xml:lang="is">Stillanlegir valkostir fyrir skönnunartæki</li>
       <li xml:lang="it">Opzioni configurabili per gli scanner</li>
+      <li xml:lang="ja">スキャン用デバイスの設定可能なオプション</li>
       <li xml:lang="ka">სკანერის პარამეტრების მორგება</li>
       <li xml:lang="ko">스캔 장치 설정</li>
       <li xml:lang="nl">Te configureren opties voor scanapparaat</li>
@@ -249,6 +255,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="ia">Reordinar, rotation  e deletion de paginas scandite</li>
       <li xml:lang="is">Endurröðun, snúningur og eyðing á skönnuðum síðum</li>
       <li xml:lang="it">Riordinamento, rotazione ed eliminazione delle pagine scansionate</li>
+      <li xml:lang="ja">スキャンしたページの並べ替え、回転および削除</li>
       <li xml:lang="ka">სკანირებული გვერდების გადალაგება, მობრუნება და წაშლა</li>
       <li xml:lang="ko">스캔한 페이지 순서 조정, 회전, 삭제</li>
       <li xml:lang="nl">Opnieuw ordenen, draaien en verwijderen van gescande pagina's</li>
@@ -286,6 +293,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="id">Penyimpanan ke dokumen PDF multi-halaman dan file citra</li>
       <li xml:lang="is">Vistaðu í margsíðna PDF-skjöl og myndskrár</li>
       <li xml:lang="it">Salvataggio in documenti PDF multi-pagine e in file d'immagine</li>
+      <li xml:lang="ja">複数ページの PDF ドキュメントや画像ファイルへの保存</li>
       <li xml:lang="ka">მრავალგვერდიან PDF დოკუმენტებში და გამოსახულებებში შენახვა</li>
       <li xml:lang="ko">여러 쪽 PDF 문서 및 그림 파일로 저장</li>
       <li xml:lang="nl">Opslaan in multi-pagina PDF-documenten en afbeeldingsbestanden</li>
@@ -327,6 +335,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ia">Pagina  principal de Skanpage</caption>
       <caption xml:lang="is">Aðalgluggi Skanpage</caption>
       <caption xml:lang="it">La finestra principale di Skanpage</caption>
+      <caption xml:lang="ja">Skanpage メインウィンドウ</caption>
       <caption xml:lang="ka">Skanpage-ის მთავარი ფანჯარა</caption>
       <caption xml:lang="ko">Skanpage 주 창</caption>
       <caption xml:lang="nl">Hoofdvenster van Skanpage</caption>
