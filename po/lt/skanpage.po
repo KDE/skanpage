@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:37+0000\n"
-"PO-Revision-Date: 2023-02-02 01:02+0000\n"
+"PO-Revision-Date: 2024-01-16 01:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,52 +17,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Moo"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "<>"
 
 #: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
 #, kde-format
 msgid "New document"
-msgstr ""
+msgstr "Naujas dokumentas"
 
 #: DocumentModel.cpp:72
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
-msgstr ""
+msgstr "%1 ... %2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
 msgid "Nothing to print."
-msgstr ""
+msgstr "Nėra ką spausdinti."
 
 #: DocumentPrinter.cpp:37
 #, kde-format
 msgid "Previous printing operation still in progress."
-msgstr ""
+msgstr "Vis dar vyksta ankstesnė spausdinimo operacija."
 
 #: DocumentPrinter.cpp:69
 #, kde-format
 msgid "Document sent to printer."
-msgstr ""
+msgstr "Dokumentas išsiųstas į spausdintuvą."
 
 #: DocumentSaver.cpp:34
 #, kde-format
 msgid "No file path given."
-msgstr ""
+msgstr "Nenurodytas joks failo kelias."
 
 #: DocumentSaver.cpp:38
 #, kde-format
 msgid "Nothing to save."
-msgstr ""
+msgstr "Nėra ką įrašyti."
 
 #: DocumentSaver.cpp:42
 #, kde-format
@@ -78,7 +79,7 @@ msgstr ""
 #: DocumentSaver.cpp:79
 #, kde-format
 msgid "Document saved as PDF."
-msgstr ""
+msgstr "Dokumentas įrašytas kaip PDF."
 
 #: DocumentSaver.cpp:111
 #, kde-format
@@ -103,7 +104,7 @@ msgstr ""
 #: main.cpp:56
 #, kde-format
 msgid "Skanpage"
-msgstr ""
+msgstr "Skanpage"
 
 #: main.cpp:58
 #, kde-format
@@ -113,7 +114,7 @@ msgstr ""
 #: main.cpp:60
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
-msgstr ""
+msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:63 main.cpp:64
 #, kde-format
@@ -128,13 +129,13 @@ msgstr ""
 #: main.cpp:75
 #, kde-format
 msgid "device"
-msgstr ""
+msgstr "įrenginys"
 
 #: qml/ContentView.qml:18
 #, kde-format
 msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
-msgstr ""
+msgstr "* %1"
 
 #: qml/DeviceSelection.qml:54
 #, kde-format
@@ -144,12 +145,14 @@ msgid ""
 "%1 %2\n"
 "(%3)"
 msgstr ""
+"%1 %2\n"
+"(%3)"
 
 #: qml/DeviceSelection.qml:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
-msgstr ""
+msgstr "Nerasta jokių įrenginių"
 
 #: qml/DeviceSelection.qml:86
 #, kde-format
@@ -159,7 +162,7 @@ msgstr ""
 #: qml/DeviceSelection.qml:95
 #, kde-format
 msgid "Reload devices list"
-msgstr ""
+msgstr "Įkelti įrenginių sąrašą iš naujo"
 
 #: qml/DevicesLoading.qml:29
 #, kde-kuit-format
@@ -180,59 +183,59 @@ msgstr ""
 #: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "Pakelti pažymėtą puslapį"
 
 #: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "Nuleisti pažymėtą puslapį"
 
 #: qml/DocumentList.qml:207
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
-msgstr ""
+msgstr "Puslapis apdorojamas..."
 
 #: qml/DocumentList.qml:220
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
-msgstr ""
+msgstr "Puslapis %1"
 
 #: qml/DocumentList.qml:231
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Pakelti"
 
 #: qml/DocumentList.qml:241
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Nuleisti"
 
 #: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
 #, kde-format
 msgid "Rotate Left"
-msgstr ""
+msgstr "Pasukti kairėn"
 
 #: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
 #, kde-format
 msgid "Rotate Right"
-msgstr ""
+msgstr "Pasukti dešinėn"
 
 #: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
-msgstr ""
+msgstr "Apversti"
 
 #: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
 #, kde-format
 msgid "Save Page"
-msgstr ""
+msgstr "Įrašyti puslapį"
 
 #: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
 #, kde-format
 msgid "Delete Page"
-msgstr ""
+msgstr "Ištrinti puslapį"
 
 #: qml/DocumentList.qml:294
 #, kde-format
@@ -241,33 +244,34 @@ msgid_plural "%1 pages"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: qml/DocumentList.qml:303
 #, kde-format
 msgid "Reorder Pages"
-msgstr ""
+msgstr "Pertvarkyti puslapius"
 
 #: qml/DocumentList.qml:308
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
-msgstr ""
+msgstr "13 24 → 1234"
 
 #: qml/DocumentList.qml:315
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
-msgstr ""
+msgstr "13 42 → 1234"
 
 #: qml/DocumentList.qml:322
 #, kde-format
 msgid "Reverse Order"
-msgstr ""
+msgstr "Atvirkštinė tvarka"
 
 #: qml/DocumentPage.qml:56
 #, kde-format
 msgid "Show Preview"
-msgstr ""
+msgstr "Rodyti peržiūrą"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -303,12 +307,12 @@ msgstr ""
 #: qml/DocumentPage.qml:376
 #, kde-format
 msgid "Zoom In"
-msgstr ""
+msgstr "Didinti"
 
 #: qml/DocumentPage.qml:385
 #, kde-format
 msgid "Zoom Out"
-msgstr ""
+msgstr "Mažinti"
 
 #: qml/DocumentPage.qml:394
 #, kde-format
@@ -323,17 +327,17 @@ msgstr ""
 #: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
 msgid "Export PDF"
-msgstr ""
+msgstr "Eksportuoti PDF"
 
 #: qml/ExportWindow.qml:44
 #, kde-format
 msgid "Title:"
-msgstr ""
+msgstr "Pavadinimas:"
 
 #: qml/ExportWindow.qml:60
 #, kde-format
 msgid "File:"
-msgstr ""
+msgstr "Failas:"
 
 #: qml/ExportWindow.qml:85
 #, kde-format
@@ -343,12 +347,12 @@ msgstr ""
 #: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
-msgstr ""
+msgstr "Kalbos:"
 
 #: qml/ExportWindow.qml:135
 #, kde-format
 msgid "%1 [%2]"
-msgstr ""
+msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:156
 #, kde-format
@@ -360,48 +364,48 @@ msgstr ""
 #: qml/ExportWindow.qml:182
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Įrašyti"
 
 #: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
 msgctxt "menu category"
 msgid "File"
-msgstr ""
+msgstr "Failas"
 
 #: qml/GlobalMenu.qml:68
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
-msgstr ""
+msgstr "Skenuoti"
 
 #: qml/GlobalMenu.qml:124
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
-msgstr ""
+msgstr "Pagalba"
 
 #: qml/InProgressPage.qml:26
 #, kde-kuit-format
 msgctxt "Countdown string with time given in seconds"
 msgid "Next scan starts in<nl/>%1 s"
-msgstr ""
+msgstr "Kitas skenavimas prasidės po<nl/>%1 sek."
 
 #: qml/InProgressPage.qml:44
 #, kde-format
 msgctxt "@info"
 msgid "Scan in progress."
-msgstr ""
+msgstr "Vyksta skenavimas."
 
 #: qml/MainWindow.qml:23
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
-msgstr ""
+msgstr "%1 ― Skanpage"
 
 #: qml/MainWindow.qml:85
 #, kde-format
@@ -416,58 +420,58 @@ msgstr ""
 #: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Peržiūra"
 
 #: qml/MainWindow.qml:123
 #, kde-format
 msgid "Scan"
-msgstr ""
+msgstr "Skenuoti"
 
 #: qml/MainWindow.qml:145
 #, kde-format
 msgid "Show Scanner Options"
-msgstr ""
+msgstr "Rodyti skenerio parinktis"
 
 #: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Bendrinti"
 
 #: qml/MainWindow.qml:163
 #, kde-format
 msgid "Print"
-msgstr ""
+msgstr "Spausdinti"
 
 #: qml/MainWindow.qml:184 qml/MainWindow.qml:381
 #, kde-format
 msgid "About Skanpage"
-msgstr ""
+msgstr "Apie Skanpage"
 
 #: qml/MainWindow.qml:191
 #, kde-format
 msgid "Configure Skanpage…"
-msgstr ""
+msgstr "Konfigūruoti Skanpage…"
 
 #: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr ""
+msgstr "Konfigūruoti sparčiuosius klavišus…"
 
 #: qml/MainWindow.qml:207
 #, kde-format
 msgid "Quit"
-msgstr ""
+msgstr "Išeiti"
 
 #: qml/OptionDelegate.qml:55
 #, kde-format
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: qml/OptionDelegate.qml:150
 #, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: qml/OptionDelegate.qml:154
 #, kde-format
@@ -550,17 +554,17 @@ msgstr ""
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: qml/OptionsPanel.qml:83
 #, kde-format
 msgid "Show More"
-msgstr ""
+msgstr "Rodyti daugiau"
 
 #: qml/OptionsPanel.qml:93
 #, kde-format
 msgid "Configure Visibility"
-msgstr ""
+msgstr "Konfigūruoti matomumą"
 
 #: qml/OptionsPanel.qml:108
 #, kde-format
@@ -570,7 +574,7 @@ msgstr ""
 #: qml/SettingsWindow.qml:20
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Konfigūruoti"
 
 #: qml/SettingsWindow.qml:38
 #, kde-format
@@ -592,17 +596,17 @@ msgstr ""
 #: qml/SettingsWindow.qml:53
 #, kde-format
 msgid "Default file format:"
-msgstr ""
+msgstr "Numatytasis failo formatas:"
 
 #: qml/SettingsWindow.qml:68
 #, kde-format
 msgid "Default save location:"
-msgstr ""
+msgstr "Numatytoji įrašymo vieta:"
 
 #: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 #: qml/ShareWindow.qml:42
 #, kde-format
