@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:37+0000\n"
-"PO-Revision-Date: 2024-01-16 01:12+0200\n"
+"PO-Revision-Date: 2024-01-17 00:02+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -68,13 +68,13 @@ msgstr "Nėra ką įrašyti."
 #: DocumentSaver.cpp:42
 #, kde-format
 msgid "Saving to non-local directories is currently unsupported."
-msgstr ""
+msgstr "Įrašymas į ne vietinius katalogus šiuo metu yra nepalaikomas."
 
 #: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "Įvyko klaida įrašant: %1."
 
 #: DocumentSaver.cpp:79
 #, kde-format
@@ -84,22 +84,22 @@ msgstr "Dokumentas įrašytas kaip PDF."
 #: DocumentSaver.cpp:111
 #, kde-format
 msgid "Document saved with OCR as PDF."
-msgstr ""
+msgstr "Dokumentas įrašytas su optiniu ženklų atpažinimu kaip PDF."
 
 #: DocumentSaver.cpp:183
 #, kde-format
 msgid "Document saved as image."
-msgstr ""
+msgstr "Dokumentas įrašytas kaip paveikslas."
 
 #: DocumentSaver.cpp:192
 #, kde-format
 msgid "Failed to save document as image."
-msgstr ""
+msgstr "Nepavyko įrašyti dokumento kaip paveikslo."
 
 #: DocumentSaver.cpp:207
 #, kde-format
 msgid "Failed to save image"
-msgstr ""
+msgstr "Nepavyko įrašyti paveikslo"
 
 #: main.cpp:56
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Skanpage"
 #: main.cpp:58
 #, kde-format
 msgid "Multi-page scanning application by KDE."
-msgstr ""
+msgstr "Daugiapuslapinių dokumentų skenavimo programa iš KDE."
 
 #: main.cpp:60
 #, kde-format
@@ -119,12 +119,13 @@ msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 #: main.cpp:63 main.cpp:64
 #, kde-format
 msgid "developer"
-msgstr ""
+msgstr "programuotojas"
 
 #: main.cpp:75
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
+"Sane skenerio įrenginio pavadinimas. Bandomajam įrenginiui naudokite „test“."
 
 #: main.cpp:75
 #, kde-format
@@ -152,12 +153,12 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
-msgstr "Nerasta jokių įrenginių"
+msgstr "Nerasta jokių įrenginių."
 
 #: qml/DeviceSelection.qml:86
 #, kde-format
 msgid "Open selected device"
-msgstr ""
+msgstr "Atverti pasirinktą įrenginį"
 
 #: qml/DeviceSelection.qml:95
 #, kde-format
@@ -168,17 +169,17 @@ msgstr "Įkelti įrenginių sąrašą iš naujo"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices."
-msgstr ""
+msgstr "Ieškoma prieinamų įrenginių."
 
 #: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "Pasirinkti ankstesnį puslapį"
 
 #: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "Pasirinkti kitą puslapį"
 
 #: qml/DocumentList.qml:86
 #, kde-format
@@ -241,10 +242,10 @@ msgstr "Ištrinti puslapį"
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 puslapis"
+msgstr[1] "%1 puslapiai"
+msgstr[2] "%1 puslapių"
+msgstr[3] "%1 puslapis"
 
 #: qml/DocumentList.qml:303
 #, kde-format
@@ -277,32 +278,32 @@ msgstr "Rodyti peržiūrą"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
-msgstr ""
+msgstr "Šiame dokumente nėra jokių paveikslų.<nl/><nl/>Pradėkite skenavimą!"
 
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Atmesti šį žymėjimą"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Pridėti žymėjimo sritį"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Spustelėkite ir tempkite norėdami žymėti kitą sritį"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Padalyti skenavimą vertikaliai"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Padalyti skenavimą horizontaliai"
 
 #: qml/DocumentPage.qml:376
 #, kde-format
@@ -317,12 +318,12 @@ msgstr "Mažinti"
 #: qml/DocumentPage.qml:394
 #, kde-format
 msgid "Zoom Fit"
-msgstr ""
+msgstr "Mastelis toks, kad tilptų"
 
 #: qml/DocumentPage.qml:410
 #, kde-format
 msgid "Zoom 100%"
-msgstr ""
+msgstr "Mastelis 100%"
 
 #: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
@@ -342,7 +343,7 @@ msgstr "Failas:"
 #: qml/ExportWindow.qml:85
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
-msgstr ""
+msgstr "Įjungti optinį ženklų atpažinimą (OCR)"
 
 #: qml/ExportWindow.qml:105
 #, kde-format
@@ -360,6 +361,8 @@ msgid ""
 "If your required language is not listed, please install Tesseract's language "
 "file with your package manager."
 msgstr ""
+"Jeigu reikiamos kalbos sąraše nėra, įsidiekite Tesseract kalbos failą "
+"naudodami paketų tvarkytuvę."
 
 #: qml/ExportWindow.qml:182
 #, kde-format
@@ -410,12 +413,12 @@ msgstr "%1 ― Skanpage"
 #: qml/MainWindow.qml:85
 #, kde-format
 msgid "Discard All"
-msgstr ""
+msgstr "Atmesti visus"
 
 #: qml/MainWindow.qml:94
 #, kde-format
 msgid "Save All"
-msgstr ""
+msgstr "Įrašyti visus"
 
 #: qml/MainWindow.qml:111
 #, kde-format
@@ -477,78 +480,78 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr ""
+msgstr "Numatytasis"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Brightness: %1"
-msgstr ""
+msgstr "Ryškumas: %1"
 
 #: qml/OptionDelegate.qml:181
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Contrast: %1"
-msgstr ""
+msgstr "Kontrastas: %1"
 
 #: qml/OptionDelegate.qml:194
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Gamma: %1"
-msgstr ""
+msgstr "Gama: %1"
 
 #: qml/OptionDelegate.qml:224
 #, kde-format
 msgctxt "Adding unit suffix"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: qml/OptionDelegate.qml:249
 #, kde-format
 msgctxt "Unit suffix for bit"
 msgid "bit"
-msgstr ""
+msgstr "bitų"
 
 #: qml/OptionDelegate.qml:252
 #, kde-format
 msgctxt "Unit suffix for DPI"
 msgid "DPI"
-msgstr ""
+msgstr "taškų colyje"
 
 #: qml/OptionDelegate.qml:255
 #, kde-format
 msgctxt "Unit suffix for microsecond"
 msgid "µs"
-msgstr ""
+msgstr "mikrosek."
 
 #: qml/OptionDelegate.qml:258
 #, kde-format
 msgctxt "Unit suffix for second"
 msgid "s"
-msgstr ""
+msgstr "sek."
 
 #: qml/OptionDelegate.qml:261
 #, kde-format
 msgctxt "Unit suffix for millimeter"
 msgid "mm"
-msgstr ""
+msgstr "mm"
 
 #: qml/OptionDelegate.qml:264
 #, kde-format
 msgctxt "Unit suffix for percent"
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: qml/OptionDelegate.qml:267
 #, kde-format
 msgctxt "Unit suffix for pixel"
 msgid "px"
-msgstr ""
+msgstr "piks."
 
 #: qml/OptionsPanel.qml:30
 #, kde-format
 msgid "Select options for quick access:"
-msgstr ""
+msgstr "Pasirinkti greitos prieigos parinktis:"
 
 #: qml/OptionsPanel.qml:70
 #, kde-format
@@ -569,7 +572,7 @@ msgstr "Konfigūruoti matomumą"
 #: qml/OptionsPanel.qml:108
 #, kde-format
 msgid "Reselect Scanner"
-msgstr ""
+msgstr "Iš naujo pasirinkti skenerį"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
@@ -579,19 +582,19 @@ msgstr "Konfigūruoti"
 #: qml/SettingsWindow.qml:38
 #, kde-format
 msgid "Devices to show:"
-msgstr ""
+msgstr "Kokius įrenginius rodyti:"
 
 #: qml/SettingsWindow.qml:39
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
-msgstr ""
+msgstr "Tik skenerius"
 
 #: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
-msgstr ""
+msgstr "Skenerius, fotoaparatus ir virtualius įrenginius"
 
 #: qml/SettingsWindow.qml:53
 #, kde-format
@@ -611,4 +614,4 @@ msgstr "Užverti"
 #: qml/ShareWindow.qml:42
 #, kde-format
 msgid "Share as:"
-msgstr ""
+msgstr "Bendrinti kaip:"
