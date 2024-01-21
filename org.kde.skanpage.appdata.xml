@@ -50,7 +50,11 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
   <name xml:lang="zh-TW">Skanpage</name>
   <summary>Multi-page document scanning app</summary>
+  <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
   <summary xml:lang="ca">Aplicació d'escaneig de documents multipàgina</summary>
+  <summary xml:lang="ca-valencia">Aplicació d'escaneig de documents multipàgina</summary>
+  <summary xml:lang="eo">Skan-apo por plurpaĝaj dokumentoj</summary>
+  <summary xml:lang="es">Aplicación para escanear documentos multipágina</summary>
   <summary xml:lang="eu">Orri-anitzeko dokumentuak eskaneatzeko aplikazioa</summary>
   <summary xml:lang="ia">Application pro scander documento multi-pagina</summary>
   <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპი</summary>
@@ -59,6 +63,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="tr">Çok sayfalı belge tarama uygulaması</summary>
   <summary xml:lang="uk">Програма для сканування послідовностей сторінок</summary>
   <summary xml:lang="x-test">xxMulti-page document scanning appxx</summary>
+  <summary xml:lang="zh-TW">多頁文件掃描應用程式</summary>
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
     <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لمسح المستندات متعددة الصفحات ضوئياً. يمكنه أيضا مسح وحفظ الصور والمستندات ذات الصفحة الواحدة.</p>
