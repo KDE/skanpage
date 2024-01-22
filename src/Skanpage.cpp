@@ -189,6 +189,10 @@ QRectF Skanpage::scanArea() const
 void Skanpage::setScanArea(QRectF area)
 {
     if (area == d->m_scanArea) return;
+    if (d->m_ksaneInterface.getOption(Interface::TopLeftXOption) == NULL ||
+        d->m_ksaneInterface.getOption(Interface::TopLeftYOption) == NULL ||
+        d->m_ksaneInterface.getOption(Interface::BottomRightXOption) == NULL ||
+        d->m_ksaneInterface.getOption(Interface::BottomRightYOption) == NULL) return;
     d->m_ksaneInterface.getOption(Interface::TopLeftXOption)->setValue(area.left() * d->m_maximumScanArea.width());
     d->m_ksaneInterface.getOption(Interface::TopLeftYOption)->setValue(area.top() * d->m_maximumScanArea.height());
     d->m_ksaneInterface.getOption(Interface::BottomRightXOption)->setValue(area.right() * d->m_maximumScanArea.width());
