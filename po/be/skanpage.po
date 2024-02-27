@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:37+0000\n"
-"PO-Revision-Date: 2023-03-07 07:16\n"
+"PO-Revision-Date: 2024-02-23 13:37\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,11 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.12.2\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/skanpage/skanpage.po\n"
-"X-Crowdin-File-ID: 9326\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/skanpage/skanpage.po\n"
+"X-Crowdin-File-ID: 10940\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -70,13 +70,13 @@ msgstr "Няма чаго захоўваць."
 #: DocumentSaver.cpp:42
 #, kde-format
 msgid "Saving to non-local directories is currently unsupported."
-msgstr ""
+msgstr "Захаванне ў нелакальных каталогах зараз не падтрымліваецца."
 
 #: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr ""
+msgstr "Падчас захавання адбылася памылка: %1."
 
 #: DocumentSaver.cpp:79
 #, kde-format
@@ -175,22 +175,22 @@ msgstr "Пошук даступных прылад."
 #: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
-msgstr ""
+msgstr "Абраць папярэднюю старонку"
 
 #: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
-msgstr ""
+msgstr "Абраць наступную старонку"
 
 #: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
-msgstr ""
+msgstr "Перамясціць абраную старонку вышэй"
 
 #: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
-msgstr ""
+msgstr "Перамясціць абраную старонку ніжэй"
 
 #: qml/DocumentList.qml:207
 #, kde-kuit-format
@@ -271,10 +271,9 @@ msgid "Reverse Order"
 msgstr "Адваротны парадак"
 
 #: qml/DocumentPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Show More"
+#, kde-format
 msgid "Show Preview"
-msgstr "Паказаць яшчэ"
+msgstr "Паказваць мініяцюры"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
@@ -285,27 +284,27 @@ msgstr "У гэтым дакуменце няма выяў.<nl/><nl/>Пачац�
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr ""
+msgstr "Адкінуць выбар"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr ""
+msgstr "Дадаць абраную вобласць"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr ""
+msgstr "Пстрыкніце і перацягніце, каб абраць іншую вобласць"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr ""
+msgstr "Падзяліць па вертыкалі"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr ""
+msgstr "Падзяліць па гарызанталі"
 
 #: qml/DocumentPage.qml:376
 #, kde-format
@@ -425,7 +424,7 @@ msgstr "Захаваць усё"
 #: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Папярэдні прагляд"
 
 #: qml/MainWindow.qml:123
 #, kde-format
@@ -460,7 +459,7 @@ msgstr "Наладжванне Skanpage…"
 #: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr ""
+msgstr "Наладжванне спалучэнняў клавіш…"
 
 #: qml/MainWindow.qml:207
 #, kde-format
@@ -473,8 +472,7 @@ msgid "%1:"
 msgstr "%1:"
 
 #: qml/OptionDelegate.qml:150
-#, fuzzy, kde-format
-#| msgid "%1:"
+#, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
 msgstr "%1:"
@@ -483,25 +481,25 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr ""
+msgstr "Прадвызначана"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Brightness: %1"
-msgstr ""
+msgstr "Яркасць: %1"
 
 #: qml/OptionDelegate.qml:181
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Contrast: %1"
-msgstr ""
+msgstr "Кантраснасць: %1"
 
 #: qml/OptionDelegate.qml:194
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Gamma: %1"
-msgstr ""
+msgstr "Гама: %1"
 
 #: qml/OptionDelegate.qml:224
 #, kde-format
