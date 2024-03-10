@@ -66,11 +66,10 @@ bool OCRLanguageModel::setData(const QModelIndex &index, const QVariant &value, 
 void OCRLanguageModel::setLanguages(const std::vector<std::string> &availableLanguages)
 {
     beginResetModel();
-    // improve with Qt 6.3 (alpha 3 code support added)
     for (const auto &language : availableLanguages) {
         QString languageCode = QString::fromLocal8Bit(language.c_str());
         if (languageCode != QStringLiteral("osd")) {
-            QLocale locale(languageCode.left(2));
+            QLocale locale(QLocale::codeToLanguage(languageCode));
             m_languages.append({locale.nativeLanguageName(), languageCode, false});
         }
     }
