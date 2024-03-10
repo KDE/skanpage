@@ -15,10 +15,6 @@
 #include <tesseract/baseapi.h>
 #include <leptonica/allheaders.h>
 #include "OCRLanguageModel.h"
-#if TESSERACT_MAJOR_VERSION < 5
-#include <tesseract/strngs.h>
-#include <tesseract/genericvector.h>
-#endif
 #endif
 
 #include "skanpage_debug.h"
@@ -40,17 +36,8 @@ OCREngine::OCREngine(QObject *parent) : QObject(parent), d(std::make_unique<OCRE
         return;
     }
     d->m_tesseract.SetPageSegMode(tesseract::PSM_AUTO_OSD);
-
     std::vector<std::string> availableLanguages;
-#if TESSERACT_MAJOR_VERSION < 5
-    GenericVector<STRING> languageVector;
-    d->m_tesseract.GetAvailableLanguagesAsVector(&languageVector);
-    for (int i = 0; i < languageVector.size(); i++) {
-        availableLanguages.push_back(languageVector[i].c_str());
-    }
-#else
     d->m_tesseract.GetAvailableLanguagesAsVector(&availableLanguages);
-#endif
     d->m_languages.setLanguages(availableLanguages);
 #endif
 }
