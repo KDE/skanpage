@@ -35,7 +35,7 @@ include(KDECMakeSettings)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
 
-find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport Pdf)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     COMPONENTS

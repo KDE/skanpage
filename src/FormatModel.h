@@ -34,7 +34,9 @@ public:
 
     Q_INVOKABLE QVariant getData(int index, int role) const;
 
-    Q_INVOKABLE QVariantList formatFilter() const;
+    Q_INVOKABLE QVariantList writeFormatFilter() const;
+
+    Q_INVOKABLE QVariantList importFormatFilter() const;
 
     Q_INVOKABLE QString pdfFormatFilter() const;
 

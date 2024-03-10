@@ -179,7 +179,7 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
             }
             fileName =
                 QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath(), fileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), fileInfo.suffix());
-            if(!pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData())) {
+            if (!pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData())) {
                 success = false;
             }
             fileUrls.append(QUrl::fromLocalFile(fileName));
@@ -212,7 +212,7 @@ void DocumentSaver::saveNewPageTemporary(const int pageID, const QImage &image)
         qCDebug(SKANPAGE_LOG) << "Saved new image to temporary file.";
     } else {
         qCDebug(SKANPAGE_LOG) << "Saving new image to temporary file failed!";
-        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save image"));
+        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save image."));
     }
     qCDebug(SKANPAGE_LOG) << image << tempImageFile << "with page size" << pageSize << "and resolution of" << dpi << "dpi";
     tempImageFile->close();

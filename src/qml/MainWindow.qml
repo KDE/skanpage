@@ -94,7 +94,23 @@ ApplicationWindow {
         text: i18n("Save All")
         shortcutsName: "Save"
         enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
-        onTriggered: saveFileDialog.open()
+        onTriggered: {
+            saveFileDialog.nameFilters = skanpage.formatModel.writeFormatFilter()
+            saveFileDialog.fileMode = FileDialog.SaveFile
+            saveFileDialog.open()
+        }
+    }
+
+    ShortcutsAction {
+        id: importDocAction
+        icon.name: "document-import-symbolic"
+        text: i18nc("@action:button import existing PDF file", "Import")
+        shortcut: "CTRL+I"
+        onTriggered: {
+            saveFileDialog.nameFilters = skanpage.formatModel.importFormatFilter()
+            saveFileDialog.fileMode = FileDialog.OpenFile
+            saveFileDialog.open()
+        }
     }
     
     ShortcutsAction {
@@ -281,6 +297,10 @@ ApplicationWindow {
                 }
 
                 ToolButton {
+                    action: importDocAction
+                }
+
+                ToolButton {
                     action: saveDocAction
                 }
       
@@ -334,7 +354,7 @@ ApplicationWindow {
 
         StackView {
             id: stackView
-            
+
             Layout.fillWidth: true
             Layout.fillHeight: true
             
@@ -425,11 +445,15 @@ ApplicationWindow {
 
         currentFolder: skanpage.configuration.defaultFolder
         fileMode: FileDialog.SaveFile
-        nameFilters: skanpage.formatModel.formatFilter()
+        nameFilters: skanpage.formatModel.writeFormatFilter()
         selectedNameFilter.index: skanpage.configuration.defaultNameFilterIndex
         onAccepted: {
-            skanpage.documentModel.save(selectedFile, pageNumbers)
-            pageNumbers = []
+            if (fileMode == FileDialog.OpenFile) {
+                skanpage.importFile(selectedFile)
+            } else {
+                skanpage.documentModel.save(selectedFile, pageNumbers)
+                pageNumbers = []
+            }
         }
         onRejected: pageNumbers = []
     }

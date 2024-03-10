@@ -33,6 +33,8 @@ target_sources(skanpage PRIVATE
     OCREngine.h
     OCRLanguageModel.cpp
     OCRLanguageModel.h
+    ImageImport.cpp
+    ImageImport.h
     qml.qrc
     )
 
@@ -62,6 +64,7 @@ target_link_libraries(skanpage
     Qt::Qml
     Qt::QuickControls2
     Qt::Concurrent
+    Qt::Pdf
   PRIVATE
     KSane6::Core
     KF6::CoreAddons

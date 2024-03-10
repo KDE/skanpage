@@ -24,6 +24,7 @@
 #include "DocumentSaver.h"
 #include "DocumentPrinter.h"
 #include "OCREngine.h"
+#include "ImageImport.h"
 #include "skanpage_debug.h"
 
 class SkanpagePrivate {
@@ -37,6 +38,7 @@ public:
     DocumentSaver m_documentSaver;
     DocumentPrinter m_documentPrinter;
     OCREngine m_OCREngine;
+    ImageImport m_imageImport;
     QThread m_fileIOThread;
     SkanpageConfiguration *m_configuration;
     KActionCollection *m_actionCollection;
@@ -88,6 +90,7 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     d->m_documentSaver.moveToThread(&d->m_fileIOThread);
     d->m_OCREngine.moveToThread(&d->m_fileIOThread);
     d->m_documentSaver.setOCREngine(&d->m_OCREngine);
+    d->m_imageImport.moveToThread(&d->m_fileIOThread);
 
     connect(&d->m_documentHandler, &DocumentModel::saveDocument, &d->m_documentSaver, &DocumentSaver::saveDocument);
     connect(&d->m_documentHandler, &DocumentModel::saveNewPageTemporary, &d->m_documentSaver, &DocumentSaver::saveNewPageTemporary);
@@ -96,6 +99,8 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     connect(&d->m_documentSaver, &DocumentSaver::fileSaved, &d->m_documentHandler, &DocumentModel::updateFileInformation);
     connect(&d->m_documentSaver, &DocumentSaver::sharingFileSaved, &d->m_documentHandler, &DocumentModel::updateSharingFileInformation);
     connect(&d->m_documentPrinter, &DocumentPrinter::showUserMessage, this, &Skanpage::showUserMessage);
+    connect(&d->m_imageImport, &ImageImport::showUserMessage, this, &Skanpage::showUserMessage);
+    connect(&d->m_imageImport, &ImageImport::imageImported, &d->m_documentHandler, &DocumentModel::addImage);
 
     d->m_dumpOptionsUrl = dumpOptionsUrl;
     // try to open device from command line option first, then remembered device
@@ -679,6 +684,12 @@ void Skanpage::checkFinish()
         d->m_state = ApplicationState::ReadyForScan;
         Q_EMIT applicationStateChanged(d->m_state);
     }
+}
+
+void Skanpage::importFile(const QUrl &fileUrl)
+{
+    const int currentDPI = d->m_ksaneInterface.getOption(KSaneCore::Interface::ResolutionOption)->value().toInt();
+    QMetaObject::invokeMethod(&d->m_fileIOThread, [this, fileUrl, currentDPI]() {d->m_imageImport.importImageFile(fileUrl, currentDPI);}, Qt::QueuedConnection);
 }
 
 #include "moc_Skanpage.cpp"

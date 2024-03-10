@@ -27,6 +27,7 @@
 #include "FilteredOptionsModel.h"
 #include "FormatModel.h"
 #include "DevicesModel.h"
+
 class SkanpagePrivate;
 
 class Skanpage : public QObject
@@ -113,6 +114,7 @@ public:
     Q_INVOKABLE void eraseSubArea(int index);
     Q_INVOKABLE bool appendSubArea(QRectF area);
     Q_INVOKABLE void selectSubArea(int index);
+    Q_INVOKABLE void importFile(const QUrl &fileUrl);
 
 Q_SIGNALS:
     void progressChanged(int progress);
