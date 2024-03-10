@@ -72,7 +72,7 @@ Item {
                     value: modelItem.value
                     editable: true
 
-                    onValueModified: {
+                    onValueModified: function(value) {
                         if (value !== modelItem.value) {
                             modelItem.value = value
                         }
@@ -95,7 +95,7 @@ Item {
                     Binding on value {value: modelItem.value}
                     editable: true
 
-                    onValueModified: {
+                    onValueModified: function(value) {
                         if (!doubleSpinBox.approxeq(value, modelItem.value, stepSize / 1000)) {
                             modelItem.value = value
                         }
@@ -109,7 +109,7 @@ Item {
 
                 sourceComponent: TextField {
                     text: modelItem.value
-                    onTextChanged:  {
+                    onTextChanged: {
                         if (text !== modelItem.value) {
                             modelItem.value = value
                         }
