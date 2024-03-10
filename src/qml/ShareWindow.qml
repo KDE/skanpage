@@ -125,10 +125,6 @@ Window {
 
                     }
                 }
-
-                Component.onCompleted: {
-                    alternativesList.background.visible = true;
-                }
             }
         }
 

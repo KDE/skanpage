@@ -124,8 +124,6 @@ Window {
                 visible: skanpage.OCRavailable()
                 enabled: ocrCheckBox.checked
 
-                Component.onCompleted: ocrScroll.background.visible = true
-
                 ListView {
                     id: ocrList
                     clip: true
