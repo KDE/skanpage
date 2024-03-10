@@ -17,7 +17,7 @@ project(skanpage
         LANGUAGES CXX)
 
 set(QT_REQUIRED_VERSION "6.5.0")
-set(KF_MIN_VERSION "5.240.0")
+set(KF_MIN_VERSION "6.0.0")
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
@@ -34,8 +34,6 @@ include(KDEClangFormat)
 include(KDECMakeSettings)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
-include(ECMDeprecationSettings)
-
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport)
 
@@ -63,10 +61,6 @@ if (LEPTONICA_FOUND AND TESSERACT_FOUND)
 else()
    message(STATUS "Skanpage will be built without OCR as libraries are missing.")
 endif()
-
-ecm_set_disabled_deprecation_versions(QT 6.4
-    KF 5.101
-)
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX SKANPAGE
