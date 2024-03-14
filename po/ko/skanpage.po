@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-14 00:40+0000\n"
 "PO-Revision-Date: 2024-02-05 23:17+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -345,12 +345,12 @@ msgstr "광학 문자 인식(OCR) 활성화"
 msgid "Languages:"
 msgstr "언어"
 
-#: qml/ExportWindow.qml:135
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:156
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -359,12 +359,12 @@ msgstr ""
 "필요한 언어가 설치되어 있지 않다면 패키지 관리자로 Tesseract의 언어 지원을 설"
 "치하십시오."
 
-#: qml/ExportWindow.qml:182
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "저장"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "취소"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-14 00:40+0000\n"
 "PO-Revision-Date: 2024-02-23 13:37\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -351,12 +351,12 @@ msgstr "Уключыць аптычнае распазнаванне знака�
 msgid "Languages:"
 msgstr "Мовы:"
 
-#: qml/ExportWindow.qml:135
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:156
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -365,12 +365,12 @@ msgstr ""
 "Калі неабходнай мовы няма ў спісе, усталюйце ў кіраўніку пакункаў моўны файл "
 "Tesseract."
 
-#: qml/ExportWindow.qml:182
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "Захаваць"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "Скасаваць"

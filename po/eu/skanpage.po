@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-14 00:40+0000\n"
 "PO-Revision-Date: 2023-12-06 10:42+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -348,12 +348,12 @@ msgstr "Gaitu karaktereen ezagutze optikoa (OCR)"
 msgid "Languages:"
 msgstr "Hizkuntzak:"
 
-#: qml/ExportWindow.qml:135
+#: qml/ExportWindow.qml:133
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: qml/ExportWindow.qml:156
+#: qml/ExportWindow.qml:154
 #, kde-format
 msgid ""
 "If your required language is not listed, please install Tesseract's language "
@@ -362,12 +362,12 @@ msgstr ""
 "Behar duzun hizkuntza zerrendatuta ez badago, mesedez, instalatu "
 "«Tesseract»eren hizkuntza-fitxategia zure pakete-kudeatzailea erabiliz."
 
-#: qml/ExportWindow.qml:182
+#: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
 msgstr "Gorde"
 
-#: qml/ExportWindow.qml:198 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
