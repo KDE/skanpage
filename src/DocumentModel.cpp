@@ -251,6 +251,30 @@ void DocumentModel::rotateImage(int row, RotateOption rotate)
     Q_EMIT dataChanged(index(row, 0), index(row, 0), {RotationAngleRole});
 }
 
+void DocumentModel::flipPages(FlipPagesOption flip)
+{
+    int start = 0;
+    int increment = 1;
+    if (flip == FlipPagesOption::FlipEven) {
+        start = 1;
+    }
+    if (flip == FlipPagesOption::FlipEven || flip == FlipPagesOption::FlipOdd) {
+        increment = 2;
+    }
+    for (int i = start; i < d->m_pages.count(); i+=increment) {
+        int rotationAngle = d->m_pages.at(i).rotationAngle;
+        rotationAngle += 180;
+        if (rotationAngle < 0) {
+            rotationAngle = rotationAngle + 360;
+        } else if (rotationAngle >= 360) {
+            rotationAngle = rotationAngle - 360;
+        }
+        d->m_pages[i].rotationAngle = rotationAngle;
+    }
+    Q_EMIT activePageChanged();
+    Q_EMIT dataChanged(index(0, 0), index(d->m_pages.count()-1, 0), {RotationAngleRole});
+}
+
 void DocumentModel::reorderPages(ReorderOption reorder)
 {
     Q_EMIT layoutAboutToBeChanged();

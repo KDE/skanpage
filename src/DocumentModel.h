@@ -43,6 +43,12 @@ public:
 
     Q_ENUM(RotateOption)
 
+    enum FlipPagesOption { FlipEven,
+        FlipOdd,
+        FlipAll};
+
+    Q_ENUM(FlipPagesOption)
+
     enum ReorderOption { ReorderDuplex,
         ReorderDuplexReversed,
         Reverse};
@@ -70,6 +76,8 @@ public:
     Q_INVOKABLE void removeImage(int row);
 
     Q_INVOKABLE void rotateImage(int row, RotateOption rotate = RotateOption::Rotate90positive);
+
+    Q_INVOKABLE void flipPages(FlipPagesOption flip);
 
     Q_INVOKABLE void reorderPages(ReorderOption reorder);
 

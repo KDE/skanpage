@@ -298,6 +298,33 @@ ColumnLayout {
             alignment: Qt.AlignRight
             actions: [
                 Kirigami.Action {
+                    id: flipAction
+                    icon.name: "object-flip-vertical"
+                    text: i18n("Flip Pages")
+                    enabled: skanpage.documentModel.count > 0
+
+                    Kirigami.Action {
+                        id: flipOddPagesAction
+                        text: i18n("Flip Odd Pages")
+                        onTriggered: skanpage.documentModel.flipPages(DocumentModel.FlipOdd)
+                        enabled: skanpage.documentModel.count > 1
+                    }
+
+                    Kirigami.Action {
+                        id: flipEvenPagesAction
+                        text: i18n("Flip Even Pages")
+                        onTriggered: skanpage.documentModel.flipPages(DocumentModel.FlipEven)
+                        enabled: skanpage.documentModel.count > 1
+                    }
+
+                    Kirigami.Action {
+                        id: flipAllPagesAction
+                        text: i18n("Flip All Pages")
+                        onTriggered: skanpage.documentModel.flipPages(DocumentModel.FlipAll)
+                        enabled: skanpage.documentModel.count > 0
+                    }
+                },
+                Kirigami.Action {
                     id: reorderAction
                     icon.name: "exchange-positions"
                     text: i18n("Reorder Pages")
