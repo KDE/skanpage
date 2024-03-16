@@ -203,6 +203,7 @@ Window {
     FileDialog {
         id: fileNameDialog
         currentFolder: skanpage.configuration.defaultFolder
+        fileMode: FileDialog.SaveFile
         nameFilters: skanpage.formatModel.pdfFormatFilter()
         onAccepted: fileNameItem.text = selectedFile
     }
