@@ -7,6 +7,9 @@
 
 #include "Skanpage.h"
 
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QThread>
 #include <QtQml>
 
@@ -54,11 +57,12 @@ public:
     QString m_deviceName;
     QString m_deviceVendor;
     QString m_deviceModel;
+    QUrl m_dumpOptionsUrl;
 };
 
 using namespace KSaneCore;
 
-Skanpage::Skanpage(const QString &deviceName, QObject *parent)
+Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObject *parent)
     : QObject(parent)
     , d(std::make_unique<SkanpagePrivate>())
 {
@@ -93,6 +97,7 @@ Skanpage::Skanpage(const QString &deviceName, QObject *parent)
     connect(&d->m_documentSaver, &DocumentSaver::sharingFileSaved, &d->m_documentHandler, &DocumentModel::updateSharingFileInformation);
     connect(&d->m_documentPrinter, &DocumentPrinter::showUserMessage, this, &Skanpage::showUserMessage);
 
+    d->m_dumpOptionsUrl = dumpOptionsUrl;
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
 
@@ -423,6 +428,26 @@ bool Skanpage::openDevice(const QString &deviceName, const QString &deviceVendor
         } else {
             showUserMessage(SkanpageUtils::ErrorMessage, QStringLiteral("Failed to open selected device."));
         }
+    }
+    if (!d->m_dumpOptionsUrl.isEmpty()) {
+        QJsonObject allScannerData;
+        allScannerData[QLatin1StringView("scanner")] = d->m_ksaneInterface.scannerDeviceToJson();
+        allScannerData[QLatin1StringView("options")] = d->m_ksaneInterface.scannerOptionsToJson();
+        QString absolutePath;
+        if (QDir::isAbsolutePath(d->m_dumpOptionsUrl.path())) {
+            absolutePath = d->m_dumpOptionsUrl.toLocalFile();
+        } else {
+            absolutePath = QDir::current().absoluteFilePath(d->m_dumpOptionsUrl.toLocalFile());
+        }
+        QJsonDocument jsonDocument(allScannerData);
+        QFile file(absolutePath);
+        if(!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            return false;
+        }
+        QTextStream out(&file);
+        out << jsonDocument.toJson();
+        qDebug() << QStringLiteral("The scanner device options have been saved to %1").arg(absolutePath);
+        file.close();
     }
     return status == Interface::OpeningSucceeded;
 }

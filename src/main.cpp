@@ -74,13 +74,17 @@ int main(int argc, char *argv[])
     QCommandLineOption deviceOption(
         QStringList({QLatin1String("d"), QLatin1String("device")}), i18n("Sane scanner device name. Use 'test' for test device."), i18n("device"));
     parser.addOption(deviceOption);
+    QCommandLineOption dumpOptions(
+        QStringList({QLatin1String("o"), QLatin1String("options")}), i18n("A file path in which the options of your scanner device are dumped."), QLatin1String("options.txt"));
+    parser.addOption(dumpOptions);
     parser.process(app);
     // the --author and --license is shown anyway but they work only with the following line
     aboutData.processCommandLine(&parser);
 
     const QString deviceName = parser.value(deviceOption);
+    const QUrl dumpOptionsUrl = QUrl::fromLocalFile(parser.value(dumpOptions));
 
-    Skanpage skanpageApp = Skanpage(deviceName);
+    Skanpage skanpageApp = Skanpage(deviceName, dumpOptionsUrl);
 
     QQmlApplicationEngine engine;
 

@@ -72,7 +72,7 @@ public:
     };
     Q_ENUM(ScanSplit)
 
-    explicit Skanpage(const QString &deviceName, QObject *parent = nullptr);
+    explicit Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObject *parent = nullptr);
     ~Skanpage();
 
     QString deviceVendor() const;
@@ -104,7 +104,7 @@ public:
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
-    Q_INVOKABLE bool openDevice(const QString &deviceName, const QString &deviceVendor = QString(), const QString &deviceModel = QString());    
+    Q_INVOKABLE bool openDevice(const QString &deviceName, const QString &deviceVendor = QString(), const QString &deviceModel = QString());
     Q_INVOKABLE bool OCRavailable() const;
     Q_INVOKABLE void print();
     Q_INVOKABLE void registerAction(QObject* item, QObject* shortcuts, const QString &iconText);
