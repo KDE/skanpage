@@ -62,6 +62,7 @@ ColumnLayout {
     }
 
     Label {
+        visible: optionPanel.width != 0
         horizontalAlignment: Qt.AlignHCenter
         Layout.fillWidth: true
         Layout.margins: Kirigami.Units.smallSpacing
