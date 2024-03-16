@@ -366,10 +366,10 @@ ApplicationWindow {
         height: skanpage.stateConfiguration.shareHeight
         width: skanpage.stateConfiguration.shareWidth
 
-        onError: {
+        onError:  function(errorText) {
             errorMessage.text = errorText
             errorMessage.type = Kirigami.MessageType.Error
-            labelWidth.text = message
+            labelWidth.text = errorText
             errorMessage.visible = true
             hideNotificationTimer.start()
         }
