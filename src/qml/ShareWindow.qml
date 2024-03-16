@@ -92,6 +92,7 @@ Window {
                 id: alternativesList
 
                 contentItem: ListView {
+
                     focus: true
                     model: alternativesModel
 
@@ -102,15 +103,19 @@ Window {
                     delegate: ItemDelegate {
                         id: shareDelegate
 
+                        width: parent.width
+
                         required property string iconName
+                        required property string actionDisplay
                         required property int index
 
                         contentItem: RowLayout {
                             spacing: Kirigami.Units.smallSpacing
 
-                            KD.SubtitleDelegate {
-                                text: shareDelegate.display
+                            KD.IconTitleSubtitle {
+                                title: shareDelegate.actionDisplay
                                 icon.name: shareDelegate.iconName
+                                Layout.fillWidth: true
                             }
                             Kirigami.Icon {
                                 implicitHeight: Kirigami.Units.iconSizes.smallMedium
