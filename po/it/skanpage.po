@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:40+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 13:01+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -244,22 +244,42 @@ msgstr[1] "%1 pagine"
 
 #: qml/DocumentList.qml:303
 #, kde-format
+msgid "Flip Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:308
+#, kde-format
+msgid "Flip Odd Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:315
+#, kde-format
+msgid "Flip Even Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:322
+#, kde-format
+msgid "Flip All Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:330
+#, kde-format
 msgid "Reorder Pages"
 msgstr "Riordina le pagine"
 
-#: qml/DocumentList.qml:308
+#: qml/DocumentList.qml:335
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:315
+#: qml/DocumentList.qml:342
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:322
+#: qml/DocumentList.qml:349
 #, kde-format
 msgid "Reverse Order"
 msgstr "Ordine inverso"
@@ -549,23 +569,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "Seleziona opzioni per l'accesso rapido:"
 
-#: qml/OptionsPanel.qml:70
+#: qml/OptionsPanel.qml:71
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:83
+#: qml/OptionsPanel.qml:84
 #, kde-format
 msgid "Show More"
 msgstr "Mostra altro"
 
-#: qml/OptionsPanel.qml:93
+#: qml/OptionsPanel.qml:94
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Configura visibilità"
 
-#: qml/OptionsPanel.qml:108
+#: qml/OptionsPanel.qml:109
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Riseleziona scanner"
