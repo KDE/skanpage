@@ -56,7 +56,9 @@ Item {
                 SplitView.preferredWidth: splitViewPreferredWidth
                 SplitView.minimumWidth: scrollView.minimumWidth
                 SplitView.maximumWidth: splitView.width - activeDocument.width - optionsSeparator.width
-                onSaveSinglePage: mainContent.saveSinglePage(pageNumber)
+                onSaveSinglePage: function (pageNumber) {
+                    mainContent.saveSinglePage(pageNumber)
+                }
                 onShowScannedPage: activeDocument.showPreview = false
                 onMinimumWidthChanged: // Do not prefer a width lower than a minimum
                     if (SplitView.preferredWidth < minimumWidth) SplitView.preferredWidth = minimumWidth
@@ -72,7 +74,9 @@ Item {
                 SplitView.fillHeight: true
 
                 visible: skanpage.applicationState === Skanpage.ReadyForScan
-                onSaveSinglePage: mainContent.saveSinglePage(pageNumber)
+                onSaveSinglePage: function (pageNumber) {
+                    mainContent.saveSinglePage(pageNumber)
+                }
             }
 
             InProgressPage {
