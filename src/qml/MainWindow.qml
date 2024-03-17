@@ -336,7 +336,7 @@ ApplicationWindow {
                 splitViewPreferredWidth: skanpage.stateConfiguration.splitViewItemWidth
                 focus: true
 
-                onSaveSinglePage: {
+                onSaveSinglePage: function (pageNumber){
                     saveFileDialog.pageNumbers.push(pageNumber)
                     saveFileDialog.open()
                 }
