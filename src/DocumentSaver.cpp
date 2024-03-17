@@ -140,7 +140,10 @@ void DocumentSaver::printPage(QPdfWriter &writer, QPainter &painter, const Skanp
     }
 
     painter.setTransform(transformation);
-    QImage pageImage(page.temporaryFile->fileName());
+    QImage pageImage;
+    if (page.temporaryFile != nullptr) {
+       pageImage.load(page.temporaryFile->fileName());
+    }
     painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());
 }
 
@@ -153,17 +156,22 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
 
     bool success = true;
     if (count == 1) {
-        pageImage.load(document.at(0).temporaryFile->fileName());
-        fileName = fileInfo.absoluteFilePath();
-        const int rotationAngle = document.at(0).rotationAngle;
-        if (rotationAngle != 0) {
-            pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
+        if (document.at(0).temporaryFile != nullptr) {
+            pageImage.load(document.at(0).temporaryFile->fileName());
+            fileName = fileInfo.absoluteFilePath();
+            const int rotationAngle = document.at(0).rotationAngle;
+            if (rotationAngle != 0) {
+                pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
+            }
+            success = pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
+            fileUrls.append(QUrl::fromLocalFile(fileName));
         }
-        success = pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
-        fileUrls.append(QUrl::fromLocalFile(fileName));
     } else {
         fileUrls.reserve(count);
         for (int i = 0; i < count; ++i) {
+            if (document.at(i).temporaryFile == nullptr) {
+                continue;
+            }
             pageImage.load(document.at(i).temporaryFile->fileName());
             const int rotationAngle = document.at(i).rotationAngle;
             if (rotationAngle != 0) {
