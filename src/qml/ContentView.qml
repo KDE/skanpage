@@ -20,7 +20,6 @@ Item {
     property alias splitViewItemWidth: scrollView.width
     property bool showOptions: true
     property alias optionsPanel: optionsPanel
-    property alias activeDocument: activeDocument
 
     signal saveSinglePage(int pageNumber)
 
@@ -59,7 +58,6 @@ Item {
                 onSaveSinglePage: function (pageNumber) {
                     mainContent.saveSinglePage(pageNumber)
                 }
-                onShowScannedPage: activeDocument.showPreview = false
                 onMinimumWidthChanged: // Do not prefer a width lower than a minimum
                     if (SplitView.preferredWidth < minimumWidth) SplitView.preferredWidth = minimumWidth
             }

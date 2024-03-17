@@ -72,7 +72,7 @@ ApplicationWindow {
             } else if (state === Skanpage.DeviceSelection) {
                 stackView.replace(deviceSelection)
             } else if (state === Skanpage.ReadyForScan) {
-                while(stackView.depth > 1) {
+                while(stackView.depth > 1 && !previewAction.checked) {
                     stackView.pop()
                 }
             }
@@ -110,10 +110,17 @@ ApplicationWindow {
         icon.name: "document-preview"
         text: i18n("Preview")
         shortcut: "P"
+        checkable: true
         enabled: skanpage.applicationState === Skanpage.ReadyForScan
         onTriggered: {
-            mainView.activeDocument.showPreview = true
-            skanpage.preview()
+            if (checked) {
+                if (!skanpage.previewImageAvailable) {
+                    skanpage.previewScan()
+                }
+                stackView.push(previewScanView)
+            } else {
+                stackView.pop()
+            }
         }
     }
 
@@ -124,8 +131,10 @@ ApplicationWindow {
         shortcut: "SPACE"
         enabled: skanpage.applicationState === Skanpage.ReadyForScan
         onTriggered: {
-            mainView.activeDocument.showPreview = false
-            skanpage.scanArea = mainView.activeDocument.getScanArea()
+            if (previewAction.checked) {
+                previewAction.checked = false
+                stackView.pop()
+            }
             skanpage.startScan()
         }
     }
@@ -357,6 +366,17 @@ ApplicationWindow {
 
         DevicesLoading {
 
+        }
+    }
+
+    Component {
+        id: previewScanView
+
+        PreviewScanView {
+            onCloseView: {
+                previewAction.checked = false
+                stackView.pop()
+            }
         }
     }
 

@@ -16,7 +16,6 @@ ColumnLayout {
     id: documentList
 
     signal saveSinglePage(int pageNumber)
-    signal showScannedPage()
 
     spacing: 0
     property int minimumWidth: {
@@ -121,7 +120,6 @@ ColumnLayout {
 
                 onClicked: {
                     skanpage.documentModel.activePageIndex = index
-                    showScannedPage()
                 }
 
                 Control {

@@ -21,5 +21,6 @@
         <file>qml/ShareWindow.qml</file>
         <file>qml/ExportWindow.qml</file>
         <file>qml/SettingsWindow.qml</file>
+        <file>qml/PreviewScanView.qml</file>
     </qresource>
 </RCC>

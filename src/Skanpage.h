@@ -52,6 +52,7 @@ class Skanpage : public QObject
     Q_PROPERTY(ScanSplit scanSplit READ scanSplit WRITE setScanSplit NOTIFY scanSplitChanged)
     Q_PROPERTY(QList<QRectF> scanSubAreas READ scanSubAreas NOTIFY scanSubAreasChanged)
     Q_PROPERTY(QImage previewImage READ previewImage NOTIFY previewImageChanged)
+    Q_PROPERTY(bool previewImageAvailable READ previewImageAvailable NOTIFY previewImageChanged)
 
 public:
 
@@ -84,6 +85,7 @@ public:
     void setScanSplit(ScanSplit split);
     const QList<QRectF> &scanSubAreas();
     QImage previewImage() const;
+    bool previewImageAvailable() const;
 
     int progress() const;
     int countDown() const;
@@ -98,7 +100,7 @@ public:
     SkanpageConfiguration *configuration() const;
     SkanpageState *stateConfiguration() const;
 
-    Q_INVOKABLE void preview();
+    Q_INVOKABLE void previewScan();
     Q_INVOKABLE void startScan();
     Q_INVOKABLE void cancelScan();
     Q_INVOKABLE void reloadDevicesList();
@@ -121,7 +123,7 @@ Q_SIGNALS:
     void scanAreaChanged(const QRectF &area);
     void scanSplitChanged(ScanSplit split);
     void scanSubAreasChanged(const QList<QRectF> &subAreas);
-    void previewImageChanged(const QImage& preview);
+    void previewImageChanged(const QImage &preview);
     void newUserMessage(const QVariant &level, const QVariant &message);
 
 private Q_SLOTS:

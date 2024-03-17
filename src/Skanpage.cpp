@@ -265,7 +265,12 @@ QImage Skanpage::previewImage() const
     return d->m_previewImage;
 }
 
-void Skanpage::preview()
+bool Skanpage::previewImageAvailable() const
+{
+    return !d->m_previewImage.isNull();
+}
+
+void Skanpage::previewScan()
 {
     if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption)) opt->storeCurrentData();
     if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption)) opt->storeCurrentData();
@@ -305,7 +310,9 @@ void Skanpage::startScan()
     if (!d->m_scanSubAreas.isEmpty()) {
         QRectF totalArea = d->m_scanArea; // Include last (unadded) area
         // This makes a rectangle that covers all the areas
-        for (const QRectF& area : d->m_scanSubAreas) totalArea = totalArea.united(area);
+        for (const QRectF& area : d->m_scanSubAreas) {
+            totalArea = totalArea.united(area);
+        }
         appendSubArea(d->m_scanArea); // Remember last area, for later use
         setScanArea(totalArea); // Scan all the needed area
     }
@@ -416,7 +423,6 @@ bool Skanpage::openDevice(const QString &deviceName, const QString &deviceVendor
         } else {
             showUserMessage(SkanpageUtils::ErrorMessage, QStringLiteral("Failed to open selected device."));
         }
-
     }
     return status == Interface::OpeningSucceeded;
 }
@@ -443,6 +449,8 @@ void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &dev
 
     d->m_scanAreaConnectionsDone = false;
     setupScanningBounds();
+    d->m_previewImage = QImage();
+    Q_EMIT previewImageChanged(d->m_previewImage);
 
     d->m_state = ReadyForScan;
     Q_EMIT applicationStateChanged(d->m_state);
