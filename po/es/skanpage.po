@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
-"PO-Revision-Date: 2024-01-11 02:00+0100\n"
+"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"PO-Revision-Date: 2024-03-17 02:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,12 +29,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
-#: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
+#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "Documento nuevo"
 
-#: DocumentModel.cpp:72
+#: DocumentModel.cpp:74
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
@@ -86,17 +86,17 @@ msgstr "Documento guardado como PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Documento guardado con OCR como PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "Documento guardado como imagen."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "No se ha podido guardar el documento como imagen."
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "No se ha podido guardar la imagen"
@@ -227,7 +227,7 @@ msgstr "Rotar a la derecha"
 #: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
-msgstr "Invertir"
+msgstr "Voltear"
 
 #: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
 #, kde-format
@@ -249,22 +249,22 @@ msgstr[1] "%1 páginas"
 #: qml/DocumentList.qml:303
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Voltear páginas"
 
 #: qml/DocumentList.qml:308
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Voltear páginas impares"
 
 #: qml/DocumentList.qml:315
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Voltear páginas pares"
 
 #: qml/DocumentList.qml:322
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Voltear todas las páginas"
 
 #: qml/DocumentList.qml:330
 #, kde-format

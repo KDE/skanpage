@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
-"PO-Revision-Date: 2023-12-12 07:09+0100\n"
+"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"PO-Revision-Date: 2024-03-17 05:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "okellogg@users.sourceforge.net"
 
-#: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
+#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "Nova dokumento"
 
-#: DocumentModel.cpp:72
+#: DocumentModel.cpp:74
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
@@ -85,17 +85,17 @@ msgstr "Dokumento konservita kiel PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Dokumento konservita kun OCR kiel PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "Dokumento konservita kiel bildo."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Malsukcesis konservi la dokumenton kiel bildon."
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "Malsukcesis konservi bildon"
@@ -246,22 +246,22 @@ msgstr[1] "%1 paĝoj"
 #: qml/DocumentList.qml:303
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Interŝanĝi Paĝojn"
 
 #: qml/DocumentList.qml:308
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Interŝanĝi Neparajn Paĝojn"
 
 #: qml/DocumentList.qml:315
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Interŝanĝi Parajn Paĝojn"
 
 #: qml/DocumentList.qml:322
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Interŝanĝi Ĉiujn Paĝojn"
 
 #: qml/DocumentList.qml:330
 #, kde-format

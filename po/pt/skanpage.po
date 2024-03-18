@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-03-18 00:40+0000\n"
 "PO-Revision-Date: 2023-06-09 23:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -29,12 +29,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
+#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "Novo documento"
 
-#: DocumentModel.cpp:72
+#: DocumentModel.cpp:74
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
@@ -86,17 +86,17 @@ msgstr "O documento foi gravado como um PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "O documento com OCR foi gravado como um PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "O documento foi gravado como uma imagem."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Não foi possível gravar o documento como uma imagem."
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "Não foi possível gravar a imagem"

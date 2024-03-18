@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
-"PO-Revision-Date: 2023-11-13 11:53+0100\n"
+"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"PO-Revision-Date: 2024-03-17 15:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,24 +15,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2021 t/m 2023"
+msgstr "Freek de Kruijf - 2021 t/m 2024"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: DocumentModel.cpp:52 DocumentModel.cpp:69 DocumentModel.cpp:80
+#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "Nieuw document"
 
-#: DocumentModel.cpp:72
+#: DocumentModel.cpp:74
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
@@ -84,17 +84,17 @@ msgstr "Document opgeslagen als PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Document opgeslagen met OCR als PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "Document opgeslagen als afbeelding."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Document als afbeelding opslaan is mislukt."
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "Afbeelding opslaan is mislukt"
@@ -245,22 +245,22 @@ msgstr[1] "%1 pagina's"
 #: qml/DocumentList.qml:303
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Pagina's omwisselen"
 
 #: qml/DocumentList.qml:308
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Oude pagina's omwisselen"
 
 #: qml/DocumentList.qml:315
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Even pagina's omwisselen"
 
 #: qml/DocumentList.qml:322
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Alle pagina's omwisselen"
 
 #: qml/DocumentList.qml:330
 #, kde-format
