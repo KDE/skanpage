@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 #
-# giovanni <g.sora@tiscali.it>, 2021, 2022, 2023.
+# giovanni <g.sora@tiscali.it>, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 00:40+0000\n"
-"PO-Revision-Date: 2023-12-13 08:46+0100\n"
+"PO-Revision-Date: 2024-03-18 12:03+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -247,22 +247,22 @@ msgstr[1] "paginas %1"
 #: qml/DocumentList.qml:303
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Gira paginas"
 
 #: qml/DocumentList.qml:308
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Gira paginas dispare"
 
 #: qml/DocumentList.qml:315
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Gira paginas pare"
 
 #: qml/DocumentList.qml:322
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Gira omne paginas"
 
 #: qml/DocumentList.qml:330
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 00:40+0000\n"
-"PO-Revision-Date: 2024-02-19 18:42+0000\n"
+"PO-Revision-Date: 2024-03-17 15:47+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -246,22 +246,22 @@ msgstr[1] "%1 síður"
 #: qml/DocumentList.qml:303
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Spegla síður"
 
 #: qml/DocumentList.qml:308
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Spegla oddatölusíður"
 
 #: qml/DocumentList.qml:315
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Spegla síður með jöfnum tölum"
 
 #: qml/DocumentList.qml:322
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Spegla allar síður"
 
 #: qml/DocumentList.qml:330
 #, kde-format
