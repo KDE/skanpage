@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-23 02:28+0000\n"
 "PO-Revision-Date: 2023-12-12 11:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -87,17 +87,17 @@ msgstr "El document s'ha desat com a PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "El document s'ha desat amb OCR com a PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "El document s'ha desat com a imatge."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Ha fallat en desar el document com a imatge."
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "Ha fallat en desar la imatge"
@@ -553,23 +553,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "Seleccioneu les opcions per a l'accés ràpid:"
 
-#: qml/OptionsPanel.qml:70
+#: qml/OptionsPanel.qml:71
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:83
+#: qml/OptionsPanel.qml:84
 #, kde-format
 msgid "Show More"
 msgstr "Mostra'n més"
 
-#: qml/OptionsPanel.qml:93
+#: qml/OptionsPanel.qml:94
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Configura la visibilitat"
 
-#: qml/OptionsPanel.qml:108
+#: qml/OptionsPanel.qml:109
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Torna a seleccionar l'escàner"

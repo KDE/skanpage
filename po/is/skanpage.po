@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-23 02:28+0000\n"
 "PO-Revision-Date: 2023-09-19 14:27+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -84,17 +84,17 @@ msgstr "Skjalið vistað sem PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Skjalið vistað með ljóslestri sem PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "Skjalið vistað sem mynd."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Tókst ekki að vista skjalið sem mynd."
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "Tókst ekki að vista mynd"
@@ -548,23 +548,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "Veldu valkosti fyrir flýtiaðgang:"
 
-#: qml/OptionsPanel.qml:70
+#: qml/OptionsPanel.qml:71
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:83
+#: qml/OptionsPanel.qml:84
 #, kde-format
 msgid "Show More"
 msgstr "Sýna meira"
 
-#: qml/OptionsPanel.qml:93
+#: qml/OptionsPanel.qml:94
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Stilla sýnileika"
 
-#: qml/OptionsPanel.qml:108
+#: qml/OptionsPanel.qml:109
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Velja aftur skönnunartæki"

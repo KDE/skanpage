@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-23 02:28+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -85,18 +85,18 @@ msgstr "Το έγγραφο αποθηκεύτηκε ως PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Το έγγραφο αποθηκεύτηκε ως PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "Το έγγραφο αποθηκεύτηκε ως εικόνα."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save document as image."
 msgstr "Αποτυχία αποθήκευσης εικόνας"
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "Αποτυχία αποθήκευσης εικόνας"
@@ -562,7 +562,7 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr ""
 
-#: qml/OptionsPanel.qml:70
+#: qml/OptionsPanel.qml:71
 #, fuzzy, kde-format
 #| msgctxt "Adding unit suffix"
 #| msgid "%1 %2"
@@ -570,17 +570,17 @@ msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:83
+#: qml/OptionsPanel.qml:84
 #, kde-format
 msgid "Show More"
 msgstr ""
 
-#: qml/OptionsPanel.qml:93
+#: qml/OptionsPanel.qml:94
 #, kde-format
 msgid "Configure Visibility"
 msgstr ""
 
-#: qml/OptionsPanel.qml:108
+#: qml/OptionsPanel.qml:109
 #, fuzzy, kde-format
 #| msgid "Reselect scanning device"
 msgid "Reselect Scanner"

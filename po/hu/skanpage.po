@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-23 02:28+0000\n"
 "PO-Revision-Date: 2024-01-03 11:56+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -84,17 +84,17 @@ msgstr "A dokumentum elmentve PDF-ként formátumban."
 msgid "Document saved with OCR as PDF."
 msgstr "A dokumentum elmentve OCR-rel PDF formátumban."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "A dokumentum elmentve képként."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Nem sikerült képként menteni a dokumentumot."
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "A kép mentése sikertelen"
@@ -549,23 +549,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "Válassza ki a gyors hozzáféréshez szükséges beállításokat:"
 
-#: qml/OptionsPanel.qml:70
+#: qml/OptionsPanel.qml:71
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:83
+#: qml/OptionsPanel.qml:84
 #, kde-format
 msgid "Show More"
 msgstr "Több megjelenítése"
 
-#: qml/OptionsPanel.qml:93
+#: qml/OptionsPanel.qml:94
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Láthatóság beállítása"
 
-#: qml/OptionsPanel.qml:108
+#: qml/OptionsPanel.qml:109
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Szkenner újraválasztása"

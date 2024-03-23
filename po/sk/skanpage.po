@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:37+0000\n"
+"POT-Creation-Date: 2024-03-23 02:28+0000\n"
 "PO-Revision-Date: 2022-04-07 18:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -84,18 +84,18 @@ msgstr "Dokument uložený ako PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Dokument uložený ako PDF."
 
-#: DocumentSaver.cpp:183
+#: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
 msgstr "Dokument uložený ako obrázok."
 
-#: DocumentSaver.cpp:192
+#: DocumentSaver.cpp:200
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save document as image."
 msgstr "Zlyhalo uloženie obrázku"
 
-#: DocumentSaver.cpp:207
+#: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
 msgstr "Zlyhalo uloženie obrázku"
@@ -560,23 +560,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr ""
 
-#: qml/OptionsPanel.qml:70
+#: qml/OptionsPanel.qml:71
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:83
+#: qml/OptionsPanel.qml:84
 #, fuzzy, kde-format
 msgid "Show More"
 msgstr "Zobraziť ďalších %1"
 
-#: qml/OptionsPanel.qml:93
+#: qml/OptionsPanel.qml:94
 #, kde-format
 msgid "Configure Visibility"
 msgstr ""
 
-#: qml/OptionsPanel.qml:108
+#: qml/OptionsPanel.qml:109
 #, fuzzy, kde-format
 #| msgid "Reselect scanning device"
 msgid "Reselect Scanner"
