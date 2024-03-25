@@ -1,36 +1,37 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the skanpage package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 00:40+0000\n"
-"PO-Revision-Date: 2024-03-24 19:00\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-24 12:55+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/skanpage/skanpage.pot\n"
-"X-Crowdin-File-ID: 48798\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tyson Tan"
+msgstr "Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tds00@qq.com"
+msgstr "toms.trasuns@posteo.net"
 
 #: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:82
 #, kde-format
 msgid "New document"
-msgstr "新文档"
+msgstr "Jauns dokuments"
 
 #: DocumentModel.cpp:74
 #, kde-format
@@ -41,93 +42,94 @@ msgstr "%1 ... %2"
 #: DocumentPrinter.cpp:33
 #, kde-format
 msgid "Nothing to print."
-msgstr "无可打印内容。"
+msgstr "Nav nekā drukājama."
 
 #: DocumentPrinter.cpp:37
 #, kde-format
 msgid "Previous printing operation still in progress."
-msgstr "之前的打印作业仍在进行中。"
+msgstr "Joprojām notiek iepriekšējās drukāšanas darbība."
 
 #: DocumentPrinter.cpp:69
 #, kde-format
 msgid "Document sent to printer."
-msgstr "文档已发送到打印机。"
+msgstr "Dokuments ir nosūtīts uz printeri."
 
 #: DocumentSaver.cpp:34
 #, kde-format
 msgid "No file path given."
-msgstr "没有指定文件路径。"
+msgstr "Nav dotas datnes ceļš."
 
 #: DocumentSaver.cpp:38
 #, kde-format
 msgid "Nothing to save."
-msgstr "没有可供保存的图像。"
+msgstr "Nav nekā saglabājama."
 
 #: DocumentSaver.cpp:42
 #, kde-format
 msgid "Saving to non-local directories is currently unsupported."
-msgstr "本程序目前不支持保存到非本地目录。"
+msgstr "Saglabāšana ne lokālās mapēs šobrīd nav atbalstīta."
 
 #: DocumentSaver.cpp:67 DocumentSaver.cpp:98
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr "保存 %1 时发生错误。"
+msgstr "Saglabāšanas laikā notika kļūda: %1."
 
 #: DocumentSaver.cpp:79
 #, kde-format
 msgid "Document saved as PDF."
-msgstr "文档已保存为 PDF。"
+msgstr "Dokuments ir saglabāts kā PDF."
 
 #: DocumentSaver.cpp:111
 #, kde-format
 msgid "Document saved with OCR as PDF."
-msgstr "文档已通过 OCR 保存为 PDF。"
+msgstr "Dokuments ir saglabāts ar OCR kā PDF."
 
 #: DocumentSaver.cpp:191
 #, kde-format
 msgid "Document saved as image."
-msgstr "文档已保存为图像。"
+msgstr "Dokuments ir saglabāts kā attēls."
 
 #: DocumentSaver.cpp:200
 #, kde-format
 msgid "Failed to save document as image."
-msgstr "无法将文档保存为图像。"
+msgstr "Neizdevās saglabāt dokumentu kā attēlu."
 
 #: DocumentSaver.cpp:215
 #, kde-format
 msgid "Failed to save image"
-msgstr "无法保存图像"
+msgstr "Neizdevās saglabāt attēlu."
 
 #: main.cpp:56
 #, kde-format
 msgid "Skanpage"
-msgstr "Skanpage"
+msgstr "„Skanpage“"
 
 #: main.cpp:58
 #, kde-format
 msgid "Multi-page scanning application by KDE."
-msgstr "KDE 多页扫描应用程序"
+msgstr "KDE skenēšanas programma vairāku lapu dokumentiem"
 
 #: main.cpp:60
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
-msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015—2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:63 main.cpp:64
 #, kde-format
 msgid "developer"
-msgstr "开发人员"
+msgstr "izstrādātājs"
 
 #: main.cpp:75
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
-msgstr "Sane 扫描仪设备名称。测试设备请使用“test”。"
+msgstr ""
+"SANE skenera ierīces nosaukums. Izmantojiet „test“, lai pārbaudītu ierīci."
 
 #: main.cpp:75
 #, kde-format
 msgid "device"
-msgstr "设备"
+msgstr "ierīce"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -150,121 +152,123 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
-msgstr "没有找到设备。"
+msgstr "Nav atrastu ierīču."
 
 #: qml/DeviceSelection.qml:86
 #, kde-format
 msgid "Open selected device"
-msgstr "打开所选设备"
+msgstr "Atvērt atlasīto ierīci"
 
 #: qml/DeviceSelection.qml:95
 #, kde-format
 msgid "Reload devices list"
-msgstr "刷新设备列表"
+msgstr "Pārlādēt ierīču sarakstu"
 
 #: qml/DevicesLoading.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices."
-msgstr "正在扫描可用设备。"
+msgstr "Meklē pieejamās ierīces."
 
 #: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
-msgstr "选择上一页"
+msgstr "Atlasīt iepriekšējo lapu"
 
 #: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
-msgstr "选择下一页"
+msgstr "Atlasīt nākamo lapu"
 
 #: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
-msgstr "上移所选页面"
+msgstr "Pārvietot atlasītu lapu augšup"
 
 #: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
-msgstr "下移所选页面"
+msgstr "Pārvietot atlasīto lapu lejup"
 
 #: qml/DocumentList.qml:207
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
-msgstr "正在处理页面..."
+msgstr "Apstrādā lapu..."
 
 #: qml/DocumentList.qml:220
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
-msgstr "第 %1 页"
+msgstr "%1. lapa"
 
 #: qml/DocumentList.qml:231
 #, kde-format
 msgid "Move Up"
-msgstr "上移"
+msgstr "Pārvietot augšup"
 
 #: qml/DocumentList.qml:241
 #, kde-format
 msgid "Move Down"
-msgstr "下移"
+msgstr "Pārvietot lejup"
 
 #: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
 #, kde-format
 msgid "Rotate Left"
-msgstr "旋转 (向左)"
+msgstr "Pagriezt pa kreisi"
 
 #: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
 #, kde-format
 msgid "Rotate Right"
-msgstr "旋转 (向右)"
+msgstr "Pagriezt pa labi"
 
 #: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
 #, kde-format
 msgid "Flip"
-msgstr "翻转"
+msgstr "Apmest"
 
 #: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
 #, kde-format
 msgid "Save Page"
-msgstr "保存页面"
+msgstr "Saglabāt lapu"
 
 #: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
 #, kde-format
 msgid "Delete Page"
-msgstr "删除页面"
+msgstr "Dzēst lapu"
 
 #: qml/DocumentList.qml:294
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
-msgstr[0] "%1 页"
+msgstr[0] "%1 lapa"
+msgstr[1] "%1 lapas"
+msgstr[2] "%1 lapu"
 
 #: qml/DocumentList.qml:303
 #, kde-format
 msgid "Flip Pages"
-msgstr "翻转页面"
+msgstr "Apmest lapas"
 
 #: qml/DocumentList.qml:308
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr "翻转奇数页面"
+msgstr "Apmest nepāra lapas"
 
 #: qml/DocumentList.qml:315
 #, kde-format
 msgid "Flip Even Pages"
-msgstr "翻转偶数页面"
+msgstr "Apmest pāra lapas"
 
 #: qml/DocumentList.qml:322
 #, kde-format
 msgid "Flip All Pages"
-msgstr "翻转所有页面"
+msgstr "Apmest visas lapas"
 
 #: qml/DocumentList.qml:330
 #, kde-format
 msgid "Reorder Pages"
-msgstr "页面重新排序"
+msgstr "Pārkārtot lapas"
 
 #: qml/DocumentList.qml:335
 #, kde-format
@@ -281,88 +285,88 @@ msgstr "13 42 → 1234"
 #: qml/DocumentList.qml:349
 #, kde-format
 msgid "Reverse Order"
-msgstr "反向排序"
+msgstr "Apgriezt kārtību"
 
 #: qml/DocumentPage.qml:56
 #, kde-format
 msgid "Show Preview"
-msgstr "显示预览"
+msgstr "Rādīt priekšskatījumu"
 
 #: qml/DocumentPage.qml:72
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
-msgstr "此文档尚未包含任何图像。<nl/><nl/>请开始扫描。"
+msgstr "Šajā dokumentā nav nevienas attēla.<nl/><nl/>Sākt skenēt!"
 
 #: qml/DocumentPage.qml:258
 #, kde-format
 msgid "Discard this selection"
-msgstr "丢弃此选区"
+msgstr "Noraidīt šo atlasi"
 
 #: qml/DocumentPage.qml:278
 #, kde-format
 msgid "Add Selection Area"
-msgstr "添加选区"
+msgstr "Pievienot atlases zonu"
 
 #: qml/DocumentPage.qml:283
 #, kde-format
 msgid "Click and drag to select another area"
-msgstr "点击并拖动以选择另一个区域"
+msgstr "Spiediet un velciet, lai atlasītu citu zonu"
 
 #: qml/DocumentPage.qml:293
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr "垂直拆分扫描"
+msgstr "Sadalīt skenēšanu vertikāli"
 
 #: qml/DocumentPage.qml:304
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr "水平拆分扫描"
+msgstr "Sadalīt skenēšanu horizontāli"
 
 #: qml/DocumentPage.qml:376
 #, kde-format
 msgid "Zoom In"
-msgstr "放大"
+msgstr "Tuvināt"
 
 #: qml/DocumentPage.qml:385
 #, kde-format
 msgid "Zoom Out"
-msgstr "缩小"
+msgstr "Tālināt"
 
 #: qml/DocumentPage.qml:394
 #, kde-format
 msgid "Zoom Fit"
-msgstr "自适应缩放"
+msgstr "Ietilpināt"
 
 #: qml/DocumentPage.qml:410
 #, kde-format
 msgid "Zoom 100%"
-msgstr "缩放至 100%"
+msgstr "Tuvināt līdz 100%"
 
 #: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
 #, kde-format
 msgid "Export PDF"
-msgstr "导出 PDF"
+msgstr "Eksportēt PDF"
 
 #: qml/ExportWindow.qml:44
 #, kde-format
 msgid "Title:"
-msgstr "标题："
+msgstr "Nosaukums:"
 
 #: qml/ExportWindow.qml:60
 #, kde-format
 msgid "File:"
-msgstr "文件："
+msgstr "Datne:"
 
 #: qml/ExportWindow.qml:85
 #, kde-format
 msgid "Enable optical character recognition (OCR)"
-msgstr "启用光学字符识别 (OCR)"
+msgstr "Ieslēgt optisko rakstzīmju atpazīšanu (OCR)"
 
 #: qml/ExportWindow.qml:105
 #, kde-format
 msgid "Languages:"
-msgstr "语言："
+msgstr "Valodas:"
 
 #: qml/ExportWindow.qml:133
 #, kde-format
@@ -375,143 +379,144 @@ msgid ""
 "If your required language is not listed, please install Tesseract's language "
 "file with your package manager."
 msgstr ""
-"如果您所需的语言未被列出，请使用本机系统的包管理器安装 Tesseract 的语言文件。"
+"Ja nav uzskaitīt pieprasītā valoda, pakotņu pārvaldītājā instalējiet "
+"„Tesseract“ valodas datni."
 
 #: qml/ExportWindow.qml:180
 #, kde-format
 msgid "Save"
-msgstr "保存"
+msgstr "Saglabāt"
 
 #: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
 #, kde-format
 msgid "Cancel"
-msgstr "取消"
+msgstr "Atcelt"
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
 msgctxt "menu category"
 msgid "File"
-msgstr "文件"
+msgstr "Datne"
 
 #: qml/GlobalMenu.qml:68
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
-msgstr "扫描"
+msgstr "Skenēt"
 
 #: qml/GlobalMenu.qml:124
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
-msgstr "帮助"
+msgstr "Palīdzība"
 
 #: qml/InProgressPage.qml:26
 #, kde-kuit-format
 msgctxt "Countdown string with time given in seconds"
 msgid "Next scan starts in<nl/>%1 s"
-msgstr "下次扫描将在<nl/>%1 秒后开始"
+msgstr "Nākamā skenēšana sākas pēc<nl/> %1 sek."
 
 #: qml/InProgressPage.qml:44
 #, kde-format
 msgctxt "@info"
 msgid "Scan in progress."
-msgstr "正在扫描。"
+msgstr "Notiek skenēšana."
 
 #: qml/MainWindow.qml:23
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
-msgstr "%1 ― Skanpage"
+msgstr "%1 ― „Skanpage“"
 
 #: qml/MainWindow.qml:85
 #, kde-format
 msgid "Discard All"
-msgstr "全部丢弃"
+msgstr "Izmest visu"
 
 #: qml/MainWindow.qml:94
 #, kde-format
 msgid "Save All"
-msgstr "全部保存"
+msgstr "Saglabāt visu"
 
 #: qml/MainWindow.qml:111
 #, kde-format
 msgid "Preview"
-msgstr "预览"
+msgstr "Priekšskatījums"
 
 #: qml/MainWindow.qml:123
 #, kde-format
 msgid "Scan"
-msgstr "扫描"
+msgstr "Skenēt"
 
 #: qml/MainWindow.qml:145
 #, kde-format
 msgid "Show Scanner Options"
-msgstr "显示扫描仪选项"
+msgstr "Rādīt skenera opcijas"
 
 #: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
-msgstr "分享"
+msgstr "Kopīgot"
 
 #: qml/MainWindow.qml:163
 #, kde-format
 msgid "Print"
-msgstr "打印"
+msgstr "Drukāt"
 
 #: qml/MainWindow.qml:184 qml/MainWindow.qml:381
 #, kde-format
 msgid "About Skanpage"
-msgstr "关于 Skanpage"
+msgstr "Par „Skanpage“"
 
 #: qml/MainWindow.qml:191
 #, kde-format
 msgid "Configure Skanpage…"
-msgstr "配置 Skanpage…"
+msgstr "Konfigurēt „Skanpage“..."
 
 #: qml/MainWindow.qml:199
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr "配置键盘快捷键…"
+msgstr "Konfigurēt tastatūras saīsnes..."
 
 #: qml/MainWindow.qml:207
 #, kde-format
 msgid "Quit"
-msgstr "退出"
+msgstr "Iziet"
 
 #: qml/OptionDelegate.qml:55
 #, kde-format
 msgid "%1:"
-msgstr "%1："
+msgstr "%1:"
 
 #: qml/OptionDelegate.qml:150
 #, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
-msgstr "%1："
+msgstr "%1:"
 
 #: qml/OptionDelegate.qml:154
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr "默认"
+msgstr "Noklusējums"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Brightness: %1"
-msgstr "亮度：%1"
+msgstr "Gaišums: %1"
 
 #: qml/OptionDelegate.qml:181
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Contrast: %1"
-msgstr "对比度：%1"
+msgstr "Kontrasts: %1"
 
 #: qml/OptionDelegate.qml:194
 #, kde-format
 msgctxt "%1 is a numeric value"
 msgid "Gamma: %1"
-msgstr "伽玛值：%1"
+msgstr "Gamma: %1"
 
 #: qml/OptionDelegate.qml:224
 #, kde-format
@@ -523,7 +528,7 @@ msgstr "%1 %2"
 #, kde-format
 msgctxt "Unit suffix for bit"
 msgid "bit"
-msgstr "位"
+msgstr "bits"
 
 #: qml/OptionDelegate.qml:252
 #, kde-format
@@ -535,19 +540,19 @@ msgstr "DPI"
 #, kde-format
 msgctxt "Unit suffix for microsecond"
 msgid "µs"
-msgstr "微秒"
+msgstr "µs"
 
 #: qml/OptionDelegate.qml:258
 #, kde-format
 msgctxt "Unit suffix for second"
 msgid "s"
-msgstr "秒"
+msgstr "sek."
 
 #: qml/OptionDelegate.qml:261
 #, kde-format
 msgctxt "Unit suffix for millimeter"
 msgid "mm"
-msgstr "毫米"
+msgstr "mm"
 
 #: qml/OptionDelegate.qml:264
 #, kde-format
@@ -559,12 +564,12 @@ msgstr "%"
 #, kde-format
 msgctxt "Unit suffix for pixel"
 msgid "px"
-msgstr "像素"
+msgstr "px"
 
 #: qml/OptionsPanel.qml:30
 #, kde-format
 msgid "Select options for quick access:"
-msgstr "选择快速访问选项："
+msgstr "Atlasiet opcijas ātrai piekļuvei:"
 
 #: qml/OptionsPanel.qml:71
 #, kde-format
@@ -575,56 +580,56 @@ msgstr "%1 %2"
 #: qml/OptionsPanel.qml:84
 #, kde-format
 msgid "Show More"
-msgstr "显示更多"
+msgstr "Rādīt vairāk"
 
 #: qml/OptionsPanel.qml:94
 #, kde-format
 msgid "Configure Visibility"
-msgstr "配置可见性"
+msgstr "Konfigurēt redzamību"
 
 #: qml/OptionsPanel.qml:109
 #, kde-format
 msgid "Reselect Scanner"
-msgstr "重新选择扫描仪"
+msgstr "No jauna atlasīt skeneri"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
 msgid "Configure"
-msgstr "配置"
+msgstr "Konfigurēt"
 
 #: qml/SettingsWindow.qml:38
 #, kde-format
 msgid "Devices to show:"
-msgstr "显示的设备："
+msgstr "Parādāmās ierīces"
 
 #: qml/SettingsWindow.qml:39
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
-msgstr "仅扫描仪"
+msgstr "Tikai skeneri"
 
 #: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
-msgstr "扫描仪、数码相机、虚拟设备"
+msgstr "Skeneri, kameras un virtuālās ierīces"
 
 #: qml/SettingsWindow.qml:53
 #, kde-format
 msgid "Default file format:"
-msgstr "默认文件格式："
+msgstr "Noklusējuma datnes formāts:"
 
 #: qml/SettingsWindow.qml:68
 #, kde-format
 msgid "Default save location:"
-msgstr "默认保存位置："
+msgstr "Noklusējuma saglabāšanas vieta:"
 
 #: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Close"
-msgstr "关闭"
+msgstr "Aizvērt"
 
 #: qml/ShareWindow.qml:42
 #, kde-format
 msgid "Share as:"
-msgstr "分享为："
+msgstr "Kopīgot kā:"
