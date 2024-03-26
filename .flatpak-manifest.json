@@ -2,7 +2,7 @@
     "id": "org.kde.skanpage",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.6-kf6preview",
+    "runtime-version": "6.6",
     "sdk": "org.kde.Sdk",
     "command": "skanpage",
     "tags": [
@@ -46,6 +46,7 @@
                         "--disable-gtk",
                         "--disable-qt3",
                         "--disable-qt4",
+                        "--disable-qt5",
                         "--disable-mono",
                         "--disable-monodoc",
                         "--with-distro=none",
@@ -111,6 +112,9 @@
                 {
                     "name": "libksanecore",
                     "buildsystem": "cmake-ninja",
+                    "config-opts": [
+                        "-DQT_MAJOR_VERSION=6"
+                    ],
                     "sources": [
                         {
                             "type": "git",
@@ -232,6 +236,9 @@
         {
             "name": "kquickimageeditor",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DQT_MAJOR_VERSION=6"
+            ],
             "sources": [
                 {
                     "type": "archive",
