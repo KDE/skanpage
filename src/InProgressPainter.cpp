@@ -16,9 +16,6 @@ InProgressPainter::InProgressPainter(QQuickItem *parent) : QQuickPaintedItem(par
 
 InProgressPainter::~InProgressPainter()
 {
-    if (m_scanInterface != nullptr) {
-        m_scanInterface->unlockScanImage();
-    }
 }
 
 void InProgressPainter::initialize(Skanpage *skanpageApp)
