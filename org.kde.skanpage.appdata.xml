@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2020 Alexander Stippich <a.stippich@gmx.net>
 
 SPDX-License-Identifier: CC0-1.0
 -->
-<component type="desktop">
+<component type="desktop-application">
   <id>org.kde.skanpage.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
