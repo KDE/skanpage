@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"POT-Creation-Date: 2024-04-06 00:41+0000\n"
 "PO-Revision-Date: 2023-12-27 09:54+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -135,6 +135,11 @@ msgstr ""
 msgid "device"
 msgstr "устройство"
 
+#: main.cpp:78
+#, kde-format
+msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
 #: qml/ContentView.qml:18
 #, kde-format
 msgctxt "Prefix for document name indicating an unsaved document"
@@ -174,74 +179,74 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Поиск доступных устройств…"
 
-#: qml/DocumentList.qml:74
+#: qml/DocumentList.qml:73
 #, kde-format
 msgid "Select previous page"
 msgstr "Выбрать предыдущую страницу"
 
-#: qml/DocumentList.qml:80
+#: qml/DocumentList.qml:79
 #, kde-format
 msgid "Select next page"
 msgstr "Выбрать следующую страницу"
 
-#: qml/DocumentList.qml:86
+#: qml/DocumentList.qml:85
 #, kde-format
 msgid "Move selected page up"
 msgstr "Переместить выбранную страницу вверх"
 
-#: qml/DocumentList.qml:95
+#: qml/DocumentList.qml:94
 #, kde-format
 msgid "Move selected page down"
 msgstr "Переместить выбранную страницу вниз"
 
-#: qml/DocumentList.qml:207
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Обработка страницы…"
 
-#: qml/DocumentList.qml:220
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Страница %1"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "Переместить вверх"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "Переместить вниз"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
 #, kde-format
 msgid "Rotate Left"
 msgstr "Повернуть влево"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Right"
 msgstr "Повернуть вправо"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Flip"
 msgstr "Отразить"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Save Page"
 msgstr "Сохранить страницу"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Delete Page"
 msgstr "Удалить страницу"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
@@ -250,54 +255,49 @@ msgstr[1] "%1 страницы"
 msgstr[2] "%1 страниц"
 msgstr[3] "%1 страница"
 
-#: qml/DocumentList.qml:303
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:308
+#: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:315
+#: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:322
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:330
+#: qml/DocumentList.qml:328
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Изменять порядок страниц"
 
-#: qml/DocumentList.qml:335
+#: qml/DocumentList.qml:333
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:342
+#: qml/DocumentList.qml:340
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:349
+#: qml/DocumentList.qml:347
 #, kde-format
 msgid "Reverse Order"
 msgstr "На обратный порядок"
 
-#: qml/DocumentPage.qml:56
-#, kde-format
-msgid "Show Preview"
-msgstr "Выполнить предварительный просмотр"
-
-#: qml/DocumentPage.qml:72
+#: qml/DocumentPage.qml:40
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
@@ -305,48 +305,22 @@ msgstr ""
 "Документ не содержит ни одного изображения.<nl/><nl/>Чтобы добавить "
 "изображения в документ, запустите сканирование."
 
-#: qml/DocumentPage.qml:258
-#, kde-format
-msgid "Discard this selection"
-msgstr "Отменить это выделение"
-
-#: qml/DocumentPage.qml:278
-#, kde-format
-msgid "Add Selection Area"
-msgstr "Добавить область выделения"
-
-#: qml/DocumentPage.qml:283
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr ""
-"Чтобы выбрать другую область, сделайте щелчок и выполните перетаскивание"
-
-#: qml/DocumentPage.qml:293
-#, kde-format
-msgid "Split Scan Vertically"
-msgstr "Разделить отсканированное по вертикали"
-
-#: qml/DocumentPage.qml:304
-#, kde-format
-msgid "Split Scan Horizontally"
-msgstr "Разделить отсканированное по горизонтали"
-
-#: qml/DocumentPage.qml:376
+#: qml/DocumentPage.qml:98
 #, kde-format
 msgid "Zoom In"
 msgstr "Увеличить масштаб"
 
-#: qml/DocumentPage.qml:385
+#: qml/DocumentPage.qml:107
 #, kde-format
 msgid "Zoom Out"
 msgstr "Уменьшить масштаб"
 
-#: qml/DocumentPage.qml:394
+#: qml/DocumentPage.qml:116
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Вместить в окно"
 
-#: qml/DocumentPage.qml:410
+#: qml/DocumentPage.qml:132
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Масштаб 100%"
@@ -396,7 +370,7 @@ msgstr ""
 msgid "Save"
 msgstr "Сохранить"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
 #, kde-format
 msgid "Cancel"
 msgstr "Отмена"
@@ -452,42 +426,42 @@ msgstr "Сохранить все"
 msgid "Preview"
 msgstr "Предварительный просмотр"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:130
 #, kde-format
 msgid "Scan"
 msgstr "Сканировать"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:154
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Параметры сканера"
 
-#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Опубликовать"
 
-#: qml/MainWindow.qml:163
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Print"
 msgstr "Печать"
 
-#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
+#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
 #, kde-format
 msgid "About Skanpage"
 msgstr "О программе Skanpage"
 
-#: qml/MainWindow.qml:191
+#: qml/MainWindow.qml:200
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Настроить Skanpage…"
 
-#: qml/MainWindow.qml:199
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Настроить комбинации клавиш…"
 
-#: qml/MainWindow.qml:207
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Quit"
 msgstr "Выход"
@@ -600,6 +574,44 @@ msgstr "Настройка видимости инструментов"
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Выбрать другой сканер"
+
+#: qml/PreviewScanView.qml:239
+#, kde-format
+msgid "Discard this selection"
+msgstr "Отменить это выделение"
+
+#: qml/PreviewScanView.qml:262
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "New Preview Scan"
+msgstr "Выполнить предварительный просмотр"
+
+#: qml/PreviewScanView.qml:271
+#, kde-format
+msgid "Add Selection Area"
+msgstr "Добавить область выделения"
+
+#: qml/PreviewScanView.qml:275
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr ""
+"Чтобы выбрать другую область, сделайте щелчок и выполните перетаскивание"
+
+#: qml/PreviewScanView.qml:285
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr "Разделить отсканированное по вертикали"
+
+#: qml/PreviewScanView.qml:295
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr "Разделить отсканированное по горизонтали"
+
+#: qml/PreviewScanView.qml:305
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "Close Preview"
+msgstr "Выполнить предварительный просмотр"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

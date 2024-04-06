@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"POT-Creation-Date: 2024-04-06 00:41+0000\n"
 "PO-Revision-Date: 2024-03-24 11:51+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -132,6 +132,11 @@ msgstr "«Sane» eskanerraren gailu-izena. Erabili 'proba' proba-gailurako."
 msgid "device"
 msgstr "gailua"
 
+#: main.cpp:78
+#, kde-format
+msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
 #: qml/ContentView.qml:18
 #, kde-format
 msgctxt "Prefix for document name indicating an unsaved document"
@@ -171,174 +176,144 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "Gailu erabilgarrien bila."
 
-#: qml/DocumentList.qml:74
+#: qml/DocumentList.qml:73
 #, kde-format
 msgid "Select previous page"
 msgstr "Hautatu aurreko orrialdea"
 
-#: qml/DocumentList.qml:80
+#: qml/DocumentList.qml:79
 #, kde-format
 msgid "Select next page"
 msgstr "Hautatu hurrengo orrialdea"
 
-#: qml/DocumentList.qml:86
+#: qml/DocumentList.qml:85
 #, kde-format
 msgid "Move selected page up"
 msgstr "Eraman gora hautatutako orrialdea"
 
-#: qml/DocumentList.qml:95
+#: qml/DocumentList.qml:94
 #, kde-format
 msgid "Move selected page down"
 msgstr "Eraman behera hautatutako orrialdea"
 
-#: qml/DocumentList.qml:207
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Orrialdea prozesatzen..."
 
-#: qml/DocumentList.qml:220
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "%1 orrialdea"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "Eraman gora"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "Eraman behera"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
 #, kde-format
 msgid "Rotate Left"
 msgstr "Biratu ezkerrera"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Right"
 msgstr "Biratu eskuinera"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Flip"
 msgstr "Irauli"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Save Page"
 msgstr "Gorde orrialdea"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Delete Page"
 msgstr "Ezabatu orrialdea"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "orrialde %1"
 msgstr[1] "%1 orrialde"
 
-#: qml/DocumentList.qml:303
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
 msgstr "Irauli orrialdeak"
 
-#: qml/DocumentList.qml:308
+#: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr "Irauli orrialde bakoitiak"
 
-#: qml/DocumentList.qml:315
+#: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
 msgstr "Irauli orrialde bikoitiak"
 
-#: qml/DocumentList.qml:322
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
 msgstr "Irauli orrialde guztiak"
 
-#: qml/DocumentList.qml:330
+#: qml/DocumentList.qml:328
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Berrantolatu orrialdeak"
 
-#: qml/DocumentList.qml:335
+#: qml/DocumentList.qml:333
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:342
+#: qml/DocumentList.qml:340
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:349
+#: qml/DocumentList.qml:347
 #, kde-format
 msgid "Reverse Order"
 msgstr "Alderantzizko ordena"
 
-#: qml/DocumentPage.qml:56
-#, kde-format
-msgid "Show Preview"
-msgstr "Erakutsi aurreikuspegia"
-
-#: qml/DocumentPage.qml:72
+#: qml/DocumentPage.qml:40
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
 msgstr "Ez duzu irudirik dokumentu honetan.<nl/><nl/>Hasi eskaneatzen!"
 
-#: qml/DocumentPage.qml:258
-#, kde-format
-msgid "Discard this selection"
-msgstr "Baztertu hautapen hau"
-
-#: qml/DocumentPage.qml:278
-#, kde-format
-msgid "Add Selection Area"
-msgstr "Gehitu hautapen azalera"
-
-#: qml/DocumentPage.qml:283
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Egin klik eta arrastu beste azalera bat hautatzeko"
-
-#: qml/DocumentPage.qml:293
-#, kde-format
-msgid "Split Scan Vertically"
-msgstr "Zatitu eskaneatua bertikalki"
-
-#: qml/DocumentPage.qml:304
-#, kde-format
-msgid "Split Scan Horizontally"
-msgstr "Zatitu eskaneatua horizontalki"
-
-#: qml/DocumentPage.qml:376
+#: qml/DocumentPage.qml:98
 #, kde-format
 msgid "Zoom In"
 msgstr "Zooma gerturatu"
 
-#: qml/DocumentPage.qml:385
+#: qml/DocumentPage.qml:107
 #, kde-format
 msgid "Zoom Out"
 msgstr "Zooma urrundu"
 
-#: qml/DocumentPage.qml:394
+#: qml/DocumentPage.qml:116
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Zooma doitu"
 
-#: qml/DocumentPage.qml:410
+#: qml/DocumentPage.qml:132
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Zooma % 100"
@@ -387,7 +362,7 @@ msgstr ""
 msgid "Save"
 msgstr "Gorde"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
@@ -443,42 +418,42 @@ msgstr "Gorde dena"
 msgid "Preview"
 msgstr "Aurreikusi"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:130
 #, kde-format
 msgid "Scan"
 msgstr "Eskaneatu"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:154
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Erakutsi eskanerraren aukerak"
 
-#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Partekatu"
 
-#: qml/MainWindow.qml:163
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Print"
 msgstr "Inprimatu"
 
-#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
+#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage-ri buruz"
 
-#: qml/MainWindow.qml:191
+#: qml/MainWindow.qml:200
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Konfiguratu Skanpage…"
 
-#: qml/MainWindow.qml:199
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Konfiguratu teklatuko lasterbideak…"
 
-#: qml/MainWindow.qml:207
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Quit"
 msgstr "Irten"
@@ -591,6 +566,43 @@ msgstr "Konfiguratu ikusgaitasuna"
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Eskanerra berriz hautatzea"
+
+#: qml/PreviewScanView.qml:239
+#, kde-format
+msgid "Discard this selection"
+msgstr "Baztertu hautapen hau"
+
+#: qml/PreviewScanView.qml:262
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "New Preview Scan"
+msgstr "Erakutsi aurreikuspegia"
+
+#: qml/PreviewScanView.qml:271
+#, kde-format
+msgid "Add Selection Area"
+msgstr "Gehitu hautapen azalera"
+
+#: qml/PreviewScanView.qml:275
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr "Egin klik eta arrastu beste azalera bat hautatzeko"
+
+#: qml/PreviewScanView.qml:285
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr "Zatitu eskaneatua bertikalki"
+
+#: qml/PreviewScanView.qml:295
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr "Zatitu eskaneatua horizontalki"
+
+#: qml/PreviewScanView.qml:305
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "Close Preview"
+msgstr "Erakutsi aurreikuspegia"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

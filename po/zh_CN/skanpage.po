@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"POT-Creation-Date: 2024-04-06 00:41+0000\n"
 "PO-Revision-Date: 2024-03-30 19:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -129,6 +129,11 @@ msgstr "Sane 扫描仪设备名称。测试设备请使用“test”。"
 msgid "device"
 msgstr "设备"
 
+#: main.cpp:78
+#, kde-format
+msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
 #: qml/ContentView.qml:18
 #, kde-format
 msgctxt "Prefix for document name indicating an unsaved document"
@@ -168,173 +173,143 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "正在扫描可用设备。"
 
-#: qml/DocumentList.qml:74
+#: qml/DocumentList.qml:73
 #, kde-format
 msgid "Select previous page"
 msgstr "选择上一页"
 
-#: qml/DocumentList.qml:80
+#: qml/DocumentList.qml:79
 #, kde-format
 msgid "Select next page"
 msgstr "选择下一页"
 
-#: qml/DocumentList.qml:86
+#: qml/DocumentList.qml:85
 #, kde-format
 msgid "Move selected page up"
 msgstr "上移所选页面"
 
-#: qml/DocumentList.qml:95
+#: qml/DocumentList.qml:94
 #, kde-format
 msgid "Move selected page down"
 msgstr "下移所选页面"
 
-#: qml/DocumentList.qml:207
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "正在处理页面..."
 
-#: qml/DocumentList.qml:220
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "第 %1 页"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "上移"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "下移"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
 #, kde-format
 msgid "Rotate Left"
 msgstr "旋转 (向左)"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Right"
 msgstr "旋转 (向右)"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Flip"
 msgstr "翻转"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Save Page"
 msgstr "保存页面"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Delete Page"
 msgstr "删除页面"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 页"
 
-#: qml/DocumentList.qml:303
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
 msgstr "翻转页面"
 
-#: qml/DocumentList.qml:308
+#: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr "翻转奇数页面"
 
-#: qml/DocumentList.qml:315
+#: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
 msgstr "翻转偶数页面"
 
-#: qml/DocumentList.qml:322
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
 msgstr "翻转所有页面"
 
-#: qml/DocumentList.qml:330
+#: qml/DocumentList.qml:328
 #, kde-format
 msgid "Reorder Pages"
 msgstr "页面重新排序"
 
-#: qml/DocumentList.qml:335
+#: qml/DocumentList.qml:333
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:342
+#: qml/DocumentList.qml:340
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:349
+#: qml/DocumentList.qml:347
 #, kde-format
 msgid "Reverse Order"
 msgstr "反向排序"
 
-#: qml/DocumentPage.qml:56
-#, kde-format
-msgid "Show Preview"
-msgstr "显示预览"
-
-#: qml/DocumentPage.qml:72
+#: qml/DocumentPage.qml:40
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
 msgstr "此文档尚未包含任何图像。<nl/><nl/>请开始扫描。"
 
-#: qml/DocumentPage.qml:258
-#, kde-format
-msgid "Discard this selection"
-msgstr "丢弃此选区"
-
-#: qml/DocumentPage.qml:278
-#, kde-format
-msgid "Add Selection Area"
-msgstr "添加选区"
-
-#: qml/DocumentPage.qml:283
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "点击并拖动以选择另一个区域"
-
-#: qml/DocumentPage.qml:293
-#, kde-format
-msgid "Split Scan Vertically"
-msgstr "垂直拆分扫描"
-
-#: qml/DocumentPage.qml:304
-#, kde-format
-msgid "Split Scan Horizontally"
-msgstr "水平拆分扫描"
-
-#: qml/DocumentPage.qml:376
+#: qml/DocumentPage.qml:98
 #, kde-format
 msgid "Zoom In"
 msgstr "放大"
 
-#: qml/DocumentPage.qml:385
+#: qml/DocumentPage.qml:107
 #, kde-format
 msgid "Zoom Out"
 msgstr "缩小"
 
-#: qml/DocumentPage.qml:394
+#: qml/DocumentPage.qml:116
 #, kde-format
 msgid "Zoom Fit"
 msgstr "自适应缩放"
 
-#: qml/DocumentPage.qml:410
+#: qml/DocumentPage.qml:132
 #, kde-format
 msgid "Zoom 100%"
 msgstr "缩放至 100%"
@@ -382,7 +357,7 @@ msgstr ""
 msgid "Save"
 msgstr "保存"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -438,42 +413,42 @@ msgstr "全部保存"
 msgid "Preview"
 msgstr "预览"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:130
 #, kde-format
 msgid "Scan"
 msgstr "扫描"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:154
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "显示扫描仪选项"
 
-#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "分享"
 
-#: qml/MainWindow.qml:163
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Print"
 msgstr "打印"
 
-#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
+#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
 #, kde-format
 msgid "About Skanpage"
 msgstr "关于 Skanpage"
 
-#: qml/MainWindow.qml:191
+#: qml/MainWindow.qml:200
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "配置 Skanpage…"
 
-#: qml/MainWindow.qml:199
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "配置键盘快捷键…"
 
-#: qml/MainWindow.qml:207
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Quit"
 msgstr "退出"
@@ -586,6 +561,43 @@ msgstr "配置可见性"
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "重新选择扫描仪"
+
+#: qml/PreviewScanView.qml:239
+#, kde-format
+msgid "Discard this selection"
+msgstr "丢弃此选区"
+
+#: qml/PreviewScanView.qml:262
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "New Preview Scan"
+msgstr "显示预览"
+
+#: qml/PreviewScanView.qml:271
+#, kde-format
+msgid "Add Selection Area"
+msgstr "添加选区"
+
+#: qml/PreviewScanView.qml:275
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr "点击并拖动以选择另一个区域"
+
+#: qml/PreviewScanView.qml:285
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr "垂直拆分扫描"
+
+#: qml/PreviewScanView.qml:295
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr "水平拆分扫描"
+
+#: qml/PreviewScanView.qml:305
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "Close Preview"
+msgstr "显示预览"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

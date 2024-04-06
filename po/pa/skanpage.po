@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"POT-Creation-Date: 2024-04-06 00:41+0000\n"
 "PO-Revision-Date: 2023-12-25 08:33-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -129,6 +129,11 @@ msgstr "ਸੇਨ ਸਕੈਨਰ ਡਿਵਾਈਸ ਦਾ ਨਾਂ। ਡਿ�
 msgid "device"
 msgstr "ਡਿਵਾਈਸ"
 
+#: main.cpp:78
+#, kde-format
+msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
 #: qml/ContentView.qml:18
 #, kde-format
 msgctxt "Prefix for document name indicating an unsaved document"
@@ -168,174 +173,144 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "ਮੌਜੂਦ ਡਿਵਾਈਸਾਂ ਲਈ ਖੋਜ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।"
 
-#: qml/DocumentList.qml:74
+#: qml/DocumentList.qml:73
 #, kde-format
 msgid "Select previous page"
 msgstr "ਪਿਛਲਾ ਸਫ਼ਾ ਚੁਣੋ"
 
-#: qml/DocumentList.qml:80
+#: qml/DocumentList.qml:79
 #, kde-format
 msgid "Select next page"
 msgstr "ਅਗਲਾ ਸਫ਼ਾ ਚੁਣੋ"
 
-#: qml/DocumentList.qml:86
+#: qml/DocumentList.qml:85
 #, kde-format
 msgid "Move selected page up"
 msgstr "ਚੁਣੇ ਸਫ਼ੇ ਨੂੰ ਉੱਤੇ ਭੇਜੋ"
 
-#: qml/DocumentList.qml:95
+#: qml/DocumentList.qml:94
 #, kde-format
 msgid "Move selected page down"
 msgstr "ਚੁਣੇ ਸਫ਼ੇ ਨੂੰ ਹੇਠਾਂ ਭੇਜੋ"
 
-#: qml/DocumentList.qml:207
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "...ਸਫ਼ੇ ਉੱਤੇ ਕਾਰਵਾਈ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ"
 
-#: qml/DocumentList.qml:220
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "%1 ਸਫ਼ਾ"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "ਉੱਤੇ ਭੇਜੋ"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "ਹੇਠਾਂ ਭੇਜੋ"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
 #, kde-format
 msgid "Rotate Left"
 msgstr "ਖੱਬੇ ਘੁੰਮਾਓ"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Right"
 msgstr "ਸੱਜੇ ਘੁੰਮਾਓ"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Flip"
 msgstr "ਪਲਟੋ"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Save Page"
 msgstr "ਸਫ਼ੇ ਨੂੰ ਸੰਭਾਲੋ"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Delete Page"
 msgstr "ਸਫ਼ੇ ਨੂੰ ਹਟਾਓ"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 ਸਫ਼ਾ"
 msgstr[1] "%1 ਸਫ਼ੇ"
 
-#: qml/DocumentList.qml:303
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:308
+#: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:315
+#: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:322
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:330
+#: qml/DocumentList.qml:328
 #, kde-format
 msgid "Reorder Pages"
 msgstr "ਸਫ਼ਾ ਦਾ ਕ੍ਰਮ ਬਦਲੋ"
 
-#: qml/DocumentList.qml:335
+#: qml/DocumentList.qml:333
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:342
+#: qml/DocumentList.qml:340
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:349
+#: qml/DocumentList.qml:347
 #, kde-format
 msgid "Reverse Order"
 msgstr "ਉਲਟ ਕ੍ਰਮ"
 
-#: qml/DocumentPage.qml:56
-#, kde-format
-msgid "Show Preview"
-msgstr "ਝਲਕ ਨੂੰ ਵੇਖੋ"
-
-#: qml/DocumentPage.qml:72
+#: qml/DocumentPage.qml:40
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
 msgstr "ਤੁਹਾਡੇ ਕੋਲ ਇਸ ਡੌਕੂਮੈਂਟ ਵਿੱਚ ਕੋਈ ਵੀ ਚਿੱਤਰ ਨਹੀਂ ਹਨ।<nl/><nl/>ਸਕੈਨ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ!"
 
-#: qml/DocumentPage.qml:258
-#, kde-format
-msgid "Discard this selection"
-msgstr "ਇਹ ਚੋਣ ਨੂੰ ਖ਼ਾਰਜ ਕਰੋ"
-
-#: qml/DocumentPage.qml:278
-#, kde-format
-msgid "Add Selection Area"
-msgstr "ਚੁਣੇ ਗਏ ਖੇਤਰ ਨੂੰ ਜੋੜੋ"
-
-#: qml/DocumentPage.qml:283
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "ਹੋਰ ਖੇਤਰ ਨੂੰ ਚੁਣਨ ਲਈ ਕਲਿੱਕ ਕਰਕੇ ਖਿੱਚੋ"
-
-#: qml/DocumentPage.qml:293
-#, kde-format
-msgid "Split Scan Vertically"
-msgstr "ਸਕੈਨ ਨੂੰ ਖੜ੍ਹਵੇਂ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
-
-#: qml/DocumentPage.qml:304
-#, kde-format
-msgid "Split Scan Horizontally"
-msgstr "ਸਕੈਨ ਨੂੰ ਲੇਟਵੇਂ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
-
-#: qml/DocumentPage.qml:376
+#: qml/DocumentPage.qml:98
 #, kde-format
 msgid "Zoom In"
 msgstr "ਜ਼ੂਮ ਇਨ"
 
-#: qml/DocumentPage.qml:385
+#: qml/DocumentPage.qml:107
 #, kde-format
 msgid "Zoom Out"
 msgstr "ਜ਼ੂਮ ਆਉਟ"
 
-#: qml/DocumentPage.qml:394
+#: qml/DocumentPage.qml:116
 #, kde-format
 msgid "Zoom Fit"
 msgstr "ਜ਼ੂਮ ਫਿੱਟ"
 
-#: qml/DocumentPage.qml:410
+#: qml/DocumentPage.qml:132
 #, kde-format
 msgid "Zoom 100%"
 msgstr "ਜ਼ੂਮ 100%"
@@ -384,7 +359,7 @@ msgstr ""
 msgid "Save"
 msgstr "ਸੰਭਾਲੋ"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
 #, kde-format
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
@@ -440,42 +415,42 @@ msgstr "ਸਭ ਸੰਭਾਲੋ"
 msgid "Preview"
 msgstr "ਝਲਕ"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:130
 #, kde-format
 msgid "Scan"
 msgstr "ਸਕੈਨ"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:154
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "ਸਕੈਨਰ ਚੋਣਾਂ ਵੇਖਾਓ"
 
-#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
 
-#: qml/MainWindow.qml:163
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Print"
 msgstr "ਪਰਿੰਟ ਕਰੋ"
 
-#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
+#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
 #, kde-format
 msgid "About Skanpage"
 msgstr "ਸਕੈਨ-ਪੇਜ਼ ਬਾਰੇ"
 
-#: qml/MainWindow.qml:191
+#: qml/MainWindow.qml:200
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "ਸਕੈਨ-ਪੇਜ਼ ਸੰਰਚਨਾ…"
 
-#: qml/MainWindow.qml:199
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "ਕੀ-ਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਦੀ ਸੰਰਚਨਾ…"
 
-#: qml/MainWindow.qml:207
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Quit"
 msgstr "ਬਾਹਰ"
@@ -588,6 +563,43 @@ msgstr "ਦਿੱਖ ਦੀ ਸੰਰਚਨਾ"
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "ਸਕੈਨਰ ਮੁੜ-ਚੁਣੋ"
+
+#: qml/PreviewScanView.qml:239
+#, kde-format
+msgid "Discard this selection"
+msgstr "ਇਹ ਚੋਣ ਨੂੰ ਖ਼ਾਰਜ ਕਰੋ"
+
+#: qml/PreviewScanView.qml:262
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "New Preview Scan"
+msgstr "ਝਲਕ ਨੂੰ ਵੇਖੋ"
+
+#: qml/PreviewScanView.qml:271
+#, kde-format
+msgid "Add Selection Area"
+msgstr "ਚੁਣੇ ਗਏ ਖੇਤਰ ਨੂੰ ਜੋੜੋ"
+
+#: qml/PreviewScanView.qml:275
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr "ਹੋਰ ਖੇਤਰ ਨੂੰ ਚੁਣਨ ਲਈ ਕਲਿੱਕ ਕਰਕੇ ਖਿੱਚੋ"
+
+#: qml/PreviewScanView.qml:285
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr "ਸਕੈਨ ਨੂੰ ਖੜ੍ਹਵੇਂ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
+
+#: qml/PreviewScanView.qml:295
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr "ਸਕੈਨ ਨੂੰ ਲੇਟਵੇਂ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
+
+#: qml/PreviewScanView.qml:305
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "Close Preview"
+msgstr "ਝਲਕ ਨੂੰ ਵੇਖੋ"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

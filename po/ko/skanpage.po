@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:40+0000\n"
+"POT-Creation-Date: 2024-04-06 00:41+0000\n"
 "PO-Revision-Date: 2024-02-05 23:17+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -130,6 +130,11 @@ msgstr ""
 msgid "device"
 msgstr "장치"
 
+#: main.cpp:78
+#, kde-format
+msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
 #: qml/ContentView.qml:18
 #, kde-format
 msgctxt "Prefix for document name indicating an unsaved document"
@@ -169,173 +174,143 @@ msgctxt "@info"
 msgid "Searching for available devices."
 msgstr "사용 가능한 장치 검색 중입니다."
 
-#: qml/DocumentList.qml:74
+#: qml/DocumentList.qml:73
 #, kde-format
 msgid "Select previous page"
 msgstr "이전 쪽 선택"
 
-#: qml/DocumentList.qml:80
+#: qml/DocumentList.qml:79
 #, kde-format
 msgid "Select next page"
 msgstr "다음 쪽 선택"
 
-#: qml/DocumentList.qml:86
+#: qml/DocumentList.qml:85
 #, kde-format
 msgid "Move selected page up"
 msgstr "선택한 쪽 위로 이동"
 
-#: qml/DocumentList.qml:95
+#: qml/DocumentList.qml:94
 #, kde-format
 msgid "Move selected page down"
 msgstr "선택한 쪽 아래로 이동"
 
-#: qml/DocumentList.qml:207
+#: qml/DocumentList.qml:205
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "쪽 처리 중..."
 
-#: qml/DocumentList.qml:220
+#: qml/DocumentList.qml:218
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "%1쪽"
 
-#: qml/DocumentList.qml:231
+#: qml/DocumentList.qml:229
 #, kde-format
 msgid "Move Up"
 msgstr "위로 이동"
 
-#: qml/DocumentList.qml:241
+#: qml/DocumentList.qml:239
 #, kde-format
 msgid "Move Down"
 msgstr "아래로 이동"
 
-#: qml/DocumentList.qml:251 qml/DocumentPage.qml:418
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
 #, kde-format
 msgid "Rotate Left"
 msgstr "왼쪽으로 회전"
 
-#: qml/DocumentList.qml:257 qml/DocumentPage.qml:425
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Right"
 msgstr "오른쪽으로 회전"
 
-#: qml/DocumentList.qml:263 qml/DocumentPage.qml:432
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Flip"
 msgstr "상하 뒤집기"
 
-#: qml/DocumentList.qml:269 qml/DocumentPage.qml:439
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Save Page"
 msgstr "쪽 저장"
 
-#: qml/DocumentList.qml:275 qml/DocumentPage.qml:446
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Delete Page"
 msgstr "쪽 삭제"
 
-#: qml/DocumentList.qml:294
+#: qml/DocumentList.qml:292
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1쪽"
 
-#: qml/DocumentList.qml:303
+#: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:308
+#: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:315
+#: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:322
+#: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:330
+#: qml/DocumentList.qml:328
 #, kde-format
 msgid "Reorder Pages"
 msgstr "쪽 재정렬"
 
-#: qml/DocumentList.qml:335
+#: qml/DocumentList.qml:333
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:342
+#: qml/DocumentList.qml:340
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:349
+#: qml/DocumentList.qml:347
 #, kde-format
 msgid "Reverse Order"
 msgstr "순서 뒤집기"
 
-#: qml/DocumentPage.qml:56
-#, kde-format
-msgid "Show Preview"
-msgstr "미리 보기 표시"
-
-#: qml/DocumentPage.qml:72
+#: qml/DocumentPage.qml:40
 #, kde-kuit-format
 msgctxt "@info"
 msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
 msgstr "이 문서에 그림이 없습니다.<nl/> <nl/>스캔을 시작하십시오!"
 
-#: qml/DocumentPage.qml:258
-#, kde-format
-msgid "Discard this selection"
-msgstr "이 선택 무시"
-
-#: qml/DocumentPage.qml:278
-#, kde-format
-msgid "Add Selection Area"
-msgstr "선택 영역 추가"
-
-#: qml/DocumentPage.qml:283
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "다른 영역을 선택하려면 클릭하고 드래그하십시오"
-
-#: qml/DocumentPage.qml:293
-#, kde-format
-msgid "Split Scan Vertically"
-msgstr "수평으로 스캔 나누기"
-
-#: qml/DocumentPage.qml:304
-#, kde-format
-msgid "Split Scan Horizontally"
-msgstr "수직으로 스캔 나누기"
-
-#: qml/DocumentPage.qml:376
+#: qml/DocumentPage.qml:98
 #, kde-format
 msgid "Zoom In"
 msgstr "확대"
 
-#: qml/DocumentPage.qml:385
+#: qml/DocumentPage.qml:107
 #, kde-format
 msgid "Zoom Out"
 msgstr "축소"
 
-#: qml/DocumentPage.qml:394
+#: qml/DocumentPage.qml:116
 #, kde-format
 msgid "Zoom Fit"
 msgstr "맞추기"
 
-#: qml/DocumentPage.qml:410
+#: qml/DocumentPage.qml:132
 #, kde-format
 msgid "Zoom 100%"
 msgstr "확대/축소 100%"
@@ -384,7 +359,7 @@ msgstr ""
 msgid "Save"
 msgstr "저장"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:136
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
@@ -440,42 +415,42 @@ msgstr "모두 저장"
 msgid "Preview"
 msgstr "미리 보기"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:130
 #, kde-format
 msgid "Scan"
 msgstr "스캔"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:154
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "스캐너 옵션 표시"
 
-#: qml/MainWindow.qml:155 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "공유"
 
-#: qml/MainWindow.qml:163
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Print"
 msgstr "인쇄"
 
-#: qml/MainWindow.qml:184 qml/MainWindow.qml:381
+#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage 정보"
 
-#: qml/MainWindow.qml:191
+#: qml/MainWindow.qml:200
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage 설정…"
 
-#: qml/MainWindow.qml:199
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "키보드 단축키 설정…"
 
-#: qml/MainWindow.qml:207
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Quit"
 msgstr "끝내기"
@@ -588,6 +563,43 @@ msgstr "표시 여부 설정"
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "스캐너 다시 선택"
+
+#: qml/PreviewScanView.qml:239
+#, kde-format
+msgid "Discard this selection"
+msgstr "이 선택 무시"
+
+#: qml/PreviewScanView.qml:262
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "New Preview Scan"
+msgstr "미리 보기 표시"
+
+#: qml/PreviewScanView.qml:271
+#, kde-format
+msgid "Add Selection Area"
+msgstr "선택 영역 추가"
+
+#: qml/PreviewScanView.qml:275
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr "다른 영역을 선택하려면 클릭하고 드래그하십시오"
+
+#: qml/PreviewScanView.qml:285
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr "수평으로 스캔 나누기"
+
+#: qml/PreviewScanView.qml:295
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr "수직으로 스캔 나누기"
+
+#: qml/PreviewScanView.qml:305
+#, fuzzy, kde-format
+#| msgid "Show Preview"
+msgid "Close Preview"
+msgstr "미리 보기 표시"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
