@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-17 05:34+0100\n"
+"PO-Revision-Date: 2024-04-06 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -133,7 +133,7 @@ msgstr "aparato"
 #: main.cpp:78
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "Dosiera vojo en kiu la opcioj de via skanila aparato estas elĵetitaj"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -571,10 +571,9 @@ msgid "Discard this selection"
 msgstr "Forĵeti ĉi tiun elekton"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Montri Antaŭrigardon"
+msgstr "Nova Antaŭrigarda Skano"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -597,10 +596,9 @@ msgid "Split Scan Horizontally"
 msgstr "Dividi Skanon Horizontale"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Montri Antaŭrigardon"
+msgstr "Fermi Antaŭrigardon"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

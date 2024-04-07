@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-17 08:03+0100\n"
+"PO-Revision-Date: 2024-04-06 08:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -135,6 +135,7 @@ msgstr "naprava"
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
+"Pot datoteke v kateri so izvržene možnosti vaše naprave za optično branje."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -574,10 +575,9 @@ msgid "Discard this selection"
 msgstr "Zavrzi to izbiro"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Prikaži predogled"
+msgstr "Novi predogled posnetka"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -600,10 +600,9 @@ msgid "Split Scan Horizontally"
 msgstr "Razdelite posnetek vodoravno"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Prikaži predogled"
+msgstr "Zapri predogled"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

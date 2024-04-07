@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-17 02:12+0100\n"
+"PO-Revision-Date: 2024-04-06 21:47+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -136,7 +136,7 @@ msgstr "dispositivo"
 #: main.cpp:78
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "La ruta del archivo donde se volcarán las opciones del escáner."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -575,10 +575,9 @@ msgid "Discard this selection"
 msgstr "Descartar esta selección"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Mostrar vista previa"
+msgstr "Nueva vista previa del escaneo"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -601,10 +600,9 @@ msgid "Split Scan Horizontally"
 msgstr "Dividir el escaneo horizontalmente"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Mostrar vista previa"
+msgstr "Cerrar vista previa"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

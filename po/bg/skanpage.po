@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-20 13:41+0100\n"
+"PO-Revision-Date: 2024-04-06 22:37+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -135,6 +135,7 @@ msgstr "устройство"
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
+"Път към файл, в който се записват опциите на вашето устройство за сканиране."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -573,10 +574,9 @@ msgid "Discard this selection"
 msgstr "Отказване на тази селекция"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Показване на предварителен преглед"
+msgstr "Ново предварително сканиране"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -599,10 +599,9 @@ msgid "Split Scan Horizontally"
 msgstr "Разделяне на сканирането хоризонтално"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Показване на предварителен преглед"
+msgstr "Затваряне на предварителен преглед"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022, 2023, 2024
+# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-17 08:59+0100\n"
+"PO-Revision-Date: 2024-04-06 11:14+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Accelerator-Marker: &\n"
 
 #, kde-format
@@ -138,6 +138,7 @@ msgstr "dispositiu"
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
+"Un camí de fitxer en el qual es bolquen les opcions del dispositiu d'escàner."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -575,10 +576,9 @@ msgid "Discard this selection"
 msgstr "Descarta esta selecció"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Mostra la vista prèvia"
+msgstr "Vista prèvia nova d'escaneig"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -601,10 +601,9 @@ msgid "Split Scan Horizontally"
 msgstr "Dividix horitzontalment l'escaneig"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Mostra la vista prèvia"
+msgstr "Tanca la vista prèvia"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
