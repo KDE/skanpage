@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-30 19:37\n"
+"PO-Revision-Date: 2024-04-07 14:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -568,10 +568,9 @@ msgid "Discard this selection"
 msgstr "丢弃此选区"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "显示预览"
+msgstr ""
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -594,10 +593,9 @@ msgid "Split Scan Horizontally"
 msgstr "水平拆分扫描"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "显示预览"
+msgstr ""
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

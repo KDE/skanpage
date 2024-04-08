@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-30 11:12+0400\n"
+"PO-Revision-Date: 2024-04-07 11:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -133,7 +133,7 @@ msgstr "الجهاز"
 #: main.cpp:78
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "مسار ملف يفرغ فيه خيارات جهاز الماسح الضوئي الخاص بك."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -575,10 +575,9 @@ msgid "Discard this selection"
 msgstr "أهمل هذا التحديد"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "اعرض معاينة"
+msgstr "معاينة للمسح جديدة"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -601,10 +600,9 @@ msgid "Split Scan Horizontally"
 msgstr "اقسم المسح أفقياً"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "اعرض معاينة"
+msgstr "أغلق المعاينة"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
