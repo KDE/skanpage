@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-03-18 10:03+0100\n"
+"PO-Revision-Date: 2024-04-07 10:08+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -135,6 +135,8 @@ msgstr "périphérique"
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
+"Un emplacement de fichier dans lequel les options de votre périphérique de "
+"numérisation sont vidées."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -574,10 +576,9 @@ msgid "Discard this selection"
 msgstr "Annuler cette sélection"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Afficher l'aperçu"
+msgstr "Nouvel aperçu de numérisation"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -600,10 +601,9 @@ msgid "Split Scan Horizontally"
 msgstr "Scinder horizontalement la numérisation"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Afficher l'aperçu"
+msgstr "Fermer l'aperçu"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

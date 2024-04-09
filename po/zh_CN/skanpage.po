@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:41+0000\n"
-"PO-Revision-Date: 2024-04-07 14:29\n"
+"PO-Revision-Date: 2024-04-08 19:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -132,7 +132,7 @@ msgstr "设备"
 #: main.cpp:78
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "用于导出您的扫描设备选项的文件路径。"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -570,7 +570,7 @@ msgstr "丢弃此选区"
 #: qml/PreviewScanView.qml:262
 #, kde-format
 msgid "New Preview Scan"
-msgstr ""
+msgstr "新建扫描预览"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -595,7 +595,7 @@ msgstr "水平拆分扫描"
 #: qml/PreviewScanView.qml:305
 #, kde-format
 msgid "Close Preview"
-msgstr ""
+msgstr "关闭预览"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
