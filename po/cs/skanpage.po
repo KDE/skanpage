@@ -571,10 +571,9 @@ msgid "Discard this selection"
 msgstr "Zahodit tento výběr"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Zobrazit náhled"
+msgstr ""
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -597,10 +596,9 @@ msgid "Split Scan Horizontally"
 msgstr "Rozdělit sken vodorovně"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Zobrazit náhled"
+msgstr ""
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
