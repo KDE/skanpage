@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:41+0000\n"
+"POT-Creation-Date: 2024-04-14 00:41+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -94,8 +94,26 @@ msgid "Failed to save document as image."
 msgstr "ドキュメントを画像として保存できませんでした。"
 
 #: DocumentSaver.cpp:215
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to save image."
+msgstr "画像を保存できませんでした"
+
+#: FormatModel.cpp:54
 #, kde-format
-msgid "Failed to save image"
+msgid "All files"
+msgstr ""
+
+#: ImageImport.cpp:42
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load image!"
+msgstr "画像を保存できませんでした"
+
+#: ImageImport.cpp:53
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load PDF file!"
 msgstr "画像を保存できませんでした"
 
 #: main.cpp:56
@@ -314,7 +332,7 @@ msgstr "合わせる"
 msgid "Zoom 100%"
 msgstr "100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF をエクスポート"
@@ -358,7 +376,7 @@ msgstr ""
 msgid "Save"
 msgstr "保存"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
@@ -409,47 +427,53 @@ msgstr "すべて破棄"
 msgid "Save All"
 msgstr "すべて保存"
 
-#: qml/MainWindow.qml:111
+#: qml/MainWindow.qml:107
+#, kde-format
+msgctxt "@action:button import existing PDF file"
+msgid "Import"
+msgstr ""
+
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr "プレビュー"
 
-#: qml/MainWindow.qml:130
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "スキャン"
 
-#: qml/MainWindow.qml:154
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "スキャナのオプションを表示"
 
-#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "共有"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "印刷"
 
-#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage について"
 
-#: qml/MainWindow.qml:200
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage を設定..."
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "キーボードショートカットを設定..."
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "終了"

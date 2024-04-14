@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:41+0000\n"
+"POT-Creation-Date: 2024-04-14 00:41+0000\n"
 "PO-Revision-Date: 2024-04-07 10:08+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -95,8 +95,28 @@ msgid "Failed to save document as image."
 msgstr "Impossible d'enregistrer un document comme image"
 
 #: DocumentSaver.cpp:215
-#, kde-format
-msgid "Failed to save image"
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to save image."
+msgstr "Impossible d'enregistrer l'image"
+
+#: FormatModel.cpp:54
+#, fuzzy, kde-format
+#| msgctxt "Description for the name filter of a QML file dialog"
+#| msgid "All files"
+msgid "All files"
+msgstr "Tous les fichiers"
+
+#: ImageImport.cpp:42
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load image!"
+msgstr "Impossible d'enregistrer l'image"
+
+#: ImageImport.cpp:53
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load PDF file!"
 msgstr "Impossible d'enregistrer l'image"
 
 #: main.cpp:56
@@ -321,7 +341,7 @@ msgstr "Ajustement du zoom"
 msgid "Zoom 100%"
 msgstr "Zoom à 100 %"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr "Exporter vers le format « PDF »"
@@ -365,7 +385,7 @@ msgstr ""
 msgid "Save"
 msgstr "Enregistrer"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "Annuler"
@@ -416,47 +436,53 @@ msgstr "Tout rejeter"
 msgid "Save All"
 msgstr "Tout enregistrer"
 
-#: qml/MainWindow.qml:111
+#: qml/MainWindow.qml:107
+#, kde-format
+msgctxt "@action:button import existing PDF file"
+msgid "Import"
+msgstr ""
+
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr "Aperçu"
 
-#: qml/MainWindow.qml:130
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "Numériser"
 
-#: qml/MainWindow.qml:154
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Afficher les options du périphérique de numérisation"
 
-#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Partager"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "Imprimer"
 
-#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
 #, kde-format
 msgid "About Skanpage"
 msgstr "A propos de SKanpage"
 
-#: qml/MainWindow.qml:200
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Configurer SKanpage"
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Configurer les raccourcis de clavier..."
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "Quitter"
@@ -668,10 +694,6 @@ msgstr "Partager comme :"
 
 #~ msgid "Apply"
 #~ msgstr "Appliquer"
-
-#~ msgctxt "Description for the name filter of a QML file dialog"
-#~ msgid "All files"
-#~ msgstr "Tous les fichiers"
 
 #~ msgid "Saving still in progress."
 #~ msgstr "Enregistrement toujours en cours."

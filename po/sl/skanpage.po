@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:41+0000\n"
+"POT-Creation-Date: 2024-04-14 00:41+0000\n"
 "PO-Revision-Date: 2024-04-06 08:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -96,8 +96,26 @@ msgid "Failed to save document as image."
 msgstr "Shranjevanje dokumenta kot slike ni uspelo."
 
 #: DocumentSaver.cpp:215
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to save image."
+msgstr "Shranjevanje slike ni uspelo"
+
+#: FormatModel.cpp:54
 #, kde-format
-msgid "Failed to save image"
+msgid "All files"
+msgstr ""
+
+#: ImageImport.cpp:42
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load image!"
+msgstr "Shranjevanje slike ni uspelo"
+
+#: ImageImport.cpp:53
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load PDF file!"
 msgstr "Shranjevanje slike ni uspelo"
 
 #: main.cpp:56
@@ -320,7 +338,7 @@ msgstr "Prilagojena povečava"
 msgid "Zoom 100%"
 msgstr "Povečava 100 %"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr "Izvozi PDF"
@@ -364,7 +382,7 @@ msgstr ""
 msgid "Save"
 msgstr "Shrani"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"
@@ -415,47 +433,53 @@ msgstr "Zavrzi vse"
 msgid "Save All"
 msgstr "Shrani vse"
 
-#: qml/MainWindow.qml:111
+#: qml/MainWindow.qml:107
+#, kde-format
+msgctxt "@action:button import existing PDF file"
+msgid "Import"
+msgstr ""
+
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr "Predogled"
 
-#: qml/MainWindow.qml:130
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "Optično preberi"
 
-#: qml/MainWindow.qml:154
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Prikaži možnosti optičnega bralnika"
 
-#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Deli"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "Tiskaj"
 
-#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
 #, kde-format
 msgid "About Skanpage"
 msgstr "O programu Skanpage"
 
-#: qml/MainWindow.qml:200
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Konfiguriraj Skanpage…"
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Konfiguriraj bližnjice na tipkovnici…"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "Zapusti"

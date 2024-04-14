@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:41+0000\n"
+"POT-Creation-Date: 2024-04-14 00:41+0000\n"
 "PO-Revision-Date: 2022-04-07 18:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -96,8 +96,27 @@ msgid "Failed to save document as image."
 msgstr "Zlyhalo uloženie obrázku"
 
 #: DocumentSaver.cpp:215
-#, kde-format
-msgid "Failed to save image"
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to save image."
+msgstr "Zlyhalo uloženie obrázku"
+
+#: FormatModel.cpp:54
+#, fuzzy, kde-format
+#| msgid "All files (*)"
+msgid "All files"
+msgstr "Všetky súbory (*)"
+
+#: ImageImport.cpp:42
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load image!"
+msgstr "Zlyhalo uloženie obrázku"
+
+#: ImageImport.cpp:53
+#, fuzzy, kde-format
+#| msgid "Failed to save image"
+msgid "Failed to load PDF file!"
 msgstr "Zlyhalo uloženie obrázku"
 
 #: main.cpp:56
@@ -321,7 +340,7 @@ msgstr "Oddialiť"
 msgid "Zoom 100%"
 msgstr "Priblížiť 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:103
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -366,7 +385,7 @@ msgstr ""
 msgid "Save"
 msgstr "Uložiť všetko"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:145
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -419,49 +438,55 @@ msgstr "Zahodiť všetko"
 msgid "Save All"
 msgstr "Uložiť všetko"
 
-#: qml/MainWindow.qml:111
+#: qml/MainWindow.qml:107
+#, kde-format
+msgctxt "@action:button import existing PDF file"
+msgid "Import"
+msgstr ""
+
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:130
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "Skenovať"
 
-#: qml/MainWindow.qml:154
+#: qml/MainWindow.qml:170
 #, fuzzy, kde-format
 #| msgid "Scanner Options"
 msgid "Show Scanner Options"
 msgstr "Možnosti skenera"
 
-#: qml/MainWindow.qml:164 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Zdieľať"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "Tlačiť"
 
-#: qml/MainWindow.qml:193 qml/MainWindow.qml:401
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
 #, kde-format
 msgid "About Skanpage"
 msgstr "O Skanpage"
 
-#: qml/MainWindow.qml:200
+#: qml/MainWindow.qml:216
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "O Skanpage"
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "Ukončiť"
@@ -666,12 +691,6 @@ msgstr ""
 #~ msgctxt "document title - scanner device - app title"
 #~ msgid "%1 ― %2 %3 ― Skanpage"
 #~ msgstr "%1 ― Skanpage"
-
-#, fuzzy
-#~| msgid "All files (*)"
-#~ msgctxt "Description for the name filter of a QML file dialog"
-#~ msgid "All files"
-#~ msgstr "Všetky súbory (*)"
 
 #~ msgid "Saving still in progress."
 #~ msgstr "Ukladanie stále prebieha."
