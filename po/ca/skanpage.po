@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-04-06 11:14+0200\n"
+"PO-Revision-Date: 2024-04-14 09:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -98,27 +98,24 @@ msgid "Failed to save document as image."
 msgstr "Ha fallat en desar el document com a imatge."
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Ha fallat en desar la imatge"
+msgstr "Ha fallat en desar la imatge."
 
 #: FormatModel.cpp:54
 #, kde-format
 msgid "All files"
-msgstr ""
+msgstr "Tots els fitxers"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Ha fallat en desar la imatge"
+msgstr "Ha fallat en carregar la imatge!"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Ha fallat en desar la imatge"
+msgstr "Ha fallat en carregar el fitxer PDF!"
 
 #: main.cpp:56
 #, kde-format
@@ -438,7 +435,7 @@ msgstr "Desa-ho tot"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Importa"
 
 #: qml/MainWindow.qml:127
 #, kde-format

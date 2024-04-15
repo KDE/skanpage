@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-04-06 14:21+0300\n"
+"PO-Revision-Date: 2024-04-14 12:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -96,27 +96,24 @@ msgid "Failed to save document as image."
 msgstr "Belge, görsel olarak kaydedilemedi."
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Görsel kaydedilemedi"
+msgstr "Görsel kaydedilemedi."
 
 #: FormatModel.cpp:54
 #, kde-format
 msgid "All files"
-msgstr ""
+msgstr "Tüm dosyalar"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Görsel kaydedilemedi"
+msgstr "Görsel yüklenemedi!"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Görsel kaydedilemedi"
+msgstr "PDF dosyası yüklenemedi!"
 
 #: main.cpp:56
 #, kde-format
@@ -433,7 +430,7 @@ msgstr "Tümünü Kaydet"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "İçe Aktar"
 
 #: qml/MainWindow.qml:127
 #, kde-format
