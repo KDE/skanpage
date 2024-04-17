@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-04-08 19:11\n"
+"PO-Revision-Date: 2024-04-16 13:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -95,27 +95,24 @@ msgid "Failed to save document as image."
 msgstr "无法将文档保存为图像。"
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "无法保存图像"
+msgstr "保存图像失败。"
 
 #: FormatModel.cpp:54
 #, kde-format
 msgid "All files"
-msgstr ""
+msgstr "所有文件"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "无法保存图像"
+msgstr "加载图像失败"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "无法保存图像"
+msgstr "加载 PDF 文件失败"
 
 #: main.cpp:56
 #, kde-format
@@ -430,7 +427,7 @@ msgstr "全部保存"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "导入"
 
 #: qml/MainWindow.qml:127
 #, kde-format
