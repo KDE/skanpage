@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-04-08 12:16+0200\n"
+"PO-Revision-Date: 2024-04-17 15:04+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -95,29 +95,24 @@ msgid "Failed to save document as image."
 msgstr "Il falleva a salveguardar documento como imagine"
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Il falleva a salveguardar imagine"
+msgstr "Il falleva a salveguardar imagine."
 
 #: FormatModel.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "Description for the name filter of a QML file dialog"
-#| msgid "All files"
+#, kde-format
 msgid "All files"
 msgstr "Omne files"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Il falleva a salveguardar imagine"
+msgstr "Il falleva a cargar limagine!"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Il falleva a salveguardar imagine"
+msgstr "Il falleva a cargar file PDF!"
 
 #: main.cpp:56
 #, kde-format
@@ -438,7 +433,7 @@ msgstr "Salveguarda toto"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Importa"
 
 #: qml/MainWindow.qml:127
 #, kde-format
