@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-03-24 11:51+0100\n"
+"PO-Revision-Date: 2024-04-19 22:58+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -98,27 +98,24 @@ msgid "Failed to save document as image."
 msgstr "Dokumentua irudi gisa gordetzea huts egin du."
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Irudia gordetzea huts egin du"
+msgstr "Irudia gordetzea huts egin du."
 
 #: FormatModel.cpp:54
 #, kde-format
 msgid "All files"
-msgstr ""
+msgstr "Fitxategi guztiak"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Irudia gordetzea huts egin du"
+msgstr "Irudia zamatzea huts egin du!"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Irudia gordetzea huts egin du"
+msgstr "PDF fitxategia zamatzea huts egin du!"
 
 #: main.cpp:56
 #, kde-format
@@ -153,7 +150,7 @@ msgstr "gailua"
 #: main.cpp:78
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "Zure eskaner-gailuaren aukerak iraultzeko bide-izena."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -435,7 +432,7 @@ msgstr "Gorde dena"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Inportatu"
 
 #: qml/MainWindow.qml:127
 #, kde-format
@@ -597,10 +594,9 @@ msgid "Discard this selection"
 msgstr "Baztertu hautapen hau"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Erakutsi aurreikuspegia"
+msgstr "Eskaneatze aurreikuspegi berria"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -623,10 +619,9 @@ msgid "Split Scan Horizontally"
 msgstr "Zatitu eskaneatua horizontalki"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Erakutsi aurreikuspegia"
+msgstr "Itxi aurreikuspegia"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format

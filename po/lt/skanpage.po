@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-04-08 19:48+0300\n"
+"PO-Revision-Date: 2024-04-19 21:54+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -97,27 +97,24 @@ msgid "Failed to save document as image."
 msgstr "Nepavyko įrašyti dokumento kaip paveikslo."
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Nepavyko įrašyti paveikslo"
+msgstr "Nepavyko įrašyti paveikslo."
 
 #: FormatModel.cpp:54
 #, kde-format
 msgid "All files"
-msgstr ""
+msgstr "Visi failai"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Nepavyko įrašyti paveikslo"
+msgstr "Nepavyko įkelti paveikslo!"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Nepavyko įrašyti paveikslo"
+msgstr "Nepavyko įkelti PDF failo!"
 
 #: main.cpp:56
 #, kde-format
@@ -437,7 +434,7 @@ msgstr "Įrašyti visus"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Importuoti"
 
 #: qml/MainWindow.qml:127
 #, kde-format
