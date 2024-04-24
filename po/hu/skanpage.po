@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-04-08 13:39+0200\n"
+"PO-Revision-Date: 2024-04-23 10:44+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -95,27 +95,24 @@ msgid "Failed to save document as image."
 msgstr "Nem sikerült képként menteni a dokumentumot."
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "A kép mentése sikertelen"
+msgstr "A kép mentése sikertelen."
 
 #: FormatModel.cpp:54
 #, kde-format
 msgid "All files"
-msgstr ""
+msgstr "Minden fájl"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "A kép mentése sikertelen"
+msgstr "Nem sikerült betölteni a képet."
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "A kép mentése sikertelen"
+msgstr "Nem sikerült betölteni a PDF-fájlt."
 
 #: main.cpp:56
 #, kde-format
@@ -434,7 +431,7 @@ msgstr "Összes mentése"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Importálás"
 
 #: qml/MainWindow.qml:127
 #, kde-format

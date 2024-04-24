@@ -95,27 +95,24 @@ msgid "Failed to save document as image."
 msgstr "Ukládání dokumentu do obrázku selhalo."
 
 #: DocumentSaver.cpp:215
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Ukládání obrázku selhalo"
+msgstr "Ukládání obrázku selhalo."
 
 #: FormatModel.cpp:54
 #, kde-format
 msgid "All files"
-msgstr ""
+msgstr "Všechny soubory"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Ukládání obrázku selhalo"
+msgstr ""
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Ukládání obrázku selhalo"
+msgstr ""
 
 #: main.cpp:56
 #, kde-format
