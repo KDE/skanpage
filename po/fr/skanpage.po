@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2024-04-15 09:37+0200\n"
+"PO-Revision-Date: 2024-04-26 16:24+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -117,7 +117,7 @@ msgstr "Impossible de charger le fichier au format « pdf » !"
 #: main.cpp:56
 #, kde-format
 msgid "Skanpage"
-msgstr "Skanpage"
+msgstr "SKanpage"
 
 #: main.cpp:58
 #, kde-format
@@ -419,7 +419,7 @@ msgstr "Numérisation en cours."
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
-msgstr "%1 ― Skanpage"
+msgstr "%1 ― SKanpage"
 
 #: qml/MainWindow.qml:85
 #, kde-format
