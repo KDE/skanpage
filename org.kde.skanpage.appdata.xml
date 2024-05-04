@@ -24,7 +24,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="es">Skanpage</name>
   <name xml:lang="eu">Skanpage</name>
   <name xml:lang="fi">Skanpage</name>
-  <name xml:lang="fr">Skanpage</name>
+  <name xml:lang="fr">SKanpage</name>
   <name xml:lang="gl">Skanpage</name>
   <name xml:lang="he">Skanpage</name>
   <name xml:lang="hu">Skanpage</name>
@@ -95,7 +95,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla optimizada para escanear documentos con varias páginas. También puede escanear y guardar imágenes y documentos de una sola página.</p>
     <p xml:lang="eu">«Skanpage» orri anitzeko dokumentuak eskaneatzeko optimizatuta dagoen aplikazio bat da. Orri bakarreko dokumentuak eta irudiak ere eskaneatu eta gorde ditzake.</p>
     <p xml:lang="fi">Skanpage on yksinkertainen kuvanlukusovellus, joka on optimoitu monisivuisten tiedostojen ja lukemiseen. Se lukee ja tallentaa toki myös yksisivuisia tiedostoja ja kuvia.</p>
-    <p xml:lang="fr">Skanpage est une application simple de numérisation conçue pour la numérisation de documents composés de plusieurs pages et l'enregistrement de documents et d'images sur une unique page.</p>
+    <p xml:lang="fr">SKanpage est une application simple de numérisation conçue pour la numérisation de documents composés de plusieurs pages et l'enregistrement de documents et d'images sur une unique page.</p>
     <p xml:lang="gl">Skanpage é unha aplicación de escanear sinxela optimizada para escanear documentos de varias páxinas. Tamén pode escanear e gardar documentos dunha única páxina e imaxes.</p>
     <p xml:lang="he">Skanpage הוא יישום סריקה פשוט שממוטב לסריקה מסמכים רבי עמודים. הוא יכול גם לשמור תמונות ומסמכים חדי עמוד.</p>
     <p xml:lang="hu">A Skanpage egy egyszerű, többoldalas dokumentumok szkennelésére optimalizált lapolvasó alkalmazás. Egyoldalas dokumentumok és képek beolvasására és mentésére is képes.</p>
@@ -345,7 +345,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="es">Ventana principal de Skanpage</caption>
       <caption xml:lang="eu">«Skanpage» leiho nagusia</caption>
       <caption xml:lang="fi">Skanpagen pääikkuna</caption>
-      <caption xml:lang="fr">Fenêtre principale de Skanpage</caption>
+      <caption xml:lang="fr">Fenêtre principale de SKanpage</caption>
       <caption xml:lang="gl">Xanela principal de Skanpage.</caption>
       <caption xml:lang="he">החלון הראשי של Skanpage</caption>
       <caption xml:lang="hu">A Skanpage főablaka</caption>
