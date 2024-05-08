@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:41+0000\n"
-"PO-Revision-Date: 2023-11-14 14:50+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-07 15:35+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -107,12 +107,12 @@ msgstr "Všechny soubory"
 #: ImageImport.cpp:42
 #, kde-format
 msgid "Failed to load image!"
-msgstr ""
+msgstr "Chyba při načítání obrázku."
 
 #: ImageImport.cpp:53
 #, kde-format
 msgid "Failed to load PDF file!"
-msgstr ""
+msgstr "Selhalo načtení souboru PDF."
 
 #: main.cpp:56
 #, kde-format
@@ -266,22 +266,22 @@ msgstr[2] "%1 stran"
 #: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Otočit strany"
 
 #: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Otočit liché strany"
 
 #: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Otočit sudé strany"
 
 #: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Otočit všechny strany"
 
 #: qml/DocumentList.qml:328
 #, kde-format
@@ -430,7 +430,7 @@ msgstr "Uložit vše"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Importovat"
 
 #: qml/MainWindow.qml:127
 #, kde-format
@@ -594,7 +594,7 @@ msgstr "Zahodit tento výběr"
 #: qml/PreviewScanView.qml:262
 #, kde-format
 msgid "New Preview Scan"
-msgstr ""
+msgstr "Nový náhled skenování"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -619,7 +619,7 @@ msgstr "Rozdělit sken vodorovně"
 #: qml/PreviewScanView.qml:305
 #, kde-format
 msgid "Close Preview"
-msgstr ""
+msgstr "Zavřít náhled"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
