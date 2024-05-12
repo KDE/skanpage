@@ -39,7 +39,7 @@ msgstr "Document nou"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
-msgstr "%1... %2"
+msgstr "%1… %2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -218,7 +218,7 @@ msgstr "Mou cap avall la pàgina seleccionada"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
-msgstr "S'està processant la pàgina..."
+msgstr "S'està processant la pàgina…"
 
 #: qml/DocumentList.qml:218
 #, kde-format
