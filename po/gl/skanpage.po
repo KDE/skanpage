@@ -1,0 +1,659 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the skanpage package.
+#
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+msgid ""
+msgstr ""
+"Project-Id-Version: skanpage\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-04-14 00:41+0000\n"
+"PO-Revision-Date: 2024-06-18 20:09+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Adrián Chaves (Gallaecio)"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "adrian@chaves.io"
+
+#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:82
+#, kde-format
+msgid "New document"
+msgstr "Novo documento"
+
+#: DocumentModel.cpp:74
+#, kde-format
+msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
+msgid "%1 ... %2"
+msgstr "%1-%2"
+
+#: DocumentPrinter.cpp:33
+#, kde-format
+msgid "Nothing to print."
+msgstr "Non hai nada para imprimir."
+
+#: DocumentPrinter.cpp:37
+#, kde-format
+msgid "Previous printing operation still in progress."
+msgstr "A operación de impresión anterior aínda está en progreso."
+
+#: DocumentPrinter.cpp:69
+#, kde-format
+msgid "Document sent to printer."
+msgstr "O documento enviouse á impresora."
+
+#: DocumentSaver.cpp:34
+#, kde-format
+msgid "No file path given."
+msgstr "Non se indicou unha ruta de ficheiro."
+
+#: DocumentSaver.cpp:38
+#, kde-format
+msgid "Nothing to save."
+msgstr "Non hai nada para gardar."
+
+#: DocumentSaver.cpp:42
+#, kde-format
+msgid "Saving to non-local directories is currently unsupported."
+msgstr "De momento non se permite gardar en cartafoles non locais."
+
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
+#, kde-format
+msgctxt "%1 is the error message"
+msgid "An error ocurred while saving: %1."
+msgstr "Produciuse un erro ao gardar: %1."
+
+#: DocumentSaver.cpp:79
+#, kde-format
+msgid "Document saved as PDF."
+msgstr "O documento gardouse como PDF."
+
+#: DocumentSaver.cpp:111
+#, kde-format
+msgid "Document saved with OCR as PDF."
+msgstr "O documento gardouse con OCR como PDF."
+
+#: DocumentSaver.cpp:191
+#, kde-format
+msgid "Document saved as image."
+msgstr "O documento gardouse como imaxe."
+
+#: DocumentSaver.cpp:200
+#, kde-format
+msgid "Failed to save document as image."
+msgstr "Non foi posíbel gardar o documento como imaxe."
+
+#: DocumentSaver.cpp:215
+#, kde-format
+msgid "Failed to save image."
+msgstr "Non foi posíbel gardar a imaxe."
+
+#: FormatModel.cpp:54
+#, kde-format
+msgid "All files"
+msgstr "Todos os ficheiros"
+
+#: ImageImport.cpp:42
+#, kde-format
+msgid "Failed to load image!"
+msgstr "Non foi posíbel cargar a imaxe."
+
+#: ImageImport.cpp:53
+#, kde-format
+msgid "Failed to load PDF file!"
+msgstr "Non foi posíbel cargar o ficheiro PDF."
+
+#: main.cpp:56
+#, kde-format
+msgid "Skanpage"
+msgstr "Skanpage"
+
+#: main.cpp:58
+#, kde-format
+msgid "Multi-page scanning application by KDE."
+msgstr "Aplicación de KDE para escanear varias páxinas."
+
+#: main.cpp:60
+#, kde-format
+msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+
+#: main.cpp:63 main.cpp:64
+#, kde-format
+msgid "developer"
+msgstr "Desenvolvemento."
+
+#: main.cpp:75
+#, kde-format
+msgid "Sane scanner device name. Use 'test' for test device."
+msgstr "Nome do escáner de Sane. Use «test» para un dispositivo de proba."
+
+#: main.cpp:75
+#, kde-format
+msgid "device"
+msgstr "dispositivo"
+
+#: main.cpp:78
+#, kde-format
+msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
+#: qml/ContentView.qml:18
+#, kde-format
+msgctxt "Prefix for document name indicating an unsaved document"
+msgid "* %1"
+msgstr ""
+
+#: qml/DeviceSelection.qml:54
+#, kde-format
+msgctxt ""
+"Device vendor with device model, followed by the device name identifier"
+msgid ""
+"%1 %2\n"
+"(%3)"
+msgstr ""
+
+#: qml/DeviceSelection.qml:69
+#, kde-kuit-format
+msgctxt "@info"
+msgid "No devices found."
+msgstr ""
+
+#: qml/DeviceSelection.qml:86
+#, kde-format
+msgid "Open selected device"
+msgstr ""
+
+#: qml/DeviceSelection.qml:95
+#, kde-format
+msgid "Reload devices list"
+msgstr "Cargar de novo a lista de dispositivos"
+
+#: qml/DevicesLoading.qml:29
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Searching for available devices."
+msgstr ""
+
+#: qml/DocumentList.qml:73
+#, kde-format
+msgid "Select previous page"
+msgstr ""
+
+#: qml/DocumentList.qml:79
+#, kde-format
+msgid "Select next page"
+msgstr ""
+
+#: qml/DocumentList.qml:85
+#, kde-format
+msgid "Move selected page up"
+msgstr ""
+
+#: qml/DocumentList.qml:94
+#, kde-format
+msgid "Move selected page down"
+msgstr ""
+
+#: qml/DocumentList.qml:205
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Processing page..."
+msgstr ""
+
+#: qml/DocumentList.qml:218
+#, kde-format
+msgctxt "Page index"
+msgid "Page %1"
+msgstr "Páxina %1"
+
+#: qml/DocumentList.qml:229
+#, kde-format
+msgid "Move Up"
+msgstr ""
+
+#: qml/DocumentList.qml:239
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
+#, kde-format
+msgid "Rotate Left"
+msgstr ""
+
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
+#, kde-format
+msgid "Rotate Right"
+msgstr ""
+
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
+#, kde-format
+msgid "Flip"
+msgstr ""
+
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
+#, kde-format
+msgid "Save Page"
+msgstr "Gardar a páxina"
+
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
+#, kde-format
+msgid "Delete Page"
+msgstr "Eliminar a páxina"
+
+#: qml/DocumentList.qml:292
+#, kde-format
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: qml/DocumentList.qml:301
+#, kde-format
+msgid "Flip Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:306
+#, kde-format
+msgid "Flip Odd Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:313
+#, kde-format
+msgid "Flip Even Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:320
+#, kde-format
+msgid "Flip All Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:328
+#, kde-format
+msgid "Reorder Pages"
+msgstr ""
+
+#: qml/DocumentList.qml:333
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 24 → 1234"
+msgstr ""
+
+#: qml/DocumentList.qml:340
+#, kde-format
+msgctxt "Indicates how pages are going to be reordered"
+msgid "13 42 → 1234"
+msgstr ""
+
+#: qml/DocumentList.qml:347
+#, kde-format
+msgid "Reverse Order"
+msgstr ""
+
+#: qml/DocumentPage.qml:40
+#, kde-kuit-format
+msgctxt "@info"
+msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+msgstr ""
+
+#: qml/DocumentPage.qml:98
+#, kde-format
+msgid "Zoom In"
+msgstr ""
+
+#: qml/DocumentPage.qml:107
+#, kde-format
+msgid "Zoom Out"
+msgstr ""
+
+#: qml/DocumentPage.qml:116
+#, kde-format
+msgid "Zoom Fit"
+msgstr ""
+
+#: qml/DocumentPage.qml:132
+#, kde-format
+msgid "Zoom 100%"
+msgstr ""
+
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
+#, kde-format
+msgid "Export PDF"
+msgstr ""
+
+#: qml/ExportWindow.qml:44
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: qml/ExportWindow.qml:60
+#, kde-format
+msgid "File:"
+msgstr ""
+
+#: qml/ExportWindow.qml:85
+#, kde-format
+msgid "Enable optical character recognition (OCR)"
+msgstr ""
+
+#: qml/ExportWindow.qml:105
+#, kde-format
+msgid "Languages:"
+msgstr "Idiomas:"
+
+#: qml/ExportWindow.qml:133
+#, kde-format
+msgid "%1 [%2]"
+msgstr ""
+
+#: qml/ExportWindow.qml:154
+#, kde-format
+msgid ""
+"If your required language is not listed, please install Tesseract's language "
+"file with your package manager."
+msgstr ""
+
+#: qml/ExportWindow.qml:180
+#, kde-format
+msgid "Save"
+msgstr "Gardar"
+
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: qml/GlobalMenu.qml:26
+#, kde-format
+msgctxt "menu category"
+msgid "File"
+msgstr ""
+
+#: qml/GlobalMenu.qml:68
+#, kde-format
+msgctxt "menu category"
+msgid "Scan"
+msgstr ""
+
+#: qml/GlobalMenu.qml:124
+#, kde-format
+msgctxt "menu category"
+msgid "Help"
+msgstr ""
+
+#: qml/InProgressPage.qml:26
+#, kde-kuit-format
+msgctxt "Countdown string with time given in seconds"
+msgid "Next scan starts in<nl/>%1 s"
+msgstr ""
+
+#: qml/InProgressPage.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "Scan in progress."
+msgstr ""
+
+#: qml/MainWindow.qml:23
+#, kde-format
+msgctxt "document title: app title"
+msgid "%1 ― Skanpage"
+msgstr ""
+
+#: qml/MainWindow.qml:85
+#, kde-format
+msgid "Discard All"
+msgstr "Descartalo todo"
+
+#: qml/MainWindow.qml:94
+#, kde-format
+msgid "Save All"
+msgstr "Gardar todo"
+
+#: qml/MainWindow.qml:107
+#, kde-format
+msgctxt "@action:button import existing PDF file"
+msgid "Import"
+msgstr "Importar"
+
+#: qml/MainWindow.qml:127
+#, kde-format
+msgid "Preview"
+msgstr ""
+
+#: qml/MainWindow.qml:146
+#, kde-format
+msgid "Scan"
+msgstr ""
+
+#: qml/MainWindow.qml:170
+#, kde-format
+msgid "Show Scanner Options"
+msgstr ""
+
+#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
+#, kde-format
+msgid "Share"
+msgstr ""
+
+#: qml/MainWindow.qml:188
+#, kde-format
+msgid "Print"
+msgstr ""
+
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
+#, kde-format
+msgid "About Skanpage"
+msgstr ""
+
+#: qml/MainWindow.qml:216
+#, kde-format
+msgid "Configure Skanpage…"
+msgstr ""
+
+#: qml/MainWindow.qml:224
+#, kde-format
+msgid "Configure Keyboard Shortcuts…"
+msgstr ""
+
+#: qml/MainWindow.qml:232
+#, kde-format
+msgid "Quit"
+msgstr ""
+
+#: qml/OptionDelegate.qml:55
+#, kde-format
+msgid "%1:"
+msgstr ""
+
+#: qml/OptionDelegate.qml:150
+#, kde-format
+msgctxt "Add ':' to make a header text"
+msgid "%1:"
+msgstr ""
+
+#: qml/OptionDelegate.qml:154
+#, kde-format
+msgctxt "@option:check a noun, as in 'the default setting'"
+msgid "Default"
+msgstr ""
+
+#: qml/OptionDelegate.qml:168
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Brightness: %1"
+msgstr "Brillo: %1"
+
+#: qml/OptionDelegate.qml:181
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Contrast: %1"
+msgstr "Contraste. %1"
+
+#: qml/OptionDelegate.qml:194
+#, kde-format
+msgctxt "%1 is a numeric value"
+msgid "Gamma: %1"
+msgstr "Gamma: %1"
+
+#: qml/OptionDelegate.qml:224
+#, kde-format
+msgctxt "Adding unit suffix"
+msgid "%1 %2"
+msgstr ""
+
+#: qml/OptionDelegate.qml:249
+#, kde-format
+msgctxt "Unit suffix for bit"
+msgid "bit"
+msgstr ""
+
+#: qml/OptionDelegate.qml:252
+#, kde-format
+msgctxt "Unit suffix for DPI"
+msgid "DPI"
+msgstr "DPI"
+
+#: qml/OptionDelegate.qml:255
+#, kde-format
+msgctxt "Unit suffix for microsecond"
+msgid "µs"
+msgstr "µs"
+
+#: qml/OptionDelegate.qml:258
+#, kde-format
+msgctxt "Unit suffix for second"
+msgid "s"
+msgstr "s"
+
+#: qml/OptionDelegate.qml:261
+#, kde-format
+msgctxt "Unit suffix for millimeter"
+msgid "mm"
+msgstr "mm"
+
+#: qml/OptionDelegate.qml:264
+#, kde-format
+msgctxt "Unit suffix for percent"
+msgid "%"
+msgstr ""
+
+#: qml/OptionDelegate.qml:267
+#, kde-format
+msgctxt "Unit suffix for pixel"
+msgid "px"
+msgstr "px"
+
+#: qml/OptionsPanel.qml:30
+#, kde-format
+msgid "Select options for quick access:"
+msgstr ""
+
+#: qml/OptionsPanel.qml:71
+#, kde-format
+msgctxt "scanner device vendor and model"
+msgid "%1 %2"
+msgstr ""
+
+#: qml/OptionsPanel.qml:84
+#, kde-format
+msgid "Show More"
+msgstr "Amosar máis"
+
+#: qml/OptionsPanel.qml:94
+#, kde-format
+msgid "Configure Visibility"
+msgstr ""
+
+#: qml/OptionsPanel.qml:109
+#, kde-format
+msgid "Reselect Scanner"
+msgstr ""
+
+#: qml/PreviewScanView.qml:239
+#, kde-format
+msgid "Discard this selection"
+msgstr ""
+
+#: qml/PreviewScanView.qml:262
+#, kde-format
+msgid "New Preview Scan"
+msgstr ""
+
+#: qml/PreviewScanView.qml:271
+#, kde-format
+msgid "Add Selection Area"
+msgstr ""
+
+#: qml/PreviewScanView.qml:275
+#, kde-format
+msgid "Click and drag to select another area"
+msgstr ""
+
+#: qml/PreviewScanView.qml:285
+#, kde-format
+msgid "Split Scan Vertically"
+msgstr ""
+
+#: qml/PreviewScanView.qml:295
+#, kde-format
+msgid "Split Scan Horizontally"
+msgstr ""
+
+#: qml/PreviewScanView.qml:305
+#, kde-format
+msgid "Close Preview"
+msgstr ""
+
+#: qml/SettingsWindow.qml:20
+#, kde-format
+msgid "Configure"
+msgstr ""
+
+#: qml/SettingsWindow.qml:38
+#, kde-format
+msgid "Devices to show:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:39
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners only"
+msgstr ""
+
+#: qml/SettingsWindow.qml:46
+#, kde-format
+msgctxt "@option:radio Devices to show for scanning"
+msgid "Scanners, cameras, and virtual devices"
+msgstr ""
+
+#: qml/SettingsWindow.qml:53
+#, kde-format
+msgid "Default file format:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:68
+#, kde-format
+msgid "Default save location:"
+msgstr "Lugar predeterminado no que gardar:"
+
+#: qml/SettingsWindow.qml:101
+#, kde-format
+msgid "Close"
+msgstr ""
+
+#: qml/ShareWindow.qml:42
+#, kde-format
+msgid "Share as:"
+msgstr ""
