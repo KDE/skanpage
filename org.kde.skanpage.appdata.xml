@@ -8,6 +8,9 @@ SPDX-License-Identifier: CC0-1.0
   <id>org.kde.skanpage.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
   <name>Skanpage</name>
   <name xml:lang="ar">ماسح الصفحات</name>
   <name xml:lang="ast">Skanpage</name>
