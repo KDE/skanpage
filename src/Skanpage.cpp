@@ -12,6 +12,7 @@
 #include <QJsonObject>
 #include <QThread>
 #include <QtQml>
+#include <QImageReader>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -68,6 +69,8 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     : QObject(parent)
     , d(std::make_unique<SkanpagePrivate>())
 {
+    QImageReader::setAllocationLimit(2000);
+
     d->m_stateConfiguration = SkanpageState::self();
     d->m_configuration = SkanpageConfiguration::self();
     if (d->m_configuration->defaultFolder().isEmpty()) {
