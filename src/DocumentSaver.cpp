@@ -72,6 +72,7 @@ void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPa
     QPainter painter;
 
     for (int i = 0; i < document.count(); ++i) {
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
         printPage(writer, painter, document.at(i), i == 0);
     }
 
@@ -104,6 +105,7 @@ void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::
     QPainter painter;
     
     for (int i = 0; i < document.count(); ++i) {
+         Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
         printPage(writer, painter, document.at(i), i == 0);
         m_OCREngine->OCRPage(writer, painter, document.at(i));
     }
@@ -169,6 +171,7 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
     } else {
         fileUrls.reserve(count);
         for (int i = 0; i < count; ++i) {
+             Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
             if (document.at(i).temporaryFile == nullptr) {
                 continue;
             }
