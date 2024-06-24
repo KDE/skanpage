@@ -96,6 +96,7 @@ ApplicationWindow {
         enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
         onTriggered: {
             saveFileDialog.nameFilters = skanpage.formatModel.writeFormatFilter()
+            saveFileDialog.selectedNameFilter.index = skanpage.configuration.defaultNameFilterIndex
             saveFileDialog.fileMode = FileDialog.SaveFile
             saveFileDialog.open()
         }
@@ -108,6 +109,7 @@ ApplicationWindow {
         shortcut: "CTRL+I"
         onTriggered: {
             saveFileDialog.nameFilters = skanpage.formatModel.importFormatFilter()
+            saveFileDialog.selectedNameFilter.index = 0
             saveFileDialog.fileMode = FileDialog.OpenFile
             saveFileDialog.open()
         }

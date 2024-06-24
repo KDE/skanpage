@@ -56,7 +56,9 @@ Window {
             textRole: "comment"
             valueRole: "nameFilter"
 
-            onActivated: skanpage.configuration.defaultNameFilterIndex = index
+            onActivated: function (index) {
+                skanpage.configuration.defaultNameFilterIndex = index
+            }
             Component.onCompleted: {
                 const index = skanpage.configuration.defaultNameFilterIndex
                 currentIndex = index >= 0 ? index : 0
