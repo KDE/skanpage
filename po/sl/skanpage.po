@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-14 00:41+0000\n"
+"POT-Creation-Date: 2024-06-24 00:41+0000\n"
 "PO-Revision-Date: 2024-04-14 07:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -69,33 +69,39 @@ msgstr "Ni česa shraniti."
 msgid "Saving to non-local directories is currently unsupported."
 msgstr "Shranjevanje na nelokalne imenike trenutno ni podprto."
 
-#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:99
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Prišlo je do napake pri shranjevanju: %1."
 
-#: DocumentSaver.cpp:79
+#: DocumentSaver.cpp:75 DocumentSaver.cpp:108 DocumentSaver.cpp:174
+#, kde-format
+msgctxt "indicate status update during saving"
+msgid "Processing page %1 to save the document."
+msgstr ""
+
+#: DocumentSaver.cpp:80
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Dokument shranjen kot PDF."
 
-#: DocumentSaver.cpp:111
+#: DocumentSaver.cpp:113
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "Dokument shranjen z OCR kot PDF."
 
-#: DocumentSaver.cpp:191
+#: DocumentSaver.cpp:194
 #, kde-format
 msgid "Document saved as image."
 msgstr "Dokument shranjen kot slika."
 
-#: DocumentSaver.cpp:200
+#: DocumentSaver.cpp:203
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Shranjevanje dokumenta kot slike ni uspelo."
 
-#: DocumentSaver.cpp:215
+#: DocumentSaver.cpp:218
 #, kde-format
 msgid "Failed to save image."
 msgstr "Shranjevanje slike ni uspelo."

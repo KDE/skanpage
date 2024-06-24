@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-14 00:41+0000\n"
+"POT-Creation-Date: 2024-06-24 00:41+0000\n"
 "PO-Revision-Date: 2024-06-05 07:06\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -72,33 +72,39 @@ msgstr "Няма чаго захоўваць."
 msgid "Saving to non-local directories is currently unsupported."
 msgstr "Захаванне ў нелакальных каталогах зараз не падтрымліваецца."
 
-#: DocumentSaver.cpp:67 DocumentSaver.cpp:98
+#: DocumentSaver.cpp:67 DocumentSaver.cpp:99
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Падчас захавання адбылася памылка: %1."
 
-#: DocumentSaver.cpp:79
+#: DocumentSaver.cpp:75 DocumentSaver.cpp:108 DocumentSaver.cpp:174
+#, kde-format
+msgctxt "indicate status update during saving"
+msgid "Processing page %1 to save the document."
+msgstr ""
+
+#: DocumentSaver.cpp:80
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Дакумент захаваны як PDF."
 
-#: DocumentSaver.cpp:111
+#: DocumentSaver.cpp:113
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "Дакумент захаваны з дапамогай OCR як PDF."
 
-#: DocumentSaver.cpp:191
+#: DocumentSaver.cpp:194
 #, kde-format
 msgid "Document saved as image."
 msgstr "Дакумент захаваны як выява."
 
-#: DocumentSaver.cpp:200
+#: DocumentSaver.cpp:203
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Не ўдалося захаваць дакумент як выяву."
 
-#: DocumentSaver.cpp:215
+#: DocumentSaver.cpp:218
 #, kde-format
 msgid "Failed to save image."
 msgstr "Не ўдалося захаваць выяву."
