@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:41+0000\n"
+"POT-Creation-Date: 2024-06-25 00:41+0000\n"
 "PO-Revision-Date: 2023-06-09 23:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -344,7 +344,7 @@ msgstr "Ampliar para Caber"
 msgid "Zoom 100%"
 msgstr "Ampliação a 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
 #, kde-format
 msgid "Export PDF"
 msgstr "Exportar o PDF"
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Save"
 msgstr "Gravar"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
@@ -439,53 +439,53 @@ msgstr "Eliminar Tudo"
 msgid "Save All"
 msgstr "Gravar Tudo"
 
-#: qml/MainWindow.qml:107
+#: qml/MainWindow.qml:108
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:129
 #, kde-format
 msgid "Preview"
 msgstr "Antevisão"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:148
 #, kde-format
 msgid "Scan"
 msgstr "Digitalizar"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Mostrar as Opções do 'Scanner'"
 
-#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Partilhar"
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Print"
 msgstr "Imprimir"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
+#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
 #, kde-format
 msgid "About Skanpage"
 msgstr "Acerca do Skanpage"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:218
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Configurar o Skanpage…"
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:226
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Configurar os Atalhos…"
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:234
 #, kde-format
 msgid "Quit"
 msgstr "Sair"
@@ -663,12 +663,12 @@ msgstr "'Scanners', câmaras e dispositivos virtuais"
 msgid "Default file format:"
 msgstr "Formato predefinido dos ficheiros:"
 
-#: qml/SettingsWindow.qml:68
+#: qml/SettingsWindow.qml:70
 #, kde-format
 msgid "Default save location:"
 msgstr "Local predefinido de gravação:"
 
-#: qml/SettingsWindow.qml:101
+#: qml/SettingsWindow.qml:103
 #, kde-format
 msgid "Close"
 msgstr "Fechar"

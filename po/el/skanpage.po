@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:41+0000\n"
+"POT-Creation-Date: 2024-06-25 00:41+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -345,7 +345,7 @@ msgstr "Ζουμ με ταίριασμα"
 msgid "Zoom 100%"
 msgstr "Ζουμ 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -390,7 +390,7 @@ msgstr ""
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -443,55 +443,55 @@ msgstr ""
 msgid "Save All"
 msgstr "Αποθήκευση"
 
-#: qml/MainWindow.qml:107
+#: qml/MainWindow.qml:108
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:129
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:148
 #, kde-format
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:172
 #, fuzzy, kde-format
 #| msgid "Scanner Options"
 msgid "Show Scanner Options"
 msgstr "Επιλογές σαρωτή"
 
-#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
+#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
 #, kde-format
 msgid "About Skanpage"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:218
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:226
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:234
 #, kde-format
 msgid "Quit"
 msgstr "Έξοδος"
@@ -675,12 +675,12 @@ msgstr ""
 msgid "Default file format:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:68
+#: qml/SettingsWindow.qml:70
 #, kde-format
 msgid "Default save location:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:101
+#: qml/SettingsWindow.qml:103
 #, kde-format
 msgid "Close"
 msgstr "Κλείσιμο"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:41+0000\n"
-"PO-Revision-Date: 2024-04-14 08:39+0300\n"
+"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"PO-Revision-Date: 2024-06-24 09:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -83,7 +83,7 @@ msgstr "Сталася помилка під час спроби зберегт�
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "Обробка сторінки %1 для збереження документа."
 
 #: DocumentSaver.cpp:80
 #, kde-format
@@ -345,7 +345,7 @@ msgstr "Підібрати за розмірами"
 msgid "Zoom 100%"
 msgstr "Масштаб 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
 #, kde-format
 msgid "Export PDF"
 msgstr "Експортувати до PDF"
@@ -390,7 +390,7 @@ msgstr ""
 msgid "Save"
 msgstr "Зберегти"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
@@ -441,53 +441,53 @@ msgstr "Відкинути усе"
 msgid "Save All"
 msgstr "Зберегти все"
 
-#: qml/MainWindow.qml:107
+#: qml/MainWindow.qml:108
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Імпортувати"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:129
 #, kde-format
 msgid "Preview"
 msgstr "Перегляд"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:148
 #, kde-format
 msgid "Scan"
 msgstr "Сканувати"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Показати параметри сканера"
 
-#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Оприлюднити"
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Print"
 msgstr "Надрукувати"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
+#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
 #, kde-format
 msgid "About Skanpage"
 msgstr "Про Skanpage"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:218
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Налаштувати Skanpage…"
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:226
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Налаштовування клавіатурних скорочень…"
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:234
 #, kde-format
 msgid "Quit"
 msgstr "Вийти"
@@ -664,12 +664,12 @@ msgstr "Сканери, камери та віртуальні пристрої"
 msgid "Default file format:"
 msgstr "Типовий формат файлів:"
 
-#: qml/SettingsWindow.qml:68
+#: qml/SettingsWindow.qml:70
 #, kde-format
 msgid "Default save location:"
 msgstr "Типове місце збереження:"
 
-#: qml/SettingsWindow.qml:101
+#: qml/SettingsWindow.qml:103
 #, kde-format
 msgid "Close"
 msgstr "Закрити"

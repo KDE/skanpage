@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:41+0000\n"
+"POT-Creation-Date: 2024-06-25 00:41+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -338,7 +338,7 @@ msgstr "合わせる"
 msgid "Zoom 100%"
 msgstr "100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:119
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF をエクスポート"
@@ -382,7 +382,7 @@ msgstr ""
 msgid "Save"
 msgstr "保存"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:161
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
@@ -433,53 +433,53 @@ msgstr "すべて破棄"
 msgid "Save All"
 msgstr "すべて保存"
 
-#: qml/MainWindow.qml:107
+#: qml/MainWindow.qml:108
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:129
 #, kde-format
 msgid "Preview"
 msgstr "プレビュー"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:148
 #, kde-format
 msgid "Scan"
 msgstr "スキャン"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:172
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "スキャナのオプションを表示"
 
-#: qml/MainWindow.qml:180 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "共有"
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:190
 #, kde-format
 msgid "Print"
 msgstr "印刷"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:421
+#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage について"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:218
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage を設定..."
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:226
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "キーボードショートカットを設定..."
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:234
 #, kde-format
 msgid "Quit"
 msgstr "終了"
@@ -657,12 +657,12 @@ msgstr "スキャナ、カメラおよび仮想デバイス"
 msgid "Default file format:"
 msgstr "デフォルトのファイル形式:"
 
-#: qml/SettingsWindow.qml:68
+#: qml/SettingsWindow.qml:70
 #, kde-format
 msgid "Default save location:"
 msgstr "デフォルトの保存場所:"
 
-#: qml/SettingsWindow.qml:101
+#: qml/SettingsWindow.qml:103
 #, kde-format
 msgid "Close"
 msgstr "閉じる"
