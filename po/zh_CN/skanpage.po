@@ -78,7 +78,7 @@ msgstr "保存 %1 时发生错误。"
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "正在处理页面 %1 以保存文档。"
 
 #: DocumentSaver.cpp:80
 #, kde-format
