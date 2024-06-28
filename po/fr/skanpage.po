@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:41+0000\n"
-"PO-Revision-Date: 2024-04-26 16:24+0200\n"
+"PO-Revision-Date: 2024-06-26 10:53+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -78,7 +78,7 @@ msgstr "Une erreur est survenue durant l'enregistrement : %1"
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "Traitement de la page %1 pour enregistrement du document."
 
 #: DocumentSaver.cpp:80
 #, kde-format
