@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:41+0000\n"
-"PO-Revision-Date: 2024-04-19 21:54+0300\n"
+"PO-Revision-Date: 2024-07-06 00:42+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -80,7 +80,7 @@ msgstr "Įvyko klaida įrašant: %1."
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "Apdorojamas puslapis %1, kad būtų įrašytas dokumentas."
 
 #: DocumentSaver.cpp:80
 #, kde-format
