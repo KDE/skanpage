@@ -1,27 +1,28 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022, 2023.
 # Bruno Cesar Robalinho <robalo_net@yahoo.com.br>, 2021.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:41+0000\n"
-"PO-Revision-Date: 2023-11-14 12:07-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-09 11:05-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Bruno Cesar Robalinho, Luiz Fernando Ranghetti"
+msgstr "Bruno Cesar Robalinho, Luiz Fernando Ranghetti, Geraldo Simião"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -79,7 +80,7 @@ msgstr "Ocorreu um erro ao salvar: %1."
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "processando página %1 para salvar o documento."
 
 #: DocumentSaver.cpp:80
 #, kde-format
@@ -102,29 +103,24 @@ msgid "Failed to save document as image."
 msgstr "Falha ao salvar o documento como imagem."
 
 #: DocumentSaver.cpp:218
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Falha ao salvar a imagem"
+msgstr "Falha ao salvar a imagem."
 
 #: FormatModel.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "Description for the name filter of a QML file dialog"
-#| msgid "All files"
+#, kde-format
 msgid "All files"
 msgstr "Todos os arquivos"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Falha ao salvar a imagem"
+msgstr "Falha ao carregar a imagem!"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Falha ao salvar a imagem"
+msgstr "Falha ao carregar arquivo PDF!"
 
 #: main.cpp:56
 #, kde-format
@@ -162,6 +158,8 @@ msgstr "dispositivo"
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
+"Um caminho de arquivo no qual as opções do seu dispositivo de scanner são "
+"salvas."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -279,22 +277,22 @@ msgstr[1] "%1 páginas"
 #: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Virar páginas"
 
 #: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "virar as páginas ímpares"
 
 #: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Virar as páginas pares"
 
 #: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Virar todas as páginas"
 
 #: qml/DocumentList.qml:328
 #, kde-format
@@ -444,7 +442,7 @@ msgstr "Salvar tudo"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Importar"
 
 #: qml/MainWindow.qml:129
 #, kde-format
@@ -606,10 +604,9 @@ msgid "Discard this selection"
 msgstr "Descartar esta seleção"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Mostrar visualização"
+msgstr "Nova visualização"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -632,10 +629,9 @@ msgid "Split Scan Horizontally"
 msgstr "Dividir visão horizontalmente"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Mostrar visualização"
+msgstr "Fechar visualização"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
