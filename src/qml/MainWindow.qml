@@ -94,12 +94,7 @@ ApplicationWindow {
         text: i18n("Save All")
         shortcutsName: "Save"
         enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
-        onTriggered: {
-            saveFileDialog.nameFilters = skanpage.formatModel.writeFormatFilter()
-            saveFileDialog.selectedNameFilter.index = skanpage.configuration.defaultNameFilterIndex
-            saveFileDialog.fileMode = FileDialog.SaveFile
-            saveFileDialog.open()
-        }
+        onTriggered: saveFileDialog.open()
     }
 
     ShortcutsAction {
@@ -107,12 +102,7 @@ ApplicationWindow {
         icon.name: "document-import-symbolic"
         text: i18nc("@action:button import existing PDF file", "Import")
         shortcut: "CTRL+I"
-        onTriggered: {
-            saveFileDialog.nameFilters = skanpage.formatModel.importFormatFilter()
-            saveFileDialog.selectedNameFilter.index = 0
-            saveFileDialog.fileMode = FileDialog.OpenFile
-            saveFileDialog.open()
-        }
+        onTriggered: loadFileDialog.open()
     }
     
     ShortcutsAction {
@@ -450,14 +440,19 @@ ApplicationWindow {
         nameFilters: skanpage.formatModel.writeFormatFilter()
         selectedNameFilter.index: skanpage.configuration.defaultNameFilterIndex
         onAccepted: {
-            if (fileMode == FileDialog.OpenFile) {
-                skanpage.importFile(selectedFile)
-            } else {
-                skanpage.documentModel.save(selectedFile, pageNumbers)
-                pageNumbers = []
-            }
+            skanpage.documentModel.save(selectedFile, pageNumbers)
+            pageNumbers = []
         }
         onRejected: pageNumbers = []
+    }
+
+    FileDialog {
+        id: loadFileDialog
+
+        currentFolder: skanpage.configuration.defaultFolder
+        fileMode: FileDialog.OpenFile
+        nameFilters: skanpage.formatModel.readFormatFilterConcatenated()
+        onAccepted: skanpage.importFile(selectedFile)
     }
 
     GlobalMenu {

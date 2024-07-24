@@ -36,9 +36,9 @@ public:
 
     Q_INVOKABLE QVariantList writeFormatFilter() const;
 
-    Q_INVOKABLE QVariantList importFormatFilter() const;
-
     Q_INVOKABLE QString pdfFormatFilter() const;
+
+    Q_INVOKABLE QVariant readFormatFilterConcatenated() const;
 
 private:
     std::unique_ptr<FormatModelPrivate> d;
