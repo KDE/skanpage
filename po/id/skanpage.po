@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-07-25 00:41+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -107,9 +107,12 @@ msgstr "Gagal menyimpan dokumen sebagai citra."
 msgid "Failed to save image."
 msgstr "Gagal menyimpan citra"
 
-#: FormatModel.cpp:54
+#: FormatModel.cpp:49
 #, kde-format
-msgid "All files"
+msgctxt ""
+"format filter for a file dialog, all formats supported by the application "
+"will be displayed"
+msgid "All Supported Files"
 msgstr ""
 
 #: ImageImport.cpp:42
@@ -344,7 +347,7 @@ msgstr "Zoom Paskan"
 msgid "Zoom 100%"
 msgstr "Zoom 100%\""
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -389,7 +392,7 @@ msgstr ""
 msgid "Save"
 msgstr "Simpan Semua"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
 #, kde-format
 msgid "Cancel"
 msgstr "Batal"
@@ -440,54 +443,54 @@ msgstr "Buang Semua"
 msgid "Save All"
 msgstr "Simpan Semua"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:103
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:129
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:148
+#: qml/MainWindow.qml:138
 #, kde-format
 msgid "Scan"
 msgstr "Pindai"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Tampilkan Opsi Pemindai"
 
-#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Bagikan"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:180
 #, kde-format
 msgid "Print"
 msgstr "Cetak"
 
-#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
+#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
 #, kde-format
 msgid "About Skanpage"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:208
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:226
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:234
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Quit"
 msgstr "Berhenti"

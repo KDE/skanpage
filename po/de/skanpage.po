@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-07-25 00:41+0000\n"
 "PO-Revision-Date: 2023-12-18 15:19+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -108,11 +108,13 @@ msgstr "Das Speichern des Dokument als Bild ist fehlgeschlagen."
 msgid "Failed to save image."
 msgstr "Fehler beim Speichern des Bildes"
 
-#: FormatModel.cpp:54
-#, fuzzy, kde-format
-#| msgid "All files (*)"
-msgid "All files"
-msgstr "Alle Dateien (*)"
+#: FormatModel.cpp:49
+#, kde-format
+msgctxt ""
+"format filter for a file dialog, all formats supported by the application "
+"will be displayed"
+msgid "All Supported Files"
+msgstr ""
 
 #: ImageImport.cpp:42
 #, fuzzy, kde-format
@@ -343,7 +345,7 @@ msgstr "Auf Fenstergröße einpassen"
 msgid "Zoom 100%"
 msgstr "Vergrößerung 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF exportieren"
@@ -387,7 +389,7 @@ msgstr ""
 msgid "Save"
 msgstr "Speichern"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
 #, kde-format
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -438,53 +440,53 @@ msgstr "Alles verwerfen"
 msgid "Save All"
 msgstr "Alles speichern"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:103
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:129
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Preview"
 msgstr "Vorschau"
 
-#: qml/MainWindow.qml:148
+#: qml/MainWindow.qml:138
 #, kde-format
 msgid "Scan"
 msgstr "Scannen"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Scanner-Einstellungen anzeigen"
 
-#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Teilen"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:180
 #, kde-format
 msgid "Print"
 msgstr "Drucken"
 
-#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
+#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
 #, kde-format
 msgid "About Skanpage"
 msgstr "Über Skanpage"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage einrichten ..."
 
-#: qml/MainWindow.qml:226
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Tastaturkurzbefehle festlegen …"
 
-#: qml/MainWindow.qml:234
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Quit"
 msgstr "Beenden"
@@ -676,6 +678,11 @@ msgstr "Schließen"
 #, kde-format
 msgid "Share as:"
 msgstr "Teilen als:"
+
+#, fuzzy
+#~| msgid "All files (*)"
+#~ msgid "All files"
+#~ msgstr "Alle Dateien (*)"
 
 #, fuzzy
 #~| msgid "Skanpage"

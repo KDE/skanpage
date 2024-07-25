@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-07-25 00:41+0000\n"
 "PO-Revision-Date: 2023-06-09 23:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -108,9 +108,12 @@ msgstr "Não foi possível gravar o documento como uma imagem."
 msgid "Failed to save image."
 msgstr "Não foi possível gravar a imagem"
 
-#: FormatModel.cpp:54
+#: FormatModel.cpp:49
 #, kde-format
-msgid "All files"
+msgctxt ""
+"format filter for a file dialog, all formats supported by the application "
+"will be displayed"
+msgid "All Supported Files"
 msgstr ""
 
 #: ImageImport.cpp:42
@@ -344,7 +347,7 @@ msgstr "Ampliar para Caber"
 msgid "Zoom 100%"
 msgstr "Ampliação a 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
 #, kde-format
 msgid "Export PDF"
 msgstr "Exportar o PDF"
@@ -388,7 +391,7 @@ msgstr ""
 msgid "Save"
 msgstr "Gravar"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
@@ -439,53 +442,53 @@ msgstr "Eliminar Tudo"
 msgid "Save All"
 msgstr "Gravar Tudo"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:103
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:129
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Preview"
 msgstr "Antevisão"
 
-#: qml/MainWindow.qml:148
+#: qml/MainWindow.qml:138
 #, kde-format
 msgid "Scan"
 msgstr "Digitalizar"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Mostrar as Opções do 'Scanner'"
 
-#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Partilhar"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:180
 #, kde-format
 msgid "Print"
 msgstr "Imprimir"
 
-#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
+#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
 #, kde-format
 msgid "About Skanpage"
 msgstr "Acerca do Skanpage"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Configurar o Skanpage…"
 
-#: qml/MainWindow.qml:226
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Configurar os Atalhos…"
 
-#: qml/MainWindow.qml:234
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Quit"
 msgstr "Sair"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-07-25 00:41+0000\n"
 "PO-Revision-Date: 2024-06-24 08:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -106,10 +106,13 @@ msgstr "שמירת המסמך כתמונה נכשלה."
 msgid "Failed to save image."
 msgstr "שמירת התמונה נכשלה."
 
-#: FormatModel.cpp:54
+#: FormatModel.cpp:49
 #, kde-format
-msgid "All files"
-msgstr "כל הקבצים"
+msgctxt ""
+"format filter for a file dialog, all formats supported by the application "
+"will be displayed"
+msgid "All Supported Files"
+msgstr ""
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -339,7 +342,7 @@ msgstr "תקריב להתאמה"
 msgid "Zoom 100%"
 msgstr "תקריב 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
 #, kde-format
 msgid "Export PDF"
 msgstr "ייצוא PDF"
@@ -383,7 +386,7 @@ msgstr ""
 msgid "Save"
 msgstr "שמירה"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
 #, kde-format
 msgid "Cancel"
 msgstr "ביטול"
@@ -434,53 +437,53 @@ msgstr "התעלמות מהכול"
 msgid "Save All"
 msgstr "שמירה של הכול"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:103
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "ייבוא"
 
-#: qml/MainWindow.qml:129
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Preview"
 msgstr "תצוגה מקדימה"
 
-#: qml/MainWindow.qml:148
+#: qml/MainWindow.qml:138
 #, kde-format
 msgid "Scan"
 msgstr "סריקה"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "הצגת אפשרויות סורק"
 
-#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "שיתוף"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:180
 #, kde-format
 msgid "Print"
 msgstr "הדפסה"
 
-#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
+#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
 #, kde-format
 msgid "About Skanpage"
 msgstr "על Skanpage"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "הגדרת Skanpage…"
 
-#: qml/MainWindow.qml:226
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "הגדרת קיצורי מקלדת…"
 
-#: qml/MainWindow.qml:234
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Quit"
 msgstr "יציאה"
@@ -670,3 +673,6 @@ msgstr "סגירה"
 #, kde-format
 msgid "Share as:"
 msgstr "שיתוף בתור:"
+
+#~ msgid "All files"
+#~ msgstr "כל הקבצים"

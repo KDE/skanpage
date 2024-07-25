@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-07-25 00:41+0000\n"
 "PO-Revision-Date: 2024-06-24 05:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -106,10 +106,13 @@ msgstr "დოკუმენტის სურათად შენახვ�
 msgid "Failed to save image."
 msgstr "ფაილის შენახვის შეცდომა."
 
-#: FormatModel.cpp:54
+#: FormatModel.cpp:49
 #, kde-format
-msgid "All files"
-msgstr "ყველა ფაილი"
+msgctxt ""
+"format filter for a file dialog, all formats supported by the application "
+"will be displayed"
+msgid "All Supported Files"
+msgstr ""
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -340,7 +343,7 @@ msgstr "გადიდება ჩატევამდე"
 msgid "Zoom 100%"
 msgstr "გადიდება 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF-ად გატანა"
@@ -384,7 +387,7 @@ msgstr ""
 msgid "Save"
 msgstr "შენახვა"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
 #, kde-format
 msgid "Cancel"
 msgstr "გაუქმება"
@@ -435,53 +438,53 @@ msgstr "ყველაფრის მოცილება"
 msgid "Save All"
 msgstr "ყველას შენახვა"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:103
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "შემოტანა"
 
-#: qml/MainWindow.qml:129
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Preview"
 msgstr "მინიატურა"
 
-#: qml/MainWindow.qml:148
+#: qml/MainWindow.qml:138
 #, kde-format
 msgid "Scan"
 msgstr "სკანირება"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "სკანერის პარამეტრების ჩვენება"
 
-#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "გაზიარება"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:180
 #, kde-format
 msgid "Print"
 msgstr "დაბეჭდვა"
 
-#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
+#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage-ის შესახებ"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage-ის მორგება…"
 
-#: qml/MainWindow.qml:226
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "კლავიატურის მალსახმობების მორგება…"
 
-#: qml/MainWindow.qml:234
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Quit"
 msgstr "&გასვლა"
@@ -671,3 +674,6 @@ msgstr "დაკეტვა"
 #, kde-format
 msgid "Share as:"
 msgstr "გაზიარება, როგორც:"
+
+#~ msgid "All files"
+#~ msgstr "ყველა ფაილი"

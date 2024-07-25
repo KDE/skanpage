@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-07-25 00:41+0000\n"
 "PO-Revision-Date: 2024-06-26 18:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -106,10 +106,13 @@ msgstr "فشل حفظ المستند كصورة"
 msgid "Failed to save image."
 msgstr "فشل حفظ الصّورة."
 
-#: FormatModel.cpp:54
+#: FormatModel.cpp:49
 #, kde-format
-msgid "All files"
-msgstr "كلّ الملفّات"
+msgctxt ""
+"format filter for a file dialog, all formats supported by the application "
+"will be displayed"
+msgid "All Supported Files"
+msgstr ""
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -341,7 +344,7 @@ msgstr "لائم التقريب"
 msgid "Zoom 100%"
 msgstr "تكبير 100٪"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
 #, kde-format
 msgid "Export PDF"
 msgstr "صدر إلى بي دي اف"
@@ -385,7 +388,7 @@ msgstr ""
 msgid "Save"
 msgstr "احفظ"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"
@@ -436,53 +439,53 @@ msgstr "أهمل الكلّ"
 msgid "Save All"
 msgstr "احفظ الكلّ"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:103
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "استورد"
 
-#: qml/MainWindow.qml:129
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Preview"
 msgstr "عاين"
 
-#: qml/MainWindow.qml:148
+#: qml/MainWindow.qml:138
 #, kde-format
 msgid "Scan"
 msgstr "امسح"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:162
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "أظهر خيارات الماسحة"
 
-#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "شارك"
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:180
 #, kde-format
 msgid "Print"
 msgstr "اطبع"
 
-#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
+#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
 #, kde-format
 msgid "About Skanpage"
 msgstr "عن ماسح الصفحات"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:208
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "اضبط ماسح الصفحات..."
 
-#: qml/MainWindow.qml:226
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "اضبط اختصارات لوحة المفاتيح…"
 
-#: qml/MainWindow.qml:234
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Quit"
 msgstr "أنهِ"
@@ -672,6 +675,9 @@ msgstr "أغلق"
 #, kde-format
 msgid "Share as:"
 msgstr "شارك كـ:"
+
+#~ msgid "All files"
+#~ msgstr "كلّ الملفّات"
 
 #~ msgid "Settings"
 #~ msgstr "إعدادات"

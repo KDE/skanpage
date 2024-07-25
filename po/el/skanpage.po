@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-07-25 00:41+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -108,11 +108,13 @@ msgstr "Αποτυχία αποθήκευσης εικόνας"
 msgid "Failed to save image."
 msgstr "Αποτυχία αποθήκευσης εικόνας"
 
-#: FormatModel.cpp:54
-#, fuzzy, kde-format
-#| msgid "All files (*)"
-msgid "All files"
-msgstr "Όλα τα αρχεία (*)"
+#: FormatModel.cpp:49
+#, kde-format
+msgctxt ""
+"format filter for a file dialog, all formats supported by the application "
+"will be displayed"
+msgid "All Supported Files"
+msgstr ""
 
 #: ImageImport.cpp:42
 #, fuzzy, kde-format
@@ -345,7 +347,7 @@ msgstr "Ζουμ με ταίριασμα"
 msgid "Zoom 100%"
 msgstr "Ζουμ 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:121
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
 #, kde-format
 msgid "Export PDF"
 msgstr ""
@@ -390,7 +392,7 @@ msgstr ""
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:163
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -443,55 +445,55 @@ msgstr ""
 msgid "Save All"
 msgstr "Αποθήκευση"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:103
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:129
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:148
+#: qml/MainWindow.qml:138
 #, kde-format
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: qml/MainWindow.qml:172
+#: qml/MainWindow.qml:162
 #, fuzzy, kde-format
 #| msgid "Scanner Options"
 msgid "Show Scanner Options"
 msgstr "Επιλογές σαρωτή"
 
-#: qml/MainWindow.qml:182 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: qml/MainWindow.qml:190
+#: qml/MainWindow.qml:180
 #, kde-format
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: qml/MainWindow.qml:211 qml/MainWindow.qml:423
+#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
 #, kde-format
 msgid "About Skanpage"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:208
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:226
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:234
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Quit"
 msgstr "Έξοδος"
@@ -689,6 +691,11 @@ msgstr "Κλείσιμο"
 #, kde-format
 msgid "Share as:"
 msgstr ""
+
+#, fuzzy
+#~| msgid "All files (*)"
+#~ msgid "All files"
+#~ msgstr "Όλα τα αρχεία (*)"
 
 #, fuzzy
 #~| msgid "Skanpage"
