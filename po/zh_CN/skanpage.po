@@ -668,6 +668,3 @@ msgstr "关闭"
 #, kde-format
 msgid "Share as:"
 msgstr "分享为："
-
-#~ msgid "All files"
-#~ msgstr "所有文件"
