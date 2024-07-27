@@ -111,7 +111,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "所有支持的文件"
 
 #: ImageImport.cpp:42
 #, kde-format

@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-25 00:41+0000\n"
-"PO-Revision-Date: 2024-05-07 15:35+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2024-07-26 14:53+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -111,7 +111,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "Všechny podporované soubory"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -671,6 +671,3 @@ msgstr "Zavřít"
 #, kde-format
 msgid "Share as:"
 msgstr "Sdílet jako:"
-
-#~ msgid "All files"
-#~ msgstr "Všechny soubory"
