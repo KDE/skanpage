@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-25 00:41+0000\n"
-"PO-Revision-Date: 2024-07-06 00:42+0300\n"
+"PO-Revision-Date: 2024-07-27 19:26+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -113,7 +113,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "Visi palaikomi failai"
 
 #: ImageImport.cpp:42
 #, kde-format
