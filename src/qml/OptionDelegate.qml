@@ -247,25 +247,18 @@ Item {
         switch (unitType) {
             case KSaneOption.UnitBit:
                 return i18nc("Unit suffix for bit", "bit");
-                break;
             case KSaneOption.UnitDPI:
                 return i18nc("Unit suffix for DPI", "DPI");
-                break;
             case KSaneOption.UnitMicroSecond:
                 return i18nc("Unit suffix for microsecond", "µs");
-                break;
             case KSaneOption.UnitSecond:
                 return i18nc("Unit suffix for second", "s");
-                break;
             case KSaneOption.UnitMilliMeter:
                 return i18nc("Unit suffix for millimeter", "mm");
-                break;
             case KSaneOption.UnitPercent:
                 return i18nc("Unit suffix for percent", "%");
-                break;
             case KSaneOption.UnitPixel:
                 return i18nc("Unit suffix for pixel", "px");
-                break;
             default:
                 return "";
         }
