@@ -22,7 +22,7 @@ class ImageImport : public QObject
 public:
 
     explicit ImageImport(QObject *parent = nullptr);
-    ~ImageImport();
+    ~ImageImport() override;
     void importImageFile(const QUrl &fileUrl, const int currentDPI);
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);

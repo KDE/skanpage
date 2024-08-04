@@ -41,7 +41,7 @@ public:
 
     explicit OptionsModel(QObject *parent = nullptr);
 
-    ~OptionsModel();
+    ~OptionsModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

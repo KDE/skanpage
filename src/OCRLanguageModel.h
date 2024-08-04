@@ -29,7 +29,7 @@ public:
 
     explicit OCRLanguageModel(QObject *parent = nullptr);
 
-    ~OCRLanguageModel();
+    ~OCRLanguageModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

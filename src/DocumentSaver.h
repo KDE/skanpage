@@ -27,7 +27,7 @@ class DocumentSaver : public QObject
 
 public:
     explicit DocumentSaver(QObject *parent = nullptr);
-    ~DocumentSaver();
+    ~DocumentSaver() override;
 
     void saveDocument(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type, const QString &title);
     void saveNewPageTemporary(const int pageID, const QImage &image);

@@ -24,7 +24,7 @@ class DocumentPrinter : public QObject
 public:
 
     explicit DocumentPrinter(QObject *parent = nullptr);
-    ~DocumentPrinter();
+    ~DocumentPrinter() override;
 
     void printDocument(const SkanpageUtils::DocumentPages &document);
 

@@ -22,7 +22,7 @@ class OCREngine : public QObject
 {
 public:
     explicit OCREngine(QObject *parent = nullptr);
-    ~OCREngine();
+    ~OCREngine() override;
 
     void InitForOCR();
 

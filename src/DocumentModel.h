@@ -57,7 +57,7 @@ public:
     Q_ENUM(ReorderOption)
 
     explicit DocumentModel(QObject *parent = nullptr);
-    ~DocumentModel();
+    ~DocumentModel() override;
 
     QString name() const;
     QString fileName() const;

@@ -29,7 +29,7 @@ public:
 
     explicit DevicesModel(QObject *parent = nullptr);
 
-    ~DevicesModel();
+    ~DevicesModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

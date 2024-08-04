@@ -24,7 +24,7 @@ public:
 
     explicit FormatModel(QObject *parent = nullptr);
 
-    ~FormatModel();
+    ~FormatModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

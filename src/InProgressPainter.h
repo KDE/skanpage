@@ -17,7 +17,7 @@ class InProgressPainter : public QQuickPaintedItem
 
 public:
     explicit InProgressPainter(QQuickItem *parent = nullptr);
-    ~InProgressPainter();
+    ~InProgressPainter() override;
 
     void paint(QPainter *painter) override;
     Q_INVOKABLE void initialize(Skanpage *skanpageApp);
