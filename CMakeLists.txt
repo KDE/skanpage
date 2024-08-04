@@ -34,6 +34,7 @@ include(KDEClangFormat)
 include(KDECMakeSettings)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
+include(ECMDeprecationSettings)
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml QuickControls2 Concurrent Widgets Quick PrintSupport Pdf)
 
@@ -46,6 +47,9 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
         Config
         Purpose
         XmlGui
+)
+ecm_set_disabled_deprecation_versions(QT 6.7.2
+     KF 6.4.0
 )
 
 find_package(KSaneCore6 "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}" REQUIRED)
