@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-25 00:41+0000\n"
+"POT-Creation-Date: 2024-08-05 00:42+0000\n"
 "PO-Revision-Date: 2024-07-25 09:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -538,37 +538,37 @@ msgctxt "Unit suffix for bit"
 msgid "bit"
 msgstr "bit"
 
-#: qml/OptionDelegate.qml:252
+#: qml/OptionDelegate.qml:251
 #, kde-format
 msgctxt "Unit suffix for DPI"
 msgid "DPI"
 msgstr "PPP"
 
-#: qml/OptionDelegate.qml:255
+#: qml/OptionDelegate.qml:253
 #, kde-format
 msgctxt "Unit suffix for microsecond"
 msgid "µs"
 msgstr "µs"
 
-#: qml/OptionDelegate.qml:258
+#: qml/OptionDelegate.qml:255
 #, kde-format
 msgctxt "Unit suffix for second"
 msgid "s"
 msgstr "s"
 
-#: qml/OptionDelegate.qml:261
+#: qml/OptionDelegate.qml:257
 #, kde-format
 msgctxt "Unit suffix for millimeter"
 msgid "mm"
 msgstr "mm"
 
-#: qml/OptionDelegate.qml:264
+#: qml/OptionDelegate.qml:259
 #, kde-format
 msgctxt "Unit suffix for percent"
 msgid "%"
 msgstr "%"
 
-#: qml/OptionDelegate.qml:267
+#: qml/OptionDelegate.qml:261
 #, kde-format
 msgctxt "Unit suffix for pixel"
 msgid "px"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-25 00:41+0000\n"
+"POT-Creation-Date: 2024-08-05 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -530,37 +530,37 @@ msgctxt "Unit suffix for bit"
 msgid "bit"
 msgstr "位"
 
-#: qml/OptionDelegate.qml:252
+#: qml/OptionDelegate.qml:251
 #, kde-format
 msgctxt "Unit suffix for DPI"
 msgid "DPI"
 msgstr "DPI"
 
-#: qml/OptionDelegate.qml:255
+#: qml/OptionDelegate.qml:253
 #, kde-format
 msgctxt "Unit suffix for microsecond"
 msgid "µs"
 msgstr "微秒"
 
-#: qml/OptionDelegate.qml:258
+#: qml/OptionDelegate.qml:255
 #, kde-format
 msgctxt "Unit suffix for second"
 msgid "s"
 msgstr "秒"
 
-#: qml/OptionDelegate.qml:261
+#: qml/OptionDelegate.qml:257
 #, kde-format
 msgctxt "Unit suffix for millimeter"
 msgid "mm"
 msgstr "毫米"
 
-#: qml/OptionDelegate.qml:264
+#: qml/OptionDelegate.qml:259
 #, kde-format
 msgctxt "Unit suffix for percent"
 msgid "%"
 msgstr "%"
 
-#: qml/OptionDelegate.qml:267
+#: qml/OptionDelegate.qml:261
 #, kde-format
 msgctxt "Unit suffix for pixel"
 msgid "px"
