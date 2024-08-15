@@ -56,39 +56,6 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
   <name xml:lang="zh-TW">Skanpage</name>
   <summary>Scan multi-page documents and images</summary>
-  <summary xml:lang="ar">تطبيق لمسح المستندات متعددة الصفحات ضوئيًّا</summary>
-  <summary xml:lang="be">Праграма для сканавання шматстаронкавых дакументаў</summary>
-  <summary xml:lang="bg">Приложение с възможност за сканиране на много страници</summary>
-  <summary xml:lang="ca">Aplicació d'escaneig de documents multipàgina</summary>
-  <summary xml:lang="ca-valencia">Aplicació d'escaneig de documents multipàgina</summary>
-  <summary xml:lang="cs">Aplikace pro vícestránkové skenování</summary>
-  <summary xml:lang="en-GB">Multi-page document scanning app</summary>
-  <summary xml:lang="eo">Skan-apo por plurpaĝaj dokumentoj</summary>
-  <summary xml:lang="es">Aplicación para escanear documentos multipágina</summary>
-  <summary xml:lang="eu">Orri-anitzeko dokumentuak eskaneatzeko aplikazioa</summary>
-  <summary xml:lang="fi">Monisivuisia tiedostoja tukeva kuvanlukusovellus</summary>
-  <summary xml:lang="fr">Application de numérisation de documents composés de plusieurs pages</summary>
-  <summary xml:lang="gl">Aplicación para escanear documentos de varias páxinas.</summary>
-  <summary xml:lang="he">יישום סריקת מסמכים רבי עמודים</summary>
-  <summary xml:lang="hu">Többoldalas dokumentumokat szkennelő alkalmazás</summary>
-  <summary xml:lang="ia">Application pro scander documento multi-pagina</summary>
-  <summary xml:lang="is">Forrit til skönnunar á mörgum síðum</summary>
-  <summary xml:lang="it">Applicazione per scansionare documenti multi pagina</summary>
-  <summary xml:lang="ka">მრავალგვერდიანი დოკუმენტების სკანირების აპი</summary>
-  <summary xml:lang="ko">여러 쪽 문서 스캔 앱</summary>
-  <summary xml:lang="lt">Daugiapuslapinių dokumentų skenavimo programa</summary>
-  <summary xml:lang="lv">Vairāku lapu dokumenta skenēšanas programma</summary>
-  <summary xml:lang="nl">Scanprogramma voor document met meerdere pagina's</summary>
-  <summary xml:lang="pl">Program do wielostronicowego skanowania</summary>
-  <summary xml:lang="pt-BR">Aplicativo de digitalização de documentos de múltiplas páginas</summary>
-  <summary xml:lang="ru">Приложение для сканирования многостраничных документов</summary>
-  <summary xml:lang="sl">Aplikacija za optično branje več stranskega dokumenta</summary>
-  <summary xml:lang="sv">Program för bildinläsning av flersidiga dokument</summary>
-  <summary xml:lang="tr">Çok sayfalı belge tarama uygulaması</summary>
-  <summary xml:lang="uk">Програма для сканування послідовностей сторінок</summary>
-  <summary xml:lang="x-test">xxMulti-page document scanning appxx</summary>
-  <summary xml:lang="zh-CN">多页文档扫描应用</summary>
-  <summary xml:lang="zh-TW">多頁文件掃描應用程式</summary>
   <description>
     <p>Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.</p>
     <p xml:lang="ar">ماسح الصفحات تطبيق مسح ضوئي بسيط مصمم لمسح المستندات متعددة الصفحات ضوئياً. يمكنه أيضا مسح وحفظ الصور والمستندات ذات الصفحة الواحدة.</p>
