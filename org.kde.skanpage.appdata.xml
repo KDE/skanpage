@@ -58,8 +58,10 @@ SPDX-License-Identifier: CC0-1.0
   <summary>Scan multi-page documents and images</summary>
   <summary xml:lang="ar">امسح المستندات متعددة الصفحات والصور</summary>
   <summary xml:lang="ca">Escaneja documents multipàgina i imatges</summary>
+  <summary xml:lang="ca-valencia">Escaneja documents multipàgina i imatges</summary>
   <summary xml:lang="es">Escanear documentos multipágina e imágenes</summary>
   <summary xml:lang="eu">Eskaneatu orri-anizkoitzeko dokumentuak eta irudiak</summary>
+  <summary xml:lang="fr">Numériser des documents et des images sur plusieurs pages</summary>
   <summary xml:lang="gl">Escanear documentos de varias páxinas e imaxes.</summary>
   <summary xml:lang="he">סריקת מסמכים וקובצי תמונות רבי עמודים</summary>
   <summary xml:lang="it">Scansione di documenti multi pagina e immagini</summary>
