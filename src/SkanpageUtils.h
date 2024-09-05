@@ -9,41 +9,42 @@
 
 #include <memory>
 
+#include <QList>
 #include <QPageSize>
 #include <QTemporaryFile>
-#include <QList>
 
-namespace SkanpageUtils {
+namespace SkanpageUtils
+{
 
-    Q_NAMESPACE
+Q_NAMESPACE
 
-    enum MessageLevel {
-        ErrorMessage,
-        InformationMessage,
-    };
+enum MessageLevel {
+    ErrorMessage,
+    InformationMessage,
+};
 
-    Q_ENUM_NS(MessageLevel)
+Q_ENUM_NS(MessageLevel)
 
-    enum FileType {
-        EntireDocument,
-        OCRDocument,
-        PageSelection,
-        SharingDocument,
-    };
+enum FileType {
+    EntireDocument,
+    OCRDocument,
+    PageSelection,
+    SharingDocument,
+};
 
-    Q_ENUM_NS(FileType)
+Q_ENUM_NS(FileType)
 
-    struct PageProperties {
-        std::shared_ptr<QTemporaryFile> temporaryFile;
-        QPageSize pageSize;
-        int dpi;
-        int rotationAngle = 0;
-    };
+struct PageProperties {
+    std::shared_ptr<QTemporaryFile> temporaryFile;
+    QPageSize pageSize;
+    int dpi;
+    int rotationAngle = 0;
+};
 
-    typedef QList<PageProperties> DocumentPages;
+typedef QList<PageProperties> DocumentPages;
 
-    bool operator==(const PageProperties& lhs, const PageProperties& rhs);
-    QDebug operator<<(QDebug d, const PageProperties& pageProperties);
+bool operator==(const PageProperties &lhs, const PageProperties &rhs);
+QDebug operator<<(QDebug d, const PageProperties &pageProperties);
 }
 
 Q_DECLARE_METATYPE(SkanpageUtils::MessageLevel)

@@ -8,27 +8,28 @@
 #include "Skanpage.h"
 
 #include <QFile>
+#include <QImageReader>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QThread>
 #include <QtQml>
-#include <QImageReader>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KShortcutsDialog>
 
 #include "DevicesModel.h"
-#include "OptionsModel.h"
-#include "FormatModel.h"
-#include "FilteredOptionsModel.h"
-#include "DocumentSaver.h"
 #include "DocumentPrinter.h"
-#include "OCREngine.h"
+#include "DocumentSaver.h"
+#include "FilteredOptionsModel.h"
+#include "FormatModel.h"
 #include "ImageImport.h"
+#include "OCREngine.h"
+#include "OptionsModel.h"
 #include "skanpage_debug.h"
 
-class SkanpagePrivate {
+class SkanpagePrivate
+{
 public:
     KSaneCore::Interface m_ksaneInterface;
     DocumentModel m_documentHandler;
@@ -88,7 +89,7 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     connect(&d->m_ksaneInterface, &Interface::scanFinished, this, &Skanpage::scanningFinished);
     connect(&d->m_ksaneInterface, &Interface::batchModeCountDown, this, &Skanpage::batchModeCountDown);
     connect(&d->m_documentHandler, &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
-    
+
     d->m_fileIOThread.start();
     d->m_documentSaver.moveToThread(&d->m_fileIOThread);
     d->m_OCREngine.moveToThread(&d->m_fileIOThread);
@@ -108,7 +109,6 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     d->m_dumpOptionsUrl = dumpOptionsUrl;
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
-
         KConfigGroup options(KSharedConfig::openStateConfig(), QStringLiteral("general"));
         const QString savedDeviceName = options.readEntry(QStringLiteral("deviceName"));
         const QString savedDeviceVendor = options.readEntry(QStringLiteral("deviceVendor"));
@@ -153,10 +153,8 @@ void Skanpage::setupScanningBounds()
     Option *brx = d->m_ksaneInterface.getOption(Interface::BottomRightXOption);
     Option *bry = d->m_ksaneInterface.getOption(Interface::BottomRightYOption);
 
-    if (tlx && tly && brx && bry &&
-        tlx->state() == Option::StateActive && tly->state() == Option::StateActive &&
-        brx->state() == Option::StateActive && bry->state() == Option::StateActive
-    ) {
+    if (tlx && tly && brx && bry && tlx->state() == Option::StateActive && tly->state() == Option::StateActive && brx->state() == Option::StateActive
+        && bry->state() == Option::StateActive) {
         QVariant tlxMin = tlx->minimumValue(), tlyMin = tly->minimumValue();
         QVariant brxMax = brx->maximumValue(), bryMax = bry->maximumValue();
         if (tlxMin.isValid() && tlyMin.isValid() && brxMax.isValid() && bryMax.isValid()) {
@@ -167,19 +165,19 @@ void Skanpage::setupScanningBounds()
                                     bry->value().toReal() / d->m_maximumScanArea.height());
 
             if (!d->m_scanAreaConnectionsDone) {
-                connect(tlx, &Option::valueChanged, this, [&](const QVariant &value){
+                connect(tlx, &Option::valueChanged, this, [&](const QVariant &value) {
                     d->m_scanArea.setLeft(value.toReal() / d->m_maximumScanArea.width());
                     Q_EMIT scanAreaChanged(d->m_scanArea);
                 });
-                connect(tly, &Option::valueChanged, this, [&](const QVariant &value){
+                connect(tly, &Option::valueChanged, this, [&](const QVariant &value) {
                     d->m_scanArea.setTop(value.toReal() / d->m_maximumScanArea.height());
                     Q_EMIT scanAreaChanged(d->m_scanArea);
                 });
-                connect(brx, &Option::valueChanged, this, [&](const QVariant &value){
+                connect(brx, &Option::valueChanged, this, [&](const QVariant &value) {
                     d->m_scanArea.setRight(value.toReal() / d->m_maximumScanArea.width());
                     Q_EMIT scanAreaChanged(d->m_scanArea);
                 });
-                connect(bry, &Option::valueChanged, this, [&](const QVariant &value){
+                connect(bry, &Option::valueChanged, this, [&](const QVariant &value) {
                     d->m_scanArea.setBottom(value.toReal() / d->m_maximumScanArea.height());
                     Q_EMIT scanAreaChanged(d->m_scanArea);
                 });
@@ -201,11 +199,11 @@ QRectF Skanpage::scanArea() const
 
 void Skanpage::setScanArea(QRectF area)
 {
-    if (area == d->m_scanArea) return;
-    if (d->m_ksaneInterface.getOption(Interface::TopLeftXOption) == NULL ||
-        d->m_ksaneInterface.getOption(Interface::TopLeftYOption) == NULL ||
-        d->m_ksaneInterface.getOption(Interface::BottomRightXOption) == NULL ||
-        d->m_ksaneInterface.getOption(Interface::BottomRightYOption) == NULL) return;
+    if (area == d->m_scanArea)
+        return;
+    if (d->m_ksaneInterface.getOption(Interface::TopLeftXOption) == NULL || d->m_ksaneInterface.getOption(Interface::TopLeftYOption) == NULL
+        || d->m_ksaneInterface.getOption(Interface::BottomRightXOption) == NULL || d->m_ksaneInterface.getOption(Interface::BottomRightYOption) == NULL)
+        return;
     d->m_ksaneInterface.getOption(Interface::TopLeftXOption)->setValue(area.left() * d->m_maximumScanArea.width());
     d->m_ksaneInterface.getOption(Interface::TopLeftYOption)->setValue(area.top() * d->m_maximumScanArea.height());
     d->m_ksaneInterface.getOption(Interface::BottomRightXOption)->setValue(area.right() * d->m_maximumScanArea.width());
@@ -222,7 +220,8 @@ void Skanpage::setScanSplit(Skanpage::ScanSplit split)
     if (split != d->m_scanSplit) {
         d->m_scanSplit = split;
         Q_EMIT scanSplitChanged(d->m_scanSplit);
-        if (split != ScanNotSplit) clearSubAreas();
+        if (split != ScanNotSplit)
+            clearSubAreas();
     }
 }
 
@@ -251,12 +250,16 @@ bool Skanpage::appendSubArea(QRectF area)
         if (area == d->m_scanSubAreas[i]) { // If the appended area is a duplicate
             return false;
         } else if (area.contains(d->m_scanSubAreas[i])) { // This area contains a smaller one within
-            d->m_scanSubAreas.removeAt(i); i--; // Remove redundant areas
+            d->m_scanSubAreas.removeAt(i);
+            i--; // Remove redundant areas
         } else if (area.intersects(d->m_scanSubAreas[i])) { // Avoid very similar (overlaping too much)
             // return; // To not allow any overlap
             QRectF intersect = area.intersected(d->m_scanSubAreas[i]);
-            float overlapProportion = intersect.width()*intersect.height() / (area.width()*area.height());
-            if (overlapProportion > 0.33) { d->m_scanSubAreas.removeAt(i); i--; }
+            float overlapProportion = intersect.width() * intersect.height() / (area.width() * area.height());
+            if (overlapProportion > 0.33) {
+                d->m_scanSubAreas.removeAt(i);
+                i--;
+            }
         }
     }
     d->m_scanSubAreas.append(area);
@@ -285,20 +288,28 @@ bool Skanpage::previewImageAvailable() const
 
 void Skanpage::previewScan()
 {
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption)) opt->storeCurrentData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption)) opt->storeCurrentData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption)) opt->storeCurrentData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption)) opt->storeCurrentData();
-    if (d->m_maximumScanArea.isValid()) setScanArea(QRectF(0.0, 0.0, 1.0, 1.0));
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption))
+        opt->storeCurrentData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption))
+        opt->storeCurrentData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption))
+        opt->storeCurrentData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption))
+        opt->storeCurrentData();
+    if (d->m_maximumScanArea.isValid())
+        setScanArea(QRectF(0.0, 0.0, 1.0, 1.0));
 
     if (Option *opt = d->m_ksaneInterface.getOption(Interface::ResolutionOption)) {
         opt->storeCurrentData();
         if (QVariant minRes = opt->minimumValue(); minRes.isValid()) {
-            if (opt->type() == Option::TypeValueList) opt->setValue(minRes);
-            else opt->setValue(minRes.toInt() < 25 ? 25 : minRes);
+            if (opt->type() == Option::TypeValueList)
+                opt->setValue(minRes);
+            else
+                opt->setValue(minRes.toInt() < 25 ? 25 : minRes);
         }
     }
-    if (Option* opt = d->m_ksaneInterface.getOption(Interface::PreviewOption)) opt->setValue(true);
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::PreviewOption))
+        opt->setValue(true);
 
     d->m_scanIsPreview = true;
 
@@ -307,13 +318,19 @@ void Skanpage::previewScan()
 
 void Skanpage::finishPreview()
 {
-    if (Option* opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption)) opt->restoreSavedData();
-    if (Option* opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption)) opt->restoreSavedData();
-    if (Option* opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption)) opt->restoreSavedData();
-    if (Option* opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption)) opt->restoreSavedData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption))
+        opt->restoreSavedData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption))
+        opt->restoreSavedData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption))
+        opt->restoreSavedData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption))
+        opt->restoreSavedData();
 
-    if (Option* opt = d->m_ksaneInterface.getOption(Interface::ResolutionOption)) opt->restoreSavedData();
-    if (Option* opt = d->m_ksaneInterface.getOption(Interface::PreviewOption)) opt->setValue(false);
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::ResolutionOption))
+        opt->restoreSavedData();
+    if (Option *opt = d->m_ksaneInterface.getOption(Interface::PreviewOption))
+        opt->setValue(false);
 
     d->m_scanIsPreview = false;
 }
@@ -323,7 +340,7 @@ void Skanpage::startScan()
     if (!d->m_scanSubAreas.isEmpty()) {
         QRectF totalArea = d->m_scanArea; // Include last (unadded) area
         // This makes a rectangle that covers all the areas
-        for (const QRectF& area : d->m_scanSubAreas) {
+        for (const QRectF &area : d->m_scanSubAreas) {
             totalArea = totalArea.united(area);
         }
         appendSubArea(d->m_scanArea); // Remember last area, for later use
@@ -357,7 +374,7 @@ void Skanpage::imageReady(const QImage &image)
     auto applySubAreasToImage = [&]() {
         auto toOrigin = QTransform::fromTranslate(-d->m_scanArea.left(), -d->m_scanArea.top());
         auto toScale = QTransform::fromScale(image.width() / d->m_scanArea.width(), image.height() / d->m_scanArea.height());
-        for (const QRectF& area : d->m_scanSubAreas) {
+        for (const QRectF &area : d->m_scanSubAreas) {
             QImage individualImage = image.copy(toScale.mapRect(toOrigin.mapRect(area)).toRect());
             d->m_documentHandler.addImage(individualImage);
             d->m_scannedImages++;
@@ -369,9 +386,15 @@ void Skanpage::imageReady(const QImage &image)
     } else {
         bool v = d->m_scanSplit == ScanIsSplitV;
         QRectF half = d->m_scanArea;
-        if (v) half.setWidth(half.width()/2); else half.setHeight(half.height()/2);
+        if (v)
+            half.setWidth(half.width() / 2);
+        else
+            half.setHeight(half.height() / 2);
         d->m_scanSubAreas.append(half); // Fake sub-areas, no need for notification
-        if (v) half.moveRight(d->m_scanArea.right()); else half.moveBottom(d->m_scanArea.bottom());
+        if (v)
+            half.moveRight(d->m_scanArea.right());
+        else
+            half.moveBottom(d->m_scanArea.bottom());
         d->m_scanSubAreas.append(half);
         applySubAreasToImage();
     }
@@ -449,7 +472,7 @@ bool Skanpage::openDevice(const QString &deviceName, const QString &deviceVendor
         }
         QJsonDocument jsonDocument(allScannerData);
         QFile file(absolutePath);
-        if(!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
             return false;
         }
         QTextStream out(&file);
@@ -473,7 +496,7 @@ void Skanpage::finishOpeningDevice(const QString &deviceName, const QString &dev
     d->m_deviceVendor = deviceVendor;
     d->m_deviceModel = deviceModel;
     Q_EMIT deviceInfoUpdated();
-    
+
     d->m_optionsModel.setOptionsList(d->m_ksaneInterface.getOptionsList());
     Q_EMIT optionsChanged();
 
@@ -503,20 +526,21 @@ void Skanpage::reloadDevicesList()
     }
     d->m_state = SearchingForDevices;
     Q_EMIT applicationStateChanged(d->m_state);
-    d->m_ksaneInterface.reloadDevicesList(d->m_configuration->showAllDevices() ? Interface::DeviceType::AllDevices : Interface::DeviceType::NoCameraAndVirtualDevices);
+    d->m_ksaneInterface.reloadDevicesList(d->m_configuration->showAllDevices() ? Interface::DeviceType::AllDevices
+                                                                               : Interface::DeviceType::NoCameraAndVirtualDevices);
 }
 
 void Skanpage::showKSaneMessage(Interface::ScanStatus status, const QString &strStatus)
 {
     switch (status) {
-        case Interface::ErrorGeneral:
-            showUserMessage(SkanpageUtils::ErrorMessage, strStatus);
-            break;
-        case Interface::Information:
-            showUserMessage(SkanpageUtils::InformationMessage, strStatus);
-            break;
-        default:
-            break;
+    case Interface::ErrorGeneral:
+        showUserMessage(SkanpageUtils::ErrorMessage, strStatus);
+        break;
+    case Interface::Information:
+        showUserMessage(SkanpageUtils::InformationMessage, strStatus);
+        break;
+    default:
+        break;
     }
 }
 
@@ -592,16 +616,20 @@ bool Skanpage::OCRavailable() const
     return d->m_OCREngine.available();
 }
 
-void Skanpage::print() {
+void Skanpage::print()
+{
     d->m_documentPrinter.printDocument(d->m_documentHandler.selectPages(QList<int>()));
 }
 
-void Skanpage::registerAction(QObject* item, QObject* shortcuts, const QString &iconText)
+void Skanpage::registerAction(QObject *item, QObject *shortcuts, const QString &iconText)
 {
     auto getQKeySequence = [](const QVariant &variant) -> QKeySequence {
-        if (variant.typeId() == QMetaType::QKeySequence) return variant.value<QKeySequence>();
-        else if (variant.typeId() == QMetaType::QString) return variant.value<QString>();
-        else return variant.value<QKeySequence::StandardKey>();
+        if (variant.typeId() == QMetaType::QKeySequence)
+            return variant.value<QKeySequence>();
+        else if (variant.typeId() == QMetaType::QString)
+            return variant.value<QString>();
+        else
+            return variant.value<QKeySequence::StandardKey>();
     };
 
     auto getKStandardShortcuts = [](const QVariant &variant) -> QList<QKeySequence> {
@@ -624,7 +652,8 @@ void Skanpage::registerAction(QObject* item, QObject* shortcuts, const QString &
     QList<QKeySequence> sequences;
     if (QVariant prop = item->property("shortcut"); prop.isValid()) {
         QKeySequence seq = getQKeySequence(prop);
-        if (!seq.isEmpty()) sequences.append(seq);
+        if (!seq.isEmpty())
+            sequences.append(seq);
     }
     if (QVariant prop = item->property("shortcutsName"); prop.isValid() && !prop.toString().isEmpty()) {
         sequences.append(getKStandardShortcuts(prop));
@@ -646,7 +675,8 @@ void Skanpage::registerAction(QObject* item, QObject* shortcuts, const QString &
     connect(act, &QAction::changed, this, updateKeySequences);
 }
 
-void Skanpage::showShortcutsDialog() {
+void Skanpage::showShortcutsDialog()
+{
     KShortcutsDialog::showDialog(d->m_actionCollection);
 }
 
@@ -670,13 +700,13 @@ void Skanpage::imageTemporarilySaved()
 
 void Skanpage::scanningFinished(Interface::ScanStatus status, const QString &strStatus)
 {
-    //only print debug, errors are already reported by Interface::userMessage
+    // only print debug, errors are already reported by Interface::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
 
     if (d->m_scanIsPreview) { // imageReady didn't execute (there was an error)
         finishPreview(); // Restore options anyways
     }
-    
+
     d->m_scanInProgress = false;
     checkFinish();
 }
@@ -692,7 +722,12 @@ void Skanpage::checkFinish()
 void Skanpage::importFile(const QUrl &fileUrl)
 {
     const int currentDPI = d->m_ksaneInterface.getOption(KSaneCore::Interface::ResolutionOption)->value().toInt();
-    QMetaObject::invokeMethod(&d->m_fileIOThread, [this, fileUrl, currentDPI]() {d->m_imageImport.importImageFile(fileUrl, currentDPI);}, Qt::QueuedConnection);
+    QMetaObject::invokeMethod(
+        &d->m_fileIOThread,
+        [this, fileUrl, currentDPI]() {
+            d->m_imageImport.importImageFile(fileUrl, currentDPI);
+        },
+        Qt::QueuedConnection);
 }
 
 #include "moc_Skanpage.cpp"

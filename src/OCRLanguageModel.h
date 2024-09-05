@@ -15,17 +15,12 @@ struct LanguageItem {
     bool use;
 };
 
-class OCRLanguageModel : public QAbstractListModel 
+class OCRLanguageModel : public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-
-    enum LanguageModelRoles {
-        NameRole = Qt::UserRole + 1,
-        CodeRole,
-        UseRole
-    };
+    enum LanguageModelRoles { NameRole = Qt::UserRole + 1, CodeRole, UseRole };
 
     explicit OCRLanguageModel(QObject *parent = nullptr);
 
@@ -38,7 +33,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
-    
+
     void setLanguages(const std::vector<std::string> &availableLanguages);
 
     std::string getLanguagesString() const;

@@ -12,14 +12,15 @@
 #include <QPdfWriter>
 
 #if OCR_AVAILABLE
-#include <tesseract/baseapi.h>
-#include <leptonica/allheaders.h>
 #include "OCRLanguageModel.h"
+#include <leptonica/allheaders.h>
+#include <tesseract/baseapi.h>
 #endif
 
 #include "skanpage_debug.h"
 
-class OCREnginePrivate {
+class OCREnginePrivate
+{
 public:
 #if OCR_AVAILABLE
     tesseract::TessBaseAPI m_tesseract;
@@ -28,7 +29,9 @@ public:
 #endif
 };
 
-OCREngine::OCREngine(QObject *parent) : QObject(parent), d(std::make_unique<OCREnginePrivate>())
+OCREngine::OCREngine(QObject *parent)
+    : QObject(parent)
+    , d(std::make_unique<OCREnginePrivate>())
 {
 #if OCR_AVAILABLE
     if (d->m_tesseract.Init(nullptr, nullptr)) { // Use a default language, not necessarily English
@@ -67,7 +70,7 @@ void OCREngine::setColor(QColor color)
     d->m_penColor = color;
 #else
     Q_UNUSED(color)
-#endif   
+#endif
 }
 
 OCRLanguageModel *OCREngine::languages() const
@@ -109,10 +112,9 @@ void OCREngine::OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUti
             if (it->Empty(level)) {
                 continue;
             }
-            const char* word = it->GetUTF8Text(level);
+            const char *word = it->GetUTF8Text(level);
             it->Baseline(level, &baseX1, &baseY1, &baseX2, &baseY2);
-            it->WordFontAttributes(&bold, &italic, &underlined, &monospace,
-                                    &serif, &smallcaps, &pointSize, &fontID);
+            it->WordFontAttributes(&bold, &italic, &underlined, &monospace, &serif, &smallcaps, &pointSize, &fontID);
             it->Orientation(&orientation, &direction, &order, &deskew_angle);
             /* Font attributes other than pointSize do not work
              * https://github.com/tesseract-ocr/tesseract/issues/1074 */
@@ -150,8 +152,7 @@ void OCREngine::OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUti
             painter.drawText(baseX1, baseY1, text);
             delete[] word;
             painter.setTransform(oldTransformation);
-        }
-        while (it->Next(level));
+        } while (it->Next(level));
     }
 #else
     Q_UNUSED(writer)

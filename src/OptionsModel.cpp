@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-//KDE includes
+// KDE includes
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -24,7 +24,7 @@ OptionsModel::OptionsModel(QObject *parent)
     : QAbstractListModel(parent)
     , d(std::make_unique<OptionsModelPrivate>())
 {
-    //if there are no defined quick access options yet, insert default ones
+    // if there are no defined quick access options yet, insert default ones
     KConfigGroup quickOptions(KSharedConfig::openConfig(), QStringLiteral("quickAccessOptions"));
     if (!quickOptions.exists()) {
         d->mQuickAccessOptions.insert(QStringLiteral("KSane::PageSize"));
@@ -38,7 +38,7 @@ OptionsModel::OptionsModel(QObject *parent)
 }
 
 OptionsModel::~OptionsModel()
-{    
+{
     if (d->mQuickAccessListChanged) {
         KConfigGroup quickOptions(KSharedConfig::openConfig(), QStringLiteral("quickAccessOptions"));
         quickOptions.deleteGroup();
@@ -154,8 +154,12 @@ void OptionsModel::setOptionsList(const QList<KSaneCore::Option *> &optionsList)
     for (int i = 0; i < d->mOptionsList.size(); i++) {
         KSaneCore::Option *option = d->mOptionsList.at(i);
         qCDebug(SKANPAGE_LOG()) << "OptionsModel: Importing option " << option->name() << ", type" << option->type() << ", state" << option->state();
-        connect(option, &KSaneCore::Option::optionReloaded, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {StateRole}); });
-        connect(option, &KSaneCore::Option::valueChanged, this, [=]() { Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole}); });
+        connect(option, &KSaneCore::Option::optionReloaded, this, [=]() {
+            Q_EMIT dataChanged(index(i, 0), index(i, 0), {StateRole});
+        });
+        connect(option, &KSaneCore::Option::valueChanged, this, [=]() {
+            Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole});
+        });
         d->mQuickAccessList.insert(i, d->mQuickAccessOptions.contains(option->name()));
     }
     endResetModel();

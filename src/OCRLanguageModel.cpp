@@ -8,7 +8,8 @@
 
 #include <QLocale>
 
-OCRLanguageModel::OCRLanguageModel(QObject *parent) : QAbstractListModel(parent)
+OCRLanguageModel::OCRLanguageModel(QObject *parent)
+    : QAbstractListModel(parent)
 {
 }
 
@@ -29,7 +30,7 @@ int OCRLanguageModel::rowCount(const QModelIndex &) const
 {
     return m_languages.count();
 }
-    
+
 QVariant OCRLanguageModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
@@ -39,7 +40,7 @@ QVariant OCRLanguageModel::data(const QModelIndex &index, int role) const
     if (index.row() >= m_languages.size() || index.row() < 0) {
         return QVariant();
     }
-    
+
     switch (role) {
     case NameRole:
         return m_languages.at(index.row()).name;

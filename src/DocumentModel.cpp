@@ -7,11 +7,11 @@
 
 #include "DocumentModel.h"
 
-#include <QUrl>
 #include <QImage>
+#include <QSet>
 #include <QStandardPaths>
 #include <QThread>
-#include <QSet>
+#include <QUrl>
 
 #include <KLocalizedString>
 
@@ -25,7 +25,7 @@ struct PreviewPageProperties {
     bool isSaved;
 };
 
-QDebug operator<<(QDebug d, const PreviewPageProperties& pageProperties)
+QDebug operator<<(QDebug d, const PreviewPageProperties &pageProperties)
 {
     d << "ID: " << pageProperties.pageID << "\n";
     d << "Aspect ratio: " << pageProperties.aspectRatio << "\n";
@@ -71,7 +71,10 @@ QString DocumentModel::name() const
         return i18n("New document");
     }
     if (d->m_fileUrls.count() > 1) {
-        return i18nc("for file names, indicates a range: from file0000.png to file0014.png","%1 ... %2", d->m_fileUrls.first().fileName(), d->m_fileUrls.last().fileName());
+        return i18nc("for file names, indicates a range: from file0000.png to file0014.png",
+                     "%1 ... %2",
+                     d->m_fileUrls.first().fileName(),
+                     d->m_fileUrls.last().fileName());
     }
     return d->m_fileUrls.first().fileName();
 }
@@ -135,11 +138,10 @@ void DocumentModel::createSharingFile(const QString &suffix, const QList<int> &p
         return;
     }
 
-    const QUrl temporaryLocation = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::TempLocation)
-         + QStringLiteral("/document.") + suffix);
+    const QUrl temporaryLocation = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::TempLocation) + QStringLiteral("/document.") + suffix);
     Q_EMIT saveDocument(temporaryLocation, selectPages(pageNumbers), SkanpageUtils::SharingDocument);
 }
-    
+
 void DocumentModel::exportPDF(const QUrl &fileUrl, const QString &title, const bool useOCR)
 {
     if (useOCR) {
@@ -151,7 +153,7 @@ void DocumentModel::exportPDF(const QUrl &fileUrl, const QString &title, const b
 
 void DocumentModel::addImage(const QImage &image)
 {
-    const double aspectRatio = static_cast<double>(image.height())/image.width();
+    const double aspectRatio = static_cast<double>(image.height()) / image.width();
     beginInsertRows(QModelIndex(), d->m_pages.count(), d->m_pages.count());
     const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), d->m_idCounter, false};
     const int oldSize = d->m_nonSavedPages.size();
@@ -278,7 +280,7 @@ void DocumentModel::flipPages(FlipPagesOption flip)
     if (flip == FlipPagesOption::FlipEven || flip == FlipPagesOption::FlipOdd) {
         increment = 2;
     }
-    for (int i = start; i < d->m_pages.count(); i+=increment) {
+    for (int i = start; i < d->m_pages.count(); i += increment) {
         int rotationAngle = d->m_pages.at(i).rotationAngle;
         rotationAngle += 180;
         if (rotationAngle < 0) {
@@ -289,7 +291,7 @@ void DocumentModel::flipPages(FlipPagesOption flip)
         d->m_pages[i].rotationAngle = rotationAngle;
     }
     Q_EMIT activePageChanged();
-    Q_EMIT dataChanged(index(0, 0), index(d->m_pages.count()-1, 0), {RotationAngleRole});
+    Q_EMIT dataChanged(index(0, 0), index(d->m_pages.count() - 1, 0), {RotationAngleRole});
 }
 
 void DocumentModel::reorderPages(ReorderOption reorder)
@@ -454,7 +456,7 @@ SkanpageUtils::DocumentPages DocumentModel::selectPages(QList<int> pageNumbers) 
     std::sort(pageNumbers.begin(), pageNumbers.end());
     for (int i = 0; i < pageNumbers.count(); i++) {
         const int page = pageNumbers.at(i);
-        if (page >= 0 && page <  d->m_pages.count()) {
+        if (page >= 0 && page < d->m_pages.count()) {
             document.append(d->m_pages.at(pageNumbers.at(i)));
         }
     }

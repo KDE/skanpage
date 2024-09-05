@@ -10,7 +10,8 @@
 
 #include "skanpage_debug.h"
 
-InProgressPainter::InProgressPainter(QQuickItem *parent) : QQuickPaintedItem(parent)
+InProgressPainter::InProgressPainter(QQuickItem *parent)
+    : QQuickPaintedItem(parent)
 {
 }
 
@@ -34,10 +35,11 @@ void InProgressPainter::paint(QPainter *painter)
         const int itemHeight = height();
         const int itemWidth = width();
 
-        double scaleHeight = static_cast<double>(itemHeight)/imageHeight;
-        double scaleWidth = static_cast<double>(itemWidth)/imageWidth;
+        double scaleHeight = static_cast<double>(itemHeight) / imageHeight;
+        double scaleWidth = static_cast<double>(itemWidth) / imageWidth;
         double scale = qMin(scaleHeight, qMin(scaleWidth, 1.0));
-        painter->drawImage(QRectF((itemWidth - scale * imageWidth)/2, (itemHeight - scale * imageHeight)/2, scale * imageWidth, scale * imageHeight), *m_scanInterface->scanImage());
+        painter->drawImage(QRectF((itemWidth - scale * imageWidth) / 2, (itemHeight - scale * imageHeight) / 2, scale * imageWidth, scale * imageHeight),
+                           *m_scanInterface->scanImage());
 
         m_scanInterface->unlockScanImage();
     } else {

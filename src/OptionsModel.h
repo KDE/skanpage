@@ -7,9 +7,9 @@
 #ifndef OPTIONS_MODEL_H
 #define OPTIONS_MODEL_H
 
-#include <QObject>
-#include <QList>
 #include <QAbstractListModel>
+#include <QList>
+#include <QObject>
 
 #include <memory>
 
@@ -60,7 +60,6 @@ Q_SIGNALS:
     void rowCountChanged();
 
 private:
-
     std::unique_ptr<OptionsModelPrivate> d;
 };
 

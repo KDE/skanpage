@@ -9,13 +9,13 @@
 
 #include <memory>
 
-#include <QObject>
 #include <QFileInfo>
-#include <QList>
-#include <QUrl>
 #include <QImage>
+#include <QList>
+#include <QObject>
 #include <QPainter>
 #include <QPdfWriter>
+#include <QUrl>
 
 #include "SkanpageUtils.h"
 

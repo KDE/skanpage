@@ -8,25 +8,25 @@
 #ifndef SKANPAGE_H
 #define SKANPAGE_H
 
+#include <QImage>
 #include <QObject>
 #include <QString>
-#include <QImage>
 
 #include <KActionCollection>
 
-#include <KSaneCore/Interface>
 #include <KSaneCore/DeviceInformation>
+#include <KSaneCore/Interface>
 
 #include <memory>
 
+#include "DevicesModel.h"
+#include "DocumentModel.h"
+#include "FilteredOptionsModel.h"
+#include "FormatModel.h"
+#include "OCRLanguageModel.h"
 #include "SkanpageUtils.h"
 #include "skanpage_config.h"
 #include "skanpage_state.h"
-#include "DocumentModel.h"
-#include "OCRLanguageModel.h"
-#include "FilteredOptionsModel.h"
-#include "FormatModel.h"
-#include "DevicesModel.h"
 
 class SkanpagePrivate;
 
@@ -56,21 +56,10 @@ class Skanpage : public QObject
     Q_PROPERTY(bool previewImageAvailable READ previewImageAvailable NOTIFY previewImageChanged)
 
 public:
-
-    enum ApplicationState {
-        ScanInProgress,
-        ReadyForScan,
-        DeviceSelection,
-        SearchingForDevices,
-        NoDeviceOpened
-    };
+    enum ApplicationState { ScanInProgress, ReadyForScan, DeviceSelection, SearchingForDevices, NoDeviceOpened };
     Q_ENUM(ApplicationState)
 
-    enum ScanSplit {
-        ScanNotSplit,
-        ScanIsSplitH,
-        ScanIsSplitV
-    };
+    enum ScanSplit { ScanNotSplit, ScanIsSplitH, ScanIsSplitV };
     Q_ENUM(ScanSplit)
 
     explicit Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObject *parent = nullptr);
@@ -108,7 +97,7 @@ public:
     Q_INVOKABLE bool openDevice(const QString &deviceName, const QString &deviceVendor = QString(), const QString &deviceModel = QString());
     Q_INVOKABLE bool OCRavailable() const;
     Q_INVOKABLE void print();
-    Q_INVOKABLE void registerAction(QObject* item, QObject* shortcuts, const QString &iconText);
+    Q_INVOKABLE void registerAction(QObject *item, QObject *shortcuts, const QString &iconText);
     Q_INVOKABLE void showShortcutsDialog();
     Q_INVOKABLE void clearSubAreas();
     Q_INVOKABLE void eraseSubArea(int index);

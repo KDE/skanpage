@@ -7,26 +7,25 @@
 #ifndef IMAGE_IMPORT_H
 #define IMAGE_IMPORT_H
 
-#include <QObject>
-#include <QList>
 #include <QFileInfo>
+#include <QList>
+#include <QObject>
 #include <QUrl>
 
 #include "SkanpageUtils.h"
-
 
 class ImageImport : public QObject
 {
     Q_OBJECT
 
 public:
-
     explicit ImageImport(QObject *parent = nullptr);
     ~ImageImport() override;
     void importImageFile(const QUrl &fileUrl, const int currentDPI);
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
     void imageImported(const QImage &image);
+
 private:
     void importPDF(const QUrl &fileUrl, const int dotsPerMeter);
 };

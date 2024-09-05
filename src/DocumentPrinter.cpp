@@ -7,8 +7,8 @@
 #include "DocumentPrinter.h"
 
 #include <QPainter>
-#include <QPrinter>
 #include <QPrintDialog>
+#include <QPrinter>
 
 #include <QTransform>
 #include <QtConcurrent>
@@ -61,7 +61,7 @@ void DocumentPrinter::print(const SkanpageUtils::DocumentPages &document)
 
         QSize size = pageImage.size();
         size.scale(rect.size(), Qt::KeepAspectRatio);
-        painter.setViewport(rect.x(), rect.y(),size.width(), size.height());
+        painter.setViewport(rect.x(), rect.y(), size.width(), size.height());
         painter.setWindow(pageImage.rect());
         painter.drawImage(0, 0, pageImage);
     }

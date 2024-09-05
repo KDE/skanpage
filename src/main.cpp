@@ -5,11 +5,11 @@
  */
 
 #include <QApplication>
-#include <QQmlApplicationEngine>
-#include <QQmlContext>
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QImage>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
 
 #include <KAboutData>
 #include <KCrash>
@@ -19,15 +19,15 @@
 
 #include "DevicesModel.h"
 #include "DocumentModel.h"
-#include "FormatModel.h"
 #include "FilteredOptionsModel.h"
-#include "OCRLanguageModel.h"
+#include "FormatModel.h"
 #include "InProgressPainter.h"
+#include "OCRLanguageModel.h"
 #include "Skanpage.h"
 #include "SkanpageUtils.h"
-#include "skanpage_version.h"
 #include "skanpage_config.h"
 #include "skanpage_state.h"
+#include "skanpage_version.h"
 
 int main(int argc, char *argv[])
 {
@@ -36,8 +36,13 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<DocumentModel>("org.kde.skanpage", 1, 0, "DocumentModel", QStringLiteral("Document model class uncreateable"));
     qmlRegisterUncreatableType<DevicesModel>("org.kde.skanpage", 1, 0, "DevicesModel", QStringLiteral("Device model class uncreateable"));
     qmlRegisterUncreatableType<FormatModel>("org.kde.skanpage", 1, 0, "FormatModel", QStringLiteral("Format model class uncreateable"));
-    qmlRegisterUncreatableType<FilteredOptionsModel>("org.kde.skanpage", 1, 0, "FilteredOptionsModel", QStringLiteral("Filtered options model class uncreateable"));
-    qmlRegisterUncreatableType<OCRLanguageModel>("org.kde.skanpage", 1, 0, "OCRLanguageModel", QStringLiteral("OCR language model class uncreateable"));;
+    qmlRegisterUncreatableType<FilteredOptionsModel>("org.kde.skanpage",
+                                                     1,
+                                                     0,
+                                                     "FilteredOptionsModel",
+                                                     QStringLiteral("Filtered options model class uncreateable"));
+    qmlRegisterUncreatableType<OCRLanguageModel>("org.kde.skanpage", 1, 0, "OCRLanguageModel", QStringLiteral("OCR language model class uncreateable"));
+    ;
     qmlRegisterUncreatableType<KSaneCore::Option>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
     qmlRegisterUncreatableType<SkanpageConfiguration>("org.kde.skanpage", 1, 0, "Configuration", QStringLiteral("Confguration class uncreatable"));
@@ -57,8 +62,7 @@ int main(int argc, char *argv[])
                          QLatin1String(SKANPAGE_VERSION_STRING),
                          i18n("Multi-page scanning application by KDE."),
                          KAboutLicense::GPL,
-                         i18n("© 2015-2022 Kåre Särs, Alexander Stippich")
-    );
+                         i18n("© 2015-2022 Kåre Särs, Alexander Stippich"));
 
     aboutData.addAuthor(QStringLiteral("Kåre Särs"), i18n("developer"), QLatin1String("kare.sars@iki.fi"));
     aboutData.addAuthor(QStringLiteral("Alexander Stippich"), i18n("developer"), QLatin1String("a.stippich@gmx.net"));
@@ -71,11 +75,13 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
-    QCommandLineOption deviceOption(
-        QStringList({QLatin1String("d"), QLatin1String("device")}), i18n("Sane scanner device name. Use 'test' for test device."), i18n("device"));
+    QCommandLineOption deviceOption(QStringList({QLatin1String("d"), QLatin1String("device")}),
+                                    i18n("Sane scanner device name. Use 'test' for test device."),
+                                    i18n("device"));
     parser.addOption(deviceOption);
-    QCommandLineOption dumpOptions(
-        QStringList({QLatin1String("o"), QLatin1String("options")}), i18n("A file path in which the options of your scanner device are dumped."), QLatin1String("options.txt"));
+    QCommandLineOption dumpOptions(QStringList({QLatin1String("o"), QLatin1String("options")}),
+                                   i18n("A file path in which the options of your scanner device are dumped."),
+                                   QLatin1String("options.txt"));
     parser.addOption(dumpOptions);
     parser.process(app);
     // the --author and --license is shown anyway but they work only with the following line

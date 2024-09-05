@@ -6,10 +6,10 @@
 
 #include "FormatModel.h"
 
-#include <QImageWriter>
 #include <QImageReader>
-#include <QMimeType>
+#include <QImageWriter>
 #include <QMimeDatabase>
+#include <QMimeType>
 
 #include <KLocalizedString>
 
@@ -44,9 +44,9 @@ FormatModel::FormatModel(QObject *parent)
         d->m_writeFormatFilter.append({mimeType.comment() + QStringLiteral("(*.") + mimeType.preferredSuffix() + QStringLiteral(")")});
     }
 
-    //create a concatenated read filter for import dialog
+    // create a concatenated read filter for import dialog
     tempList = QImageReader::supportedMimeTypes();
-    QString readFormatFilter = i18nc("format filter for a file dialog, all formats supported by the application will be displayed","All Supported Files");
+    QString readFormatFilter = i18nc("format filter for a file dialog, all formats supported by the application will be displayed", "All Supported Files");
     readFormatFilter.append(QStringLiteral(" ("));
     for (const auto &mimeString : std::as_const(tempList)) {
         const QMimeType mimeType = mimeDB.mimeTypeForName(QString::fromLatin1(mimeString));

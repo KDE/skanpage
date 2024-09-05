@@ -1,20 +1,20 @@
 /**
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
- *  
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
 #include <memory>
 
-#include <QTest>
+#include <QPageSize>
 #include <QSignalSpy>
 #include <QTemporaryFile>
-#include <QPageSize>
+#include <QTest>
 #include <QUrl>
 
-#include "../src/SkanpageUtils.h"
 #include "../src/DocumentSaver.h"
 #include "../src/OCREngine.h"
+#include "../src/SkanpageUtils.h"
 
 class DocumentSaverTest : public QObject
 {

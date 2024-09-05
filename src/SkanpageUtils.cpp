@@ -8,13 +8,12 @@
 
 #include "SkanpageUtils.h"
 
-bool SkanpageUtils::operator==(const PageProperties& lhs, const PageProperties& rhs)
+bool SkanpageUtils::operator==(const PageProperties &lhs, const PageProperties &rhs)
 {
-    return lhs.dpi == rhs.dpi && lhs.pageSize == rhs.pageSize &&
-    lhs.rotationAngle == rhs.rotationAngle && lhs.temporaryFile == rhs.temporaryFile;
+    return lhs.dpi == rhs.dpi && lhs.pageSize == rhs.pageSize && lhs.rotationAngle == rhs.rotationAngle && lhs.temporaryFile == rhs.temporaryFile;
 }
 
-QDebug SkanpageUtils::operator<<(QDebug d, const PageProperties& pageProperties)
+QDebug SkanpageUtils::operator<<(QDebug d, const PageProperties &pageProperties)
 {
     d << "DPI: " << pageProperties.dpi << "\n";
     d << "Page size: " << pageProperties.pageSize << "\n";

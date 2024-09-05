@@ -7,7 +7,8 @@
 #include "FilteredOptionsModel.h"
 #include "OptionsModel.h"
 
-FilteredOptionsModel::FilteredOptionsModel(QObject *parent) : QSortFilterProxyModel(parent)
+FilteredOptionsModel::FilteredOptionsModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
 {
 }
 
@@ -18,11 +19,11 @@ bool FilteredOptionsModel::filterAcceptsRow(int source_row, const QModelIndex &s
     const auto index = sourceModel()->index(source_row, 0, source_parent);
     const auto &state = sourceModel()->data(index, OptionsModel::StateRole).value<KSaneCore::Option::OptionState>();
     const auto &type = sourceModel()->data(index, OptionsModel::TypeRole).value<KSaneCore::Option::OptionType>();
-    
+
     if (!m_showAllOptions) {
         return sourceModel()->data(index, OptionsModel::QuickAccessRole).toBool() && state == KSaneCore::Option::StateActive;
     }
-    
+
     if (state != KSaneCore::Option::StateActive || type == KSaneCore::Option::TypeDetectFail) {
         return false;
     }

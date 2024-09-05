@@ -9,9 +9,9 @@
 
 #include <memory>
 
+#include <QFuture>
 #include <QObject>
 #include <QString>
-#include <QFuture>
 
 #include "SkanpageUtils.h"
 
@@ -22,7 +22,6 @@ class DocumentPrinter : public QObject
     Q_OBJECT
 
 public:
-
     explicit DocumentPrinter(QObject *parent = nullptr);
     ~DocumentPrinter() override;
 

@@ -11,11 +11,9 @@
 
 class FilteredOptionsModel : public QSortFilterProxyModel
 {
-
     Q_OBJECT
 
 public:
-
     explicit FilteredOptionsModel(QObject *parent = nullptr);
 
     ~FilteredOptionsModel() override;
@@ -23,7 +21,6 @@ public:
     Q_INVOKABLE void showAllOptions(bool show);
 
 protected:
-
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:

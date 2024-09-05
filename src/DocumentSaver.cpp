@@ -10,8 +10,8 @@
 
 #include <KLocalizedString>
 
-#include "skanpage_debug.h"
 #include "OCREngine.h"
+#include "skanpage_debug.h"
 
 DocumentSaver::DocumentSaver(QObject *parent)
     : QObject(parent)
@@ -103,13 +103,13 @@ void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::
     writer.setCreator(QStringLiteral("org.kde.skanpage"));
     writer.setTitle(title);
     QPainter painter;
-    
+
     for (int i = 0; i < document.count(); ++i) {
-         Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
         printPage(writer, painter, document.at(i), i == 0);
         m_OCREngine->OCRPage(writer, painter, document.at(i));
     }
-    
+
     Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved with OCR as PDF."));
 }
 
@@ -128,13 +128,13 @@ void DocumentSaver::printPage(QPdfWriter &writer, QPainter &painter, const Skanp
 
     QTransform transformation;
     if (rotationAngle != 0) {
-        transformation.translate(writer.width()/2, writer.height()/2);
+        transformation.translate(writer.width() / 2, writer.height() / 2);
         transformation.rotate(rotationAngle);
-        transformation.translate(-writer.width()/2, -writer.height()/2);
+        transformation.translate(-writer.width() / 2, -writer.height() / 2);
     }
     if (rotationAngle == 90 || rotationAngle == 270) {
-        //strange that this is needed and Qt does not do this automatically
-        transformation.translate((writer.width()-writer.height())/2, (writer.height()-writer.width())/2);
+        // strange that this is needed and Qt does not do this automatically
+        transformation.translate((writer.width() - writer.height()) / 2, (writer.height() - writer.width()) / 2);
     }
 
     if (firstPage) {
@@ -144,7 +144,7 @@ void DocumentSaver::printPage(QPdfWriter &writer, QPainter &painter, const Skanp
     painter.setTransform(transformation);
     QImage pageImage;
     if (page.temporaryFile != nullptr) {
-       pageImage.load(page.temporaryFile->fileName());
+        pageImage.load(page.temporaryFile->fileName());
     }
     painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());
 }
@@ -171,7 +171,8 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
     } else {
         fileUrls.reserve(count);
         for (int i = 0; i < count; ++i) {
-             Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
+            Q_EMIT showUserMessage(SkanpageUtils::InformationMessage,
+                                   i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
             if (document.at(i).temporaryFile == nullptr) {
                 continue;
             }
@@ -180,8 +181,8 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
             if (rotationAngle != 0) {
                 pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
             }
-            fileName =
-                QStringLiteral("%1/%2%3.%4").arg(fileInfo.absolutePath(), fileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), fileInfo.suffix());
+            fileName = QStringLiteral("%1/%2%3.%4")
+                           .arg(fileInfo.absolutePath(), fileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), fileInfo.suffix());
             if (!pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData())) {
                 success = false;
             }
@@ -207,7 +208,8 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
 
 void DocumentSaver::saveNewPageTemporary(const int pageID, const QImage &image)
 {
-    const QPageSize pageSize = QPageSize(QSizeF(image.width() * 1000.0 / image.dotsPerMeterX() , image.height() * 1000.0 / image.dotsPerMeterY()), QPageSize::Millimeter);
+    const QPageSize pageSize =
+        QPageSize(QSizeF(image.width() * 1000.0 / image.dotsPerMeterX(), image.height() * 1000.0 / image.dotsPerMeterY()), QPageSize::Millimeter);
     const int dpi = qRound(image.dotsPerMeterX() / 1000.0 * 25.4);
     QTemporaryFile *tempImageFile = new QTemporaryFile();
     tempImageFile->open();
