@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-05 00:42+0000\n"
+"POT-Creation-Date: 2024-09-06 00:43+0000\n"
 "PO-Revision-Date: 2023-12-12 16:33+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:82
+#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:85
 #, kde-format
 msgid "New document"
 msgstr "Uusi tiedosto"
 
-#: DocumentModel.cpp:74
+#: DocumentModel.cpp:75
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
@@ -74,7 +74,7 @@ msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Tallennettaessa sattui virhe: %1."
 
-#: DocumentSaver.cpp:75 DocumentSaver.cpp:108 DocumentSaver.cpp:174
+#: DocumentSaver.cpp:75 DocumentSaver.cpp:108 DocumentSaver.cpp:175
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
@@ -90,17 +90,17 @@ msgstr "Tiedosto tallennettiin PDF:ksi."
 msgid "Document saved with OCR as PDF."
 msgstr "Tunnistettu tekstitiedosto tallennettiin PDF:ksi."
 
-#: DocumentSaver.cpp:194
+#: DocumentSaver.cpp:195
 #, kde-format
 msgid "Document saved as image."
 msgstr "Tiedosto tallennettiin kuvaksi."
 
-#: DocumentSaver.cpp:203
+#: DocumentSaver.cpp:204
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Tiedostoa ei voitu tallentaa kuvaksi."
 
-#: DocumentSaver.cpp:218
+#: DocumentSaver.cpp:220
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save image."
@@ -126,37 +126,37 @@ msgstr "Kuvan tallennus epäonnistui"
 msgid "Failed to load PDF file!"
 msgstr "Kuvan tallennus epäonnistui"
 
-#: main.cpp:56
+#: main.cpp:61
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:58
+#: main.cpp:63
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "KDE:n useamman sivun lukusovellus."
 
-#: main.cpp:60
+#: main.cpp:65
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:63 main.cpp:64
+#: main.cpp:67 main.cpp:68
 #, kde-format
 msgid "developer"
 msgstr "kehittäjä"
 
-#: main.cpp:75
+#: main.cpp:79
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "Sane-kuvanlukijalaitteen nimi. Käytä testilaitteelle nimeä ”test”."
 
-#: main.cpp:75
+#: main.cpp:80
 #, kde-format
 msgid "device"
 msgstr "laite"
 
-#: main.cpp:78
+#: main.cpp:83
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
