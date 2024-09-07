@@ -102,6 +102,7 @@ ApplicationWindow {
         icon.name: "document-import-symbolic"
         text: i18nc("@action:button import existing PDF file", "Import")
         shortcut: "CTRL+I"
+        enabled: skanpage.applicationState === Skanpage.ReadyForScan
         onTriggered: loadFileDialog.open()
     }
     
