@@ -151,7 +151,7 @@ Window {
 
             Label {
                 visible: skanpage.OCRavailable()
-                text: i18n("If your required language is not listed, please install Tesseract's language file with your package manager.")
+                text: i18n("If your required language is not listed, install its corresponding Tesseract language pack with your package manager.")
                 font.italic: true
                 wrapMode: Text.WordWrap
                 Layout.maximumWidth: fileNameItem.width

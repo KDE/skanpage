@@ -37,7 +37,8 @@ Item {
 
         icon.name: "document"
 
-        text: xi18nc("@info", "You do not have any images in this document.<nl/><nl/>Start scanning!")
+        text: i18nc("@info:placeholder", "This document contains no pages yet")
+        explanation: i18nc("@info:placeholder", "Scan something to add one")
     }
 
     ColumnLayout {
