@@ -38,7 +38,7 @@ Item {
         icon.name: "document"
 
         text: i18nc("@info:placeholder", "This document contains no pages yet")
-        explanation: i18nc("@info:placeholder", "Scan something to add one")
+        explanation: xi18nc("@info:placeholder", "Click the <interface>Scan</interface> button to add one")
     }
 
     ColumnLayout {
