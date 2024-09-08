@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-06 00:43+0000\n"
+"POT-Creation-Date: 2024-09-08 00:42+0000\n"
 "PO-Revision-Date: 2024-08-03 14:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -341,7 +341,7 @@ msgstr "縮放到適合"
 msgid "Zoom 100%"
 msgstr "縮放到 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:112
 #, kde-format
 msgid "Export PDF"
 msgstr "匯出 PDF"
@@ -384,7 +384,7 @@ msgstr ""
 msgid "Save"
 msgstr "儲存"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:154
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -441,47 +441,47 @@ msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "匯入"
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:120
 #, kde-format
 msgid "Preview"
 msgstr "預覽"
 
-#: qml/MainWindow.qml:138
+#: qml/MainWindow.qml:139
 #, kde-format
 msgid "Scan"
 msgstr "掃描"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "顯示掃描器選項"
 
-#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:173 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "分享"
 
-#: qml/MainWindow.qml:180
+#: qml/MainWindow.qml:181
 #, kde-format
 msgid "Print"
 msgstr "列印"
 
-#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
+#: qml/MainWindow.qml:202 qml/MainWindow.qml:414
 #, kde-format
 msgid "About Skanpage"
 msgstr "關於 Skanpage"
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:209
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "設定 Skanpage…"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:217
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "設定鍵盤快捷鍵…"
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Quit"
 msgstr "離開"

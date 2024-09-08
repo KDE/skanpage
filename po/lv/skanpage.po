@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-06 00:43+0000\n"
+"POT-Creation-Date: 2024-09-08 00:42+0000\n"
 "PO-Revision-Date: 2024-08-27 16:44+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -342,7 +342,7 @@ msgstr "Ietilpināt"
 msgid "Zoom 100%"
 msgstr "Tuvināt līdz 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:112
 #, kde-format
 msgid "Export PDF"
 msgstr "Eksportēt PDF"
@@ -386,7 +386,7 @@ msgstr ""
 msgid "Save"
 msgstr "Saglabāt"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:154
 #, kde-format
 msgid "Cancel"
 msgstr "Atcelt"
@@ -443,47 +443,47 @@ msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Importēt"
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:120
 #, kde-format
 msgid "Preview"
 msgstr "Priekšskatījums"
 
-#: qml/MainWindow.qml:138
+#: qml/MainWindow.qml:139
 #, kde-format
 msgid "Scan"
 msgstr "Skenēt"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Rādīt skenera opcijas"
 
-#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:173 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Kopīgot"
 
-#: qml/MainWindow.qml:180
+#: qml/MainWindow.qml:181
 #, kde-format
 msgid "Print"
 msgstr "Drukāt"
 
-#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
+#: qml/MainWindow.qml:202 qml/MainWindow.qml:414
 #, kde-format
 msgid "About Skanpage"
 msgstr "Par „Skanpage“"
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:209
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Konfigurēt „Skanpage“..."
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:217
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Konfigurēt tastatūras saīsnes..."
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Quit"
 msgstr "Iziet"

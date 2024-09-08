@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-06 00:43+0000\n"
+"POT-Creation-Date: 2024-09-08 00:42+0000\n"
 "PO-Revision-Date: 2023-06-12 17:35+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -344,7 +344,7 @@ msgstr "Pəncərə boyu böyüdün"
 msgid "Zoom 100%"
 msgstr "100% böyüdün"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:112
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF kimi ixrac edin"
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Save"
 msgstr "Saxlayın"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:154
 #, kde-format
 msgid "Cancel"
 msgstr "Ləğv edin"
@@ -445,47 +445,47 @@ msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:120
 #, kde-format
 msgid "Preview"
 msgstr "Öncədən baxış"
 
-#: qml/MainWindow.qml:138
+#: qml/MainWindow.qml:139
 #, kde-format
 msgid "Scan"
 msgstr "Oxudun"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Skaner ayarlarını göstərmək"
 
-#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:173 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Paylaşın"
 
-#: qml/MainWindow.qml:180
+#: qml/MainWindow.qml:181
 #, kde-format
 msgid "Print"
 msgstr "Çap edin"
 
-#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
+#: qml/MainWindow.qml:202 qml/MainWindow.qml:414
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage haqqında"
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:209
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage tənzimləməsi..."
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:217
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Klaviatura qısayollarını tənzimləyin..."
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Quit"
 msgstr "Çıxın"

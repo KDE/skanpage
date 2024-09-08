@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-06 00:43+0000\n"
+"POT-Creation-Date: 2024-09-08 00:42+0000\n"
 "PO-Revision-Date: 2024-08-20 00:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -339,7 +339,7 @@ msgstr "맞추기"
 msgid "Zoom 100%"
 msgstr "확대/축소 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:111
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:112
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF 내보내기"
@@ -383,7 +383,7 @@ msgstr ""
 msgid "Save"
 msgstr "저장"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:153
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:154
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
@@ -440,47 +440,47 @@ msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "가져오기"
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:120
 #, kde-format
 msgid "Preview"
 msgstr "미리 보기"
 
-#: qml/MainWindow.qml:138
+#: qml/MainWindow.qml:139
 #, kde-format
 msgid "Scan"
 msgstr "스캔"
 
-#: qml/MainWindow.qml:162
+#: qml/MainWindow.qml:163
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "스캐너 옵션 표시"
 
-#: qml/MainWindow.qml:172 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:173 qml/ShareWindow.qml:20
 #, kde-format
 msgid "Share"
 msgstr "공유"
 
-#: qml/MainWindow.qml:180
+#: qml/MainWindow.qml:181
 #, kde-format
 msgid "Print"
 msgstr "인쇄"
 
-#: qml/MainWindow.qml:201 qml/MainWindow.qml:413
+#: qml/MainWindow.qml:202 qml/MainWindow.qml:414
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage 정보"
 
-#: qml/MainWindow.qml:208
+#: qml/MainWindow.qml:209
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage 설정…"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:217
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "키보드 단축키 설정…"
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Quit"
 msgstr "끝내기"
