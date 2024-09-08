@@ -85,6 +85,10 @@ Item {
             }
         }
 
+        Kirigami.Separator {
+            Layout.fillWidth: true
+        }
+
         Kirigami.ActionToolBar {
             Layout.fillWidth: true
             Layout.preferredHeight: Kirigami.Units.gridUnit * 2

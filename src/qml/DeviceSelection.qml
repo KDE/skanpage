@@ -18,6 +18,15 @@ ColumnLayout {
         Layout.fillHeight: true
     }
 
+    Kirigami.Action {
+        id: reloadDevicesListAction
+
+        icon.name: "view-refresh"
+        text: i18n("Reload devices list")
+
+        onTriggered: skanpage.reloadDevicesList()
+    }
+
     RowLayout {
         Layout.fillWidth: true
 
@@ -67,6 +76,7 @@ ColumnLayout {
 
             icon.name: "error"
             text: xi18nc("@info", "No devices found.")
+            helpfulAction: reloadDevicesListAction
         }
 
         Item {
@@ -91,10 +101,9 @@ ColumnLayout {
         Button {
             id: reloadDevicesListButton
 
-            icon.name: "view-refresh"
-            text: i18n("Reload devices list")
+            visible: skanpage.devicesModel.rowCount !== 0
 
-            onClicked: skanpage.reloadDevicesList()
+            action: reloadDevicesListAction
         }
     }
 

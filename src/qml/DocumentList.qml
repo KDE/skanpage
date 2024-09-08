@@ -282,6 +282,10 @@ ColumnLayout {
         }
     }
 
+    Kirigami.Separator {
+        Layout.fillWidth: true
+    }
+
     RowLayout {
         id: listFooter
         Layout.fillWidth: true

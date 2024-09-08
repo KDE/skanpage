@@ -61,6 +61,11 @@ ColumnLayout {
         }
     }
 
+    Kirigami.Separator {
+        Layout.fillWidth: true
+        visible: optionPanel.width != 0
+    }
+
     Label {
         visible: optionPanel.width != 0
         horizontalAlignment: Qt.AlignHCenter

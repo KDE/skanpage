@@ -41,10 +41,6 @@ Item {
 
                 Kirigami.Separator {
                     height: parent.height
-                    width: Kirigami.Units.smallSpacing / 2
-                    anchors.centerIn: parent
-
-                    HoverHandler { cursorShape: Qt.SizeHorCursor }
                 }
             }
 
@@ -93,8 +89,6 @@ Item {
 
             Kirigami.Separator {
                 height: parent.height
-                width: Kirigami.Units.smallSpacing / 2
-                anchors.centerIn: parent
             }
         }
 
