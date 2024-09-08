@@ -42,8 +42,6 @@ ApplicationWindow {
             skanpage.stateConfiguration.splitViewItemWidth = mainView.splitViewItemWidth
             skanpage.stateConfiguration.showOptions = mainView.showOptions
             skanpage.stateConfiguration.showAllOptions = mainView.optionsPanel.allOptionsAction.checked
-            skanpage.stateConfiguration.shareHeight = shareWindow.height
-            skanpage.stateConfiguration.shareWidth = shareWindow.width
             skanpage.stateConfiguration.exportHeight = exportWindow.height
             skanpage.stateConfiguration.exportWidth = exportWindow.width
             skanpage.stateConfiguration.settingsHeight = settingsWindow.height
@@ -172,7 +170,7 @@ ApplicationWindow {
         icon.name: "document-share"
         text: i18n("Share")
         enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
-        onTriggered: shareWindow.show()
+        onTriggered: shareDialog.open()
     }
 
     ShortcutsAction {
@@ -393,13 +391,10 @@ ApplicationWindow {
         }
     }
 
-    ShareWindow {
-        id: shareWindow
+    ShareDialog {
+        id: shareDialog
 
-        height: skanpage.stateConfiguration.shareHeight
-        width: skanpage.stateConfiguration.shareWidth
-
-        onError:  function(errorText) {
+        onError: function(errorText) {
             errorMessage.text = errorText
             errorMessage.type = Kirigami.MessageType.Error
             labelWidth.text = errorText

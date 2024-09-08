@@ -18,7 +18,7 @@
         <file>qml/DoubleSpinBoxWithSuffix.qml</file>
         <file>qml/ShortcutsAction.qml</file>
         <file>qml/GlobalMenu.qml</file>
-        <file>qml/ShareWindow.qml</file>
+        <file>qml/ShareDialog.qml</file>
         <file>qml/ExportWindow.qml</file>
         <file>qml/SettingsWindow.qml</file>
         <file>qml/PreviewScanView.qml</file>

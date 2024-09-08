@@ -14,25 +14,30 @@ import org.kde.kirigami.delegates as KD
 import org.kde.purpose as Purpose
 import org.kde.skanpage
 
-Window {
-    id: shareWindow
+Kirigami.Dialog {
+    id: shareDialog
 
     title: i18n("Share")
-    color: Kirigami.Theme.backgroundColor
 
-    flags: Qt.Dialog | Qt.CustomizeWindowHint | Qt.WindowTitleHint
-           | Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint
-
-    minimumHeight: 300
-    minimumWidth: 300
+    padding: Kirigami.Units.largeSpacing
+    preferredWidth: Kirigami.Units.gridUnit * 25
 
     property int selectedIndex: -1
 
     signal error(var errorText)
 
+    Purpose.PurposeAlternativesModel {
+        id: alternativesModel
+        inputData: {
+            'urls': [],
+            'mimeType': ["application/pdf"]
+        }
+        pluginType: "Export"
+    }
+
     ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: Kirigami.Units.largeSpacing
+        spacing: Kirigami.Units.smallSpacing
+        Layout.fillWidth: true
 
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
@@ -60,18 +65,15 @@ Window {
             }
         }
 
-        Purpose.PurposeAlternativesModel {
-            id: alternativesModel
-            inputData: {
-                'urls': [],
-                'mimeType': ["application/pdf"]
-            }
-            pluginType: "Export"
+        Kirigami.Separator {
+            Layout.fillWidth: true
         }
 
         StackView {
             id: purposeView
             focus: true
+
+            implicitHeight: alternativesList.contentItem.contentHeight
 
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -85,7 +87,7 @@ Window {
             function proceed(index) {
                 purposeView.push(waitingComponent)
                 skanpage.documentModel.createSharingFile(formatSelection.currentSuffix, [])
-                shareWindow.selectedIndex = index
+                shareDialog.selectedIndex = index
             }
 
             initialItem: ScrollView {
@@ -103,7 +105,7 @@ Window {
                     delegate: ItemDelegate {
                         id: shareDelegate
 
-                        width: parent.width
+                        width: purposeView.width
 
                         required property string iconName
                         required property string actionDisplay
@@ -159,10 +161,10 @@ Window {
 
             onStateChanged: {
                 if (state === Purpose.PurposeJobController.Finished) {
-                    shareWindow.close()
+                    shareDialog.close()
                 } else if (state === Purpose.PurposeJobController.Error) {
-                    shareWindow.close()
-                    shareWindow.error(jobView.job.errorString)
+                    shareDialog.close()
+                    shareDialog.error(jobView.job.errorString)
                 } else if (state === Purpose.PurposeJobController.Cancelled) {
                     purposeView.pop();
                 }
