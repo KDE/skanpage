@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-08 00:42+0000\n"
+"POT-Creation-Date: 2024-09-09 00:41+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -166,7 +166,12 @@ msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
 msgstr "* %1"
 
-#: qml/DeviceSelection.qml:54
+#: qml/DeviceSelection.qml:25
+#, kde-format
+msgid "Reload devices list"
+msgstr "デバイス一覧の再読み込み"
+
+#: qml/DeviceSelection.qml:63
 #, kde-format
 msgctxt ""
 "Device vendor with device model, followed by the device name identifier"
@@ -177,26 +182,23 @@ msgstr ""
 "%1 %2\n"
 "(%3)"
 
-#: qml/DeviceSelection.qml:69
+#: qml/DeviceSelection.qml:78
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
 msgstr "デバイスが見つかりません。"
 
-#: qml/DeviceSelection.qml:86
+#: qml/DeviceSelection.qml:96
 #, kde-format
 msgid "Open selected device"
 msgstr "選択したデバイスを開く"
 
-#: qml/DeviceSelection.qml:95
-#, kde-format
-msgid "Reload devices list"
-msgstr "デバイス一覧の再読み込み"
-
 #: qml/DevicesLoading.qml:29
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Searching for available devices."
 msgctxt "@info"
-msgid "Searching for available devices."
+msgid "Searching for available devices"
 msgstr "利用可能なデバイスを検索しています。"
 
 #: qml/DocumentList.qml:73
@@ -241,107 +243,112 @@ msgstr "上へ移動"
 msgid "Move Down"
 msgstr "下へ移動"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:145
 #, kde-format
 msgid "Rotate Left"
 msgstr "左に回転"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:152
 #, kde-format
 msgid "Rotate Right"
 msgstr "右に回転"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:159
 #, kde-format
 msgid "Flip"
 msgstr "反転"
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:166
 #, kde-format
 msgid "Save Page"
 msgstr "ページを保存"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:173
 #, kde-format
 msgid "Delete Page"
 msgstr "ページを削除"
 
-#: qml/DocumentList.qml:292
+#: qml/DocumentList.qml:296
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 ページ"
 
-#: qml/DocumentList.qml:301
+#: qml/DocumentList.qml:305
 #, kde-format
 msgid "Flip Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:306
+#: qml/DocumentList.qml:310
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:313
+#: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Even Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:320
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip All Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:328
+#: qml/DocumentList.qml:332
 #, kde-format
 msgid "Reorder Pages"
 msgstr "ページの並べ替え"
 
-#: qml/DocumentList.qml:333
+#: qml/DocumentList.qml:337
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:340
+#: qml/DocumentList.qml:344
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:347
+#: qml/DocumentList.qml:351
 #, kde-format
 msgid "Reverse Order"
 msgstr "順序を反転"
 
 #: qml/DocumentPage.qml:40
-#, kde-kuit-format
-msgctxt "@info"
-msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "This document contains no pages yet"
 msgstr ""
-"このドキュメントには画像がありません。<nl/><nl/>スキャンを開始してください!"
 
-#: qml/DocumentPage.qml:98
+#: qml/DocumentPage.qml:41
+#, kde-kuit-format
+msgctxt "@info:placeholder"
+msgid "Click the <interface>Scan</interface> button to add one"
+msgstr ""
+
+#: qml/DocumentPage.qml:103
 #, kde-format
 msgid "Zoom In"
 msgstr "拡大"
 
-#: qml/DocumentPage.qml:107
+#: qml/DocumentPage.qml:112
 #, kde-format
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: qml/DocumentPage.qml:116
+#: qml/DocumentPage.qml:121
 #, kde-format
 msgid "Zoom Fit"
 msgstr "合わせる"
 
-#: qml/DocumentPage.qml:132
+#: qml/DocumentPage.qml:137
 #, kde-format
 msgid "Zoom 100%"
 msgstr "100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:112
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:110
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF をエクスポート"
@@ -372,10 +379,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If your required language is not listed, please install Tesseract's "
+#| "language file with your package manager."
 msgid ""
-"If your required language is not listed, please install Tesseract's language "
-"file with your package manager."
+"If your required language is not listed, install its corresponding Tesseract "
+"language pack with your package manager."
 msgstr ""
 "必要な言語がない場合、パッケージマネージャで Tesseract の言語ファイルをインス"
 "トールしてください。"
@@ -385,7 +395,7 @@ msgstr ""
 msgid "Save"
 msgstr "保存"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:154
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:152
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
@@ -426,63 +436,63 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:85
+#: qml/MainWindow.qml:83
 #, kde-format
 msgid "Discard All"
 msgstr "すべて破棄"
 
-#: qml/MainWindow.qml:94
+#: qml/MainWindow.qml:92
 #, kde-format
 msgid "Save All"
 msgstr "すべて保存"
 
-#: qml/MainWindow.qml:103
+#: qml/MainWindow.qml:101
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:120
+#: qml/MainWindow.qml:118
 #, kde-format
 msgid "Preview"
 msgstr "プレビュー"
 
-#: qml/MainWindow.qml:139
+#: qml/MainWindow.qml:137
 #, kde-format
 msgid "Scan"
 msgstr "スキャン"
 
-#: qml/MainWindow.qml:163
+#: qml/MainWindow.qml:161
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "スキャナのオプションを表示"
 
-#: qml/MainWindow.qml:173 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:171 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "共有"
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:179
 #, kde-format
 msgid "Print"
 msgstr "印刷"
 
-#: qml/MainWindow.qml:202 qml/MainWindow.qml:414
+#: qml/MainWindow.qml:200 qml/MainWindow.qml:409
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage について"
 
-#: qml/MainWindow.qml:209
+#: qml/MainWindow.qml:207
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage を設定..."
 
-#: qml/MainWindow.qml:217
+#: qml/MainWindow.qml:215
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "キーボードショートカットを設定..."
 
-#: qml/MainWindow.qml:225
+#: qml/MainWindow.qml:223
 #, kde-format
 msgid "Quit"
 msgstr "終了"
@@ -575,23 +585,23 @@ msgstr "px"
 msgid "Select options for quick access:"
 msgstr "クイックアクセスのオプションを選択:"
 
-#: qml/OptionsPanel.qml:71
+#: qml/OptionsPanel.qml:76
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:84
+#: qml/OptionsPanel.qml:89
 #, kde-format
 msgid "Show More"
 msgstr "さらに表示"
 
-#: qml/OptionsPanel.qml:94
+#: qml/OptionsPanel.qml:99
 #, kde-format
 msgid "Configure Visibility"
 msgstr "表示を設定"
 
-#: qml/OptionsPanel.qml:109
+#: qml/OptionsPanel.qml:114
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "スキャナを再選択"
@@ -670,7 +680,14 @@ msgstr "デフォルトの保存場所:"
 msgid "Close"
 msgstr "閉じる"
 
-#: qml/ShareWindow.qml:42
+#: qml/ShareDialog.qml:47
 #, kde-format
 msgid "Share as:"
 msgstr "次で共有:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
+#~ msgstr ""
+#~ "このドキュメントには画像がありません。<nl/><nl/>スキャンを開始してくださ"
+#~ "い!"

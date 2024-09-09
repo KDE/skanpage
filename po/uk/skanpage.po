@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-08 00:42+0000\n"
+"POT-Creation-Date: 2024-09-09 00:41+0000\n"
 "PO-Revision-Date: 2024-07-25 08:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -170,7 +170,12 @@ msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
 msgstr "* %1"
 
-#: qml/DeviceSelection.qml:54
+#: qml/DeviceSelection.qml:25
+#, kde-format
+msgid "Reload devices list"
+msgstr "Перезавантажити список пристроїв"
+
+#: qml/DeviceSelection.qml:63
 #, kde-format
 msgctxt ""
 "Device vendor with device model, followed by the device name identifier"
@@ -181,26 +186,23 @@ msgstr ""
 "%1 %2\n"
 "(%3)"
 
-#: qml/DeviceSelection.qml:69
+#: qml/DeviceSelection.qml:78
 #, kde-kuit-format
 msgctxt "@info"
 msgid "No devices found."
 msgstr "Пристроїв не виявлено."
 
-#: qml/DeviceSelection.qml:86
+#: qml/DeviceSelection.qml:96
 #, kde-format
 msgid "Open selected device"
 msgstr "Відкрити позначений пристрій."
 
-#: qml/DeviceSelection.qml:95
-#, kde-format
-msgid "Reload devices list"
-msgstr "Перезавантажити список пристроїв"
-
 #: qml/DevicesLoading.qml:29
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Searching for available devices."
 msgctxt "@info"
-msgid "Searching for available devices."
+msgid "Searching for available devices"
 msgstr "Шукаємо доступні пристрої."
 
 #: qml/DocumentList.qml:73
@@ -245,32 +247,32 @@ msgstr "Пересунути вище"
 msgid "Move Down"
 msgstr "Пересунути нижче"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:140
+#: qml/DocumentList.qml:249 qml/DocumentPage.qml:145
 #, kde-format
 msgid "Rotate Left"
 msgstr "Обернути ліворуч"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:147
+#: qml/DocumentList.qml:255 qml/DocumentPage.qml:152
 #, kde-format
 msgid "Rotate Right"
 msgstr "Обернути праворуч"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:154
+#: qml/DocumentList.qml:261 qml/DocumentPage.qml:159
 #, kde-format
 msgid "Flip"
 msgstr "Віддзеркалення"
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:161
+#: qml/DocumentList.qml:267 qml/DocumentPage.qml:166
 #, kde-format
 msgid "Save Page"
 msgstr "Зберегти сторінку"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:168
+#: qml/DocumentList.qml:273 qml/DocumentPage.qml:173
 #, kde-format
 msgid "Delete Page"
 msgstr "Вилучити сторінку"
 
-#: qml/DocumentList.qml:292
+#: qml/DocumentList.qml:296
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
@@ -279,76 +281,81 @@ msgstr[1] "%1 сторінки"
 msgstr[2] "%1 сторінок"
 msgstr[3] "1 сторінка"
 
-#: qml/DocumentList.qml:301
+#: qml/DocumentList.qml:305
 #, kde-format
 msgid "Flip Pages"
 msgstr "Перевернути сторінки"
 
-#: qml/DocumentList.qml:306
+#: qml/DocumentList.qml:310
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr "Перевернути непарні сторінки"
 
-#: qml/DocumentList.qml:313
+#: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Even Pages"
 msgstr "Перевернути парні сторінки"
 
-#: qml/DocumentList.qml:320
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip All Pages"
 msgstr "Перевернути усі сторінки"
 
-#: qml/DocumentList.qml:328
+#: qml/DocumentList.qml:332
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Перевпорядкувати сторінки"
 
-#: qml/DocumentList.qml:333
+#: qml/DocumentList.qml:337
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:340
+#: qml/DocumentList.qml:344
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:347
+#: qml/DocumentList.qml:351
 #, kde-format
 msgid "Reverse Order"
 msgstr "Зворотний порядок"
 
 #: qml/DocumentPage.qml:40
-#, kde-kuit-format
-msgctxt "@info"
-msgid "You do not have any images in this document.<nl/><nl/>Start scanning!"
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "This document contains no pages yet"
 msgstr ""
-"У цьому документі немає жодного зображення.<nl/><nl/>Розпочніть сканування!"
 
-#: qml/DocumentPage.qml:98
+#: qml/DocumentPage.qml:41
+#, kde-kuit-format
+msgctxt "@info:placeholder"
+msgid "Click the <interface>Scan</interface> button to add one"
+msgstr ""
+
+#: qml/DocumentPage.qml:103
 #, kde-format
 msgid "Zoom In"
 msgstr "Збільшити"
 
-#: qml/DocumentPage.qml:107
+#: qml/DocumentPage.qml:112
 #, kde-format
 msgid "Zoom Out"
 msgstr "Зменшити"
 
-#: qml/DocumentPage.qml:116
+#: qml/DocumentPage.qml:121
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Підібрати за розмірами"
 
-#: qml/DocumentPage.qml:132
+#: qml/DocumentPage.qml:137
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Масштаб 100%"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:112
+#: qml/ExportWindow.qml:21 qml/MainWindow.qml:110
 #, kde-format
 msgid "Export PDF"
 msgstr "Експортувати до PDF"
@@ -379,10 +386,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If your required language is not listed, please install Tesseract's "
+#| "language file with your package manager."
 msgid ""
-"If your required language is not listed, please install Tesseract's language "
-"file with your package manager."
+"If your required language is not listed, install its corresponding Tesseract "
+"language pack with your package manager."
 msgstr ""
 "Якщо у списку немає потрібної вам мови, будь ласка, встановіть відповідний "
 "мовний файл Tesseract за допомогою програми для керування пакунками вашої "
@@ -393,7 +403,7 @@ msgstr ""
 msgid "Save"
 msgstr "Зберегти"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:154
+#: qml/ExportWindow.qml:196 qml/MainWindow.qml:152
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
@@ -434,63 +444,63 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:85
+#: qml/MainWindow.qml:83
 #, kde-format
 msgid "Discard All"
 msgstr "Відкинути усе"
 
-#: qml/MainWindow.qml:94
+#: qml/MainWindow.qml:92
 #, kde-format
 msgid "Save All"
 msgstr "Зберегти все"
 
-#: qml/MainWindow.qml:103
+#: qml/MainWindow.qml:101
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Імпортувати"
 
-#: qml/MainWindow.qml:120
+#: qml/MainWindow.qml:118
 #, kde-format
 msgid "Preview"
 msgstr "Перегляд"
 
-#: qml/MainWindow.qml:139
+#: qml/MainWindow.qml:137
 #, kde-format
 msgid "Scan"
 msgstr "Сканувати"
 
-#: qml/MainWindow.qml:163
+#: qml/MainWindow.qml:161
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Показати параметри сканера"
 
-#: qml/MainWindow.qml:173 qml/ShareWindow.qml:20
+#: qml/MainWindow.qml:171 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Оприлюднити"
 
-#: qml/MainWindow.qml:181
+#: qml/MainWindow.qml:179
 #, kde-format
 msgid "Print"
 msgstr "Надрукувати"
 
-#: qml/MainWindow.qml:202 qml/MainWindow.qml:414
+#: qml/MainWindow.qml:200 qml/MainWindow.qml:409
 #, kde-format
 msgid "About Skanpage"
 msgstr "Про Skanpage"
 
-#: qml/MainWindow.qml:209
+#: qml/MainWindow.qml:207
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Налаштувати Skanpage…"
 
-#: qml/MainWindow.qml:217
+#: qml/MainWindow.qml:215
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Налаштовування клавіатурних скорочень…"
 
-#: qml/MainWindow.qml:225
+#: qml/MainWindow.qml:223
 #, kde-format
 msgid "Quit"
 msgstr "Вийти"
@@ -583,23 +593,23 @@ msgstr "пк"
 msgid "Select options for quick access:"
 msgstr "Виберіть параметри для швидкого доступу:"
 
-#: qml/OptionsPanel.qml:71
+#: qml/OptionsPanel.qml:76
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: qml/OptionsPanel.qml:84
+#: qml/OptionsPanel.qml:89
 #, kde-format
 msgid "Show More"
 msgstr "Докладніше"
 
-#: qml/OptionsPanel.qml:94
+#: qml/OptionsPanel.qml:99
 #, kde-format
 msgid "Configure Visibility"
 msgstr "Налаштовування видимості"
 
-#: qml/OptionsPanel.qml:109
+#: qml/OptionsPanel.qml:114
 #, kde-format
 msgid "Reselect Scanner"
 msgstr "Повторно вибрати сканер"
@@ -677,10 +687,17 @@ msgstr "Типове місце збереження:"
 msgid "Close"
 msgstr "Закрити"
 
-#: qml/ShareWindow.qml:42
+#: qml/ShareDialog.qml:47
 #, kde-format
 msgid "Share as:"
 msgstr "Оприлюднити як:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
+#~ msgstr ""
+#~ "У цьому документі немає жодного зображення.<nl/><nl/>Розпочніть "
+#~ "сканування!"
 
 #~ msgid "All files"
 #~ msgstr "усі файли"
