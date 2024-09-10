@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-08-01 07:28+0200\n"
+"PO-Revision-Date: 2024-09-09 08:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -195,12 +195,10 @@ msgid "Open selected device"
 msgstr "Odpri izbrano napravo"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Poišči razpoložljive naprave."
+msgstr "Iskanje razpoložljivih naprav."
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -324,13 +322,13 @@ msgstr "Obratni vrstni red"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Ta dokument še ne vsebuje nobenih strani"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Kliknite gumb <interface>Optično preberi</interface>, da jo dodate"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -383,16 +381,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
-"Če vaš zahtevan jezik ni omenjen, namestite jezikovno datoteko Tesseract z "
-"vašim upravljalnikom paketov."
+"Če vaš zahtevan jezik ni omenjen, namestite ustrezno jezikovno datoteko "
+"Tesseract z vašim upravljalnikom paketov."
 
 #: qml/ExportWindow.qml:180
 #, kde-format
@@ -414,7 +409,7 @@ msgstr "Datoteka"
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
-msgstr "Zajeta slika"
+msgstr "Optično preberi"
 
 #: qml/GlobalMenu.qml:124
 #, kde-format

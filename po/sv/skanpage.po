@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-07-26 21:00+0200\n"
+"PO-Revision-Date: 2024-09-09 18:31+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -192,12 +192,10 @@ msgid "Open selected device"
 msgstr "Öppna markerad enhet"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Söker efter tillgängliga enheter."
+msgstr "Söker efter tillgängliga enheter"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -319,13 +317,13 @@ msgstr "Omvänd ordning"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Det här dokumentet innehåller inte några sidor ännu"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Klicka på knappen <interface>Läs in</interface> för att lägga till ett"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -378,16 +376,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
-"Om språket du behöver inte listas, installera Tesseracts språkfil med "
-"pakethanteraren."
+"Om språket du behöver inte listas, installera motsvarande Tesseract "
+"språkpacke med pakethanteraren."
 
 #: qml/ExportWindow.qml:180
 #, kde-format

@@ -192,12 +192,10 @@ msgid "Open selected device"
 msgstr "打开所选设备"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "正在扫描可用设备。"
+msgstr ""
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -377,15 +375,11 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
-"如果您所需的语言未被列出，请使用本机系统的包管理器安装 Tesseract 的语言文件。"
 
 #: qml/ExportWindow.qml:180
 #, kde-format
@@ -679,8 +673,3 @@ msgstr "关闭"
 #, kde-format
 msgid "Share as:"
 msgstr "分享为："
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
-#~ msgstr "此文档尚未包含任何图像。<nl/><nl/>请开始扫描。"

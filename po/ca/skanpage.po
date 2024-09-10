@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-07-25 09:23+0200\n"
+"PO-Revision-Date: 2024-09-09 10:13+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 "X-Accelerator-Marker: &\n"
 
 #, kde-format
@@ -198,12 +198,10 @@ msgid "Open selected device"
 msgstr "Obre el dispositiu seleccionat"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "S'estan cercant dispositius disponibles."
+msgstr "S'estan cercant dispositius disponibles"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -325,13 +323,13 @@ msgstr "Ordre invers"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Aquest document encara no conté cap pàgina"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Feu clic al botó <interface>Escaneja</interface> per afegir-ne una"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -384,16 +382,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
-"Si l'idioma requerit no està llistat, instal·leu el fitxer d'idioma del "
-"Tesseract amb el gestor de paquets."
+"Si l'idioma requerit no està llistat, instal·leu el paquet d'idioma "
+"corresponent del Tesseract amb el gestor de paquets."
 
 #: qml/ExportWindow.qml:180
 #, kde-format

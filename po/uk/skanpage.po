@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-07-25 08:48+0300\n"
+"PO-Revision-Date: 2024-09-09 09:19+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -198,12 +198,10 @@ msgid "Open selected device"
 msgstr "Відкрити позначений пристрій."
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Шукаємо доступні пристрої."
+msgstr "Шукаємо доступні пристрої"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -327,13 +325,13 @@ msgstr "Зворотний порядок"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "У цьому документі ще немає сторінок"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Натисніть кнопку <interface>Сканувати</interface>, щоб додати"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -386,16 +384,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
-"Якщо у списку немає потрібної вам мови, будь ласка, встановіть відповідний "
-"мовний файл Tesseract за допомогою програми для керування пакунками вашої "
+"Якщо у списку немає потрібної вам мови, встановіть відповідний мовний "
+"пакунок Tesseract за допомогою програми для керування пакунками вашої "
 "системи."
 
 #: qml/ExportWindow.qml:180

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-07-25 13:14+0300\n"
+"PO-Revision-Date: 2024-09-09 13:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -193,12 +193,10 @@ msgid "Open selected device"
 msgstr "Seçili aygıtı aç"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Kullanılabilir aygıtlar aranıyor."
+msgstr "Kullanılabilir aygıtlar aranıyor"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -320,13 +318,13 @@ msgstr "Sırayı Tersine Çevir"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Bu belgede henüz bir sayfa yok"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Bir tane eklemek için <interface>Tara</interface> düğmesine basın"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -379,16 +377,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
-"İstediğiniz dil listede yoksa paket yöneticiniz ile Tessaract’ın dil "
-"dosyalarını kurun."
+"Eğer gereksinim duyduğunuz dil listede yoksa paket yöneticiniz aracılığıyla "
+"ilgili Tesseract dil paketini kurun."
 
 #: qml/ExportWindow.qml:180
 #, kde-format
