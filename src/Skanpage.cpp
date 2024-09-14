@@ -721,7 +721,10 @@ void Skanpage::checkFinish()
 
 void Skanpage::importFile(const QUrl &fileUrl)
 {
-    const int currentDPI = d->m_ksaneInterface.getOption(KSaneCore::Interface::ResolutionOption)->value().toInt();
+    int currentDPI = 96;
+    if (d->m_state == Skanpage::ReadyForScan) {
+        currentDPI = d->m_ksaneInterface.getOption(KSaneCore::Interface::ResolutionOption)->value().toInt();
+    }
     QMetaObject::invokeMethod(
         &d->m_fileIOThread,
         [this, fileUrl, currentDPI]() {
