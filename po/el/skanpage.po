@@ -103,10 +103,9 @@ msgid "Failed to save document as image."
 msgstr "Αποτυχία αποθήκευσης εικόνας"
 
 #: DocumentSaver.cpp:220
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Αποτυχία αποθήκευσης εικόνας"
+msgstr "Αποτυχία αποθήκευσης εικόνας."
 
 #: FormatModel.cpp:49
 #, kde-format
@@ -199,12 +198,10 @@ msgid "Open selected device"
 msgstr "Άνοιγμα επιλεγμένης συσκευής"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Αναζήτηση για διαθέσιμες συσκευές."
+msgstr "Αναζήτηση για διαθέσιμες συσκευές"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -366,11 +363,9 @@ msgid "Title:"
 msgstr ""
 
 #: qml/ExportWindow.qml:60
-#, fuzzy, kde-format
-#| msgctxt "menu category"
-#| msgid "File"
+#, kde-format
 msgid "File:"
-msgstr "Αρχείο"
+msgstr "Αρχείο:"
 
 #: qml/ExportWindow.qml:85
 #, kde-format
@@ -395,8 +390,7 @@ msgid ""
 msgstr ""
 
 #: qml/ExportWindow.qml:180
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgid "Save"
 msgstr "Αποθήκευση"
 
@@ -507,16 +501,12 @@ msgid "Quit"
 msgstr "Έξοδος"
 
 #: qml/OptionDelegate.qml:55
-#, fuzzy, kde-format
-#| msgctxt "Separator between a title and a value"
-#| msgid "%1:"
+#, kde-format
 msgid "%1:"
 msgstr "%1:"
 
 #: qml/OptionDelegate.qml:150
-#, fuzzy, kde-format
-#| msgctxt "Separator between a title and a value"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
 msgstr "%1:"
@@ -599,9 +589,7 @@ msgid "Select options for quick access:"
 msgstr ""
 
 #: qml/OptionsPanel.qml:76
-#, fuzzy, kde-format
-#| msgctxt "Adding unit suffix"
-#| msgid "%1 %2"
+#, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
 msgstr "%1 %2"
