@@ -1,15 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
-#
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:41+0000\n"
-"PO-Revision-Date: 2023-12-18 15:19+0100\n"
+"PO-Revision-Date: 2024-09-11 19:55+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,7 +80,7 @@ msgstr "Beim Speichern ist ein Fehler aufgetreten: %1."
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "Seite %1 wird beim Speichern des Dokuments verarbeitet."
 
 #: DocumentSaver.cpp:80
 #, kde-format
@@ -103,28 +103,24 @@ msgid "Failed to save document as image."
 msgstr "Das Speichern des Dokument als Bild ist fehlgeschlagen."
 
 #: DocumentSaver.cpp:218
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Fehler beim Speichern des Bildes"
+msgstr "Das Speichern des Bildes ist fehlgeschlagen."
 
 #: FormatModel.cpp:54
-#, fuzzy, kde-format
-#| msgid "All files (*)"
+#, kde-format
 msgid "All files"
-msgstr "Alle Dateien (*)"
+msgstr "Alle Dateien"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Fehler beim Speichern des Bildes"
+msgstr "Das Bild kann nicht geladen werden."
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Fehler beim Speichern des Bildes"
+msgstr "Die PDF-Datei kann nicht geladen werden."
 
 #: main.cpp:56
 #, kde-format
@@ -159,7 +155,7 @@ msgstr "Gerät"
 #: main.cpp:78
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "Ein Dateipfad zum Speichern der Einstellungen des Scanners."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -277,22 +273,22 @@ msgstr[1] "%1 Seiten"
 #: qml/DocumentList.qml:301
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Seiten spiegeln"
 
 #: qml/DocumentList.qml:306
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Ungerade Seiten spiegeln"
 
 #: qml/DocumentList.qml:313
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Gerade Seiten spiegeln"
 
 #: qml/DocumentList.qml:320
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Alle Seiten spiegeln"
 
 #: qml/DocumentList.qml:328
 #, kde-format
@@ -442,7 +438,7 @@ msgstr "Alles speichern"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Importieren"
 
 #: qml/MainWindow.qml:129
 #, kde-format
@@ -604,10 +600,9 @@ msgid "Discard this selection"
 msgstr "Diese Auswahl verwerfen"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Vorschau anzeigen"
+msgstr "Neue Scanvorschau"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -630,10 +625,9 @@ msgid "Split Scan Horizontally"
 msgstr "Scan waagerecht aufteilen"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Vorschau anzeigen"
+msgstr "Vorschau schließen"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
