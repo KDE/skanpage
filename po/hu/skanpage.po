@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-07-27 15:56+0200\n"
+"PO-Revision-Date: 2024-09-16 21:36+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -111,7 +111,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "Minden támogatott fájltípus"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -193,12 +193,10 @@ msgid "Open selected device"
 msgstr "A kiválasztott eszköz megnyitása"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Elérhető eszközök keresése."
+msgstr "Elérhető eszközök keresése"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -320,13 +318,13 @@ msgstr "Sorrend megfordítása"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "A dokumentum még nem tartalmaz oldalakat"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Kattintson a <interface>Beolvasás</interface> gombra hozzáadáshoz"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -379,16 +377,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
-"Ha a kívánt nyelv nem szerepel a listában, akkor telepítse a Tesseract "
-"nyelvi fájlt a csomagkezelőjével."
+"Ha a kívánt nyelv nem szerepel a listában, akkor telepítse a megfelelő "
+"Tesseract nyelvi csomagot a csomagkezelőjével."
 
 #: qml/ExportWindow.qml:180
 #, kde-format
