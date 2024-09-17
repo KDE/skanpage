@@ -62,6 +62,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ca">Aplicació d'escaneig de documents multipàgina</summary>
   <summary xml:lang="ca-valencia">Aplicació d'escaneig de documents multipàgina</summary>
   <summary xml:lang="cs">Aplikace pro vícestránkové skenování</summary>
+  <summary xml:lang="de">Anwendung zum Scannen mehrseitiger Dokumente</summary>
   <summary xml:lang="en-GB">Multi-page document scanning app</summary>
   <summary xml:lang="eo">Skan-apo por plurpaĝaj dokumentoj</summary>
   <summary xml:lang="es">Aplicación para escanear documentos multipágina</summary>
@@ -97,6 +98,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="bg">Skanpage е просто приложение за сканиране, оптимизирано за сканиране на много страници. То също така може да сканира и запазва  документи с една страница и изображения .</p>
     <p xml:lang="ca">L'Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i desar documents i imatges d'una pàgina.</p>
     <p xml:lang="ca-valencia">Skanpage és una aplicació d'escaneig optimitzada per a l'escaneig de documents multipàgina. També pot escanejar i guardar documents i imatges d'una pàgina.</p>
+    <p xml:lang="de">Skanpage ist eine einfache Anwendung mit Optimierungen für das Scannen von mehrseitigen Dokumenten. Auch können einseitige Dokumente und Bilder gescannt werden.</p>
     <p xml:lang="en-GB">Skanpage is a simple scanning application optimised for multi-page document scanning. It can also scan and save single-page documents and images.</p>
     <p xml:lang="eo">Skanpage estas simpla skana aplikaĵo optimumigita por skanado de plurpaĝaj dokumentoj. Ĝi ankaŭ povas skani kaj konservi unupaĝajn dokumentojn kaj bildojn.</p>
     <p xml:lang="es">Skanpage es una aplicación de escaneo sencilla optimizada para escanear documentos con varias páginas. También puede escanear y guardar imágenes y documentos de una sola página.</p>
