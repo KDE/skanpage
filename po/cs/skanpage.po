@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-07-26 14:53+0200\n"
+"PO-Revision-Date: 2024-09-18 09:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -195,7 +195,7 @@ msgstr "Otevřít vybrané zařízení"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr ""
+msgstr "Vyhledávám dostupná zařízení"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -318,13 +318,13 @@ msgstr "Obrácené pořadí"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Tento dokument zatím neobsahuje žádné stránky"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Pro přidání klikněte na tlačítko <interface>Skenovat</interface>"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
