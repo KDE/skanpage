@@ -679,12 +679,3 @@ msgstr "Затваряне"
 #, kde-format
 msgid "Share as:"
 msgstr "Споделяне като:"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
-#~ msgstr ""
-#~ "В този документ няма никакви изображения.<nl/><nl/>Започнете сканирането!"
-
-#~ msgid "All files"
-#~ msgstr "Всички файлове"
