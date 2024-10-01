@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:41+0000\n"
-"PO-Revision-Date: 2024-09-18 09:39+0200\n"
+"PO-Revision-Date: 2024-09-18 15:28+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -382,6 +382,8 @@ msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
+"Pokud vámi požadovaný jazyk není v seznamu, nainstalujte pomocí správce "
+"balíčků odpovídající balíček jazyka pro Tesseract."
 
 #: qml/ExportWindow.qml:180
 #, kde-format
