@@ -195,7 +195,7 @@ msgstr "打开所选设备"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr ""
+msgstr "正在扫描可用设备"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -316,13 +316,13 @@ msgstr "反向排序"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "此文档尚未包含页面"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "点击 <interface>扫描…</interface> 按钮以添加页面"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -380,6 +380,8 @@ msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
+"如果您所需的语言未被列出，请使用本机系统的包管理器安装对应的 Tesseract 语言"
+"包。"
 
 #: qml/ExportWindow.qml:180
 #, kde-format
