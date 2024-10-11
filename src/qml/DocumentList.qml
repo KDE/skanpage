@@ -228,7 +228,7 @@ ColumnLayout {
                                         icon.name: "go-up"
                                         text: i18n("Move Up")
                                         onTriggered: {
-                                            skanpage.documentModel.moveImage(index, index - 1, 1);
+                                            skanpage.documentModel.moveImage(index, index - 1);
                                             listView.positionViewAtIndex(index, ListView.Center);
                                         }
                                         enabled: index > 0
@@ -238,7 +238,7 @@ ColumnLayout {
                                         icon.name: "go-down"
                                         text: i18n("Move Down")
                                         onTriggered: {
-                                            skanpage.documentModel.moveImage(index, index + 1, 1);
+                                            skanpage.documentModel.moveImage(index, index + 1);
                                             listView.positionViewAtIndex(index, ListView.Center);
                                         }
                                         enabled: index < listView.count - 1
