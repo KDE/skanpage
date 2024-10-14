@@ -109,6 +109,6 @@ Window {
         id: selectFolderDialog
 
         currentFolder: skanpage.configuration.defaultFolder
-        onAccepted: skanpage.configuration.defaultFolder = selectedFile
+        onAccepted: skanpage.configuration.defaultFolder = selectedFolder
     }
 }
