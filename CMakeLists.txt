@@ -54,7 +54,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
         XmlGui
 )
 ecm_set_disabled_deprecation_versions(QT 6.7.2
-     KF 6.5.0
+     KF 6.7
 )
 
 find_package(KSaneCore6 "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}" REQUIRED)
