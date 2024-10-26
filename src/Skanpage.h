@@ -56,10 +56,20 @@ class Skanpage : public QObject
     Q_PROPERTY(bool previewImageAvailable READ previewImageAvailable NOTIFY previewImageChanged)
 
 public:
-    enum ApplicationState { ScanInProgress, ReadyForScan, DeviceSelection, SearchingForDevices, NoDeviceOpened };
+    enum ApplicationState {
+        ScanInProgress,
+        ReadyForScan,
+        DeviceSelection,
+        SearchingForDevices,
+        NoDeviceOpened
+    };
     Q_ENUM(ApplicationState)
 
-    enum ScanSplit { ScanNotSplit, ScanIsSplitH, ScanIsSplitV };
+    enum ScanSplit {
+        ScanNotSplit,
+        ScanIsSplitH,
+        ScanIsSplitV
+    };
     Q_ENUM(ScanSplit)
 
     explicit Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObject *parent = nullptr);

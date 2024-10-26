@@ -31,17 +31,36 @@ class DocumentModel : public QAbstractListModel
     Q_PROPERTY(bool isReady READ isReady NOTIFY isReadyChanged)
 
 public:
-    enum DocumentModelRoles { ImageUrlRole = Qt::UserRole + 1, RotationAngleRole, AspectRatioRole, PreviewWidthRole, PreviewHeightRole, IsSavedRole };
+    enum DocumentModelRoles {
+        ImageUrlRole = Qt::UserRole + 1,
+        RotationAngleRole,
+        AspectRatioRole,
+        PreviewWidthRole,
+        PreviewHeightRole,
+        IsSavedRole
+    };
 
-    enum RotateOption { Rotate90positive, Rotate90negative, Flip180 };
+    enum RotateOption {
+        Rotate90positive,
+        Rotate90negative,
+        Flip180
+    };
 
     Q_ENUM(RotateOption)
 
-    enum FlipPagesOption { FlipEven, FlipOdd, FlipAll };
+    enum FlipPagesOption {
+        FlipEven,
+        FlipOdd,
+        FlipAll
+    };
 
     Q_ENUM(FlipPagesOption)
 
-    enum ReorderOption { ReorderDuplex, ReorderDuplexReversed, Reverse };
+    enum ReorderOption {
+        ReorderDuplex,
+        ReorderDuplexReversed,
+        Reverse
+    };
 
     Q_ENUM(ReorderOption)
 

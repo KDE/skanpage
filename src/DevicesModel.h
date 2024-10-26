@@ -25,7 +25,12 @@ class DevicesModel : public QAbstractListModel
     Q_PROPERTY(int rowCount READ rowCount NOTIFY rowCountChanged)
 
 public:
-    enum DevicesModelRoles { NameRole = Qt::UserRole + 1, VendorRole, ModelRole, TypeRole };
+    enum DevicesModelRoles {
+        NameRole = Qt::UserRole + 1,
+        VendorRole,
+        ModelRole,
+        TypeRole
+    };
 
     explicit DevicesModel(QObject *parent = nullptr);
 

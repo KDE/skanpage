@@ -18,7 +18,12 @@ class FormatModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    enum FormatModelRoles { NameRole = Qt::UserRole + 1, SuffixRole, CommentRole, NameFilterRole };
+    enum FormatModelRoles {
+        NameRole = Qt::UserRole + 1,
+        SuffixRole,
+        CommentRole,
+        NameFilterRole
+    };
 
     Q_ENUM(FormatModelRoles)
 

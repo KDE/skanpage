@@ -20,7 +20,11 @@ class OCRLanguageModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    enum LanguageModelRoles { NameRole = Qt::UserRole + 1, CodeRole, UseRole };
+    enum LanguageModelRoles {
+        NameRole = Qt::UserRole + 1,
+        CodeRole,
+        UseRole
+    };
 
     explicit OCRLanguageModel(QObject *parent = nullptr);
 
