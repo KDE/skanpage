@@ -39,9 +39,11 @@ FormatModel::FormatModel(QObject *parent)
 
     for (const auto &mimeString : std::as_const(tempList)) {
         const QMimeType mimeType = mimeDB.mimeTypeForName(QString::fromLatin1(mimeString));
-        d->m_writeFormatList.append(mimeType);
-        // craft a string that QML's FileDialog understands
-        d->m_writeFormatFilter.append({mimeType.comment() + QStringLiteral("(*.") + mimeType.preferredSuffix() + QStringLiteral(")")});
+        if (mimeType.isValid()) {
+            d->m_writeFormatList.append(mimeType);
+            // craft a string that QML's FileDialog understands
+            d->m_writeFormatFilter.append({mimeType.comment() + QStringLiteral("(*.") + mimeType.preferredSuffix() + QStringLiteral(")")});
+        }
     }
 
     // create a concatenated read filter for import dialog
@@ -50,7 +52,9 @@ FormatModel::FormatModel(QObject *parent)
     readFormatFilter.append(QStringLiteral(" ("));
     for (const auto &mimeString : std::as_const(tempList)) {
         const QMimeType mimeType = mimeDB.mimeTypeForName(QString::fromLatin1(mimeString));
-        readFormatFilter.append(QStringLiteral(" *.") + mimeType.preferredSuffix());
+        if (mimeType.isValid()) {
+            readFormatFilter.append(QStringLiteral(" *.") + mimeType.preferredSuffix());
+        }
     }
     readFormatFilter.append(QStringLiteral(" )"));
     d->m_readFormatFilterConcatenated = readFormatFilter;
