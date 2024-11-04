@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-04 00:42+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -107,7 +107,7 @@ msgstr "Gagal menyimpan dokumen sebagai citra."
 msgid "Failed to save image."
 msgstr "Gagal menyimpan citra"
 
-#: FormatModel.cpp:49
+#: FormatModel.cpp:51
 #, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "

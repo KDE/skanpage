@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-04 00:42+0000\n"
 "PO-Revision-Date: 2024-08-20 00:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -105,7 +105,7 @@ msgstr "문서를 그림으로 저장할 수 없습니다."
 msgid "Failed to save image."
 msgstr "그림을 저장할 수 없습니다."
 
-#: FormatModel.cpp:49
+#: FormatModel.cpp:51
 #, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "

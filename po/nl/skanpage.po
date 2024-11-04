@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-04 00:42+0000\n"
 "PO-Revision-Date: 2024-09-09 09:47+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -105,7 +105,7 @@ msgstr "Document als afbeelding opslaan is mislukt."
 msgid "Failed to save image."
 msgstr "Afbeelding opslaan is mislukt."
 
-#: FormatModel.cpp:49
+#: FormatModel.cpp:51
 #, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "

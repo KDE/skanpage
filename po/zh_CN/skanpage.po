@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-04 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -105,7 +105,7 @@ msgstr "无法将文档保存为图像。"
 msgid "Failed to save image."
 msgstr "保存图像失败。"
 
-#: FormatModel.cpp:49
+#: FormatModel.cpp:51
 #, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
