@@ -118,7 +118,7 @@ Q_SIGNALS:
     void sharingDocumentsCreated(const QVariantList &fileUrls);
 
 public Q_SLOTS:
-    void updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
+    void updateFileInformation(const QList<QUrl> &fileUrls, const QList<QString> &localNames, const SkanpageUtils::DocumentPages &document);
     void updateSharingFileInformation(const QList<QUrl> &fileUrls);
     void updatePageInModel(const int pageID, const SkanpageUtils::PageProperties &page);
 

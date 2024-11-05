@@ -35,13 +35,14 @@ public:
 
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
-    void fileSaved(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document);
+    void fileSaved(const QList<QUrl> &fileUrls, const QList<QString> &localNames, const SkanpageUtils::DocumentPages &document);
     void sharingFileSaved(const QList<QUrl> &fileUrls);
     void pageTemporarilySaved(const int pageID, const SkanpageUtils::PageProperties &page);
 
 private:
+    QString getLocalNameForFile(const QUrl &fileUrl);
     void savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
-    void saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
+    void saveImage(const QUrl &fileUrl, const QFileInfo &destFileInfo, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
     void saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const QString &title);
     void printPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page, bool firstPage);
     OCREngine *m_OCREngine;

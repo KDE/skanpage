@@ -75,6 +75,8 @@ target_link_libraries(skanpage
     KF6::ConfigGui
     KF6::Purpose
     KF6::XmlGui
+    KF6::KIOCore
+    KF6::KIOWidgets
 )
 
 if (TESSERACT_FOUND AND LEPTONICA_FOUND)

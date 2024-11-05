@@ -13,7 +13,12 @@
 #include <QThread>
 #include <QUrl>
 
+#include <QApplication>
+
 #include <KLocalizedString>
+#include <KIO/FileCopyJob>
+#include <KIO/StoredTransferJob>
+#include <KJobWidgets>
 
 #include "skanpage_debug.h"
 
@@ -424,8 +429,23 @@ void DocumentModel::clearData()
     }
 }
 
-void DocumentModel::updateFileInformation(const QList<QUrl> &fileUrls, const SkanpageUtils::DocumentPages &document)
+void DocumentModel::updateFileInformation(const QList<QUrl> &fileUrls, const QList<QString> &localNames, const SkanpageUtils::DocumentPages &document)
 {
+    for (int i = 0; i < fileUrls.count(); i++) {
+        if (!fileUrls.at(i).isLocalFile()) {
+            QFile file(localNames.at(i));
+            file.open(QIODevice::ReadOnly);
+            const auto copyJob = KIO::storedPut(&file, fileUrls.at(i), -1, KIO::HideProgressInfo | KIO::Overwrite);
+            KJobWidgets::setWindow(copyJob, QApplication::activeWindow());
+            bool ok = copyJob->exec();
+
+            if (!ok) {
+                file.close();
+                file.remove();
+                return;
+            }
+        }
+    }
     if (document == d->m_pages && d->m_changed) {
         d->m_changed = false;
         Q_EMIT changedChanged();

@@ -38,13 +38,9 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Nothing to save."));
         return;
     }
-    if (!fileUrl.isLocalFile()) {
-        Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Saving to non-local directories is currently unsupported."));
-        return;
-    }
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
 
-    const QFileInfo &fileInfo = QFileInfo(fileUrl.toLocalFile());
+    const QFileInfo &fileInfo = QFileInfo(fileUrl.toDisplayString());
     const QString &fileSuffix = fileInfo.suffix();
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
@@ -55,13 +51,30 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
     } else if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
         savePDF(fileUrl, document, type);
     } else {
-        saveImage(fileInfo, document, type);
+        saveImage(fileUrl, fileInfo, document, type);
     }
+}
+
+QString DocumentSaver::getLocalNameForFile(const QUrl &fileUrl)
+{
+    QString localName;
+    if (!fileUrl.isLocalFile()) {
+        QTemporaryFile tmp;
+        tmp.open();
+        localName = tmp.fileName();
+        tmp.close(); // we just want the filename
+    }
+    else {
+        localName = fileUrl.toLocalFile();
+    }
+
+    return localName;
 }
 
 void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)
 {
-    QFile file(fileUrl.toLocalFile());
+    const QString localName = getLocalNameForFile(fileUrl);
+    QFile file(localName);
     bool ok = file.open(QIODevice::ReadWrite);
     if (!ok) {
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18nc("%1 is the error message", "An error ocurred while saving: %1.", file.errorString()));
@@ -81,7 +94,7 @@ void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPa
     }
 
     if (type == SkanpageUtils::EntireDocument) {
-        Q_EMIT fileSaved({fileUrl}, document);
+        Q_EMIT fileSaved({fileUrl}, {localName}, document);
     } else if (type == SkanpageUtils::SharingDocument) {
         Q_EMIT sharingFileSaved({fileUrl});
     }
@@ -93,7 +106,8 @@ void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::
         return;
     }
 
-    QFile file(fileUrl.toLocalFile());
+    const QString localName = getLocalNameForFile(fileUrl);
+    QFile file(localName);
     bool ok = file.open(QIODevice::ReadWrite);
     if (!ok) {
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18nc("%1 is the error message", "An error ocurred while saving: %1.", file.errorString()));
@@ -110,6 +124,7 @@ void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::
         m_OCREngine->OCRPage(writer, painter, document.at(i));
     }
 
+    Q_EMIT fileSaved({fileUrl}, {localName}, document);
     Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved with OCR as PDF."));
 }
 
@@ -149,44 +164,59 @@ void DocumentSaver::printPage(QPdfWriter &writer, QPainter &painter, const Skanp
     painter.drawImage(QPoint(0, 0), pageImage, pageImage.rect());
 }
 
-void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)
+void DocumentSaver::saveImage(const QUrl &fileUrl, const QFileInfo &destFileInfo, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)
 {
     const int count = document.count();
     QImage pageImage;
-    QString fileName;
+    QString localFileName;
+    QString destFileName;
     QList<QUrl> fileUrls;
+    QList<QString> localNames;
 
     bool success = true;
     if (count == 1) {
         if (document.at(0).temporaryFile != nullptr) {
+            QFileInfo localFileInfo(getLocalNameForFile(fileUrl));
             pageImage.load(document.at(0).temporaryFile->fileName());
-            fileName = fileInfo.absoluteFilePath();
+            localFileName = localFileInfo.absoluteFilePath();
             const int rotationAngle = document.at(0).rotationAngle;
             if (rotationAngle != 0) {
                 pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
             }
-            success = pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData());
-            fileUrls.append(QUrl::fromLocalFile(fileName));
+            success = pageImage.save(localFileName, destFileInfo.suffix().toLocal8Bit().constData());
+            fileUrls.append(fileUrl);
+            localNames.append((localFileName));
         }
     } else {
         fileUrls.reserve(count);
+        localNames.reserve(count);
+
         for (int i = 0; i < count; ++i) {
             Q_EMIT showUserMessage(SkanpageUtils::InformationMessage,
                                    i18nc("indicate status update during saving", "Processing page %1 to save the document.", i));
             if (document.at(i).temporaryFile == nullptr) {
                 continue;
             }
+            QFileInfo localFileInfo(getLocalNameForFile(fileUrl));
             pageImage.load(document.at(i).temporaryFile->fileName());
             const int rotationAngle = document.at(i).rotationAngle;
             if (rotationAngle != 0) {
                 pageImage = pageImage.transformed(QTransform().rotate(rotationAngle));
             }
-            fileName = QStringLiteral("%1/%2%3.%4")
-                           .arg(fileInfo.absolutePath(), fileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), fileInfo.suffix());
-            if (!pageImage.save(fileName, fileInfo.suffix().toLocal8Bit().constData())) {
+            destFileName =
+                QStringLiteral("%1/%2-%3.%4").arg(destFileInfo.path(), destFileInfo.baseName(), QLocale().toString(i).rightJustified(4, QLatin1Char('0')), destFileInfo.suffix());
+
+            if (fileUrl.isLocalFile()) {
+                localFileName = destFileName;
+            } else {
+                localFileName = localFileInfo.absoluteFilePath();
+            }
+
+            if (!pageImage.save(localFileName, destFileInfo.suffix().toLocal8Bit().constData())) {
                 success = false;
             }
-            fileUrls.append(QUrl::fromLocalFile(fileName));
+            fileUrls.append(QUrl::fromUserInput(destFileName));
+            localNames.append(localFileName);
         }
     }
 
@@ -195,7 +225,7 @@ void DocumentSaver::saveImage(const QFileInfo &fileInfo, const SkanpageUtils::Do
             Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
         }
         if (type == SkanpageUtils::EntireDocument) {
-            Q_EMIT fileSaved(fileUrls, document);
+            Q_EMIT fileSaved(fileUrls, localNames, document);
         } else if (type == SkanpageUtils::SharingDocument) {
             Q_EMIT sharingFileSaved(fileUrls);
         }
