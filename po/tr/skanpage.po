@@ -677,11 +677,3 @@ msgstr "Kapat"
 #, kde-format
 msgid "Share as:"
 msgstr "Paylaş:"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
-#~ msgstr "Bu belgede hiç görsel yok.<nl/><nl/>Taramayı başlatın!"
-
-#~ msgid "All files"
-#~ msgstr "Tüm dosyalar"
