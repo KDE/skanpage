@@ -384,17 +384,18 @@ void Skanpage::imageReady(const QImage &image)
         applySubAreasToImage();
         setScanArea(d->m_scanSubAreas.back()); // Leave scanArea as last selection
     } else {
-        bool v = d->m_scanSplit == ScanIsSplitV;
         QRectF half = d->m_scanArea;
-        if (v)
+        if (d->m_scanSplit == ScanIsSplitV) {
             half.setWidth(half.width() / 2);
-        else
+        } else {
             half.setHeight(half.height() / 2);
+        }
         d->m_scanSubAreas.append(half); // Fake sub-areas, no need for notification
-        if (v)
+        if (d->m_scanSplit == ScanIsSplitV) {
             half.moveRight(d->m_scanArea.right());
-        else
+        } else {
             half.moveBottom(d->m_scanArea.bottom());
+        }
         d->m_scanSubAreas.append(half);
         applySubAreasToImage();
     }
