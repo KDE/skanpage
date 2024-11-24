@@ -42,8 +42,6 @@ ApplicationWindow {
             skanpage.stateConfiguration.splitViewItemWidth = mainView.splitViewItemWidth
             skanpage.stateConfiguration.showOptions = mainView.showOptions
             skanpage.stateConfiguration.showAllOptions = mainView.optionsPanel.allOptionsAction.checked
-            skanpage.stateConfiguration.exportHeight = exportWindow.height
-            skanpage.stateConfiguration.exportWidth = exportWindow.width
             skanpage.stateConfiguration.settingsHeight = settingsWindow.height
             skanpage.stateConfiguration.settingsWidth = settingsWindow.width
         }
@@ -106,10 +104,10 @@ ApplicationWindow {
     
     ShortcutsAction {
         id: exportDocAction
-        icon.name: "document-save"
+        icon.name: "document-export-symbolic"
         text: i18n("Export PDF")
         enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
-        onTriggered: exportWindow.show()
+        onTriggered: exportDialog.open()
     }
 
     ShortcutsAction {
@@ -466,11 +464,8 @@ ApplicationWindow {
        shareAction: shareAction
     }    
 
-    ExportWindow {
-        id: exportWindow
-
-        height: skanpage.stateConfiguration.exportHeight
-        width: skanpage.stateConfiguration.exportWidth
+    ExportDialog {
+        id: exportDialog
     }
 
     SettingsWindow {

@@ -38,16 +38,6 @@ SPDX-License-Identifier: CC0-1.0
         550
     </default>
   </entry>
-      <entry key="exportWidth" type="UInt">
-    <default>
-        600
-    </default>
-  </entry>
-  <entry key="exportHeight" type="UInt" >
-    <default>
-      400
-    </default>
-  </entry>
       <entry key="settingsWidth" type="UInt">
     <default>
         500
@@ -75,3 +65,4 @@ SPDX-License-Identifier: CC0-1.0
   </entry>
 </group>
 </kcfg>
+
