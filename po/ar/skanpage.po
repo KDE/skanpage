@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-04 00:42+0000\n"
+"POT-Creation-Date: 2024-11-25 00:43+0000\n"
 "PO-Revision-Date: 2024-09-11 21:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:85
+#: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
 #, kde-format
 msgid "New document"
 msgstr "مستند جديد"
 
-#: DocumentModel.cpp:75
+#: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
@@ -64,44 +64,39 @@ msgstr "لم يُعط مسار للملف."
 msgid "Nothing to save."
 msgstr "لا شيء لحفظه."
 
-#: DocumentSaver.cpp:42
-#, kde-format
-msgid "Saving to non-local directories is currently unsupported."
-msgstr "الحفظ إلى ملفات غير محلية غير مدعوم حاليا"
-
-#: DocumentSaver.cpp:67 DocumentSaver.cpp:99
+#: DocumentSaver.cpp:80 DocumentSaver.cpp:113
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "خطأ أثناء الحفظ: %1."
 
-#: DocumentSaver.cpp:75 DocumentSaver.cpp:108 DocumentSaver.cpp:175
+#: DocumentSaver.cpp:88 DocumentSaver.cpp:122 DocumentSaver.cpp:196
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "يعالج الصفحة %1 ليحفظ المستند."
 
-#: DocumentSaver.cpp:80
+#: DocumentSaver.cpp:93
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "حفظ المستند كبي دي اف."
 
-#: DocumentSaver.cpp:113
+#: DocumentSaver.cpp:128
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "حفظَ المستند كبي دي اف مع التعرف الضوئي للمحارف."
 
-#: DocumentSaver.cpp:195
+#: DocumentSaver.cpp:225
 #, kde-format
 msgid "Document saved as image."
 msgstr "حفظ المستند كصورة."
 
-#: DocumentSaver.cpp:204
+#: DocumentSaver.cpp:234
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "فشل حفظ المستند كصورة"
 
-#: DocumentSaver.cpp:220
+#: DocumentSaver.cpp:250
 #, kde-format
 msgid "Failed to save image."
 msgstr "فشل حفظ الصّورة."
@@ -350,54 +345,58 @@ msgstr "لائم التقريب"
 msgid "Zoom 100%"
 msgstr "تكبير 100٪"
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:110
-#, kde-format
+#: qml/ExportDialog.qml:36
+#, fuzzy, kde-format
+#| msgid "Export PDF"
+msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "صدر إلى بي دي اف"
 
-#: qml/ExportWindow.qml:44
-#, kde-format
+#: qml/ExportDialog.qml:44
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@label"
 msgid "Title:"
 msgstr "العنوان:"
 
-#: qml/ExportWindow.qml:60
-#, kde-format
+#: qml/ExportDialog.qml:52
+#, fuzzy, kde-format
+#| msgid "File:"
+msgctxt "@label"
 msgid "File:"
 msgstr "الملف:"
 
-#: qml/ExportWindow.qml:85
-#, kde-format
-msgid "Enable optical character recognition (OCR)"
+#: qml/ExportDialog.qml:62
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgctxt "@action:button"
+msgid "Save As…"
+msgstr "احفظ الكلّ"
+
+#: qml/ExportDialog.qml:95
+#, fuzzy, kde-format
+#| msgid "Enable optical character recognition (OCR)"
+msgid "Optical Character Recognition"
 msgstr "مكن التعرّف البصري على المحارف"
 
-#: qml/ExportWindow.qml:105
+#: qml/ExportDialog.qml:98
 #, kde-format
-msgid "Languages:"
-msgstr "اللغات:"
+msgctxt "@option:check Enable optical character recognition"
+msgid "Enable"
+msgstr ""
 
-#: qml/ExportWindow.qml:133
-#, kde-format
-msgid "%1 [%2]"
-msgstr "‏%1 [%2]"
-
-#: qml/ExportWindow.qml:154
-#, kde-format
+#: qml/ExportDialog.qml:104
+#, fuzzy, kde-format
+#| msgid ""
+#| "If your required language is not listed, install its corresponding "
+#| "Tesseract language pack with your package manager."
+msgctxt "@info:usagetip"
 msgid ""
-"If your required language is not listed, install its corresponding Tesseract "
-"language pack with your package manager."
+"If the required languages are not listed, install Tesseract's language file "
+"with the system's package manager."
 msgstr ""
 "إذا لم تكن لغتك المطلوبة مدرجة، فثبت ملف لغتك لـTesseract بواسطة مدير الحزم "
 "الخاص بك."
-
-#: qml/ExportWindow.qml:180
-#, kde-format
-msgid "Save"
-msgstr "احفظ"
-
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:152
-#, kde-format
-msgid "Cancel"
-msgstr "ألغِ"
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -435,63 +434,73 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "‏%1 ― ماسح الصفحات"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:81
 #, kde-format
 msgid "Discard All"
 msgstr "أهمل الكلّ"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:90
 #, kde-format
 msgid "Save All"
 msgstr "احفظ الكلّ"
 
-#: qml/MainWindow.qml:101
+#: qml/MainWindow.qml:99
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "استورد"
 
-#: qml/MainWindow.qml:118
+#: qml/MainWindow.qml:108
+#, kde-format
+msgid "Export PDF"
+msgstr "صدر إلى بي دي اف"
+
+#: qml/MainWindow.qml:116
 #, kde-format
 msgid "Preview"
 msgstr "عاين"
 
-#: qml/MainWindow.qml:137
+#: qml/MainWindow.qml:135
 #, kde-format
 msgid "Scan"
 msgstr "امسح"
 
-#: qml/MainWindow.qml:161
+#: qml/MainWindow.qml:150
+#, kde-format
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: qml/MainWindow.qml:159
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "أظهر خيارات الماسحة"
 
-#: qml/MainWindow.qml:171 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:169 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "شارك"
 
-#: qml/MainWindow.qml:179
+#: qml/MainWindow.qml:177
 #, kde-format
 msgid "Print"
 msgstr "اطبع"
 
-#: qml/MainWindow.qml:200 qml/MainWindow.qml:409
+#: qml/MainWindow.qml:198 qml/MainWindow.qml:407
 #, kde-format
 msgid "About Skanpage"
 msgstr "عن ماسح الصفحات"
 
-#: qml/MainWindow.qml:207
+#: qml/MainWindow.qml:205
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "اضبط ماسح الصفحات..."
 
-#: qml/MainWindow.qml:215
+#: qml/MainWindow.qml:213
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "اضبط اختصارات لوحة المفاتيح…"
 
-#: qml/MainWindow.qml:223
+#: qml/MainWindow.qml:221
 #, kde-format
 msgid "Quit"
 msgstr "أنهِ"
@@ -681,6 +690,18 @@ msgstr "أغلق"
 #, kde-format
 msgid "Share as:"
 msgstr "شارك كـ:"
+
+#~ msgid "Saving to non-local directories is currently unsupported."
+#~ msgstr "الحفظ إلى ملفات غير محلية غير مدعوم حاليا"
+
+#~ msgid "Languages:"
+#~ msgstr "اللغات:"
+
+#~ msgid "%1 [%2]"
+#~ msgstr "‏%1 [%2]"
+
+#~ msgid "Save"
+#~ msgstr "احفظ"
 
 #~ msgctxt "@info"
 #~ msgid ""

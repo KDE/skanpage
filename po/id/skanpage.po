@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-04 00:42+0000\n"
+"POT-Creation-Date: 2024-11-25 00:43+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wantoyek@gmail.com"
 
-#: DocumentModel.cpp:54 DocumentModel.cpp:71 DocumentModel.cpp:85
+#: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
 #, kde-format
 msgid "New document"
 msgstr "Dokumen baru"
 
-#: DocumentModel.cpp:75
+#: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
@@ -63,45 +63,40 @@ msgstr ""
 msgid "Nothing to save."
 msgstr "Tidak ada yang disimpan."
 
-#: DocumentSaver.cpp:42
-#, kde-format
-msgid "Saving to non-local directories is currently unsupported."
-msgstr ""
-
-#: DocumentSaver.cpp:67 DocumentSaver.cpp:99
+#: DocumentSaver.cpp:80 DocumentSaver.cpp:113
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr ""
 
-#: DocumentSaver.cpp:75 DocumentSaver.cpp:108 DocumentSaver.cpp:175
+#: DocumentSaver.cpp:88 DocumentSaver.cpp:122 DocumentSaver.cpp:196
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr ""
 
-#: DocumentSaver.cpp:80
+#: DocumentSaver.cpp:93
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Dokumen disimpan sebagai PDF."
 
-#: DocumentSaver.cpp:113
+#: DocumentSaver.cpp:128
 #, fuzzy, kde-format
 #| msgid "Document saved as PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Dokumen disimpan sebagai PDF."
 
-#: DocumentSaver.cpp:195
+#: DocumentSaver.cpp:225
 #, kde-format
 msgid "Document saved as image."
 msgstr "Dokumen disimpan sebagai citra."
 
-#: DocumentSaver.cpp:204
+#: DocumentSaver.cpp:234
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Gagal menyimpan dokumen sebagai citra."
 
-#: DocumentSaver.cpp:220
+#: DocumentSaver.cpp:250
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save image."
@@ -353,55 +348,51 @@ msgstr "Zoom Paskan"
 msgid "Zoom 100%"
 msgstr "Zoom 100%\""
 
-#: qml/ExportWindow.qml:21 qml/MainWindow.qml:110
+#: qml/ExportDialog.qml:36
 #, kde-format
+msgctxt "@title:window"
 msgid "Export PDF"
 msgstr ""
 
-#: qml/ExportWindow.qml:44
+#: qml/ExportDialog.qml:44
 #, kde-format
+msgctxt "@label"
 msgid "Title:"
 msgstr ""
 
-#: qml/ExportWindow.qml:60
+#: qml/ExportDialog.qml:52
 #, fuzzy, kde-format
 #| msgctxt "menu category"
 #| msgid "File"
+msgctxt "@label"
 msgid "File:"
 msgstr "File"
 
-#: qml/ExportWindow.qml:85
-#, kde-format
-msgid "Enable optical character recognition (OCR)"
-msgstr ""
-
-#: qml/ExportWindow.qml:105
-#, kde-format
-msgid "Languages:"
-msgstr ""
-
-#: qml/ExportWindow.qml:133
-#, kde-format
-msgid "%1 [%2]"
-msgstr ""
-
-#: qml/ExportWindow.qml:154
-#, kde-format
-msgid ""
-"If your required language is not listed, install its corresponding Tesseract "
-"language pack with your package manager."
-msgstr ""
-
-#: qml/ExportWindow.qml:180
+#: qml/ExportDialog.qml:62
 #, fuzzy, kde-format
 #| msgid "Save All"
-msgid "Save"
+msgctxt "@action:button"
+msgid "Save As…"
 msgstr "Simpan Semua"
 
-#: qml/ExportWindow.qml:196 qml/MainWindow.qml:152
+#: qml/ExportDialog.qml:95
 #, kde-format
-msgid "Cancel"
-msgstr "Batal"
+msgid "Optical Character Recognition"
+msgstr ""
+
+#: qml/ExportDialog.qml:98
+#, kde-format
+msgctxt "@option:check Enable optical character recognition"
+msgid "Enable"
+msgstr ""
+
+#: qml/ExportDialog.qml:104
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"If the required languages are not listed, install Tesseract's language file "
+"with the system's package manager."
+msgstr ""
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -439,64 +430,74 @@ msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 - Skanpage"
 
-#: qml/MainWindow.qml:83
+#: qml/MainWindow.qml:81
 #, kde-format
 msgid "Discard All"
 msgstr "Buang Semua"
 
-#: qml/MainWindow.qml:92
+#: qml/MainWindow.qml:90
 #, kde-format
 msgid "Save All"
 msgstr "Simpan Semua"
 
-#: qml/MainWindow.qml:101
+#: qml/MainWindow.qml:99
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:118
+#: qml/MainWindow.qml:108
+#, kde-format
+msgid "Export PDF"
+msgstr ""
+
+#: qml/MainWindow.qml:116
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:137
+#: qml/MainWindow.qml:135
 #, kde-format
 msgid "Scan"
 msgstr "Pindai"
 
-#: qml/MainWindow.qml:161
+#: qml/MainWindow.qml:150
+#, kde-format
+msgid "Cancel"
+msgstr "Batal"
+
+#: qml/MainWindow.qml:159
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Tampilkan Opsi Pemindai"
 
-#: qml/MainWindow.qml:171 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:169 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Bagikan"
 
-#: qml/MainWindow.qml:179
+#: qml/MainWindow.qml:177
 #, kde-format
 msgid "Print"
 msgstr "Cetak"
 
-#: qml/MainWindow.qml:200 qml/MainWindow.qml:409
+#: qml/MainWindow.qml:198 qml/MainWindow.qml:407
 #, kde-format
 msgid "About Skanpage"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:207
+#: qml/MainWindow.qml:205
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:215
+#: qml/MainWindow.qml:213
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:223
+#: qml/MainWindow.qml:221
 #, kde-format
 msgid "Quit"
 msgstr "Berhenti"
@@ -691,6 +692,11 @@ msgstr ""
 #, kde-format
 msgid "Share as:"
 msgstr "Bagikan sebagai:"
+
+#, fuzzy
+#~| msgid "Save All"
+#~ msgid "Save"
+#~ msgstr "Simpan Semua"
 
 #~ msgctxt "@info"
 #~ msgid ""
