@@ -340,38 +340,33 @@ msgid "Zoom 100%"
 msgstr "缩放至 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "导出 PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "标题："
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "文件："
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "全部保存"
+msgstr ""
 
 #: qml/ExportDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "启用光学字符识别 (OCR)"
+msgstr ""
 
 #: qml/ExportDialog.qml:98
 #, kde-format
@@ -380,17 +375,12 @@ msgid "Enable"
 msgstr ""
 
 #: qml/ExportDialog.qml:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, install its corresponding "
-#| "Tesseract language pack with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"如果您所需的语言未被列出，请使用本机系统的包管理器安装对应的 Tesseract 语言"
-"包。"
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -684,15 +674,3 @@ msgstr "关闭"
 #, kde-format
 msgid "Share as:"
 msgstr "分享为："
-
-#~ msgid "Saving to non-local directories is currently unsupported."
-#~ msgstr "本程序目前不支持保存到非本地目录。"
-
-#~ msgid "Languages:"
-#~ msgstr "语言："
-
-#~ msgid "%1 [%2]"
-#~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "保存"

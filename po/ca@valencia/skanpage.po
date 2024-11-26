@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-25 00:43+0000\n"
-"PO-Revision-Date: 2024-10-27 19:02+0100\n"
+"PO-Revision-Date: 2024-11-25 09:19+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Accelerator-Marker: &\n"
 
 #, kde-format
@@ -348,57 +348,49 @@ msgid "Zoom 100%"
 msgstr "Zoom 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Exporta cap a PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Títol:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Fitxer:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Guarda-ho tot"
+msgstr "Anomena i guarda…"
 
 #: qml/ExportDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Activa el reconeixement òptic de caràcters (OCR)"
+msgstr "Reconeixement òptic de caràcters"
 
 #: qml/ExportDialog.qml:98
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Activa"
 
 #: qml/ExportDialog.qml:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, install its corresponding "
-#| "Tesseract language pack with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
 "Si l'idioma requerit no està llistat, instal·leu el paquet d'idioma "
-"corresponent de Tesseract amb el gestor de paquets."
+"corresponent de Tesseract amb el gestor de paquets del sistema."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -692,15 +684,3 @@ msgstr "Tanca"
 #, kde-format
 msgid "Share as:"
 msgstr "Compartix com:"
-
-#~ msgid "Saving to non-local directories is currently unsupported."
-#~ msgstr "Actualment, no s'admet guardar en directoris no locals."
-
-#~ msgid "Languages:"
-#~ msgstr "Idiomes:"
-
-#~ msgid "%1 [%2]"
-#~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Guarda"

@@ -360,8 +360,7 @@ msgid "Title:"
 msgstr ""
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Αρχείο:"
