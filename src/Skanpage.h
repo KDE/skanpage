@@ -130,6 +130,7 @@ Q_SIGNALS:
 private Q_SLOTS:
 
     void imageReady(const QImage &image);
+    void previewImageReady(const QImage &image);
     void availableDevices(const QList<KSaneCore::DeviceInformation *> &deviceList);
     void showKSaneMessage(KSaneCore::Interface::ScanStatus type, const QString &strStatus);
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &strStatus);
@@ -143,7 +144,6 @@ private:
     void loadScannerOptions();
     void saveScannerOptions();
     void checkFinish();
-    void finishPreview();
     void setupScanningBounds();
     void signalErrorMessage(const QString &text);
 

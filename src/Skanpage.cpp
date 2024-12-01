@@ -51,7 +51,6 @@ public:
     int m_scannedImages = 0;
     Skanpage::ApplicationState m_state = Skanpage::SearchingForDevices;
     bool m_scanInProgress = false;
-    bool m_scanIsPreview = false;
     QRectF m_maximumScanArea;
     QRectF m_scanArea; // Rectangle from (0, 0) to (1, 1)
     Skanpage::ScanSplit m_scanSplit = Skanpage::ScanNotSplit;
@@ -83,6 +82,7 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     d->m_actionCollection = new KActionCollection(this);
 
     connect(&d->m_ksaneInterface, &Interface::scannedImageReady, this, &Skanpage::imageReady);
+    connect(&d->m_ksaneInterface, &Interface::previewImageReady, this, &Skanpage::previewImageReady);
     connect(&d->m_ksaneInterface, &Interface::availableDevices, this, &Skanpage::availableDevices);
     connect(&d->m_ksaneInterface, &Interface::userMessage, this, &Skanpage::showKSaneMessage);
     connect(&d->m_ksaneInterface, &Interface::scanProgress, this, &Skanpage::progressUpdated);
@@ -288,51 +288,7 @@ bool Skanpage::previewImageAvailable() const
 
 void Skanpage::previewScan()
 {
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption))
-        opt->storeCurrentData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption))
-        opt->storeCurrentData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption))
-        opt->storeCurrentData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption))
-        opt->storeCurrentData();
-    if (d->m_maximumScanArea.isValid())
-        setScanArea(QRectF(0.0, 0.0, 1.0, 1.0));
-
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::ResolutionOption)) {
-        opt->storeCurrentData();
-        if (QVariant minRes = opt->minimumValue(); minRes.isValid()) {
-            if (opt->type() == Option::TypeValueList)
-                opt->setValue(minRes);
-            else
-                opt->setValue(minRes.toInt() < 25 ? 25 : minRes);
-        }
-    }
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::PreviewOption))
-        opt->setValue(true);
-
-    d->m_scanIsPreview = true;
-
-    startScan();
-}
-
-void Skanpage::finishPreview()
-{
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftXOption))
-        opt->restoreSavedData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::TopLeftYOption))
-        opt->restoreSavedData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightXOption))
-        opt->restoreSavedData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::BottomRightYOption))
-        opt->restoreSavedData();
-
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::ResolutionOption))
-        opt->restoreSavedData();
-    if (Option *opt = d->m_ksaneInterface.getOption(Interface::PreviewOption))
-        opt->setValue(false);
-
-    d->m_scanIsPreview = false;
+    d->m_ksaneInterface.startPreviewScan();
 }
 
 void Skanpage::startScan()
@@ -359,13 +315,6 @@ Skanpage::ApplicationState Skanpage::applicationState() const
 
 void Skanpage::imageReady(const QImage &image)
 {
-    if (d->m_scanIsPreview) {
-        d->m_ksaneInterface.stopScan(); // Needed for ADF
-        finishPreview();
-        d->m_previewImage = image;
-        Q_EMIT previewImageChanged(d->m_previewImage);
-        return; // Do not save the preview to disk
-    }
     if (d->m_scanSplit == ScanNotSplit && d->m_scanSubAreas.isEmpty()) {
         d->m_documentHandler.addImage(image);
         d->m_scannedImages++;
@@ -400,6 +349,12 @@ void Skanpage::imageReady(const QImage &image)
         applySubAreasToImage();
     }
     clearSubAreas(); // The sub-areas last just one scan
+}
+
+void Skanpage::previewImageReady(const QImage &image)
+{
+    d->m_previewImage = image;
+    Q_EMIT previewImageChanged(d->m_previewImage);
 }
 
 void Skanpage::saveScannerOptions()
@@ -703,10 +658,6 @@ void Skanpage::scanningFinished(Interface::ScanStatus status, const QString &str
 {
     // only print debug, errors are already reported by Interface::userMessage
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Finished scanning! Status code:") << status << QStringLiteral("Status message:") << strStatus;
-
-    if (d->m_scanIsPreview) { // imageReady didn't execute (there was an error)
-        finishPreview(); // Restore options anyways
-    }
 
     d->m_scanInProgress = false;
     checkFinish();
