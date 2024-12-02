@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-04 00:42+0000\n"
-"PO-Revision-Date: 2023-12-12 16:33+0200\n"
+"PO-Revision-Date: 2024-10-22 13:41+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -78,7 +78,7 @@ msgstr "Tallennettaessa sattui virhe: %1."
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "Käsitellään sivua %1 tiedoston tallentamiseksi."
 
 #: DocumentSaver.cpp:80
 #, kde-format
@@ -101,10 +101,9 @@ msgid "Failed to save document as image."
 msgstr "Tiedostoa ei voitu tallentaa kuvaksi."
 
 #: DocumentSaver.cpp:220
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to save image."
-msgstr "Kuvan tallennus epäonnistui"
+msgstr "Kuvan tallentaminen epäonnistui."
 
 #: FormatModel.cpp:51
 #, kde-format
@@ -112,19 +111,17 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "Kaikki tuetut tiedostot"
 
 #: ImageImport.cpp:42
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load image!"
-msgstr "Kuvan tallennus epäonnistui"
+msgstr "Kuvan lataaminen epäonnistui!"
 
 #: ImageImport.cpp:53
-#, fuzzy, kde-format
-#| msgid "Failed to save image"
+#, kde-format
 msgid "Failed to load PDF file!"
-msgstr "Kuvan tallennus epäonnistui"
+msgstr "PDF-tiedoston lataaminen epäonnistui!"
 
 #: main.cpp:61
 #, kde-format
@@ -159,7 +156,7 @@ msgstr "laite"
 #: main.cpp:83
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "Tiedostosijainti, johon kuvanlukulaitteen valinnat vedostetaan."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -195,12 +192,10 @@ msgid "Open selected device"
 msgstr "Avaa valittu laite"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Etsitään käytettävissä olevia laitteita."
+msgstr "Etsitään käytettävissä olevia laitteita"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -279,22 +274,22 @@ msgstr[1] "%1 sivua"
 #: qml/DocumentList.qml:305
 #, kde-format
 msgid "Flip Pages"
-msgstr ""
+msgstr "Kierrä sivut"
 
 #: qml/DocumentList.qml:310
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr ""
+msgstr "Kierrä parittomat sivut"
 
 #: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Even Pages"
-msgstr ""
+msgstr "Kierrä parilliset sivut"
 
 #: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip All Pages"
-msgstr ""
+msgstr "Kierrä kaikki sivut"
 
 #: qml/DocumentList.qml:332
 #, kde-format
@@ -322,13 +317,13 @@ msgstr "Käänteinen järjestys"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Tiedostossa ei vielä ole sivuja"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Lisää yksi napsauttamalla <interface>Lue</interface>"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -381,16 +376,13 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: qml/ExportWindow.qml:154
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgid ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
 msgstr ""
 "Ellei tarvitsemaasi kieltä ole luettelossa, aseta paketinhallinnalla "
-"Tesseractin kielitiedosto."
+"Tesseractin oikea kielitiedosto."
 
 #: qml/ExportWindow.qml:180
 #, kde-format
@@ -452,7 +444,7 @@ msgstr "Tallenna kaikki"
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
-msgstr ""
+msgstr "Tuo"
 
 #: qml/MainWindow.qml:118
 #, kde-format
@@ -614,10 +606,9 @@ msgid "Discard this selection"
 msgstr "Hylkää tämä valinta"
 
 #: qml/PreviewScanView.qml:262
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "New Preview Scan"
-msgstr "Näytä esikatselu"
+msgstr "Uusi esikatseluluku"
 
 #: qml/PreviewScanView.qml:271
 #, kde-format
@@ -640,10 +631,9 @@ msgid "Split Scan Horizontally"
 msgstr "Jaa vaakasuuntaan"
 
 #: qml/PreviewScanView.qml:305
-#, fuzzy, kde-format
-#| msgid "Show Preview"
+#, kde-format
 msgid "Close Preview"
-msgstr "Näytä esikatselu"
+msgstr "Sulje esikatselu"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
