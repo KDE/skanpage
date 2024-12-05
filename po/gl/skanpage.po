@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-25 00:43+0000\n"
-"PO-Revision-Date: 2024-09-15 15:41+0200\n"
+"PO-Revision-Date: 2024-12-04 10:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -341,57 +341,49 @@ msgid "Zoom 100%"
 msgstr "Restabelecer a ampliación"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Exportar a PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Título:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Ficheiro:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Gardar todo"
+msgstr "Gardar como…"
 
 #: qml/ExportDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Activar o recoñecemento óptico de caracteres (OCR)."
+msgstr "Recoñecemento óptico de caracteres (OCR)"
 
 #: qml/ExportDialog.qml:98
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Activar"
 
 #: qml/ExportDialog.qml:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, install its corresponding "
-#| "Tesseract language pack with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Se o idioma que quere non está na lista, instale o paquete de idioma "
-"correspondente de Tesseract co xestor de paquetes."
+"Se os idiomas solicitados non están na lista, instale o ficheiro de idioma "
+"de Tesseract correspondente co xestor de paquetes do sistema."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
