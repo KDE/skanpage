@@ -12,6 +12,7 @@ import QtQuick.Window
 import QtQuick.Dialogs
 
 import org.kde.kirigami as Kirigami
+import org.kde.config as KConfig
 
 import org.kde.skanpage
 
@@ -23,27 +24,23 @@ ApplicationWindow {
     title: i18nc("document title: app title", "%1 ― Skanpage", mainView.name)
     color: Kirigami.Theme.backgroundColor
 
-    width: skanpage.stateConfiguration.width
-    height: skanpage.stateConfiguration.height
-    x: skanpage.stateConfiguration.x
-    y: skanpage.stateConfiguration.y
+    width: 950
+    height: 550
 
     minimumWidth: mainToolBar.implicitWidth
     minimumHeight: 400
+
+    KConfig.WindowStateSaver {
+        configGroupName: "MainWindow"
+    }
 
     Connections {
         target: Qt.application
 
         function onAboutToQuit() {
-            skanpage.stateConfiguration.x = mainWindow.x
-            skanpage.stateConfiguration.y = mainWindow.y
-            skanpage.stateConfiguration.width = mainWindow.width
-            skanpage.stateConfiguration.height = mainWindow.height
             skanpage.stateConfiguration.splitViewItemWidth = mainView.splitViewItemWidth
             skanpage.stateConfiguration.showOptions = mainView.showOptions
             skanpage.stateConfiguration.showAllOptions = mainView.optionsPanel.allOptionsAction.checked
-            skanpage.stateConfiguration.settingsHeight = settingsWindow.height
-            skanpage.stateConfiguration.settingsWidth = settingsWindow.width
         }
     }
 
@@ -462,7 +459,7 @@ ApplicationWindow {
        reselectDevicesAction: mainView.optionsPanel.reselectDevicesAction
        quitAction: quitAction
        shareAction: shareAction
-    }    
+    }
 
     ExportDialog {
         id: exportDialog
@@ -470,8 +467,13 @@ ApplicationWindow {
 
     SettingsWindow {
         id: settingsWindow
-        height: skanpage.stateConfiguration.settingsHeight
-        width: skanpage.stateConfiguration.settingsWidth
+        height: 300
+        width: 500
+
+        KConfig.WindowStateSaver {
+            configGroupName: "SettingsWindow"
+        }
+
     }
 
     Component.onCompleted: {
