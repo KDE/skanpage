@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-25 00:43+0000\n"
+"POT-Creation-Date: 2024-12-14 01:00+0000\n"
 "PO-Revision-Date: 2024-11-25 18:32+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -415,79 +415,79 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "Inläsning pågår."
 
-#: qml/MainWindow.qml:23
+#: qml/MainWindow.qml:24
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:81
+#: qml/MainWindow.qml:78
 #, kde-format
 msgid "Discard All"
 msgstr "Kasta alla"
 
-#: qml/MainWindow.qml:90
+#: qml/MainWindow.qml:87
 #, kde-format
 msgid "Save All"
 msgstr "Spara alla"
 
-#: qml/MainWindow.qml:99
+#: qml/MainWindow.qml:96
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Importera"
 
-#: qml/MainWindow.qml:108
+#: qml/MainWindow.qml:105
 #, kde-format
 msgid "Export PDF"
 msgstr "Exportera PDF"
 
-#: qml/MainWindow.qml:116
+#: qml/MainWindow.qml:113
 #, kde-format
 msgid "Preview"
 msgstr "Förhandsgranskning"
 
-#: qml/MainWindow.qml:135
+#: qml/MainWindow.qml:132
 #, kde-format
 msgid "Scan"
 msgstr "Läs in"
 
-#: qml/MainWindow.qml:150
+#: qml/MainWindow.qml:147
 #, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: qml/MainWindow.qml:159
+#: qml/MainWindow.qml:156
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Visa bildläsaralternativ"
 
-#: qml/MainWindow.qml:169 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Dela"
 
-#: qml/MainWindow.qml:177
+#: qml/MainWindow.qml:174
 #, kde-format
 msgid "Print"
 msgstr "Skriv ut"
 
-#: qml/MainWindow.qml:198 qml/MainWindow.qml:407
+#: qml/MainWindow.qml:195 qml/MainWindow.qml:404
 #, kde-format
 msgid "About Skanpage"
 msgstr "Om Skanpage"
 
-#: qml/MainWindow.qml:205
+#: qml/MainWindow.qml:202
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Anpassa Skanpage…"
 
-#: qml/MainWindow.qml:213
+#: qml/MainWindow.qml:210
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Anpassa snabbtangenter…"
 
-#: qml/MainWindow.qml:221
+#: qml/MainWindow.qml:218
 #, kde-format
 msgid "Quit"
 msgstr "Avsluta"
