@@ -47,6 +47,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="pt">Skanpage</name>
   <name xml:lang="pt-BR">Skanpage</name>
   <name xml:lang="ru">Skanpage</name>
+  <name xml:lang="sa">पृष्ठं स्कैन कुर्वन्तु</name>
   <name xml:lang="sk">Skanpage</name>
   <name xml:lang="sl">Skanpage</name>
   <name xml:lang="sv">Skanpage</name>
@@ -79,6 +80,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="nl">Multi-pagina documenten en afbeeldingen scannen</summary>
   <summary xml:lang="pl">Skanuj wielostronicowe dokumenty i obrazy</summary>
   <summary xml:lang="ru">Сканирование многостраничных документов и изображений</summary>
+  <summary xml:lang="sa">बहुपृष्ठीयदस्तावेजान् चित्राणि च स्कैन कुर्वन्तु</summary>
   <summary xml:lang="sl">Optično bere večstranske dokumente in slike</summary>
   <summary xml:lang="sv">Läs in dokument med flera sidor och bilder</summary>
   <summary xml:lang="tr">Çok sayfalı belgeleri ve görselleri tarayın</summary>
@@ -118,6 +120,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pt">O Skanpage é uma aplicação de digitalização simples que está desenhada para a digitalização de documentos com várias páginas. Também consegue digitalizar e gravar documentos e imagens com páginas individuais.</p>
     <p xml:lang="pt-BR">Skanpage é um aplicativo simples de digitalização otimizado para digitalizar documentos de múltiplas páginas. Ele também pode digitalizar e salvar documentos de única página e imagens.</p>
     <p xml:lang="ru">Skanpage — простое приложение для сканирования и сохранения документов и изображений, состоящих из одной или нескольких страниц.</p>
+    <p xml:lang="sa">Skanpage बहुपृष्ठीयदस्तावेजस्कैनिङ्गार्थं अनुकूलितं सरलं स्कैनिङ्ग-अनुप्रयोगम् अस्ति । एकपृष्ठीयदस्तावेजान् चित्राणि च स्कैन् कृत्वा रक्षितुं शक्नोति ।</p>
     <p xml:lang="sl">Skanpage je preprosta aplikacija za optično branje več stranskega dokumenta. Lahko skenira in shranjuje tudi enostranske dokumente in slike.</p>
     <p xml:lang="sv">Skanpage är ett enkelt program för bildinläsning optimerat för inläsning av flersidiga dokument. Det kan också läsa in och spara ensidiga dokument och bilder.</p>
     <p xml:lang="tr">SayfaTara, çok sayfalı belgeleri taramak için eniyilenmiş yalın bir tarama uygulamasıdır. Ayrıca tek sayfalı belgeleri veya görselleri de tarayıp kaydedebilir.</p>
@@ -159,6 +162,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pt">Funcionalidades:</p>
     <p xml:lang="pt-BR">Funcionalidades:</p>
     <p xml:lang="ru">Возможности:</p>
+    <p xml:lang="sa">गुणाः:</p>
     <p xml:lang="sk">Funkcie:</p>
     <p xml:lang="sl">Možnosti:</p>
     <p xml:lang="sv">Funktioner:</p>
@@ -201,6 +205,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pt">Digitalização de 'scanners' planos e ADF</li>
       <li xml:lang="pt-BR">Digitalização a partir de scanners de mesa e com alimentador automático</li>
       <li xml:lang="ru">Поддержка планшетных сканеров и сканеров с устройством автоматической подачи;</li>
+      <li xml:lang="sa">फ्लैटबेड् तथा एडीएफ स्कैनरतः स्कैनिङ्गम्</li>
       <li xml:lang="sk">Skenovanie z plochých skenerov a ADF skenerov</li>
       <li xml:lang="sl">Optično branje z namiznih in bralnikov s podajalniki listov</li>
       <li xml:lang="sv">Inläsning från flatbädds- och ADF-bildläsare</li>
@@ -243,6 +248,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pt">Opções configuráveis do dispositivo de digitalização</li>
       <li xml:lang="pt-BR">Opções configuráveis para o dispositivo de digitalização</li>
       <li xml:lang="ru">Настройка параметров сканирования;</li>
+      <li xml:lang="sa">स्कैनिङ्ग उपकरणस्य कृते विन्यासयोग्याः विकल्पाः</li>
       <li xml:lang="sk">Nastaviteľné možnosti pre skenovacie zariadenie</li>
       <li xml:lang="sl">Nastavljanje možnosti za bralno napravo</li>
       <li xml:lang="sv">Anpassningsbara alternativ för bildläsarenhet</li>
@@ -283,6 +289,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pt">Reordenação, rotação e remoção das páginas digitalizadas</li>
       <li xml:lang="pt-BR">Reordenar, rotação e exclusão de páginas digitalizadas</li>
       <li xml:lang="ru">Упорядочивание, вращение и удаление отсканированных страниц;</li>
+      <li xml:lang="sa">स्कैन् कृतानां पृष्ठानां पुनर्क्रमणं, परिभ्रमणं, विलोपनं च</li>
       <li xml:lang="sl">Zamenjava vrstnega reda, sukanje in brisanje prebranih strani</li>
       <li xml:lang="sv">Omordning, rotation och borttagning av inlästa sidor</li>
       <li xml:lang="tr">Taranan sayfaların yeniden sıralanması, döndürülmesi ve silinmesi</li>
@@ -324,6 +331,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="pt">Gravação multi-páginas em documentos PDF e ficheiros de imagem</li>
       <li xml:lang="pt-BR">Salvar em documentos PDF de várias páginas e arquivos de imagem</li>
       <li xml:lang="ru">Поддержка формата PDF для сохранения документов и форматов файлов изображений</li>
+      <li xml:lang="sa">बहुपृष्ठीय PDF दस्तावेजेषु चित्रसञ्चिकासु च रक्षणम्</li>
       <li xml:lang="sk">Ukladanie do viacstranových dokumentov PDF a obrazových súborov</li>
       <li xml:lang="sl">Shranjevanje v večstranske dokumente PDF in slikovne datoteke</li>
       <li xml:lang="sv">Spara PDF-dokument med flera sidor och bildfiler</li>
@@ -369,6 +377,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="pt">Janela principal do Skanpage</caption>
       <caption xml:lang="pt-BR">Janela principal do Skanpage</caption>
       <caption xml:lang="ru">Главное окно Skanpage</caption>
+      <caption xml:lang="sa">Skanpage मुख्यविण्डो</caption>
       <caption xml:lang="sl">Skanpage glavno okno</caption>
       <caption xml:lang="sv">Huvudfönstret i Skanpage</caption>
       <caption xml:lang="tr">SayfaTara ana penceresi</caption>
