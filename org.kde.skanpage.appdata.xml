@@ -30,6 +30,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="fr">SKanpage</name>
   <name xml:lang="gl">Skanpage</name>
   <name xml:lang="he">Skanpage</name>
+  <name xml:lang="hi">पेज स्कैन करें</name>
   <name xml:lang="hu">Skanpage</name>
   <name xml:lang="ia">Skanpage</name>
   <name xml:lang="id">Skanpage</name>
@@ -70,6 +71,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="fr">Numériser des documents et des images sur plusieurs pages</summary>
   <summary xml:lang="gl">Escanear documentos de varias páxinas e imaxes.</summary>
   <summary xml:lang="he">סריקת מסמכים וקובצי תמונות רבי עמודים</summary>
+  <summary xml:lang="hi">बहु-पृष्ठ दस्तावेज़ों और छवियों को स्कैन करें</summary>
   <summary xml:lang="hu">Többoldalas dokumentumok és képfájlok beolvasása</summary>
   <summary xml:lang="ia">Scande images e documentos multi-pagina</summary>
   <summary xml:lang="it">Scansione di documenti multi pagina e immagini</summary>
@@ -105,6 +107,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fr">SKanpage est une application simple de numérisation conçue pour la numérisation de documents composés de plusieurs pages et l'enregistrement de documents et d'images sur une unique page.</p>
     <p xml:lang="gl">Skanpage é unha aplicación de escanear sinxela optimizada para escanear documentos de varias páxinas. Tamén pode escanear e gardar documentos dunha única páxina e imaxes.</p>
     <p xml:lang="he">Skanpage הוא יישום סריקה פשוט שממוטב לסריקה מסמכים רבי עמודים. הוא יכול גם לשמור תמונות ומסמכים חדי עמוד.</p>
+    <p xml:lang="hi">स्कैनपेज एक सरल स्कैनिंग एप्लीकेशन है जो मल्टी-पेज डॉक्यूमेंट स्कैनिंग के लिए अनुकूलित है। यह सिंगल-पेज डॉक्यूमेंट और इमेज को भी स्कैन और सेव कर सकता है।</p>
     <p xml:lang="hu">A Skanpage egy egyszerű, többoldalas dokumentumok szkennelésére optimalizált lapolvasó alkalmazás. Egyoldalas dokumentumok és képek beolvasására és mentésére is képes.</p>
     <p xml:lang="ia">Skanpage es un simple application de scander optimisate per scander documento multi-pagina. Illo anque pote scander e salveguardar documentos a singule pagina e imagines.</p>
     <p xml:lang="is">Skanpage er einfalt skönnunarforrit, hannað til að skanna margar síður í einu en einnig til að vista einnar-síðu skjöl og myndir.</p>
@@ -146,6 +149,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fr">Fonctionnalités :</p>
     <p xml:lang="gl">Funcionalidades:</p>
     <p xml:lang="he">יכולות:</p>
+    <p xml:lang="hi">विशेषताएँ:</p>
     <p xml:lang="hu">Funkciók:</p>
     <p xml:lang="ia">Characteristicas:</p>
     <p xml:lang="id">Fitur:</p>
@@ -189,6 +193,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Numérisation à partir de périphériques de numérisation à plat ou « ADF ».</li>
       <li xml:lang="gl">Escanear con escáneres planos e ADF.</li>
       <li xml:lang="he">סריקה מסורקים עם משטח סריקה ומזין דפים אוטומטי</li>
+      <li xml:lang="hi">फ्लैटबेड और एडीएफ स्कैनर से स्कैनिंग</li>
       <li xml:lang="hu">Lapolvasás síkágyas és ADF szkennerekből</li>
       <li xml:lang="ia">Scander ex scanners  flatbed (i.e. le plan) e ADF</li>
       <li xml:lang="id">Pemindaian dari pemindai flatbed dan ADF</li>
@@ -232,6 +237,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Options configurables pour un périphérique de numérisation</li>
       <li xml:lang="gl">Permite configurar o escáner.</li>
       <li xml:lang="he">אפשרויות להגדרה להתקן סריקה</li>
+      <li xml:lang="hi">स्कैनिंग डिवाइस के लिए कॉन्फ़िगर करने योग्य विकल्प</li>
       <li xml:lang="hu">Konfigurálható beállítások a szkennelő eszközhöz</li>
       <li xml:lang="ia">Optiones configurabile per dispositivos de scander</li>
       <li xml:lang="id">Opsi yang dapat dikonfigurasikan untuk peranti pemindai</li>
@@ -274,6 +280,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Tri, rotation et suppression des pages numérisées.</li>
       <li xml:lang="gl">Cambio de orde, rotación e eliminación de páxinas.</li>
       <li xml:lang="he">סידור מחדש, סיבוב ומחיקה של עמודים שנסרקו</li>
+      <li xml:lang="hi">स्कैन किए गए पृष्ठों का पुनः क्रम निर्धारण, घूर्णन और विलोपन</li>
       <li xml:lang="hu">A beolvasott oldalak átrendezése, forgatása és törlése</li>
       <li xml:lang="ia">Reordinar, rotation  e deletion de paginas scandite</li>
       <li xml:lang="is">Endurröðun, snúningur og eyðing á skönnuðum síðum</li>
@@ -315,6 +322,7 @@ SPDX-License-Identifier: CC0-1.0
       <li xml:lang="fr">Enregistrement de documents « PDF » sur plusieurs pages et de fichiers d'image.</li>
       <li xml:lang="gl">Gardar en documentos PDF de varias páxinas e en ficheiros de imaxe.</li>
       <li xml:lang="he">שמירת קובצי תמונות ומסמכים רבי עמודים</li>
+      <li xml:lang="hi">बहु-पृष्ठ पीडीएफ दस्तावेज़ों और छवि फ़ाइलों को सहेजना</li>
       <li xml:lang="hu">Mentés többoldalas PDF-dokumentumokba és képfájlokba</li>
       <li xml:lang="ia">Salveguardar a files de images e documentos PDF multi-pagina</li>
       <li xml:lang="id">Penyimpanan ke dokumen PDF multi-halaman dan file citra</li>
@@ -362,6 +370,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="fr">Fenêtre principale de SKanpage</caption>
       <caption xml:lang="gl">Xanela principal de Skanpage.</caption>
       <caption xml:lang="he">החלון הראשי של Skanpage</caption>
+      <caption xml:lang="hi">स्कैनपेज मुख्य विंडो</caption>
       <caption xml:lang="hu">A Skanpage főablaka</caption>
       <caption xml:lang="ia">Pagina  principal de Skanpage</caption>
       <caption xml:lang="is">Aðalgluggi Skanpage</caption>
