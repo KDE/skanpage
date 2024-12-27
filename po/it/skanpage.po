@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-04 00:42+0000\n"
-"PO-Revision-Date: 2024-09-11 10:32+0200\n"
+"PO-Revision-Date: 2024-12-01 19:33+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -635,7 +635,7 @@ msgstr "Dividi la scansione orizzontalmente"
 #: qml/PreviewScanView.qml:305
 #, kde-format
 msgid "Close Preview"
-msgstr "Chiusi anteprima"
+msgstr "Chiudi anteprima"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
