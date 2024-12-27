@@ -636,7 +636,7 @@ msgstr "Dividi la scansione orizzontalmente"
 #: qml/PreviewScanView.qml:305
 #, kde-format
 msgid "Close Preview"
-msgstr "Chiusi anteprima"
+msgstr "Chiudi anteprima"
 
 #: qml/SettingsWindow.qml:20
 #, kde-format
