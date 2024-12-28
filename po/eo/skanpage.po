@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-14 01:00+0000\n"
-"PO-Revision-Date: 2024-09-18 19:03+0200\n"
+"PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -152,7 +152,8 @@ msgstr "aparato"
 #: main.cpp:83
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr "Dosiera vojo en kiu la opcioj de via skanila aparato estas elĵetitaj"
+msgstr ""
+"Dosiera vojo en kiu la elektebloj de via skanila aparato estas elĵetitaj."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -342,57 +343,49 @@ msgid "Zoom 100%"
 msgstr "Zomi 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
-msgstr "Eksporti PDF"
+msgstr "Elporti PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titolo:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Dosiero:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Konservi Ĉion"
+msgstr "Konservi Kiel…"
 
 #: qml/ExportDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Ebligi optikan signorekonon (OCR)"
+msgstr "Optika signorekono (OCR)"
 
 #: qml/ExportDialog.qml:98
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Ebligi"
 
 #: qml/ExportDialog.qml:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, install its corresponding "
-#| "Tesseract language pack with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Se via bezonata lingvo ne estas listigita, bonvolu instali la respondan "
-"lingvopakon de Tesseract kun via pakadministrilo."
+"Se la bezonataj lingvoj ne estas listigitaj, bonvolu instali la "
+"lingvodosieron de Tesseract per la pakadministrilo de la sistemo."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -469,7 +462,7 @@ msgstr "Nuligi"
 #: qml/MainWindow.qml:156
 #, kde-format
 msgid "Show Scanner Options"
-msgstr "Montri Skanilajn Opciojn"
+msgstr "Montri Skanilajn Elekteblojn"
 
 #: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
 #, kde-format
@@ -686,15 +679,3 @@ msgstr "Fermi"
 #, kde-format
 msgid "Share as:"
 msgstr "Kundividi kiel:"
-
-#~ msgid "Saving to non-local directories is currently unsupported."
-#~ msgstr "Konservado en nelokaj dosierujoj estas aktuale nesubtenata."
-
-#~ msgid "Languages:"
-#~ msgstr "Lingvoj:"
-
-#~ msgid "%1 [%2]"
-#~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Konservi"
