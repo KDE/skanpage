@@ -419,7 +419,7 @@ SPDX-License-Identifier: CC0-1.0
     <release version="23.08.5" date="2024-02-15"/>
   </releases>
   <custom>
-    <value key="KDE::supporters">oreggero</value>
+    <value key="KDE::supporters">oreggero;[donnadie](https://feddit.cl/u/_donnadie_)</value>
   </custom>
   <content_rating type="oars-1.1"/>
 </component>
