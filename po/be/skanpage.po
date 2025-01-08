@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-14 01:00+0000\n"
-"PO-Revision-Date: 2024-06-05 07:06\n"
+"PO-Revision-Date: 2025-01-06 19:10\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -77,7 +77,7 @@ msgstr "Падчас захавання адбылася памылка: %1."
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "Апрацоўванне старонкі %1 для захавання дакумента."
 
 #: DocumentSaver.cpp:93
 #, kde-format
@@ -110,7 +110,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "Усе файлы, якія падтрымліваюцца"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -191,12 +191,10 @@ msgid "Open selected device"
 msgstr "Адкрыць абраную прыладу"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Пошук даступных прылад."
+msgstr "Пошук даступных прылад"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -320,13 +318,13 @@ msgstr "Адваротны парадак"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "У гэтым дакуменце яшчэ няма старонак"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Пстрыкніце <interface>Сканаваць</interface>, каб дадаць"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -391,15 +389,15 @@ msgstr ""
 #: qml/ExportDialog.qml:104
 #, fuzzy, kde-format
 #| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#| "If your required language is not listed, install its corresponding "
+#| "Tesseract language pack with your package manager."
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Калі неабходнай мовы няма ў спісе, усталюйце ў кіраўніку пакетаў моўны файл "
-"Tesseract."
+"Калі неабходнай мовы няма ў спісе, усталюйце з дапамогай кіраўніка пакетаў "
+"адпаведны моўны пакет Tesseract."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
