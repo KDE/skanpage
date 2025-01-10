@@ -77,19 +77,13 @@ target_link_libraries(skanpage
     KF6::XmlGui
     KF6::KIOCore
     KF6::KIOWidgets
+    Tesseract::Tesseract
+    Leptonica::Leptonica
 )
 if(TARGET KF6::I18nQml)
 target_link_libraries(skanpage PRIVATE
         KF6::I18nQml
 )
-endif()
-
-if (TESSERACT_FOUND AND LEPTONICA_FOUND)
-    target_link_libraries(skanpage
-    PRIVATE
-        Tesseract::Tesseract
-        Leptonica::Leptonica
-    )
 endif()
 
 install(TARGETS skanpage ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

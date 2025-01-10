@@ -71,13 +71,12 @@ Kirigami.Dialog {
 
         Kirigami.Separator {
             Layout.fillWidth: true
-            visible: skanpage.OCRavailable() && skanpage.languageModel.rowCount() > 0
+            visible: skanpage.languageModel.rowCount() > 0
         }
     }
 
     contentItem: ListView {
         id: listView
-        visible: skanpage.OCRavailable()
         implicitWidth: exportDialog.implicitWidth
         implicitHeight: visible ? Kirigami.Units.gridUnit * 25 : 0
         clip: true
@@ -110,7 +109,7 @@ Kirigami.Dialog {
             width: listView.width
         }
 
-        model: skanpage.OCRavailable() ? skanpage.languageModel : 0
+        model: skanpage.languageModel
         delegate: CheckDelegate {
             enabled: ocrChecked
             implicitWidth: scrollBar.visible ? listView.width - scrollBar.width : listView.width
@@ -128,7 +127,7 @@ Kirigami.Dialog {
     }
 
     onAccepted: {
-        skanpage.documentModel.exportPDF(fileName, fileTitle, ocrChecked && skanpage.OCRavailable())
+        skanpage.documentModel.exportPDF(fileName, fileTitle, ocrChecked)
         exportDialog.close()
     }
 }

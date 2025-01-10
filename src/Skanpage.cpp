@@ -567,11 +567,6 @@ SkanpageState *Skanpage::stateConfiguration() const
     return d->m_stateConfiguration;
 }
 
-bool Skanpage::OCRavailable() const
-{
-    return d->m_OCREngine.available();
-}
-
 void Skanpage::print()
 {
     d->m_documentPrinter.printDocument(d->m_documentHandler.selectPages(QList<int>()), d->m_documentHandler.activePageIndex());
