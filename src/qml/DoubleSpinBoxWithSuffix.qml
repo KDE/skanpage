@@ -9,7 +9,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.1
 import QtQml 2.15
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 
 /* This is way too complicated as it should be and more a giant hack.
  * Should be implemented properly in the future */

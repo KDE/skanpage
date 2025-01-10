@@ -47,7 +47,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     COMPONENTS
         CoreAddons
         I18n
-        Kirigami2
+        Kirigami
         Crash
         Config
         Purpose

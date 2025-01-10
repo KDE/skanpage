@@ -6,7 +6,7 @@
 
 import QtQuick 2.15
 
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.skanpage 1.0
 
 /* Tiny, tiny, utility for making an action's shortcut configurable */
