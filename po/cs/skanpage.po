@@ -349,11 +349,10 @@ msgid "Export PDF"
 msgstr "Exportovat PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
-msgstr "Název:"
+msgstr "Titul:"
 
 #: qml/ExportDialog.qml:52
 #, fuzzy, kde-format
@@ -370,10 +369,9 @@ msgid "Save As…"
 msgstr "Uložit vše"
 
 #: qml/ExportDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Povolit Optické Rozpoznávání Znaků (OCR)"
+msgstr "Optické rozpoznávání znaků"
 
 #: qml/ExportDialog.qml:98
 #, kde-format
