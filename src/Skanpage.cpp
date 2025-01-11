@@ -574,7 +574,7 @@ bool Skanpage::OCRavailable() const
 
 void Skanpage::print()
 {
-    d->m_documentPrinter.printDocument(d->m_documentHandler.selectPages(QList<int>()));
+    d->m_documentPrinter.printDocument(d->m_documentHandler.selectPages(QList<int>()), d->m_documentHandler.activePageIndex());
 }
 
 void Skanpage::registerAction(QObject *item, QObject *shortcuts, const QString &iconText)

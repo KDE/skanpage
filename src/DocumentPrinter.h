@@ -9,11 +9,11 @@
 
 #include <memory>
 
+#include "SkanpageUtils.h"
+
 #include <QFuture>
 #include <QObject>
 #include <QString>
-
-#include "SkanpageUtils.h"
 
 class QPrinter;
 
@@ -25,13 +25,13 @@ public:
     explicit DocumentPrinter(QObject *parent = nullptr);
     ~DocumentPrinter() override;
 
-    void printDocument(const SkanpageUtils::DocumentPages &document);
+    void printDocument(const SkanpageUtils::DocumentPages &document, const int currentIndex);
 
 Q_SIGNALS:
     void showUserMessage(SkanpageUtils::MessageLevel level, const QString &text);
 
 private:
-    void print(const SkanpageUtils::DocumentPages &document);
+    void print(const SkanpageUtils::DocumentPages &document, const int currentIndex);
 
     std::unique_ptr<QPrinter> m_printer;
     QFuture<void> m_future;
