@@ -45,7 +45,6 @@ int main(int argc, char *argv[])
                                                      "FilteredOptionsModel",
                                                      QStringLiteral("Filtered options model class uncreateable"));
     qmlRegisterUncreatableType<OCRLanguageModel>("org.kde.skanpage", 1, 0, "OCRLanguageModel", QStringLiteral("OCR language model class uncreateable"));
-    ;
     qmlRegisterUncreatableType<KSaneCore::Option>("org.kde.skanpage", 1, 0, "KSaneOption", QStringLiteral("KSaneOption class uncreateable"));
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
     qmlRegisterUncreatableType<SkanpageConfiguration>("org.kde.skanpage", 1, 0, "Configuration", QStringLiteral("Confguration class uncreatable"));
@@ -82,18 +81,23 @@ int main(int argc, char *argv[])
                                     i18n("Sane scanner device name. Use 'test' for test device."),
                                     i18n("device"));
     parser.addOption(deviceOption);
-    QCommandLineOption dumpOptions(QStringList({QLatin1String("o"), QLatin1String("options")}),
-                                   i18n("A file path in which the options of your scanner device are dumped."),
-                                   QLatin1String("options.txt"));
-    parser.addOption(dumpOptions);
+    QCommandLineOption dumpOption(QStringList({QLatin1String("o"), QLatin1String("options")}),
+                                  i18n("A file path in which the options of your scanner device are dumped."),
+                                  QLatin1String("options.txt"));
+    parser.addOption(dumpOption);
+    QCommandLineOption importOption(QStringList({QLatin1String("i"), QLatin1String("import")}),
+                                    i18n("A local image or pdf file that shall be imported. Image formats must be supported by Qt."),
+                                    QLatin1String("image"));
+    parser.addOption(importOption);
     parser.process(app);
     // the --author and --license is shown anyway but they work only with the following line
     aboutData.processCommandLine(&parser);
 
     const QString deviceName = parser.value(deviceOption);
-    const QUrl dumpOptionsUrl = QUrl::fromLocalFile(parser.value(dumpOptions));
+    const QUrl dumpOptionUrl = QUrl::fromLocalFile(parser.value(dumpOption));
+    const QUrl importUrl = QUrl::fromLocalFile(parser.value(importOption));
 
-    Skanpage skanpageApp = Skanpage(deviceName, dumpOptionsUrl);
+    Skanpage skanpageApp = Skanpage(deviceName, dumpOptionUrl, importUrl);
 
     QQmlApplicationEngine engine;
 #if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)

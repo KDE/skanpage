@@ -72,7 +72,7 @@ public:
     };
     Q_ENUM(ScanSplit)
 
-    explicit Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObject *parent = nullptr);
+    explicit Skanpage(const QString &deviceName, const QUrl &dumpOptionUrl, const QUrl &importUrl, QObject *parent = nullptr);
     ~Skanpage() override;
 
     QString deviceVendor() const;

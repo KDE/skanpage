@@ -59,12 +59,12 @@ public:
     QString m_deviceName;
     QString m_deviceVendor;
     QString m_deviceModel;
-    QUrl m_dumpOptionsUrl;
+    QUrl m_dumpOptionUrl;
 };
 
 using namespace KSaneCore;
 
-Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObject *parent)
+Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionUrl, const QUrl &importUrl, QObject *parent)
     : QObject(parent)
     , d(std::make_unique<SkanpagePrivate>())
 {
@@ -105,7 +105,11 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     connect(&d->m_imageImport, &ImageImport::showUserMessage, this, &Skanpage::showUserMessage);
     connect(&d->m_imageImport, &ImageImport::imageImported, &d->m_documentHandler, &DocumentModel::addImage);
 
-    d->m_dumpOptionsUrl = dumpOptionsUrl;
+    d->m_dumpOptionUrl = dumpOptionUrl;
+    if (!importUrl.isEmpty()) {
+        importFile(importUrl);
+    }
+
     // try to open device from command line option first, then remembered device
     if (deviceName.isEmpty() || !openDevice(deviceName)) {
         KConfigGroup options(KSharedConfig::openStateConfig(), QStringLiteral("general"));
@@ -413,15 +417,15 @@ bool Skanpage::openDevice(const QString &deviceName, const QString &deviceVendor
             showUserMessage(SkanpageUtils::ErrorMessage, QStringLiteral("Failed to open selected device."));
         }
     }
-    if (!d->m_dumpOptionsUrl.isEmpty()) {
+    if (!d->m_dumpOptionUrl.isEmpty()) {
         QJsonObject allScannerData;
         allScannerData[QLatin1StringView("scanner")] = d->m_ksaneInterface.scannerDeviceToJson();
         allScannerData[QLatin1StringView("options")] = d->m_ksaneInterface.scannerOptionsToJson();
         QString absolutePath;
-        if (QDir::isAbsolutePath(d->m_dumpOptionsUrl.path())) {
-            absolutePath = d->m_dumpOptionsUrl.toLocalFile();
+        if (QDir::isAbsolutePath(d->m_dumpOptionUrl.path())) {
+            absolutePath = d->m_dumpOptionUrl.toLocalFile();
         } else {
-            absolutePath = QDir::current().absoluteFilePath(d->m_dumpOptionsUrl.toLocalFile());
+            absolutePath = QDir::current().absoluteFilePath(d->m_dumpOptionUrl.toLocalFile());
         }
         QJsonDocument jsonDocument(allScannerData);
         QFile file(absolutePath);
