@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-14 01:00+0000\n"
-"PO-Revision-Date: 2025-01-06 19:10\n"
+"PO-Revision-Date: 2025-01-10 10:25\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -18,8 +18,8 @@ msgstr ""
 "X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
 "X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/skanpage/skanpage.po\n"
-"X-Crowdin-File-ID: 10940\n"
+"X-Crowdin-File: /main/KDE6/be/messages/skanpage/skanpage.po\n"
+"X-Crowdin-File-ID: 20117\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -347,57 +347,49 @@ msgid "Zoom 100%"
 msgstr "Маштабаваць да 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Экспартаваць у PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Назва:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Файл:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Захаваць усё"
+msgstr "Захаваць як…"
 
 #: qml/ExportDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Уключыць аптычнае распазнаванне знакаў (OCR)"
+msgstr "Знакі для аўтаматычнага распазнавання"
 
 #: qml/ExportDialog.qml:98
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Уключыць"
 
 #: qml/ExportDialog.qml:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, install its corresponding "
-#| "Tesseract language pack with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Калі неабходнай мовы няма ў спісе, усталюйце з дапамогай кіраўніка пакетаў "
-"адпаведны моўны пакет Tesseract."
+"Калі неабходнай мовы няма ў спісе, усталюйце ў сістэмным кіраўніку пакетаў "
+"моўны файл Tesseract."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
