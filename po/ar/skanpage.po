@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 01:00+0000\n"
+"POT-Creation-Date: 2025-01-20 00:45+0000\n"
 "PO-Revision-Date: 2024-11-28 13:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -49,7 +49,7 @@ msgstr "لا شيء لطباعته."
 msgid "Previous printing operation still in progress."
 msgstr "عمليات الطباعة السابقة ما زالت مستمرة."
 
-#: DocumentPrinter.cpp:69
+#: DocumentPrinter.cpp:107
 #, kde-format
 msgid "Document sent to printer."
 msgstr "أرسل المستند للطابعة."

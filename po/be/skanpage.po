@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 01:00+0000\n"
+"POT-Creation-Date: 2025-01-20 00:45+0000\n"
 "PO-Revision-Date: 2025-01-10 10:25\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -52,7 +52,7 @@ msgstr "Няма чаго друкаваць."
 msgid "Previous printing operation still in progress."
 msgstr "Яшчэ выконваецца папярэдняя аперацыя друкавання."
 
-#: DocumentPrinter.cpp:69
+#: DocumentPrinter.cpp:107
 #, kde-format
 msgid "Document sent to printer."
 msgstr "Дакумент адпраўлены на прынтар."

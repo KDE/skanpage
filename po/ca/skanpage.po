@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 01:00+0000\n"
+"POT-Creation-Date: 2025-01-20 00:45+0000\n"
 "PO-Revision-Date: 2024-11-25 09:19+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "No hi ha res a imprimir."
 msgid "Previous printing operation still in progress."
 msgstr "L'operació d'impressió anterior encara és en curs."
 
-#: DocumentPrinter.cpp:69
+#: DocumentPrinter.cpp:107
 #, kde-format
 msgid "Document sent to printer."
 msgstr "El document s'ha enviat a la impressora."
