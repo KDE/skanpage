@@ -78,6 +78,11 @@ target_link_libraries(skanpage
     KF6::KIOCore
     KF6::KIOWidgets
 )
+if(TARGET KF6::I18nQml)
+target_link_libraries(skanpage PRIVATE
+        KF6::I18nQml
+)
+endif()
 
 if (TESSERACT_FOUND AND LEPTONICA_FOUND)
     target_link_libraries(skanpage
