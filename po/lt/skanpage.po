@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-20 00:45+0000\n"
+"POT-Creation-Date: 2025-01-22 00:44+0000\n"
 "PO-Revision-Date: 2024-12-07 00:56+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -120,38 +120,38 @@ msgstr "Nepavyko įkelti paveikslo!"
 msgid "Failed to load PDF file!"
 msgstr "Nepavyko įkelti PDF failo!"
 
-#: main.cpp:61
+#: main.cpp:64
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:63
+#: main.cpp:66
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "Daugiapuslapinių dokumentų skenavimo programa iš KDE."
 
-#: main.cpp:65
+#: main.cpp:68
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:70 main.cpp:71
 #, kde-format
 msgid "developer"
 msgstr "programuotojas"
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "Sane skenerio įrenginio pavadinimas. Bandomajam įrenginiui naudokite „test“."
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "device"
 msgstr "įrenginys"
 
-#: main.cpp:83
+#: main.cpp:86
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr "Failo kelias, kuriame yra išklojami jūsų skenerio įrenginio parinktys."

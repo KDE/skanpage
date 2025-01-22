@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-20 00:45+0000\n"
+"POT-Creation-Date: 2025-01-22 00:44+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -122,39 +122,39 @@ msgstr "Gagal menyimpan citra"
 msgid "Failed to load PDF file!"
 msgstr "Gagal menyimpan citra"
 
-#: main.cpp:61
+#: main.cpp:64
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:63
+#: main.cpp:66
 #, fuzzy, kde-format
 #| msgid "Page-scanning application by KDE based on libksane."
 msgid "Multi-page scanning application by KDE."
 msgstr "Aplikasi pemindaian halaman oleh KDE berdasarkan pada libksane."
 
-#: main.cpp:65
+#: main.cpp:68
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:70 main.cpp:71
 #, kde-format
 msgid "developer"
 msgstr "pengembang"
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "Nama peranti pemindai Sane. Gunakan 'uji' untuk menguji peranti."
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "device"
 msgstr "peranti"
 
-#: main.cpp:83
+#: main.cpp:86
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""

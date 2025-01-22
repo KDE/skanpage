@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-20 00:45+0000\n"
+"POT-Creation-Date: 2025-01-22 00:44+0000\n"
 "PO-Revision-Date: 2022-04-07 18:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -122,40 +122,40 @@ msgstr "Zlyhalo uloženie obrázku"
 msgid "Failed to load PDF file!"
 msgstr "Zlyhalo uloženie obrázku"
 
-#: main.cpp:61
+#: main.cpp:64
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:63
+#: main.cpp:66
 #, fuzzy, kde-format
 #| msgid "Page-scanning application by KDE based on libksane."
 msgid "Multi-page scanning application by KDE."
 msgstr "Aplikácia na skenovanie stránok od KDE založená na libksane."
 
-#: main.cpp:65
+#: main.cpp:68
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:70 main.cpp:71
 #, kde-format
 msgid "developer"
 msgstr "vývojár"
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "Názov zariadenia skenera Sane. Použite 'test' pre testovacie zariadenie."
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "device"
 msgstr "zariadenie"
 
-#: main.cpp:83
+#: main.cpp:86
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""

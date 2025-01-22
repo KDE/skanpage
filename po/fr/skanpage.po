@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-20 00:45+0000\n"
+"POT-Creation-Date: 2025-01-22 00:44+0000\n"
 "PO-Revision-Date: 2024-11-26 09:20+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -116,39 +116,39 @@ msgstr "Impossible de charger l'image !"
 msgid "Failed to load PDF file!"
 msgstr "Impossible de charger le fichier au format « pdf » !"
 
-#: main.cpp:61
+#: main.cpp:64
 #, kde-format
 msgid "Skanpage"
 msgstr "SKanpage"
 
-#: main.cpp:63
+#: main.cpp:66
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "Application de numérisation multi-page de KDE."
 
-#: main.cpp:65
+#: main.cpp:68
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:70 main.cpp:71
 #, kde-format
 msgid "developer"
 msgstr "développeur"
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "Nom du périphérique de numérisation « Sane ». Utilisez « test » pour un "
 "périphérique de test."
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "device"
 msgstr "périphérique"
 
-#: main.cpp:83
+#: main.cpp:86
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-20 00:45+0000\n"
+"POT-Creation-Date: 2025-01-22 00:44+0000\n"
 "PO-Revision-Date: 2024-11-25 21:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -119,37 +119,37 @@ msgstr "Görsel yüklenemedi!"
 msgid "Failed to load PDF file!"
 msgstr "PDF dosyası yüklenemedi!"
 
-#: main.cpp:61
+#: main.cpp:64
 #, kde-format
 msgid "Skanpage"
 msgstr "SayfaTara"
 
-#: main.cpp:63
+#: main.cpp:66
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "KDE tarafından yapılmış çoklu sayfa tarama uygulaması."
 
-#: main.cpp:65
+#: main.cpp:68
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:67 main.cpp:68
+#: main.cpp:70 main.cpp:71
 #, kde-format
 msgid "developer"
 msgstr "geliştirici"
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "Sane tarayıcı aygıtı adı. Sınama aygıtı için “test” kullanın."
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "device"
 msgstr "aygıt"
 
-#: main.cpp:83
+#: main.cpp:86
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr "Tarayıcı aygıtınızın seçeneklerinin döküldüğü bir dosya yolu."
