@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:44+0000\n"
+"POT-Creation-Date: 2025-01-27 00:44+0000\n"
 "PO-Revision-Date: 2024-06-30 15:43+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -371,19 +371,19 @@ msgctxt "@action:button"
 msgid "Save As…"
 msgstr "Vista allt"
 
-#: qml/ExportDialog.qml:95
+#: qml/ExportDialog.qml:94
 #, fuzzy, kde-format
 #| msgid "Enable optical character recognition (OCR)"
 msgid "Optical Character Recognition"
 msgstr "Virkja ljóslestur (OCR)"
 
-#: qml/ExportDialog.qml:98
+#: qml/ExportDialog.qml:97
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:104
+#: qml/ExportDialog.qml:103
 #, fuzzy, kde-format
 #| msgid ""
 #| "If your required language is not listed, please install Tesseract's "
