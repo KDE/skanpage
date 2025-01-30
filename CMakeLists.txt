@@ -62,8 +62,8 @@ find_package(KSaneCore6 "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERS
 
 find_package(KQuickImageEditor REQUIRED)
 
-find_package(Tesseract 5)
-find_package(Leptonica)
+find_package(Tesseract 5 REQUIRED)
+find_package(Leptonica REQUIRED)
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX SKANPAGE
