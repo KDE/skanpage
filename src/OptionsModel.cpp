@@ -155,7 +155,7 @@ void OptionsModel::setOptionsList(const QList<KSaneCore::Option *> &optionsList)
         KSaneCore::Option *option = d->mOptionsList.at(i);
         qCDebug(SKANPAGE_LOG()) << "OptionsModel: Importing option " << option->name() << ", type" << option->type() << ", state" << option->state();
         connect(option, &KSaneCore::Option::optionReloaded, this, [=]() {
-            Q_EMIT dataChanged(index(i, 0), index(i, 0), {StateRole});
+            Q_EMIT dataChanged(index(i, 0), index(i, 0), {});
         });
         connect(option, &KSaneCore::Option::valueChanged, this, [=]() {
             Q_EMIT dataChanged(index(i, 0), index(i, 0), {ValueRole});
