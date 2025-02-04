@@ -23,16 +23,16 @@ apps:
       - raw-usb
       - hardware-observe
 plugs:
-    foo-install-cups:
-        interface: content
-        content: foo
-        default-provider: cups
-        target: $SNAP_DATA/foo
+  foo-install-cups:
+  interface: content
+  content: foo
+  default-provider: cups
+  target: $SNAP_DATA/foo
 layout:
-    /etc:
-      bind: $SNAP/etc
-    /usr/lib/sane:
-      bind: $SNAP/usr/lib/sane
+  /etc:
+    bind: $SNAP/etc
+  /usr/lib/sane:
+    bind: $SNAP/usr/lib/sane
 slots:
   session-dbus-interface:
     interface: dbus
@@ -237,4 +237,3 @@ parts:
       for snap in "core24" "kf6-core24"; do
           cd "/snap/$snap/current" && find . -type f,l -exec rm -rf "${CRAFT_PRIME}/{}" \;
       done
-

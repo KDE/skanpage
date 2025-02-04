@@ -6,34 +6,27 @@
 
 #include "OCREngine.h"
 
-#include "config-skanpage.h"
-
 #include <KLocalizedString>
 #include <QPdfWriter>
 
-#if OCR_AVAILABLE
 #include "OCRLanguageModel.h"
 #include <leptonica/allheaders.h>
 #include <tesseract/baseapi.h>
-#endif
 
 #include "skanpage_debug.h"
 
 class OCREnginePrivate
 {
 public:
-#if OCR_AVAILABLE
     tesseract::TessBaseAPI m_tesseract;
     OCRLanguageModel m_languages;
     QColor m_penColor = Qt::transparent;
-#endif
 };
 
 OCREngine::OCREngine(QObject *parent)
     : QObject(parent)
     , d(std::make_unique<OCREnginePrivate>())
 {
-#if OCR_AVAILABLE
     if (d->m_tesseract.Init(nullptr, nullptr)) { // Use a default language, not necessarily English
         qCDebug(SKANPAGE_LOG) << "Failed tesseract OCR init";
         return;
@@ -42,49 +35,32 @@ OCREngine::OCREngine(QObject *parent)
     std::vector<std::string> availableLanguages;
     d->m_tesseract.GetAvailableLanguagesAsVector(&availableLanguages);
     d->m_languages.setLanguages(availableLanguages);
-#endif
 }
 
 OCREngine::~OCREngine()
 {
 }
 
-bool OCREngine::available() const
-{
-    return OCR_AVAILABLE;
-}
-
 void OCREngine::InitForOCR()
 {
-#if OCR_AVAILABLE
     if (d->m_tesseract.Init(nullptr, d->m_languages.getLanguagesString().c_str())) {
         qCDebug(SKANPAGE_LOG) << "Failed tesseract OCR init";
         return;
     }
-#endif
 }
 
 void OCREngine::setColor(QColor color)
 {
-#if OCR_AVAILABLE
     d->m_penColor = color;
-#else
-    Q_UNUSED(color)
-#endif
 }
 
 OCRLanguageModel *OCREngine::languages() const
 {
-#if OCR_AVAILABLE
     return &d->m_languages;
-#else
-    return nullptr;
-#endif
 }
 
 void OCREngine::OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page)
 {
-#if OCR_AVAILABLE
     Pix *image = pixRead(page.temporaryFile->fileName().toStdString().c_str());
     d->m_tesseract.SetImage(image);
     d->m_tesseract.SetSourceResolution(page.dpi);
@@ -154,9 +130,4 @@ void OCREngine::OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUti
             painter.setTransform(oldTransformation);
         } while (it->Next(level));
     }
-#else
-    Q_UNUSED(writer)
-    Q_UNUSED(painter)
-    Q_UNUSED(page)
-#endif
 }

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:44+0000\n"
+"POT-Creation-Date: 2025-01-27 00:44+0000\n"
 "PO-Revision-Date: 2024-11-28 22:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -367,18 +367,18 @@ msgctxt "@action:button"
 msgid "Save As…"
 msgstr "Gorde honela..."
 
-#: qml/ExportDialog.qml:95
+#: qml/ExportDialog.qml:94
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Karaktereen ezagutze optikoa"
 
-#: qml/ExportDialog.qml:98
+#: qml/ExportDialog.qml:97
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: qml/ExportDialog.qml:104
+#: qml/ExportDialog.qml:103
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""

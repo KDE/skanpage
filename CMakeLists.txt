@@ -62,15 +62,8 @@ find_package(KSaneCore6 "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERS
 
 find_package(KQuickImageEditor REQUIRED)
 
-find_package(Tesseract 5)
-find_package(Leptonica)
-
-if (LEPTONICA_FOUND AND TESSERACT_FOUND)
-   set(OCR_AVAILABLE 1)
-   set(CMAKE_CXX_FLAGS "-fopenmp")
-else()
-   message(STATUS "Skanpage will be built without OCR as libraries are missing.")
-endif()
+find_package(Tesseract 5 REQUIRED)
+find_package(Leptonica REQUIRED)
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX SKANPAGE
@@ -80,8 +73,6 @@ install(PROGRAMS org.kde.skanpage.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.skanpage.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR} )
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-configure_file(config-skanpage.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-skanpage.h)
 
 add_subdirectory(src)
 add_subdirectory(icons)

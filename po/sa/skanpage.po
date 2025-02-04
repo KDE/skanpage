@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:44+0000\n"
+"POT-Creation-Date: 2025-01-27 00:44+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -366,18 +366,18 @@ msgctxt "@action:button"
 msgid "Save As…"
 msgstr "Save As..."
 
-#: qml/ExportDialog.qml:95
+#: qml/ExportDialog.qml:94
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "प्रकाशिक चरित्र पहचान"
 
-#: qml/ExportDialog.qml:98
+#: qml/ExportDialog.qml:97
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "सक्रियं करोतु"
 
-#: qml/ExportDialog.qml:104
+#: qml/ExportDialog.qml:103
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
