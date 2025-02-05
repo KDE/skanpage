@@ -3,13 +3,13 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022, 2023.
 # Bruno Cesar Robalinho <robalo_net@yahoo.com.br>, 2021.
-# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 00:44+0000\n"
-"PO-Revision-Date: 2024-07-20 23:27-0300\n"
+"PO-Revision-Date: 2025-02-04 12:15-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -110,7 +110,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "Todos os arquivos suportados"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -195,12 +195,10 @@ msgid "Open selected device"
 msgstr "Abrir dispositivo selecionado"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Procurando por dispositivos disponíveis."
+msgstr "Procurando por dispositivos disponíveis"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -322,13 +320,13 @@ msgstr "Ordem inversa"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Este documento ainda não contém nenhuma página"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Clique no botão <interface>Digitalizar</interface> para adicionar uma"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
