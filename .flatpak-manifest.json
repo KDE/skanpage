@@ -104,11 +104,15 @@
                     "buildsystem": "meson",
                     "sources": [
                         {
-                            "type": "git",
-                            "url": "https://github.com/alexpevzner/sane-airscan",
-                            "tag": "0.99.27",
-                            "commit": "053f5654cd4d16f077fe5cb40d32004aaa321462"
-                        }
+                            "type": "archive",
+                            "url": "https://github.com/alexpevzner/sane-airscan/archive/refs/tags/0.99.32.tar.gz",
+                            "sha256": "a8fc59f5dd14ad3d6704e0a0de42417167224181fd84c4f4a9e2a9ed0dfbdfd0",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 121086,
+                                "url-template": "https://github.com/alexpevzner/sane-airscan/archive/refs/tags/$version.tar.gz"
+                            }
+                        } 
                     ]
                 },
                 {
