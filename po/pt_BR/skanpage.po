@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 00:44+0000\n"
-"PO-Revision-Date: 2025-02-04 12:15-0300\n"
+"PO-Revision-Date: 2025-02-07 19:46-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -349,57 +349,49 @@ msgid "Zoom 100%"
 msgstr "Zoom 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Exportar para PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Título:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Arquivo:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Salvar tudo"
+msgstr "Salvar como..."
 
 #: qml/ExportDialog.qml:94
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Habilitar OCR (reconhecimento ótico de caracteres)"
+msgstr "Reconhecimento ótico de caracteres (OCR)"
 
 #: qml/ExportDialog.qml:97
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Habilitar"
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Se seu idioma solicitado não estiver na lista, instale o arquivo de idioma "
-"do Tesseract com o seu gerenciador de pacotes."
+"Se os idiomas necessários não estiverem listados, instale o arquivo de "
+"idioma do Tesseract com o gerenciador de pacotes do sistema."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
