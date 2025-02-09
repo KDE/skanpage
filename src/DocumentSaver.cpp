@@ -60,7 +60,11 @@ QString DocumentSaver::getLocalNameForFile(const QUrl &fileUrl)
     QString localName;
     if (!fileUrl.isLocalFile()) {
         QTemporaryFile tmp;
-        tmp.open();
+        bool ok = tmp.open();
+        if (!ok) {
+            qCDebug(SKANPAGE_LOG) << QStringLiteral("Could not open file to write image data to temporary file.");
+            return QString();
+        }
         localName = tmp.fileName();
         tmp.close(); // we just want the filename
     }
@@ -242,7 +246,11 @@ void DocumentSaver::saveNewPageTemporary(const int pageID, const QImage &image)
         QPageSize(QSizeF(image.width() * 1000.0 / image.dotsPerMeterX(), image.height() * 1000.0 / image.dotsPerMeterY()), QPageSize::Millimeter);
     const int dpi = qRound(image.dotsPerMeterX() / 1000.0 * 25.4);
     QTemporaryFile *tempImageFile = new QTemporaryFile();
-    tempImageFile->open();
+    bool ok = tempImageFile->open();
+    if (!ok) {
+        qCDebug(SKANPAGE_LOG) << "Failed to open temporary file to save a new image";
+        return;
+    }
     if (image.save(tempImageFile, "PNG")) {
         qCDebug(SKANPAGE_LOG) << "Saved new image to temporary file.";
     } else {

@@ -430,6 +430,7 @@ bool Skanpage::openDevice(const QString &deviceName, const QString &deviceVendor
         QJsonDocument jsonDocument(allScannerData);
         QFile file(absolutePath);
         if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            qCDebug(SKANPAGE_LOG()) << "Could not open file to write option data to JSON file.";
             return false;
         }
         QTextStream out(&file);

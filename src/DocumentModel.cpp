@@ -436,14 +436,18 @@ void DocumentModel::updateFileInformation(const QList<QUrl> &fileUrls, const QLi
     for (int i = 0; i < fileUrls.count(); i++) {
         if (!fileUrls.at(i).isLocalFile()) {
             QFile file(localNames.at(i));
-            file.open(QIODevice::ReadOnly);
+            bool okOpen = file.open(QIODevice::ReadOnly);
+            if (!okOpen) {
+                qCDebug(SKANPAGE_LOG) << "Failed to open local file during copying to remote location.";
+            }
             const auto copyJob = KIO::storedPut(&file, fileUrls.at(i), -1, KIO::HideProgressInfo | KIO::Overwrite);
             KJobWidgets::setWindow(copyJob, QApplication::activeWindow());
-            bool ok = copyJob->exec();
+            bool okCopy = copyJob->exec();
 
-            if (!ok) {
+            if (!okCopy) {
                 file.close();
                 file.remove();
+                qCDebug(SKANPAGE_LOG) << "Failed to copy file to remote location.";
                 return;
             }
         }
