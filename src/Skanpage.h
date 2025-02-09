@@ -136,13 +136,12 @@ private Q_SLOTS:
     void progressUpdated(int progress);
     void batchModeCountDown(int remainingSeconds);
     void scanningFinished(KSaneCore::Interface::ScanStatus status, const QString &strStatus);
-    void imageTemporarilySaved();
+    void checkFinish();
 
 private:
     void finishOpeningDevice(const QString &deviceName, const QString &deviceVendor, const QString &deviceModel);
     void loadScannerOptions();
     void saveScannerOptions();
-    void checkFinish();
     void setupScanningBounds();
     void signalErrorMessage(const QString &text);
 

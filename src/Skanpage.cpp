@@ -48,7 +48,6 @@ public:
 
     int m_progress = 100;
     int m_remainingSeconds = 0;
-    int m_scannedImages = 0;
     Skanpage::ApplicationState m_state = Skanpage::SearchingForDevices;
     bool m_scanInProgress = false;
     QRectF m_maximumScanArea;
@@ -88,7 +87,7 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionsUrl, QObjec
     connect(&d->m_ksaneInterface, &Interface::scanProgress, this, &Skanpage::progressUpdated);
     connect(&d->m_ksaneInterface, &Interface::scanFinished, this, &Skanpage::scanningFinished);
     connect(&d->m_ksaneInterface, &Interface::batchModeCountDown, this, &Skanpage::batchModeCountDown);
-    connect(&d->m_documentHandler, &DocumentModel::newPageAdded, this, &Skanpage::imageTemporarilySaved);
+    connect(&d->m_documentHandler, &DocumentModel::newPageAdded, this, &Skanpage::checkFinish);
 
     d->m_fileIOThread.start();
     d->m_documentSaver.moveToThread(&d->m_fileIOThread);
@@ -317,7 +316,6 @@ void Skanpage::imageReady(const QImage &image)
 {
     if (d->m_scanSplit == ScanNotSplit && d->m_scanSubAreas.isEmpty()) {
         d->m_documentHandler.addImage(image);
-        d->m_scannedImages++;
         return; // Regular scan ends here
     }
     auto applySubAreasToImage = [&]() {
@@ -326,7 +324,6 @@ void Skanpage::imageReady(const QImage &image)
         for (const QRectF &area : d->m_scanSubAreas) {
             QImage individualImage = image.copy(toScale.mapRect(toOrigin.mapRect(area)).toRect());
             d->m_documentHandler.addImage(individualImage);
-            d->m_scannedImages++;
         }
     };
     if (!d->m_scanSubAreas.isEmpty()) { // There are sub-areas
@@ -643,12 +640,6 @@ void Skanpage::cancelScan()
     d->m_ksaneInterface.stopScan();
 }
 
-void Skanpage::imageTemporarilySaved()
-{
-    d->m_scannedImages--;
-    checkFinish();
-}
-
 void Skanpage::scanningFinished(Interface::ScanStatus status, const QString &strStatus)
 {
     // only print debug, errors are already reported by Interface::userMessage
@@ -660,7 +651,7 @@ void Skanpage::scanningFinished(Interface::ScanStatus status, const QString &str
 
 void Skanpage::checkFinish()
 {
-    if (d->m_scannedImages == 0 && !d->m_scanInProgress) {
+    if (d->m_documentHandler.isReady() && !d->m_scanInProgress) {
         d->m_state = ApplicationState::ReadyForScan;
         Q_EMIT applicationStateChanged(d->m_state);
     }

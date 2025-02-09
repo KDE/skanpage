@@ -158,14 +158,16 @@ void DocumentModel::exportPDF(const QUrl &fileUrl, const QString &title, const b
 
 void DocumentModel::addImage(const QImage &image)
 {
-    const double aspectRatio = static_cast<double>(image.height()) / image.width();
-    beginInsertRows(QModelIndex(), d->m_pages.count(), d->m_pages.count());
-    const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), d->m_idCounter, false};
     const int oldSize = d->m_nonSavedPages.size();
     d->m_nonSavedPages.insert(d->m_idCounter);
     if (oldSize == 0 && d->m_nonSavedPages.size() > 0) {
         Q_EMIT isReadyChanged(false);
     }
+
+    const double aspectRatio = static_cast<double>(image.height()) / image.width();
+    beginInsertRows(QModelIndex(), d->m_pages.count(), d->m_pages.count());
+    const PreviewPageProperties newPage = {aspectRatio, 500, static_cast<int>(500 * aspectRatio), d->m_idCounter, false};
+
     d->m_idCounter++;
     qCDebug(SKANPAGE_LOG) << "Inserting new page into model:" << newPage;
     d->m_details.append(newPage);
