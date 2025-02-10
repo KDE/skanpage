@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:44+0000\n"
+"POT-Creation-Date: 2025-02-10 00:43+0000\n"
 "PO-Revision-Date: 2024-12-12 10:20+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -65,40 +65,40 @@ msgstr "Не указать путь."
 msgid "Nothing to save."
 msgstr "Отсутствует документ, который возможно сохранить."
 
-#: DocumentSaver.cpp:80 DocumentSaver.cpp:113
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "При сохранении произошла ошибка: %1."
 
-#: DocumentSaver.cpp:88 DocumentSaver.cpp:122 DocumentSaver.cpp:196
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "Обработка страницы %1 для сохранения документа."
 
-#: DocumentSaver.cpp:93
+#: DocumentSaver.cpp:97
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Документ сохранён в формате PDF."
 
-#: DocumentSaver.cpp:128
+#: DocumentSaver.cpp:132
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr ""
 "Документ сохранён в формате PDF с  использованием распознавания текста."
 
-#: DocumentSaver.cpp:225
+#: DocumentSaver.cpp:229
 #, kde-format
 msgid "Document saved as image."
 msgstr "Документ сохранён в формате изображения."
 
-#: DocumentSaver.cpp:234
+#: DocumentSaver.cpp:238
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Не удалось сохранить документ в формате изображения."
 
-#: DocumentSaver.cpp:250
+#: DocumentSaver.cpp:258
 #, kde-format
 msgid "Failed to save image."
 msgstr "Не удалось сохранить изображение."
@@ -121,42 +121,49 @@ msgstr "Не удалось загрузить изображение!"
 msgid "Failed to load PDF file!"
 msgstr "Не удалось загрузить PDF-файл!"
 
-#: main.cpp:64
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "Приложение от KDE для сканирования."
 
-#: main.cpp:68
+#: main.cpp:67
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© Kåre Särs, Alexander Stippich, 2015–2022"
 
-#: main.cpp:70 main.cpp:71
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "Разработчик"
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "Название устройства сканирования Sane. Используйте «test» для тестового "
 "устройства."
 
-#: main.cpp:83
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "устройство"
 
-#: main.cpp:86
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr "Путь к файлу, в котором хранятся параметры устройства сканирования."
+
+#: main.cpp:89
+#, kde-format
+msgid ""
+"A local image or pdf file that shall be imported. Image formats must be "
+"supported by Qt."
+msgstr ""
 
 #: qml/ContentView.qml:18
 #, kde-format

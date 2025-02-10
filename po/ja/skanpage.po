@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:44+0000\n"
+"POT-Creation-Date: 2025-02-10 00:43+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -62,39 +62,39 @@ msgstr "ファイルパスが指定されていません。"
 msgid "Nothing to save."
 msgstr "保存するものはありません。"
 
-#: DocumentSaver.cpp:80 DocumentSaver.cpp:113
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "保存中にエラーが発生しました: %1。"
 
-#: DocumentSaver.cpp:88 DocumentSaver.cpp:122 DocumentSaver.cpp:196
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr ""
 
-#: DocumentSaver.cpp:93
+#: DocumentSaver.cpp:97
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "ドキュメントを PDF として保存しました。"
 
-#: DocumentSaver.cpp:128
+#: DocumentSaver.cpp:132
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "ドキュメントを OCR 付き PDF として保存しました。"
 
-#: DocumentSaver.cpp:225
+#: DocumentSaver.cpp:229
 #, kde-format
 msgid "Document saved as image."
 msgstr "ドキュメントを画像として保存しました。"
 
-#: DocumentSaver.cpp:234
+#: DocumentSaver.cpp:238
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "ドキュメントを画像として保存できませんでした。"
 
-#: DocumentSaver.cpp:250
+#: DocumentSaver.cpp:258
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save image."
@@ -120,39 +120,46 @@ msgstr "画像を保存できませんでした"
 msgid "Failed to load PDF file!"
 msgstr "画像を保存できませんでした"
 
-#: main.cpp:64
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "KDE の複数ページのスキャン用アプリケーション。"
 
-#: main.cpp:68
+#: main.cpp:67
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:70 main.cpp:71
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "開発者"
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "SANE スキャナのデバイス名。テストデバイスには 'test' を使います。"
 
-#: main.cpp:83
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "デバイス"
 
-#: main.cpp:86
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
+#: main.cpp:89
+#, kde-format
+msgid ""
+"A local image or pdf file that shall be imported. Image formats must be "
+"supported by Qt."
 msgstr ""
 
 #: qml/ContentView.qml:18

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:44+0000\n"
+"POT-Creation-Date: 2025-02-10 00:43+0000\n"
 "PO-Revision-Date: 2022-04-07 18:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -62,41 +62,41 @@ msgstr ""
 msgid "Nothing to save."
 msgstr "Nie je čo uložiť."
 
-#: DocumentSaver.cpp:80 DocumentSaver.cpp:113
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr ""
 
-#: DocumentSaver.cpp:88 DocumentSaver.cpp:122 DocumentSaver.cpp:196
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr ""
 
-#: DocumentSaver.cpp:93
+#: DocumentSaver.cpp:97
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Dokument uložený ako PDF."
 
-#: DocumentSaver.cpp:128
+#: DocumentSaver.cpp:132
 #, fuzzy, kde-format
 #| msgid "Document saved as PDF."
 msgid "Document saved with OCR as PDF."
 msgstr "Dokument uložený ako PDF."
 
-#: DocumentSaver.cpp:225
+#: DocumentSaver.cpp:229
 #, kde-format
 msgid "Document saved as image."
 msgstr "Dokument uložený ako obrázok."
 
-#: DocumentSaver.cpp:234
+#: DocumentSaver.cpp:238
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save document as image."
 msgstr "Zlyhalo uloženie obrázku"
 
-#: DocumentSaver.cpp:250
+#: DocumentSaver.cpp:258
 #, fuzzy, kde-format
 #| msgid "Failed to save image"
 msgid "Failed to save image."
@@ -122,42 +122,49 @@ msgstr "Zlyhalo uloženie obrázku"
 msgid "Failed to load PDF file!"
 msgstr "Zlyhalo uloženie obrázku"
 
-#: main.cpp:64
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:66
+#: main.cpp:65
 #, fuzzy, kde-format
 #| msgid "Page-scanning application by KDE based on libksane."
 msgid "Multi-page scanning application by KDE."
 msgstr "Aplikácia na skenovanie stránok od KDE založená na libksane."
 
-#: main.cpp:68
+#: main.cpp:67
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:70 main.cpp:71
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "vývojár"
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "Názov zariadenia skenera Sane. Použite 'test' pre testovacie zariadenie."
 
-#: main.cpp:83
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "zariadenie"
 
-#: main.cpp:86
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
+msgstr ""
+
+#: main.cpp:89
+#, kde-format
+msgid ""
+"A local image or pdf file that shall be imported. Image formats must be "
+"supported by Qt."
 msgstr ""
 
 #: qml/ContentView.qml:18

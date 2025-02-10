@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:44+0000\n"
+"POT-Creation-Date: 2025-02-10 00:43+0000\n"
 "PO-Revision-Date: 2024-11-28 22:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -66,39 +66,39 @@ msgstr "Ez da bide-izenik eman."
 msgid "Nothing to save."
 msgstr "Gordetzekorik ez."
 
-#: DocumentSaver.cpp:80 DocumentSaver.cpp:113
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Gordetzerakoan errore bat gertatu da: %1."
 
-#: DocumentSaver.cpp:88 DocumentSaver.cpp:122 DocumentSaver.cpp:196
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "Dokumentua gordetzeko %1 orrialdea prozesatzen."
 
-#: DocumentSaver.cpp:93
+#: DocumentSaver.cpp:97
 #, kde-format
 msgid "Document saved as PDF."
 msgstr "Dokumentua PDF gisa gorde da."
 
-#: DocumentSaver.cpp:128
+#: DocumentSaver.cpp:132
 #, kde-format
 msgid "Document saved with OCR as PDF."
 msgstr "Dokumentua OCRarekin PDF gisa gorde da."
 
-#: DocumentSaver.cpp:225
+#: DocumentSaver.cpp:229
 #, kde-format
 msgid "Document saved as image."
 msgstr "Dokumentua irudi gisa gorde da."
 
-#: DocumentSaver.cpp:234
+#: DocumentSaver.cpp:238
 #, kde-format
 msgid "Failed to save document as image."
 msgstr "Dokumentua irudi gisa gordetzea huts egin du."
 
-#: DocumentSaver.cpp:250
+#: DocumentSaver.cpp:258
 #, kde-format
 msgid "Failed to save image."
 msgstr "Irudia gordetzea huts egin du."
@@ -121,40 +121,47 @@ msgstr "Irudia zamatzea huts egin du!"
 msgid "Failed to load PDF file!"
 msgstr "PDF fitxategia zamatzea huts egin du!"
 
-#: main.cpp:64
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "Orri anizkoitzak eskaneatzeko KDEren aplikazioa."
 
-#: main.cpp:68
+#: main.cpp:67
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:70 main.cpp:71
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "garatzailea"
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "«Sane» eskanerraren gailu-izena. Erabili 'proba' proba-gailurako."
 
-#: main.cpp:83
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "gailua"
 
-#: main.cpp:86
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr "Zure eskaner-gailuaren aukerak iraultzeko bide-izena."
+
+#: main.cpp:89
+#, kde-format
+msgid ""
+"A local image or pdf file that shall be imported. Image formats must be "
+"supported by Qt."
+msgstr ""
 
 #: qml/ContentView.qml:18
 #, kde-format
