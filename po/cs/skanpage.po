@@ -349,11 +349,10 @@ msgid "Zoom 100%"
 msgstr "Zvětšení 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
-msgstr "Exportovat PDF"
+msgstr ""
 
 #: qml/ExportDialog.qml:44
 #, kde-format
@@ -362,18 +361,16 @@ msgid "Title:"
 msgstr "Titul:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
-msgstr "Soubor:"
+msgstr ""
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Uložit vše"
+msgstr ""
 
 #: qml/ExportDialog.qml:94
 #, kde-format
@@ -387,17 +384,12 @@ msgid "Enable"
 msgstr ""
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, install its corresponding "
-#| "Tesseract language pack with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Pokud vámi požadovaný jazyk není v seznamu, nainstalujte pomocí správce "
-"balíčků odpovídající balíček jazyka pro Tesseract."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -691,15 +683,3 @@ msgstr "Zavřít"
 #, kde-format
 msgid "Share as:"
 msgstr "Sdílet jako:"
-
-#~ msgid "Saving to non-local directories is currently unsupported."
-#~ msgstr "Zatím je podporováno pouze ukládání do místních adresářů."
-
-#~ msgid "Languages:"
-#~ msgstr "Jazyky:"
-
-#~ msgid "%1 [%2]"
-#~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Uložit"
