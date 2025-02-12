@@ -1,15 +1,15 @@
 # Translation of skanpage.po to Catalan (Valencian)
-# Copyright (C) 2021-2024 This_file_is_part_of_KDE
+# Copyright (C) 2021-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-10 00:43+0000\n"
-"PO-Revision-Date: 2024-11-25 09:19+0100\n"
+"PO-Revision-Date: 2025-02-10 07:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -165,6 +165,8 @@ msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Una imatge local o un fitxer PDF que s'importarà. Els formats d'imatge han "
+"de ser compatibles amb les Qt."
 
 #: qml/ContentView.qml:18
 #, kde-format
