@@ -158,7 +158,7 @@ msgstr "用于导出您的扫描设备选项的文件路径。"
 msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
 "supported by Qt."
-msgstr ""
+msgstr "要导入的本地图像或 PDF 文件。图像格式必须受 Qt 支持。"
 
 #: qml/ContentView.qml:18
 #, kde-format
