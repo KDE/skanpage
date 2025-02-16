@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-10 00:43+0000\n"
-"PO-Revision-Date: 2025-02-01 12:25+0100\n"
+"PO-Revision-Date: 2025-02-15 11:23+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -161,6 +161,8 @@ msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Lokalny obraz lub plik PDF do zaimportowania. Qt musi zawierać obsługę "
+"danych formatów obrazów."
 
 #: qml/ContentView.qml:18
 #, kde-format
