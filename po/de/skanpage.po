@@ -4,30 +4,31 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-10 00:43+0000\n"
-"PO-Revision-Date: 2024-09-11 19:55+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2025-01-23 16:14+0100\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Deutsches KDE-Übersetzerteam,Simon Greuter"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-i18n-de@kde.org,simon.greuter@gmx.net"
+msgstr "kde-i18n-de@kde.org"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
 #, kde-format
@@ -225,7 +226,7 @@ msgstr "Ausgewählte Seite nach unten schieben"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
-msgstr "Seite wird verarbeitet ..."
+msgstr "Seite wird verarbeitet …"
 
 #: qml/DocumentList.qml:218
 #, kde-format
@@ -352,8 +353,7 @@ msgid "Zoom 100%"
 msgstr "Vergrößerung 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF exportieren"
@@ -366,43 +366,37 @@ msgid "Title:"
 msgstr "Titel:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Datei:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Alles speichern"
+msgstr "Speichern unter …"
 
 #: qml/ExportDialog.qml:94
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Optische Zeichenerkennung (OCR) aktivieren"
+msgstr "Optische Zeichenerkennung (OCR)"
 
 #: qml/ExportDialog.qml:97
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Aktivieren"
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, install its corresponding "
-#| "Tesseract language pack with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Falls die von Ihnen benötigte Sprache nicht angeführt ist, installieren Sie "
-"bitte die entsprechende Sprachdatei von Tesseract mit der Paketverwaltung."
+"Falls die benötigten Sprachen nicht aufgeführt sind, installieren Sie die "
+"Sprachdatei von Tesseract mit dem Paketmanager des Systems."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -499,7 +493,7 @@ msgstr "Über Skanpage"
 #: qml/MainWindow.qml:202
 #, kde-format
 msgid "Configure Skanpage…"
-msgstr "Skanpage einrichten ..."
+msgstr "Skanpage einrichten …"
 
 #: qml/MainWindow.qml:210
 #, kde-format
