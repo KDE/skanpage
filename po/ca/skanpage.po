@@ -692,23 +692,3 @@ msgstr "Tanca"
 #, kde-format
 msgid "Share as:"
 msgstr "Comparteix com:"
-
-#~ msgid "Saving to non-local directories is currently unsupported."
-#~ msgstr "Actualment, no s'admet desar en directoris no locals."
-
-#~ msgid "Languages:"
-#~ msgstr "Idiomes:"
-
-#~ msgid "%1 [%2]"
-#~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Desa"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
-#~ msgstr "Ni hi ha cap imatge en aquest document.<nl/><nl/>Inicia l'escaneig!"
-
-#~ msgid "All files"
-#~ msgstr "Tots els fitxers"
