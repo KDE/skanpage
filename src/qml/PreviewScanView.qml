@@ -30,13 +30,19 @@ Item {
         Kirigami.Theme.colorSet: Kirigami.Theme.Button
         hoverEnabled: true
         opacity: {
-            if (hovered) return 1.0 // When using a mouse, visible on hover
-            if (Kirigami.Settings.tabletMode || Kirigami.Settings.hasTransientTouchInput) return 0.75
-            return 0.5 // When using a mouse, barely visible otherwise, to not get in the way
+            if (hovered) {
+                // When using a mouse, visible on hover
+                return 1.0
+            } else if (Kirigami.Settings.tabletMode || Kirigami.Settings.hasTransientTouchInput) {
+                return 0.75
+            } else {
+                // When using a mouse, barely visible otherwise, to not get in the way
+                return 0.5
+            }
         }
         Behavior on opacity {
             NumberAnimation {
-                duration: Kirigami.Units.smallDuration
+                duration: Kirigami.Units.shortDuration
             }
         }
         ToolTip.visible: hovered
@@ -61,7 +67,7 @@ Item {
         }
         anchors.margins: Kirigami.Units.largeSpacing
         fillMode: KQuickImageEditor.ImageItem.PreserveAspectFit
-        smooth: true // The classic fuzzyness of low res
+        smooth: true
         image: skanpage.previewImage
         visible: skanpage.previewImageAvailable && !inProgressPreview.visible
 
@@ -74,107 +80,11 @@ Item {
             height: previewImage.paintedHeight
 
             property bool pressed: pressedHandle || selectionArea.pressed
-            onPressedChanged: if (!pressed) skanpage.scanArea = getScanArea()
-
-            // A shortcut for scanning the full area seems useful
-            selectionArea.onDoubleClicked: { // It is updated then releasing the mouse
-                skanpage.clearSubAreas()
-                selectionX = 0; selectionY = 0; selectionWidth = width; selectionHeight = height
-            }
-
-            MouseArea {
-                id: newAreaSelector
-                anchors.fill: parent
-                anchors.rightMargin: selection.state === "queueNewArea"
-                                   ? Kirigami.Units.gridUnit : selection.selectionWidth
-                anchors.bottomMargin: selection.state === "queueNewArea"
-                                    ? Kirigami.Units.gridUnit : selection.selectionHeight
-                property bool active: selection.state === "queueNewArea" ||
-                                      selection.state === "addingNewArea" || selection.state === "sizingNewArea"
-                z: active ? 1 : -1
-
-                onPressed: if (active) {
-                    selection.state = "sizingNewArea"
-                }
-                onReleased: if (active) {
+            onPressedChanged: {
+                if (!pressed) {
                     skanpage.scanArea = getScanArea()
-                    // Add the area as a sub-area to remove nested sub-areas and too overlaping ones
-                    if (skanpage.appendSubArea(skanpage.scanArea)) // If the area was added
-                        if (skanpage.scanSubAreas.length >= 1)
-                            skanpage.eraseSubArea(skanpage.scanSubAreas.length - 1) // Remove last
-                    selection.state = "idle"
-                }
-                HoverHandler {
-                    // This seems to be more reliable than the MouseArea containsMouse, apparently
-                    // that doesn't update immediately after changing its z value
-                    id: newAreaSensor
-                    onHoveredChanged: if (hovered) { // onEntered the area
-                        if (selection.state === "queueNewArea") selection.state = "addingNewArea"
-                    }
                 }
             }
-
-            property point dragStart
-            property point dragEnd
-
-            states: [
-                State {
-                    name: "idle"
-                    when: !selection.pressed
-                    PropertyChanges {
-                        restoreEntryValues: false
-                        target: selection
-                        selectionX: skanpage.scanArea.x * selection.width
-                        selectionY: skanpage.scanArea.y * selection.height
-                        selectionWidth: skanpage.scanArea.width * selection.width
-                        selectionHeight: skanpage.scanArea.height * selection.height
-                    }
-                },
-                State {
-                    name: ""
-                    PropertyChanges {
-                        explicit: true
-                        target: selection
-                        selectionX: undefined // Manual control
-                        selectionY: undefined // Manual control
-                        selectionWidth: undefined // Manual control
-                        selectionHeight: undefined // Manual control
-                    }
-                },
-                State { // Only used for the transition, especially if the mouse is outside the image
-                    name: "queueNewArea"
-                    extend: "idle"
-                },
-                State {
-                    name: "addingNewArea"
-                    PropertyChanges {
-                        restoreEntryValues: false
-                        target: selection
-                        selectionX: newAreaSensor.point.position.x
-                        selectionY: newAreaSensor.point.position.y
-                        selectionWidth: Kirigami.Units.gridUnit
-                        selectionHeight: Kirigami.Units.gridUnit
-                    }
-                },
-                State {
-                    name: "sizingNewArea"
-                    PropertyChanges {
-                        explicit: true
-                        target: selection
-                        dragStart: Qt.point(selectionX, selectionY)
-                    }
-                    PropertyChanges {
-                        restoreEntryValues: false
-                        target: selection
-                        dragEnd: Qt.point(Math.min(Math.max(newAreaSelector.mouseX, 0), selection.width),
-                                          Math.min(Math.max(newAreaSelector.mouseY, 0), selection.height))
-                        selectionX: dragEnd.x > dragStart.x ? dragStart.x : dragEnd.x
-                        selectionY: dragEnd.y > dragStart.y ? dragStart.y : dragEnd.y
-                        selectionWidth:  Math.max(Math.abs(dragEnd.x - dragStart.x), Kirigami.Units.gridUnit)
-                        selectionHeight: Math.max(Math.abs(dragEnd.y - dragStart.y), Kirigami.Units.gridUnit)
-                    }
-                }
-            ]
 
             KQuickImageEditor.CropBackground {
                 anchors.fill: parent
@@ -216,17 +126,10 @@ Item {
                     width: modelData.width * selection.width
                     height: modelData.height * selection.height
 
-                    MouseArea {
-                        z: -1 // Give priority to the main area
-                        parent: selection // To make z work
-                        x: subAreaGraphic.x; width:  subAreaGraphic.width
-                        y: subAreaGraphic.y; height: subAreaGraphic.height
-                        onClicked: skanpage.selectSubArea(index)
-                    }
                     TransparentButton {
                         anchors {
-                            top:   parent.top; right: parent.right
-                            topMargin:   Math.min(Math.max(
+                            top: parent.top; right: parent.right
+                            topMargin: Math.min(Math.max(
                                 parent.height - implicitHeight, 0), Kirigami.Units.smallSpacing)
                             rightMargin: Math.min(Math.max(
                                 parent.width/2 - implicitWidth, 0), Kirigami.Units.smallSpacing)
@@ -235,7 +138,6 @@ Item {
                         height: anchors.topMargin  === 0 ? parent.height    : implicitHeight
                         z: 1
                         icon.name: anchors.rightMargin === 0 || anchors.topMargin === 0 ? "" : "edit-delete-remove"
-                        onClicked: skanpage.eraseSubArea(index)
                         ToolTip.text: i18n("Discard this selection")
                     }
                 }
@@ -270,13 +172,7 @@ Item {
                 icon.name: "document-open-recent"
                 text: i18n("Add Selection Area")
                 shortcut: "Q"
-                onTriggered: {
-                    skanpage.newUserMessage(SkanpageUtils.InformationMessage,
-                                            i18n("Click and drag to select another area"))
-                    skanpage.appendSubArea(getScanArea())
-                    selection.state = "queueNewArea"
-                    if (newAreaSensor.hovered) selection.state = "addingNewArea"
-                }
+                onTriggered: skanpage.appendSubArea(getScanArea())
             },
 
             ShortcutsAction {
@@ -300,7 +196,15 @@ Item {
             },
 
             ShortcutsAction {
-                id: showPreviewAction
+                id: clearAreasAction
+                icon.name: "edit-clear-all"
+                text: i18n("Clear Scan Areas")
+                shortcut: "Del"
+                onTriggered: skanpage.clearSubAreas()
+            },
+
+            ShortcutsAction {
+                id: closePreviewAction
                 icon.name: "dialog-close"
                 text: i18n("Close Preview")
                 shortcut: "Esc"
