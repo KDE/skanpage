@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 02:38+0000\n"
 "PO-Revision-Date: 2025-01-23 16:14+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -614,37 +614,37 @@ msgstr "Sichtbarkeit einrichten"
 msgid "Reselect Scanner"
 msgstr "Scanner neu auswählen"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Diese Auswahl verwerfen"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Neue Scanvorschau"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Auswahlbereich hinzufügen"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Klicken und ziehen Sie, um einen weiteren Bereich auszuwählen"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Scan senkrecht aufteilen"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Scan waagerecht aufteilen"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Vorschau schließen"
@@ -690,6 +690,9 @@ msgstr "Schließen"
 #, kde-format
 msgid "Share as:"
 msgstr "Teilen als:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Klicken und ziehen Sie, um einen weiteren Bereich auszuwählen"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "Das Speichern in nichtlokale Ordner wird zurzeit nicht untersützt."

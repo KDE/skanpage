@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 02:38+0000\n"
 "PO-Revision-Date: 2025-02-10 08:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -611,37 +611,37 @@ msgstr "Görünürlüğü Yapılandır"
 msgid "Reselect Scanner"
 msgstr "Tarayıcıyı Yeniden Seç"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Bu seçimi at"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Yeni Önizleme Taraması"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Seçim Alanı Ekle"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Başka bir alan seçmek için tıklayıp sürükle"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Taramayı Dikey Böl"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Taramayı Yatay Böl"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Önizlemeyi Kapat"
@@ -687,6 +687,9 @@ msgstr "Kapat"
 #, kde-format
 msgid "Share as:"
 msgstr "Paylaş:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Başka bir alan seçmek için tıklayıp sürükle"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "Yerel olmayan dizinlere kaydetme şu anda desteklenmiyor."

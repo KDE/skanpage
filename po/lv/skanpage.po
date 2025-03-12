@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 02:38+0000\n"
 "PO-Revision-Date: 2025-02-18 19:03+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -612,37 +612,37 @@ msgstr "Konfigurēt redzamību"
 msgid "Reselect Scanner"
 msgstr "No jauna atlasīt skeneri"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Noraidīt šo atlasi"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Jauna priekšskatījuma skenēšana"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Pievienot atlases zonu"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Spiediet un velciet, lai atlasītu citu zonu"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Sadalīt skenēšanu vertikāli"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Sadalīt skenēšanu horizontāli"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Aizvērt priekšskatījumu"
@@ -688,6 +688,9 @@ msgstr "Aizvērt"
 #, kde-format
 msgid "Share as:"
 msgstr "Kopīgot kā:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Spiediet un velciet, lai atlasītu citu zonu"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "Saglabāšana ne lokālās mapēs šobrīd nav atbalstīta."

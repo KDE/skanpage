@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 02:38+0000\n"
 "PO-Revision-Date: 2025-01-10 10:25\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -614,37 +614,37 @@ msgstr "Наладжванне бачнасці"
 msgid "Reselect Scanner"
 msgstr "Паўторна абраць сканер"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Адкінуць выбар"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Новая папярэдняе сканаванне"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Дадаць абраную вобласць"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Пстрыкніце і перацягніце, каб абраць іншую вобласць"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Падзяліць па вертыкалі"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Падзяліць па гарызанталі"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Закрыць папярэдні прагляд"
@@ -690,6 +690,9 @@ msgstr "Закрыць"
 #, kde-format
 msgid "Share as:"
 msgstr "Абагуліць як:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Пстрыкніце і перацягніце, каб абраць іншую вобласць"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "Захаванне ў нелакальных каталогах зараз не падтрымліваецца."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 02:38+0000\n"
 "PO-Revision-Date: 2025-02-12 17:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -615,37 +615,37 @@ msgstr "اضبط الظهور"
 msgid "Reselect Scanner"
 msgstr "أعد تحديد الماسحة"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "أهمل هذا التحديد"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "معاينة للمسح جديدة"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "أضف منطقة تحديد"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "انقر واسحب لتحدد منطقة أخرى"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "اقسم المسح رأسياً"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "اقسم المسح أفقياً"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "أغلق المعاينة"
@@ -691,6 +691,9 @@ msgstr "أغلق"
 #, kde-format
 msgid "Share as:"
 msgstr "شارك كـ:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "انقر واسحب لتحدد منطقة أخرى"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "الحفظ إلى ملفات غير محلية غير مدعوم حاليا"

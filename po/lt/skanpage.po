@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 02:38+0000\n"
 "PO-Revision-Date: 2024-12-07 00:56+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -615,37 +615,37 @@ msgstr "Konfigūruoti matomumą"
 msgid "Reselect Scanner"
 msgstr "Iš naujo pasirinkti skenerį"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Atmesti šį žymėjimą"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Naujas skenavimas peržiūrai"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Pridėti žymėjimo sritį"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Spustelėkite ir tempkite norėdami žymėti kitą sritį"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Padalyti skenavimą vertikaliai"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Padalyti skenavimą horizontaliai"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Užverti peržiūrą"
@@ -691,6 +691,9 @@ msgstr "Užverti"
 #, kde-format
 msgid "Share as:"
 msgstr "Bendrinti kaip:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Spustelėkite ir tempkite norėdami žymėti kitą sritį"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "Įrašymas į ne vietinius katalogus šiuo metu yra nepalaikomas."
