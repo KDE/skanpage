@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2023-06-09 23:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -625,38 +625,38 @@ msgstr "Configurar a Visibilidade"
 msgid "Reselect Scanner"
 msgstr "Seleccionar de Novo o 'Scanner'"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Ignorar esta selecção"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "New Preview Scan"
 msgstr "Mostrar a Antevisão"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Adicionar uma Área à Selecção"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Carregue e arraste para seleccionar outra área"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Dividir a Digitalização na Vertical"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Dividir a Digitalização na Horizontal"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "Close Preview"
@@ -703,6 +703,9 @@ msgstr "Fechar"
 #, kde-format
 msgid "Share as:"
 msgstr "Partilhar como:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Carregue e arraste para seleccionar outra área"
 
 #~ msgid "Languages:"
 #~ msgstr "Línguas:"

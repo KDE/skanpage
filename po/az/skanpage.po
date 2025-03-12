@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2023-06-12 17:35+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -623,38 +623,38 @@ msgstr "Alətlərin görünməsini tənzimləyin"
 msgid "Reselect Scanner"
 msgstr "Başqa skaner seçin"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Bu seçimi ləğv edin"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "New Preview Scan"
 msgstr "Önbaxışı göstərmək"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Seçim sahəsi əlavə edin"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Başqa sahəni seçmək üçün vurun və sürüşdürün"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Oxunan səhifəni şaquli bölün"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Oxunan səhifəni üfüqi bölün"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "Close Preview"
@@ -701,6 +701,9 @@ msgstr "Bağlayın"
 #, kde-format
 msgid "Share as:"
 msgstr "Belə paylaşın:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Başqa sahəni seçmək üçün vurun və sürüşdürün"
 
 #~ msgid "Languages:"
 #~ msgstr "Dillər:"

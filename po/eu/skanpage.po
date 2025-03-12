@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2025-02-10 18:53+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -613,37 +613,37 @@ msgstr "Konfiguratu ikusgaitasuna"
 msgid "Reselect Scanner"
 msgstr "Eskanerra berriz hautatzea"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Baztertu hautapen hau"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Eskaneatze aurreikuspegi berria"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Gehitu hautapen azalera"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Egin klik eta arrastu beste azalera bat hautatzeko"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Zatitu eskaneatua bertikalki"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Zatitu eskaneatua horizontalki"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Itxi aurreikuspegia"
@@ -689,6 +689,9 @@ msgstr "Itxi"
 #, kde-format
 msgid "Share as:"
 msgstr "Partekatu honela:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Egin klik eta arrastu beste azalera bat hautatzeko"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "Lokalak ez diren direktorioetan gordetzea, egun, ez da onartzen."

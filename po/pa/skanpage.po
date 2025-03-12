@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2023-12-25 08:33-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -621,38 +621,38 @@ msgstr "ਦਿੱਖ ਦੀ ਸੰਰਚਨਾ"
 msgid "Reselect Scanner"
 msgstr "ਸਕੈਨਰ ਮੁੜ-ਚੁਣੋ"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "ਇਹ ਚੋਣ ਨੂੰ ਖ਼ਾਰਜ ਕਰੋ"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "New Preview Scan"
 msgstr "ਝਲਕ ਨੂੰ ਵੇਖੋ"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "ਚੁਣੇ ਗਏ ਖੇਤਰ ਨੂੰ ਜੋੜੋ"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "ਹੋਰ ਖੇਤਰ ਨੂੰ ਚੁਣਨ ਲਈ ਕਲਿੱਕ ਕਰਕੇ ਖਿੱਚੋ"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "ਸਕੈਨ ਨੂੰ ਖੜ੍ਹਵੇਂ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "ਸਕੈਨ ਨੂੰ ਲੇਟਵੇਂ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "Close Preview"
@@ -699,6 +699,9 @@ msgstr "ਬੰਦ ਕਰੋ"
 #, kde-format
 msgid "Share as:"
 msgstr "ਇੰਝ ਸਾਂਝਾ ਕਰੋ:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "ਹੋਰ ਖੇਤਰ ਨੂੰ ਚੁਣਨ ਲਈ ਕਲਿੱਕ ਕਰਕੇ ਖਿੱਚੋ"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "ਗ਼ੈਰ-ਲੋਕਲ ਡਾਇਰੈਕਟਰੀਆਂ ਉੱਤੇ ਸੰਭਾਲਣਾ ਹਾਲੇ ਸਹਾਇਕ ਨਹੀਂ ਹੈ।"

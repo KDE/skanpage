@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -619,38 +619,38 @@ msgstr "表示を設定"
 msgid "Reselect Scanner"
 msgstr "スキャナを再選択"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "この選択を破棄する"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "New Preview Scan"
 msgstr "プレビューを表示"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "選択領域を追加"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "クリックとドラッグで別の領域を選択します"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "スキャンを垂直に分割"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "スキャンを水平に分割"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, fuzzy, kde-format
 #| msgid "Show Preview"
 msgid "Close Preview"
@@ -697,6 +697,9 @@ msgstr "閉じる"
 #, kde-format
 msgid "Share as:"
 msgstr "次で共有:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "クリックとドラッグで別の領域を選択します"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "ローカルディレクトリ以外への保存は現在サポートされていません。"

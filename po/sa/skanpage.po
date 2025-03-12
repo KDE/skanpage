@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -610,37 +610,37 @@ msgstr "दृश्यतां विन्यस्यताम्"
 msgid "Reselect Scanner"
 msgstr "स्कैनरं पुनः चयनं कुर्वन्तु"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "एतत् चयनं परित्यजन्तु"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "नवीन पूर्वावलोकन स्कैन"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "चयनक्षेत्रं योजयतु"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "अन्यं क्षेत्रं चिन्वन्तु इति क्लिक् कृत्वा कर्षयन्तु"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "लंबवत स्कैन विभाजित करें"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "क्षैतिजरूपेण स्कैन् विभक्तं कुर्वन्तु"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "पूर्वावलोकनं बन्दं कुर्वन्तु"
@@ -686,3 +686,6 @@ msgstr "पिधानं करोतु"
 #, kde-format
 msgid "Share as:"
 msgstr "Share as:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "अन्यं क्षेत्रं चिन्वन्तु इति क्लिक् कृत्वा कर्षयन्तु"

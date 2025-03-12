@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2024-09-16 21:36+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -617,37 +617,37 @@ msgstr "Láthatóság beállítása"
 msgid "Reselect Scanner"
 msgstr "Szkenner újraválasztása"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Kijelölés elvetése"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Új előnézet beolvasása"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Kijelölési terület hozzáadása"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Kattintson és húzza egy másik terület kiválasztásához"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Függőlegesen megosztott beolvasás"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Vízszintesen megosztott beolvasás"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Előnézet bezárása"
@@ -693,6 +693,9 @@ msgstr "Bezárás"
 #, kde-format
 msgid "Share as:"
 msgstr "Megosztás mint:"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Kattintson és húzza egy másik terület kiválasztásához"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr "A nem helyi könyvtárakba történő mentés jelenleg nem támogatott."

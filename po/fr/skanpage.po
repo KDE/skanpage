@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:45+0000\n"
 "PO-Revision-Date: 2025-02-11 09:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -614,37 +614,37 @@ msgstr "Configurer la visibilité"
 msgid "Reselect Scanner"
 msgstr "Re-sélectionner le périphérique de numérisation"
 
-#: qml/PreviewScanView.qml:239
+#: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
 msgstr "Annuler cette sélection"
 
-#: qml/PreviewScanView.qml:262
+#: qml/PreviewScanView.qml:164
 #, kde-format
 msgid "New Preview Scan"
 msgstr "Nouvel aperçu de numérisation"
 
-#: qml/PreviewScanView.qml:271
+#: qml/PreviewScanView.qml:173
 #, kde-format
 msgid "Add Selection Area"
 msgstr "Ajouter un zone de sélection"
 
-#: qml/PreviewScanView.qml:275
-#, kde-format
-msgid "Click and drag to select another area"
-msgstr "Cliquer et faire glisser pour la sélection d'une autre zone"
-
-#: qml/PreviewScanView.qml:285
+#: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
 msgstr "Scinder verticalement la numérisation"
 
-#: qml/PreviewScanView.qml:295
+#: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
 msgstr "Scinder horizontalement la numérisation"
 
-#: qml/PreviewScanView.qml:305
+#: qml/PreviewScanView.qml:201
+#, kde-format
+msgid "Clear Scan Areas"
+msgstr ""
+
+#: qml/PreviewScanView.qml:209
 #, kde-format
 msgid "Close Preview"
 msgstr "Fermer l'aperçu"
@@ -691,6 +691,9 @@ msgstr "Fermer"
 #, kde-format
 msgid "Share as:"
 msgstr "Partager comme :"
+
+#~ msgid "Click and drag to select another area"
+#~ msgstr "Cliquer et faire glisser pour la sélection d'une autre zone"
 
 #~ msgid "Saving to non-local directories is currently unsupported."
 #~ msgstr ""
