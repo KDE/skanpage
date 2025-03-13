@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 00:45+0000\n"
-"PO-Revision-Date: 2025-02-10 11:35+0100\n"
+"PO-Revision-Date: 2025-03-12 12:42+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -142,7 +142,7 @@ msgstr "Disveloppator"
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
-"Nomine de dispositivo de scander Sane. Usa  'test' pro dispositivo de "
+"Nomine de dispositivo de scander de Sane. Usa  'test' pro dispositivo de "
 "essayar."
 
 #: main.cpp:82
@@ -154,7 +154,7 @@ msgstr "dispositivo"
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
-"Un percurso de filein le qual tu dispositivo de scander es discargate "
+"Un percurso de file in le qual tu dispositivo de scander es discargate "
 "(dumped)."
 
 #: main.cpp:89
@@ -473,7 +473,7 @@ msgstr "Cancella"
 #: qml/MainWindow.qml:156
 #, kde-format
 msgid "Show Scanner Options"
-msgstr "Monstra Optiones de scanner"
+msgstr "Monstra Optiones de Scanditor"
 
 #: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
 #, kde-format
@@ -642,7 +642,7 @@ msgstr "Divide Horizontalmente le  scansion"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Netta areas de scander"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -663,13 +663,13 @@ msgstr "Dispositivos a monstrar:"
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
-msgstr "Solmente scanners"
+msgstr "Solmente scanditores"
 
 #: qml/SettingsWindow.qml:46
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
-msgstr "Scanners, cameras, e dispositivos virtual"
+msgstr "Scanditores, cameras, e dispositivos virtual"
 
 #: qml/SettingsWindow.qml:53
 #, kde-format
