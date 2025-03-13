@@ -1,5 +1,5 @@
 # Spanish translations for skanpage.po package.
-# Copyright (C) 2021 This file is copyright:
+# Copyright (C) 2021-2025 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 #
 # Automatically generated, 2021.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 02:38+0000\n"
-"PO-Revision-Date: 2025-02-11 00:10+0100\n"
+"PO-Revision-Date: 2025-03-13 00:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,7 +38,7 @@ msgstr "Documento nuevo"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
-msgstr "%1 ... %2"
+msgstr "%1 … %2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -229,7 +229,7 @@ msgstr "Bajar página seleccionada"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
-msgstr "Procesando página..."
+msgstr "Procesando página…"
 
 #: qml/DocumentList.qml:218
 #, kde-format
@@ -375,7 +375,7 @@ msgstr "Archivo:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Guardar como..."
+msgstr "Guardar como…"
 
 #: qml/ExportDialog.qml:94
 #, kde-format
@@ -493,12 +493,12 @@ msgstr "Acerca de Skanpage"
 #: qml/MainWindow.qml:202
 #, kde-format
 msgid "Configure Skanpage…"
-msgstr "Configurar Skanpage..."
+msgstr "Configurar Skanpage…"
 
 #: qml/MainWindow.qml:210
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
-msgstr "Configurar los atajos de teclado..."
+msgstr "Configurar los atajos de teclado…"
 
 #: qml/MainWindow.qml:218
 #, kde-format
@@ -642,7 +642,7 @@ msgstr "Dividir el escaneo horizontalmente"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Borrar áreas de escaneo"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -690,124 +690,3 @@ msgstr "Cerrar"
 #, kde-format
 msgid "Share as:"
 msgstr "Compartir como:"
-
-#~ msgid "Click and drag to select another area"
-#~ msgstr "Pulse y arrastre para seleccionar otra área"
-
-#~ msgid "Saving to non-local directories is currently unsupported."
-#~ msgstr "En la actualidad no se puede guardar en directorios remotos."
-
-#~ msgid "Languages:"
-#~ msgstr "Idiomas:"
-
-#~ msgid "%1 [%2]"
-#~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Guardar"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
-#~ msgstr ""
-#~ "No existe ninguna imagen en este documento.<nl/><nl/>Empiece a escanear."
-
-#~ msgid "All files"
-#~ msgstr "Todos los archivos"
-
-#~ msgid "Settings"
-#~ msgstr "Preferencias"
-
-#~ msgid "Skanpage Settings"
-#~ msgstr "Preferencias de Skanpage"
-
-#~ msgid "Show all devices including virtual and cameras"
-#~ msgstr ""
-#~ "Mostrar todos los dispositivos, incluidos los virtuales y las cámaras"
-
-#~ msgctxt "document title - scanner device - app title"
-#~ msgid "%1 ― %2 %3 ― Skanpage"
-#~ msgstr "%1 ― %2 %3 ― Skanpage"
-
-#~ msgid "Reset"
-#~ msgstr "Reiniciar"
-
-#~ msgid "Apply"
-#~ msgstr "Aplicar"
-
-#~ msgid "Saving still in progress."
-#~ msgstr "Todavía se está guardando."
-
-#~ msgid "Clear"
-#~ msgstr "Borrar todo"
-
-#~ msgid "PDF files (*.pdf)"
-#~ msgstr "Archivos PDF (*.pdf)"
-
-#~ msgid "JPEG files (*.jpg)"
-#~ msgstr "Archivos JPEG (*.jpg)"
-
-#~ msgid "PNG files (*.png)"
-#~ msgstr "Archivos PNG (*.png)"
-
-#~ msgctxt "Device vendor and device model name"
-#~ msgid "Options for %1 %2"
-#~ msgstr "Opciones para %1 %2"
-
-#~ msgid "(C) 2015 Kåre Särs"
-#~ msgstr "© 2015 Kåre Särs"
-
-#~ msgid "Zoom Fit Width"
-#~ msgstr "Ajustar a la anchura"
-
-#~ msgid "We do not support 16 per color scans at the moment!"
-#~ msgstr "Por el momento no se permite escanear a 16 bits por color."
-
-#~ msgid "Draft (75 DPI)"
-#~ msgstr "Borrador (75 PPP)"
-
-#~ msgid "Normal (150 DPI)"
-#~ msgstr "Normal (150 PPP)"
-
-#~ msgid "High Quality (300 DPI)"
-#~ msgstr "Alta calidad (300 PPP)"
-
-#~ msgid "Best Quality (600 DPI)"
-#~ msgstr "Mejor calidad (600 PPP)"
-
-#~ msgid "Color"
-#~ msgstr "Color"
-
-#~ msgid "Gray"
-#~ msgstr "Gris"
-
-#~ msgid "A4"
-#~ msgstr "A4"
-
-#~ msgid "B5"
-#~ msgstr "B5"
-
-#~ msgid "Letter"
-#~ msgstr "Carta"
-
-#~ msgid "Legal"
-#~ msgstr "Legal"
-
-#~ msgid "Executive"
-#~ msgstr "Ejecutivo"
-
-#~ msgid "A5"
-#~ msgstr "A5"
-
-#~ msgid "A6"
-#~ msgstr "A6"
-
-#~ msgid "Custom"
-#~ msgstr "Personalizado"
-
-#~ msgid "Application menu"
-#~ msgstr "Menú Aplicación"
-
-#~ msgctxt "Device vendor and device model name"
-#~ msgid "Device: %1 %2"
-#~ msgstr "Dispositivo: %1 %2"

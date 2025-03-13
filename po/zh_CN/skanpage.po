@@ -682,6 +682,3 @@ msgstr "关闭"
 #, kde-format
 msgid "Share as:"
 msgstr "分享为："
-
-#~ msgid "Click and drag to select another area"
-#~ msgstr "点击并拖动以选择另一个区域"

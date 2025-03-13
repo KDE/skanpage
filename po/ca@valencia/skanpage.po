@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 02:38+0000\n"
-"PO-Revision-Date: 2025-02-10 07:53+0100\n"
+"PO-Revision-Date: 2025-03-12 08:43+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -645,7 +645,7 @@ msgstr "Dividix horitzontalment l'escaneig"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Neteja les àrees d'escaneig"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -693,6 +693,3 @@ msgstr "Tanca"
 #, kde-format
 msgid "Share as:"
 msgstr "Compartix com:"
-
-#~ msgid "Click and drag to select another area"
-#~ msgstr "Feu clic i arrossegueu per a seleccionar una altra àrea"
