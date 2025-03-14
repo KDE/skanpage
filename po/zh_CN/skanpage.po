@@ -634,7 +634,7 @@ msgstr "水平拆分扫描"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "清除扫描区域"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
