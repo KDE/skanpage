@@ -25,6 +25,7 @@
 #include "FormatModel.h"
 #include "OCRLanguageModel.h"
 #include "SkanpageUtils.h"
+#include "NameTemplateUtils.h"
 #include "skanpage_config.h"
 #include "skanpage_state.h"
 
@@ -44,6 +45,7 @@ class Skanpage : public QObject
     Q_PROPERTY(SkanpageConfiguration *configuration READ configuration CONSTANT)
     Q_PROPERTY(SkanpageState *stateConfiguration READ stateConfiguration CONSTANT)
     Q_PROPERTY(ApplicationState applicationState READ applicationState NOTIFY applicationStateChanged)
+    Q_PROPERTY(NameTemplateUtils *nameTemplate READ nameTemplate CONSTANT)
 
     Q_PROPERTY(QString deviceVendor READ deviceVendor NOTIFY deviceInfoUpdated)
     Q_PROPERTY(QString deviceModel READ deviceModel NOTIFY deviceInfoUpdated)
@@ -99,6 +101,7 @@ public:
     KSaneCore::Interface *ksaneInterface() const;
     SkanpageConfiguration *configuration() const;
     SkanpageState *stateConfiguration() const;
+    NameTemplateUtils *nameTemplate() const;
 
     Q_INVOKABLE void previewScan();
     Q_INVOKABLE void startScan();

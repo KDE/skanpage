@@ -31,6 +31,7 @@
 #include "skanpage_config.h"
 #include "skanpage_state.h"
 #include "skanpage_version.h"
+#include "NameTemplateUtils.h"
 
 int main(int argc, char *argv[])
 {
@@ -49,6 +50,7 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<Skanpage>("org.kde.skanpage", 1, 0, "Skanpage", QStringLiteral("Skanpage application class uncreateable"));
     qmlRegisterUncreatableType<SkanpageConfiguration>("org.kde.skanpage", 1, 0, "Configuration", QStringLiteral("Confguration class uncreatable"));
     qmlRegisterUncreatableType<SkanpageState>("org.kde.skanpage", 1, 0, "StateConfiguration", QStringLiteral("State class uncreatable"));
+    qmlRegisterUncreatableType<NameTemplateUtils>("org.kde.skanpage", 1, 0, "NameTemplate", QStringLiteral("NameTemplate class uncreatable"));
     qmlRegisterUncreatableMetaObject(SkanpageUtils::staticMetaObject, "org.kde.skanpage", 1, 0, "SkanpageUtils", QStringLiteral("Error: only enums"));
     qmlRegisterType<InProgressPainter>("org.kde.skanpage", 1, 0, "InProgressPainter");
     qRegisterMetaType<SkanpageUtils::MessageLevel>();

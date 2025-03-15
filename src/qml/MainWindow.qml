@@ -1,6 +1,7 @@
 /**
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
+ * SPDX-FileCopyrightText: 2024 by Milena Cole <mkoul@mail.ru>
  *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
@@ -87,7 +88,16 @@ ApplicationWindow {
         text: i18n("Save All")
         shortcutsName: "Save"
         enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
-        onTriggered: saveFileDialog.open()
+        onTriggered: skanpage.documentModel.save(skanpage.nameTemplate.fileUrl())
+    }
+
+    ShortcutsAction {
+        id: saveExtraDocAction
+        icon.name: "document-save"
+        text: i18n("Save All As")
+        shortcutsName: "Save As"
+        enabled: skanpage.documentModel.count !== 0
+        onTriggered: saveAsFileDialog.open()
     }
 
     ShortcutsAction {
@@ -289,6 +299,10 @@ ApplicationWindow {
                 ToolButton {
                     action: saveDocAction
                 }
+
+                ToolButton {
+                    action: saveExtraDocAction
+                }
       
                 ToolButton {
                     action: exportDocAction 
@@ -352,8 +366,12 @@ ApplicationWindow {
                 focus: true
 
                 onSaveSinglePage: function (pageNumber){
-                    saveFileDialog.pageNumbers.push(pageNumber)
-                    saveFileDialog.open()
+                    skanpage.documentModel.save(skanpage.nameTemplate.fileUrl(), [pageNumber])
+                }
+
+                onSaveSinglePageAs: function (pageNumber){
+                    saveAsFileDialog.pageNumbers.push(pageNumber)
+                    saveAsFileDialog.open()
                 }
             }
         }
@@ -422,11 +440,10 @@ ApplicationWindow {
     }
 
     FileDialog {
-        id: saveFileDialog
+        id: saveAsFileDialog
 
         property var pageNumbers: []
-
-        currentFolder: skanpage.configuration.defaultFolder
+        selectedFile: skanpage.nameTemplate.fileUrl()
         fileMode: FileDialog.SaveFile
         nameFilters: skanpage.formatModel.writeFormatFilter()
         selectedNameFilter.index: skanpage.configuration.defaultNameFilterIndex

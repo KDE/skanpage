@@ -18,6 +18,7 @@ Item {
     id: documentPage
 
     signal saveSinglePage(int pageNumber)
+    signal saveSinglePageAs(int pageNumber)
 
     Connections {
         target: skanpage.documentModel
@@ -165,6 +166,13 @@ Item {
                     icon.name: "document-save"
                     text: i18n("Save Page")
                     onTriggered: documentPage.saveSinglePage(skanpage.documentModel.activePageIndex)
+                },
+
+                ShortcutsAction {
+                    id: savePageActionAs
+                    icon.name: "document-save"
+                    text: i18n("Save Page As")
+                    onTriggered: documentPage.saveSinglePageAs(skanpage.documentModel.activePageIndex)
                 },
 
                 ShortcutsAction {

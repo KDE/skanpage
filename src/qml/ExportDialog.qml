@@ -2,6 +2,7 @@
  * SPDX-FileCopyrightText: 2015 by Kåre Särs <kare.sars@iki .fi>
  * SPDX-FileCopyrightText: 2021 by Alexander Stippich <a.stippich@gmx.net>
  * SPDX-FileCopyrightText: 2024 by Thomas Duckworth <tduck973564@gmail.com>
+ * SPDX-FileCopyrightText: 2024 by Milena Cole <mkoul@mail.ru>
  *  
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
@@ -42,7 +43,7 @@ Kirigami.Dialog {
 
             TextField {
                 Kirigami.FormData.label: i18nc("@label", "Title:")
-                text: skanpage.documentModel.name
+                text: skanpage.documentModel.name !== i18n("New document") ? skanpage.documentModel.name : skanpage.nameTemplate.parseSamples(skanpage.configuration.nameTemplate)
                 onTextChanged: fileTitle = text
             }
 
@@ -52,8 +53,9 @@ Kirigami.Dialog {
                 Kirigami.FormData.label: i18nc("@label", "File:")
 
                 TextField {
+                    id: fileNameItem
                     Layout.fillWidth: true
-                    text: skanpage.configuration.defaultFolder + "/" + skanpage.documentModel.fileName
+                    text: skanpage.configuration.defaultFolder + "/" + fileTitle + ".pdf"
                     onTextChanged: fileName = text
                 }
 

@@ -22,6 +22,7 @@ Item {
     property alias optionsPanel: optionsPanel
 
     signal saveSinglePage(int pageNumber)
+    signal saveSinglePageAs(int pageNumber)
 
     focus: true
 
@@ -54,6 +55,9 @@ Item {
                 onSaveSinglePage: function (pageNumber) {
                     mainContent.saveSinglePage(pageNumber)
                 }
+                onSaveSinglePageAs: function (pageNumber) {
+                    mainContent.saveSinglePageAs(pageNumber)
+                }
                 onMinimumWidthChanged: // Do not prefer a width lower than a minimum
                     if (SplitView.preferredWidth < minimumWidth) SplitView.preferredWidth = minimumWidth
             }
@@ -70,6 +74,9 @@ Item {
                 visible: skanpage.applicationState === Skanpage.ReadyForScan
                 onSaveSinglePage: function (pageNumber) {
                     mainContent.saveSinglePage(pageNumber)
+                }
+                onSaveSinglePageAs: function (pageNumber) {
+                    mainContent.saveSinglePageAs(pageNumber)
                 }
             }
 

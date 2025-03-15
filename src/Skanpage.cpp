@@ -17,6 +17,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KShortcutsDialog>
+#include <KLocalizedString>
 
 #include "DevicesModel.h"
 #include "DocumentPrinter.h"
@@ -45,6 +46,7 @@ public:
     SkanpageConfiguration *m_configuration;
     KActionCollection *m_actionCollection;
     SkanpageState *m_stateConfiguration;
+    NameTemplateUtils *m_nameTemplate;
 
     int m_progress = 100;
     int m_remainingSeconds = 0;
@@ -72,8 +74,12 @@ Skanpage::Skanpage(const QString &deviceName, const QUrl &dumpOptionUrl, const Q
 
     d->m_stateConfiguration = SkanpageState::self();
     d->m_configuration = SkanpageConfiguration::self();
+    d->m_nameTemplate = new NameTemplateUtils(this);
     if (d->m_configuration->defaultFolder().isEmpty()) {
         d->m_configuration->setDefaultFolder(QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)));
+    }
+    if (d->m_configuration->nameTemplate().isEmpty()) {
+        d->m_configuration->setNameTemplate(i18n("New document"));
     }
 
     d->m_filteredOptionsModel.setSourceModel(&d->m_optionsModel);
@@ -567,6 +573,11 @@ SkanpageConfiguration *Skanpage::configuration() const
 SkanpageState *Skanpage::stateConfiguration() const
 {
     return d->m_stateConfiguration;
+}
+
+NameTemplateUtils *Skanpage::nameTemplate() const
+{
+    return d->m_nameTemplate;
 }
 
 void Skanpage::print()

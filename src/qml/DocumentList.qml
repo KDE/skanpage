@@ -16,6 +16,7 @@ ColumnLayout {
     id: documentList
 
     signal saveSinglePage(int pageNumber)
+    signal saveSinglePageAs(int pageNumber)
 
     spacing: 0
     property int minimumWidth: {
@@ -266,6 +267,12 @@ ColumnLayout {
                                         icon.name: "document-save"
                                         text: i18n("Save Page")
                                         onTriggered: documentList.saveSinglePage(index)
+                                    },
+
+                                    Kirigami.Action {
+                                        icon.name: "document-save"
+                                        text: i18n("Save Page As")
+                                        onTriggered: documentList.saveSinglePageAs(index)
                                     },
 
                                     Kirigami.Action {

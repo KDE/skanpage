@@ -35,6 +35,8 @@ target_sources(skanpage PRIVATE
     OCRLanguageModel.h
     ImageImport.cpp
     ImageImport.h
+    NameTemplateUtils.h
+    NameTemplateUtils.cpp
     qml.qrc
     )
 
