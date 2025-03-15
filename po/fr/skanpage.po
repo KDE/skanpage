@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 00:45+0000\n"
-"PO-Revision-Date: 2025-02-11 09:45+0100\n"
+"PO-Revision-Date: 2025-03-13 07:22+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -642,7 +642,7 @@ msgstr "Scinder horizontalement la numérisation"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Effacer les zones de numérisation"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
