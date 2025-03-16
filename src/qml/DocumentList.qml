@@ -71,19 +71,19 @@ ColumnLayout {
 
             ShortcutsAction {
                 id: selectUpAction
-                text: i18n("Select previous page")
+                text: i18n("Select Previous Page")
                 shortcut: "UP"
                 onTriggered: skanpage.documentModel.activePageIndex--
             }
             ShortcutsAction {
                 id: selectDownAction
-                text: i18n("Select next page")
+                text: i18n("Select Next Page")
                 shortcut: "DOWN"
                 onTriggered: skanpage.documentModel.activePageIndex++
             }
             ShortcutsAction {
                 id: moveUpAction
-                text: i18n("Move selected page up")
+                text: i18n("Move Selected Page Up")
                 shortcut: "CTRL+SHIFT+UP"
                 onTriggered: {
                     const i = skanpage.documentModel.activePageIndex
@@ -92,7 +92,7 @@ ColumnLayout {
             }
             ShortcutsAction {
                 id: moveDownAction
-                text: i18n("Move selected page down")
+                text: i18n("Move Selected Page Down")
                 shortcut: "CTRL+SHIFT+DOWN"
                 onTriggered: {
                     const i = skanpage.documentModel.activePageIndex
@@ -203,7 +203,7 @@ ColumnLayout {
                                     visible: parent.height > Kirigami.Units.iconSizes.huge + height
                                     Layout.maximumWidth: parent.width
                                     Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                                    text: xi18nc("@info", "Processing page...")
+                                    text: xi18nc("@info", "Processing page…")
                                 }
                             }
                         }

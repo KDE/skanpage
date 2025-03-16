@@ -48,7 +48,7 @@ FormatModel::FormatModel(QObject *parent)
 
     // create a concatenated read filter for import dialog
     tempList = QImageReader::supportedMimeTypes();
-    QString readFormatFilter = i18nc("format filter for a file dialog, all formats supported by the application will be displayed", "All Supported Files");
+    QString readFormatFilter = i18nc("format filter for a file dialog, all formats supported by the application will be displayed", "All supported files");
     readFormatFilter.append(QStringLiteral(" ("));
     for (const auto &mimeString : std::as_const(tempList)) {
         const QMimeType mimeType = mimeDB.mimeTypeForName(QString::fromLatin1(mimeString));

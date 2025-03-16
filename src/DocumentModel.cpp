@@ -77,7 +77,7 @@ QString DocumentModel::name() const
     }
     if (d->m_fileUrls.count() > 1) {
         return i18nc("for file names, indicates a range: from file0000.png to file0014.png",
-                     "%1 ... %2",
+                     "%1‥%2",
                      d->m_fileUrls.first().fileName(),
                      d->m_fileUrls.last().fileName());
     }
