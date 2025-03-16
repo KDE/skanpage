@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
     QCommandLineOption deviceOption(QStringList({QLatin1String("d"), QLatin1String("device")}),
-                                    i18n("Sane scanner device name. Use 'test' for test device."),
+                                    i18n("Sane scanner device name. Use “test” for test device."),
                                     i18n("device"));
     parser.addOption(deviceOption);
     QCommandLineOption dumpOption(QStringList({QLatin1String("o"), QLatin1String("options")}),
@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
                                   QLatin1String("options.txt"));
     parser.addOption(dumpOption);
     QCommandLineOption importOption(QStringList({QLatin1String("i"), QLatin1String("import")}),
-                                    i18n("A local image or pdf file that shall be imported. Image formats must be supported by Qt."),
+                                    i18n("A local image or PDF file that shall be imported. Image formats must be supported by Qt."),
                                     QLatin1String("image"));
     parser.addOption(importOption);
     parser.process(app);

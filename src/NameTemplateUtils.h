@@ -22,7 +22,7 @@ private:
 
     SampleType m_samples {
                           {QStringLiteral("$[YYYY]"),             i18n("Year"),                             getYear},
-                          {QStringLiteral("$[YY]"),               i18n("Year(00-99)"),                      getShortYear},
+                          {QStringLiteral("$[YY]"),               i18n("Year (00–99)"),                     getShortYear},
                           {QStringLiteral("$[MM]"),               i18n("Month"),                            getMonth},
                           {QStringLiteral("$[DD]"),               i18n("Day"),                              getDay},
                           {QStringLiteral("$[hh]"),               i18n("Hour"),                             getHour},

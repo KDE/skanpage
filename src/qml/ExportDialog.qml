@@ -102,7 +102,7 @@ Kirigami.Dialog {
                 onCheckedChanged: ocrChecked = checked
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@info:usagetip", "If the required languages are not listed, install Tesseract's language file with the system's package manager.")
+                toolTipText: i18nc("@info:usagetip", "If the required languages are not listed, install Tesseract’s language file with the system’s package manager.")
             }
         }
 

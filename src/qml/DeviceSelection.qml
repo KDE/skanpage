@@ -93,7 +93,7 @@ ColumnLayout {
             visible: skanpage.devicesModel.rowCount !== 0
 
             icon.name: "select"
-            text: i18n("Open selected device")
+            text: i18n("Open Selected Device")
 
             onClicked: skanpage.openDevice(skanpage.devicesModel.getSelectedDeviceName())
         }

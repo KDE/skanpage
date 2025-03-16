@@ -41,7 +41,7 @@ Item {
 
         Kirigami.PlaceholderMessage {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-            text: i18nc("@info", "Scan in progress.")
+            text: i18nc("@info", "Scan in progress…")
         }
     }
 

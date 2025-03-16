@@ -111,7 +111,7 @@ Window {
 
             Text {
                 id: showSamples
-                text: i18n("Show samples")
+                text: i18n("Show Samples")
                 color: "steelblue"
                 property bool isSamplesVisable: false
 
@@ -121,8 +121,8 @@ Window {
                     cursorShape: Qt.PointingHandCursor
                     onClicked: {
                         showSamples.isSamplesVisable = ! showSamples.isSamplesVisable
-                        if (showSamples.isSamplesVisable) {showSamples.text = i18n("Hide samples"); samplesFrame.visible = true}
-                        else {showSamples.text = i18n("Show samples"); samplesFrame.visible = false}
+                        if (showSamples.isSamplesVisable) {showSamples.text = i18n("Hide Samples"); samplesFrame.visible = true}
+                        else {showSamples.text = i18n("Show Samples"); samplesFrame.visible = false}
                     }
                 }
             }
