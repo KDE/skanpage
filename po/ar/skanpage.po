@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:45+0000\n"
+"POT-Creation-Date: 2025-03-16 00:45+0000\n"
 "PO-Revision-Date: 2025-03-13 11:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -29,6 +29,7 @@ msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
+#: qml/ExportDialog.qml:46 Skanpage.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "مستند جديد"
@@ -119,42 +120,42 @@ msgstr "فشل تحميل الصّورة!"
 msgid "Failed to load PDF file!"
 msgstr "فشل تحميل ملفّ بي دي اف!"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Skanpage"
 msgstr "ماسح الصفحات"
 
-#: main.cpp:65
+#: main.cpp:67
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "تطبيق لمسح الصفحات ضوئيا بواسطة كِيدِي."
 
-#: main.cpp:67
+#: main.cpp:69
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:69 main.cpp:70
+#: main.cpp:71 main.cpp:72
 #, kde-format
 msgid "developer"
 msgstr "مطوّر"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "اسم جهاز Sane للماسح الضّوئيّ. استخدم 'test' لجهاز الاختبار."
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "device"
 msgstr "الجهاز"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr "مسار ملف يفرغ فيه خيارات جهاز الماسح الضوئي الخاص بك."
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
@@ -202,74 +203,80 @@ msgctxt "@info"
 msgid "Searching for available devices"
 msgstr "يبحث عن الأجهزة المتوفرة"
 
-#: qml/DocumentList.qml:73
+#: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
 msgstr "حدد الصفحة السابقة"
 
-#: qml/DocumentList.qml:79
+#: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
 msgstr "حدد الصفحة التالية"
 
-#: qml/DocumentList.qml:85
+#: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
 msgstr "انقل الصفحة المحدّدة لأعلى"
 
-#: qml/DocumentList.qml:94
+#: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
 msgstr "انقل الصفحة المحدّدة لأسفل"
 
-#: qml/DocumentList.qml:205
+#: qml/DocumentList.qml:206
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "معالجة الصفحة..."
 
-#: qml/DocumentList.qml:218
+#: qml/DocumentList.qml:219
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "الصفحة %1"
 
-#: qml/DocumentList.qml:229
+#: qml/DocumentList.qml:230
 #, kde-format
 msgid "Move Up"
 msgstr "انقل لأعلى"
 
-#: qml/DocumentList.qml:239
+#: qml/DocumentList.qml:240
 #, kde-format
 msgid "Move Down"
 msgstr "انقل لأسفل"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
 #, kde-format
 msgid "Rotate Left"
 msgstr "دوّر لليسار"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
 #, kde-format
 msgid "Rotate Right"
 msgstr "دوّر لليمين"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
 #, kde-format
 msgid "Flip"
 msgstr "اعكس"
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
 #, kde-format
 msgid "Save Page"
 msgstr "احفظ الصفحة"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:173
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#, fuzzy, kde-format
+#| msgid "Save Page"
+msgid "Save Page As"
+msgstr "احفظ الصفحة"
+
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
 msgid "Delete Page"
 msgstr "احذف الصفحة"
 
-#: qml/DocumentList.qml:296
+#: qml/DocumentList.qml:303
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
@@ -280,116 +287,116 @@ msgstr[3] "%1 صفحات"
 msgstr[4] "%1 صفحة"
 msgstr[5] "%1 صفحة"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:312
 #, kde-format
 msgid "Flip Pages"
 msgstr "اعكس الصفحات"
 
-#: qml/DocumentList.qml:310
+#: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr "اعكس الصفحات الفردية"
 
-#: qml/DocumentList.qml:317
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip Even Pages"
 msgstr "اعكس الصفحات الزوجية"
 
-#: qml/DocumentList.qml:324
+#: qml/DocumentList.qml:331
 #, kde-format
 msgid "Flip All Pages"
 msgstr "اعكس كل الصفحات"
 
-#: qml/DocumentList.qml:332
+#: qml/DocumentList.qml:339
 #, kde-format
 msgid "Reorder Pages"
 msgstr "أعد ترتيب الصفحات"
 
-#: qml/DocumentList.qml:337
+#: qml/DocumentList.qml:344
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "‎13 24 → 1234"
 
-#: qml/DocumentList.qml:344
+#: qml/DocumentList.qml:351
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "‎13 42 → 1234"
 
-#: qml/DocumentList.qml:351
+#: qml/DocumentList.qml:358
 #, kde-format
 msgid "Reverse Order"
 msgstr "بالتّرتيب المعكوس"
 
-#: qml/DocumentPage.qml:40
+#: qml/DocumentPage.qml:41
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
 msgstr "لا يحوي هذا المستند على أي صفحة بعد"
 
-#: qml/DocumentPage.qml:41
+#: qml/DocumentPage.qml:42
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr "انقر على زر <interface>امسح</interface> لتضيف واحدة"
 
-#: qml/DocumentPage.qml:103
+#: qml/DocumentPage.qml:104
 #, kde-format
 msgid "Zoom In"
 msgstr "قرّب"
 
-#: qml/DocumentPage.qml:112
+#: qml/DocumentPage.qml:113
 #, kde-format
 msgid "Zoom Out"
 msgstr "بعّد"
 
-#: qml/DocumentPage.qml:121
+#: qml/DocumentPage.qml:122
 #, kde-format
 msgid "Zoom Fit"
 msgstr "لائم التقريب"
 
-#: qml/DocumentPage.qml:137
+#: qml/DocumentPage.qml:138
 #, kde-format
 msgid "Zoom 100%"
 msgstr "تكبير 100٪"
 
-#: qml/ExportDialog.qml:36
+#: qml/ExportDialog.qml:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "صدر إلى بي دي اف"
 
-#: qml/ExportDialog.qml:44
+#: qml/ExportDialog.qml:45
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "العنوان:"
 
-#: qml/ExportDialog.qml:52
+#: qml/ExportDialog.qml:53
 #, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "ملف:"
 
-#: qml/ExportDialog.qml:62
+#: qml/ExportDialog.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
 msgstr "احفظ باسم…"
 
-#: qml/ExportDialog.qml:94
+#: qml/ExportDialog.qml:96
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "تعرّف بصري على المحارف"
 
-#: qml/ExportDialog.qml:97
+#: qml/ExportDialog.qml:99
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "مكّن"
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:105
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -429,79 +436,85 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "يمسح"
 
-#: qml/MainWindow.qml:24
+#: qml/MainWindow.qml:25
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "‏%1 ― ماسح الصفحات"
 
-#: qml/MainWindow.qml:78
+#: qml/MainWindow.qml:79
 #, kde-format
 msgid "Discard All"
 msgstr "أهمل الكلّ"
 
-#: qml/MainWindow.qml:87
+#: qml/MainWindow.qml:88
 #, kde-format
 msgid "Save All"
 msgstr "احفظ الكلّ"
 
-#: qml/MainWindow.qml:96
+#: qml/MainWindow.qml:97
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save All As"
+msgstr "احفظ الكلّ"
+
+#: qml/MainWindow.qml:106
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "استورد"
 
-#: qml/MainWindow.qml:105
+#: qml/MainWindow.qml:115
 #, kde-format
 msgid "Export PDF"
 msgstr "صدر إلى بي دي اف"
 
-#: qml/MainWindow.qml:113
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Preview"
 msgstr "عاين"
 
-#: qml/MainWindow.qml:132
+#: qml/MainWindow.qml:142
 #, kde-format
 msgid "Scan"
 msgstr "امسح"
 
-#: qml/MainWindow.qml:147
+#: qml/MainWindow.qml:157
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: qml/MainWindow.qml:156
+#: qml/MainWindow.qml:166
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "أظهر خيارات الماسحة"
 
-#: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "شارك"
 
-#: qml/MainWindow.qml:174
+#: qml/MainWindow.qml:184
 #, kde-format
 msgid "Print"
 msgstr "اطبع"
 
-#: qml/MainWindow.qml:195 qml/MainWindow.qml:404
+#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
 #, kde-format
 msgid "About Skanpage"
 msgstr "عن ماسح الصفحات"
 
-#: qml/MainWindow.qml:202
+#: qml/MainWindow.qml:212
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "اضبط ماسح الصفحات..."
 
-#: qml/MainWindow.qml:210
+#: qml/MainWindow.qml:220
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "اضبط اختصارات لوحة المفاتيح…"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:228
 #, kde-format
 msgid "Quit"
 msgstr "أنهِ"
@@ -650,39 +663,60 @@ msgstr "أمحو مناطق المسح الضوئي"
 msgid "Close Preview"
 msgstr "أغلق المعاينة"
 
-#: qml/SettingsWindow.qml:20
+#: qml/SettingsWindow.qml:21
 #, kde-format
 msgid "Configure"
 msgstr "اضبط"
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:42
 #, kde-format
 msgid "Devices to show:"
 msgstr "الأجهزة المعروضة:"
 
-#: qml/SettingsWindow.qml:39
+#: qml/SettingsWindow.qml:43
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "الماسحات فقط"
 
-#: qml/SettingsWindow.qml:46
+#: qml/SettingsWindow.qml:50
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "الماسحات و الكاميرات والأجهزة الافتراضية"
 
-#: qml/SettingsWindow.qml:53
+#: qml/SettingsWindow.qml:57
 #, kde-format
 msgid "Default file format:"
 msgstr "تنسيق الملف المبدئي:"
 
-#: qml/SettingsWindow.qml:70
+#: qml/SettingsWindow.qml:74
 #, kde-format
 msgid "Default save location:"
 msgstr "موقع الحفظ المبدئي:"
 
-#: qml/SettingsWindow.qml:103
+#: qml/SettingsWindow.qml:91
+#, kde-format
+msgid "Title template:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:101
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview:"
+msgstr "عاين"
+
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
+#, kde-format
+msgid "Show samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:124
+#, kde-format
+msgid "Hide samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:251
 #, kde-format
 msgid "Close"
 msgstr "أغلق"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:45+0000\n"
+"POT-Creation-Date: 2025-03-16 00:45+0000\n"
 "PO-Revision-Date: 2025-02-13 13:42+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -28,6 +28,7 @@ msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
+#: qml/ExportDialog.qml:46 Skanpage.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "Нов документ"
@@ -118,45 +119,45 @@ msgstr "Неуспех при зареждане на изображението
 msgid "Failed to load PDF file!"
 msgstr "Неуспех при зареждане на PDF файл!"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:65
+#: main.cpp:67
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "Приложение на КДЕ за сканиране на много страници."
 
-#: main.cpp:67
+#: main.cpp:69
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:69 main.cpp:70
+#: main.cpp:71 main.cpp:72
 #, kde-format
 msgid "developer"
 msgstr "разработчик"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr ""
 "Име на Sane скенер устройство. Използвайте 'test' за тестване на "
 "устройството."
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "device"
 msgstr "устройство"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
 "Път към файл, в който се записват опциите на вашето устройство за сканиране."
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
@@ -204,190 +205,196 @@ msgctxt "@info"
 msgid "Searching for available devices"
 msgstr "Търсене на налични устройства."
 
-#: qml/DocumentList.qml:73
+#: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
 msgstr "Избиране на предишната страница"
 
-#: qml/DocumentList.qml:79
+#: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
 msgstr "Избиране на следващата страница"
 
-#: qml/DocumentList.qml:85
+#: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
 msgstr "Преместване нагоре на избраната страница"
 
-#: qml/DocumentList.qml:94
+#: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
 msgstr "Преместване надолу на избраната страница"
 
-#: qml/DocumentList.qml:205
+#: qml/DocumentList.qml:206
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Обработване на страницата..."
 
-#: qml/DocumentList.qml:218
+#: qml/DocumentList.qml:219
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Страница %1"
 
-#: qml/DocumentList.qml:229
+#: qml/DocumentList.qml:230
 #, kde-format
 msgid "Move Up"
 msgstr "Нагоре"
 
-#: qml/DocumentList.qml:239
+#: qml/DocumentList.qml:240
 #, kde-format
 msgid "Move Down"
 msgstr "Надолу"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
 #, kde-format
 msgid "Rotate Left"
 msgstr "Завъртване наляво"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
 #, kde-format
 msgid "Rotate Right"
 msgstr "Завъртване надясно"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
 #, kde-format
 msgid "Flip"
 msgstr "Обръщане"
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
 #, kde-format
 msgid "Save Page"
 msgstr "Запазване на страницата"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:173
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#, fuzzy, kde-format
+#| msgid "Save Page"
+msgid "Save Page As"
+msgstr "Запазване на страницата"
+
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
 msgid "Delete Page"
 msgstr "Изтриване на страница"
 
-#: qml/DocumentList.qml:296
+#: qml/DocumentList.qml:303
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 страница"
 msgstr[1] "%1 страници"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:312
 #, kde-format
 msgid "Flip Pages"
 msgstr "Обръщане на страниците"
 
-#: qml/DocumentList.qml:310
+#: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr "Обръщане на нечетните страници"
 
-#: qml/DocumentList.qml:317
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip Even Pages"
 msgstr "Обръщане на четните страници"
 
-#: qml/DocumentList.qml:324
+#: qml/DocumentList.qml:331
 #, kde-format
 msgid "Flip All Pages"
 msgstr "Обръщане на всички страници"
 
-#: qml/DocumentList.qml:332
+#: qml/DocumentList.qml:339
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Пренареждане на страниците"
 
-#: qml/DocumentList.qml:337
+#: qml/DocumentList.qml:344
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:344
+#: qml/DocumentList.qml:351
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:351
+#: qml/DocumentList.qml:358
 #, kde-format
 msgid "Reverse Order"
 msgstr "В обратен ред"
 
-#: qml/DocumentPage.qml:40
+#: qml/DocumentPage.qml:41
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
 msgstr "Този документ все още не съдържа страници"
 
-#: qml/DocumentPage.qml:41
+#: qml/DocumentPage.qml:42
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr "Щракнете върху бутона <interface>Сканиране</interface> за добавяне"
 
-#: qml/DocumentPage.qml:103
+#: qml/DocumentPage.qml:104
 #, kde-format
 msgid "Zoom In"
 msgstr "Увеличаване на мащаба"
 
-#: qml/DocumentPage.qml:112
+#: qml/DocumentPage.qml:113
 #, kde-format
 msgid "Zoom Out"
 msgstr "Намаляване на мащаба"
 
-#: qml/DocumentPage.qml:121
+#: qml/DocumentPage.qml:122
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Оптимално мащабиране"
 
-#: qml/DocumentPage.qml:137
+#: qml/DocumentPage.qml:138
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Мащабиране 100%"
 
-#: qml/ExportDialog.qml:36
+#: qml/ExportDialog.qml:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Експортиране в PDF"
 
-#: qml/ExportDialog.qml:44
+#: qml/ExportDialog.qml:45
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Заглавие:"
 
-#: qml/ExportDialog.qml:52
+#: qml/ExportDialog.qml:53
 #, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Файл:"
 
-#: qml/ExportDialog.qml:62
+#: qml/ExportDialog.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
 msgstr "Запазване като…"
 
-#: qml/ExportDialog.qml:94
+#: qml/ExportDialog.qml:96
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Оптично разпознаване на текст"
 
-#: qml/ExportDialog.qml:97
+#: qml/ExportDialog.qml:99
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Активиране"
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:105
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -427,79 +434,85 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "Сканирането се изпълнява."
 
-#: qml/MainWindow.qml:24
+#: qml/MainWindow.qml:25
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:78
+#: qml/MainWindow.qml:79
 #, kde-format
 msgid "Discard All"
 msgstr "Отхвърляне на всичко"
 
-#: qml/MainWindow.qml:87
+#: qml/MainWindow.qml:88
 #, kde-format
 msgid "Save All"
 msgstr "Запис на всички"
 
-#: qml/MainWindow.qml:96
+#: qml/MainWindow.qml:97
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save All As"
+msgstr "Запис на всички"
+
+#: qml/MainWindow.qml:106
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Импортиране"
 
-#: qml/MainWindow.qml:105
+#: qml/MainWindow.qml:115
 #, kde-format
 msgid "Export PDF"
 msgstr "Експортиране в PDF"
 
-#: qml/MainWindow.qml:113
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Preview"
 msgstr "Предварителен преглед"
 
-#: qml/MainWindow.qml:132
+#: qml/MainWindow.qml:142
 #, kde-format
 msgid "Scan"
 msgstr "Сканиране"
 
-#: qml/MainWindow.qml:147
+#: qml/MainWindow.qml:157
 #, kde-format
 msgid "Cancel"
 msgstr "Отказ"
 
-#: qml/MainWindow.qml:156
+#: qml/MainWindow.qml:166
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Показване на настройки на скенер"
 
-#: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Споделяне"
 
-#: qml/MainWindow.qml:174
+#: qml/MainWindow.qml:184
 #, kde-format
 msgid "Print"
 msgstr "Отпечатване"
 
-#: qml/MainWindow.qml:195 qml/MainWindow.qml:404
+#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
 #, kde-format
 msgid "About Skanpage"
 msgstr "Относно Skanpage"
 
-#: qml/MainWindow.qml:202
+#: qml/MainWindow.qml:212
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Конфигуриране на Skanpage…"
 
-#: qml/MainWindow.qml:210
+#: qml/MainWindow.qml:220
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Конфигуриране на клавишни комбинации…"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:228
 #, kde-format
 msgid "Quit"
 msgstr "Изход"
@@ -648,39 +661,60 @@ msgstr ""
 msgid "Close Preview"
 msgstr "Затваряне на предварителен преглед"
 
-#: qml/SettingsWindow.qml:20
+#: qml/SettingsWindow.qml:21
 #, kde-format
 msgid "Configure"
 msgstr "Настройване"
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:42
 #, kde-format
 msgid "Devices to show:"
 msgstr "Устройства за показване:"
 
-#: qml/SettingsWindow.qml:39
+#: qml/SettingsWindow.qml:43
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Само скенери"
 
-#: qml/SettingsWindow.qml:46
+#: qml/SettingsWindow.qml:50
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "Скенери, камери и виртуални устройства"
 
-#: qml/SettingsWindow.qml:53
+#: qml/SettingsWindow.qml:57
 #, kde-format
 msgid "Default file format:"
 msgstr "Файлов формат по подразбиране:"
 
-#: qml/SettingsWindow.qml:70
+#: qml/SettingsWindow.qml:74
 #, kde-format
 msgid "Default save location:"
 msgstr "Място за запис:"
 
-#: qml/SettingsWindow.qml:103
+#: qml/SettingsWindow.qml:91
+#, kde-format
+msgid "Title template:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:101
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview:"
+msgstr "Предварителен преглед"
+
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
+#, kde-format
+msgid "Show samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:124
+#, kde-format
+msgid "Hide samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:251
 #, kde-format
 msgid "Close"
 msgstr "Затваряне"

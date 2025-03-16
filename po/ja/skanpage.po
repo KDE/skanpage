@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:45+0000\n"
+"POT-Creation-Date: 2025-03-16 00:45+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -27,6 +27,7 @@ msgid "Your emails"
 msgstr "tarot@sdf.org"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
+#: qml/ExportDialog.qml:46 Skanpage.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "新しいドキュメント"
@@ -120,42 +121,42 @@ msgstr "画像を保存できませんでした"
 msgid "Failed to load PDF file!"
 msgstr "画像を保存できませんでした"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:65
+#: main.cpp:67
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "KDE の複数ページのスキャン用アプリケーション。"
 
-#: main.cpp:67
+#: main.cpp:69
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:69 main.cpp:70
+#: main.cpp:71 main.cpp:72
 #, kde-format
 msgid "developer"
 msgstr "開発者"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "SANE スキャナのデバイス名。テストデバイスには 'test' を使います。"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "device"
 msgstr "デバイス"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
@@ -203,194 +204,200 @@ msgctxt "@info"
 msgid "Searching for available devices"
 msgstr "利用可能なデバイスを検索しています。"
 
-#: qml/DocumentList.qml:73
+#: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
 msgstr "前のページを選択"
 
-#: qml/DocumentList.qml:79
+#: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
 msgstr "次のページを選択"
 
-#: qml/DocumentList.qml:85
+#: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
 msgstr "選択したページを上へ移動"
 
-#: qml/DocumentList.qml:94
+#: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
 msgstr "選択したページを下へ移動"
 
-#: qml/DocumentList.qml:205
+#: qml/DocumentList.qml:206
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "ページを処理しています..."
 
-#: qml/DocumentList.qml:218
+#: qml/DocumentList.qml:219
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "ページ %1"
 
-#: qml/DocumentList.qml:229
+#: qml/DocumentList.qml:230
 #, kde-format
 msgid "Move Up"
 msgstr "上へ移動"
 
-#: qml/DocumentList.qml:239
+#: qml/DocumentList.qml:240
 #, kde-format
 msgid "Move Down"
 msgstr "下へ移動"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
 #, kde-format
 msgid "Rotate Left"
 msgstr "左に回転"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
 #, kde-format
 msgid "Rotate Right"
 msgstr "右に回転"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
 #, kde-format
 msgid "Flip"
 msgstr "反転"
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
 #, kde-format
 msgid "Save Page"
 msgstr "ページを保存"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:173
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#, fuzzy, kde-format
+#| msgid "Save Page"
+msgid "Save Page As"
+msgstr "ページを保存"
+
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
 msgid "Delete Page"
 msgstr "ページを削除"
 
-#: qml/DocumentList.qml:296
+#: qml/DocumentList.qml:303
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "%1 ページ"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:312
 #, kde-format
 msgid "Flip Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:310
+#: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:317
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip Even Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:324
+#: qml/DocumentList.qml:331
 #, kde-format
 msgid "Flip All Pages"
 msgstr ""
 
-#: qml/DocumentList.qml:332
+#: qml/DocumentList.qml:339
 #, kde-format
 msgid "Reorder Pages"
 msgstr "ページの並べ替え"
 
-#: qml/DocumentList.qml:337
+#: qml/DocumentList.qml:344
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:344
+#: qml/DocumentList.qml:351
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:351
+#: qml/DocumentList.qml:358
 #, kde-format
 msgid "Reverse Order"
 msgstr "順序を反転"
 
-#: qml/DocumentPage.qml:40
+#: qml/DocumentPage.qml:41
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
 msgstr ""
 
-#: qml/DocumentPage.qml:41
+#: qml/DocumentPage.qml:42
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr ""
 
-#: qml/DocumentPage.qml:103
+#: qml/DocumentPage.qml:104
 #, kde-format
 msgid "Zoom In"
 msgstr "拡大"
 
-#: qml/DocumentPage.qml:112
+#: qml/DocumentPage.qml:113
 #, kde-format
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: qml/DocumentPage.qml:121
+#: qml/DocumentPage.qml:122
 #, kde-format
 msgid "Zoom Fit"
 msgstr "合わせる"
 
-#: qml/DocumentPage.qml:137
+#: qml/DocumentPage.qml:138
 #, kde-format
 msgid "Zoom 100%"
 msgstr "100%"
 
-#: qml/ExportDialog.qml:36
+#: qml/ExportDialog.qml:37
 #, fuzzy, kde-format
 #| msgid "Export PDF"
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF をエクスポート"
 
-#: qml/ExportDialog.qml:44
+#: qml/ExportDialog.qml:45
 #, fuzzy, kde-format
 #| msgid "Title:"
 msgctxt "@label"
 msgid "Title:"
 msgstr "タイトル:"
 
-#: qml/ExportDialog.qml:52
+#: qml/ExportDialog.qml:53
 #, fuzzy, kde-format
 #| msgid "File:"
 msgctxt "@label"
 msgid "File:"
 msgstr "ファイル:"
 
-#: qml/ExportDialog.qml:62
+#: qml/ExportDialog.qml:64
 #, fuzzy, kde-format
 #| msgid "Save All"
 msgctxt "@action:button"
 msgid "Save As…"
 msgstr "すべて保存"
 
-#: qml/ExportDialog.qml:94
+#: qml/ExportDialog.qml:96
 #, fuzzy, kde-format
 #| msgid "Enable optical character recognition (OCR)"
 msgid "Optical Character Recognition"
 msgstr "光学文字認識 (OCR) を有効にする"
 
-#: qml/ExportDialog.qml:97
+#: qml/ExportDialog.qml:99
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:105
 #, fuzzy, kde-format
 #| msgid ""
 #| "If your required language is not listed, please install Tesseract's "
@@ -433,79 +440,85 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "スキャン中です。"
 
-#: qml/MainWindow.qml:24
+#: qml/MainWindow.qml:25
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:78
+#: qml/MainWindow.qml:79
 #, kde-format
 msgid "Discard All"
 msgstr "すべて破棄"
 
-#: qml/MainWindow.qml:87
+#: qml/MainWindow.qml:88
 #, kde-format
 msgid "Save All"
 msgstr "すべて保存"
 
-#: qml/MainWindow.qml:96
+#: qml/MainWindow.qml:97
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save All As"
+msgstr "すべて保存"
+
+#: qml/MainWindow.qml:106
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:105
+#: qml/MainWindow.qml:115
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF をエクスポート"
 
-#: qml/MainWindow.qml:113
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Preview"
 msgstr "プレビュー"
 
-#: qml/MainWindow.qml:132
+#: qml/MainWindow.qml:142
 #, kde-format
 msgid "Scan"
 msgstr "スキャン"
 
-#: qml/MainWindow.qml:147
+#: qml/MainWindow.qml:157
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: qml/MainWindow.qml:156
+#: qml/MainWindow.qml:166
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "スキャナのオプションを表示"
 
-#: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "共有"
 
-#: qml/MainWindow.qml:174
+#: qml/MainWindow.qml:184
 #, kde-format
 msgid "Print"
 msgstr "印刷"
 
-#: qml/MainWindow.qml:195 qml/MainWindow.qml:404
+#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage について"
 
-#: qml/MainWindow.qml:202
+#: qml/MainWindow.qml:212
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage を設定..."
 
-#: qml/MainWindow.qml:210
+#: qml/MainWindow.qml:220
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "キーボードショートカットを設定..."
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:228
 #, kde-format
 msgid "Quit"
 msgstr "終了"
@@ -656,39 +669,60 @@ msgstr ""
 msgid "Close Preview"
 msgstr "プレビューを表示"
 
-#: qml/SettingsWindow.qml:20
+#: qml/SettingsWindow.qml:21
 #, kde-format
 msgid "Configure"
 msgstr "設定"
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:42
 #, kde-format
 msgid "Devices to show:"
 msgstr "表示するデバイス:"
 
-#: qml/SettingsWindow.qml:39
+#: qml/SettingsWindow.qml:43
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "スキャナのみ"
 
-#: qml/SettingsWindow.qml:46
+#: qml/SettingsWindow.qml:50
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "スキャナ、カメラおよび仮想デバイス"
 
-#: qml/SettingsWindow.qml:53
+#: qml/SettingsWindow.qml:57
 #, kde-format
 msgid "Default file format:"
 msgstr "デフォルトのファイル形式:"
 
-#: qml/SettingsWindow.qml:70
+#: qml/SettingsWindow.qml:74
 #, kde-format
 msgid "Default save location:"
 msgstr "デフォルトの保存場所:"
 
-#: qml/SettingsWindow.qml:103
+#: qml/SettingsWindow.qml:91
+#, kde-format
+msgid "Title template:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:101
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview:"
+msgstr "プレビュー"
+
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
+#, kde-format
+msgid "Show samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:124
+#, kde-format
+msgid "Hide samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:251
 #, kde-format
 msgid "Close"
 msgstr "閉じる"

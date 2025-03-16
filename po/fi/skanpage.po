@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:45+0000\n"
+"POT-Creation-Date: 2025-03-16 00:45+0000\n"
 "PO-Revision-Date: 2025-02-14 19:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -28,6 +28,7 @@ msgid "Your emails"
 msgstr "translator@legisign.org"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
+#: qml/ExportDialog.qml:46 Skanpage.cpp:82
 #, kde-format
 msgid "New document"
 msgstr "Uusi tiedosto"
@@ -118,42 +119,42 @@ msgstr "Kuvan lataaminen epäonnistui!"
 msgid "Failed to load PDF file!"
 msgstr "PDF-tiedoston lataaminen epäonnistui!"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:65
+#: main.cpp:67
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "KDE:n useamman sivun lukusovellus."
 
-#: main.cpp:67
+#: main.cpp:69
 #, kde-format
 msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:69 main.cpp:70
+#: main.cpp:71 main.cpp:72
 #, kde-format
 msgid "developer"
 msgstr "kehittäjä"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Sane scanner device name. Use 'test' for test device."
 msgstr "Sane-kuvanlukijalaitteen nimi. Käytä testilaitteelle nimeä ”test”."
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "device"
 msgstr "laite"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr "Tiedostosijainti, johon kuvanlukulaitteen valinnat vedostetaan."
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
@@ -201,190 +202,196 @@ msgctxt "@info"
 msgid "Searching for available devices"
 msgstr "Etsitään käytettävissä olevia laitteita"
 
-#: qml/DocumentList.qml:73
+#: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select previous page"
 msgstr "Valitse edellinen sivu"
 
-#: qml/DocumentList.qml:79
+#: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select next page"
 msgstr "Valitse seuraava sivu"
 
-#: qml/DocumentList.qml:85
+#: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move selected page up"
 msgstr "Siirrä valittua sivua ylemmäs"
 
-#: qml/DocumentList.qml:94
+#: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move selected page down"
 msgstr "Siirrä valittua sivua alemmas"
 
-#: qml/DocumentList.qml:205
+#: qml/DocumentList.qml:206
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page..."
 msgstr "Käsitellään sivua…"
 
-#: qml/DocumentList.qml:218
+#: qml/DocumentList.qml:219
 #, kde-format
 msgctxt "Page index"
 msgid "Page %1"
 msgstr "Sivu %1"
 
-#: qml/DocumentList.qml:229
+#: qml/DocumentList.qml:230
 #, kde-format
 msgid "Move Up"
 msgstr "Siirrä ylemmäs"
 
-#: qml/DocumentList.qml:239
+#: qml/DocumentList.qml:240
 #, kde-format
 msgid "Move Down"
 msgstr "Siirrä alemmas"
 
-#: qml/DocumentList.qml:249 qml/DocumentPage.qml:145
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
 #, kde-format
 msgid "Rotate Left"
 msgstr "Kierrä vasemmalle"
 
-#: qml/DocumentList.qml:255 qml/DocumentPage.qml:152
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
 #, kde-format
 msgid "Rotate Right"
 msgstr "Kierrä oikealle"
 
-#: qml/DocumentList.qml:261 qml/DocumentPage.qml:159
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
 #, kde-format
 msgid "Flip"
 msgstr "Pyöräytä"
 
-#: qml/DocumentList.qml:267 qml/DocumentPage.qml:166
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
 #, kde-format
 msgid "Save Page"
 msgstr "Tallenna sivu"
 
-#: qml/DocumentList.qml:273 qml/DocumentPage.qml:173
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#, fuzzy, kde-format
+#| msgid "Save Page"
+msgid "Save Page As"
+msgstr "Tallenna sivu"
+
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
 msgid "Delete Page"
 msgstr "Poista sivu"
 
-#: qml/DocumentList.qml:296
+#: qml/DocumentList.qml:303
 #, kde-format
 msgid "%1 page"
 msgid_plural "%1 pages"
 msgstr[0] "Yksi sivu"
 msgstr[1] "%1 sivua"
 
-#: qml/DocumentList.qml:305
+#: qml/DocumentList.qml:312
 #, kde-format
 msgid "Flip Pages"
 msgstr "Kierrä sivut"
 
-#: qml/DocumentList.qml:310
+#: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Odd Pages"
 msgstr "Kierrä parittomat sivut"
 
-#: qml/DocumentList.qml:317
+#: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip Even Pages"
 msgstr "Kierrä parilliset sivut"
 
-#: qml/DocumentList.qml:324
+#: qml/DocumentList.qml:331
 #, kde-format
 msgid "Flip All Pages"
 msgstr "Kierrä kaikki sivut"
 
-#: qml/DocumentList.qml:332
+#: qml/DocumentList.qml:339
 #, kde-format
 msgid "Reorder Pages"
 msgstr "Järjestä sivut uudelleen"
 
-#: qml/DocumentList.qml:337
+#: qml/DocumentList.qml:344
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 24 → 1234"
 msgstr "13 24 → 1234"
 
-#: qml/DocumentList.qml:344
+#: qml/DocumentList.qml:351
 #, kde-format
 msgctxt "Indicates how pages are going to be reordered"
 msgid "13 42 → 1234"
 msgstr "13 42 → 1234"
 
-#: qml/DocumentList.qml:351
+#: qml/DocumentList.qml:358
 #, kde-format
 msgid "Reverse Order"
 msgstr "Käänteinen järjestys"
 
-#: qml/DocumentPage.qml:40
+#: qml/DocumentPage.qml:41
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
 msgstr "Tiedostossa ei vielä ole sivuja"
 
-#: qml/DocumentPage.qml:41
+#: qml/DocumentPage.qml:42
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr "Lisää yksi napsauttamalla <interface>Lue</interface>"
 
-#: qml/DocumentPage.qml:103
+#: qml/DocumentPage.qml:104
 #, kde-format
 msgid "Zoom In"
 msgstr "Lähennä"
 
-#: qml/DocumentPage.qml:112
+#: qml/DocumentPage.qml:113
 #, kde-format
 msgid "Zoom Out"
 msgstr "Loitonna"
 
-#: qml/DocumentPage.qml:121
+#: qml/DocumentPage.qml:122
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Sovita"
 
-#: qml/DocumentPage.qml:137
+#: qml/DocumentPage.qml:138
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Lähennys 100 %"
 
-#: qml/ExportDialog.qml:36
+#: qml/ExportDialog.qml:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Vie PDF:ksi"
 
-#: qml/ExportDialog.qml:44
+#: qml/ExportDialog.qml:45
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Otsikko:"
 
-#: qml/ExportDialog.qml:52
+#: qml/ExportDialog.qml:53
 #, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Tiedosto:"
 
-#: qml/ExportDialog.qml:62
+#: qml/ExportDialog.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
 msgstr "Tallenna nimellä…"
 
-#: qml/ExportDialog.qml:94
+#: qml/ExportDialog.qml:96
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Optinen tekstintunnistus (OCR)"
 
-#: qml/ExportDialog.qml:97
+#: qml/ExportDialog.qml:99
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Käytä"
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:105
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -424,79 +431,85 @@ msgctxt "@info"
 msgid "Scan in progress."
 msgstr "Luku yhä meneillään."
 
-#: qml/MainWindow.qml:24
+#: qml/MainWindow.qml:25
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
 msgstr "%1 ― Skanpage"
 
-#: qml/MainWindow.qml:78
+#: qml/MainWindow.qml:79
 #, kde-format
 msgid "Discard All"
 msgstr "Hylkää kaikki"
 
-#: qml/MainWindow.qml:87
+#: qml/MainWindow.qml:88
 #, kde-format
 msgid "Save All"
 msgstr "Tallenna kaikki"
 
-#: qml/MainWindow.qml:96
+#: qml/MainWindow.qml:97
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save All As"
+msgstr "Tallenna kaikki"
+
+#: qml/MainWindow.qml:106
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Tuo"
 
-#: qml/MainWindow.qml:105
+#: qml/MainWindow.qml:115
 #, kde-format
 msgid "Export PDF"
 msgstr "Vie PDF"
 
-#: qml/MainWindow.qml:113
+#: qml/MainWindow.qml:123
 #, kde-format
 msgid "Preview"
 msgstr "Esikatselu"
 
-#: qml/MainWindow.qml:132
+#: qml/MainWindow.qml:142
 #, kde-format
 msgid "Scan"
 msgstr "Lue"
 
-#: qml/MainWindow.qml:147
+#: qml/MainWindow.qml:157
 #, kde-format
 msgid "Cancel"
 msgstr "Peru"
 
-#: qml/MainWindow.qml:156
+#: qml/MainWindow.qml:166
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Näytä laitevalinnat"
 
-#: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Jaa"
 
-#: qml/MainWindow.qml:174
+#: qml/MainWindow.qml:184
 #, kde-format
 msgid "Print"
 msgstr "Tulosta"
 
-#: qml/MainWindow.qml:195 qml/MainWindow.qml:404
+#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
 #, kde-format
 msgid "About Skanpage"
 msgstr "Tietoa Skanpagesta"
 
-#: qml/MainWindow.qml:202
+#: qml/MainWindow.qml:212
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpagen asetukset…"
 
-#: qml/MainWindow.qml:210
+#: qml/MainWindow.qml:220
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Aseta pikanäppäimet…"
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:228
 #, kde-format
 msgid "Quit"
 msgstr "Lopeta"
@@ -645,39 +658,60 @@ msgstr ""
 msgid "Close Preview"
 msgstr "Sulje esikatselu"
 
-#: qml/SettingsWindow.qml:20
+#: qml/SettingsWindow.qml:21
 #, kde-format
 msgid "Configure"
 msgstr "Asetukset"
 
-#: qml/SettingsWindow.qml:38
+#: qml/SettingsWindow.qml:42
 #, kde-format
 msgid "Devices to show:"
 msgstr "Näytettävät laitteet:"
 
-#: qml/SettingsWindow.qml:39
+#: qml/SettingsWindow.qml:43
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners only"
 msgstr "Vain kuvanlukijat"
 
-#: qml/SettingsWindow.qml:46
+#: qml/SettingsWindow.qml:50
 #, kde-format
 msgctxt "@option:radio Devices to show for scanning"
 msgid "Scanners, cameras, and virtual devices"
 msgstr "Kuvanlukijat, kamerat ja virtuaalilaitteet"
 
-#: qml/SettingsWindow.qml:53
+#: qml/SettingsWindow.qml:57
 #, kde-format
 msgid "Default file format:"
 msgstr "Oletustiedostomuoto:"
 
-#: qml/SettingsWindow.qml:70
+#: qml/SettingsWindow.qml:74
 #, kde-format
 msgid "Default save location:"
 msgstr "Oletustallennuspaikka:"
 
-#: qml/SettingsWindow.qml:103
+#: qml/SettingsWindow.qml:91
+#, kde-format
+msgid "Title template:"
+msgstr ""
+
+#: qml/SettingsWindow.qml:101
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview:"
+msgstr "Esikatselu"
+
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
+#, kde-format
+msgid "Show samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:124
+#, kde-format
+msgid "Hide samples"
+msgstr ""
+
+#: qml/SettingsWindow.qml:251
 #, kde-format
 msgid "Close"
 msgstr "Sulje"
