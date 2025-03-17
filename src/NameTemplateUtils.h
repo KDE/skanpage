@@ -11,7 +11,7 @@
 
 #include <QObject>
 
-typedef QList<std::tuple<QString, QString, std::function<QString(const QString &)>>> SampleType; // <sample, description, parse function>
+typedef QList<std::tuple<QString, QString, std::function<QString()>>> SampleType; // <sample, description, parse function>
 
 class NameTemplateUtils: public QObject
 {
@@ -34,15 +34,15 @@ private:
     // ------------------------------------------------------------------------------------------------------------------------ //
 
     // ----- function to parse sample ------- //
-    static QString getYear(const QString &path);
-    static QString getShortYear(const QString &path);
-    static QString getMonth(const QString &path);
-    static QString getDay(const QString &path);
-    static QString getHour(const QString &path);
-    static QString getMinute(const QString &path);
-    static QString getSecond(const QString &path);
-    static QString getFullDate(const QString &path);
-    static QString getFullTime(const QString &path);
+    static QString getYear();
+    static QString getShortYear();
+    static QString getMonth();
+    static QString getDay();
+    static QString getHour();
+    static QString getMinute();
+    static QString getSecond();
+    static QString getFullDate();
+    static QString getFullTime();
     // ---------------------------------------- //
     static QString iteratorToString(int i, int n); // format: dddd (0001, 0002, 0003 ....)
     static QString iteratorToString(int i); // format: (d) ( (1), (2), (3) ...)

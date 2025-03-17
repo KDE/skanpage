@@ -121,8 +121,13 @@ Window {
                     cursorShape: Qt.PointingHandCursor
                     onClicked: {
                         showSamples.isSamplesVisable = ! showSamples.isSamplesVisable
-                        if (showSamples.isSamplesVisable) {showSamples.text = i18n("Hide Samples"); samplesFrame.visible = true}
-                        else {showSamples.text = i18n("Show Samples"); samplesFrame.visible = false}
+                        if (showSamples.isSamplesVisable) {
+                            showSamples.text = i18n("Hide Samples")
+                            samplesFrame.visible = true
+                        } else {
+                            showSamples.text = i18n("Show Samples")
+                            samplesFrame.visible = false
+                        }
                     }
                 }
             }

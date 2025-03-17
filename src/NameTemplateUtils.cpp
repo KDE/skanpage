@@ -77,7 +77,7 @@ QString NameTemplateUtils::parseSamples(QString path)
     SampleType samples = NameTemplateUtils().m_samples;
     for (int i = 0; i < samples.count(); ++i) {
         if (path.contains(std::get<0>(samples[i]))) {
-            path.replace(std::get<0>(samples[i]), std::get<2>(samples[i])(path));
+            path.replace(std::get<0>(samples[i]), std::get<2>(samples[i])());
         }
     }
     return path;
@@ -89,49 +89,49 @@ QString NameTemplateUtils::parseSamples(QString folder, QString name, QString fo
     return parseSamples(path);
 }
 
-QString NameTemplateUtils::getYear(const QString &path)
+QString NameTemplateUtils::getYear()
 {
     return QString::number(QDateTime::currentDateTime().date().year());
 }
 
-QString NameTemplateUtils::getShortYear(const QString &path)
+QString NameTemplateUtils::getShortYear()
 {
     return QString::number(QDateTime::currentDateTime().date().year()).right(2);
 }
 
-QString NameTemplateUtils::getMonth(const QString &path)
+QString NameTemplateUtils::getMonth()
 {
     return QString::number(QDateTime::currentDateTime().date().month());
 }
 
-QString NameTemplateUtils::getDay(const QString &path)
+QString NameTemplateUtils::getDay()
 {
     return QString::number(QDateTime::currentDateTime().date().day());
 }
 
-QString NameTemplateUtils::getHour(const QString &path)
+QString NameTemplateUtils::getHour()
 {
     return QString::number(QDateTime::currentDateTime().time().hour());
 }
 
-QString NameTemplateUtils::getMinute(const QString &path)
+QString NameTemplateUtils::getMinute()
 {
     return QString::number(QDateTime::currentDateTime().time().minute());
 }
 
-QString NameTemplateUtils::getSecond(const QString &path)
+QString NameTemplateUtils::getSecond()
 {
     return QString::number(QDateTime::currentDateTime().time().second());
 }
 
-QString NameTemplateUtils::getFullDate(const QString &path)
+QString NameTemplateUtils::getFullDate()
 {
-    return getYear(path) + QLatin1Char('_') + getMonth(path) + QLatin1Char('_') + getDay(path);
+    return getYear() + QLatin1Char('_') + getMonth() + QLatin1Char('_') + getDay();
 }
 
-QString NameTemplateUtils::getFullTime(const QString &path)
+QString NameTemplateUtils::getFullTime()
 {
-    return getHour(path) + QLatin1Char('-') + getMinute(path) + QLatin1Char('-') + getSecond(path);
+    return getHour() + QLatin1Char('-') + getMinute() + QLatin1Char('-') + getSecond();
 }
 
 QString NameTemplateUtils::iteratorToString(int i, int n)
