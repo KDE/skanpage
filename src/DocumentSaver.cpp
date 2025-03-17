@@ -94,7 +94,8 @@ void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPa
     }
 
     if (type == SkanpageUtils::EntireDocument || type == SkanpageUtils::PageSelection) {
-        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as PDF."));
+        Q_EMIT showUserMessage(SkanpageUtils::InformationMessage,
+                               i18nc("@info: user message to confirm the save process and the filename", "Document saved as '%1'.", fileUrl.fileName()));
     }
 
     if (type == SkanpageUtils::EntireDocument) {
@@ -129,7 +130,9 @@ void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::
     }
 
     Q_EMIT fileSaved({fileUrl}, {localName}, document);
-    Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved with OCR as PDF."));
+    Q_EMIT showUserMessage(
+        SkanpageUtils::InformationMessage,
+        i18nc("@info: user message to confirm the OCR and save process and the filename", "Document saved with OCR as '%1'.", fileUrl.fileName()));
 }
 
 void DocumentSaver::printPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page, bool firstPage)
@@ -226,7 +229,8 @@ void DocumentSaver::saveImage(const QUrl &fileUrl, const QFileInfo &destFileInfo
 
     if (success) {
         if (type == SkanpageUtils::EntireDocument || type == SkanpageUtils::PageSelection) {
-            Q_EMIT showUserMessage(SkanpageUtils::InformationMessage, i18n("Document saved as image."));
+            Q_EMIT showUserMessage(SkanpageUtils::InformationMessage,
+                                   i18nc("@info: user message to confirm the save process and the filename", "Document saved as '%1'.", fileUrl.fileName()));
         }
         if (type == SkanpageUtils::EntireDocument) {
             Q_EMIT fileSaved(fileUrls, localNames, document);
@@ -235,7 +239,9 @@ void DocumentSaver::saveImage(const QUrl &fileUrl, const QFileInfo &destFileInfo
         }
     } else {
         if (type == SkanpageUtils::EntireDocument || type == SkanpageUtils::PageSelection) {
-            Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18n("Failed to save document as image."));
+            Q_EMIT showUserMessage(
+                SkanpageUtils::ErrorMessage,
+                i18nc("@info: user message to inform that the save process has failed", "Failed to save document as '%1'.", fileUrl.fileName()));
         }
     }
 }
