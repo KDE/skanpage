@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-16 00:45+0000\n"
+"POT-Creation-Date: 2025-03-17 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -36,8 +36,8 @@ msgstr "新文档"
 #: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
-msgid "%1 ... %2"
-msgstr "%1 ... %2"
+msgid "%1‥%2"
+msgstr ""
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -102,11 +102,15 @@ msgid "Failed to save image."
 msgstr "保存图像失败。"
 
 #: FormatModel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "format filter for a file dialog, all formats supported by the application "
+#| "will be displayed"
+#| msgid "All Supported Files"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
-msgid "All Supported Files"
+msgid "All supported files"
 msgstr "所有支持的文件"
 
 #: ImageImport.cpp:42
@@ -130,8 +134,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "KDE 多页扫描应用程序"
 
 #: main.cpp:69
-#, kde-format
-msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, fuzzy, kde-format
+#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
@@ -201,29 +206,35 @@ msgid "Searching for available devices"
 msgstr "正在扫描可用设备"
 
 #: qml/DocumentList.qml:74
-#, kde-format
-msgid "Select previous page"
+#, fuzzy, kde-format
+#| msgid "Select previous page"
+msgid "Select Previous Page"
 msgstr "选择上一页"
 
 #: qml/DocumentList.qml:80
-#, kde-format
-msgid "Select next page"
+#, fuzzy, kde-format
+#| msgid "Select next page"
+msgid "Select Next Page"
 msgstr "选择下一页"
 
 #: qml/DocumentList.qml:86
-#, kde-format
-msgid "Move selected page up"
+#, fuzzy, kde-format
+#| msgid "Move selected page up"
+msgid "Move Selected Page Up"
 msgstr "上移所选页面"
 
 #: qml/DocumentList.qml:95
-#, kde-format
-msgid "Move selected page down"
+#, fuzzy, kde-format
+#| msgid "Move selected page down"
+msgid "Move Selected Page Down"
 msgstr "下移所选页面"
 
 #: qml/DocumentList.qml:206
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Processing page..."
 msgctxt "@info"
-msgid "Processing page..."
+msgid "Processing page…"
 msgstr "正在处理页面..."
 
 #: qml/DocumentList.qml:219
@@ -716,3 +727,8 @@ msgstr "关闭"
 #, kde-format
 msgid "Share as:"
 msgstr "分享为："
+
+#~ msgctxt ""
+#~ "for file names, indicates a range: from file0000.png to file0014.png"
+#~ msgid "%1 ... %2"
+#~ msgstr "%1 ... %2"

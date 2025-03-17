@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-16 00:45+0000\n"
+"POT-Creation-Date: 2025-03-17 00:44+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr "Νέο έγγραφο"
 #: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
-msgid "%1 ... %2"
+msgid "%1‥%2"
 msgstr ""
 
 #: DocumentPrinter.cpp:33
@@ -104,12 +104,13 @@ msgid "Failed to save image."
 msgstr "Αποτυχία αποθήκευσης εικόνας."
 
 #: FormatModel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All files (*)"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
-msgid "All Supported Files"
-msgstr ""
+msgid "All supported files"
+msgstr "Όλα τα αρχεία (*)"
 
 #: ImageImport.cpp:42
 #, fuzzy, kde-format
@@ -137,7 +138,7 @@ msgstr "Εφαρμογή σάρωσης σελίδων από το KDE με βά
 #: main.cpp:69
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
-msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
@@ -207,29 +208,34 @@ msgid "Searching for available devices"
 msgstr "Αναζήτηση για διαθέσιμες συσκευές"
 
 #: qml/DocumentList.qml:74
-#, kde-format
-msgid "Select previous page"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete Page"
+msgid "Select Previous Page"
+msgstr "Διαγραφή σελίδας"
 
 #: qml/DocumentList.qml:80
-#, kde-format
-msgid "Select next page"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete Page"
+msgid "Select Next Page"
+msgstr "Διαγραφή σελίδας"
 
 #: qml/DocumentList.qml:86
-#, kde-format
-msgid "Move selected page up"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete Page"
+msgid "Move Selected Page Up"
+msgstr "Διαγραφή σελίδας"
 
 #: qml/DocumentList.qml:95
 #, kde-format
-msgid "Move selected page down"
+msgid "Move Selected Page Down"
 msgstr ""
 
 #: qml/DocumentList.qml:206
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Processing page..."
 msgctxt "@info"
-msgid "Processing page..."
+msgid "Processing page…"
 msgstr "Επεξεργασία σελίδας..."
 
 #: qml/DocumentList.qml:219
@@ -738,11 +744,6 @@ msgstr ""
 #~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
 #~ msgstr ""
 #~ "Δεν έχετε εικόνες σε αυτό το έγγραφο.<nl/><nl/>Να ξεκινήσει η σάρωση!"
-
-#, fuzzy
-#~| msgid "All files (*)"
-#~ msgid "All files"
-#~ msgstr "Όλα τα αρχεία (*)"
 
 #, fuzzy
 #~| msgid "Skanpage"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-16 00:45+0000\n"
+"POT-Creation-Date: 2025-03-17 00:44+0000\n"
 "PO-Revision-Date: 2023-12-25 08:33-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -36,8 +36,8 @@ msgstr "ਨਵਾਂ ਡੌਕੂਮੈਂਟ"
 #: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
-msgid "%1 ... %2"
-msgstr "%1 ... %2"
+msgid "%1‥%2"
+msgstr ""
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -107,7 +107,7 @@ msgstr "ਚਿੱਤਰ ਸੰਭਾਲਣ ਲਈ ਅਸਫ਼ਲ ਹੈ"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
-msgid "All Supported Files"
+msgid "All supported files"
 msgstr ""
 
 #: ImageImport.cpp:42
@@ -133,8 +133,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "KDE ਲਈ ਕਈ ਸਫ਼ਿਆਂ ਨੂੰ ਸਕੈਨ ਕਰਨ ਵਾਲੀ ਐਪਲੀਕੇਸ਼ਨ ਹੈ।"
 
 #: main.cpp:69
-#, kde-format
-msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, fuzzy, kde-format
+#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
@@ -206,29 +207,35 @@ msgid "Searching for available devices"
 msgstr "ਮੌਜੂਦ ਡਿਵਾਈਸਾਂ ਲਈ ਖੋਜ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।"
 
 #: qml/DocumentList.qml:74
-#, kde-format
-msgid "Select previous page"
+#, fuzzy, kde-format
+#| msgid "Select previous page"
+msgid "Select Previous Page"
 msgstr "ਪਿਛਲਾ ਸਫ਼ਾ ਚੁਣੋ"
 
 #: qml/DocumentList.qml:80
-#, kde-format
-msgid "Select next page"
+#, fuzzy, kde-format
+#| msgid "Select next page"
+msgid "Select Next Page"
 msgstr "ਅਗਲਾ ਸਫ਼ਾ ਚੁਣੋ"
 
 #: qml/DocumentList.qml:86
-#, kde-format
-msgid "Move selected page up"
+#, fuzzy, kde-format
+#| msgid "Move selected page up"
+msgid "Move Selected Page Up"
 msgstr "ਚੁਣੇ ਸਫ਼ੇ ਨੂੰ ਉੱਤੇ ਭੇਜੋ"
 
 #: qml/DocumentList.qml:95
-#, kde-format
-msgid "Move selected page down"
+#, fuzzy, kde-format
+#| msgid "Move selected page down"
+msgid "Move Selected Page Down"
 msgstr "ਚੁਣੇ ਸਫ਼ੇ ਨੂੰ ਹੇਠਾਂ ਭੇਜੋ"
 
 #: qml/DocumentList.qml:206
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Processing page..."
 msgctxt "@info"
-msgid "Processing page..."
+msgid "Processing page…"
 msgstr "...ਸਫ਼ੇ ਉੱਤੇ ਕਾਰਵਾਈ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ"
 
 #: qml/DocumentList.qml:219
@@ -733,6 +740,11 @@ msgstr "ਬੰਦ ਕਰੋ"
 #, kde-format
 msgid "Share as:"
 msgstr "ਇੰਝ ਸਾਂਝਾ ਕਰੋ:"
+
+#~ msgctxt ""
+#~ "for file names, indicates a range: from file0000.png to file0014.png"
+#~ msgid "%1 ... %2"
+#~ msgstr "%1 ... %2"
 
 #~ msgid "Click and drag to select another area"
 #~ msgstr "ਹੋਰ ਖੇਤਰ ਨੂੰ ਚੁਣਨ ਲਈ ਕਲਿੱਕ ਕਰਕੇ ਖਿੱਚੋ"

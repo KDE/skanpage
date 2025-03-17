@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-16 00:45+0000\n"
-"PO-Revision-Date: 2025-03-13 00:54+0100\n"
+"POT-Creation-Date: 2025-03-17 00:44+0000\n"
+"PO-Revision-Date: 2025-03-16 04:24+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -38,8 +38,8 @@ msgstr "Documento nuevo"
 #: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
-msgid "%1 ... %2"
-msgstr "%1 … %2"
+msgid "%1‥%2"
+msgstr ""
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -104,11 +104,15 @@ msgid "Failed to save image."
 msgstr "No se ha podido guardar la imagen."
 
 #: FormatModel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "format filter for a file dialog, all formats supported by the application "
+#| "will be displayed"
+#| msgid "All Supported Files"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
-msgid "All Supported Files"
+msgid "All supported files"
 msgstr "Todos los archivos permitidos"
 
 #: ImageImport.cpp:42
@@ -132,8 +136,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Aplicación de escaneo multipágina creada por KDE."
 
 #: main.cpp:69
-#, kde-format
-msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, fuzzy, kde-format
+#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
@@ -207,29 +212,35 @@ msgid "Searching for available devices"
 msgstr "Buscando los dispositivos disponibles"
 
 #: qml/DocumentList.qml:74
-#, kde-format
-msgid "Select previous page"
+#, fuzzy, kde-format
+#| msgid "Select previous page"
+msgid "Select Previous Page"
 msgstr "Seleccionar página anterior"
 
 #: qml/DocumentList.qml:80
-#, kde-format
-msgid "Select next page"
+#, fuzzy, kde-format
+#| msgid "Select next page"
+msgid "Select Next Page"
 msgstr "Seleccionar página siguiente"
 
 #: qml/DocumentList.qml:86
-#, kde-format
-msgid "Move selected page up"
+#, fuzzy, kde-format
+#| msgid "Move selected page up"
+msgid "Move Selected Page Up"
 msgstr "Subir página seleccionada"
 
 #: qml/DocumentList.qml:95
-#, kde-format
-msgid "Move selected page down"
+#, fuzzy, kde-format
+#| msgid "Move selected page down"
+msgid "Move Selected Page Down"
 msgstr "Bajar página seleccionada"
 
 #: qml/DocumentList.qml:206
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Processing page..."
 msgctxt "@info"
-msgid "Processing page..."
+msgid "Processing page…"
 msgstr "Procesando página…"
 
 #: qml/DocumentList.qml:219
@@ -269,10 +280,9 @@ msgid "Save Page"
 msgstr "Guardar página"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Guardar página"
+msgstr "Guardar página como"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -452,10 +462,9 @@ msgid "Save All"
 msgstr "Guardar todo"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Guardar todo"
+msgstr "Guardar todo como"
 
 #: qml/MainWindow.qml:106
 #, kde-format
@@ -697,23 +706,22 @@ msgstr "Ubicación predeterminada donde guardar:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Plantilla de título:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Vista previa"
+msgstr "Vista previa:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Show samples"
-msgstr ""
+msgstr "Mostrar ejemplos"
 
 #: qml/SettingsWindow.qml:124
 #, kde-format
 msgid "Hide samples"
-msgstr ""
+msgstr "Ocultar ejemplos"
 
 #: qml/SettingsWindow.qml:251
 #, kde-format
@@ -724,3 +732,8 @@ msgstr "Cerrar"
 #, kde-format
 msgid "Share as:"
 msgstr "Compartir como:"
+
+#~ msgctxt ""
+#~ "for file names, indicates a range: from file0000.png to file0014.png"
+#~ msgid "%1 ... %2"
+#~ msgstr "%1 … %2"

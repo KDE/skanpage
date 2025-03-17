@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-16 00:45+0000\n"
+"POT-Creation-Date: 2025-03-17 00:44+0000\n"
 "PO-Revision-Date: 2022-04-07 18:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -35,8 +35,8 @@ msgstr "Nový dokument"
 #: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
-msgid "%1 ... %2"
-msgstr "%1 ... %2"
+msgid "%1‥%2"
+msgstr ""
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -104,12 +104,13 @@ msgid "Failed to save image."
 msgstr "Zlyhalo uloženie obrázku"
 
 #: FormatModel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All files (*)"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
-msgid "All Supported Files"
-msgstr ""
+msgid "All supported files"
+msgstr "Všetky súbory (*)"
 
 #: ImageImport.cpp:42
 #, fuzzy, kde-format
@@ -137,7 +138,7 @@ msgstr "Aplikácia na skenovanie stránok od KDE založená na libksane."
 #: main.cpp:69
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
-msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
@@ -210,29 +211,32 @@ msgid "Searching for available devices"
 msgstr "Hľadajú sa dostupné zariadenia."
 
 #: qml/DocumentList.qml:74
-#, kde-format
-msgid "Select previous page"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete Page"
+msgid "Select Previous Page"
+msgstr "Odstrániť stranu"
 
 #: qml/DocumentList.qml:80
-#, kde-format
-msgid "Select next page"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete Page"
+msgid "Select Next Page"
+msgstr "Odstrániť stranu"
 
 #: qml/DocumentList.qml:86
-#, kde-format
-msgid "Move selected page up"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete Page"
+msgid "Move Selected Page Up"
+msgstr "Odstrániť stranu"
 
 #: qml/DocumentList.qml:95
 #, kde-format
-msgid "Move selected page down"
+msgid "Move Selected Page Down"
 msgstr ""
 
 #: qml/DocumentList.qml:206
 #, kde-kuit-format
 msgctxt "@info"
-msgid "Processing page..."
+msgid "Processing page…"
 msgstr ""
 
 #: qml/DocumentList.qml:219
@@ -737,6 +741,11 @@ msgstr ""
 msgid "Share as:"
 msgstr ""
 
+#~ msgctxt ""
+#~ "for file names, indicates a range: from file0000.png to file0014.png"
+#~ msgid "%1 ... %2"
+#~ msgstr "%1 ... %2"
+
 #, fuzzy
 #~| msgid "Save All"
 #~ msgid "Save"
@@ -746,11 +755,6 @@ msgstr ""
 #~ msgid ""
 #~ "You do not have any images in this document.<nl/><nl/>Start scanning!"
 #~ msgstr "V tomto dokumente nie sú žiadne obrázky.<nl/><nl/>Začnite skenovať!"
-
-#, fuzzy
-#~| msgid "All files (*)"
-#~ msgid "All files"
-#~ msgstr "Všetky súbory (*)"
 
 #, fuzzy
 #~| msgid "Skanpage"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-16 00:45+0000\n"
-"PO-Revision-Date: 2025-03-12 07:44+0100\n"
+"POT-Creation-Date: 2025-03-17 00:44+0000\n"
+"PO-Revision-Date: 2025-03-16 07:45+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -37,8 +37,8 @@ msgstr "Nov dokument"
 #: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
-msgid "%1 ... %2"
-msgstr "%1 ... %2"
+msgid "%1‥%2"
+msgstr ""
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -103,11 +103,15 @@ msgid "Failed to save image."
 msgstr "Shranjevanje slike ni uspelo."
 
 #: FormatModel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "format filter for a file dialog, all formats supported by the application "
+#| "will be displayed"
+#| msgid "All Supported Files"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
-msgid "All Supported Files"
+msgid "All supported files"
 msgstr "Vse podprte datoteke"
 
 #: ImageImport.cpp:42
@@ -131,8 +135,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Aplikacija za optično branje več strani KDE."
 
 #: main.cpp:69
-#, kde-format
-msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, fuzzy, kde-format
+#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
@@ -206,29 +211,35 @@ msgid "Searching for available devices"
 msgstr "Iskanje razpoložljivih naprav"
 
 #: qml/DocumentList.qml:74
-#, kde-format
-msgid "Select previous page"
+#, fuzzy, kde-format
+#| msgid "Select previous page"
+msgid "Select Previous Page"
 msgstr "Izberi prejšnjo stran"
 
 #: qml/DocumentList.qml:80
-#, kde-format
-msgid "Select next page"
+#, fuzzy, kde-format
+#| msgid "Select next page"
+msgid "Select Next Page"
 msgstr "Izberi naslednjo stran"
 
 #: qml/DocumentList.qml:86
-#, kde-format
-msgid "Move selected page up"
+#, fuzzy, kde-format
+#| msgid "Move selected page up"
+msgid "Move Selected Page Up"
 msgstr "Premakni izbrano stran gor"
 
 #: qml/DocumentList.qml:95
-#, kde-format
-msgid "Move selected page down"
+#, fuzzy, kde-format
+#| msgid "Move selected page down"
+msgid "Move Selected Page Down"
 msgstr "Premakni izbrano stran dol"
 
 #: qml/DocumentList.qml:206
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Processing page..."
 msgctxt "@info"
-msgid "Processing page..."
+msgid "Processing page…"
 msgstr "Obdelovanje strani ..."
 
 #: qml/DocumentList.qml:219
@@ -268,10 +279,9 @@ msgid "Save Page"
 msgstr "Shrani stran"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Shrani stran"
+msgstr "Shrani stran kot"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -453,10 +463,9 @@ msgid "Save All"
 msgstr "Shrani vse"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Shrani vse"
+msgstr "Shrani vse kot"
 
 #: qml/MainWindow.qml:106
 #, kde-format
@@ -698,23 +707,22 @@ msgstr "Privzeto mesto shranjevanja:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Naslovna predloga:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Predogled"
+msgstr "Predogled:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Show samples"
-msgstr ""
+msgstr "Prikaži vzorce"
 
 #: qml/SettingsWindow.qml:124
 #, kde-format
 msgid "Hide samples"
-msgstr ""
+msgstr "Skrij vzorce"
 
 #: qml/SettingsWindow.qml:251
 #, kde-format
@@ -725,6 +733,11 @@ msgstr "Zapri"
 #, kde-format
 msgid "Share as:"
 msgstr "Postavi v skupno rabo kot:"
+
+#~ msgctxt ""
+#~ "for file names, indicates a range: from file0000.png to file0014.png"
+#~ msgid "%1 ... %2"
+#~ msgstr "%1 ... %2"
 
 #~ msgid "Click and drag to select another area"
 #~ msgstr "Kliknite in povlecite za izbiro drugega območja"

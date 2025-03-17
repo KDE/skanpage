@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-16 00:45+0000\n"
-"PO-Revision-Date: 2025-03-12 12:51+0300\n"
+"POT-Creation-Date: 2025-03-17 00:44+0000\n"
+"PO-Revision-Date: 2025-03-16 13:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -37,8 +37,8 @@ msgstr "Yeni belge"
 #: DocumentModel.cpp:80
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
-msgid "%1 ... %2"
-msgstr "%1 … %2"
+msgid "%1‥%2"
+msgstr ""
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -103,11 +103,15 @@ msgid "Failed to save image."
 msgstr "Görsel kaydedilemedi."
 
 #: FormatModel.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "format filter for a file dialog, all formats supported by the application "
+#| "will be displayed"
+#| msgid "All Supported Files"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
-msgid "All Supported Files"
+msgid "All supported files"
 msgstr "Tüm desteklenen dosyalar"
 
 #: ImageImport.cpp:42
@@ -131,8 +135,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "KDE tarafından yapılmış çoklu sayfa tarama uygulaması."
 
 #: main.cpp:69
-#, kde-format
-msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, fuzzy, kde-format
+#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
@@ -204,29 +209,35 @@ msgid "Searching for available devices"
 msgstr "Kullanılabilir aygıtlar aranıyor"
 
 #: qml/DocumentList.qml:74
-#, kde-format
-msgid "Select previous page"
+#, fuzzy, kde-format
+#| msgid "Select previous page"
+msgid "Select Previous Page"
 msgstr "Önceki sayfayı seç"
 
 #: qml/DocumentList.qml:80
-#, kde-format
-msgid "Select next page"
+#, fuzzy, kde-format
+#| msgid "Select next page"
+msgid "Select Next Page"
 msgstr "Sonraki sayfayı seç"
 
 #: qml/DocumentList.qml:86
-#, kde-format
-msgid "Move selected page up"
+#, fuzzy, kde-format
+#| msgid "Move selected page up"
+msgid "Move Selected Page Up"
 msgstr "Seçili sayfayı yukarı taşı"
 
 #: qml/DocumentList.qml:95
-#, kde-format
-msgid "Move selected page down"
+#, fuzzy, kde-format
+#| msgid "Move selected page down"
+msgid "Move Selected Page Down"
 msgstr "Seçili sayfayı aşağı taşı"
 
 #: qml/DocumentList.qml:206
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Processing page..."
 msgctxt "@info"
-msgid "Processing page..."
+msgid "Processing page…"
 msgstr "Sayfa işleniyor…"
 
 #: qml/DocumentList.qml:219
@@ -266,10 +277,9 @@ msgid "Save Page"
 msgstr "Sayfayı Kaydet"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Sayfayı Kaydet"
+msgstr "Sayfayı Farklı Kaydet"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -449,10 +459,9 @@ msgid "Save All"
 msgstr "Tümünü Kaydet"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Tümünü Kaydet"
+msgstr "Tümünü Farklı Kaydet"
 
 #: qml/MainWindow.qml:106
 #, kde-format
@@ -694,23 +703,22 @@ msgstr "Öntanımlı kaydetme konumu:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Başlık şablonu:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Önizleme"
+msgstr "Önizleme:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Show samples"
-msgstr ""
+msgstr "Örnekleri Göster"
 
 #: qml/SettingsWindow.qml:124
 #, kde-format
 msgid "Hide samples"
-msgstr ""
+msgstr "Örnekleri Gizle"
 
 #: qml/SettingsWindow.qml:251
 #, kde-format
@@ -721,6 +729,11 @@ msgstr "Kapat"
 #, kde-format
 msgid "Share as:"
 msgstr "Paylaş:"
+
+#~ msgctxt ""
+#~ "for file names, indicates a range: from file0000.png to file0014.png"
+#~ msgid "%1 ... %2"
+#~ msgstr "%1‥%2"
 
 #~ msgid "Click and drag to select another area"
 #~ msgstr "Başka bir alan seçmek için tıklayıp sürükle"
