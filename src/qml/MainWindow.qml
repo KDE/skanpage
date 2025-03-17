@@ -92,12 +92,15 @@ ApplicationWindow {
     }
 
     ShortcutsAction {
-        id: saveExtraDocAction
+        id: saveAsDocAction
         icon.name: "document-save"
         text: i18n("Save All As")
         shortcutsName: "Save As"
         enabled: skanpage.documentModel.count !== 0
-        onTriggered: saveAsFileDialog.open()
+        onTriggered: {
+            saveAsFileDialog.selectedFile = skanpage.nameTemplate.fileUrl()
+            saveAsFileDialog.open()
+        }
     }
 
     ShortcutsAction {
@@ -301,7 +304,7 @@ ApplicationWindow {
                 }
 
                 ToolButton {
-                    action: saveExtraDocAction
+                    action: saveAsDocAction
                 }
       
                 ToolButton {
@@ -365,12 +368,13 @@ ApplicationWindow {
                 splitViewPreferredWidth: skanpage.stateConfiguration.splitViewItemWidth
                 focus: true
 
-                onSaveSinglePage: function (pageNumber){
+                onSaveSinglePage: function (pageNumber) {
                     skanpage.documentModel.save(skanpage.nameTemplate.fileUrl(), [pageNumber])
                 }
 
-                onSaveSinglePageAs: function (pageNumber){
+                onSaveSinglePageAs: function (pageNumber) {
                     saveAsFileDialog.pageNumbers.push(pageNumber)
+                    saveAsFileDialog.selectedFile = skanpage.nameTemplate.fileUrl()
                     saveAsFileDialog.open()
                 }
             }
@@ -443,7 +447,7 @@ ApplicationWindow {
         id: saveAsFileDialog
 
         property var pageNumbers: []
-        selectedFile: skanpage.nameTemplate.fileUrl()
+        currentFolder: skanpage.configuration.defaultFolder
         fileMode: FileDialog.SaveFile
         nameFilters: skanpage.formatModel.writeFormatFilter()
         selectedNameFilter.index: skanpage.configuration.defaultNameFilterIndex
