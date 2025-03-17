@@ -468,18 +468,19 @@ ApplicationWindow {
     }
 
     GlobalMenu {
-       newDocAction: newDocAction
-       saveDocAction: saveDocAction
-       previewAction: previewAction
-       scanAction: scanAction
-       cancelAction: cancelAction
-       allOptionsAction: mainView.optionsPanel.allOptionsAction
-       showOptionsAction: showOptionsAction
-       printAction: printAction
-       showAboutAction: showAboutAction
-       reselectDevicesAction: mainView.optionsPanel.reselectDevicesAction
-       quitAction: quitAction
-       shareAction: shareAction
+        newDocAction: newDocAction
+        saveDocAction: saveDocAction
+        saveAsDocAction: saveAsDocAction
+        previewAction: previewAction
+        scanAction: scanAction
+        cancelAction: cancelAction
+        allOptionsAction: mainView.optionsPanel.allOptionsAction
+        showOptionsAction: showOptionsAction
+        printAction: printAction
+        showAboutAction: showAboutAction
+        reselectDevicesAction: mainView.optionsPanel.reselectDevicesAction
+        quitAction: quitAction
+        shareAction: shareAction
     }
 
     ExportDialog {

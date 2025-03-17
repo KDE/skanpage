@@ -11,6 +11,7 @@ MenuBar {
 
     property var newDocAction
     property var saveDocAction
+    property var saveAsDocAction
     property var printAction
     property var shareAction
     property var quitAction
@@ -37,6 +38,13 @@ MenuBar {
             icon.name: saveDocAction.icon.name
             onTriggered: saveDocAction.trigger()
             enabled: saveDocAction.enabled
+        }
+
+        MenuItem {
+            text: saveAsDocAction.text
+            icon.name: saveAsDocAction.icon.name
+            onTriggered: saveAsDocAction.trigger()
+            enabled: saveAsDocAction.enabled
         }
 
         MenuItem {
