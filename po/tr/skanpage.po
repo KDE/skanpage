@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 02:38+0000\n"
-"PO-Revision-Date: 2025-03-12 12:51+0300\n"
+"PO-Revision-Date: 2025-03-16 13:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -37,7 +37,7 @@ msgstr "Yeni belge"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1 ... %2"
-msgstr "%1 … %2"
+msgstr "%1‥%2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
