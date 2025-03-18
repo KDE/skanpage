@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-17 00:44+0000\n"
-"PO-Revision-Date: 2025-03-16 02:45+0100\n"
+"POT-Creation-Date: 2025-03-18 00:45+0000\n"
+"PO-Revision-Date: 2025-03-17 03:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -38,7 +38,7 @@ msgstr "ახალი დოკუმენტი"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1‥%2"
-msgstr ""
+msgstr "%1‥%2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -103,11 +103,7 @@ msgid "Failed to save image."
 msgstr "ფაილის შენახვის შეცდომა."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
@@ -135,8 +131,7 @@ msgid "Multi-page scanning application by KDE."
 msgstr "მრავალგვერდიანი სკანირების აპლიკაცია KDE-ის მიერ."
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
@@ -146,8 +141,9 @@ msgid "developer"
 msgstr "პროგრამისტი"
 
 #: main.cpp:83
-#, kde-format
-msgid "Sane scanner device name. Use 'test' for test device."
+#, fuzzy, kde-format
+#| msgid "Sane scanner device name. Use 'test' for test device."
+msgid "Sane scanner device name. Use “test” for test device."
 msgstr ""
 "Sane-ის სკანერის მოწყობილობის სახელი. სატესტო მოწყობილობისთვის გამოიყენეთ "
 "'test'."
@@ -164,13 +160,61 @@ msgstr ""
 "ფაილის ბილიკი, რომელშიც თქვენი სკანერის მოწყობილობის პარამეტრები ჩაიწერება."
 
 #: main.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "A local image or pdf file that shall be imported. Image formats must be "
+#| "supported by Qt."
 msgid ""
-"A local image or pdf file that shall be imported. Image formats must be "
+"A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
 "ლოკალური გამოსახულება, ან .pdf ფაილი, რომლის შემოტანაც გნებავთ. "
 "გამოსახულების ფორმატი მხარდაჭერილი უნდა იყოს Qt-ის მიერ."
+
+#: NameTemplateUtils.h:24
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: NameTemplateUtils.h:25
+#, kde-format
+msgid "Year (00–99)"
+msgstr ""
+
+#: NameTemplateUtils.h:26
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: NameTemplateUtils.h:27
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: NameTemplateUtils.h:28
+#, kde-format
+msgid "Hour"
+msgstr ""
+
+#: NameTemplateUtils.h:29
+#, kde-format
+msgid "Minute"
+msgstr ""
+
+#: NameTemplateUtils.h:30
+#, kde-format
+msgid "Second"
+msgstr ""
+
+#: NameTemplateUtils.h:31
+#, kde-format
+msgid "Full date"
+msgstr ""
+
+#: NameTemplateUtils.h:32
+#, kde-format
+msgid "Full time"
+msgstr ""
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -201,47 +245,44 @@ msgid "No devices found."
 msgstr "მოწყობილობები ვერ ვიპოვე."
 
 #: qml/DeviceSelection.qml:96
-#, kde-format
-msgid "Open selected device"
+#, fuzzy, kde-format
+#| msgid "Open selected device"
+msgid "Open Selected Device"
 msgstr "მონიშნული მოწყობილობის გახსნა"
 
 #: qml/DevicesLoading.qml:29
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Searching for available devices"
 msgctxt "@info"
-msgid "Searching for available devices"
+msgid "Searching for available devices…"
 msgstr "ხელმისაწვდომი მოწყობილობების ძებნა"
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
 msgstr "წინა გვერდის არჩევა"
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
 msgstr "შემდეგი გვერდის არჩევა"
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
-msgstr "მონიშნული გვერდის მაღლა ატანა"
+msgstr "მონიშნული გვერდების ატანა"
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
-msgstr "მონიშნული გვერდის დაბლა ჩამოტანა"
+msgstr "მონიშნული გვერდების ჩამოტანა"
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
-msgstr "გვერდს დამუშავება..."
+msgstr "გვერდის დამუშავება…"
 
 #: qml/DocumentList.qml:219
 #, kde-format
@@ -406,28 +447,32 @@ msgid "Enable"
 msgstr "ჩართვა"
 
 #: qml/ExportDialog.qml:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:usagetip"
+#| msgid ""
+#| "If the required languages are not listed, install Tesseract's language "
+#| "file with the system's package manager."
 msgctxt "@info:usagetip"
 msgid ""
-"If the required languages are not listed, install Tesseract's language file "
-"with the system's package manager."
+"If the required languages are not listed, install Tesseract’s language file "
+"with the system’s package manager."
 msgstr ""
 "თუ საჭირო ენა ჩამონათვალში არაა, დააყენეთ Tesseract-ის ენის პაკეტი თქვენი "
 "პაკეტების მმართველით."
 
-#: qml/GlobalMenu.qml:26
+#: qml/GlobalMenu.qml:27
 #, kde-format
 msgctxt "menu category"
 msgid "File"
 msgstr "ფაილი"
 
-#: qml/GlobalMenu.qml:68
+#: qml/GlobalMenu.qml:76
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
 msgstr "სკანირება"
 
-#: qml/GlobalMenu.qml:124
+#: qml/GlobalMenu.qml:132
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
@@ -440,9 +485,11 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "სკანირების ახალი პროცესი <nl/>%1 წამში დაიწყება"
 
 #: qml/InProgressPage.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Scan in progress."
 msgctxt "@info"
-msgid "Scan in progress."
+msgid "Scan in progress…"
 msgstr "მიმდინარეობს სკანირება."
 
 #: qml/MainWindow.qml:25
@@ -466,63 +513,63 @@ msgstr "ყველას შენახვა"
 msgid "Save All As"
 msgstr "ყველას შენახვა, როგორც"
 
-#: qml/MainWindow.qml:106
+#: qml/MainWindow.qml:109
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "შემოტანა"
 
-#: qml/MainWindow.qml:115
+#: qml/MainWindow.qml:118
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF-ად გატანა"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:126
 #, kde-format
 msgid "Preview"
 msgstr "მინიატურა"
 
-#: qml/MainWindow.qml:142
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Scan"
 msgstr "სკანირება"
 
-#: qml/MainWindow.qml:157
+#: qml/MainWindow.qml:160
 #, kde-format
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: qml/MainWindow.qml:166
+#: qml/MainWindow.qml:169
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "სკანერის პარამეტრების ჩვენება"
 
-#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "გაზიარება"
 
-#: qml/MainWindow.qml:184
+#: qml/MainWindow.qml:187
 #, kde-format
 msgid "Print"
 msgstr "დაბეჭდვა"
 
-#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
+#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage-ის შესახებ"
 
-#: qml/MainWindow.qml:212
+#: qml/MainWindow.qml:215
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage-ის მორგება…"
 
-#: qml/MainWindow.qml:220
+#: qml/MainWindow.qml:223
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "კლავიატურის მალსახმობების მორგება…"
 
-#: qml/MainWindow.qml:228
+#: qml/MainWindow.qml:231
 #, kde-format
 msgid "Quit"
 msgstr "&გასვლა"
@@ -706,24 +753,26 @@ msgstr "შენახვის ნაგულისხმები მდე�
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr "სათაურის შაბლონი"
+msgstr "სათაურის შაბლონი:"
 
 #: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Preview:"
 msgstr "მინიატურა:"
 
-#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
-#, kde-format
-msgid "Show samples"
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
+#, fuzzy, kde-format
+#| msgid "Show samples"
+msgid "Show Samples"
 msgstr "ნიმუშების ჩვენება"
 
-#: qml/SettingsWindow.qml:124
-#, kde-format
-msgid "Hide samples"
+#: qml/SettingsWindow.qml:125
+#, fuzzy, kde-format
+#| msgid "Hide samples"
+msgid "Hide Samples"
 msgstr "ნიმუშების დამალვა"
 
-#: qml/SettingsWindow.qml:251
+#: qml/SettingsWindow.qml:256
 #, kde-format
 msgid "Close"
 msgstr "დახურვა"

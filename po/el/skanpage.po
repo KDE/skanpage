@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-17 00:44+0000\n"
+"POT-Creation-Date: 2025-03-18 00:45+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -147,8 +147,9 @@ msgid "developer"
 msgstr "προγραμματιστής"
 
 #: main.cpp:83
-#, kde-format
-msgid "Sane scanner device name. Use 'test' for test device."
+#, fuzzy, kde-format
+#| msgid "Sane scanner device name. Use 'test' for test device."
+msgid "Sane scanner device name. Use “test” for test device."
 msgstr "Όνομα συσκευής σαρωτή sane. Δώστε 'test' για δοκιμή της συσκευής."
 
 #: main.cpp:84
@@ -164,8 +165,53 @@ msgstr ""
 #: main.cpp:91
 #, kde-format
 msgid ""
-"A local image or pdf file that shall be imported. Image formats must be "
+"A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
+msgstr ""
+
+#: NameTemplateUtils.h:24
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: NameTemplateUtils.h:25
+#, kde-format
+msgid "Year (00–99)"
+msgstr ""
+
+#: NameTemplateUtils.h:26
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: NameTemplateUtils.h:27
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: NameTemplateUtils.h:28
+#, kde-format
+msgid "Hour"
+msgstr ""
+
+#: NameTemplateUtils.h:29
+#, kde-format
+msgid "Minute"
+msgstr ""
+
+#: NameTemplateUtils.h:30
+#, kde-format
+msgid "Second"
+msgstr ""
+
+#: NameTemplateUtils.h:31
+#, kde-format
+msgid "Full date"
+msgstr ""
+
+#: NameTemplateUtils.h:32
+#, kde-format
+msgid "Full time"
 msgstr ""
 
 #: qml/ContentView.qml:18
@@ -197,14 +243,17 @@ msgid "No devices found."
 msgstr "Δε βρέθηκαν συσκευές."
 
 #: qml/DeviceSelection.qml:96
-#, kde-format
-msgid "Open selected device"
+#, fuzzy, kde-format
+#| msgid "Open selected device"
+msgid "Open Selected Device"
 msgstr "Άνοιγμα επιλεγμένης συσκευής"
 
 #: qml/DevicesLoading.qml:29
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Searching for available devices"
 msgctxt "@info"
-msgid "Searching for available devices"
+msgid "Searching for available devices…"
 msgstr "Αναζήτηση για διαθέσιμες συσκευές"
 
 #: qml/DocumentList.qml:74
@@ -407,23 +456,23 @@ msgstr ""
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
-"If the required languages are not listed, install Tesseract's language file "
-"with the system's package manager."
+"If the required languages are not listed, install Tesseract’s language file "
+"with the system’s package manager."
 msgstr ""
 
-#: qml/GlobalMenu.qml:26
+#: qml/GlobalMenu.qml:27
 #, kde-format
 msgctxt "menu category"
 msgid "File"
 msgstr "Αρχείο"
 
-#: qml/GlobalMenu.qml:68
+#: qml/GlobalMenu.qml:76
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: qml/GlobalMenu.qml:124
+#: qml/GlobalMenu.qml:132
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
@@ -439,7 +488,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Saving still in progress."
 msgctxt "@info"
-msgid "Scan in progress."
+msgid "Scan in progress…"
 msgstr "Αποθήκευση ακόμη σε εξέλιξη."
 
 #: qml/MainWindow.qml:25
@@ -465,65 +514,65 @@ msgstr "Αποθήκευση"
 msgid "Save All As"
 msgstr "Αποθήκευση"
 
-#: qml/MainWindow.qml:106
+#: qml/MainWindow.qml:109
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:115
+#: qml/MainWindow.qml:118
 #, kde-format
 msgid "Export PDF"
 msgstr ""
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:126
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:142
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: qml/MainWindow.qml:157
+#: qml/MainWindow.qml:160
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: qml/MainWindow.qml:166
+#: qml/MainWindow.qml:169
 #, fuzzy, kde-format
 #| msgid "Scanner Options"
 msgid "Show Scanner Options"
 msgstr "Επιλογές σαρωτή"
 
-#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: qml/MainWindow.qml:184
+#: qml/MainWindow.qml:187
 #, kde-format
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
+#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
 #, kde-format
 msgid "About Skanpage"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:212
+#: qml/MainWindow.qml:215
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Σχετικά με το Skanpage"
 
-#: qml/MainWindow.qml:220
+#: qml/MainWindow.qml:223
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:228
+#: qml/MainWindow.qml:231
 #, kde-format
 msgid "Quit"
 msgstr "Έξοδος"
@@ -716,17 +765,17 @@ msgstr ""
 msgid "Preview:"
 msgstr ""
 
-#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
-msgid "Show samples"
+msgid "Show Samples"
 msgstr ""
 
-#: qml/SettingsWindow.qml:124
+#: qml/SettingsWindow.qml:125
 #, kde-format
-msgid "Hide samples"
+msgid "Hide Samples"
 msgstr ""
 
-#: qml/SettingsWindow.qml:251
+#: qml/SettingsWindow.qml:256
 #, kde-format
 msgid "Close"
 msgstr "Κλείσιμο"

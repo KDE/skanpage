@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-17 00:44+0000\n"
+"POT-Creation-Date: 2025-03-18 00:45+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -145,8 +145,9 @@ msgid "developer"
 msgstr "डेवलपर"
 
 #: main.cpp:83
-#, kde-format
-msgid "Sane scanner device name. Use 'test' for test device."
+#, fuzzy, kde-format
+#| msgid "Sane scanner device name. Use 'test' for test device."
+msgid "Sane scanner device name. Use “test” for test device."
 msgstr "सेन स्कैनर डिवाइस का नाम। परीक्षण डिवाइस के लिए 'test' का उपयोग करें।"
 
 #: main.cpp:84
@@ -162,8 +163,53 @@ msgstr "एक फ़ाइल पथ जिसमें आपके स्क�
 #: main.cpp:91
 #, kde-format
 msgid ""
-"A local image or pdf file that shall be imported. Image formats must be "
+"A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
+msgstr ""
+
+#: NameTemplateUtils.h:24
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: NameTemplateUtils.h:25
+#, kde-format
+msgid "Year (00–99)"
+msgstr ""
+
+#: NameTemplateUtils.h:26
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: NameTemplateUtils.h:27
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: NameTemplateUtils.h:28
+#, kde-format
+msgid "Hour"
+msgstr ""
+
+#: NameTemplateUtils.h:29
+#, kde-format
+msgid "Minute"
+msgstr ""
+
+#: NameTemplateUtils.h:30
+#, kde-format
+msgid "Second"
+msgstr ""
+
+#: NameTemplateUtils.h:31
+#, kde-format
+msgid "Full date"
+msgstr ""
+
+#: NameTemplateUtils.h:32
+#, kde-format
+msgid "Full time"
 msgstr ""
 
 #: qml/ContentView.qml:18
@@ -195,14 +241,17 @@ msgid "No devices found."
 msgstr "कोई यंत्र नहीं मिले।"
 
 #: qml/DeviceSelection.qml:96
-#, kde-format
-msgid "Open selected device"
+#, fuzzy, kde-format
+#| msgid "Open selected device"
+msgid "Open Selected Device"
 msgstr "चयनित डिवाइस खोलें"
 
 #: qml/DevicesLoading.qml:29
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Searching for available devices"
 msgctxt "@info"
-msgid "Searching for available devices"
+msgid "Searching for available devices…"
 msgstr "उपलब्ध डिवाइसों की खोज"
 
 #: qml/DocumentList.qml:74
@@ -401,28 +450,32 @@ msgid "Enable"
 msgstr "सक्षम"
 
 #: qml/ExportDialog.qml:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:usagetip"
+#| msgid ""
+#| "If the required languages are not listed, install Tesseract's language "
+#| "file with the system's package manager."
 msgctxt "@info:usagetip"
 msgid ""
-"If the required languages are not listed, install Tesseract's language file "
-"with the system's package manager."
+"If the required languages are not listed, install Tesseract’s language file "
+"with the system’s package manager."
 msgstr ""
 "यदि आवश्यक भाषाएं सूचीबद्ध नहीं हैं, तो सिस्टम के पैकेज मैनेजर के साथ टेसेरैक्ट की भाषा फ़ाइल "
 "स्थापित करें।"
 
-#: qml/GlobalMenu.qml:26
+#: qml/GlobalMenu.qml:27
 #, kde-format
 msgctxt "menu category"
 msgid "File"
 msgstr "फ़ाइल"
 
-#: qml/GlobalMenu.qml:68
+#: qml/GlobalMenu.qml:76
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
 msgstr "स्कैन"
 
-#: qml/GlobalMenu.qml:124
+#: qml/GlobalMenu.qml:132
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
@@ -435,9 +488,11 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "अगला स्कैन <nl/>%1 सेकंड में शुरू होगा"
 
 #: qml/InProgressPage.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Scan in progress."
 msgctxt "@info"
-msgid "Scan in progress."
+msgid "Scan in progress…"
 msgstr "स्कैन प्रगति पर है."
 
 #: qml/MainWindow.qml:25
@@ -462,63 +517,63 @@ msgstr "सब को सुरक्षित करें"
 msgid "Save All As"
 msgstr "सब को सुरक्षित करें"
 
-#: qml/MainWindow.qml:106
+#: qml/MainWindow.qml:109
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "आयात"
 
-#: qml/MainWindow.qml:115
+#: qml/MainWindow.qml:118
 #, kde-format
 msgid "Export PDF"
 msgstr "पीडीएफ निर्यात करें"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:126
 #, kde-format
 msgid "Preview"
 msgstr "पूर्व दर्शन"
 
-#: qml/MainWindow.qml:142
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Scan"
 msgstr "स्कैन"
 
-#: qml/MainWindow.qml:157
+#: qml/MainWindow.qml:160
 #, kde-format
 msgid "Cancel"
 msgstr "रद्द करना"
 
-#: qml/MainWindow.qml:166
+#: qml/MainWindow.qml:169
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "स्कैनर विकल्प दिखाएँ"
 
-#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "शेयर करना"
 
-#: qml/MainWindow.qml:184
+#: qml/MainWindow.qml:187
 #, kde-format
 msgid "Print"
 msgstr "छाप"
 
-#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
+#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
 #, kde-format
 msgid "About Skanpage"
 msgstr "स्कैनपेज के बारे में"
 
-#: qml/MainWindow.qml:212
+#: qml/MainWindow.qml:215
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "स्कैनरपेज कॉन्फ़िगर करें…"
 
-#: qml/MainWindow.qml:220
+#: qml/MainWindow.qml:223
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "कीबोर्ड शॉर्टकट कॉन्फ़िगर करें…"
 
-#: qml/MainWindow.qml:228
+#: qml/MainWindow.qml:231
 #, kde-format
 msgid "Quit"
 msgstr "छोड़ना"
@@ -710,17 +765,17 @@ msgstr ""
 msgid "Preview:"
 msgstr "पूर्व दर्शन"
 
-#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
-msgid "Show samples"
+msgid "Show Samples"
 msgstr ""
 
-#: qml/SettingsWindow.qml:124
+#: qml/SettingsWindow.qml:125
 #, kde-format
-msgid "Hide samples"
+msgid "Hide Samples"
 msgstr ""
 
-#: qml/SettingsWindow.qml:251
+#: qml/SettingsWindow.qml:256
 #, kde-format
 msgid "Close"
 msgstr "बंद करना"

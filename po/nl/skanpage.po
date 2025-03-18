@@ -6,10 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-17 00:44+0000\n"
-"PO-Revision-Date: 2025-03-12 10:13+0100\n"
+"POT-Creation-Date: 2025-03-18 00:45+0000\n"
+"PO-Revision-Date: 2025-03-17 11:21+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr "Nieuw document"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1‥%2"
-msgstr ""
+msgstr "%1‥%2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -102,11 +102,7 @@ msgid "Failed to save image."
 msgstr "Afbeelding opslaan is mislukt."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
@@ -134,10 +130,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Toepassing voor scannen van meerdere pagina's door KDE."
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
-msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
 #, kde-format
@@ -145,8 +140,9 @@ msgid "developer"
 msgstr "ontwikkelaar"
 
 #: main.cpp:83
-#, kde-format
-msgid "Sane scanner device name. Use 'test' for test device."
+#, fuzzy, kde-format
+#| msgid "Sane scanner device name. Use 'test' for test device."
+msgid "Sane scanner device name. Use “test” for test device."
 msgstr "Apparaatnaam van Sane scanner. Gebruik 'test' voor het testapparaat."
 
 #: main.cpp:84
@@ -161,13 +157,61 @@ msgstr ""
 "Een bestandspad waarin de opties van uw scannerapparaat worden gedumpt."
 
 #: main.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "A local image or pdf file that shall be imported. Image formats must be "
+#| "supported by Qt."
 msgid ""
-"A local image or pdf file that shall be imported. Image formats must be "
+"A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
 "Een lokale afbeelding of pdf-bestand die geïmporteerd zou moeten worden. "
 "Afbeeldingsformaten moeten ondersteund worden door Qt."
+
+#: NameTemplateUtils.h:24
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: NameTemplateUtils.h:25
+#, kde-format
+msgid "Year (00–99)"
+msgstr ""
+
+#: NameTemplateUtils.h:26
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: NameTemplateUtils.h:27
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: NameTemplateUtils.h:28
+#, kde-format
+msgid "Hour"
+msgstr ""
+
+#: NameTemplateUtils.h:29
+#, kde-format
+msgid "Minute"
+msgstr ""
+
+#: NameTemplateUtils.h:30
+#, kde-format
+msgid "Second"
+msgstr ""
+
+#: NameTemplateUtils.h:31
+#, kde-format
+msgid "Full date"
+msgstr ""
+
+#: NameTemplateUtils.h:32
+#, kde-format
+msgid "Full time"
+msgstr ""
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -198,47 +242,44 @@ msgid "No devices found."
 msgstr "Geen apparaten gevonden."
 
 #: qml/DeviceSelection.qml:96
-#, kde-format
-msgid "Open selected device"
+#, fuzzy, kde-format
+#| msgid "Open selected device"
+msgid "Open Selected Device"
 msgstr "Geselecteerd apparaat openen"
 
 #: qml/DevicesLoading.qml:29
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Searching for available devices"
 msgctxt "@info"
-msgid "Searching for available devices"
+msgid "Searching for available devices…"
 msgstr "Naar beschikbare apparaten wordt gescand"
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
 msgstr "Vorig pagina selecteren"
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
 msgstr "Volgende pagina selecteren"
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
 msgstr "Geselecteerde pagina omhoog schuiven"
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
 msgstr "Geselecteerde pagina omlaag schuiven"
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
-msgstr "Pagina wordt verwerkt..."
+msgstr "Pagina wordt verwerkt…"
 
 #: qml/DocumentList.qml:219
 #, kde-format
@@ -277,10 +318,9 @@ msgid "Save Page"
 msgstr "Pagina opslaan"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Pagina opslaan"
+msgstr "Pagina opslaan als"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -404,28 +444,32 @@ msgid "Enable"
 msgstr "Inschakelen"
 
 #: qml/ExportDialog.qml:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:usagetip"
+#| msgid ""
+#| "If the required languages are not listed, install Tesseract's language "
+#| "file with the system's package manager."
 msgctxt "@info:usagetip"
 msgid ""
-"If the required languages are not listed, install Tesseract's language file "
-"with the system's package manager."
+"If the required languages are not listed, install Tesseract’s language file "
+"with the system’s package manager."
 msgstr ""
 "Als de vereiste talen niet in de lijst staat, installeer dan het taalbestand "
 "van Tesseract met uw pakketbeheerder."
 
-#: qml/GlobalMenu.qml:26
+#: qml/GlobalMenu.qml:27
 #, kde-format
 msgctxt "menu category"
 msgid "File"
 msgstr "Bestand"
 
-#: qml/GlobalMenu.qml:68
+#: qml/GlobalMenu.qml:76
 #, kde-format
 msgctxt "menu category"
 msgid "Scan"
 msgstr "Scan"
 
-#: qml/GlobalMenu.qml:124
+#: qml/GlobalMenu.qml:132
 #, kde-format
 msgctxt "menu category"
 msgid "Help"
@@ -438,9 +482,11 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "Volgende scan begint na<nl/>%1 s"
 
 #: qml/InProgressPage.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Scan in progress."
 msgctxt "@info"
-msgid "Scan in progress."
+msgid "Scan in progress…"
 msgstr "Scannen is bezig."
 
 #: qml/MainWindow.qml:25
@@ -460,68 +506,67 @@ msgid "Save All"
 msgstr "Alles opslaan"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Alles opslaan"
+msgstr "Alles opslaan als"
 
-#: qml/MainWindow.qml:106
+#: qml/MainWindow.qml:109
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Importeren"
 
-#: qml/MainWindow.qml:115
+#: qml/MainWindow.qml:118
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF exporteren"
 
-#: qml/MainWindow.qml:123
+#: qml/MainWindow.qml:126
 #, kde-format
 msgid "Preview"
 msgstr "Voorbeeld"
 
-#: qml/MainWindow.qml:142
+#: qml/MainWindow.qml:145
 #, kde-format
 msgid "Scan"
 msgstr "Scannen"
 
-#: qml/MainWindow.qml:157
+#: qml/MainWindow.qml:160
 #, kde-format
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: qml/MainWindow.qml:166
+#: qml/MainWindow.qml:169
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Scanneropties tonen"
 
-#: qml/MainWindow.qml:176 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Delen"
 
-#: qml/MainWindow.qml:184
+#: qml/MainWindow.qml:187
 #, kde-format
 msgid "Print"
 msgstr "Afdrukken"
 
-#: qml/MainWindow.qml:205 qml/MainWindow.qml:422
+#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
 #, kde-format
 msgid "About Skanpage"
 msgstr "Info over Skanpage"
 
-#: qml/MainWindow.qml:212
+#: qml/MainWindow.qml:215
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage configureren…"
 
-#: qml/MainWindow.qml:220
+#: qml/MainWindow.qml:223
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Sneltoetsen configureren…"
 
-#: qml/MainWindow.qml:228
+#: qml/MainWindow.qml:231
 #, kde-format
 msgid "Quit"
 msgstr "Afsluiten"
@@ -705,25 +750,26 @@ msgstr "Standaard opslaglocatie:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Titelsjabloon:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Voorbeeld"
+msgstr "Voorbeeld:"
 
-#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:125
-#, kde-format
-msgid "Show samples"
-msgstr ""
+#: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
+#, fuzzy, kde-format
+#| msgid "Show samples"
+msgid "Show Samples"
+msgstr "Samples tonen"
 
-#: qml/SettingsWindow.qml:124
-#, kde-format
-msgid "Hide samples"
-msgstr ""
+#: qml/SettingsWindow.qml:125
+#, fuzzy, kde-format
+#| msgid "Hide samples"
+msgid "Hide Samples"
+msgstr "Samples verbergen"
 
-#: qml/SettingsWindow.qml:251
+#: qml/SettingsWindow.qml:256
 #, kde-format
 msgid "Close"
 msgstr "Sluiten"
