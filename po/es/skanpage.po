@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:45+0000\n"
-"PO-Revision-Date: 2025-03-17 02:30+0100\n"
+"POT-Creation-Date: 2025-03-19 00:45+0000\n"
+"PO-Revision-Date: 2025-03-18 12:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -66,39 +66,41 @@ msgstr "No se ha proporcionado ninguna ruta de archivo."
 msgid "Nothing to save."
 msgstr "No hay nada que guardar."
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Ha ocurrido un error al guardar: %1."
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "Procesando la página %1 para guardar el documento."
 
-#: DocumentSaver.cpp:97
-#, kde-format
-msgid "Document saved as PDF."
+#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#, fuzzy, kde-format
+#| msgid "Document saved as PDF."
+msgctxt "@info: user message to confirm the save process and the filename"
+msgid "Document saved as '%1'."
 msgstr "Documento guardado como PDF."
 
-#: DocumentSaver.cpp:132
-#, kde-format
-msgid "Document saved with OCR as PDF."
+#: DocumentSaver.cpp:135
+#, fuzzy, kde-format
+#| msgid "Document saved with OCR as PDF."
+msgctxt ""
+"@info: user message to confirm the OCR and save process and the filename"
+msgid "Document saved with OCR as '%1'."
 msgstr "Documento guardado con OCR como PDF."
 
-#: DocumentSaver.cpp:229
-#, kde-format
-msgid "Document saved as image."
-msgstr "Documento guardado como imagen."
-
-#: DocumentSaver.cpp:238
-#, kde-format
-msgid "Failed to save document as image."
+#: DocumentSaver.cpp:244
+#, fuzzy, kde-format
+#| msgid "Failed to save document as image."
+msgctxt "@info: user message to inform that the save process has failed"
+msgid "Failed to save document as '%1'."
 msgstr "No se ha podido guardar el documento como imagen."
 
-#: DocumentSaver.cpp:258
+#: DocumentSaver.cpp:264
 #, kde-format
 msgid "Failed to save image."
 msgstr "No se ha podido guardar la imagen."
@@ -142,8 +144,7 @@ msgid "developer"
 msgstr "desarrollador"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr ""
 "Nombre de dispositivo de escáner Sane. Use «prueba» para probar el "
@@ -160,10 +161,7 @@ msgid "A file path in which the options of your scanner device are dumped."
 msgstr "La ruta del archivo donde se volcarán las opciones del escáner."
 
 #: main.cpp:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "A local image or pdf file that shall be imported. Image formats must be "
-#| "supported by Qt."
+#, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
@@ -174,47 +172,47 @@ msgstr ""
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Año"
 
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "Año (00–99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mes"
 
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Día"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Segundo"
 
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "Fecha completa"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "Hora completa"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -245,18 +243,15 @@ msgid "No devices found."
 msgstr "No se han encontrado dispositivos."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
 msgstr "Abrir el dispositivo seleccionado"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Buscando los dispositivos disponibles"
+msgstr "Buscando los dispositivos disponibles…"
 
 #: qml/DocumentList.qml:74
 #, kde-format
@@ -447,11 +442,7 @@ msgid "Enable"
 msgstr "Activar"
 
 #: qml/ExportDialog.qml:105
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract's language "
-#| "file with the system's package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
@@ -485,12 +476,10 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "El próximo escaneo empieza en<nl/>%1 s"
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Escaneo en curso."
+msgstr "Escaneo en curso…"
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -761,14 +750,12 @@ msgid "Preview:"
 msgstr "Vista previa:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
-#, fuzzy, kde-format
-#| msgid "Show samples"
+#, kde-format
 msgid "Show Samples"
 msgstr "Mostrar ejemplos"
 
 #: qml/SettingsWindow.qml:125
-#, fuzzy, kde-format
-#| msgid "Hide samples"
+#, kde-format
 msgid "Hide Samples"
 msgstr "Ocultar ejemplos"
 
@@ -781,3 +768,6 @@ msgstr "Cerrar"
 #, kde-format
 msgid "Share as:"
 msgstr "Compartir como:"
+
+#~ msgid "Document saved as image."
+#~ msgstr "Documento guardado como imagen."

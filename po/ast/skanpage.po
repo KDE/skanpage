@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:45+0000\n"
+"POT-Creation-Date: 2025-03-19 00:45+0000\n"
 "PO-Revision-Date: 2024-03-27 23:08+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -64,39 +64,38 @@ msgstr ""
 msgid "Nothing to save."
 msgstr ""
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr ""
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr ""
 
-#: DocumentSaver.cpp:97
+#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
 #, kde-format
-msgid "Document saved as PDF."
+msgctxt "@info: user message to confirm the save process and the filename"
+msgid "Document saved as '%1'."
 msgstr ""
 
-#: DocumentSaver.cpp:132
+#: DocumentSaver.cpp:135
 #, kde-format
-msgid "Document saved with OCR as PDF."
+msgctxt ""
+"@info: user message to confirm the OCR and save process and the filename"
+msgid "Document saved with OCR as '%1'."
 msgstr ""
 
-#: DocumentSaver.cpp:229
+#: DocumentSaver.cpp:244
 #, kde-format
-msgid "Document saved as image."
+msgctxt "@info: user message to inform that the save process has failed"
+msgid "Failed to save document as '%1'."
 msgstr ""
 
-#: DocumentSaver.cpp:238
-#, kde-format
-msgid "Failed to save document as image."
-msgstr ""
-
-#: DocumentSaver.cpp:258
+#: DocumentSaver.cpp:264
 #, kde-format
 msgid "Failed to save image."
 msgstr ""

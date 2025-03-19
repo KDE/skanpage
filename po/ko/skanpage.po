@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:45+0000\n"
+"POT-Creation-Date: 2025-03-19 00:45+0000\n"
 "PO-Revision-Date: 2024-12-24 19:13+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -64,39 +64,41 @@ msgstr "파일 경로를 지정하지 않았습니다."
 msgid "Nothing to save."
 msgstr "저장할 항목이 없습니다."
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "저장하는 중 오류 발생: %1."
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "문서를 저장하기 위해서 %1쪽을 처리하고 있습니다."
 
-#: DocumentSaver.cpp:97
-#, kde-format
-msgid "Document saved as PDF."
+#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#, fuzzy, kde-format
+#| msgid "Document saved as PDF."
+msgctxt "@info: user message to confirm the save process and the filename"
+msgid "Document saved as '%1'."
 msgstr "문서를 PDF로 저장했습니다."
 
-#: DocumentSaver.cpp:132
-#, kde-format
-msgid "Document saved with OCR as PDF."
+#: DocumentSaver.cpp:135
+#, fuzzy, kde-format
+#| msgid "Document saved with OCR as PDF."
+msgctxt ""
+"@info: user message to confirm the OCR and save process and the filename"
+msgid "Document saved with OCR as '%1'."
 msgstr "문서를 OCR 처리된 PDF로 저장했습니다."
 
-#: DocumentSaver.cpp:229
-#, kde-format
-msgid "Document saved as image."
-msgstr "문서를 그림으로 저장했습니다."
-
-#: DocumentSaver.cpp:238
-#, kde-format
-msgid "Failed to save document as image."
+#: DocumentSaver.cpp:244
+#, fuzzy, kde-format
+#| msgid "Failed to save document as image."
+msgctxt "@info: user message to inform that the save process has failed"
+msgid "Failed to save document as '%1'."
 msgstr "문서를 그림으로 저장할 수 없습니다."
 
-#: DocumentSaver.cpp:258
+#: DocumentSaver.cpp:264
 #, kde-format
 msgid "Failed to save image."
 msgstr "그림을 저장할 수 없습니다."
@@ -784,6 +786,9 @@ msgstr "닫기"
 #, kde-format
 msgid "Share as:"
 msgstr "다음으로 공유:"
+
+#~ msgid "Document saved as image."
+#~ msgstr "문서를 그림으로 저장했습니다."
 
 #~ msgctxt ""
 #~ "for file names, indicates a range: from file0000.png to file0014.png"

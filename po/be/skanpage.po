@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:45+0000\n"
+"POT-Creation-Date: 2025-03-19 00:45+0000\n"
 "PO-Revision-Date: 2025-01-10 10:25\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -68,39 +68,41 @@ msgstr "Не пададзены шлях да файла."
 msgid "Nothing to save."
 msgstr "Няма чаго захоўваць."
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Падчас захавання адбылася памылка: %1."
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "Апрацоўванне старонкі %1 для захавання дакумента."
 
-#: DocumentSaver.cpp:97
-#, kde-format
-msgid "Document saved as PDF."
+#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#, fuzzy, kde-format
+#| msgid "Document saved as PDF."
+msgctxt "@info: user message to confirm the save process and the filename"
+msgid "Document saved as '%1'."
 msgstr "Дакумент захаваны як PDF."
 
-#: DocumentSaver.cpp:132
-#, kde-format
-msgid "Document saved with OCR as PDF."
+#: DocumentSaver.cpp:135
+#, fuzzy, kde-format
+#| msgid "Document saved with OCR as PDF."
+msgctxt ""
+"@info: user message to confirm the OCR and save process and the filename"
+msgid "Document saved with OCR as '%1'."
 msgstr "Дакумент захаваны з дапамогай OCR як PDF."
 
-#: DocumentSaver.cpp:229
-#, kde-format
-msgid "Document saved as image."
-msgstr "Дакумент захаваны як выява."
-
-#: DocumentSaver.cpp:238
-#, kde-format
-msgid "Failed to save document as image."
+#: DocumentSaver.cpp:244
+#, fuzzy, kde-format
+#| msgid "Failed to save document as image."
+msgctxt "@info: user message to inform that the save process has failed"
+msgid "Failed to save document as '%1'."
 msgstr "Не ўдалося захаваць дакумент як выяву."
 
-#: DocumentSaver.cpp:258
+#: DocumentSaver.cpp:264
 #, kde-format
 msgid "Failed to save image."
 msgstr "Не ўдалося захаваць выяву."
@@ -790,6 +792,9 @@ msgstr "Закрыць"
 #, kde-format
 msgid "Share as:"
 msgstr "Абагуліць як:"
+
+#~ msgid "Document saved as image."
+#~ msgstr "Дакумент захаваны як выява."
 
 #~ msgctxt ""
 #~ "for file names, indicates a range: from file0000.png to file0014.png"

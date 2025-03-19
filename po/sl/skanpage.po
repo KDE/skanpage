@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:45+0000\n"
-"PO-Revision-Date: 2025-03-17 06:23+0100\n"
+"POT-Creation-Date: 2025-03-19 00:45+0000\n"
+"PO-Revision-Date: 2025-03-18 07:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -65,39 +65,41 @@ msgstr "Ni dana pot datoteke."
 msgid "Nothing to save."
 msgstr "Ni česa shraniti."
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Prišlo je do napake pri shranjevanju: %1."
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "Obdelava strani %1, da bi shranil dokument."
 
-#: DocumentSaver.cpp:97
-#, kde-format
-msgid "Document saved as PDF."
+#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#, fuzzy, kde-format
+#| msgid "Document saved as PDF."
+msgctxt "@info: user message to confirm the save process and the filename"
+msgid "Document saved as '%1'."
 msgstr "Dokument shranjen kot PDF."
 
-#: DocumentSaver.cpp:132
-#, kde-format
-msgid "Document saved with OCR as PDF."
+#: DocumentSaver.cpp:135
+#, fuzzy, kde-format
+#| msgid "Document saved with OCR as PDF."
+msgctxt ""
+"@info: user message to confirm the OCR and save process and the filename"
+msgid "Document saved with OCR as '%1'."
 msgstr "Dokument shranjen z OCR kot PDF."
 
-#: DocumentSaver.cpp:229
-#, kde-format
-msgid "Document saved as image."
-msgstr "Dokument shranjen kot slika."
-
-#: DocumentSaver.cpp:238
-#, kde-format
-msgid "Failed to save document as image."
+#: DocumentSaver.cpp:244
+#, fuzzy, kde-format
+#| msgid "Failed to save document as image."
+msgctxt "@info: user message to inform that the save process has failed"
+msgid "Failed to save document as '%1'."
 msgstr "Shranjevanje dokumenta kot slike ni uspelo."
 
-#: DocumentSaver.cpp:258
+#: DocumentSaver.cpp:264
 #, kde-format
 msgid "Failed to save image."
 msgstr "Shranjevanje slike ni uspelo."
@@ -141,11 +143,10 @@ msgid "developer"
 msgstr "razvijalec"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr ""
-"Ime naprave optičnega bralnika Sane. Uporabite 'test' za preizkusno napravo."
+"Ime naprave optičnega bralnika Sane. Uporabite “test” za preizkusno napravo."
 
 #: main.cpp:84
 #, kde-format
@@ -159,61 +160,58 @@ msgstr ""
 "Pot datoteke v kateri so izvržene možnosti vaše naprave za optično branje."
 
 #: main.cpp:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "A local image or pdf file that shall be imported. Image formats must be "
-#| "supported by Qt."
+#, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
-"Lokalna slika ali datoteka pdf, ki naj bi bila uvožena. Formate slik mora "
+"Lokalna slika ali datoteka PDF, ki naj bo uvožena. Formate slik mora "
 "podpirati Qt."
 
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Leto"
 
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "Leto (00-99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mesec"
 
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Dan"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Ura"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minuta"
 
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Sekunda"
 
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "Polni datum"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "Polni čas"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -244,18 +242,15 @@ msgid "No devices found."
 msgstr "Ni najdenih naprav."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
 msgstr "Odpri izbrano napravo"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Iskanje razpoložljivih naprav"
+msgstr "Iskanje razpoložljivih naprav…"
 
 #: qml/DocumentList.qml:74
 #, kde-format
@@ -448,11 +443,7 @@ msgid "Enable"
 msgstr "Omogoči"
 
 #: qml/ExportDialog.qml:105
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract's language "
-#| "file with the system's package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
@@ -486,12 +477,10 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "Naslednje optično branje se začne po <nl/>%1 s"
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Optično branje v teku."
+msgstr "Optično branje v teku…"
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -762,14 +751,12 @@ msgid "Preview:"
 msgstr "Predogled:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
-#, fuzzy, kde-format
-#| msgid "Show samples"
+#, kde-format
 msgid "Show Samples"
 msgstr "Prikaži vzorce"
 
 #: qml/SettingsWindow.qml:125
-#, fuzzy, kde-format
-#| msgid "Hide samples"
+#, kde-format
 msgid "Hide Samples"
 msgstr "Skrij vzorce"
 
@@ -782,6 +769,9 @@ msgstr "Zapri"
 #, kde-format
 msgid "Share as:"
 msgstr "Postavi v skupno rabo kot:"
+
+#~ msgid "Document saved as image."
+#~ msgstr "Dokument shranjen kot slika."
 
 #~ msgctxt ""
 #~ "for file names, indicates a range: from file0000.png to file0014.png"

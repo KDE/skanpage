@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:45+0000\n"
+"POT-Creation-Date: 2025-03-19 00:45+0000\n"
 "PO-Revision-Date: 2024-09-18 15:28+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -64,39 +64,41 @@ msgstr "Nebyla zadána cesta k souboru."
 msgid "Nothing to save."
 msgstr "Nic k uložení"
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:117
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Při ukládání souboru došlo k chybě: %1."
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:126 DocumentSaver.cpp:200
+#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr ""
 
-#: DocumentSaver.cpp:97
-#, kde-format
-msgid "Document saved as PDF."
+#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#, fuzzy, kde-format
+#| msgid "Document saved as PDF."
+msgctxt "@info: user message to confirm the save process and the filename"
+msgid "Document saved as '%1'."
 msgstr "Dokument uložen jako PDF."
 
-#: DocumentSaver.cpp:132
-#, kde-format
-msgid "Document saved with OCR as PDF."
+#: DocumentSaver.cpp:135
+#, fuzzy, kde-format
+#| msgid "Document saved with OCR as PDF."
+msgctxt ""
+"@info: user message to confirm the OCR and save process and the filename"
+msgid "Document saved with OCR as '%1'."
 msgstr "Dokument uložen s OCR jako PDF."
 
-#: DocumentSaver.cpp:229
-#, kde-format
-msgid "Document saved as image."
-msgstr "Dokument uložen jako obrázek."
-
-#: DocumentSaver.cpp:238
-#, kde-format
-msgid "Failed to save document as image."
+#: DocumentSaver.cpp:244
+#, fuzzy, kde-format
+#| msgid "Failed to save document as image."
+msgctxt "@info: user message to inform that the save process has failed"
+msgid "Failed to save document as '%1'."
 msgstr "Ukládání dokumentu do obrázku selhalo."
 
-#: DocumentSaver.cpp:258
+#: DocumentSaver.cpp:264
 #, kde-format
 msgid "Failed to save image."
 msgstr "Ukládání obrázku selhalo."
@@ -779,6 +781,9 @@ msgstr "Zavřít"
 #, kde-format
 msgid "Share as:"
 msgstr "Sdílet jako:"
+
+#~ msgid "Document saved as image."
+#~ msgstr "Dokument uložen jako obrázek."
 
 #~ msgctxt ""
 #~ "for file names, indicates a range: from file0000.png to file0014.png"
