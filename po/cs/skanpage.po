@@ -172,7 +172,7 @@ msgstr ""
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Rok"
 
 #: NameTemplateUtils.h:25
 #, kde-format
@@ -182,7 +182,7 @@ msgstr ""
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Měsíc"
 
 #: NameTemplateUtils.h:27
 #, kde-format
@@ -202,7 +202,7 @@ msgstr ""
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Sekunda"
 
 #: NameTemplateUtils.h:31
 #, kde-format
@@ -757,10 +757,9 @@ msgid "Title template:"
 msgstr ""
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Náhled"
+msgstr "Náhled:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format

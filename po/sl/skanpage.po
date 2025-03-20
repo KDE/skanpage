@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:45+0000\n"
-"PO-Revision-Date: 2025-03-18 07:26+0100\n"
+"PO-Revision-Date: 2025-03-19 07:25+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -78,26 +78,23 @@ msgid "Processing page %1 to save the document."
 msgstr "Obdelava strani %1, da bi shranil dokument."
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "Dokument shranjen kot PDF."
+msgstr "Dokument shranjen kot '%1'."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Dokument shranjen z OCR kot PDF."
+msgstr "Dokument shranjen z OCR kot '%1'."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "Shranjevanje dokumenta kot slike ni uspelo."
+msgstr "Shranjevanje dokumenta kot '%1' ni uspelo."
 
 #: DocumentSaver.cpp:264
 #, kde-format

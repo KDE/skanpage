@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:45+0000\n"
-"PO-Revision-Date: 2025-03-18 09:55+0100\n"
+"PO-Revision-Date: 2025-03-19 08:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -80,26 +80,23 @@ msgid "Processing page %1 to save the document."
 msgstr "S'està processant la pàgina %1 per a desar el document."
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "El document s'ha desat com a PDF."
+msgstr "El document s'ha desat com a «%1»."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "El document s'ha desat amb OCR com a PDF."
+msgstr "El document s'ha desat amb OCR com a «%1»."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "Ha fallat en desar el document com a imatge."
+msgstr "Ha fallat en desar el document com a «%1»."
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -772,6 +769,3 @@ msgstr "Tanca"
 #, kde-format
 msgid "Share as:"
 msgstr "Comparteix com:"
-
-#~ msgid "Document saved as image."
-#~ msgstr "El document s'ha desat com a imatge."

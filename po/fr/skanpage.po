@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:45+0000\n"
-"PO-Revision-Date: 2025-03-13 07:22+0100\n"
+"PO-Revision-Date: 2025-03-18 09:36+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -35,7 +35,7 @@ msgstr "Nouveau document"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1‥%2"
-msgstr ""
+msgstr "%1 ‥ %2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -102,11 +102,7 @@ msgid "Failed to save image."
 msgstr "Impossible d'enregistrer l'image."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
@@ -134,10 +130,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Application de numérisation multi-page de KDE."
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
-msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
 #, kde-format
@@ -264,33 +259,27 @@ msgid "Searching for available devices…"
 msgstr "Recherche en cours de périphériques disponibles."
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
 msgstr "Sélectionnez la page précédente"
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
 msgstr "Sélectionnez la page suivante"
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
 msgstr "Déplacez la page sélectionnée vers le haut"
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
 msgstr "Déplacez la page sélectionnée vers le bas"
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
 msgstr "Traitement en cours de la page..."
@@ -332,10 +321,9 @@ msgid "Save Page"
 msgstr "Enregistrer une page"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Enregistrer une page"
+msgstr "Enregistrer une page sous"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -523,10 +511,9 @@ msgid "Save All"
 msgstr "Tout enregistrer"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Tout enregistrer"
+msgstr "Tout enregistrer sous"
 
 #: qml/MainWindow.qml:109
 #, kde-format
@@ -769,13 +756,12 @@ msgstr "Emplacement d'enregistrement par défaut :"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Modèle de titre :"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Aperçu"
+msgstr "Aperçu :"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format

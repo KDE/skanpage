@@ -77,26 +77,23 @@ msgid "Processing page %1 to save the document."
 msgstr "正在处理页面 %1 以保存文档。"
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "文档已保存为 PDF。"
+msgstr ""
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "文档已通过 OCR 保存为 PDF。"
+msgstr ""
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "无法将文档保存为图像。"
+msgstr ""
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -144,7 +141,7 @@ msgstr "开发人员"
 #: main.cpp:83
 #, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
-msgstr ""
+msgstr "Sane 扫描仪设备名称。测试设备请使用“test”。"
 
 #: main.cpp:84
 #, kde-format
@@ -161,52 +158,52 @@ msgstr "用于导出您的扫描设备选项的文件路径。"
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
-msgstr ""
+msgstr "要导入的本地图像或 PDF 文件。图像格式必须受 Qt 支持。"
 
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "年"
 
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "年 (00–99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "月"
 
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "日"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "时"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "分"
 
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "秒"
 
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "完整日期"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "完整时间"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -239,13 +236,13 @@ msgstr "没有找到设备。"
 #: qml/DeviceSelection.qml:96
 #, kde-format
 msgid "Open Selected Device"
-msgstr ""
+msgstr "打开所选设备"
 
 #: qml/DevicesLoading.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr ""
+msgstr "正在扫描可用设备…"
 
 #: qml/DocumentList.qml:74
 #, kde-format
@@ -441,6 +438,7 @@ msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
+"如果所需的语言没有列出，请使用本机系统的包管理器安装 Tesseract 的语言文件。"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -470,7 +468,7 @@ msgstr "下次扫描将在<nl/>%1 秒后开始"
 #, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr ""
+msgstr "正在扫描…"
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -743,12 +741,12 @@ msgstr "预览："
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
 msgid "Show Samples"
-msgstr ""
+msgstr "显示样例"
 
 #: qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Hide Samples"
-msgstr ""
+msgstr "隐藏样例"
 
 #: qml/SettingsWindow.qml:256
 #, kde-format
@@ -759,6 +757,3 @@ msgstr "关闭"
 #, kde-format
 msgid "Share as:"
 msgstr "分享为："
-
-#~ msgid "Document saved as image."
-#~ msgstr "文档已保存为图像。"
