@@ -40,7 +40,7 @@ Item {
 
         from: container.from * multiplier
         to: container.to * multiplier
-        stepSize: container.stepSize * multiplier
+        stepSize: Math.round(container.stepSize * multiplier)
         Binding on value {value: Math.round(container.value * control.multiplier)}
 
         onValueModified: {
