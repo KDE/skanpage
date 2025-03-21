@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:45+0000\n"
-"PO-Revision-Date: 2025-03-18 05:41+0100\n"
+"PO-Revision-Date: 2025-03-20 03:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -78,26 +78,23 @@ msgid "Processing page %1 to save the document."
 msgstr "მუშავდება გვერდი %1, დოკუმენტის შესანახავად."
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "დოკუმენტი შენახულია PDF-ის სახით."
+msgstr "დოკუმენტი შენახულია '%1'-ის სახით."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "დოკუმენტი შენახულია OCR-ით, PDF-ის სახით."
+msgstr "დოკუმენტი შენახულია OCR-ით, '%1'-ის სახით."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "დოკუმენტის სურათად შენახვის შეცდომა."
+msgstr "დოკუმენტის \"%1\" სახით შენახვა ჩავარდა."
 
 #: DocumentSaver.cpp:264
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:45+0000\n"
-"PO-Revision-Date: 2025-03-18 12:38+0100\n"
+"PO-Revision-Date: 2025-03-19 14:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -79,26 +79,23 @@ msgid "Processing page %1 to save the document."
 msgstr "Procesando la página %1 para guardar el documento."
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "Documento guardado como PDF."
+msgstr "Documento guardado como «%1»."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Documento guardado con OCR como PDF."
+msgstr "Documento guardado con OCR como «%1»."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "No se ha podido guardar el documento como imagen."
+msgstr "No se ha podido guardar el documento como «%1»."
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -768,6 +765,3 @@ msgstr "Cerrar"
 #, kde-format
 msgid "Share as:"
 msgstr "Compartir como:"
-
-#~ msgid "Document saved as image."
-#~ msgstr "Documento guardado como imagen."

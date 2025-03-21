@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:45+0000\n"
-"PO-Revision-Date: 2025-03-18 09:36+0100\n"
+"PO-Revision-Date: 2025-03-19 11:49+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -140,12 +140,11 @@ msgid "developer"
 msgstr "développeur"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr ""
-"Nom du périphérique de numérisation « Sane ». Utilisez « test » pour un "
-"périphérique de test."
+"Nom du périphérique de numérisation « Sane ». Veuillez utiliser « test » "
+"pour un périphérique de test."
 
 #: main.cpp:84
 #, kde-format
@@ -160,61 +159,58 @@ msgstr ""
 "numérisation sont vidées."
 
 #: main.cpp:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "A local image or pdf file that shall be imported. Image formats must be "
-#| "supported by Qt."
+#, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
-"Une image locale ou un fichier au format « pdf » devant être importé. Les "
+"Une image locale ou un fichier au format « pdf » qui devra être importé. Les "
 "formats d'image doivent être pris en charge par Qt."
 
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Année"
 
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "Année (00–99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mois"
 
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Jour"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Heure"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minute"
 
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Seconde"
 
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "Date complète"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "Temps plein"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -245,18 +241,15 @@ msgid "No devices found."
 msgstr "Aucun périphérique trouvé."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
 msgstr "Ouvrir le périphérique sélectionné"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Recherche en cours de périphériques disponibles."
+msgstr "Recherche en cours de périphériques disponibles..."
 
 #: qml/DocumentList.qml:74
 #, kde-format
@@ -448,18 +441,14 @@ msgid "Enable"
 msgstr "Activer"
 
 #: qml/ExportDialog.qml:105
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract's language "
-#| "file with the system's package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
-"Si les langues demandée ne sont pas dans la liste, veuillez installer le "
-"fichier de langues de Tesseract avec votre gestionnaire de paquets du "
+"Si les langues demandée sont absentes dans la liste, veuillez installer le "
+"fichier de langues de Tesseract avec le gestionnaire de paquets de votre "
 "système."
 
 #: qml/GlobalMenu.qml:27
@@ -487,12 +476,10 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "La prochaine numérisation démarre dans<nl/>%1 secondes."
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Numérisation en cours."
+msgstr "Numérisation en cours..."
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -766,12 +753,12 @@ msgstr "Aperçu :"
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
 msgid "Show Samples"
-msgstr ""
+msgstr "Afficher des échantillons"
 
 #: qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Hide Samples"
-msgstr ""
+msgstr "Masquer des échantillons"
 
 #: qml/SettingsWindow.qml:256
 #, kde-format
