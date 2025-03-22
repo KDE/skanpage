@@ -375,6 +375,7 @@ ApplicationWindow {
 
                 onSaveSinglePageAs: function (pageNumber) {
                     saveAsFileDialog.pageNumbers.push(pageNumber)
+                    saveAsFileDialog.selectedNameFilter.index = skanpage.configuration.defaultNameFilterIndex
                     saveAsFileDialog.selectedFile = skanpage.nameTemplate.fileUrl()
                     saveAsFileDialog.open()
                 }
