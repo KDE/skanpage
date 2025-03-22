@@ -98,6 +98,7 @@ ApplicationWindow {
         shortcutsName: "Save As"
         enabled: skanpage.documentModel.count !== 0
         onTriggered: {
+            saveAsFileDialog.selectedNameFilter.index = skanpage.configuration.defaultNameFilterIndex
             saveAsFileDialog.selectedFile = skanpage.nameTemplate.fileUrl()
             saveAsFileDialog.open()
         }
@@ -464,6 +465,7 @@ ApplicationWindow {
         currentFolder: skanpage.configuration.defaultFolder
         fileMode: FileDialog.OpenFile
         nameFilters: skanpage.formatModel.readFormatFilterConcatenated()
+        selectedNameFilter.index: 0
         onAccepted: skanpage.importFile(selectedFile)
     }
 
