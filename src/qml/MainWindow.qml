@@ -87,7 +87,10 @@ ApplicationWindow {
         text: i18n("Save All")
         shortcutsName: "Save"
         enabled: skanpage.documentModel.count !== 0 && skanpage.documentModel.isReady
-        onTriggered: saveFileDialog.open()
+        onTriggered: {
+            saveFileDialog.selectedNameFilter.index = skanpage.configuration.defaultNameFilterIndex
+            saveFileDialog.open()
+        }
     }
 
     ShortcutsAction {
@@ -352,6 +355,7 @@ ApplicationWindow {
                 focus: true
 
                 onSaveSinglePage: function (pageNumber){
+                    saveFileDialog.selectedNameFilter.index = skanpage.configuration.defaultNameFilterIndex
                     saveFileDialog.pageNumbers.push(pageNumber)
                     saveFileDialog.open()
                 }
@@ -443,6 +447,7 @@ ApplicationWindow {
         currentFolder: skanpage.configuration.defaultFolder
         fileMode: FileDialog.OpenFile
         nameFilters: skanpage.formatModel.readFormatFilterConcatenated()
+        selectedNameFilter.index: 0
         onAccepted: skanpage.importFile(selectedFile)
     }
 
