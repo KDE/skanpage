@@ -80,20 +80,20 @@ msgstr "正在处理页面 %1 以保存文档。"
 #, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr ""
+msgstr "文档已保存为“%1”。"
 
 #: DocumentSaver.cpp:135
 #, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr ""
+msgstr "文档已通过 OCR 保存为“%1”。"
 
 #: DocumentSaver.cpp:244
 #, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr ""
+msgstr "无法将文档保存为“%1”。"
 
 #: DocumentSaver.cpp:264
 #, kde-format
