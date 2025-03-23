@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 02:38+0000\n"
+"POT-Creation-Date: 2025-03-23 02:35+0000\n"
 "PO-Revision-Date: 2023-06-12 17:35+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -453,63 +453,63 @@ msgstr "Hamısını ləğv edin"
 msgid "Save All"
 msgstr "Hamısını saxlayın"
 
-#: qml/MainWindow.qml:96
+#: qml/MainWindow.qml:99
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:105
+#: qml/MainWindow.qml:108
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF kimi ixrac edin"
 
-#: qml/MainWindow.qml:113
+#: qml/MainWindow.qml:116
 #, kde-format
 msgid "Preview"
 msgstr "Öncədən baxış"
 
-#: qml/MainWindow.qml:132
+#: qml/MainWindow.qml:135
 #, kde-format
 msgid "Scan"
 msgstr "Oxudun"
 
-#: qml/MainWindow.qml:147
+#: qml/MainWindow.qml:150
 #, kde-format
 msgid "Cancel"
 msgstr "Ləğv edin"
 
-#: qml/MainWindow.qml:156
+#: qml/MainWindow.qml:159
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Skaner ayarlarını göstərmək"
 
-#: qml/MainWindow.qml:166 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:169 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Paylaşın"
 
-#: qml/MainWindow.qml:174
+#: qml/MainWindow.qml:177
 #, kde-format
 msgid "Print"
 msgstr "Çap edin"
 
-#: qml/MainWindow.qml:195 qml/MainWindow.qml:404
+#: qml/MainWindow.qml:198 qml/MainWindow.qml:408
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage haqqında"
 
-#: qml/MainWindow.qml:202
+#: qml/MainWindow.qml:205
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage tənzimləməsi..."
 
-#: qml/MainWindow.qml:210
+#: qml/MainWindow.qml:213
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Klaviatura qısayollarını tənzimləyin..."
 
-#: qml/MainWindow.qml:218
+#: qml/MainWindow.qml:221
 #, kde-format
 msgid "Quit"
 msgstr "Çıxın"
