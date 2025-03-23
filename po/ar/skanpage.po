@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:45+0000\n"
+"POT-Creation-Date: 2025-03-23 00:45+0000\n"
 "PO-Revision-Date: 2025-03-20 10:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -500,63 +500,63 @@ msgstr "احفظ الكلّ"
 msgid "Save All As"
 msgstr "احفظ الكلّ كـ"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "استورد"
 
-#: qml/MainWindow.qml:118
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr "صدر إلى بي دي اف"
 
-#: qml/MainWindow.qml:126
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr "عاين"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "امسح"
 
-#: qml/MainWindow.qml:160
+#: qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: qml/MainWindow.qml:169
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "أظهر خيارات الماسحة"
 
-#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "شارك"
 
-#: qml/MainWindow.qml:187
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "اطبع"
 
-#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
 #, kde-format
 msgid "About Skanpage"
 msgstr "عن ماسح الصفحات"
 
-#: qml/MainWindow.qml:215
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "اضبط ماسح الصفحات..."
 
-#: qml/MainWindow.qml:223
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "اضبط اختصارات لوحة المفاتيح…"
 
-#: qml/MainWindow.qml:231
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "أنهِ"

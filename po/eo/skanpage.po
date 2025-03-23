@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:45+0000\n"
-"PO-Revision-Date: 2024-12-27 17:40+0100\n"
+"POT-Creation-Date: 2025-03-23 00:45+0000\n"
+"PO-Revision-Date: 2025-03-22 22:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -78,26 +78,23 @@ msgid "Processing page %1 to save the document."
 msgstr "Prilaboranta paĝon %1 por konservi la dokumenton."
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "Dokumento konservita kiel PDF."
+msgstr "Dokumento konservita kiel '%1'."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Dokumento konservita kun OCR kiel PDF."
+msgstr "Dokumento konservita kun OCR kiel '%1'."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "Malsukcesis konservi la dokumenton kiel bildon."
+msgstr "Malsukcesis konservi la dokumenton kiel '%1'."
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -105,16 +102,12 @@ msgid "Failed to save image."
 msgstr "Malsukcesis konservi bildon."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All supported files"
-msgstr "Ĉiuj Subtenataj Dosieroj"
+msgstr "Ĉiuj subtenataj dosieroj"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -137,8 +130,7 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Aplikaĵo de KDE por plurpaĝa skanado."
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
@@ -148,10 +140,9 @@ msgid "developer"
 msgstr "evoluisto"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
-msgstr "Sane-skanila aparatnomo. Uzu 'test' por testa aparato."
+msgstr "Sane-skanila aparatnomo. Uzu “test” por testa aparato."
 
 #: main.cpp:84
 #, kde-format
@@ -245,50 +236,41 @@ msgid "No devices found."
 msgstr "Neniuj aparatoj trovitaj."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
-msgstr "Malfermi elektitan aparaton"
+msgstr "Malfermi Elektitan Aparaton"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Serĉante disponeblajn aparatojn"
+msgstr "Serĉante disponeblajn aparatojn…"
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
-msgstr "Elekti antaŭan paĝon"
+msgstr "Elekti Antaŭan Paĝon"
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
-msgstr "Elekti sekvantan paĝon"
+msgstr "Elekti Sekvantan Paĝon"
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
-msgstr "Movi elektitan paĝon supren"
+msgstr "Movi Elektitan Paĝon Supren"
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
-msgstr "Movi elektitan paĝon malsupren"
+msgstr "Movi Elektitan Paĝon Malsupren"
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
-msgstr "Prilaboranta paĝon..."
+msgstr "Prilaborante paĝon…"
 
 #: qml/DocumentList.qml:219
 #, kde-format
@@ -327,10 +309,9 @@ msgid "Save Page"
 msgstr "Konservi Paĝon"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Konservi Paĝon"
+msgstr "Konservi Paĝon Kiel"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -454,18 +435,14 @@ msgid "Enable"
 msgstr "Ebligi"
 
 #: qml/ExportDialog.qml:105
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract's language "
-#| "file with the system's package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
-"Se la bezonataj lingvoj ne estas listigitaj, bonvolu instali la "
-"lingvodosieron de Tesseract per la pakadministrilo de la sistemo."
+"Se la bezonataj lingvoj ne estas listigitaj, instalu la lingvodosieron de "
+"Tesseract per la pakadministrilo de la sistemo."
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -489,15 +466,13 @@ msgstr "Helpo"
 #, kde-kuit-format
 msgctxt "Countdown string with time given in seconds"
 msgid "Next scan starts in<nl/>%1 s"
-msgstr "La sekva skanado komenciĝas en <nl/>%1 s"
+msgstr "La sekva skanado komenciĝas post <nl/>%1 s"
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Skanado en progreso."
+msgstr "Skanado progresanta…"
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -516,68 +491,67 @@ msgid "Save All"
 msgstr "Konservi Ĉion"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Konservi Ĉion"
+msgstr "Konservi Ĉion Kiel"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Enporti"
 
-#: qml/MainWindow.qml:118
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr "Eksporti PDF"
 
-#: qml/MainWindow.qml:126
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr "Antaŭrigardo"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "Skani"
 
-#: qml/MainWindow.qml:160
+#: qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: qml/MainWindow.qml:169
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Montri Skanilajn Elekteblojn"
 
-#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Kundividi"
 
-#: qml/MainWindow.qml:187
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "Presi"
 
-#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
 #, kde-format
 msgid "About Skanpage"
 msgstr "Pri Skanpage"
 
-#: qml/MainWindow.qml:215
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Agordi Skanpage…"
 
-#: qml/MainWindow.qml:223
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Agordi Klavarajn Ŝparvojojn…"
 
-#: qml/MainWindow.qml:231
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "Ĉesigi"
@@ -761,23 +735,22 @@ msgstr "Defaŭlta konservejo:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Titolteksta ŝablono:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Antaŭrigardo"
+msgstr "Antaŭrigardo:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
 msgid "Show Samples"
-msgstr ""
+msgstr "Montri Specimenojn"
 
 #: qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Hide Samples"
-msgstr ""
+msgstr "Kaŝi Specimenojn"
 
 #: qml/SettingsWindow.qml:256
 #, kde-format
@@ -788,14 +761,3 @@ msgstr "Fermi"
 #, kde-format
 msgid "Share as:"
 msgstr "Kundividi kiel:"
-
-#~ msgid "Document saved as image."
-#~ msgstr "Dokumento konservita kiel bildo."
-
-#~ msgctxt ""
-#~ "for file names, indicates a range: from file0000.png to file0014.png"
-#~ msgid "%1 ... %2"
-#~ msgstr "%1 ... %2"
-
-#~ msgid "Click and drag to select another area"
-#~ msgstr "Klaku kaj trenu por elekti alian areon"

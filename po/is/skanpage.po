@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:45+0000\n"
+"POT-Creation-Date: 2025-03-23 00:45+0000\n"
 "PO-Revision-Date: 2024-06-30 15:43+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -521,63 +521,63 @@ msgstr "Vista allt"
 msgid "Save All As"
 msgstr "Vista allt"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "Flytja inn"
 
-#: qml/MainWindow.qml:118
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr "Flytja út sem PDF"
 
-#: qml/MainWindow.qml:126
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr "Forskönnun"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "Skanna"
 
-#: qml/MainWindow.qml:160
+#: qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: qml/MainWindow.qml:169
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Sýna valkosti skanna"
 
-#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Deila"
 
-#: qml/MainWindow.qml:187
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "Prenta"
 
-#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
 #, kde-format
 msgid "About Skanpage"
 msgstr "Um Skanpage-hugbúnaðinn"
 
-#: qml/MainWindow.qml:215
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Grunnstilla Skanpage…"
 
-#: qml/MainWindow.qml:223
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "Grunnstilla flýtilykla…"
 
-#: qml/MainWindow.qml:231
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "Hætta"

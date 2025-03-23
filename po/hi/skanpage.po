@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:45+0000\n"
+"POT-Creation-Date: 2025-03-23 00:45+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -519,63 +519,63 @@ msgstr "सब को सुरक्षित करें"
 msgid "Save All As"
 msgstr "सब को सुरक्षित करें"
 
-#: qml/MainWindow.qml:109
+#: qml/MainWindow.qml:110
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "आयात"
 
-#: qml/MainWindow.qml:118
+#: qml/MainWindow.qml:119
 #, kde-format
 msgid "Export PDF"
 msgstr "पीडीएफ निर्यात करें"
 
-#: qml/MainWindow.qml:126
+#: qml/MainWindow.qml:127
 #, kde-format
 msgid "Preview"
 msgstr "पूर्व दर्शन"
 
-#: qml/MainWindow.qml:145
+#: qml/MainWindow.qml:146
 #, kde-format
 msgid "Scan"
 msgstr "स्कैन"
 
-#: qml/MainWindow.qml:160
+#: qml/MainWindow.qml:161
 #, kde-format
 msgid "Cancel"
 msgstr "रद्द करना"
 
-#: qml/MainWindow.qml:169
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "स्कैनर विकल्प दिखाएँ"
 
-#: qml/MainWindow.qml:179 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "शेयर करना"
 
-#: qml/MainWindow.qml:187
+#: qml/MainWindow.qml:188
 #, kde-format
 msgid "Print"
 msgstr "छाप"
 
-#: qml/MainWindow.qml:208 qml/MainWindow.qml:426
+#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
 #, kde-format
 msgid "About Skanpage"
 msgstr "स्कैनपेज के बारे में"
 
-#: qml/MainWindow.qml:215
+#: qml/MainWindow.qml:216
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "स्कैनरपेज कॉन्फ़िगर करें…"
 
-#: qml/MainWindow.qml:223
+#: qml/MainWindow.qml:224
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "कीबोर्ड शॉर्टकट कॉन्फ़िगर करें…"
 
-#: qml/MainWindow.qml:231
+#: qml/MainWindow.qml:232
 #, kde-format
 msgid "Quit"
 msgstr "छोड़ना"
