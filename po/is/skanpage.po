@@ -2,15 +2,15 @@
 # This file is distributed under the same license as the skanpage package.
 #
 # SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
-# Sveinn í Felli <sv1@fellsnet.is>, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 02:35+0000\n"
-"PO-Revision-Date: 2024-06-30 15:43+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-03-24 17:37+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -107,7 +107,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All Supported Files"
-msgstr ""
+msgstr "Allar studdar skrár"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -160,6 +160,8 @@ msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Mynd á tæki eða PDF-skrá sem ætti að flytja inn. Myndsnið verða að vera "
+"studd af Qt."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -195,12 +197,10 @@ msgid "Open selected device"
 msgstr "Opna valið tæki"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices"
-msgstr "Leita að tiltækum tækjum."
+msgstr "Leita að tiltækum tækjum"
 
 #: qml/DocumentList.qml:73
 #, kde-format
@@ -322,13 +322,13 @@ msgstr "Öfug röð"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Þetta skjal inniheldur enn engar blaðsíður"
 
 #: qml/DocumentPage.qml:41
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Smelltu á <interface>Skanna</interface>  til að bæta við"
 
 #: qml/DocumentPage.qml:103
 #, kde-format
@@ -351,50 +351,42 @@ msgid "Zoom 100%"
 msgstr "Aðdráttur 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
-msgstr "Flytja út sem PDF"
+msgstr "Flytja út í PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titill:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Skrá:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Vista allt"
+msgstr "Vista sem…"
 
 #: qml/ExportDialog.qml:94
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Virkja ljóslestur (OCR)"
+msgstr "Ljóslestur (OCR)"
 
 #: qml/ExportDialog.qml:97
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Virkja"
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
@@ -647,7 +639,7 @@ msgstr "Kljúfa skönnun lárétt"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Hreinsa skönnunarsvæði"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
