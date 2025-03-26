@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 00:45+0000\n"
-"PO-Revision-Date: 2025-02-10 18:53+0100\n"
+"PO-Revision-Date: 2025-03-25 22:31+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,7 +40,7 @@ msgstr "Dokumentu berria"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1‥%2"
-msgstr ""
+msgstr "%1‥%2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -80,26 +80,23 @@ msgid "Processing page %1 to save the document."
 msgstr "Dokumentua gordetzeko %1 orrialdea prozesatzen."
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "Dokumentua PDF gisa gorde da."
+msgstr "Dokumentua '%1' gisa gorde da."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Dokumentua OCRarekin PDF gisa gorde da."
+msgstr "Dokumentua OCRarekin '%1' gisa gorde da."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "Dokumentua irudi gisa gordetzea huts egin du."
+msgstr "Dokumentua '%1' gisa gordetzea huts egin du."
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -107,11 +104,7 @@ msgid "Failed to save image."
 msgstr "Irudia gordetzea huts egin du."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
@@ -139,10 +132,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Orri anizkoitzak eskaneatzeko KDEren aplikazioa."
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
-msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
 #, kde-format
@@ -150,10 +142,9 @@ msgid "developer"
 msgstr "garatzailea"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
-msgstr "«Sane» eskanerraren gailu-izena. Erabili 'proba' proba-gailurako."
+msgstr "Sane eskanerraren gailu-izena. Erabili \"proba\" proba-gailurako."
 
 #: main.cpp:84
 #, kde-format
@@ -166,61 +157,58 @@ msgid "A file path in which the options of your scanner device are dumped."
 msgstr "Zure eskaner-gailuaren aukerak iraultzeko bide-izena."
 
 #: main.cpp:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "A local image or pdf file that shall be imported. Image formats must be "
-#| "supported by Qt."
+#, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
 "Inportatu beharreko irudi- edo PDF-fitxategi lokal bat. Irudi formatuak Qt-"
-"ek onartutakoak izan behar dute."
+"ek onartu behar ditu."
 
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Urtea"
 
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "Urtea (00–99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Hilabetea"
 
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Eguna"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Ordua"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minutua"
 
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Segundoa"
 
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "Data osoa"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "Ordu osoa"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -251,47 +239,38 @@ msgid "No devices found."
 msgstr "Ez da gailurik aurkitu."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
 msgstr "Ireki hautatutako gailua"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Gailu erabilgarrien bila"
+msgstr "Gailu erabilgarrien bila..."
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
 msgstr "Hautatu aurreko orrialdea"
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
 msgstr "Hautatu hurrengo orrialdea"
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
-msgstr "Eraman gora hautatutako orrialdea"
+msgstr "Eraman hautatutako orrialdea gora"
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
-msgstr "Eraman behera hautatutako orrialdea"
+msgstr "Eraman hautatutako orrialdea behera"
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
 msgstr "Orrialdea prozesatzen..."
@@ -333,10 +312,9 @@ msgid "Save Page"
 msgstr "Gorde orrialdea"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Gorde orrialdea"
+msgstr "Gorde orrialdea honela"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -460,18 +438,14 @@ msgid "Enable"
 msgstr "Gaitu"
 
 #: qml/ExportDialog.qml:105
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract's language "
-#| "file with the system's package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
-"Beharrezko hizkuntzak zerrendatuta ez badaude, sistemaren pakete-"
-"kudeatzailea erabiliz «Tesseract»erako hizkuntza-paketea instalatu."
+"Behar diren hizkuntzak zerrendatzen ez badira, instalatu Tesserat-en "
+"hizkuntza-fitxategia sistemaren pakete-kudeatzailea erabiliz."
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -498,12 +472,10 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "Hurrengo eskaneatzea hasiko da<nl/>%1 s barru"
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Eskaneatzen ari da."
+msgstr "Eskaneatzea abian..."
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -522,10 +494,9 @@ msgid "Save All"
 msgstr "Gorde dena"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Gorde dena"
+msgstr "Gorde dena honela"
 
 #: qml/MainWindow.qml:110
 #, kde-format
@@ -725,7 +696,7 @@ msgstr "Zatitu eskaneatua horizontalki"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Garbitu eskaneatze-eremuak"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -767,23 +738,22 @@ msgstr "Gordetzeko kokaleku lehenetsia:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Izenburu-txantiloia:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Aurreikusi"
+msgstr "Aurreikuspegia:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
 msgid "Show Samples"
-msgstr ""
+msgstr "Erakutsi laginak"
 
 #: qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Hide Samples"
-msgstr ""
+msgstr "Ezkutatu laginak"
 
 #: qml/SettingsWindow.qml:256
 #, kde-format
