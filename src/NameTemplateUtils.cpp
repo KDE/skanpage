@@ -190,3 +190,5 @@ bool NameTemplateUtils::isFileExists(const QString &path, QString name, const QS
 {
     return isFileExists(path + name + QLatin1Char('.') + suffix, extraNumeric);
 }
+
+#include "moc_NameTemplateUtils.cpp"
