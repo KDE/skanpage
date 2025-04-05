@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the skanpage package.
 #
 # Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2023.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 02:35+0000\n"
-"PO-Revision-Date: 2024-12-12 10:20+0300\n"
+"PO-Revision-Date: 2025-04-04 14:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -164,6 +164,8 @@ msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Локальное изображение или PDF-файл для импорта. Форматы изображений должны "
+"поддерживаться Qt."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -356,50 +358,49 @@ msgid "Zoom 100%"
 msgstr "Масштаб 100%"
 
 #: qml/ExportDialog.qml:36
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Экспорт в PDF"
 
 #: qml/ExportDialog.qml:44
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Название:"
 
 #: qml/ExportDialog.qml:52
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Файл:"
 
 #: qml/ExportDialog.qml:62
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Сохранить все"
+msgstr "Сохранить как…"
 
 #: qml/ExportDialog.qml:94
-#, fuzzy, kde-format
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Распознавать текст"
+msgstr "Оптическое распознавание символов"
 
 #: qml/ExportDialog.qml:97
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Включить"
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract's language file "
 "with the system's package manager."
 msgstr ""
-"Если нужный язык отсутствует в списке, используйте системный диспетчер "
-"управления пакетами для установки соответствующего языкового пакета "
-"Tesseract."
+"Если нужные языки отсутствуют в списке, воспользуйтесь системным диспетчером "
+"управления пакетами для установки соответствующих языковых пакетов Tesseract."
 
 #: qml/GlobalMenu.qml:26
 #, kde-format
@@ -645,7 +646,7 @@ msgstr "Разделить отсканированное по горизонт�
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Очистить области сканирования"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
