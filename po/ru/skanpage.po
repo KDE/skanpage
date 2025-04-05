@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the skanpage package.
 #
 # Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2023.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 00:45+0000\n"
-"PO-Revision-Date: 2024-12-12 10:20+0300\n"
+"PO-Revision-Date: 2025-04-04 14:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -80,14 +80,12 @@ msgstr "Обработка страницы %1 для сохранения до�
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
 #, fuzzy, kde-format
-#| msgid "Document saved as PDF."
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
 msgstr "Документ сохранён в формате PDF."
 
 #: DocumentSaver.cpp:135
 #, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
@@ -96,7 +94,6 @@ msgstr ""
 
 #: DocumentSaver.cpp:244
 #, fuzzy, kde-format
-#| msgid "Failed to save document as image."
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
 msgstr "Не удалось сохранить документ в формате изображения."
@@ -108,10 +105,6 @@ msgstr "Не удалось сохранить изображение."
 
 #: FormatModel.cpp:51
 #, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
@@ -140,7 +133,6 @@ msgstr "Приложение от KDE для сканирования."
 
 #: main.cpp:69
 #, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© Kåre Särs, Alexander Stippich, 2015–2022"
 
@@ -151,7 +143,6 @@ msgstr "Разработчик"
 
 #: main.cpp:83
 #, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr ""
 "Название устройства сканирования Sane. Используйте «test» для тестового "
@@ -168,11 +159,13 @@ msgid "A file path in which the options of your scanner device are dumped."
 msgstr "Путь к файлу, в котором хранятся параметры устройства сканирования."
 
 #: main.cpp:91
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Локальное изображение или PDF-файл для импорта. Форматы изображений должны "
+"поддерживаться Qt."
 
 #: NameTemplateUtils.h:24
 #, kde-format
@@ -249,46 +242,37 @@ msgstr "Не найдено ни одного устройства."
 
 #: qml/DeviceSelection.qml:96
 #, fuzzy, kde-format
-#| msgid "Open selected device"
 msgid "Open Selected Device"
 msgstr "Открыть выбранное устройство"
 
 #: qml/DevicesLoading.qml:29
 #, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
 msgctxt "@info"
 msgid "Searching for available devices…"
 msgstr "Поиск доступных устройств"
 
 #: qml/DocumentList.qml:74
 #, fuzzy, kde-format
-#| msgid "Select previous page"
 msgid "Select Previous Page"
 msgstr "Выбрать предыдущую страницу"
 
 #: qml/DocumentList.qml:80
 #, fuzzy, kde-format
-#| msgid "Select next page"
 msgid "Select Next Page"
 msgstr "Выбрать следующую страницу"
 
 #: qml/DocumentList.qml:86
 #, fuzzy, kde-format
-#| msgid "Move selected page up"
 msgid "Move Selected Page Up"
 msgstr "Переместить выбранную страницу вверх"
 
 #: qml/DocumentList.qml:95
 #, fuzzy, kde-format
-#| msgid "Move selected page down"
 msgid "Move Selected Page Down"
 msgstr "Переместить выбранную страницу вниз"
 
 #: qml/DocumentList.qml:206
 #, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
 msgctxt "@info"
 msgid "Processing page…"
 msgstr "Обработка страницы…"
@@ -331,7 +315,6 @@ msgstr "Сохранить страницу"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
 #, fuzzy, kde-format
-#| msgid "Save Page"
 msgid "Save Page As"
 msgstr "Сохранить страницу"
 
@@ -425,39 +408,39 @@ msgid "Zoom 100%"
 msgstr "Масштаб 100%"
 
 #: qml/ExportDialog.qml:37
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Экспорт в PDF"
 
 #: qml/ExportDialog.qml:45
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Название:"
 
 #: qml/ExportDialog.qml:53
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Файл:"
 
 #: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Сохранить все"
+msgstr "Сохранить как…"
 
 #: qml/ExportDialog.qml:96
-#, fuzzy, kde-format
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Распознавать текст"
+msgstr "Оптическое распознавание символов"
 
 #: qml/ExportDialog.qml:99
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Включить"
 
 #: qml/ExportDialog.qml:105
 #, fuzzy, kde-format
@@ -466,9 +449,8 @@ msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
-"Если нужный язык отсутствует в списке, используйте системный диспетчер "
-"управления пакетами для установки соответствующего языкового пакета "
-"Tesseract."
+"Если нужные языки отсутствуют в списке, воспользуйтесь системным диспетчером "
+"управления пакетами для установки соответствующих языковых пакетов Tesseract."
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -496,8 +478,6 @@ msgstr "Следующее сканирование начнётся через 
 
 #: qml/InProgressPage.qml:44
 #, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
 msgctxt "@info"
 msgid "Scan in progress…"
 msgstr "Выполняется сканирование…"
@@ -520,7 +500,6 @@ msgstr "Сохранить все"
 
 #: qml/MainWindow.qml:97
 #, fuzzy, kde-format
-#| msgid "Save All"
 msgid "Save All As"
 msgstr "Сохранить все"
 
@@ -722,7 +701,7 @@ msgstr "Разделить отсканированное по горизонт�
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Очистить области сканирования"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -768,7 +747,6 @@ msgstr ""
 
 #: qml/SettingsWindow.qml:101
 #, fuzzy, kde-format
-#| msgid "Preview"
 msgid "Preview:"
 msgstr "Предварительный просмотр"
 
