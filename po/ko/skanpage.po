@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 02:35+0000\n"
-"PO-Revision-Date: 2024-12-24 19:13+0100\n"
+"PO-Revision-Date: 2025-04-07 23:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -160,6 +160,7 @@ msgid ""
 "A local image or pdf file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"가져올 로컬 그림이나 PDF 파일입니다. 그림 파일 형식은 Qt에서 지원해야 합니다."
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -636,7 +637,7 @@ msgstr "수직으로 스캔 나누기"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "스캔 영역 지우기"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
