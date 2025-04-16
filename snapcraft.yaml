@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Scarlett Moore <sgmoore@kde.org>
+# SPDX-FileCopyrightText: 2024, 2025 Scarlett Moore <sgmoore@kde.org>
 #
 # SPDX-License-Identifier: CC0-1.0
 ---
@@ -22,12 +22,6 @@ apps:
       - cups
       - raw-usb
       - hardware-observe
-plugs:
-  foo-install-cups:
-  interface: content
-  content: foo
-  default-provider: cups
-  target: $SNAP_DATA/foo
 layout:
   /etc:
     bind: $SNAP/etc
@@ -38,15 +32,6 @@ slots:
     interface: dbus
     name: org.kde.skanpage
     bus: session
-package-repositories:
-  - type: apt
-    components:
-      - main
-    suites:
-      - noble
-    key-id: 444DABCF3667D0283F894EDDE6D4736255751E5D
-    url: http://origin.archive.neon.kde.org/user
-    key-server: keyserver.ubuntu.com
 parts:
   libsane:
     source: https://gitlab.com/sane-project/backends.git
@@ -198,6 +183,7 @@ parts:
       - tesseract-ocr-all
       - libieee1284-3t64
       - libpoppler-glib8t64
+      - cups-client
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
