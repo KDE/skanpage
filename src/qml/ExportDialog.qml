@@ -52,6 +52,7 @@ Kirigami.Dialog {
                 Kirigami.FormData.label: i18nc("@label", "File:")
 
                 TextField {
+                    id: fileNameItem
                     Layout.fillWidth: true
                     text: skanpage.configuration.defaultFolder + "/" + skanpage.documentModel.fileName
                     onTextChanged: fileName = text
