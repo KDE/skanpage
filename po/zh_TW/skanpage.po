@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-23 02:35+0000\n"
+"POT-Creation-Date: 2025-04-25 02:36+0000\n"
 "PO-Revision-Date: 2025-03-27 22:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -367,24 +367,24 @@ msgctxt "@label"
 msgid "File:"
 msgstr "檔案："
 
-#: qml/ExportDialog.qml:62
+#: qml/ExportDialog.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
 msgstr "另存為…"
 
-#: qml/ExportDialog.qml:94
+#: qml/ExportDialog.qml:95
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "光學文字辨識 (OCR)"
 
-#: qml/ExportDialog.qml:97
+#: qml/ExportDialog.qml:98
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "啟用"
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:104
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""

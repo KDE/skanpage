@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-23 02:35+0000\n"
+"POT-Creation-Date: 2025-04-25 02:36+0000\n"
 "PO-Revision-Date: 2025-03-24 17:37+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -368,24 +368,24 @@ msgctxt "@label"
 msgid "File:"
 msgstr "Skrá:"
 
-#: qml/ExportDialog.qml:62
+#: qml/ExportDialog.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
 msgstr "Vista sem…"
 
-#: qml/ExportDialog.qml:94
+#: qml/ExportDialog.qml:95
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Ljóslestur (OCR)"
 
-#: qml/ExportDialog.qml:97
+#: qml/ExportDialog.qml:98
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Virkja"
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:104
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""

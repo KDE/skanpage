@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-23 02:35+0000\n"
+"POT-Creation-Date: 2025-04-25 02:36+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -371,26 +371,26 @@ msgctxt "@label"
 msgid "File:"
 msgstr "ファイル:"
 
-#: qml/ExportDialog.qml:62
+#: qml/ExportDialog.qml:63
 #, fuzzy, kde-format
 #| msgid "Save All"
 msgctxt "@action:button"
 msgid "Save As…"
 msgstr "すべて保存"
 
-#: qml/ExportDialog.qml:94
+#: qml/ExportDialog.qml:95
 #, fuzzy, kde-format
 #| msgid "Enable optical character recognition (OCR)"
 msgid "Optical Character Recognition"
 msgstr "光学文字認識 (OCR) を有効にする"
 
-#: qml/ExportDialog.qml:97
+#: qml/ExportDialog.qml:98
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:104
 #, fuzzy, kde-format
 #| msgid ""
 #| "If your required language is not listed, please install Tesseract's "
