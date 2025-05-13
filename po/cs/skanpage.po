@@ -77,26 +77,23 @@ msgid "Processing page %1 to save the document."
 msgstr ""
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "Dokument uložen jako PDF."
+msgstr ""
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Dokument uložen s OCR jako PDF."
+msgstr ""
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "Ukládání dokumentu do obrázku selhalo."
+msgstr ""
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -104,16 +101,12 @@ msgid "Failed to save image."
 msgstr "Ukládání obrázku selhalo."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All supported files"
-msgstr "Všechny podporované soubory"
+msgstr ""
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -136,10 +129,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Vícestránkové skenování s KDE."
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
-msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr ""
 
 #: main.cpp:71 main.cpp:72
 #, kde-format
@@ -147,10 +139,9 @@ msgid "developer"
 msgstr "vývojář"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
-msgstr "Název zařízení skeneru Sane. Pro testovací zařízení použijte 'test'."
+msgstr ""
 
 #: main.cpp:84
 #, kde-format
@@ -243,50 +234,41 @@ msgid "No devices found."
 msgstr "Nebyla nalezena žádná zařízení."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
-msgstr "Otevřít vybrané zařízení"
+msgstr ""
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Vyhledávám dostupná zařízení"
+msgstr ""
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
-msgstr "Vybrat předchozí stranu"
+msgstr ""
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
-msgstr "Vybrat následující stranu"
+msgstr ""
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
-msgstr "Posunout vybranou stranu výš"
+msgstr ""
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
-msgstr "Posunout vybranou stranu níž"
+msgstr ""
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
-msgstr "Zpracování stránky..."
+msgstr ""
 
 #: qml/DocumentList.qml:219
 #, kde-format
@@ -325,10 +307,9 @@ msgid "Save Page"
 msgstr "Uložit stranu"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Uložit stranu"
+msgstr ""
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -485,12 +466,10 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "Následující skenování začíná v<nl/>%1 s"
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Probíhá skenování..."
+msgstr ""
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -509,10 +488,9 @@ msgid "Save All"
 msgstr "Uložit vše"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Uložit vše"
+msgstr ""
 
 #: qml/MainWindow.qml:110
 #, kde-format
@@ -780,14 +758,3 @@ msgstr "Zavřít"
 #, kde-format
 msgid "Share as:"
 msgstr "Sdílet jako:"
-
-#~ msgid "Document saved as image."
-#~ msgstr "Dokument uložen jako obrázek."
-
-#~ msgctxt ""
-#~ "for file names, indicates a range: from file0000.png to file0014.png"
-#~ msgid "%1 ... %2"
-#~ msgstr "%1 ... %2"
-
-#~ msgid "Click and drag to select another area"
-#~ msgstr "Klikněte a táhněte pro výběr jiné oblasti"
