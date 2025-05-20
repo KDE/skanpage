@@ -40,7 +40,7 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
     }
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Saving document to") << fileUrl;
 
-    const QFileInfo &fileInfo = QFileInfo(fileUrl.toDisplayString());
+    const QFileInfo &fileInfo = QFileInfo(fileUrl.toString(QUrl::PreferLocalFile));
     const QString &fileSuffix = fileInfo.suffix();
 
     qCDebug(SKANPAGE_LOG) << QStringLiteral("Selected file suffix is") << fileSuffix;
