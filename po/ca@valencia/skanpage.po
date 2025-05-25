@@ -386,7 +386,7 @@ msgstr "Este document encara no conté cap pàgina"
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr ""
-"Feu clic en el botó <interface>Escaneja</interface> per a afegir-ne una"
+"Cliqueu damunt del botó <interface>Escaneja</interface> per a afegir-ne una"
 
 #: qml/DocumentPage.qml:104
 #, kde-format
