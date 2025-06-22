@@ -764,26 +764,3 @@ msgstr "Затваряне"
 #, kde-format
 msgid "Share as:"
 msgstr "Споделяне като:"
-
-#~ msgid "Document saved as image."
-#~ msgstr "Документът  е записан като изображение."
-
-#~ msgctxt ""
-#~ "for file names, indicates a range: from file0000.png to file0014.png"
-#~ msgid "%1 ... %2"
-#~ msgstr "%1 ... %2"
-
-#~ msgid "Click and drag to select another area"
-#~ msgstr "Кликнете и завлечете с мишката, за да избере друга област"
-
-#~ msgid "Saving to non-local directories is currently unsupported."
-#~ msgstr "Записването в нелокални директории понастоящем не се поддържа."
-
-#~ msgid "Languages:"
-#~ msgstr "Езици:"
-
-#~ msgid "%1 [%2]"
-#~ msgstr "%1 [ %2]"
-
-#~ msgid "Save"
-#~ msgstr "Запазване"
