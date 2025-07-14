@@ -575,7 +575,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr "ნაგულისხმები"
+msgstr "ნაგულისხმევი"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
@@ -729,12 +729,12 @@ msgstr "სკანერები, კამერები და ვირ�
 #: qml/SettingsWindow.qml:57
 #, kde-format
 msgid "Default file format:"
-msgstr "ფაილის ნაგულისხმები ფორმატი:"
+msgstr "ფაილის ნაგულისხმევი ფორმატი:"
 
 #: qml/SettingsWindow.qml:74
 #, kde-format
 msgid "Default save location:"
-msgstr "შენახვის ნაგულისხმები მდებარეობა:"
+msgstr "შენახვის ნაგულისხმევი მდებარეობა:"
 
 #: qml/SettingsWindow.qml:91
 #, kde-format
