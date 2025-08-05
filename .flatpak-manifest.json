@@ -19,6 +19,16 @@
         "--share=network",
         "--system-talk-name=org.freedesktop.Avahi"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/*/cmake",
+        "/lib/*/pkgconfig",
+        "/lib/sane/*.la",
+        "/lib/*.a",
+        "/lib/*.la",
+        "/lib/cmake",
+        "/lib/pkgconfig"
+    ],
     "separate-locales": false,
     "modules": [
         {
