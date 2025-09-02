@@ -255,12 +255,12 @@ msgstr "S'estan buscant els dispositius disponibles…"
 #: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select Previous Page"
-msgstr "Selecciona la pàgina anterior"
+msgstr "Tria la pàgina anterior"
 
 #: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select Next Page"
-msgstr "Selecciona la pàgina següent"
+msgstr "Tria la pàgina següent"
 
 # skip-rule: k-PageUp-1
 #: qml/DocumentList.qml:86
@@ -651,7 +651,7 @@ msgstr "px"
 #: qml/OptionsPanel.qml:30
 #, kde-format
 msgid "Select options for quick access:"
-msgstr "Seleccioneu les opcions per a l'accés ràpid:"
+msgstr "Trieu les opcions per a l'accés ràpid:"
 
 #: qml/OptionsPanel.qml:76
 #, kde-format
