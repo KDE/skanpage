@@ -5,20 +5,21 @@
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Wolfram Sobotta <kde@lesath.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 00:45+0000\n"
-"PO-Revision-Date: 2025-01-23 16:14+0100\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-09-09 20:58+0200\n"
+"Last-Translator: Wolfram Sobotta <kde@lesath.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,7 +41,7 @@ msgstr "Neues Dokument"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1‥%2"
-msgstr ""
+msgstr "%1‥%2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -80,26 +81,23 @@ msgid "Processing page %1 to save the document."
 msgstr "Seite %1 wird beim Speichern des Dokuments verarbeitet."
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "Das Dokument wurde als PDF gespeichert."
+msgstr "Das Dokument wurde als „%1“ gespeichert."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Das Dokument wurde mit OCR als PDF gespeichert."
+msgstr "Das Dokument wurde mit OCR als „%1“ gespeichert."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "Das Speichern des Dokument als Bild ist fehlgeschlagen."
+msgstr "Das Speichern des Dokuments als „%1“ ist fehlgeschlagen."
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -107,11 +105,7 @@ msgid "Failed to save image."
 msgstr "Das Speichern des Bildes ist fehlgeschlagen."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "format filter for a file dialog, all formats supported by the application "
-#| "will be displayed"
-#| msgid "All Supported Files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
@@ -139,10 +133,9 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Scan-Anwendung von KDE für mehrere Seiten."
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
-msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
+msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:71 main.cpp:72
 #, kde-format
@@ -150,10 +143,9 @@ msgid "developer"
 msgstr "Entwickler"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
-msgstr "Gerätename des Scanners in Sane. Verwenden Sie für Testgeräte „test“."
+msgstr "Gerätename des Scanners in Sane. Verwenden Sie „test“ als Testgerät."
 
 #: main.cpp:84
 #, kde-format
@@ -171,51 +163,53 @@ msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Eine lokale Bild- oder PDF-Datei, die importiert werden soll. Bildformate "
+"müssen von Qt unterstützt werden."
 
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Jahr"
 
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "Jahr (00–99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Monat"
 
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Tag"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Stunde"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minute"
 
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Sekunde"
 
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "Vollständiges Datum"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "Vollständige Zeit"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -246,50 +240,41 @@ msgid "No devices found."
 msgstr "Keine Geräte gefunden."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
 msgstr "Ausgewähltes Gerät öffnen"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Nach verfügbaren Geräten suchen."
+msgstr "Nach verfügbaren Geräten wird gesucht …"
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
 msgstr "Vorherige Seite auswählen"
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
 msgstr "Nächste Seite auswählen"
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
-msgstr "Ausgewählte Seite nach oben schieben"
+msgstr "Ausgewählte Seite nach oben verschieben"
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
-msgstr "Ausgewählte Seite nach unten schieben"
+msgstr "Ausgewählte Seite nach unten verschieben"
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
-msgstr "Seite wird verarbeitet …"
+msgstr "Seite wird verarbeitet …"
 
 #: qml/DocumentList.qml:219
 #, kde-format
@@ -328,10 +313,9 @@ msgid "Save Page"
 msgstr "Seite speichern"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Seite speichern"
+msgstr "Seite speichern unter"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -428,8 +412,7 @@ msgid "Export PDF"
 msgstr "PDF exportieren"
 
 #: qml/ExportDialog.qml:45
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titel:"
@@ -458,11 +441,7 @@ msgid "Enable"
 msgstr "Aktivieren"
 
 #: qml/ExportDialog.qml:105
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract's language "
-#| "file with the system's package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
@@ -496,12 +475,10 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "Das nächste Scannen beginnen in<nl/>%1 s"
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Scan läuft."
+msgstr "Scan läuft …"
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -520,10 +497,9 @@ msgid "Save All"
 msgstr "Alles speichern"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Alles speichern"
+msgstr "Alles speichern unter"
 
 #: qml/MainWindow.qml:110
 #, kde-format
@@ -723,7 +699,7 @@ msgstr "Scan waagerecht aufteilen"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Scanbereiche löschen"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -765,23 +741,22 @@ msgstr "Standard-Speicherort:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Titelvorlage:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Vorschau"
+msgstr "Vorschau:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
 msgid "Show Samples"
-msgstr ""
+msgstr "Beispiele anzeigen"
 
 #: qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Hide Samples"
-msgstr ""
+msgstr "Beispiele verstecken"
 
 #: qml/SettingsWindow.qml:256
 #, kde-format
