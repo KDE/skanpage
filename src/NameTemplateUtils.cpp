@@ -9,8 +9,6 @@
 #include "FormatModel.h"
 #include "skanpage_config.h"
 
-#include <KLocalizedString>
-
 #include <QDateTime>
 #include <QFile>
 #include <QRegularExpression>

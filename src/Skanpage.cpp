@@ -19,11 +19,8 @@
 #include <KShortcutsDialog>
 #include <KLocalizedString>
 
-#include "DevicesModel.h"
 #include "DocumentPrinter.h"
 #include "DocumentSaver.h"
-#include "FilteredOptionsModel.h"
-#include "FormatModel.h"
 #include "ImageImport.h"
 #include "OCREngine.h"
 #include "OptionsModel.h"
