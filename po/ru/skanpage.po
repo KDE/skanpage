@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-23 00:47+0000\n"
 "PO-Revision-Date: 2025-08-22 18:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -30,7 +30,7 @@ msgid "Your emails"
 msgstr "kekcuha@gmail.com,translation-team@basealt.ru"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:82
+#: qml/ExportDialog.qml:46 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Создать документ"
