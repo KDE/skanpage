@@ -14,10 +14,8 @@
 #include <KAboutData>
 #include <KCrash>
 #include <KLocalizedContext>
-#include <KLocalizedString>
-#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
 #include <KLocalizedQmlContext>
-#endif
+#include <KLocalizedString>
 #include <KSaneCore/Option>
 
 #include "DevicesModel.h"
@@ -102,11 +100,7 @@ int main(int argc, char *argv[])
     Skanpage skanpageApp = Skanpage(deviceName, dumpOptionUrl, importUrl);
 
     QQmlApplicationEngine engine;
-#if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-#else
     engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
-#endif
     engine.rootContext()->setContextProperty(QStringLiteral("skanpage"), &skanpageApp);
     engine.rootContext()->setContextProperty(QStringLiteral("_aboutData"), QVariant::fromValue(aboutData));
     engine.load(QUrl(QStringLiteral("qrc:/qml/MainWindow.qml")));
