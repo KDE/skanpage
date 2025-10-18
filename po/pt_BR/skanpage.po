@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:47+0000\n"
+"POT-Creation-Date: 2025-10-18 00:46+0000\n"
 "PO-Revision-Date: 2025-04-14 01:14-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -122,46 +122,46 @@ msgstr "Falha ao carregar a imagem!"
 msgid "Failed to load PDF file!"
 msgstr "Falha ao carregar arquivo PDF!"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "Aplicativo de digitalização de múltiplas páginas do KDE."
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:71 main.cpp:72
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "desenvolvedor"
 
-#: main.cpp:83
+#: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr ""
 "Nome do dispositivo de digitalização do Sane. Use \"test\" para dispositivo "
 "de teste."
 
-#: main.cpp:84
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "dispositivo"
 
-#: main.cpp:87
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
 "Um caminho de arquivo no qual as opções do seu dispositivo de scanner são "
 "salvas."
 
-#: main.cpp:91
+#: main.cpp:89
 #, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "

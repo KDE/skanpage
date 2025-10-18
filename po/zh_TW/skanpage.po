@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:47+0000\n"
+"POT-Creation-Date: 2025-10-18 00:46+0000\n"
 "PO-Revision-Date: 2025-03-27 22:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -121,42 +121,42 @@ msgstr "無法載入影像！"
 msgid "Failed to load PDF file!"
 msgstr "無法載入 PDF 檔案！"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "來自 KDE 的多頁掃描應用程式。"
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015–2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:71 main.cpp:72
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "開發者"
 
-#: main.cpp:83
+#: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr "Sane 掃描器的裝置名稱。使用「test」代表測試裝置。"
 
-#: main.cpp:84
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "裝置"
 
-#: main.cpp:87
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr "您的掃描器裝置的選項會寫入此路徑的檔案中。"
 
-#: main.cpp:91
+#: main.cpp:89
 #, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "

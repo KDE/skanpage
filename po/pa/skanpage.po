@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:47+0000\n"
+"POT-Creation-Date: 2025-10-18 00:46+0000\n"
 "PO-Revision-Date: 2023-12-25 08:33-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -124,44 +124,44 @@ msgstr "ਚਿੱਤਰ ਸੰਭਾਲਣ ਲਈ ਅਸਫ਼ਲ ਹੈ"
 msgid "Failed to load PDF file!"
 msgstr "ਚਿੱਤਰ ਸੰਭਾਲਣ ਲਈ ਅਸਫ਼ਲ ਹੈ"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "ਸਕੈਨ-ਪੇਜ਼"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "KDE ਲਈ ਕਈ ਸਫ਼ਿਆਂ ਨੂੰ ਸਕੈਨ ਕਰਨ ਵਾਲੀ ਐਪਲੀਕੇਸ਼ਨ ਹੈ।"
 
-#: main.cpp:69
+#: main.cpp:67
 #, fuzzy, kde-format
 #| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:71 main.cpp:72
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "ਡਿਵੈਲਪਰ"
 
-#: main.cpp:83
+#: main.cpp:81
 #, fuzzy, kde-format
 #| msgid "Sane scanner device name. Use 'test' for test device."
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr "ਸੇਨ ਸਕੈਨਰ ਡਿਵਾਈਸ ਦਾ ਨਾਂ। ਡਿਵਾਈਸ ਨੂੰ ਟੈਸਟ ਕਰਨ ਲਈ 'test' ਵਰਤੋਂ।"
 
-#: main.cpp:84
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "ਡਿਵਾਈਸ"
 
-#: main.cpp:87
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
 
-#: main.cpp:91
+#: main.cpp:89
 #, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "

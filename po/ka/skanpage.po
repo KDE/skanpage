@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:47+0000\n"
+"POT-Creation-Date: 2025-10-18 00:46+0000\n"
 "PO-Revision-Date: 2025-03-20 03:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -119,45 +119,45 @@ msgstr "გამოსახულების ჩატვირთვა ჩ�
 msgid "Failed to load PDF file!"
 msgstr "PDF დოკუმენტის ჩატვირთვის შეცდომა!"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
 msgstr "მრავალგვერდიანი სკანირების აპლიკაცია KDE-ის მიერ."
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:71 main.cpp:72
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "პროგრამისტი"
 
-#: main.cpp:83
+#: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr ""
 "Sane-ის სკანერის მოწყობილობის სახელი. სატესტო მოწყობილობისთვის გამოიყენეთ "
 "'test'."
 
-#: main.cpp:84
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "მოწყობილობა"
 
-#: main.cpp:87
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
 "ფაილის ბილიკი, რომელშიც თქვენი სკანერის მოწყობილობის პარამეტრები ჩაიწერება."
 
-#: main.cpp:91
+#: main.cpp:89
 #, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "

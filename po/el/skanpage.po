@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:47+0000\n"
+"POT-Creation-Date: 2025-10-18 00:46+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -124,45 +124,45 @@ msgstr "Αποτυχία αποθήκευσης εικόνας"
 msgid "Failed to load PDF file!"
 msgstr "Αποτυχία αποθήκευσης εικόνας"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgid "Skanpage"
 msgstr "Skanpage"
 
-#: main.cpp:67
+#: main.cpp:65
 #, fuzzy, kde-format
 #| msgid "Page-scanning application by KDE based on libksane."
 msgid "Multi-page scanning application by KDE."
 msgstr "Εφαρμογή σάρωσης σελίδων από το KDE με βάση το libksane."
 
-#: main.cpp:69
+#: main.cpp:67
 #, fuzzy, kde-format
 #| msgid "© 2015-2021 Kåre Särs, Alexander Stippich"
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2021 Kåre Särs, Alexander Stippich"
 
-#: main.cpp:71 main.cpp:72
+#: main.cpp:69 main.cpp:70
 #, kde-format
 msgid "developer"
 msgstr "προγραμματιστής"
 
-#: main.cpp:83
+#: main.cpp:81
 #, fuzzy, kde-format
 #| msgid "Sane scanner device name. Use 'test' for test device."
 msgid "Sane scanner device name. Use “test” for test device."
 msgstr "Όνομα συσκευής σαρωτή sane. Δώστε 'test' για δοκιμή της συσκευής."
 
-#: main.cpp:84
+#: main.cpp:82
 #, kde-format
 msgid "device"
 msgstr "συσκευή"
 
-#: main.cpp:87
+#: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
 msgstr ""
 
-#: main.cpp:91
+#: main.cpp:89
 #, kde-format
 msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
