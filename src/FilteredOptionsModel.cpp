@@ -34,8 +34,15 @@ bool FilteredOptionsModel::filterAcceptsRow(int source_row, const QModelIndex &s
 void FilteredOptionsModel::showAllOptions(bool show)
 {
     if (m_showAllOptions != show) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         m_showAllOptions = show;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 
