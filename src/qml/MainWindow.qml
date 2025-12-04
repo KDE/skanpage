@@ -79,7 +79,16 @@ ApplicationWindow {
         text: i18n("Discard All")
         shortcutsName: "New"
         enabled: skanpage.documentModel.count !== 0
-        onTriggered: skanpage.documentModel.clearData()
+        onTriggered: discardDialog.open()
+    }
+
+    Kirigami.PromptDialog {
+        id: discardDialog
+        title: i18n("Confirm Discard")
+        subtitle: i18n("Discard all documents?")
+
+        standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+        onAccepted: skanpage.documentModel.clearData()
     }
 
     ShortcutsAction {
