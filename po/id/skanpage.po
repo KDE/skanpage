@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-05 00:46+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -504,75 +504,86 @@ msgstr "%1 - Skanpage"
 msgid "Discard All"
 msgstr "Buang Semua"
 
+#: qml/MainWindow.qml:87
+#, kde-format
+msgid "Confirm Discard"
+msgstr ""
+
 #: qml/MainWindow.qml:88
+#, fuzzy, kde-format
+#| msgid "Discard All"
+msgid "Discard all documents?"
+msgstr "Buang Semua"
+
+#: qml/MainWindow.qml:97
 #, kde-format
 msgid "Save All"
 msgstr "Simpan Semua"
 
-#: qml/MainWindow.qml:97
+#: qml/MainWindow.qml:106
 #, fuzzy, kde-format
 #| msgid "Save All"
 msgid "Save All As"
 msgstr "Simpan Semua"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:119
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Export PDF"
 msgstr ""
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:136
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:155
 #, kde-format
 msgid "Scan"
 msgstr "Pindai"
 
-#: qml/MainWindow.qml:161
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Cancel"
 msgstr "Batal"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:179
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "Tampilkan Opsi Pemindai"
 
-#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:189 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "Bagikan"
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:197
 #, kde-format
 msgid "Print"
 msgstr "Cetak"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
+#: qml/MainWindow.qml:218 qml/MainWindow.qml:437
 #, kde-format
 msgid "About Skanpage"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:225
 #, fuzzy, kde-format
 #| msgid "About Skanpage"
 msgid "Configure Skanpage…"
 msgstr "Tentang Skanpage"
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:233
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:241
 #, kde-format
 msgid "Quit"
 msgstr "Berhenti"

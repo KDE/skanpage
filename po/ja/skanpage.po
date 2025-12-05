@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-05 00:46+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -509,74 +509,85 @@ msgstr "%1 ― Skanpage"
 msgid "Discard All"
 msgstr "すべて破棄"
 
+#: qml/MainWindow.qml:87
+#, kde-format
+msgid "Confirm Discard"
+msgstr ""
+
 #: qml/MainWindow.qml:88
+#, fuzzy, kde-format
+#| msgid "Discard All"
+msgid "Discard all documents?"
+msgstr "すべて破棄"
+
+#: qml/MainWindow.qml:97
 #, kde-format
 msgid "Save All"
 msgstr "すべて保存"
 
-#: qml/MainWindow.qml:97
+#: qml/MainWindow.qml:106
 #, fuzzy, kde-format
 #| msgid "Save All"
 msgid "Save All As"
 msgstr "すべて保存"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:119
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF をエクスポート"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:136
 #, kde-format
 msgid "Preview"
 msgstr "プレビュー"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:155
 #, kde-format
 msgid "Scan"
 msgstr "スキャン"
 
-#: qml/MainWindow.qml:161
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:179
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "スキャナのオプションを表示"
 
-#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:189 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "共有"
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:197
 #, kde-format
 msgid "Print"
 msgstr "印刷"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
+#: qml/MainWindow.qml:218 qml/MainWindow.qml:437
 #, kde-format
 msgid "About Skanpage"
 msgstr "Skanpage について"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage を設定..."
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:233
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "キーボードショートカットを設定..."
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:241
 #, kde-format
 msgid "Quit"
 msgstr "終了"

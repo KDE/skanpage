@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-05 00:46+0000\n"
 "PO-Revision-Date: 2025-03-19 10:53+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -487,73 +487,84 @@ msgstr "%1 ― Skanpage"
 msgid "Discard All"
 msgstr "התעלמות מהכול"
 
+#: qml/MainWindow.qml:87
+#, kde-format
+msgid "Confirm Discard"
+msgstr ""
+
 #: qml/MainWindow.qml:88
+#, fuzzy, kde-format
+#| msgid "Discard All"
+msgid "Discard all documents?"
+msgstr "התעלמות מהכול"
+
+#: qml/MainWindow.qml:97
 #, kde-format
 msgid "Save All"
 msgstr "שמירה של הכול"
 
-#: qml/MainWindow.qml:97
+#: qml/MainWindow.qml:106
 #, kde-format
 msgid "Save All As"
 msgstr "שמירה של הכול בשם"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:119
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "ייבוא"
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Export PDF"
 msgstr "ייצוא PDF"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:136
 #, kde-format
 msgid "Preview"
 msgstr "תצוגה מקדימה"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:155
 #, kde-format
 msgid "Scan"
 msgstr "סריקה"
 
-#: qml/MainWindow.qml:161
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Cancel"
 msgstr "ביטול"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:179
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "הצגת אפשרויות סורק"
 
-#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:189 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "שיתוף"
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:197
 #, kde-format
 msgid "Print"
 msgstr "הדפסה"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
+#: qml/MainWindow.qml:218 qml/MainWindow.qml:437
 #, kde-format
 msgid "About Skanpage"
 msgstr "על Skanpage"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "הגדרת Skanpage…"
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:233
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "הגדרת קיצורי מקלדת…"
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:241
 #, kde-format
 msgid "Quit"
 msgstr "יציאה"

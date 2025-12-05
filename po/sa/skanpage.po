@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-05 00:46+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -510,74 +510,85 @@ msgstr "%1 ― स्कैनपृष्ठम्"
 msgid "Discard All"
 msgstr "सर्वं परित्यजन्तु"
 
+#: qml/MainWindow.qml:87
+#, kde-format
+msgid "Confirm Discard"
+msgstr ""
+
 #: qml/MainWindow.qml:88
+#, fuzzy, kde-format
+#| msgid "Discard All"
+msgid "Discard all documents?"
+msgstr "सर्वं परित्यजन्तु"
+
+#: qml/MainWindow.qml:97
 #, kde-format
 msgid "Save All"
 msgstr "सर्वं रक्षतु"
 
-#: qml/MainWindow.qml:97
+#: qml/MainWindow.qml:106
 #, fuzzy, kde-format
 #| msgid "Save All"
 msgid "Save All As"
 msgstr "सर्वं रक्षतु"
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:119
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr "आयात"
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Export PDF"
 msgstr "PDF निर्यातयन्तु"
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:136
 #, kde-format
 msgid "Preview"
 msgstr "पूर्वावलोकनम्"
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:155
 #, kde-format
 msgid "Scan"
 msgstr "स्कैन् कुर्वन्तु"
 
-#: qml/MainWindow.qml:161
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Cancel"
 msgstr "निरसयतु"
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:179
 #, kde-format
 msgid "Show Scanner Options"
 msgstr "स्कैनर विकल्पान् दर्शयतु"
 
-#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:189 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr "संविभागः"
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:197
 #, kde-format
 msgid "Print"
 msgstr "मुद्रण"
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
+#: qml/MainWindow.qml:218 qml/MainWindow.qml:437
 #, kde-format
 msgid "About Skanpage"
 msgstr "स्कान्पेजस्य विषये"
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr "Skanpage विन्यस्तं कुर्वन्तु..."
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:233
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr "कीबोर्ड शॉर्टकट् विन्यस्तं कुर्वन्तु..."
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:241
 #, kde-format
 msgid "Quit"
 msgstr "परिजहातु"

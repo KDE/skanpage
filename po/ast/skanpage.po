@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-05 00:46+0000\n"
 "PO-Revision-Date: 2024-03-27 23:08+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -479,73 +479,83 @@ msgstr ""
 msgid "Discard All"
 msgstr ""
 
+#: qml/MainWindow.qml:87
+#, kde-format
+msgid "Confirm Discard"
+msgstr ""
+
 #: qml/MainWindow.qml:88
 #, kde-format
-msgid "Save All"
+msgid "Discard all documents?"
 msgstr ""
 
 #: qml/MainWindow.qml:97
 #, kde-format
+msgid "Save All"
+msgstr ""
+
+#: qml/MainWindow.qml:106
+#, kde-format
 msgid "Save All As"
 msgstr ""
 
-#: qml/MainWindow.qml:110
+#: qml/MainWindow.qml:119
 #, kde-format
 msgctxt "@action:button import existing PDF file"
 msgid "Import"
 msgstr ""
 
-#: qml/MainWindow.qml:119
+#: qml/MainWindow.qml:128
 #, kde-format
 msgid "Export PDF"
 msgstr ""
 
-#: qml/MainWindow.qml:127
+#: qml/MainWindow.qml:136
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: qml/MainWindow.qml:146
+#: qml/MainWindow.qml:155
 #, kde-format
 msgid "Scan"
 msgstr ""
 
-#: qml/MainWindow.qml:161
+#: qml/MainWindow.qml:170
 #, kde-format
 msgid "Cancel"
 msgstr ""
 
-#: qml/MainWindow.qml:170
+#: qml/MainWindow.qml:179
 #, kde-format
 msgid "Show Scanner Options"
 msgstr ""
 
-#: qml/MainWindow.qml:180 qml/ShareDialog.qml:20
+#: qml/MainWindow.qml:189 qml/ShareDialog.qml:20
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: qml/MainWindow.qml:188
+#: qml/MainWindow.qml:197
 #, kde-format
 msgid "Print"
 msgstr ""
 
-#: qml/MainWindow.qml:209 qml/MainWindow.qml:428
+#: qml/MainWindow.qml:218 qml/MainWindow.qml:437
 #, kde-format
 msgid "About Skanpage"
 msgstr ""
 
-#: qml/MainWindow.qml:216
+#: qml/MainWindow.qml:225
 #, kde-format
 msgid "Configure Skanpage…"
 msgstr ""
 
-#: qml/MainWindow.qml:224
+#: qml/MainWindow.qml:233
 #, kde-format
 msgid "Configure Keyboard Shortcuts…"
 msgstr ""
 
-#: qml/MainWindow.qml:232
+#: qml/MainWindow.qml:241
 #, kde-format
 msgid "Quit"
 msgstr ""
