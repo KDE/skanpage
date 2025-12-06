@@ -2,15 +2,15 @@
 # This file is distributed under the same license as the skanpage package.
 #
 # SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
-# Sveinn í Felli <sv1@fellsnet.is>, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:43+0000\n"
-"PO-Revision-Date: 2024-06-30 15:43+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-12-05 16:00+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +38,7 @@ msgstr "Nýtt skjal"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1‥%2"
-msgstr ""
+msgstr "%1‥%2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -78,26 +78,23 @@ msgid "Processing page %1 to save the document."
 msgstr "Vinn úr síðu %1 til að vista skjalið"
 
 #: DocumentSaver.cpp:98 DocumentSaver.cpp:233
-#, fuzzy, kde-format
-#| msgid "Document saved as PDF."
+#, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr "Skjalið vistað sem PDF."
+msgstr "Skjalið vistað sem '%1'."
 
 #: DocumentSaver.cpp:135
-#, fuzzy, kde-format
-#| msgid "Document saved with OCR as PDF."
+#, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Skjalið vistað með ljóslestri sem PDF."
+msgstr "Skjalið vistað með ljóslestri sem '%1'."
 
 #: DocumentSaver.cpp:244
-#, fuzzy, kde-format
-#| msgid "Failed to save document as image."
+#, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "Tókst ekki að vista skjalið sem mynd."
+msgstr "Tókst ekki að vista skjalið sem '%1'."
 
 #: DocumentSaver.cpp:264
 #, kde-format
@@ -105,13 +102,12 @@ msgid "Failed to save image."
 msgstr "Tókst ekki að vista mynd."
 
 #: FormatModel.cpp:51
-#, fuzzy, kde-format
-#| msgid "All files"
+#, kde-format
 msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All supported files"
-msgstr "Allar skrár"
+msgstr "Allar studdar skrár"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -134,8 +130,7 @@ msgid "Multi-page scanning application by KDE."
 msgstr "Forrit til skönnunar á mörgum síðum frá KDE."
 
 #: main.cpp:67
-#, fuzzy, kde-format
-#| msgid "© 2015-2022 Kåre Särs, Alexander Stippich"
+#, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
 msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
@@ -145,10 +140,9 @@ msgid "developer"
 msgstr "forritari"
 
 #: main.cpp:81
-#, fuzzy, kde-format
-#| msgid "Sane scanner device name. Use 'test' for test device."
+#, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
-msgstr "Heiti Sane-skönnunartækis. Notaðu 'test' fyrir prófun."
+msgstr "Heiti Sane-skönnunartækis. Notaðu \"test\" fyrir prófun."
 
 #: main.cpp:82
 #, kde-format
@@ -166,51 +160,53 @@ msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Mynd á tæki eða PDF-skrá sem ætti að flytja inn. Myndsnið verða að vera "
+"studd af Qt."
 
 #: NameTemplateUtils.h:24
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Ár"
 
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "Ár (00–99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mánuður"
 
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Dagur"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Klukkustund"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Mínúta"
 
 #: NameTemplateUtils.h:30
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Sekúnda"
 
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "Full dagsetning"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "Tími"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -241,50 +237,41 @@ msgid "No devices found."
 msgstr "Engin tæki fundust."
 
 #: qml/DeviceSelection.qml:96
-#, fuzzy, kde-format
-#| msgid "Open selected device"
+#, kde-format
 msgid "Open Selected Device"
 msgstr "Opna valið tæki"
 
 #: qml/DevicesLoading.qml:29
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Searching for available devices."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr "Leita að tiltækum tækjum."
+msgstr "Leita að tiltækum tækjum…"
 
 #: qml/DocumentList.qml:74
-#, fuzzy, kde-format
-#| msgid "Select previous page"
+#, kde-format
 msgid "Select Previous Page"
 msgstr "Velja fyrri síðu"
 
 #: qml/DocumentList.qml:80
-#, fuzzy, kde-format
-#| msgid "Select next page"
+#, kde-format
 msgid "Select Next Page"
 msgstr "Velja næstu síðu"
 
 #: qml/DocumentList.qml:86
-#, fuzzy, kde-format
-#| msgid "Move selected page up"
+#, kde-format
 msgid "Move Selected Page Up"
 msgstr "Flytja valda síðu upp"
 
 #: qml/DocumentList.qml:95
-#, fuzzy, kde-format
-#| msgid "Move selected page down"
+#, kde-format
 msgid "Move Selected Page Down"
 msgstr "Flytja valda síðu niður"
 
 #: qml/DocumentList.qml:206
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Processing page..."
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
-msgstr "Unnið úr síðu..."
+msgstr "Unnið úr síðu…"
 
 #: qml/DocumentList.qml:219
 #, kde-format
@@ -323,10 +310,9 @@ msgid "Save Page"
 msgstr "Vista síðu"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
-#, fuzzy, kde-format
-#| msgid "Save Page"
+#, kde-format
 msgid "Save Page As"
-msgstr "Vista síðu"
+msgstr "Vista síðu sem"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -386,13 +372,13 @@ msgstr "Öfug röð"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This document contains no pages yet"
-msgstr ""
+msgstr "Þetta skjal inniheldur ennþá engar blaðsíður"
 
 #: qml/DocumentPage.qml:42
 #, kde-kuit-format
 msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
-msgstr ""
+msgstr "Smelltu á <interface>Skanna</interface>-hnappinn til að bæta við einni"
 
 #: qml/DocumentPage.qml:104
 #, kde-format
@@ -415,57 +401,49 @@ msgid "Zoom 100%"
 msgstr "Aðdráttur 100%"
 
 #: qml/ExportDialog.qml:37
-#, fuzzy, kde-format
-#| msgid "Export PDF"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
-msgstr "Flytja út sem PDF"
+msgstr "Flytja út PDF"
 
 #: qml/ExportDialog.qml:45
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titill:"
 
 #: qml/ExportDialog.qml:53
-#, fuzzy, kde-format
-#| msgid "File:"
+#, kde-format
 msgctxt "@label"
 msgid "File:"
 msgstr "Skrá:"
 
 #: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
-msgstr "Vista allt"
+msgstr "Vista sem…"
 
 #: qml/ExportDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable optical character recognition (OCR)"
+#, kde-format
 msgid "Optical Character Recognition"
-msgstr "Virkja ljóslestur (OCR)"
+msgstr "Ljóslestur (OCR)"
 
 #: qml/ExportDialog.qml:99
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Virkja"
 
 #: qml/ExportDialog.qml:105
-#, fuzzy, kde-format
-#| msgid ""
-#| "If your required language is not listed, please install Tesseract's "
-#| "language file with your package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
-"Ef umbeðið tungumál finnst ekki á listanum ættirðu að setja upp viðkomandi "
-"Tesseract-tungumálaskrá með pakkastjóranum þínum."
+"Ef umbeðin tungumál finnst ekki á listanum ættirðu að setja upp viðkomandi "
+"Tesseract-tungumálaskrár með pakkastjóranum þínum."
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -492,12 +470,10 @@ msgid "Next scan starts in<nl/>%1 s"
 msgstr "Næsta skönnun hefst eftir<nl/>%1 sek."
 
 #: qml/InProgressPage.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Scan in progress."
+#, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr "Skönnun í gangi."
+msgstr "Skönnun í gangi…"
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -516,10 +492,9 @@ msgid "Save All"
 msgstr "Vista allt"
 
 #: qml/MainWindow.qml:97
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save All As"
-msgstr "Vista allt"
+msgstr "Vista allt sem"
 
 #: qml/MainWindow.qml:110
 #, kde-format
@@ -719,7 +694,7 @@ msgstr "Kljúfa skönnun lárétt"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Hreinsa skönnunarsvæði"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -761,23 +736,22 @@ msgstr "Sjálfgefinn vistunarstaður:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Titilsniðmát:"
 
 #: qml/SettingsWindow.qml:101
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview:"
-msgstr "Forskönnun"
+msgstr "Forskoðun:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
 msgid "Show Samples"
-msgstr ""
+msgstr "Birta sýnishorn"
 
 #: qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Hide Samples"
-msgstr ""
+msgstr "Fela sýnishorn"
 
 #: qml/SettingsWindow.qml:256
 #, kde-format
