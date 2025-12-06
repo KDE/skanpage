@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:46+0000\n"
-"PO-Revision-Date: 2025-03-19 07:25+0100\n"
+"PO-Revision-Date: 2025-12-05 06:33+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -493,13 +493,12 @@ msgstr "Zavrzi vse"
 #: qml/MainWindow.qml:87
 #, kde-format
 msgid "Confirm Discard"
-msgstr ""
+msgstr "Potrdi zavrženje"
 
 #: qml/MainWindow.qml:88
-#, fuzzy, kde-format
-#| msgid "Discard All"
+#, kde-format
 msgid "Discard all documents?"
-msgstr "Zavrzi vse"
+msgstr "Naj zavržem vse dokumente?"
 
 #: qml/MainWindow.qml:97
 #, kde-format
