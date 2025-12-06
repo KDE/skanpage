@@ -50,7 +50,7 @@
                     "sources": [
                         {
                             "type": "git",
-                            "url": "https://gitlab.com/sane-project/backends",
+                            "url": "https://gitlab.com/sane-project/backends.git",
                             "tag": "1.4.0",
                             "x-checker-data": {
                                 "type": "git",
