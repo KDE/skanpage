@@ -113,8 +113,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/DanBloomberg/leptonica/releases/download/1.85.0/leptonica-1.85.0.tar.gz",
-                    "sha256": "3745ae3bf271a6801a2292eead83ac926e3a9bc1bf622e9cd4dd0f3786e17205",
+                    "url": "https://github.com/DanBloomberg/leptonica/releases/download/1.86.0/leptonica-1.86.0.tar.gz",
+                    "sha256": "1fa08e40bb37fd45802d5e6e7b43927449a5c47d4608ef99d3bd3f0fa76baedc",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 1549,
@@ -217,8 +217,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "f08271f368ead077fa3ed95c32446dd873f8b371d9756aefb757bea323339b29",
-                    "url": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-0.5.1.tar.xz",
+                    "sha256": "11ed4ce1c164a8b6d50bbc1548b5849ab75d5fb837619b90f2cea51ed122547a",
+                    "url": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-0.6.0.tar.xz",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 229033,
