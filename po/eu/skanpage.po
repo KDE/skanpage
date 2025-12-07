@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:46+0000\n"
-"PO-Revision-Date: 2025-03-25 22:31+0100\n"
+"PO-Revision-Date: 2025-12-06 12:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -491,13 +491,12 @@ msgstr "Baztertu dena"
 #: qml/MainWindow.qml:87
 #, kde-format
 msgid "Confirm Discard"
-msgstr ""
+msgstr "Baieztatu baztertzea"
 
 #: qml/MainWindow.qml:88
-#, fuzzy, kde-format
-#| msgid "Discard All"
+#, kde-format
 msgid "Discard all documents?"
-msgstr "Baztertu dena"
+msgstr "Dokumentu guztiak baztertu?"
 
 #: qml/MainWindow.qml:97
 #, kde-format

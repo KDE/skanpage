@@ -484,12 +484,12 @@ msgstr "全部丢弃"
 #: qml/MainWindow.qml:87
 #, kde-format
 msgid "Confirm Discard"
-msgstr ""
+msgstr "确认丢弃"
 
 #: qml/MainWindow.qml:88
 #, kde-format
 msgid "Discard all documents?"
-msgstr ""
+msgstr "丢并所有文档？"
 
 #: qml/MainWindow.qml:97
 #, kde-format

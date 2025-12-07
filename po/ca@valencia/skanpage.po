@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:46+0000\n"
-"PO-Revision-Date: 2025-03-19 08:53+0100\n"
+"PO-Revision-Date: 2025-12-05 09:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "X-Accelerator-Marker: &\n"
 
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "No hi ha res que s'haja de guardar."
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
-msgstr "S'ha produït un error en guardar: %1."
+msgstr "S'ha produït un error mentre es guardava: %1."
 
 #: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
 #, kde-format
@@ -96,12 +96,12 @@ msgstr "El document s'ha guardat amb OCR com a «%1»."
 #, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "No s'ha pogut guardar el document com a «%1»."
+msgstr "Ha fallat mentre es guardava el document com a «%1»."
 
 #: DocumentSaver.cpp:264
 #, kde-format
 msgid "Failed to save image."
-msgstr "No s'ha pogut guardar la imatge."
+msgstr "Ha fallat mentre es guardava la imatge."
 
 #: FormatModel.cpp:51
 #, kde-format
@@ -114,12 +114,12 @@ msgstr "Tots els fitxers admesos"
 #: ImageImport.cpp:42
 #, kde-format
 msgid "Failed to load image!"
-msgstr "No s'ha pogut carregar la imatge!"
+msgstr "Ha fallat mentre es carregava la imatge!"
 
 #: ImageImport.cpp:53
 #, kde-format
 msgid "Failed to load PDF file!"
-msgstr "No s'ha pogut carregar el fitxer PDF!"
+msgstr "Ha fallat mentre es carregava el fitxer PDF!"
 
 #: main.cpp:63
 #, kde-format
@@ -319,7 +319,7 @@ msgstr "Guarda la pàgina"
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
 #, kde-format
 msgid "Save Page As"
-msgstr "Anomena i guarda la pàgina"
+msgstr "Anomeneu i guardeu la pàgina"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
 #, kde-format
@@ -497,13 +497,12 @@ msgstr "Descarta-ho tot"
 #: qml/MainWindow.qml:87
 #, kde-format
 msgid "Confirm Discard"
-msgstr ""
+msgstr "Confirmeu de descart"
 
 #: qml/MainWindow.qml:88
-#, fuzzy, kde-format
-#| msgid "Discard All"
+#, kde-format
 msgid "Discard all documents?"
-msgstr "Descarta-ho tot"
+msgstr "Voleu descartar tots els documents?"
 
 #: qml/MainWindow.qml:97
 #, kde-format
