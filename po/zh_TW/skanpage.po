@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:46+0000\n"
-"PO-Revision-Date: 2025-03-27 22:15+0900\n"
+"PO-Revision-Date: 2025-12-16 21:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -487,13 +487,12 @@ msgstr "捨棄全部"
 #: qml/MainWindow.qml:87
 #, kde-format
 msgid "Confirm Discard"
-msgstr ""
+msgstr "確認捨棄"
 
 #: qml/MainWindow.qml:88
-#, fuzzy, kde-format
-#| msgid "Discard All"
+#, kde-format
 msgid "Discard all documents?"
-msgstr "捨棄全部"
+msgstr "確定要捨棄所有文件嗎？"
 
 #: qml/MainWindow.qml:97
 #, kde-format
