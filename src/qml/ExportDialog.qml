@@ -19,13 +19,12 @@ import org.kde.skanpage
 
 Kirigami.Dialog {
     id: exportDialog
-    standardButtons: Kirigami.Dialog.Save | Kirigami.Dialog.Cancel
+    standardButtons: Kirigami.Dialog.Cancel
 
     implicitWidth: Kirigami.Units.gridUnit * 40
 
     property bool ocrChecked: false
     property string fileTitle
-    property string fileName
 
     header: ColumnLayout {
         spacing: Kirigami.Units.largeSpacing
@@ -45,29 +44,6 @@ Kirigami.Dialog {
                 Kirigami.FormData.label: i18nc("@label", "Title:")
                 text: skanpage.documentModel.name !== i18n("New document") ? skanpage.documentModel.name : skanpage.nameTemplate.parseSamples(skanpage.configuration.nameTemplate)
                 onTextChanged: fileTitle = text
-            }
-
-            RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-                Layout.fillWidth: true
-                Kirigami.FormData.label: i18nc("@label", "File:")
-
-                TextField {
-                    id: fileNameItem
-                    Layout.fillWidth: true
-                    text: skanpage.configuration.defaultFolder + "/" + fileTitle + ".pdf"
-                    onTextChanged: fileName = text
-                }
-
-                Button {
-                    icon.name: "document-open-symbolic"
-                    text: i18nc("@action:button", "Save As…")
-                    display: AbstractButton.IconOnly
-                    ToolTip.text: text
-                    ToolTip.delay: Kirigami.Units.toolTipDelay
-                    ToolTip.visible: hovered
-                    onClicked: fileNameDialog.open()
-                }
             }
         }
 
@@ -120,16 +96,24 @@ Kirigami.Dialog {
         }
     }
 
+    customFooterActions: [
+        /* A custom action for AcceptRole is required because the standard button would close the dialog */
+        Kirigami.Action {
+            id: actionSave
+            text: i18n("Save")
+            icon.name: "document-save"
+            onTriggered: fileNameDialog.open()
+        }
+    ]
+
     FileDialog {
         id: fileNameDialog
-        currentFolder: skanpage.configuration.defaultFolder
+        selectedFile: skanpage.configuration.defaultFolder + "/" + fileTitle
         fileMode: FileDialog.SaveFile
         nameFilters: skanpage.formatModel.pdfFormatFilter()
-        onAccepted: fileNameItem.text = selectedFile
-    }
-
-    onAccepted: {
-        skanpage.documentModel.exportPDF(fileName, fileTitle, ocrChecked)
-        exportDialog.close()
+        onAccepted: {
+            skanpage.documentModel.exportPDF(selectedFile, fileTitle, ocrChecked);
+            exportDialog.close();
+        }
     }
 }
