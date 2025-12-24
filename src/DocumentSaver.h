@@ -41,7 +41,7 @@ Q_SIGNALS:
 
 private:
     QString getLocalNameForFile(const QUrl &fileUrl);
-    void savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
+    void savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const QString &title, const SkanpageUtils::FileType type);
     void saveImage(const QUrl &fileUrl, const QFileInfo &destFileInfo, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type);
     void saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const QString &title);
     void printPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page, bool firstPage);

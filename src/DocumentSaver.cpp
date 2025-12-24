@@ -49,7 +49,7 @@ void DocumentSaver::saveDocument(const QUrl &fileUrl, const SkanpageUtils::Docum
         m_OCREngine->InitForOCR();
         saveSearchablePDF(fileUrl, document, title);
     } else if (fileSuffix == QLatin1String("pdf") || fileSuffix.isEmpty()) {
-        savePDF(fileUrl, document, type);
+        savePDF(fileUrl, document, title, type);
     } else {
         saveImage(fileUrl, fileInfo, document, type);
     }
@@ -75,7 +75,7 @@ QString DocumentSaver::getLocalNameForFile(const QUrl &fileUrl)
     return localName;
 }
 
-void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const SkanpageUtils::FileType type)
+void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPages &document, const QString &title, const SkanpageUtils::FileType type)
 {
     const QString localName = getLocalNameForFile(fileUrl);
     QFile file(localName);
@@ -86,6 +86,7 @@ void DocumentSaver::savePDF(const QUrl &fileUrl, const SkanpageUtils::DocumentPa
     }
     QPdfWriter writer(&file);
     writer.setCreator(QStringLiteral("org.kde.skanpage"));
+    writer.setTitle(title);
     QPainter painter;
 
     for (int i = 0; i < document.count(); ++i) {
