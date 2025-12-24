@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2022-04-07 18:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -27,7 +27,7 @@ msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Nový dokument"
@@ -416,51 +416,42 @@ msgstr "Oddialiť"
 msgid "Zoom 100%"
 msgstr "Priblížiť 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr ""
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr ""
 
-#: qml/ExportDialog.qml:53
-#, fuzzy, kde-format
-#| msgctxt "menu category"
-#| msgid "File"
-msgctxt "@label"
-msgid "File:"
-msgstr "Súbor"
-
-#: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
-#| msgid "Save All"
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Uložiť všetko"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr ""
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
+
+#: qml/ExportDialog.qml:103
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save"
+msgstr "Uložiť všetko"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -799,6 +790,19 @@ msgstr ""
 msgid "Share as:"
 msgstr ""
 
+#, fuzzy
+#~| msgctxt "menu category"
+#~| msgid "File"
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Súbor"
+
+#, fuzzy
+#~| msgid "Save All"
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Uložiť všetko"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Dokument uložený ako obrázok."
 
@@ -806,11 +810,6 @@ msgstr ""
 #~ "for file names, indicates a range: from file0000.png to file0014.png"
 #~ msgid "%1 ... %2"
 #~ msgstr "%1 ... %2"
-
-#, fuzzy
-#~| msgid "Save All"
-#~ msgid "Save"
-#~ msgstr "Uložiť všetko"
 
 #~ msgctxt "@info"
 #~ msgid ""

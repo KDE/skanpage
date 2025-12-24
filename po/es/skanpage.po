@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-12-05 19:01+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -30,7 +30,7 @@ msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Documento nuevo"
@@ -403,42 +403,30 @@ msgstr "Ajustar"
 msgid "Zoom 100%"
 msgstr "Ampliar al 100 %"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Exportar PDF"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Título:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Archivo:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Guardar como…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Reconocimiento óptico de caracteres"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Activar"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -447,6 +435,12 @@ msgid ""
 msgstr ""
 "Si los idiomas que necesita no aparecen en la lista, instale los archivos de "
 "idiomas de Tesseract con el gestor de paquetes del sistema."
+
+#: qml/ExportDialog.qml:103
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save"
+msgstr "Guardar todo"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -775,3 +769,11 @@ msgstr "Cerrar"
 #, kde-format
 msgid "Share as:"
 msgstr "Compartir como:"
+
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Archivo:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Guardar como…"

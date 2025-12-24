@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-12-06 12:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,7 +31,7 @@ msgid "Your emails"
 msgstr "xalba@ni.eus"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Dokumentu berria"
@@ -402,42 +402,30 @@ msgstr "Zooma doitu"
 msgid "Zoom 100%"
 msgstr "Zooma % 100"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Esportatu PDF gisa"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titulua:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Fitxategia:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Gorde honela..."
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Karaktereen ezagutze optikoa"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -446,6 +434,11 @@ msgid ""
 msgstr ""
 "Behar diren hizkuntzak zerrendatzen ez badira, instalatu Tesserat-en "
 "hizkuntza-fitxategia sistemaren pakete-kudeatzailea erabiliz."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Gorde"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -775,6 +768,14 @@ msgstr "Itxi"
 msgid "Share as:"
 msgstr "Partekatu honela:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Fitxategia:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Gorde honela..."
+
 #~ msgid "Document saved as image."
 #~ msgstr "Dokumentua irudi gisa gorde da."
 
@@ -794,9 +795,6 @@ msgstr "Partekatu honela:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Gorde"
 
 #~ msgctxt "@info"
 #~ msgid ""

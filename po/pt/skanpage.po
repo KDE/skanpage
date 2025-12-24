@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2023-06-09 23:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -30,7 +30,7 @@ msgid "Your emails"
 msgstr "zepires@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Novo documento"
@@ -419,47 +419,33 @@ msgstr "Ampliar para Caber"
 msgid "Zoom 100%"
 msgstr "Ampliação a 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, fuzzy, kde-format
 #| msgid "Export PDF"
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Exportar o PDF"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, fuzzy, kde-format
 #| msgid "Title:"
 msgctxt "@label"
 msgid "Title:"
 msgstr "Título:"
 
-#: qml/ExportDialog.qml:53
-#, fuzzy, kde-format
-#| msgid "File:"
-msgctxt "@label"
-msgid "File:"
-msgstr "Ficheiro:"
-
-#: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
-#| msgid "Save All"
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Gravar Tudo"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, fuzzy, kde-format
 #| msgid "Enable optical character recognition (OCR)"
 msgid "Optical Character Recognition"
 msgstr "Activar o reconhecimento óptico de caracteres (OCR)"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, fuzzy, kde-format
 #| msgid ""
 #| "If your required language is not listed, please install Tesseract's "
@@ -471,6 +457,11 @@ msgid ""
 msgstr ""
 "Se a sua língua obrigatória não for indicado, instale por favor o ficheiro "
 "da língua do Tesseract com o seu gestor de pacotes."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Gravar"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -807,6 +798,18 @@ msgstr "Fechar"
 msgid "Share as:"
 msgstr "Partilhar como:"
 
+#, fuzzy
+#~| msgid "File:"
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Ficheiro:"
+
+#, fuzzy
+#~| msgid "Save All"
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Gravar Tudo"
+
 #~ msgid "Document saved as image."
 #~ msgstr "O documento foi gravado como uma imagem."
 
@@ -823,9 +826,6 @@ msgstr "Partilhar como:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Gravar"
 
 #~ msgctxt "@info"
 #~ msgid ""

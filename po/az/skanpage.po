@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2023-06-12 17:35+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Yeni sənəd"
@@ -417,47 +417,33 @@ msgstr "Pəncərə boyu böyüdün"
 msgid "Zoom 100%"
 msgstr "100% böyüdün"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, fuzzy, kde-format
 #| msgid "Export PDF"
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF kimi ixrac edin"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, fuzzy, kde-format
 #| msgid "Title:"
 msgctxt "@label"
 msgid "Title:"
 msgstr "Başlıq:"
 
-#: qml/ExportDialog.qml:53
-#, fuzzy, kde-format
-#| msgid "File:"
-msgctxt "@label"
-msgid "File:"
-msgstr "Fayl:"
-
-#: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
-#| msgid "Save All"
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Hamısını saxlayın"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, fuzzy, kde-format
 #| msgid "Enable optical character recognition (OCR)"
 msgid "Optical Character Recognition"
 msgstr "Mətnin optik tanınmasını (OCR) aktiv edin"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, fuzzy, kde-format
 #| msgid ""
 #| "If your required language is not listed, please install Tesseract's "
@@ -469,6 +455,11 @@ msgid ""
 msgstr ""
 "Əgər tələb olunan dil siyahıda yoxdursa, sisteminizin paket menecerinizdən "
 "Tesseract üçün uyğun dil dəstəyi paketini quraşdırın."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Saxlayın"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -805,6 +796,18 @@ msgstr "Bağlayın"
 msgid "Share as:"
 msgstr "Belə paylaşın:"
 
+#, fuzzy
+#~| msgid "File:"
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Fayl:"
+
+#, fuzzy
+#~| msgid "Save All"
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Hamısını saxlayın"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Sənəd şəkil kimi saxlanıldı."
 
@@ -821,9 +824,6 @@ msgstr "Belə paylaşın:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Saxlayın"
 
 #~ msgctxt "@info"
 #~ msgid ""

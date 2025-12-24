@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-12-18 15:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "sunder67@hotmail.com, emir_sari@icloud.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Yeni belge"
@@ -400,42 +400,30 @@ msgstr "Sığdır"
 msgid "Zoom 100%"
 msgstr "%​100’e Yakınlaştır"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF Dışa Aktar"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Başlık:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Dosya:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Farklı Kaydet…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Optik Karakter Tanıma"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Etkinleştir"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -444,6 +432,11 @@ msgid ""
 msgstr ""
 "Gereken dil listede yoksa sisteminizin paket yöneticisi aracılığıyla ilgili "
 "Tesseract’ın dil dosyasını kurun."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Kaydet"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -773,6 +766,14 @@ msgstr "Kapat"
 msgid "Share as:"
 msgstr "Paylaş:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Dosya:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Farklı Kaydet…"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Belge, görsel olarak kaydedildi."
 
@@ -792,6 +793,3 @@ msgstr "Paylaş:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Kaydet"

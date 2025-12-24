@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2021-10-10 08:04+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr "sstavra@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Νέο έγγραφο"
@@ -416,49 +416,41 @@ msgstr "Ζουμ με ταίριασμα"
 msgid "Zoom 100%"
 msgstr "Ζουμ 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr ""
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr ""
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Αρχείο:"
-
-#: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
-#| msgid "Save"
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Αποθήκευση"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr ""
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Αποθήκευση"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -795,11 +787,18 @@ msgstr "Κλείσιμο"
 msgid "Share as:"
 msgstr ""
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Αρχείο:"
+
+#, fuzzy
+#~| msgid "Save"
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Αποθήκευση"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Το έγγραφο αποθηκεύτηκε ως εικόνα."
-
-#~ msgid "Save"
-#~ msgstr "Αποθήκευση"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-04-07 23:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr "kde@peremen.name"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "새 문서"
@@ -398,42 +398,30 @@ msgstr "맞추기"
 msgid "Zoom 100%"
 msgstr "확대/축소 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF 내보내기"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "제목:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "파일:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "다른 이름으로 저장…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "광학 문자 인식(OCR)"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "활성화"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -442,6 +430,11 @@ msgid ""
 msgstr ""
 "필요한 언어가 설치되어 있지 않다면 패키지 관리자로 Tesseract의 언어 지원을 설"
 "치하십시오."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "저장"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -772,6 +765,14 @@ msgstr "닫기"
 msgid "Share as:"
 msgstr "다음으로 공유:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "파일:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "다른 이름으로 저장…"
+
 #~ msgid "Document saved as image."
 #~ msgstr "문서를 그림으로 저장했습니다."
 
@@ -791,9 +792,6 @@ msgstr "다음으로 공유:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "저장"
 
 #~ msgctxt "@info"
 #~ msgid ""

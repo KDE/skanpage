@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2024-09-15 10:41+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr "steve.allewell@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "New document"
@@ -416,47 +416,33 @@ msgstr "Zoom Fit"
 msgid "Zoom 100%"
 msgstr "Zoom 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, fuzzy, kde-format
 #| msgid "Export PDF"
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Export PDF"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, fuzzy, kde-format
 #| msgid "Title:"
 msgctxt "@label"
 msgid "Title:"
 msgstr "Title:"
 
-#: qml/ExportDialog.qml:53
-#, fuzzy, kde-format
-#| msgid "File:"
-msgctxt "@label"
-msgid "File:"
-msgstr "File:"
-
-#: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
-#| msgid "Save All"
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Save All"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, fuzzy, kde-format
 #| msgid "Enable optical character recognition (OCR)"
 msgid "Optical Character Recognition"
 msgstr "Enable optical character recognition (OCR)"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, fuzzy, kde-format
 #| msgid ""
 #| "If your required language is not listed, install its corresponding "
@@ -468,6 +454,11 @@ msgid ""
 msgstr ""
 "If your required language is not listed, install its corresponding Tesseract "
 "language pack with your package manager."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Save"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -802,6 +793,18 @@ msgstr "Close"
 msgid "Share as:"
 msgstr "Share as:"
 
+#, fuzzy
+#~| msgid "File:"
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "File:"
+
+#, fuzzy
+#~| msgid "Save All"
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Save All"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Document saved as image."
 
@@ -821,9 +824,6 @@ msgstr "Share as:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Save"
 
 #~ msgctxt "@info"
 #~ msgid ""

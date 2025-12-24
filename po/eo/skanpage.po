@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-03-22 22:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "olivermkellogg@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Nova dokumento"
@@ -399,42 +399,30 @@ msgstr "Zomi Ĝisrandige"
 msgid "Zoom 100%"
 msgstr "Zomi 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Elporti PDF"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titolo:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Dosiero:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Konservi Kiel…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Optika signorekono (OCR)"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Ebligi"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -443,6 +431,12 @@ msgid ""
 msgstr ""
 "Se la bezonataj lingvoj ne estas listigitaj, instalu la lingvodosieron de "
 "Tesseract per la pakadministrilo de la sistemo."
+
+#: qml/ExportDialog.qml:103
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save"
+msgstr "Konservi Ĉion"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -772,3 +766,11 @@ msgstr "Fermi"
 #, kde-format
 msgid "Share as:"
 msgstr "Kundividi kiel:"
+
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Dosiero:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Konservi Kiel…"

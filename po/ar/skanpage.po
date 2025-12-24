@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-12-06 16:55+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "مستند جديد"
@@ -404,42 +404,30 @@ msgstr "لائم التقريب"
 msgid "Zoom 100%"
 msgstr "تكبير 100٪"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "صدر إلى بي دي اف"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "العنوان:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "ملف:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "احفظ باسم…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "تعرّف بصري على المحارف"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "مكّن"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -448,6 +436,11 @@ msgid ""
 msgstr ""
 "إذا لم تكن اللغة المطلوبة مدرجة، فالرجاء تثبيت ملف اللغة  لـTesseract بواسطة "
 "مدير الحزم الخاص بك."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "احفظ"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -777,6 +770,14 @@ msgstr "أغلق"
 msgid "Share as:"
 msgstr "شارك كـ:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "ملف:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "احفظ باسم…"
+
 #~ msgid "Document saved as image."
 #~ msgstr "حفظ المستند كصورة."
 
@@ -796,9 +797,6 @@ msgstr "شارك كـ:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "‏%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "احفظ"
 
 #~ msgctxt "@info"
 #~ msgid ""

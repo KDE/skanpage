@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-12-05 12:03+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "מסמך חדש"
@@ -401,42 +401,30 @@ msgstr "תקריב להתאמה"
 msgid "Zoom 100%"
 msgstr "תקריב 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "ייצוא PDF"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "כותרת:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "קובץ:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "שמירה בתור…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "סריקת תווים אופטית (OCR)"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "הפעלה"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -445,6 +433,11 @@ msgid ""
 msgstr ""
 "אם השפות הנחוצות לא מופיעות, נא להתקין את קובץ השפה המתאים ב־Tessarect עם "
 "מנהל החבילות של המערכת."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "שמירה"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -774,6 +767,14 @@ msgstr "סגירה"
 msgid "Share as:"
 msgstr "שיתוף בתור:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "קובץ:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "שמירה בתור…"
+
 #~ msgid "Document saved as image."
 #~ msgstr "המסמך נשמר כתמונה."
 
@@ -793,9 +794,6 @@ msgstr "שיתוף בתור:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "שמירה"
 
 #~ msgctxt "@info"
 #~ msgid ""

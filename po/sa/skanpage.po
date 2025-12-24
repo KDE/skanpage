@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -30,7 +30,7 @@ msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "नवीनं दस्तावेजम्"
@@ -418,42 +418,30 @@ msgstr "जूम फिट"
 msgid "Zoom 100%"
 msgstr "जूम १००%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF निर्यातयन्तु"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "शीर्षक:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "संचिका:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Save As..."
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "प्रकाशिक चरित्र पहचान"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "सक्रियं करोतु"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, fuzzy, kde-format
 #| msgctxt "@info:usagetip"
 #| msgid ""
@@ -466,6 +454,12 @@ msgid ""
 msgstr ""
 "यदि आवश्यकाः भाषाः सूचीकृताः न सन्ति तर्हि Tesseract इत्यस्य भाषासञ्चिकां प्रणाल्याः "
 "संकुलप्रबन्धकेन सह संस्थापयन्तु ।"
+
+#: qml/ExportDialog.qml:103
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save"
+msgstr "सर्वं रक्षतु"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -799,6 +793,14 @@ msgstr "पिधानं करोतु"
 #, kde-format
 msgid "Share as:"
 msgstr "Share as:"
+
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "संचिका:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Save As..."
 
 #~ msgid "Document saved as image."
 #~ msgstr "दस्तावेजं प्रतिबिम्बरूपेण रक्षितम्।"

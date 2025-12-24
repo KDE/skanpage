@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr "आपके ईमेल"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "नया दस्तावेज़"
@@ -416,42 +416,30 @@ msgstr "ज़ूम फ़िट"
 msgid "Zoom 100%"
 msgstr "ज़ूम 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "पीडीएफ निर्यात करें"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "शीर्षक:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "फ़ाइल:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "के रूप रक्षित करें…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "ऑप्टिकल कैरेक्टर मान्यता"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "सक्षम"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, fuzzy, kde-format
 #| msgctxt "@info:usagetip"
 #| msgid ""
@@ -464,6 +452,12 @@ msgid ""
 msgstr ""
 "यदि आवश्यक भाषाएं सूचीबद्ध नहीं हैं, तो सिस्टम के पैकेज मैनेजर के साथ टेसेरैक्ट की भाषा फ़ाइल "
 "स्थापित करें।"
+
+#: qml/ExportDialog.qml:103
+#, fuzzy, kde-format
+#| msgid "Save All"
+msgid "Save"
+msgstr "सब को सुरक्षित करें"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -797,6 +791,14 @@ msgstr "बंद करना"
 #, kde-format
 msgid "Share as:"
 msgstr "इस प्रकार साझा करें:"
+
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "फ़ाइल:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "के रूप रक्षित करें…"
 
 #~ msgid "Document saved as image."
 #~ msgstr "दस्तावेज़ छवि के रूप में सहेजा गया."

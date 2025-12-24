@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-01-10 10:25\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -32,7 +32,7 @@ msgid "Your emails"
 msgstr "nashtlumach@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Новы дакумент"
@@ -422,42 +422,30 @@ msgstr "Маштабаваць да памераў акна"
 msgid "Zoom 100%"
 msgstr "Маштабаваць да 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Экспартаваць у PDF"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Назва:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Файл:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Захаваць як…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Знакі для аўтаматычнага распазнавання"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Уключыць"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, fuzzy, kde-format
 #| msgctxt "@info:usagetip"
 #| msgid ""
@@ -470,6 +458,11 @@ msgid ""
 msgstr ""
 "Калі неабходнай мовы няма ў спісе, усталюйце ў сістэмным кіраўніку пакетаў "
 "моўны файл Tesseract."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Захаваць"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -804,6 +797,14 @@ msgstr "Закрыць"
 msgid "Share as:"
 msgstr "Абагуліць як:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Файл:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Захаваць як…"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Дакумент захаваны як выява."
 
@@ -823,9 +824,6 @@ msgstr "Абагуліць як:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Захаваць"
 
 #~ msgctxt "@info"
 #~ msgid ""

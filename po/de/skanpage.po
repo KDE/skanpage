@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-09-09 20:58+0200\n"
 "Last-Translator: Wolfram Sobotta <kde@lesath.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -32,7 +32,7 @@ msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Neues Dokument"
@@ -405,42 +405,30 @@ msgstr "Auf Fenstergröße einpassen"
 msgid "Zoom 100%"
 msgstr "Vergrößerung 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF exportieren"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titel:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Datei:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Speichern unter …"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Optische Zeichenerkennung (OCR)"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Aktivieren"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -449,6 +437,11 @@ msgid ""
 msgstr ""
 "Falls die benötigten Sprachen nicht aufgeführt sind, installieren Sie die "
 "Sprachdatei von Tesseract mit dem Paketmanager des Systems."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Speichern"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -779,6 +772,14 @@ msgstr "Schließen"
 msgid "Share as:"
 msgstr "Teilen als:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Datei:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Speichern unter …"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Das Dokument wurde als Bild gespeichert."
 
@@ -798,9 +799,6 @@ msgstr "Teilen als:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Speichern"
 
 #~ msgctxt "@info"
 #~ msgid ""

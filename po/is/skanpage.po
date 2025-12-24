@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2025-12-03 19:31+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "sv1@fellsnet.is, gudmundure@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "Nýtt skjal"
@@ -400,42 +400,30 @@ msgstr "Aðdráttur svo passi"
 msgid "Zoom 100%"
 msgstr "Aðdráttur 100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "Flytja út PDF"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Titill:"
 
-#: qml/ExportDialog.qml:53
-#, kde-format
-msgctxt "@label"
-msgid "File:"
-msgstr "Skrá:"
-
-#: qml/ExportDialog.qml:64
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Vista sem…"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Ljóslestur (OCR)"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Virkja"
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -444,6 +432,11 @@ msgid ""
 msgstr ""
 "Ef umbeðin tungumál finnst ekki á listanum ættirðu að setja upp viðkomandi "
 "Tesseract-tungumálaskrár með pakkastjóranum þínum."
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "Vista"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -774,6 +767,14 @@ msgstr "Loka"
 msgid "Share as:"
 msgstr "Deila sem:"
 
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "Skrá:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Vista sem…"
+
 #~ msgid "Document saved as image."
 #~ msgstr "Skjalið vistað sem mynd."
 
@@ -793,9 +794,6 @@ msgstr "Deila sem:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "Vista"
 
 #~ msgctxt "@info"
 #~ msgid ""

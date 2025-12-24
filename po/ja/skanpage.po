@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:46+0000\n"
+"POT-Creation-Date: 2025-12-24 00:47+0000\n"
 "PO-Revision-Date: 2024-01-14 08:47+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -27,7 +27,7 @@ msgid "Your emails"
 msgstr "tarot@sdf.org"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:46 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:79
 #, kde-format
 msgid "New document"
 msgstr "新しいドキュメント"
@@ -413,47 +413,33 @@ msgstr "合わせる"
 msgid "Zoom 100%"
 msgstr "100%"
 
-#: qml/ExportDialog.qml:37
+#: qml/ExportDialog.qml:36
 #, fuzzy, kde-format
 #| msgid "Export PDF"
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF をエクスポート"
 
-#: qml/ExportDialog.qml:45
+#: qml/ExportDialog.qml:44
 #, fuzzy, kde-format
 #| msgid "Title:"
 msgctxt "@label"
 msgid "Title:"
 msgstr "タイトル:"
 
-#: qml/ExportDialog.qml:53
-#, fuzzy, kde-format
-#| msgid "File:"
-msgctxt "@label"
-msgid "File:"
-msgstr "ファイル:"
-
-#: qml/ExportDialog.qml:64
-#, fuzzy, kde-format
-#| msgid "Save All"
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "すべて保存"
-
-#: qml/ExportDialog.qml:96
+#: qml/ExportDialog.qml:72
 #, fuzzy, kde-format
 #| msgid "Enable optical character recognition (OCR)"
 msgid "Optical Character Recognition"
 msgstr "光学文字認識 (OCR) を有効にする"
 
-#: qml/ExportDialog.qml:99
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr ""
 
-#: qml/ExportDialog.qml:105
+#: qml/ExportDialog.qml:81
 #, fuzzy, kde-format
 #| msgid ""
 #| "If your required language is not listed, please install Tesseract's "
@@ -465,6 +451,11 @@ msgid ""
 msgstr ""
 "必要な言語がない場合、パッケージマネージャで Tesseract の言語ファイルをインス"
 "トールしてください。"
+
+#: qml/ExportDialog.qml:103
+#, kde-format
+msgid "Save"
+msgstr "保存"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -801,6 +792,18 @@ msgstr "閉じる"
 msgid "Share as:"
 msgstr "次で共有:"
 
+#, fuzzy
+#~| msgid "File:"
+#~ msgctxt "@label"
+#~ msgid "File:"
+#~ msgstr "ファイル:"
+
+#, fuzzy
+#~| msgid "Save All"
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "すべて保存"
+
 #~ msgid "Document saved as image."
 #~ msgstr "ドキュメントを画像として保存しました。"
 
@@ -820,9 +823,6 @@ msgstr "次で共有:"
 
 #~ msgid "%1 [%2]"
 #~ msgstr "%1 [%2]"
-
-#~ msgid "Save"
-#~ msgstr "保存"
 
 #~ msgctxt "@info"
 #~ msgid ""
