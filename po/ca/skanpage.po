@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-24 00:47+0000\n"
-"PO-Revision-Date: 2025-12-05 09:00+0100\n"
+"PO-Revision-Date: 2025-12-24 09:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -441,10 +441,9 @@ msgstr ""
 "corresponent del Tesseract amb el gestor de paquets del sistema."
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save"
-msgstr "Desa-ho tot"
+msgstr "Desa"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
