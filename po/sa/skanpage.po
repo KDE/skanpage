@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-24 00:47+0000\n"
+"POT-Creation-Date: 2025-12-26 00:47+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -66,26 +66,26 @@ msgstr "न सञ्चिकामार्गः दत्तः ।"
 msgid "Nothing to save."
 msgstr "न किमपि तारयितुं।"
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:119
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "रक्षणकाले त्रुटिः अभवत्: %1."
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
+#: DocumentSaver.cpp:93 DocumentSaver.cpp:128 DocumentSaver.cpp:204
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "दस्तावेजं रक्षितुं पृष्ठं %1 संसाधयति ।"
 
-#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#: DocumentSaver.cpp:99 DocumentSaver.cpp:234
 #, fuzzy, kde-format
 #| msgid "Document saved as PDF."
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
 msgstr "दस्तावेजं PDF रूपेण रक्षितम्।"
 
-#: DocumentSaver.cpp:135
+#: DocumentSaver.cpp:136
 #, fuzzy, kde-format
 #| msgid "Document saved with OCR as PDF."
 msgctxt ""
@@ -93,14 +93,14 @@ msgctxt ""
 msgid "Document saved with OCR as '%1'."
 msgstr "OCR इत्यनेन सह PDF रूपेण रक्षितं दस्तावेजम्।"
 
-#: DocumentSaver.cpp:244
+#: DocumentSaver.cpp:245
 #, fuzzy, kde-format
 #| msgid "Failed to save document as image."
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
 msgstr "दस्तावेजं प्रतिबिम्बरूपेण रक्षितुं असफलम् ।"
 
-#: DocumentSaver.cpp:264
+#: DocumentSaver.cpp:265
 #, kde-format
 msgid "Failed to save image."
 msgstr "चित्रं रक्षितुं असफलम्।"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-24 00:47+0000\n"
+"POT-Creation-Date: 2025-12-26 00:47+0000\n"
 "PO-Revision-Date: 2025-12-06 09:40+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -62,25 +62,25 @@ msgstr "Aucun emplacement de fichier fourni."
 msgid "Nothing to save."
 msgstr "Rien à enregistrer."
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:119
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "Une erreur est survenue durant l'enregistrement : %1"
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
+#: DocumentSaver.cpp:93 DocumentSaver.cpp:128 DocumentSaver.cpp:204
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "Traitement de la page %1 pour enregistrement du document."
 
-#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#: DocumentSaver.cpp:99 DocumentSaver.cpp:234
 #, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
 msgstr "Document enregistré comme « %1 »."
 
-#: DocumentSaver.cpp:135
+#: DocumentSaver.cpp:136
 #, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
@@ -88,13 +88,13 @@ msgid "Document saved with OCR as '%1'."
 msgstr ""
 "Document enregistré avec reconnaissance optique de caractères comme « %1 »."
 
-#: DocumentSaver.cpp:244
+#: DocumentSaver.cpp:245
 #, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
 msgstr "Impossible d'enregistrer le document comme « %1 »."
 
-#: DocumentSaver.cpp:264
+#: DocumentSaver.cpp:265
 #, kde-format
 msgid "Failed to save image."
 msgstr "Impossible d'enregistrer l'image."

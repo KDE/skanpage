@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-24 00:47+0000\n"
+"POT-Creation-Date: 2025-12-26 00:47+0000\n"
 "PO-Revision-Date: 2025-04-07 23:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -64,38 +64,38 @@ msgstr "파일 경로를 지정하지 않았습니다."
 msgid "Nothing to save."
 msgstr "저장할 항목이 없습니다."
 
-#: DocumentSaver.cpp:84 DocumentSaver.cpp:118
+#: DocumentSaver.cpp:84 DocumentSaver.cpp:119
 #, kde-format
 msgctxt "%1 is the error message"
 msgid "An error ocurred while saving: %1."
 msgstr "저장하는 중 오류 발생: %1."
 
-#: DocumentSaver.cpp:92 DocumentSaver.cpp:127 DocumentSaver.cpp:203
+#: DocumentSaver.cpp:93 DocumentSaver.cpp:128 DocumentSaver.cpp:204
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
 msgstr "문서를 저장하기 위해서 %1쪽을 처리하고 있습니다."
 
-#: DocumentSaver.cpp:98 DocumentSaver.cpp:233
+#: DocumentSaver.cpp:99 DocumentSaver.cpp:234
 #, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
 msgstr "문서를 '%1'(으)로 저장했습니다."
 
-#: DocumentSaver.cpp:135
+#: DocumentSaver.cpp:136
 #, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
 msgstr "OCR 처리된 문서를 '%1'(으)로 저장했습니다."
 
-#: DocumentSaver.cpp:244
+#: DocumentSaver.cpp:245
 #, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
 msgstr "문서를 '%1'(으)로 저장할 수 없습니다."
 
-#: DocumentSaver.cpp:264
+#: DocumentSaver.cpp:265
 #, kde-format
 msgid "Failed to save image."
 msgstr "그림을 저장할 수 없습니다."
