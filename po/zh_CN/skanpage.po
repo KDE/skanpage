@@ -429,10 +429,9 @@ msgstr ""
 "如果所需的语言没有列出，请使用本机系统的包管理器安装 Tesseract 的语言文件。"
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save"
-msgstr "全部保存"
+msgstr ""
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
@@ -761,11 +760,3 @@ msgstr "关闭"
 #, kde-format
 msgid "Share as:"
 msgstr "分享为："
-
-#~ msgctxt "@label"
-#~ msgid "File:"
-#~ msgstr "文件："
-
-#~ msgctxt "@action:button"
-#~ msgid "Save As…"
-#~ msgstr "另存为…"
