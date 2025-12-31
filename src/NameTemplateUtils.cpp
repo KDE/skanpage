@@ -94,32 +94,32 @@ QString NameTemplateUtils::getYear()
 
 QString NameTemplateUtils::getShortYear()
 {
-    return QString::number(QDateTime::currentDateTime().date().year()).right(2);
+    return QString::number(QDateTime::currentDateTime().date().year()).right(2).rightJustified(2, u'0');
 }
 
 QString NameTemplateUtils::getMonth()
 {
-    return QString::number(QDateTime::currentDateTime().date().month());
+    return QString::number(QDateTime::currentDateTime().date().month()).rightJustified(2, u'0');
 }
 
 QString NameTemplateUtils::getDay()
 {
-    return QString::number(QDateTime::currentDateTime().date().day());
+    return QString::number(QDateTime::currentDateTime().date().day()).rightJustified(2, u'0');
 }
 
 QString NameTemplateUtils::getHour()
 {
-    return QString::number(QDateTime::currentDateTime().time().hour());
+    return QString::number(QDateTime::currentDateTime().time().hour()).rightJustified(2, u'0');
 }
 
 QString NameTemplateUtils::getMinute()
 {
-    return QString::number(QDateTime::currentDateTime().time().minute());
+    return QString::number(QDateTime::currentDateTime().time().minute()).rightJustified(2, u'0');
 }
 
 QString NameTemplateUtils::getSecond()
 {
-    return QString::number(QDateTime::currentDateTime().time().second());
+    return QString::number(QDateTime::currentDateTime().time().second()).rightJustified(2, u'0');
 }
 
 QString NameTemplateUtils::getFullDate()
