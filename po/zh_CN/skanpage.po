@@ -431,7 +431,7 @@ msgstr ""
 #: qml/ExportDialog.qml:103
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
