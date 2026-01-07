@@ -83,6 +83,7 @@ Item {
 
                     rotation: skanpage.documentModel.activePageRotation
                     transformOrigin: Item.Center
+                    smooth: zoomScale < 2
                 }
             }
         }
