@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-26 00:47+0000\n"
+"POT-Creation-Date: 2026-01-08 00:47+0000\n"
 "PO-Revision-Date: 2025-12-18 15:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -289,32 +289,32 @@ msgstr "Yukarı Taşı"
 msgid "Move Down"
 msgstr "Aşağı Taşı"
 
-#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Left"
 msgstr "Sola Döndür"
 
-#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Rotate Right"
 msgstr "Sağa Döndür"
 
-#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Flip"
 msgstr "Ters Çevir"
 
-#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Save Page"
 msgstr "Sayfayı Kaydet"
 
-#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:175
 #, kde-format
 msgid "Save Page As"
 msgstr "Sayfayı Farklı Kaydet"
 
-#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:182
 #, kde-format
 msgid "Delete Page"
 msgstr "Sayfayı Sil"
@@ -380,22 +380,22 @@ msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr "Bir tane eklemek için <interface>Tara</interface> düğmesine basın"
 
-#: qml/DocumentPage.qml:104
+#: qml/DocumentPage.qml:105
 #, kde-format
 msgid "Zoom In"
 msgstr "Yakınlaştır"
 
-#: qml/DocumentPage.qml:113
+#: qml/DocumentPage.qml:114
 #, kde-format
 msgid "Zoom Out"
 msgstr "Uzaklaştır"
 
-#: qml/DocumentPage.qml:122
+#: qml/DocumentPage.qml:123
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Sığdır"
 
-#: qml/DocumentPage.qml:138
+#: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
 msgstr "%​100’e Yakınlaştır"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-26 00:47+0000\n"
+"POT-Creation-Date: 2026-01-08 00:47+0000\n"
 "PO-Revision-Date: 2025-12-24 09:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -296,32 +296,32 @@ msgstr "Mou cap amunt"
 msgid "Move Down"
 msgstr "Mou cap avall"
 
-#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Left"
 msgstr "Gira a l'esquerra"
 
-#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Rotate Right"
 msgstr "Gira a la dreta"
 
-#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Flip"
 msgstr "Invertix"
 
-#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Save Page"
 msgstr "Guarda la pàgina"
 
-#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:175
 #, kde-format
 msgid "Save Page As"
 msgstr "Anomeneu i guardeu la pàgina"
 
-#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:182
 #, kde-format
 msgid "Delete Page"
 msgstr "Suprimix la pàgina"
@@ -388,22 +388,22 @@ msgid "Click the <interface>Scan</interface> button to add one"
 msgstr ""
 "Cliqueu damunt del botó <interface>Escaneja</interface> per a afegir-ne una"
 
-#: qml/DocumentPage.qml:104
+#: qml/DocumentPage.qml:105
 #, kde-format
 msgid "Zoom In"
 msgstr "Amplia"
 
-#: qml/DocumentPage.qml:113
+#: qml/DocumentPage.qml:114
 #, kde-format
 msgid "Zoom Out"
 msgstr "Reduïx"
 
-#: qml/DocumentPage.qml:122
+#: qml/DocumentPage.qml:123
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Zoom fins que ajuste"
 
-#: qml/DocumentPage.qml:138
+#: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Zoom 100%"

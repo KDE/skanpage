@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-26 00:47+0000\n"
+"POT-Creation-Date: 2026-01-08 00:47+0000\n"
 "PO-Revision-Date: 2025-04-06 09:54+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -288,32 +288,32 @@ msgstr "Flytta upp"
 msgid "Move Down"
 msgstr "Flytta ner"
 
-#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Left"
 msgstr "Rotera åt vänster"
 
-#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Rotate Right"
 msgstr "Rotera åt höger"
 
-#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Flip"
 msgstr "Vänd"
 
-#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Save Page"
 msgstr "Spara sida"
 
-#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:175
 #, kde-format
 msgid "Save Page As"
 msgstr "Spara sida som"
 
-#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:182
 #, kde-format
 msgid "Delete Page"
 msgstr "Ta bort sida"
@@ -379,22 +379,22 @@ msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr "Klicka på knappen <interface>Läs in</interface> för att lägga till ett"
 
-#: qml/DocumentPage.qml:104
+#: qml/DocumentPage.qml:105
 #, kde-format
 msgid "Zoom In"
 msgstr "Zooma in"
 
-#: qml/DocumentPage.qml:113
+#: qml/DocumentPage.qml:114
 #, kde-format
 msgid "Zoom Out"
 msgstr "Zooma ut"
 
-#: qml/DocumentPage.qml:122
+#: qml/DocumentPage.qml:123
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Anpassa"
 
-#: qml/DocumentPage.qml:138
+#: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Zooma 100 %"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-26 00:47+0000\n"
+"POT-Creation-Date: 2026-01-08 00:47+0000\n"
 "PO-Revision-Date: 2025-12-16 21:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -289,32 +289,32 @@ msgstr "上移"
 msgid "Move Down"
 msgstr "下移"
 
-#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Left"
 msgstr "左旋"
 
-#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Rotate Right"
 msgstr "右旋"
 
-#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Flip"
 msgstr "翻轉"
 
-#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Save Page"
 msgstr "儲存頁面"
 
-#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:175
 #, kde-format
 msgid "Save Page As"
 msgstr "頁面另存為"
 
-#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:182
 #, kde-format
 msgid "Delete Page"
 msgstr "刪除頁面"
@@ -379,22 +379,22 @@ msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr "點擊 <interface>掃描</interface> 按鈕來新增"
 
-#: qml/DocumentPage.qml:104
+#: qml/DocumentPage.qml:105
 #, kde-format
 msgid "Zoom In"
 msgstr "放大"
 
-#: qml/DocumentPage.qml:113
+#: qml/DocumentPage.qml:114
 #, kde-format
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: qml/DocumentPage.qml:122
+#: qml/DocumentPage.qml:123
 #, kde-format
 msgid "Zoom Fit"
 msgstr "縮放到適合"
 
-#: qml/DocumentPage.qml:138
+#: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
 msgstr "縮放到 100%"

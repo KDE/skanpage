@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-26 00:47+0000\n"
+"POT-Creation-Date: 2026-01-08 00:47+0000\n"
 "PO-Revision-Date: 2025-03-22 22:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -288,32 +288,32 @@ msgstr "Movi Supren"
 msgid "Move Down"
 msgstr "Movi Malsupren"
 
-#: qml/DocumentList.qml:250 qml/DocumentPage.qml:146
+#: qml/DocumentList.qml:250 qml/DocumentPage.qml:147
 #, kde-format
 msgid "Rotate Left"
 msgstr "Rotacii Maldekstren"
 
-#: qml/DocumentList.qml:256 qml/DocumentPage.qml:153
+#: qml/DocumentList.qml:256 qml/DocumentPage.qml:154
 #, kde-format
 msgid "Rotate Right"
 msgstr "Rotacii Dekstren"
 
-#: qml/DocumentList.qml:262 qml/DocumentPage.qml:160
+#: qml/DocumentList.qml:262 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Flip"
 msgstr "Interŝanĝi"
 
-#: qml/DocumentList.qml:268 qml/DocumentPage.qml:167
+#: qml/DocumentList.qml:268 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Save Page"
 msgstr "Konservi Paĝon"
 
-#: qml/DocumentList.qml:274 qml/DocumentPage.qml:174
+#: qml/DocumentList.qml:274 qml/DocumentPage.qml:175
 #, kde-format
 msgid "Save Page As"
 msgstr "Konservi Paĝon Kiel"
 
-#: qml/DocumentList.qml:280 qml/DocumentPage.qml:181
+#: qml/DocumentList.qml:280 qml/DocumentPage.qml:182
 #, kde-format
 msgid "Delete Page"
 msgstr "Forigi Paĝon"
@@ -379,22 +379,22 @@ msgctxt "@info:placeholder"
 msgid "Click the <interface>Scan</interface> button to add one"
 msgstr "Alklaku la <interface>Skan</interface>-butonon por aldoni iun"
 
-#: qml/DocumentPage.qml:104
+#: qml/DocumentPage.qml:105
 #, kde-format
 msgid "Zoom In"
 msgstr "Zomi"
 
-#: qml/DocumentPage.qml:113
+#: qml/DocumentPage.qml:114
 #, kde-format
 msgid "Zoom Out"
 msgstr "Malzomi"
 
-#: qml/DocumentPage.qml:122
+#: qml/DocumentPage.qml:123
 #, kde-format
 msgid "Zoom Fit"
 msgstr "Zomi Ĝisrandige"
 
-#: qml/DocumentPage.qml:138
+#: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
 msgstr "Zomi 100%"
