@@ -430,10 +430,9 @@ msgid ""
 msgstr ""
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid "Save All"
+#, kde-format
 msgid "Save"
-msgstr "Uložit vše"
+msgstr "Uložit"
 
 #: qml/GlobalMenu.qml:27
 #, kde-format
