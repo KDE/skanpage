@@ -103,6 +103,17 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
     engine.rootContext()->setContextProperty(QStringLiteral("skanpage"), &skanpageApp);
     engine.rootContext()->setContextProperty(QStringLiteral("_aboutData"), QVariant::fromValue(aboutData));
+
+    QObject::connect(
+        &engine,
+        &QQmlApplicationEngine::objectCreationFailed,
+        &app,
+        []() {
+            qWarning() << "Failed to load QML window";
+            QApplication::exit(-1);
+        },
+        Qt::QueuedConnection);
+
     engine.load(QUrl(QStringLiteral("qrc:/qml/MainWindow.qml")));
 
     return app.exec();
