@@ -114,7 +114,7 @@ void DocumentSaver::saveSearchablePDF(const QUrl &fileUrl, const SkanpageUtils::
 
     const QString localName = getLocalNameForFile(fileUrl);
     QFile file(localName);
-    bool ok = file.open(QIODevice::ReadWrite);
+    bool ok = file.open(QIODevice::WriteOnly);
     if (!ok) {
         Q_EMIT showUserMessage(SkanpageUtils::ErrorMessage, i18nc("%1 is the error message", "An error ocurred while saving: %1.", file.errorString()));
         return;
