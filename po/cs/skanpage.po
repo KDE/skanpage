@@ -1,31 +1,32 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Michal Vícha <vichamichal@seznam.cz>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:47+0000\n"
-"PO-Revision-Date: 2024-09-18 15:28+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-02-06 19:04+0100\n"
+"Last-Translator: Michal Vícha <vichamichal@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák"
+msgstr "Vít Pelčák Maia"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org"
+msgstr "vit@pelcak.org maia@punches.cz"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
 #: qml/ExportDialog.qml:45 Skanpage.cpp:79
@@ -37,7 +38,7 @@ msgstr "Nový dokument"
 #, kde-format
 msgctxt "for file names, indicates a range: from file0000.png to file0014.png"
 msgid "%1‥%2"
-msgstr ""
+msgstr "%1‥%2"
 
 #: DocumentPrinter.cpp:33
 #, kde-format
@@ -74,26 +75,26 @@ msgstr "Při ukládání souboru došlo k chybě: %1."
 #, kde-format
 msgctxt "indicate status update during saving"
 msgid "Processing page %1 to save the document."
-msgstr ""
+msgstr "Zpracovávání stránky %1 pro uložení dokumentu."
 
 #: DocumentSaver.cpp:99 DocumentSaver.cpp:234
 #, kde-format
 msgctxt "@info: user message to confirm the save process and the filename"
 msgid "Document saved as '%1'."
-msgstr ""
+msgstr "Dokument uložen jako '%1'."
 
 #: DocumentSaver.cpp:136
 #, kde-format
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr ""
+msgstr "Dokument s OCR uložen jako '%1'."
 
 #: DocumentSaver.cpp:245
 #, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr ""
+msgstr "Ukládání dokumentu jako '%1' selhalo."
 
 #: DocumentSaver.cpp:265
 #, kde-format
@@ -106,7 +107,7 @@ msgctxt ""
 "format filter for a file dialog, all formats supported by the application "
 "will be displayed"
 msgid "All supported files"
-msgstr ""
+msgstr "Všechny podporované soubory"
 
 #: ImageImport.cpp:42
 #, kde-format
@@ -131,7 +132,7 @@ msgstr "Vícestránkové skenování s KDE."
 #: main.cpp:67
 #, kde-format
 msgid "© 2015–2022 Kåre Särs, Alexander Stippich"
-msgstr ""
+msgstr "© 2015-2022 Kåre Särs, Alexander Stippich"
 
 #: main.cpp:69 main.cpp:70
 #, kde-format
@@ -141,7 +142,7 @@ msgstr "vývojář"
 #: main.cpp:81
 #, kde-format
 msgid "Sane scanner device name. Use “test” for test device."
-msgstr ""
+msgstr "Název skeneru SANE. Pro testovací zařízení použijte 'test'."
 
 #: main.cpp:82
 #, kde-format
@@ -151,7 +152,7 @@ msgstr "zařízení"
 #: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr ""
+msgstr "Cesta k souboru, do kterého jsou zapsána nastavení vašeho skeneru."
 
 #: main.cpp:89
 #, kde-format
@@ -159,6 +160,8 @@ msgid ""
 "A local image or PDF file that shall be imported. Image formats must be "
 "supported by Qt."
 msgstr ""
+"Místní obrázek nebo PDF soubor, který má být importován. Obrazové formáty "
+"musí být podporovány Qt."
 
 #: NameTemplateUtils.h:24
 #, kde-format
@@ -168,7 +171,7 @@ msgstr "Rok"
 #: NameTemplateUtils.h:25
 #, kde-format
 msgid "Year (00–99)"
-msgstr ""
+msgstr "Rok (00-99)"
 
 #: NameTemplateUtils.h:26
 #, kde-format
@@ -178,17 +181,17 @@ msgstr "Měsíc"
 #: NameTemplateUtils.h:27
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Den"
 
 #: NameTemplateUtils.h:28
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Hodina"
 
 #: NameTemplateUtils.h:29
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minuta"
 
 #: NameTemplateUtils.h:30
 #, kde-format
@@ -198,12 +201,12 @@ msgstr "Sekunda"
 #: NameTemplateUtils.h:31
 #, kde-format
 msgid "Full date"
-msgstr ""
+msgstr "Celé datum"
 
 #: NameTemplateUtils.h:32
 #, kde-format
 msgid "Full time"
-msgstr ""
+msgstr "Celý čas"
 
 #: qml/ContentView.qml:18
 #, kde-format
@@ -236,39 +239,39 @@ msgstr "Nebyla nalezena žádná zařízení."
 #: qml/DeviceSelection.qml:96
 #, kde-format
 msgid "Open Selected Device"
-msgstr ""
+msgstr "Otevřít vybrané zařízení"
 
 #: qml/DevicesLoading.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Searching for available devices…"
-msgstr ""
+msgstr "Vyhledávám dostupná zařízení..."
 
 #: qml/DocumentList.qml:74
 #, kde-format
 msgid "Select Previous Page"
-msgstr ""
+msgstr "Vybrat předchozí stranu"
 
 #: qml/DocumentList.qml:80
 #, kde-format
 msgid "Select Next Page"
-msgstr ""
+msgstr "Vybrat následující stranu"
 
 #: qml/DocumentList.qml:86
 #, kde-format
 msgid "Move Selected Page Up"
-msgstr ""
+msgstr "Posunout vybranou stranu výš"
 
 #: qml/DocumentList.qml:95
 #, kde-format
 msgid "Move Selected Page Down"
-msgstr ""
+msgstr "Posunout vybranou stranu níž"
 
 #: qml/DocumentList.qml:206
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Processing page…"
-msgstr ""
+msgstr "Zpracovávám stranu…"
 
 #: qml/DocumentList.qml:219
 #, kde-format
@@ -309,7 +312,7 @@ msgstr "Uložit stranu"
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:175
 #, kde-format
 msgid "Save Page As"
-msgstr ""
+msgstr "Uložit stranu jako"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:182
 #, kde-format
@@ -327,22 +330,22 @@ msgstr[2] "%1 stran"
 #: qml/DocumentList.qml:312
 #, kde-format
 msgid "Flip Pages"
-msgstr "Otočit strany"
+msgstr "Převrátit strany"
 
 #: qml/DocumentList.qml:317
 #, kde-format
 msgid "Flip Odd Pages"
-msgstr "Otočit liché strany"
+msgstr "Převrátit liché strany"
 
 #: qml/DocumentList.qml:324
 #, kde-format
 msgid "Flip Even Pages"
-msgstr "Otočit sudé strany"
+msgstr "Převrátit sudé strany"
 
 #: qml/DocumentList.qml:331
 #, kde-format
 msgid "Flip All Pages"
-msgstr "Otočit všechny strany"
+msgstr "Převrátit všechny strany"
 
 #: qml/DocumentList.qml:339
 #, kde-format
@@ -364,7 +367,7 @@ msgstr "13 42 → 1234"
 #: qml/DocumentList.qml:358
 #, kde-format
 msgid "Reverse Order"
-msgstr "Obrácené pořadí"
+msgstr "Obrátit pořadí"
 
 #: qml/DocumentPage.qml:41
 #, kde-format
@@ -402,13 +405,13 @@ msgstr "Zvětšení 100%"
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
-msgstr ""
+msgstr "Exportovat PDF"
 
 #: qml/ExportDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
-msgstr "Titul:"
+msgstr "Název:"
 
 #: qml/ExportDialog.qml:72
 #, kde-format
@@ -419,7 +422,7 @@ msgstr "Optické rozpoznávání znaků"
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
-msgstr ""
+msgstr "Povolit"
 
 #: qml/ExportDialog.qml:81
 #, kde-format
@@ -428,6 +431,8 @@ msgid ""
 "If the required languages are not listed, install Tesseract’s language file "
 "with the system’s package manager."
 msgstr ""
+"Pokud vámi požadovaný jazyk není v seznamu, prosím nainstalujte pomocí "
+"systémového správce balíčků jazykový soubor pro Tesseract."
 
 #: qml/ExportDialog.qml:103
 #, kde-format
@@ -462,7 +467,7 @@ msgstr "Následující skenování začíná v<nl/>%1 s"
 #, kde-format
 msgctxt "@info"
 msgid "Scan in progress…"
-msgstr ""
+msgstr "Probíhá skenování..."
 
 #: qml/MainWindow.qml:25
 #, kde-format
@@ -478,13 +483,12 @@ msgstr "Zahodit vše"
 #: qml/MainWindow.qml:87
 #, kde-format
 msgid "Confirm Discard"
-msgstr ""
+msgstr "Potvrdit zahození souborů"
 
 #: qml/MainWindow.qml:88
-#, fuzzy, kde-format
-#| msgid "Discard All"
+#, kde-format
 msgid "Discard all documents?"
-msgstr "Zahodit vše"
+msgstr "Zahodit všechny dokumenty?"
 
 #: qml/MainWindow.qml:97
 #, kde-format
@@ -494,7 +498,7 @@ msgstr "Uložit vše"
 #: qml/MainWindow.qml:106
 #, kde-format
 msgid "Save All As"
-msgstr ""
+msgstr "Uložit vše jako"
 
 #: qml/MainWindow.qml:119
 #, kde-format
@@ -669,7 +673,7 @@ msgstr "Znovu vyberte skener"
 #: qml/PreviewScanView.qml:141
 #, kde-format
 msgid "Discard this selection"
-msgstr "Zahodit tento výběr"
+msgstr "Zahození tohoto výběru"
 
 #: qml/PreviewScanView.qml:164
 #, kde-format
@@ -694,7 +698,7 @@ msgstr "Rozdělit sken vodorovně"
 #: qml/PreviewScanView.qml:201
 #, kde-format
 msgid "Clear Scan Areas"
-msgstr ""
+msgstr "Odebrat plochy skenu"
 
 #: qml/PreviewScanView.qml:209
 #, kde-format
@@ -736,7 +740,7 @@ msgstr "Výchozí místo uložení:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr ""
+msgstr "Šablona názvu:"
 
 #: qml/SettingsWindow.qml:101
 #, kde-format
@@ -746,12 +750,12 @@ msgstr "Náhled:"
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
 msgid "Show Samples"
-msgstr ""
+msgstr "Ukázat příklady"
 
 #: qml/SettingsWindow.qml:125
 #, kde-format
 msgid "Hide Samples"
-msgstr ""
+msgstr "Skrýt příklady"
 
 #: qml/SettingsWindow.qml:256
 #, kde-format
