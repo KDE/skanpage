@@ -643,7 +643,7 @@ void Skanpage::showShortcutsDialog()
 
 void Skanpage::cancelScan()
 {
-    if (d->m_progress > 0 && d->m_ksaneInterface.scanImage()) {
+    if (d->m_progress > 0 && d->m_progress < 100 && d->m_ksaneInterface.scanImage()) {
         d->m_ksaneInterface.lockScanImage();
         QImage image = *d->m_ksaneInterface.scanImage();
         d->m_ksaneInterface.unlockScanImage();
