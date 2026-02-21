@@ -433,8 +433,7 @@ msgstr ""
 "järjestelmän paketinhallinnalla."
 
 #: qml/ExportDialog.qml:103
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgid "Save"
 msgstr "Tallenna"
 
