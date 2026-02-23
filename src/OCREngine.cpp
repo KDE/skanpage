@@ -61,10 +61,39 @@ OCRLanguageModel *OCREngine::languages() const
 
 void OCREngine::OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page)
 {
-    Pix *image = pixRead(page.temporaryFile->fileName().toStdString().c_str());
+    Pix *imageOriginal = pixRead(page.temporaryFile->fileName().toStdString().c_str());
+    Pix *image;
+
+    switch (page.rotationAngle) {
+    case 90:
+        image = pixRotate90(imageOriginal, 1);
+        break;
+    case 180:
+        image = imageOriginal;
+        image = pixRotate180(imageOriginal, imageOriginal);
+        break;
+    case 270:
+        image = pixRotate90(imageOriginal, -1);
+        break;
+    default:
+        image = imageOriginal;
+        break;
+    }
+
+    // Ignore the transformations calculated in DocumentSaver because here the
+    // image is already rotated
+    painter.save();
+    QTransform identity;
+    painter.setTransform(identity);
+
     d->m_tesseract.SetImage(image);
     d->m_tesseract.SetSourceResolution(page.dpi);
     d->m_tesseract.Recognize(nullptr);
+
+    if (imageOriginal != image) {
+        pixDestroy(&image);
+    }
+    pixDestroy(&imageOriginal);
 
     tesseract::ResultIterator *it = d->m_tesseract.GetIterator();
     tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
@@ -130,4 +159,5 @@ void OCREngine::OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUti
             painter.setTransform(oldTransformation);
         } while (it->Next(level));
     }
+    painter.restore();
 }
