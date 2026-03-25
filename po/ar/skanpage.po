@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:47+0000\n"
-"PO-Revision-Date: 2025-12-06 16:55+0400\n"
+"PO-Revision-Date: 2026-03-24 10:26+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -691,7 +691,7 @@ msgstr "أضف منطقة تحديد"
 #: qml/PreviewScanView.qml:181
 #, kde-format
 msgid "Split Scan Vertically"
-msgstr "اقسم المسح رأسياً"
+msgstr "اقسم المسح عموديًا"
 
 #: qml/PreviewScanView.qml:191
 #, kde-format
