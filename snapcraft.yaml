@@ -45,8 +45,8 @@ parts:
       - --with-api-spec=no
       - --with-avahi
     build-snaps:
-      - kde-qt6-core24-sdk/latest/beta
-      - kf6-core24-sdk/latest/beta
+      - kde-qt6-core24-sdk/latest/stable
+      - kf6-core24-sdk/latest/stable
     build-packages:
       # Everything of the build dependencies of the sane-backends
       # Debian package ...
@@ -87,8 +87,8 @@ parts:
       - sysconfdir=/etc
       - libdir=/usr/lib
     build-snaps:
-      - kde-qt6-core24-sdk/latest/beta
-      - kf6-core24-sdk/latest/beta
+      - kde-qt6-core24-sdk/latest/stable
+      - kf6-core24-sdk/latest/stable
     build-packages:
       # Everything of the build dependencies of the sane-airscan
       # Debian package ...
@@ -106,8 +106,8 @@ parts:
     source: https://invent.kde.org/libraries/ksanecore.git
     source-branch: master
     build-snaps:
-      - kde-qt6-core24-sdk/latest/beta
-      - kf6-core24-sdk/latest/beta
+      - kde-qt6-core24-sdk/latest/stable
+      - kf6-core24-sdk/latest/stable
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -121,8 +121,8 @@ parts:
     source: https://invent.kde.org/graphics/libksane.git
     source-branch: master
     build-snaps:
-      - kde-qt6-core24-sdk/latest/beta
-      - kf6-core24-sdk/latest/beta
+      - kde-qt6-core24-sdk/latest/stable
+      - kf6-core24-sdk/latest/stable
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -136,8 +136,8 @@ parts:
     source: https://invent.kde.org/libraries/kquickimageeditor.git
     source-branch: master
     build-snaps:
-      - kde-qt6-core24-sdk/latest/beta
-      - kf6-core24-sdk/latest/beta
+      - kde-qt6-core24-sdk/latest/stable
+      - kf6-core24-sdk/latest/stable
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -153,8 +153,8 @@ parts:
     source: .
     source-type: local
     build-snaps:
-      - kde-qt6-core24-sdk/latest/beta
-      - kf6-core24-sdk/latest/beta
+      - kde-qt6-core24-sdk/latest/stable
+      - kf6-core24-sdk/latest/stable
     build-packages:
       - libpng-dev
       - libtesseract-dev
