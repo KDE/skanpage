@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tyson Tan"
+msgstr "mcendu, Tyson Tan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tds00@qq.com"
+msgstr "mcendu@kde.org, tds00@qq.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
 #: qml/ExportDialog.qml:45 Skanpage.cpp:79
@@ -93,7 +93,7 @@ msgstr "文档已通过 OCR 保存为“%1”。"
 #, kde-format
 msgctxt "@info: user message to inform that the save process has failed"
 msgid "Failed to save document as '%1'."
-msgstr "无法将文档保存为“%1”。"
+msgstr "保存文档为“%1”失败。"
 
 #: DocumentSaver.cpp:265
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "设备"
 #: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr "用于导出您的扫描设备选项的文件路径。"
+msgstr "用于转储扫描仪设备选项的文件路径。"
 
 #: main.cpp:89
 #, kde-format
@@ -299,17 +299,17 @@ msgstr "旋转 (向右)"
 #: qml/DocumentList.qml:262 qml/DocumentPage.qml:161
 #, kde-format
 msgid "Flip"
-msgstr "翻转"
+msgstr "旋转 (180 度)"
 
 #: qml/DocumentList.qml:268 qml/DocumentPage.qml:168
 #, kde-format
 msgid "Save Page"
-msgstr "保存页面"
+msgstr "单页保存"
 
 #: qml/DocumentList.qml:274 qml/DocumentPage.qml:175
 #, kde-format
 msgid "Save Page As"
-msgstr "保存此页"
+msgstr "单页另存为"
 
 #: qml/DocumentList.qml:280 qml/DocumentPage.qml:182
 #, kde-format
@@ -340,12 +340,12 @@ msgstr "翻转偶数页面"
 #: qml/DocumentList.qml:331
 #, kde-format
 msgid "Flip All Pages"
-msgstr "翻转所有页面"
+msgstr "翻转全部页面"
 
 #: qml/DocumentList.qml:339
 #, kde-format
 msgid "Reorder Pages"
-msgstr "页面重新排序"
+msgstr "重新排列页面"
 
 #: qml/DocumentList.qml:344
 #, kde-format
@@ -389,12 +389,12 @@ msgstr "缩小"
 #: qml/DocumentPage.qml:123
 #, kde-format
 msgid "Zoom Fit"
-msgstr "自适应缩放"
+msgstr "缩放到视图大小"
 
 #: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
-msgstr "缩放至 100%"
+msgstr "缩放到 100%"
 
 #: qml/ExportDialog.qml:36
 #, kde-format
@@ -411,7 +411,7 @@ msgstr "标题："
 #: qml/ExportDialog.qml:72
 #, kde-format
 msgid "Optical Character Recognition"
-msgstr "光学字符识别(OCR)"
+msgstr "光学字符识别 (OCR)"
 
 #: qml/ExportDialog.qml:75
 #, kde-format
@@ -472,7 +472,7 @@ msgstr "%1 ― Skanpage"
 #: qml/MainWindow.qml:79
 #, kde-format
 msgid "Discard All"
-msgstr "全部丢弃"
+msgstr "丢弃全部"
 
 #: qml/MainWindow.qml:87
 #, kde-format
@@ -482,7 +482,7 @@ msgstr "确认丢弃"
 #: qml/MainWindow.qml:88
 #, kde-format
 msgid "Discard all documents?"
-msgstr "丢并所有文档？"
+msgstr "丢弃全部文档？"
 
 #: qml/MainWindow.qml:97
 #, kde-format
@@ -492,7 +492,7 @@ msgstr "全部保存"
 #: qml/MainWindow.qml:106
 #, kde-format
 msgid "Save All As"
-msgstr "保存全部"
+msgstr "全部另存为"
 
 #: qml/MainWindow.qml:119
 #, kde-format
@@ -641,7 +641,7 @@ msgstr "像素"
 #: qml/OptionsPanel.qml:30
 #, kde-format
 msgid "Select options for quick access:"
-msgstr "选择快速访问选项："
+msgstr "选择在快捷选项中显示的选项："
 
 #: qml/OptionsPanel.qml:76
 #, kde-format
@@ -652,12 +652,12 @@ msgstr "%1 %2"
 #: qml/OptionsPanel.qml:89
 #, kde-format
 msgid "Show More"
-msgstr "显示更多"
+msgstr "显示更多选项"
 
 #: qml/OptionsPanel.qml:99
 #, kde-format
 msgid "Configure Visibility"
-msgstr "配置可见性"
+msgstr "配置快捷选项"
 
 #: qml/OptionsPanel.qml:114
 #, kde-format
