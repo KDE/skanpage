@@ -55,6 +55,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="sl">Skanpage</name>
   <name xml:lang="sv">Skanpage</name>
   <name xml:lang="tr">SayfaTara</name>
+  <name xml:lang="ug">Skanpage</name>
   <name xml:lang="uk">Skanpage</name>
   <name xml:lang="zh-CN">Skanpage 扫描工具</name>
   <name xml:lang="zh-TW">Skanpage</name>
@@ -183,6 +184,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="sl">Možnosti:</p>
     <p xml:lang="sv">Funktioner:</p>
     <p xml:lang="tr">Özellikler:</p>
+    <p xml:lang="ug">ئىقتىدار:</p>
     <p xml:lang="uk">Можливості:</p>
     <p xml:lang="zh-CN">功能特性：</p>
     <p xml:lang="zh-TW">功能：</p>
@@ -411,6 +413,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="sl">Skanpage glavno okno</caption>
       <caption xml:lang="sv">Huvudfönstret i Skanpage</caption>
       <caption xml:lang="tr">SayfaTara ana penceresi</caption>
+      <caption xml:lang="ug">Skanpage ئاساسىي كۆزنىكى</caption>
       <caption xml:lang="uk">Головне вікно Skanpage</caption>
       <caption xml:lang="zh-CN">Skanpage 主窗口</caption>
       <caption xml:lang="zh-TW">Skanpage 主視窗</caption>
