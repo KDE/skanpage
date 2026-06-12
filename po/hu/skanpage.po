@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2023-2026 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:47+0000\n"
-"PO-Revision-Date: 2025-07-08 22:58+0200\n"
+"PO-Revision-Date: 2026-06-11 22:41+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -482,13 +482,12 @@ msgstr "Összes elvetése"
 #: qml/MainWindow.qml:87
 #, kde-format
 msgid "Confirm Discard"
-msgstr ""
+msgstr "Elvetés megerősítése"
 
 #: qml/MainWindow.qml:88
-#, fuzzy, kde-format
-#| msgid "Discard All"
+#, kde-format
 msgid "Discard all documents?"
-msgstr "Összes elvetése"
+msgstr "Elveti az összes dokumentumot?"
 
 #: qml/MainWindow.qml:97
 #, kde-format
