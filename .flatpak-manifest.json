@@ -66,8 +66,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/alexpevzner/sane-airscan/archive/refs/tags/0.99.36.tar.gz",
-                            "sha256": "43d3436c0199496ee18aca4f875fe3926a40a0fae781bc280cdb96f7b5068ac0",
+                            "url": "https://github.com/alexpevzner/sane-airscan/archive/refs/tags/0.99.37.tar.gz",
+                            "sha256": "b012d4ca8b526e28b0baf1e0dcc1504a1f67118914ee9362201d04a37dbf7e5f",
                             "x-checker-data": {
                                 "type": "anitya",
                                 "project-id": 121086,
@@ -113,8 +113,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/DanBloomberg/leptonica/releases/download/1.86.0/leptonica-1.86.0.tar.gz",
-                    "sha256": "1fa08e40bb37fd45802d5e6e7b43927449a5c47d4608ef99d3bd3f0fa76baedc",
+                    "url": "https://github.com/DanBloomberg/leptonica/releases/download/1.87.0/leptonica-1.87.0.tar.gz",
+                    "sha256": "c73363397f96eb1295602bf44d708a994ad42046c791bf03ea0505d829bdb6a7",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 1549,
@@ -217,8 +217,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "11ed4ce1c164a8b6d50bbc1548b5849ab75d5fb837619b90f2cea51ed122547a",
-                    "url": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-0.6.0.tar.xz",
+                    "sha256": "b868800bb9bb814ee36c9d696be9ccec9a22ab6f975d789e248b75fbd1ba99fa",
+                    "url": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-0.6.1.tar.xz",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 229033,
