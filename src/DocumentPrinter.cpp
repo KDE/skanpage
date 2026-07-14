@@ -11,7 +11,7 @@
 #include <QPrinter>
 
 #include <QTransform>
-#include <QtConcurrent>
+#include <QtConcurrentRun>
 
 #include <KLocalizedString>
 
