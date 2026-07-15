@@ -7,12 +7,14 @@
 
 #include "Skanpage.h"
 
+#include <QDir>
 #include <QFile>
 #include <QImageReader>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QThread>
-#include <QtQml>
+#include <QQmlContext>
+#include <QQmlEngine>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
