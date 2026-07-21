@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:47+0000\n"
+"POT-Creation-Date: 2026-07-21 00:48+0000\n"
 "PO-Revision-Date: 2025-12-05 05:37+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:45 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:81
 #, kde-format
 msgid "New document"
 msgstr "ახალი დოკუმენტი"

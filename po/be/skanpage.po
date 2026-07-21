@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:47+0000\n"
+"POT-Creation-Date: 2026-07-21 00:48+0000\n"
 "PO-Revision-Date: 2026-03-31 21:02\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -32,7 +32,7 @@ msgid "Your emails"
 msgstr "nashtlumach@gmail.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:45 Skanpage.cpp:79
+#: qml/ExportDialog.qml:45 Skanpage.cpp:81
 #, kde-format
 msgid "New document"
 msgstr "Новы дакумент"
