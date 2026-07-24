@@ -89,3 +89,4 @@ target_link_libraries(skanpage PRIVATE
 endif()
 
 install(TARGETS skanpage ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES skanpage_config.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
