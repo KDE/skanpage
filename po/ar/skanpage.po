@@ -696,7 +696,7 @@ msgstr "اقسم المسح عموديًا"
 #: qml/PreviewScanView.qml:191
 #, kde-format
 msgid "Split Scan Horizontally"
-msgstr "اقسم المسح أفقياً"
+msgstr "اقسم المسح أفقيًا"
 
 #: qml/PreviewScanView.qml:201
 #, kde-format
