@@ -58,7 +58,14 @@ ecm_set_disabled_deprecation_versions(QT 6.9.0
      KF 6.18.0
 )
 
-find_package(KSaneCore6 "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}" REQUIRED)
+# The intention here is to depend on a release from at least the same release
+# branch and to accomodate the jump from a RC version to .0 (eg. 26.07.90 to
+# 26.08.0), where we shouldn't really add breaking changes anyway.
+math(EXPR KSANECORE_RELEASE_BRANCH_VERSION "${RELEASE_SERVICE_VERSION_MINOR} - (${RELEASE_SERVICE_VERSION_MINOR} -3) % 4")
+if(KSANECORE_RELEASE_BRANCH_VERSION LESS "10")
+    string(PREPEND KSANECORE_RELEASE_BRANCH_VERSION "0") # pad with 0
+endif()
+find_package(KSaneCore6 "${RELEASE_SERVICE_VERSION_MAJOR}.${KSANECORE_RELEASE_BRANCH_VERSION}" REQUIRED)
 
 find_package(KQuickImageEditor REQUIRED)
 
