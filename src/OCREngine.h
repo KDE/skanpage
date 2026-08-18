@@ -26,6 +26,8 @@ public:
 
     void InitForOCR();
 
+    void updateLanguages();
+
     OCRLanguageModel *languages() const;
 
     void OCRPage(QPdfWriter &writer, QPainter &painter, const SkanpageUtils::PageProperties &page);

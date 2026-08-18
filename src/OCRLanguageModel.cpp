@@ -66,12 +66,17 @@ bool OCRLanguageModel::setData(const QModelIndex &index, const QVariant &value, 
 
 void OCRLanguageModel::setLanguages(const std::vector<std::string> &availableLanguages)
 {
+    QHash<QString, bool> previousUseState;
+    for (const auto &lang : m_languages) {
+        previousUseState.insert(lang.code, lang.use);
+    }
     beginResetModel();
+    m_languages.clear();
     for (const auto &language : availableLanguages) {
         QString languageCode = QString::fromLocal8Bit(language.c_str());
         if (languageCode != QStringLiteral("osd")) {
             QLocale locale(QLocale::codeToLanguage(languageCode));
-            m_languages.append({locale.nativeLanguageName(), languageCode, false});
+            m_languages.append({locale.nativeLanguageName(), languageCode, previousUseState.value(languageCode, false)});
         }
     }
     endResetModel();

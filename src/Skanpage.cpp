@@ -686,4 +686,9 @@ void Skanpage::importFile(const QUrl &fileUrl)
         Qt::QueuedConnection);
 }
 
+void Skanpage::updateOCRLanguages()
+{
+    d->m_OCREngine.updateLanguages();
+}
+
 #include "moc_Skanpage.cpp"

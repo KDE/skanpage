@@ -116,6 +116,7 @@ public:
     Q_INVOKABLE bool appendSubArea(QRectF area);
     Q_INVOKABLE void selectSubArea(int index);
     Q_INVOKABLE void importFile(const QUrl &fileUrl);
+    Q_INVOKABLE void updateOCRLanguages();
 
 Q_SIGNALS:
     void progressChanged(int progress);

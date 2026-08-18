@@ -26,6 +26,10 @@ Kirigami.Dialog {
     property bool ocrChecked: false
     property string fileTitle
 
+    onAboutToShow: {
+        skanpage.updateOCRLanguages();
+    }
+
     header: ColumnLayout {
         spacing: Kirigami.Units.largeSpacing
         Layout.margins: Kirigami.Units.smallSpacing
@@ -78,7 +82,7 @@ Kirigami.Dialog {
                 onCheckedChanged: ocrChecked = checked
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@info:usagetip", "If the required languages are not listed, install Tesseract’s language file with the system’s package manager.")
+                toolTipText: i18nc("@info:usagetip", "If the required languages are not listed install Tesseract’s language files with the system’s package manager and reopen this dialog.")
             }
         }
 
@@ -92,6 +96,7 @@ Kirigami.Dialog {
             enabled: ocrChecked
             implicitWidth: scrollBar.visible ? listView.width - scrollBar.width : listView.width
             text: "%1 [%2]".arg(model.name).arg(model.code)
+            checked: model.use
             onClicked: model.use = checked
         }
     }
