@@ -23,7 +23,6 @@ Kirigami.Dialog {
 
     implicitWidth: Kirigami.Units.gridUnit * 40
 
-    property bool ocrChecked: false
     property string fileTitle
 
     onAboutToShow: {
@@ -78,11 +77,11 @@ Kirigami.Dialog {
             Switch {
                 text: i18nc("@option:check Enable optical character recognition", "Enable")
                 enabled: skanpage.languageModel.rowCount() > 0
-                checked: ocrChecked
-                onCheckedChanged: ocrChecked = checked
+                checked: skanpage.configuration.ocrEnabled
+                onToggled: skanpage.configuration.ocrEnabled = checked
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@info:usagetip", "If the required languages are not listed install Tesseract’s language files with the system’s package manager and reopen this dialog.")
+                toolTipText: i18nc("@info:usagetip", "If the required languages are not listed, install the appropriate language files for Tesseract (for example with a package manager), and reopen this dialog.")
             }
         }
 
@@ -93,7 +92,7 @@ Kirigami.Dialog {
 
         model: skanpage.languageModel
         delegate: CheckDelegate {
-            enabled: ocrChecked
+            enabled: skanpage.configuration.ocrEnabled
             implicitWidth: scrollBar.visible ? listView.width - scrollBar.width : listView.width
             text: "%1 [%2]".arg(model.name).arg(model.code)
             checked: model.use
@@ -117,7 +116,7 @@ Kirigami.Dialog {
         fileMode: FileDialog.SaveFile
         nameFilters: skanpage.formatModel.pdfFormatFilter()
         onAccepted: {
-            skanpage.documentModel.exportPDF(selectedFile, fileTitle, ocrChecked);
+            skanpage.documentModel.exportPDF(selectedFile, fileTitle, skanpage.configuration.ocrEnabled);
             exportDialog.close();
         }
     }

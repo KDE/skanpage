@@ -5,6 +5,7 @@
  */
 
 #include "OCRLanguageModel.h"
+#include "skanpage_config.h"
 
 #include <QLocale>
 
@@ -59,6 +60,15 @@ bool OCRLanguageModel::setData(const QModelIndex &index, const QVariant &value, 
 {
     if (index.row() >= 0 && index.row() < m_languages.size() && role == UseRole) {
         m_languages[index.row()].use = value.toBool();
+        Q_EMIT dataChanged(index, index, {UseRole});
+
+        QStringList usedLanguages;
+        for (const auto &lang : m_languages) {
+            if (lang.use) {
+                usedLanguages.append(lang.code);
+            }
+        }
+        SkanpageConfiguration::self()->setOcrLanguages(usedLanguages);
         return true;
     }
     return false;
@@ -70,13 +80,16 @@ void OCRLanguageModel::setLanguages(const std::vector<std::string> &availableLan
     for (const auto &lang : m_languages) {
         previousUseState.insert(lang.code, lang.use);
     }
+    const QStringList persistedLanguages = SkanpageConfiguration::self()->ocrLanguages();
+
     beginResetModel();
     m_languages.clear();
     for (const auto &language : availableLanguages) {
         QString languageCode = QString::fromLocal8Bit(language.c_str());
         if (languageCode != QStringLiteral("osd")) {
             QLocale locale(QLocale::codeToLanguage(languageCode));
-            m_languages.append({locale.nativeLanguageName(), languageCode, previousUseState.value(languageCode, false)});
+            const bool use = previousUseState.contains(languageCode) ? previousUseState.value(languageCode) : persistedLanguages.contains(languageCode);
+            m_languages.append({locale.nativeLanguageName(), languageCode, use});
         }
     }
     endResetModel();
