@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-21 00:48+0000\n"
+"POT-Creation-Date: 2026-08-26 00:53+0000\n"
 "PO-Revision-Date: 2025-12-18 15:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "sunder67@hotmail.com, emir_sari@icloud.com"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:45 Skanpage.cpp:81
+#: qml/ExportDialog.qml:48 Skanpage.cpp:81
 #, kde-format
 msgid "New document"
 msgstr "Yeni belge"
@@ -400,40 +400,45 @@ msgstr "Sığdır"
 msgid "Zoom 100%"
 msgstr "%​100’e Yakınlaştır"
 
-#: qml/ExportDialog.qml:36
+#: qml/ExportDialog.qml:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF Dışa Aktar"
 
-#: qml/ExportDialog.qml:44
+#: qml/ExportDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "Başlık:"
 
-#: qml/ExportDialog.qml:72
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "Optik Karakter Tanıma"
 
-#: qml/ExportDialog.qml:75
+#: qml/ExportDialog.qml:78
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "Etkinleştir"
 
-#: qml/ExportDialog.qml:81
-#, kde-format
+#: qml/ExportDialog.qml:84
+#, fuzzy, kde-format
+#| msgctxt "@info:usagetip"
+#| msgid ""
+#| "If the required languages are not listed, install Tesseract’s language "
+#| "file with the system’s package manager."
 msgctxt "@info:usagetip"
 msgid ""
-"If the required languages are not listed, install Tesseract’s language file "
-"with the system’s package manager."
+"If the required languages are not listed, install the appropriate language "
+"files for Tesseract (for example with a package manager), and reopen this "
+"dialog."
 msgstr ""
 "Gereken dil listede yoksa sisteminizin paket yöneticisi aracılığıyla ilgili "
 "Tesseract’ın dil dosyasını kurun."
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:107
 #, kde-format
 msgid "Save"
 msgstr "Kaydet"

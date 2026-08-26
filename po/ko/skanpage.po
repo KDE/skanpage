@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-21 00:48+0000\n"
+"POT-Creation-Date: 2026-08-26 00:53+0000\n"
 "PO-Revision-Date: 2026-02-03 22:48+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr "kde@peremen.name"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:45 Skanpage.cpp:81
+#: qml/ExportDialog.qml:48 Skanpage.cpp:81
 #, kde-format
 msgid "New document"
 msgstr "새 문서"
@@ -398,40 +398,45 @@ msgstr "맞추기"
 msgid "Zoom 100%"
 msgstr "확대/축소 100%"
 
-#: qml/ExportDialog.qml:36
+#: qml/ExportDialog.qml:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "PDF 내보내기"
 
-#: qml/ExportDialog.qml:44
+#: qml/ExportDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "제목:"
 
-#: qml/ExportDialog.qml:72
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "광학 문자 인식(OCR)"
 
-#: qml/ExportDialog.qml:75
+#: qml/ExportDialog.qml:78
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "활성화"
 
-#: qml/ExportDialog.qml:81
-#, kde-format
+#: qml/ExportDialog.qml:84
+#, fuzzy, kde-format
+#| msgctxt "@info:usagetip"
+#| msgid ""
+#| "If the required languages are not listed, install Tesseract’s language "
+#| "file with the system’s package manager."
 msgctxt "@info:usagetip"
 msgid ""
-"If the required languages are not listed, install Tesseract’s language file "
-"with the system’s package manager."
+"If the required languages are not listed, install the appropriate language "
+"files for Tesseract (for example with a package manager), and reopen this "
+"dialog."
 msgstr ""
 "필요한 언어가 설치되어 있지 않다면 패키지 관리자로 Tesseract의 언어 지원을 설"
 "치하십시오."
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:107
 #, kde-format
 msgid "Save"
 msgstr "저장"

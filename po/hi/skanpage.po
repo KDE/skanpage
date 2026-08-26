@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-21 00:48+0000\n"
+"POT-Creation-Date: 2026-08-26 00:53+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr "आपके ईमेल"
 
 #: DocumentModel.cpp:59 DocumentModel.cpp:76 DocumentModel.cpp:90
-#: qml/ExportDialog.qml:45 Skanpage.cpp:81
+#: qml/ExportDialog.qml:48 Skanpage.cpp:81
 #, kde-format
 msgid "New document"
 msgstr "नया दस्तावेज़"
@@ -416,30 +416,30 @@ msgstr "ज़ूम फ़िट"
 msgid "Zoom 100%"
 msgstr "ज़ूम 100%"
 
-#: qml/ExportDialog.qml:36
+#: qml/ExportDialog.qml:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Export PDF"
 msgstr "पीडीएफ निर्यात करें"
 
-#: qml/ExportDialog.qml:44
+#: qml/ExportDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Title:"
 msgstr "शीर्षक:"
 
-#: qml/ExportDialog.qml:72
+#: qml/ExportDialog.qml:75
 #, kde-format
 msgid "Optical Character Recognition"
 msgstr "ऑप्टिकल कैरेक्टर मान्यता"
 
-#: qml/ExportDialog.qml:75
+#: qml/ExportDialog.qml:78
 #, kde-format
 msgctxt "@option:check Enable optical character recognition"
 msgid "Enable"
 msgstr "सक्षम"
 
-#: qml/ExportDialog.qml:81
+#: qml/ExportDialog.qml:84
 #, fuzzy, kde-format
 #| msgctxt "@info:usagetip"
 #| msgid ""
@@ -447,13 +447,14 @@ msgstr "सक्षम"
 #| "file with the system's package manager."
 msgctxt "@info:usagetip"
 msgid ""
-"If the required languages are not listed, install Tesseract’s language file "
-"with the system’s package manager."
+"If the required languages are not listed, install the appropriate language "
+"files for Tesseract (for example with a package manager), and reopen this "
+"dialog."
 msgstr ""
 "यदि आवश्यक भाषाएं सूचीबद्ध नहीं हैं, तो सिस्टम के पैकेज मैनेजर के साथ टेसेरैक्ट की भाषा फ़ाइल "
 "स्थापित करें।"
 
-#: qml/ExportDialog.qml:103
+#: qml/ExportDialog.qml:107
 #, fuzzy, kde-format
 #| msgid "Save All"
 msgid "Save"
