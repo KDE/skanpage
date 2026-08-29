@@ -1,19 +1,19 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021-2026 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2025-12-06 09:40+0100\n"
+"PO-Revision-Date: 2026-08-27 19:10+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.11.90\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -427,20 +427,17 @@ msgid "Enable"
 msgstr "Activer"
 
 #: qml/ExportDialog.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract’s language "
-#| "file with the system’s package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install the appropriate language "
 "files for Tesseract (for example with a package manager), and reopen this "
 "dialog."
 msgstr ""
-"Si les langues demandée sont absentes dans la liste, veuillez installer le "
-"fichier de langues de Tesseract avec le gestionnaire de paquets de votre "
-"système."
+"Si les langues demandées ne sont pas dans la liste, veuillez installer le "
+"fichier de langues appropriées pour Tesseract (Par exemple, avec votre "
+"gestionnaire de paquets du système) puis ouvrir à nouveau cette boite de "
+"dialogue."
 
 #: qml/ExportDialog.qml:107
 #, kde-format

@@ -420,18 +420,13 @@ msgid "Enable"
 msgstr "启用"
 
 #: qml/ExportDialog.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract’s language "
-#| "file with the system’s package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install the appropriate language "
 "files for Tesseract (for example with a package manager), and reopen this "
 "dialog."
 msgstr ""
-"如果所需的语言没有列出，请使用本机系统的包管理器安装 Tesseract 的语言文件。"
 
 #: qml/ExportDialog.qml:107
 #, kde-format
