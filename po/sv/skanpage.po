@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the skanpage package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2021-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2026-01-20 21:01+0100\n"
+"PO-Revision-Date: 2026-08-31 18:28+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -423,19 +423,15 @@ msgid "Enable"
 msgstr "Aktivera"
 
 #: qml/ExportDialog.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract’s language "
-#| "file with the system’s package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install the appropriate language "
 "files for Tesseract (for example with a package manager), and reopen this "
 "dialog."
 msgstr ""
-"Om språken som behövs inte listas, installera Tesseracts språkfil med "
-"systemets pakethanterare."
+"Om nödvändiga språk inte listas, installera lämpliga språkfiler för "
+"Tesseract (till exempel med en pakethanterare) och öppna dialogrutan igen."
 
 #: qml/ExportDialog.qml:107
 #, kde-format
