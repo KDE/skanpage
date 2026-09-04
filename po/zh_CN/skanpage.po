@@ -427,6 +427,8 @@ msgid ""
 "files for Tesseract (for example with a package manager), and reopen this "
 "dialog."
 msgstr ""
+"如果没有列出所需的语言，请安装适合的 Tesseracy 语言文件 (例如通过软件包管理器"
+"安装)，然后重新打开此对话框。"
 
 #: qml/ExportDialog.qml:107
 #, kde-format
