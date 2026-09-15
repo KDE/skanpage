@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2022-04-07 18:24+0200\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -425,19 +425,16 @@ msgid "Enable"
 msgstr "Povoliť"
 
 #: qml/ExportDialog.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract’s language "
-#| "file with the system’s package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install the appropriate language "
 "files for Tesseract (for example with a package manager), and reopen this "
 "dialog."
 msgstr ""
-"If the vyžadované languages are not listed, install Tesseract’s language "
-"file with the system’s package manager."
+"Ak požadované jazyky nie sú v zozname, nainštalujte príslušné jazykové "
+"súbory pre Tesseract (napríklad správcom balíkov) a znova otvorte tento "
+"dialóg."
 
 #: qml/ExportDialog.qml:107
 #, kde-format
