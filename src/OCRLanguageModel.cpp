@@ -87,9 +87,19 @@ void OCRLanguageModel::setLanguages(const std::vector<std::string> &availableLan
     for (const auto &language : availableLanguages) {
         QString languageCode = QString::fromLocal8Bit(language.c_str());
         if (languageCode != QStringLiteral("osd")) {
-            QLocale locale(QLocale::codeToLanguage(languageCode));
+            const auto localeLanguage = QLocale::codeToLanguage(languageCode.section(QLatin1Char('_'), 0, 0));
+            const QString qualifier = languageCode.section(QLatin1Char('_'), 1, 1);
+            auto localeScript = QLocale::codeToScript(qualifier);
+            if (qualifier == QStringLiteral("sim")) {
+                localeScript = QLocale::SimplifiedHanScript;
+            } else if (qualifier == QStringLiteral("tra")) {
+                localeScript = QLocale::TraditionalHanScript;
+            }
+            const QString languageName = localeLanguage == QLocale::AnyLanguage
+                ? languageCode
+                : QLocale(localeLanguage, localeScript).nativeLanguageName();
             const bool use = previousUseState.contains(languageCode) ? previousUseState.value(languageCode) : persistedLanguages.contains(languageCode);
-            m_languages.append({locale.nativeLanguageName(), languageCode, use});
+            m_languages.append({languageName, languageCode, use});
         }
     }
     endResetModel();
