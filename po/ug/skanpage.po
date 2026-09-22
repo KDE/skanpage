@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2026-06-01 18:42-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -122,7 +122,7 @@ msgstr ""
 #: main.cpp:63
 #, kde-format
 msgid "Skanpage"
-msgstr "Skanpage"
+msgstr ""
 
 #: main.cpp:65
 #, kde-format
@@ -210,7 +210,7 @@ msgstr ""
 #, kde-format
 msgctxt "Prefix for document name indicating an unsaved document"
 msgid "* %1"
-msgstr "* %1"
+msgstr ""
 
 #: qml/DeviceSelection.qml:25
 #, kde-format
@@ -557,13 +557,13 @@ msgstr "چىكىن"
 #: qml/OptionDelegate.qml:55
 #, kde-format
 msgid "%1:"
-msgstr "%1:"
+msgstr ""
 
 #: qml/OptionDelegate.qml:150
 #, kde-format
 msgctxt "Add ':' to make a header text"
 msgid "%1:"
-msgstr "%1:"
+msgstr ""
 
 #: qml/OptionDelegate.qml:154
 #, kde-format
@@ -593,13 +593,13 @@ msgstr ""
 #, kde-format
 msgctxt "Adding unit suffix"
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr ""
 
 #: qml/OptionDelegate.qml:249
 #, kde-format
 msgctxt "Unit suffix for bit"
 msgid "bit"
-msgstr "bit"
+msgstr ""
 
 #: qml/OptionDelegate.qml:251
 #, kde-format
@@ -617,7 +617,7 @@ msgstr ""
 #, kde-format
 msgctxt "Unit suffix for second"
 msgid "s"
-msgstr "s"
+msgstr ""
 
 #: qml/OptionDelegate.qml:257
 #, kde-format
@@ -629,13 +629,13 @@ msgstr ""
 #, kde-format
 msgctxt "Unit suffix for percent"
 msgid "%"
-msgstr "%"
+msgstr ""
 
 #: qml/OptionDelegate.qml:261
 #, kde-format
 msgctxt "Unit suffix for pixel"
 msgid "px"
-msgstr "px"
+msgstr ""
 
 #: qml/OptionsPanel.qml:30
 #, kde-format
@@ -646,7 +646,7 @@ msgstr ""
 #, kde-format
 msgctxt "scanner device vendor and model"
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr ""
 
 #: qml/OptionsPanel.qml:89
 #, kde-format
