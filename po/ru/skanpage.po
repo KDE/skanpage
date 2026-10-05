@@ -44,12 +44,12 @@ msgstr "%1‥%2"
 #: DocumentPrinter.cpp:33
 #, kde-format
 msgid "Nothing to print."
-msgstr "Отсутствует документ, который возможно распечатать."
+msgstr "Нечего печатать."
 
 #: DocumentPrinter.cpp:37
 #, kde-format
 msgid "Previous printing operation still in progress."
-msgstr "Предыдущая операция ещё продолжается."
+msgstr "Предыдущая печать ещё выполняется."
 
 #: DocumentPrinter.cpp:107
 #, kde-format
@@ -59,12 +59,12 @@ msgstr "Документ отправлен на печать."
 #: DocumentSaver.cpp:34
 #, kde-format
 msgid "No file path given."
-msgstr "Не указать путь."
+msgstr "Не указан путь."
 
 #: DocumentSaver.cpp:38
 #, kde-format
 msgid "Nothing to save."
-msgstr "Отсутствует документ, который возможно сохранить."
+msgstr "Нечего сохранять."
 
 #: DocumentSaver.cpp:84 DocumentSaver.cpp:119
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "Документ сохранён как «%1»."
 msgctxt ""
 "@info: user message to confirm the OCR and save process and the filename"
 msgid "Document saved with OCR as '%1'."
-msgstr "Документ использованием распознавания текста как «%1»."
+msgstr "Документ сохранён с распознаванием текста как «%1»."
 
 #: DocumentSaver.cpp:245
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Skanpage"
 #: main.cpp:65
 #, kde-format
 msgid "Multi-page scanning application by KDE."
-msgstr "Приложение от KDE для сканирования."
+msgstr "Приложение от KDE для многостраничного сканирования."
 
 #: main.cpp:67
 #, kde-format
@@ -155,7 +155,8 @@ msgstr "устройство"
 #: main.cpp:85
 #, kde-format
 msgid "A file path in which the options of your scanner device are dumped."
-msgstr "Путь к файлу, в котором хранятся параметры устройства сканирования."
+msgstr ""
+"Путь к файлу, в который будут выгружены параметры устройства сканирования."
 
 #: main.cpp:89
 #, kde-format
@@ -354,7 +355,7 @@ msgstr "Отразить все страницы"
 #: qml/DocumentList.qml:339
 #, kde-format
 msgid "Reorder Pages"
-msgstr "Изменять порядок страниц"
+msgstr "Изменить порядок страниц"
 
 #: qml/DocumentList.qml:344
 #, kde-format
@@ -371,7 +372,7 @@ msgstr "13 42 → 1234"
 #: qml/DocumentList.qml:358
 #, kde-format
 msgid "Reverse Order"
-msgstr "На обратный порядок"
+msgstr "Обратный порядок"
 
 #: qml/DocumentPage.qml:41
 #, kde-format
@@ -437,9 +438,9 @@ msgid ""
 "files for Tesseract (for example with a package manager), and reopen this "
 "dialog."
 msgstr ""
-"Если нужные языки отсутствуют в списке, воспользуйтесь системным диспетчером "
-"управления пакетами для установки соответствующих языковых пакетов Tesseract "
-"и снова откройте этот диалог."
+"Если нужные языки отсутствуют в списке, воспользуйтесь диспетчером пакетов "
+"для установки соответствующих языковых пакетов Tesseract и снова откройте "
+"этот диалог."
 
 #: qml/ExportDialog.qml:107
 #, kde-format
@@ -485,7 +486,7 @@ msgstr "%1 ― Skanpage"
 #: qml/MainWindow.qml:79
 #, kde-format
 msgid "Discard All"
-msgstr "Отменить все"
+msgstr "Отклонить все"
 
 #: qml/MainWindow.qml:87
 #, kde-format
@@ -495,7 +496,7 @@ msgstr "Подтверждение отмены"
 #: qml/MainWindow.qml:88
 #, kde-format
 msgid "Discard all documents?"
-msgstr "Отменить все документы?"
+msgstr "Отклонить все документы?"
 
 #: qml/MainWindow.qml:97
 #, kde-format
@@ -536,7 +537,7 @@ msgstr "Отмена"
 #: qml/MainWindow.qml:179
 #, kde-format
 msgid "Show Scanner Options"
-msgstr "Параметры сканера"
+msgstr "Показать параметры сканера"
 
 #: qml/MainWindow.qml:189 qml/ShareDialog.qml:20
 #, kde-format
@@ -551,7 +552,7 @@ msgstr "Печать"
 #: qml/MainWindow.qml:218 qml/MainWindow.qml:437
 #, kde-format
 msgid "About Skanpage"
-msgstr "О программе Skanpage"
+msgstr "О Skanpage"
 
 #: qml/MainWindow.qml:225
 #, kde-format
@@ -566,7 +567,7 @@ msgstr "Настроить комбинации клавиш…"
 #: qml/MainWindow.qml:241
 #, kde-format
 msgid "Quit"
-msgstr "Выход"
+msgstr "Выйти"
 
 #: qml/OptionDelegate.qml:55
 #, kde-format
@@ -720,7 +721,7 @@ msgstr "Настройка"
 #: qml/SettingsWindow.qml:42
 #, kde-format
 msgid "Devices to show:"
-msgstr "Используемые устройства:"
+msgstr "Показывать устройства:"
 
 #: qml/SettingsWindow.qml:43
 #, kde-format
@@ -747,12 +748,12 @@ msgstr "Папка для сохранения по умолчанию:"
 #: qml/SettingsWindow.qml:91
 #, kde-format
 msgid "Title template:"
-msgstr "Шаблоны заголовка:"
+msgstr "Шаблон заголовка:"
 
 #: qml/SettingsWindow.qml:101
 #, kde-format
 msgid "Preview:"
-msgstr "Предварительный просмотр"
+msgstr "Предварительный просмотр:"
 
 #: qml/SettingsWindow.qml:114 qml/SettingsWindow.qml:128
 #, kde-format
