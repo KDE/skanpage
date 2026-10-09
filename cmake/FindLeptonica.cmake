@@ -21,8 +21,6 @@ find_library(Leptonica_LIBRARIES NAMES leptonica lept libleptonica liblept
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(Leptonica
-    FOUND_VAR
-        Leptonica_FOUND
     REQUIRED_VARS
         Leptonica_LIBRARIES
         Leptonica_INCLUDE_DIRS

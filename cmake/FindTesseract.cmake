@@ -49,8 +49,6 @@ endif()
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(Tesseract
-    FOUND_VAR
-        Tesseract_FOUND
     REQUIRED_VARS
         Tesseract_LIBRARIES
         Tesseract_INCLUDE_DIRS
