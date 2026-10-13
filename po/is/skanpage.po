@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2026-02-25 11:41+0000\n"
+"PO-Revision-Date: 2026-10-12 12:07+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -424,11 +424,7 @@ msgid "Enable"
 msgstr "Virkja"
 
 #: qml/ExportDialog.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract’s language "
-#| "file with the system’s package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install the appropriate language "
@@ -436,7 +432,8 @@ msgid ""
 "dialog."
 msgstr ""
 "Ef umbeðin tungumál finnst ekki á listanum ættirðu að setja upp viðkomandi "
-"Tesseract-tungumálaskrár með pakkastjóranum þínum."
+"Tesseract-tungumálaskrár (til dæmismeð pakkastjóra) og opna þessa valmynd "
+"svo aftur."
 
 #: qml/ExportDialog.qml:107
 #, kde-format
