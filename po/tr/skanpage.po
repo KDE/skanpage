@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2026-08-26 12:54+0300\n"
+"PO-Revision-Date: 2026-10-17 20:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -122,7 +122,7 @@ msgstr "PDF dosyası yüklenemedi!"
 #: main.cpp:63
 #, kde-format
 msgid "Skanpage"
-msgstr "SayfaTara"
+msgstr "Skanpage"
 
 #: main.cpp:65
 #, kde-format
@@ -473,7 +473,7 @@ msgstr "Tarama sürüyor…"
 #, kde-format
 msgctxt "document title: app title"
 msgid "%1 ― Skanpage"
-msgstr "%1 ― SayfaTara"
+msgstr "%1 ― Skanpage"
 
 #: qml/MainWindow.qml:79
 #, kde-format
@@ -544,12 +544,12 @@ msgstr "Yazdır"
 #: qml/MainWindow.qml:218 qml/MainWindow.qml:437
 #, kde-format
 msgid "About Skanpage"
-msgstr "SayfaTara Hakkında"
+msgstr "Skanpage Hakkında"
 
 #: qml/MainWindow.qml:225
 #, kde-format
 msgid "Configure Skanpage…"
-msgstr "SayfaTara’yı Yapılandır…"
+msgstr "Skanpage Uygulamasını Yapılandır…"
 
 #: qml/MainWindow.qml:233
 #, kde-format
