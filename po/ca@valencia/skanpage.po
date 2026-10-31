@@ -406,7 +406,7 @@ msgstr "Zoom fins que ajuste"
 #: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
-msgstr "Zoom 100%"
+msgstr "Zoom 100 %"
 
 #: qml/ExportDialog.qml:36
 #, kde-format

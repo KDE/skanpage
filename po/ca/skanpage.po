@@ -772,11 +772,3 @@ msgstr "Tanca"
 #, kde-format
 msgid "Share as:"
 msgstr "Comparteix com:"
-
-#~ msgctxt "@label"
-#~ msgid "File:"
-#~ msgstr "Fitxer:"
-
-#~ msgctxt "@action:button"
-#~ msgid "Save As…"
-#~ msgstr "Desa com a…"
