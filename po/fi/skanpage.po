@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2026-01-05 20:43+0200\n"
+"PO-Revision-Date: 2026-10-09 14:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -423,19 +423,15 @@ msgid "Enable"
 msgstr "Käytä"
 
 #: qml/ExportDialog.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "If the required languages are not listed, install Tesseract’s language "
-#| "file with the system’s package manager."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "If the required languages are not listed, install the appropriate language "
 "files for Tesseract (for example with a package manager), and reopen this "
 "dialog."
 msgstr ""
-"Ellei tarvittua kieltä ole luettelossa, aseta Tesseractin kielitiedosto "
-"järjestelmän paketinhallinnalla."
+"Ellei vaadittuja kieliä ole luettelossa, asenna Tesseractin tarvitsemat "
+"kielitiedostot (esim. paketinhallinnalla) ja avaa tämä ikkuna uudestaan."
 
 #: qml/ExportDialog.qml:107
 #, kde-format
