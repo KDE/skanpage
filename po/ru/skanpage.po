@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2026-09-06 18:09+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-11 20:46+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -405,7 +405,7 @@ msgstr "Вместить в окно"
 #: qml/DocumentPage.qml:139
 #, kde-format
 msgid "Zoom 100%"
-msgstr "Масштаб 100%"
+msgstr "Масштаб 100 %"
 
 #: qml/ExportDialog.qml:39
 #, kde-format
