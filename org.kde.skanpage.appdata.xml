@@ -7,7 +7,7 @@ SPDX-License-Identifier: CC0-1.0
 <component type="desktop-application">
   <id>org.kde.skanpage.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0+</project_license>
+  <project_license>GPL-2.0-or-later</project_license>
   <developer id="org.kde">
     <name translate="no">KDE</name>
   </developer>
@@ -421,6 +421,8 @@ SPDX-License-Identifier: CC0-1.0
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=skanpage</url>
   <url type="homepage">https://apps.kde.org/skanpage/</url>
   <url type="donation">https://www.kde.org/community/donations/?app=skanpage&amp;source=appdata</url>
+  <url type="vcs-browser">https://invent.kde.org/utilities/skanpage</url>
+  <url type="contribute">https://community.kde.org/Get_Involved</url>
   <provides>
     <binary>skanpage</binary>
   </provides>
