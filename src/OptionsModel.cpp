@@ -8,6 +8,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+#include <QSet>
+
 #include "OptionsModel.h"
 #include "skanpage_debug.h"
 
