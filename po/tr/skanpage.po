@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: skanpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:53+0000\n"
-"PO-Revision-Date: 2026-11-16 19:33+0300\n"
+"PO-Revision-Date: 2026-11-23 17:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -576,7 +576,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@option:check a noun, as in 'the default setting'"
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
 #: qml/OptionDelegate.qml:168
 #, kde-format
@@ -730,12 +730,12 @@ msgstr "Tarayıcılar, kameralar ve sanal aygıtlar"
 #: qml/SettingsWindow.qml:57
 #, kde-format
 msgid "Default file format:"
-msgstr "Öntanımlı dosya biçimi:"
+msgstr "Varsayılan dosya biçimi:"
 
 #: qml/SettingsWindow.qml:74
 #, kde-format
 msgid "Default save location:"
-msgstr "Öntanımlı kaydetme konumu:"
+msgstr "Varsayılan kaydetme konumu:"
 
 #: qml/SettingsWindow.qml:91
 #, kde-format
